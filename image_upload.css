@@ -1,0 +1,157 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+body{
+font-family: "Unna";
+}
+.header__logo{
+    width: 200px;
+    height: 150px;
+    padding: 10px 5px 5px 5px;
+    padding-left: 40px;
+}
+.header{
+    display: flex;
+    background-color: rgba(190, 247, 99, 0.747);
+}
+.hero{
+    display: flex;
+    margin-left: 500px;
+    margin-top: 30px;
+}
+.hero_list a{
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(7, 7, 7);
+    letter-spacing: 1px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+.hero_list a:hover{
+    color: rgb(13, 16, 4);
+    background-color: rgb(237, 237, 103);
+    border-radius: 14px;
+    border:3px solid rgb(239, 32, 94);
+}
+.hero_list{
+    list-style: none;
+    margin-top: 50px;
+}
+.img1{
+     margin-top: 40px;
+     background-color: aliceblue;
+     border-radius: 50%;
+     margin-left: 20px;
+}
+body{
+    background-image: url(https://images.pexels.com/photos/1146714/pexels-photo-1146714.jpeg?cs=srgb&dl=pexels-johannes-plenio-1146714.jpg&fm=jpg);
+    background-size: cover;
+}
+#product_name{
+    width:300px;
+    height: 40px;
+    margin-left:105px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px; margin-bottom: 20px;margin-top: 70px;
+}
+label{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 200px;
+}
+.btn{
+    display: flex;
+    margin-left: 1000px;
+}
+.cancel button{
+    padding: 15px 40px 15px 40px;
+    border-radius: 20px;
+    font-size: 19px;
+    background-color: rgb(251, 243, 233);
+}
+.save button{
+    padding: 15px 45px 15px 45px;
+    border-radius: 20px;
+    margin-left: 80px;
+    font-size: 19px;
+    background-color: rgb(254, 246, 236);
+}
+.img p{
+    border: 2px solid rgb(196, 193, 193);
+    width:200px;
+    height: 150px;
+    padding: 200px 70px 50px 100px;
+    margin-left: 400px;
+    font-size: 20px;
+    color: rgb(209, 200, 200);
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+.upload button{
+    margin-top: 40px;
+    padding: 15px 40px 15px 40px;
+    border-radius: 20px;
+    font-size: 19px;
+    margin-left: 515px;
+    margin-bottom: 140px;
+    background-color: rgb(248, 242, 235);
+}
+footer{
+	display: flex;
+}
+footer{
+	position: relative;
+	width:100%;
+	height: 300px;
+	background: black;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    letter-spacing: 1px;
+}
+footer p:nth-child(1){
+	font-size: 40px;
+	font-family: "Rye";
+	color:#91f900;
+	margin-bottom: 20px;
+	font-weight: bold;
+    font-family: "Unna";
+    letter-spacing: 1px;
+}
+footer p:nth-child(2){
+	font-size: 20px;
+	color:white;
+	width:500px;
+	text-align: center;
+	line-height: 26px;
+    font-weight: bold;
+    font-family: "Unna";
+}
+.social{
+	display: flex;
+}
+.social a img{
+	width:45px;
+	height:45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	border-radius: 25%;
+	margin:22px 10px;
+	color: white;
+}
+button:hover{
+    background-color: rgb(237, 237, 103);
+    border-radius: 14px;
+    border:3px solid rgb(239, 32, 94);
+    color: rgb(20, 19, 19);
+}
+

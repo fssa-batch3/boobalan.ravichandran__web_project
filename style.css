@@ -1,0 +1,118 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+body{
+    font-family: "Unna";
+    }
+.header__logo{
+    width: 200px;
+    height: 150px;
+    padding: 10px 5px 5px 5px;
+    padding-left: 70px;
+}
+.header{
+    display:flex;
+    background-color:rgba(190, 247, 99, 0.747);
+    background-size: contain;
+}
+.hero{
+    display: flex;
+    margin-left: 700px;
+}
+.hero_list a{
+    padding-right: 100px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.hero_list{
+    list-style: none;
+    margin-top: 50px;
+}
+.fert_back img{
+    width:1504px ;
+    height:727px;
+}
+.btn1{
+    height:50px;
+    width:120px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color:rgb(14, 88, 14);
+    margin-top: 20px;
+}
+.btn1:hover{
+    background-color: rgb(28, 156, 28);
+    border-color: yellow;
+    color: black;
+}
+.btn2:hover{
+    background-color: rgb(28, 156, 28);
+    border-color: yellow;
+    color: black;
+}
+.btn2{
+    height:50px;
+    width:120px;
+    border-radius: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    color:rgb(14, 88, 14);
+    margin-top: 20px;
+}
+.quotes{
+    margin-top: -600px;
+    width: 710px;
+    font-size: 58px;
+    margin-left: 650px;
+    font-weight: bold;
+    color:rgb(10, 16, 66);
+    line-height: 75px;
+    margin-bottom: 290px;
+}
+footer{
+    display: flex;
+}
+footer{
+    position: relative;
+    width:100%;
+    height: 300px;
+    background: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+footer p:nth-child(1){
+    font-size: 40px;
+    font-family: "Rye";
+    color:#91f900;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: "Unna";
+    letter-spacing: 1px;
+}
+footer p:nth-child(2){
+    font-size: 20px;
+    color:white;
+    width:500px;
+    text-align: center;
+    line-height: 26px;
+    font-weight: bold;
+    font-family: "Unna";
+}
+.social{
+    display: flex;
+}
+.social a img{
+    width:45px;
+    height:45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 25%;
+    margin:22px 10px;
+    color: white;
+}

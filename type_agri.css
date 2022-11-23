@@ -1,0 +1,237 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+body{
+font-family: "Unna";
+}
+.header__logo{
+    width: 200px;
+    height: 150px;
+    padding: 10px 5px 5px 5px;
+    padding-left: 40px;
+}
+.header{
+    display: flex;
+    background-color: rgba(190, 247, 99, 0.747);
+}
+.hero{
+    display: flex;
+    margin-left: 500px;
+    margin-top: 30px;
+}
+.hero_list a{
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(7, 7, 7);
+    letter-spacing: 1px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+.hero_list a:hover{
+    color: rgb(13, 16, 4);
+    background-color: rgb(237, 237, 103);
+    border-radius: 14px;
+    border:3px solid rgb(239, 32, 94);
+}
+.hero_list{
+    list-style: none;
+    margin-top: 50px;
+}
+.img1{
+     margin-top: 40px;
+     background-color: aliceblue;
+     border-radius: 50%;
+     margin-left: 20px;
+}
+.fertilizer{
+    background:url(https://climate.copernicus.eu/sites/default/files/styles/hero_image_extra_large_2x/public/2018-07/globalagriculture.jpg?itok=fUmFHs6s);
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.agri, .agri1, .agri2{
+    display: flex;
+}
+.paddy img{
+    height: 400px;
+    width:600px;
+    margin-top: 80px;
+    margin-left: 90px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.corn img{
+    height: 400px;
+    width:600px;
+    margin-top: 80px;
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.coconut img{
+    height: 400px;
+    width:600px;
+    margin-top: 120px;
+    margin-left: 90px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.cane img{
+    height: 400px;
+    width:600px;
+    margin-top: 120px;
+    margin-left: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.fruits img{
+    height: 400px;
+    width:600px;
+    margin-top: 120px;
+    margin-left: 90px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.vegitable img{
+    height: 400px;
+    width:600px;
+    margin-top: 120px;
+    margin-left: 60px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.paddy button{
+    margin-left: 280px;
+    padding:20px 70px 20px 70px ;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: rgb(247, 228, 143);
+}
+.corn button{
+    margin-left: 230px;
+    padding:20px 70px 20px 70px ;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: rgb(247, 228, 143);
+}
+.coconut button{
+    margin-left: 230px;
+    padding:20px 70px 20px 70px ;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: rgb(247, 228, 143);
+}
+.cane button{
+    margin-left: 230px;
+    padding:20px 70px 20px 70px ;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;background-color: rgb(247, 228, 143);
+}
+.fruits button{
+    margin-left: 280px;
+    padding:20px 70px 20px 70px ;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;background-color: rgb(247, 228, 143);
+}
+.vegitable button{
+    margin-left: 270px;
+    padding:20px 70px 20px 70px ;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;background-color: rgb(247, 228, 143);
+    margin-bottom: 150px;
+}
+.paddy button:hover{
+ background-color: rgb(255, 52, 52);
+ color: white;
+ border: 3px solid rgb(197, 197, 90);
+}
+.corn button:hover{
+    background-color: rgb(255, 52, 52);
+    color: white;
+    border: 3px solid rgb(197, 197, 90);
+   }.cane button:hover{
+    background-color: rgb(255, 52, 52);
+    color: white;
+    border: 3px solid rgb(197, 197, 90);
+   }.vegitable button:hover{
+    background-color: rgb(255, 52, 52);
+    color: white;
+    border: 3px solid rgb(197, 197, 90);
+   }.fruits button:hover{
+    background-color: rgb(255, 52, 52);
+    color: white;
+    border: 3px solid rgb(197, 197, 90);
+   }
+   .coconut button:hover{
+    background-color: rgb(255, 52, 52);
+    color: white;
+    border: 3px solid rgb(197, 197, 90);
+   }
+   h1{
+    padding-left: 400px;
+    padding-top: 50px;
+    font-size: 45px;
+   }
+   footer{
+    display: flex;
+}
+footer{
+    position: relative;
+    width:100%;
+    height: 300px;
+    background: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+footer p:nth-child(1){
+    font-size: 40px;
+    font-family: "Rye";
+    color:#91f900;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: "Unna";
+    letter-spacing: 1px;
+}
+footer p:nth-child(2){
+    font-size: 20px;
+    color:white;
+    width:500px;
+    text-align: center;
+    line-height: 26px;
+    font-weight: bold;
+    font-family: "Unna";
+}
+.social{
+    display: flex;
+}
+.social a img{
+    width:45px;
+    height:45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 25%;
+    margin:22px 10px;
+    color: white;
+}
