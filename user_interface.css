@@ -1,0 +1,75 @@
+.agriculture{
+    display: flex;
+}
+.agriculture1{
+    display: flex;
+}
+.agriculture2{
+    display: flex;
+}
+.agri img{
+    height: 400px;
+    width:600px;
+    border: 3px solid rgb(6, 99, 6);
+    padding: 15px 15px 15px 15px;
+    margin-top: 80px;
+    margin-left: 70px;
+    background-color: wheat;
+    border-radius: 20px;
+}
+.agri1 img{
+    height: 400px;
+    width:600px;
+    border: 3px solid rgb(6, 99, 6);
+    padding: 15px 15px 15px 15px;
+    margin-top: 80px;
+    margin-left: 80px;
+    background-color: wheat;
+    border-radius: 20px;
+}
+.agri2 img{
+    height: 400px;
+    width:600px;
+    border: 3px solid rgb(6, 99, 6);
+    padding: 15px 15px 15px 15px;
+    margin-top: 90px;
+    margin-left: 70px;
+    background-color: wheat; border-radius: 20px;
+}
+.agri3 img{
+    height: 400px;
+    width:600px;
+    border: 3px solid rgb(6, 99, 6);
+    padding: 15px 15px 15px 15px;
+    margin-top: 90px;
+    margin-left: 70px;
+    background-color: wheat; border-radius: 20px;
+}
+.agri4 img{
+    height: 400px;
+    width:600px;
+    border: 3px solid rgb(6, 99, 6);
+    padding: 15px 15px 15px 15px;
+    margin-top: 90px;
+    margin-left: 70px;
+    background-color: wheat; border-radius: 20px;
+    margin-bottom: 100px;
+}
+.agri5 img{
+    height: 400px;
+    width:600px;
+    border: 3px solid rgb(6, 99, 6);
+    padding: 15px 15px 15px 15px;
+    margin-top: 90px;
+    margin-left: 70px;
+    background-color: wheat; border-radius: 20px;
+    margin-bottom: 100px;
+}
+.holeimg{
+    
+        background-image: url(https://mcat.co.in/wp-content/uploads/2020/09/diploma-agri.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        
+    }

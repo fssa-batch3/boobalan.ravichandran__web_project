@@ -1,0 +1,41 @@
+.fertilizer{
+    display: flex;
+}
+.fertilizer1{
+    display: flex;
+}
+.fert1 {
+    border: 3px solid rgb(117, 115, 115);
+    margin: 150px 0px 100px 150px;
+    padding: 20px 20px 0px 20px ;
+    width:400px;
+    height:500px;
+
+}
+.fert2 {
+    border: 3px solid rgb(117, 115, 115);
+    margin: 150px 0px 100px 200px;
+    padding: 20px ;
+    width:400px;
+    height:480px;
+}
+.fert1 img , .fert2 img{
+    width: 400px;
+    height:400px;
+}
+.fert1 p ,.fert2 p{
+    font-weight: bold;
+    font-size: 22px;
+    width: 350px;
+    padding: 20px 0px 10px 40px;
+    color: black;
+}
+.fert2 p:hover{
+    color: rgb(14, 118, 14);
+}
+.fert1 p:hover{
+    color: rgb(14, 118, 14);
+}
+.fert1 a , .fert2 a{
+    text-decoration: none;
+}

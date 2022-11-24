@@ -1,0 +1,121 @@
+.details{
+    border: 2px solid rgb(43, 118, 38);
+    width:1150px;
+    margin-left: 140px;
+    margin-top: 70px;
+    padding-left: 50px;
+    padding-top: 20px;
+    background: linear-gradient(-90deg,rgb(217, 237, 236),rgb(241, 236, 170)) ;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
+h2{
+    font-size: 36px;
+    margin-left: 380px;
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
+h3{
+    font-size: 24px;
+    margin-bottom: 05px;
+}
+label {
+    font-size: 21px;
+}
+#mobile{
+    width:300px;
+    height: 40px;
+    margin-left: 65px;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+    
+}
+#email{
+    width:300px;
+    height: 40px;
+    margin-left:105px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 40px;margin-right: 70px;
+}
+#full_name{
+    width:300px;
+    height: 40px;
+    margin-left:85px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;margin-right: 70px;
+}
+#gender{
+    width:300px;
+    height: 40px;
+    margin-left:85px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#door{
+    width:300px;
+    height: 40px;
+    margin-left:40px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;margin-right: 70px;
+}
+#pincode{
+    width:300px;
+    height: 40px;
+    margin-left:80px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#state{
+    width:300px;
+    height: 40px;
+    margin-left:180px ;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;margin-right: 70px;
+}
+#district{
+    width:300px;
+    height: 40px;
+    margin-left:135px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#pan{
+    width:300px;
+    height: 40px;
+    margin-left:60px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px; margin-bottom: 20px;
+}
+button{
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    border: 2px solid rgb(160, 168, 160);
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(80, 70, 71);
+    margin-left: 450px;
+}
+button:hover{
+    background-color: rgb(221, 238, 125);
+    color: rgb(0, 0, 0);
+}

@@ -1,0 +1,79 @@
+
+#mobile{
+    width:300px;
+    height: 40px;
+    margin-left: 135px;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#email{
+    width:300px;
+    height: 40px;
+    margin-left:150px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#full_name{
+    width:300px;
+    height: 40px;
+    margin-left:85px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+}
+#password{
+    width:300px;
+    height: 40px;
+    margin-left:155px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#password1{
+    width:300px;
+    height: 40px;
+    margin-left:110px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 60px;
+}
+h4{
+    font-size: 21px;
+}
+label {
+    font-size: 21px;
+}
+h2{
+    padding-left: 150px;
+   padding-bottom: 50px;
+   margin-top: 20px;
+   font-size: 32px;
+}
+button{
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    border: 2px solid rgb(2, 135, 2);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(92, 202, 165);
+    margin-left: 220px;
+}
+.details{
+    border: 2px solid rgb(44, 169, 154);
+    width:620px;
+    margin-left: 400px;
+    margin-top: 70px;
+    padding-left: 30px;
+    padding-top: 20px;
+    background: linear-gradient(-90deg,rgb(213, 254, 163),rgb(187, 255, 235)) ;
+    border-radius: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
