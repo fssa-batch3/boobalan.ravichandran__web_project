@@ -1,0 +1,101 @@
+.delivery{
+ border: 2px solid gray;
+ width:550px;
+ margin: 100px 0px 200px 400px;
+ padding: 30px 50px 40px 50px;
+ border-radius: 10px;
+ background-color: rgb(230, 230, 230);
+}
+body{
+    background-color: rgba(214, 244, 247, 0.959);
+}
+.delivery h1{
+    font-size: 35px;
+    padding-left: 180px;
+    padding-bottom: 30px;
+}
+.delivery label{
+    font-size: 20px;
+}
+#full_name{
+    width:300px;
+    height: 40px;
+    margin-left:85px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#mobile {
+    width:300px;
+    height: 40px;
+    margin-left:90px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#door{
+    width:300px;
+    height: 40px;
+    margin-left:41px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#pincode{
+    width:300px;
+    height: 40px;
+    margin-left:104px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#state{
+    width:300px;
+    height: 40px;
+    margin-left:175px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#district{
+    width:300px;
+    height: 40px;
+    margin-left:155px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+}
+.radio{
+    display:flex;
+    padding: 30px 100px 20px 220px;
+    justify-content: space-around;
+}
+.radio label{
+    font-size: 18px;
+}
+.rad1{
+    padding: 5px 10px 10px 10px;
+}
+.btn1 {
+   padding:5px 30px 5px 30px;
+   font-size: 20px;
+   border-radius: 5px;
+   margin: 20px 50px 5px 20px ;
+}
+.btn2{
+    padding:5px 40px 5px 40px;
+   font-size: 20px;
+   border-radius: 5px;
+   margin: 20px 20px 5px 50px ;
+}
+.btn1:hover ,.btn2:hover{
+    background-color: rgb(35, 33, 33);
+    color: rgb(249, 244, 244);
+    border: 2px solid  rgb(242, 43, 43);
+    font-size: 23px;
+}

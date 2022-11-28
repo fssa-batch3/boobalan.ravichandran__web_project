@@ -6,113 +6,137 @@ body{
     font-family: "Unna";
     }
 .header__logo{
-    width: 200px;
-    height: 150px;
-    padding: 10px 5px 5px 5px;
-    padding-left: 70px;
+    width: 220px;
+    height: 72px;
+    padding: 10px 5px 2px 5px;
+    padding-left: 50px;
 }
 .header{
     display:flex;
-    background-color:rgba(190, 247, 99, 0.747);
+    background-color:rgb(255, 255, 255);
     background-size: contain;
+    border-bottom: 8px solid rgb(55, 105, 18);
 }
 .hero{
     display: flex;
     margin-left: 700px;
+    margin-top: 20px;
 }
 .hero_list a{
-    padding-right: 100px;
-    padding-left: 10px;
+   padding: 10px 40px 10px 40px;
     text-decoration: none;
+    height:50px;
+    width:120px;
+    font-size: 22px;
+    font-weight: bold;
+    margin:20px 100px 20px 10px;
+    color: rgb(19, 19, 59);
 }
 .hero_list{
     list-style: none;
-    margin-top: 50px;
+    margin-top: 15px;
+}
+.fert_back ,.fert{
+    margin: 90px 0px 0px 165px;
 }
 .fert_back img{
-    width:1504px ;
-    height:727px;
+    width:1150px ;
+    height:600px;
 }
-.btn1{
-    height:50px;
-    width:120px;
-    border-radius: 30px;
-    font-size: 18px;
+
+.hero_list a:hover{
+    background-color: rgb(71, 73, 71);
+     border: 3px solid rgb(243, 15, 15);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    border-radius: 10px;
+}
+.quoat{
+    margin-top: -500px;
+    margin-bottom: 360px;
+    padding-left: 50px;
+}
+.quoat h2 {
+  font-size: 68px;
+  font-style: italic;
+  font-weight: normal;
+  font-family: 'Merienda One';
+}
+.quoat p{
+    font-size: 35px;
     font-weight: bold;
-    color:rgb(14, 88, 14);
-    margin-top: 20px;
+    width: 400px;
+    color: rgb(13, 39, 65);
+    line-height: 40px;
+    font-family: 'Merienda One';
+    padding-top: 10px;  line-height: 52px;
 }
-.btn1:hover{
-    background-color: rgb(28, 156, 28);
-    border-color: yellow;
-    color: black;
+.fert img{
+    width:1150px ;
+    height:620px;
 }
-.btn2:hover{
-    background-color: rgb(28, 156, 28);
-    border-color: yellow;
-    color: black;
-}
-.btn2{
-    height:50px;
-    width:120px;
-    border-radius: 35px;
-    font-size: 18px;
+.quoats p
+{
+    font-size: 39px;
     font-weight: bold;
-    color:rgb(14, 88, 14);
-    margin-top: 20px;
+    width: 460px;
+    color: rgb(61, 57, 57);
+    line-height: 40px;
+    padding-top: 10px;
+    margin-left: 60px;
+    font-family: 'Merienda One'; color: rgb(0, 0, 0);
+    line-height: 52px;
 }
-.quotes{
-    margin-top: -600px;
-    width: 710px;
-    font-size: 58px;
-    margin-left: 650px;
-    font-weight: bold;
-    color:rgb(10, 16, 66);
-    line-height: 75px;
-    margin-bottom: 290px;
+.quoats h2{
+    font-size: 76px;
+    font-style: italic;
+    font-weight: normal;
+    margin-left: 70px;
+    font-family: 'Merienda One';
 }
-footer{
+.quoats{
+    margin-top: -480px;
+    margin-bottom: 330px;
+    padding-left: 10px;
+}
+.fab{
+    border:2px solid rgb(249, 249, 249);
+    background-color: rgb(249, 249, 249) ;
+    width:1150px;
+    margin: 90px 0px 100px 165px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.human{
     display: flex;
 }
-footer{
-    position: relative;
-    width:100%;
-    height: 300px;
-    background: black;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 1px;
+.details{
+ background-color: rgb(232, 232, 232);
+ margin: 10px 25px 5px 25px;
+ padding: 20px 17px 20px 17px;
+   
 }
-footer p:nth-child(1){
-    font-size: 40px;
-    font-family: "Rye";
-    color:#91f900;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-family: "Unna";
-    letter-spacing: 1px;
+.details img {
+    width:300px;
+    height:200px;
 }
-footer p:nth-child(2){
-    font-size: 20px;
-    color:white;
-    width:500px;
-    text-align: center;
-    line-height: 26px;
-    font-weight: bold;
-    font-family: "Unna";
+.details h2{
+    font-size: 27px;
+    padding: 15px 0px 8px 0px;
+    color:rgb(16, 16, 81);
 }
-.social{
-    display: flex;
+ .trai{
+    width:50%;
+    border-bottom:5px solid rgb(177, 62, 20);
+    margin-bottom: 25px;
+    margin-top: 10px;
+ }
+.details p{
+   font-size: 19px;
+   color:rgb(16, 16, 81);
+   width: 300px;
 }
-.social a img{
-    width:45px;
-    height:45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    border-radius: 25%;
-    margin:22px 10px;
-    color: white;
+.fab h1{
+    font-size: 42px;
+    padding-left: 420px;
 }

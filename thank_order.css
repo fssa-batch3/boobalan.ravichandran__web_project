@@ -1,0 +1,41 @@
+.thank {
+    margin: 150px 150px 200px 150px ;
+}
+body{
+    background-color: rgb(227, 254, 200);
+}
+.thank h1{
+    font-size: 105px;
+    padding-left: 70px;
+    color: green;
+    font-style: italic;
+}
+.thank h3 , h2{
+    width:700px;
+    font-size: 50px;
+}
+.thank h3{
+    padding-left: 230px;
+    color:rgb(230, 109, 129);
+}
+.thank h2{
+    padding-left: 300px;
+    color:rgb(230, 109, 129);
+}
+#home{
+   padding: 10px 5px 10px 30px;
+}
+.thank button{
+    font-size: 25px;
+    background-color: antiquewhite;
+    padding-right: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    border:1px solid rgb(14, 13, 13);
+}
+.thank button:hover{
+    background-color: rgb(45, 43, 43);
+    color:white;
+    font-size: 28px;
+    border:2px solid red;
+}
