@@ -19,7 +19,11 @@
  font-weight: bold;
  width: 550px;
  padding-left: 100px;
- padding-top: 40px;
+ padding-top: 30px;
+ color:black
+}
+.fert1 a{
+    text-decoration: none;
 }
 .fert2{
     display: flex;
@@ -34,17 +38,17 @@
     color: rgb(254, 50, 50);
     padding-top: 3px;
 }
-.btn1 button{
+.btn11 button{
     padding: 10px 40px 10px 40px;
     border-radius: 5px;
     font-size: 20px;
-    margin: 60px 0px 0px 100px;
-    background-color: rgb(255, 216, 145) ;
+    margin: 40px 0px 0px 100px;
+    background-color: rgb(248, 230, 196) ;
     font-weight: bold;
 }
-.btn1 button:hover , .btn2 button:hover{
+.btn11 button:hover , .btn2 button:hover{
     background-color:rgb(24, 24, 24);
-    color: red;
+    color: rgb(255, 255, 255);
     border: 3px solid red;
     font-size:22px ;
     letter-spacing: 1px;
@@ -57,6 +61,6 @@ margin:20px 0px 20px 900px;
 padding: 10px 40px 10px 40px ;
 font-size:22px ;
 border-radius: 5px;
-background-color: rgb(253, 222, 164) ;
+background-color: rgb(248, 230, 197) ;
 font-weight: bold;
 }

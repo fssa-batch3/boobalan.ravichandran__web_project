@@ -1,17 +1,18 @@
+
 .delivery{
  border: 2px solid gray;
- width:550px;
- margin: 100px 0px 200px 400px;
- padding: 30px 50px 40px 50px;
+ width:620px;
+ padding: 30px 20px 40px 50px;
  border-radius: 10px;
- background-color: rgb(230, 230, 230);
+ background:linear-gradient(-270deg,rgb(191, 249, 232), rgb(248, 248, 222))
 }
-body{
-    background-color: rgba(214, 244, 247, 0.959);
+main{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAk9930AOzowMIzCV_07aGU8gSWsAgO3CDMfF3XMSNVmc-_-wTJ2FreGttgIKfgcHVWuc&usqp=CAU);
+    padding: 50px 100px 100px 450px;
 }
 .delivery h1{
     font-size: 35px;
-    padding-left: 180px;
+    padding-left: 140px;
     padding-bottom: 30px;
 }
 .delivery label{
@@ -20,7 +21,7 @@ body{
 #full_name{
     width:300px;
     height: 40px;
-    margin-left:85px ;
+    margin-left:80px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
@@ -29,7 +30,7 @@ body{
 #mobile {
     width:300px;
     height: 40px;
-    margin-left:90px ;
+    margin-left:85px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
@@ -38,7 +39,7 @@ body{
 #door{
     width:300px;
     height: 40px;
-    margin-left:41px ;
+    margin-left:35px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
@@ -81,21 +82,26 @@ body{
 .rad1{
     padding: 5px 10px 10px 10px;
 }
-.btn1 {
-   padding:5px 30px 5px 30px;
-   font-size: 20px;
+.btn11 {
+   padding:10px 30px 10px 30px;
+   font-size: 18px;
    border-radius: 5px;
-   margin: 20px 50px 5px 20px ;
+   margin: 20px 30px 5px 20px ;
+   background:linear-gradient(rgb(13, 13, 13),rgb(49, 191, 174));
+   color: white;
 }
-.btn2{
-    padding:5px 40px 5px 40px;
-   font-size: 20px;
+.btn22{
+    padding:10px 40px 10px 40px;
+   font-size: 18px;
    border-radius: 5px;
    margin: 20px 20px 5px 50px ;
+   background:linear-gradient(rgb(13, 13, 13),rgb(49, 191, 174));
+   color: white;
 }
-.btn1:hover ,.btn2:hover{
-    background-color: rgb(35, 33, 33);
+.btn11:hover ,.btn22:hover{
+    background:linear-gradient(black,rgb(255, 0, 68));
     color: rgb(249, 244, 244);
     border: 2px solid  rgb(242, 43, 43);
-    font-size: 23px;
+    font-size: 21px;
+    transform: scale(1..25);
 }

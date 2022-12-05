@@ -1,75 +1,19 @@
-.agriculture{
-    display: flex;
+.images img{
+    width:345px ;
+    height:520px;
+    padding-left: 25px;
+    margin-left: 2px;
 }
-.agriculture1{
-    display: flex;
+.images{
+   margin: 80px 50px 100px 30px;
 }
-.agriculture2{
-    display: flex;
+.hero{
+    margin-left: 30px;
 }
-.agri img{
-    height: 400px;
-    width:600px;
-    border: 3px solid rgb(6, 99, 6);
-    padding: 15px 15px 15px 15px;
-    margin-top: 80px;
-    margin-left: 70px;
-    background-color: wheat;
-    border-radius: 20px;
+.fa-sign-out{
+  margin-top: -5px;
 }
-.agri1 img{
-    height: 400px;
-    width:600px;
-    border: 3px solid rgb(6, 99, 6);
-    padding: 15px 15px 15px 15px;
-    margin-top: 80px;
-    margin-left: 80px;
-    background-color: wheat;
-    border-radius: 20px;
+.today a{
+  text-decoration: none;;
+  color: black;
 }
-.agri2 img{
-    height: 400px;
-    width:600px;
-    border: 3px solid rgb(6, 99, 6);
-    padding: 15px 15px 15px 15px;
-    margin-top: 90px;
-    margin-left: 70px;
-    background-color: wheat; border-radius: 20px;
-}
-.agri3 img{
-    height: 400px;
-    width:600px;
-    border: 3px solid rgb(6, 99, 6);
-    padding: 15px 15px 15px 15px;
-    margin-top: 90px;
-    margin-left: 70px;
-    background-color: wheat; border-radius: 20px;
-}
-.agri4 img{
-    height: 400px;
-    width:600px;
-    border: 3px solid rgb(6, 99, 6);
-    padding: 15px 15px 15px 15px;
-    margin-top: 90px;
-    margin-left: 70px;
-    background-color: wheat; border-radius: 20px;
-    margin-bottom: 100px;
-}
-.agri5 img{
-    height: 400px;
-    width:600px;
-    border: 3px solid rgb(6, 99, 6);
-    padding: 15px 15px 15px 15px;
-    margin-top: 90px;
-    margin-left: 70px;
-    background-color: wheat; border-radius: 20px;
-    margin-bottom: 100px;
-}
-.holeimg{
-    
-        background-image: url(https://mcat.co.in/wp-content/uploads/2020/09/diploma-agri.jpeg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        
-    }

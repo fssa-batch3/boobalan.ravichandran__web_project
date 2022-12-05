@@ -1,80 +1,260 @@
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-          <link rel="stylesheet" href="assets/css/user_interface.css">
-          <title>User Interface</title>
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unna&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Shrikhand&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="./assets/css/header.css">
-<link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/user_interface.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unna&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>User Interface</title>
 </head>
-    <body>
-        <div class="total">
-        <header>
-        <div class="header">
+
+<body>
+    <div class="header">
+       <ul>
+        <li class="hero_list"><a href="../seller/seller_singup.html">Sell on Fert Agri Boomi</a></li>
+       </ul>
+    </div>
+    <header>
+        <div class="head">
             <div>
-            <a hrf="#">
-                <img src="./Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
-            </a>
+                <img src="../../Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
+        </div>
+        <div>
+            <form>
+                <input  type="search" placeholder="Search.." id="search">
+                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+              </form>
         </div>
             <div>
                     <ul class="hero">
-                            <li class="hero_list"><a href="./index.html">Home</a> </li>
-                            <li class="hero_list"><a href="#">Wishlist</a> </li>
-                    <li class="hero_list"><a href="#">My Order</a>
+                     <li class="hero_list1"><a href="../user/wishlist.html"><i id="wish" class="fa fa-heart" style="font-size:21px"></i>Wishlist</a> </li>
+                    <li class="hero_list1"><a href="../user/user_order.html">My orders</a>
                     </li>
-                    <li class="hero_list"><a href="#">Products</a> </li>
-                <li  class="hero_list"><a href="#"><i id="cart" class="fa fa-shopping-cart" style="font-size:30px"></i> Cart</a></li>
-                <a href="#" ><img class="img1" src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" width="40px" height="40px"></a>
+                <li  class="hero_list1"><a href="./add_cart.html"><i id="cart" class="fa fa-shopping-cart" style="font-size:26px"></i> Cart</a></li>
+                <li class="hero_list1"><a href="../homepage/index.html"><i class="fa fa-sign-out" style="font-size:21px"></i>Logout</a>
+                </li>
+                <a href="./user_profile.html" ><img class="img1" src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" width="35px" height="35px"></a>
                 </ul>
             </div>
         </div>   
     </header>
-    <main>
-    <div class="holeimg">
-        <div class="agriculture">
-            <div class="agri">
-                <img src="https://eige.europa.eu/sites/default/files/styles/eige_original_optimised/public/images/agriculture.jpg?itok=YXbQPCXw" alt="agri" />
-            </div>
-                <div class="agri1">
-                    <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-645630,resizemode-1,msid-76014649/news/economy/agriculture/new-laws-on-agriculture-trade-and-contract-farming-in-the-works.jpg" alt="agri1"/>
+    <div class="nav">
+            <a href="./user_interface.html"><button class="btn1">HOME</button></a>
+            <div class="dropdown">
+                <button class="dropbtn">BRANDS</button>
+                <div class="dropdown-content">
+                    <a href="./dhanuka.html">DHANUKA</a>
+                    <a href="./dow_agro.html">DOW AGRO SCIENCE</a>
+                    <a href="./insecticides.html">UPL</a>
+                    <a href="./dhanuka.html">TATA RALLIS</a>
+                    <a href="dow_agro.html">ADAMA</a>
+                    <a href="">BAYER</a>
+                    <a href="./fungicides.html">ARIES AGRO</a>
+                    <a href="">BARRIX</a>
+                   <a href="">INDOFIL</a>
+                   <a href="./offers.html">RINUJA</a>
                 </div>
             </div>
-            <div class="agriculture1">
-                    <div class="agri2">
-                        <img src="https://i0.wp.com/www.newsintervention.com/wp-content/uploads/2020/04/Paddy-farmer.jpeg?fit=800%2C448&ssl=1" alt="agri2"/>
-                    </div>
-                        <div class="agri3">
-                            <img src="https://pearlpay.com/wp-content/uploads/2020/03/Helping-Farmers-in-the-Philippines-with-Accessible-Financial-Help-1024x554.jpg" alt="agri3"/>
-                        </div>
-                    </div>
-                        <div class="agriculture2">
-                    <div class="agri4">
-                        <img src="https://thumbs.dreamstime.com/b/family-working-allotment-together-47093541.jpg" alt="agri4"/>
-                    </div>
-                <div class="agri5">
-                    <img src="https://mlld7orvw3cq.i.optimole.com/yUj_eTA.TNP4~54d1d/w:2000/h:1333/q:auto/https://www.cimmyt.org/content/uploads/2020/01/27100973800_0e4af116b2_k.jpg" alt="agri5"/>
+            <div class="dropdown1">
+                <button class="dropbtn1">CROP PROTECTION</button>
+                <div class="dropdown1-content">
+                    <a href="./insecticides.html">BIO INSECTICIDES</a>
+                    <a href="./fungicides.html">BIO FUNGICIDES</a>
+                    <a href="./dow_agro.html">BIO NEMATICIDES</a>
+                    <a href="dhanuka.html"> BIO VIRCIDES</a>
                 </div>
             </div>
-        </div>
-        </main>
+            <div  class="dropdown2">
+                 <button class="dropbtn2" > CROP NUTRITION</button>
+                <div class="dropdown2-content">
+                    <a href="./major_nutrients.html">MAJOR NUTRIENTS</a>
+                    <a href="./secodary_nutrients.html">SECONDARY NUTRIENTS</a>
+                    <a href="./dhanuka.html">GROWTH PROMOTERS</a>
+                    <a href="./offers.html">GROWTH RETARDANTS</a>
+                    <a href="./secodary_nutrients.html">ORGANIC FERTILIZERS</a>
+                    <a href="./major_nutrients.html">BIO FERTILIZERS</a>
+                    <a href="./secodary_nutrients.html">ANTI STRESSING AGENTS</a>
+                    <a href="./major_nutrients.html">MICRO NUTRIENTS</a>
+                </div>
+            </div>
     </div>
-        <footer id="contact">
-            <p>Fert Agri Boomi(FAB)</p>
-            <p>CONTACT US</p>
-            <div class="Social">
-                <a href="https://www.instagram.com/rp0803/?igshid=YmMyMTA2M2Y%3D" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" /></a>
-    
-                <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g"  target="_blank"> <img src="https://cdn.iconscout.com/icon/free/png-128/youtube-2752013-2284830.png" /> </a> 
-                <a href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app"  target="_blank"> <img src="https://cdn.iconscout.com/icon/free/png-128/gmail-2981844-2476484.png" /> </a>
-            
+       <div class="product">
+          <div class="offers">
+           <a href="./offers.html">
+            <img src="https://agribegri.com/onlineimage/G/c719d2d0d147994950b1c677ff7321a1-11-22-22-15-55-55%7C-%7Cjpg.php" alt="offers">
+            <h2 class="off">Offers</h2>
+           </a>
+          </div>
+          <div class="offers">
+           <a href="./insecticides.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbcUm8lngs65eLZtr2CvokRWbspDgMMxbhNQ&usqp=CAU" alt="Pesticides products">
+            <h2 class="off1">Insecticides</h2>
+           </a>
+        </div>
+        <div class="offers">
+            <a href="./fungicides.html">
+                <img src="https://skyncropcare.com/wp-content/uploads/sites/114/2021/12/Fungicide-Banner.jpg" alt="Fungicides">
+            <h2 class="off2">Fungicides</h2>
+            </a>
+        </div>
+           <div class="offers">
+            <a href="./major_nutrients.html">
+                <img src="https://4.imimg.com/data4/TC/YJ/ANDROID-5699339/product-500x500.jpeg" alt="Growth Promoters">
+            <h2 class="off3">Growth Promoters</h2>
+            </a>
+           </div>
+           <div class="offers">
+           <a href="./secodary_nutrients.html">
+            <img src="https://www.awiner.com/wp-content/uploads/2020/12/2-scaled.jpg" alt="Herbicides">
+            <h2 class="off4">Herbicides</h2>
+           </a>
+           </div>
+       </div>
+      <div class="imga">
+        <img src="http://www.agriraise.com/sites/default/files/Slider-01.jpg" alt="" width="94.5%" height="65%">
+      </div>
+    <div class="h11">
+        <h1>Today's Offer</h1>
+    </div>
+    <div class="offers1">
+        <div class="today">
+           <a href="./off1.html"> <img src="https://agribegri.com/productimage/067100f4f0d1bed321761a888c491c6f-10-09-21-16-48-18.jpg">
+            <p>Sumitomo Lano Pyriproxyfen 10% SC Insecticides</p>
+            <div class="star">
+                <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star"style="font-size:24px"></span>
+            <span class="fa fa-star" style="font-size:24px"></span>
             </div>
-        </footer>
-    </body>
-    </html>
+           <div class="price">
+            <h2><i class="fa fa-inr" style="font-size:20px"></i>1040</h2><del><i class="fa fa-inr" style="font-size:15px"></i> 2040</del></div>
+            <h3>You Save: <i class="fa fa-inr" style="font-size:18px"></i> 1,000</h3></a>
+           
+        </div>
+        <div class="today">
+            <a href="./off2.html"><img src="https://5.imimg.com/data5/SELLER/Default/2020/8/SM/XK/RS/108430503/adama-barazide-insecticides-500x500.jpg" >
+            <p>Adama Barazide Insecticides, Plastic Bottle, 1 Litre</p>
+            <div class="star">
+            <span class="fa fa-star checked" style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            </div>
+            <div class="price">
+                <h2><i class="fa fa-inr" style="font-size:20px"></i>1,550</h2><del><i class="fa fa-inr" style="font-size:15px"></i> 2952</del></div>
+                <h3>You Save: <i class="fa fa-inr" style="font-size:18px"></i> 1,402</h3></a>
+        </div>
+         <div class="today">
+           <a href="./off3.html"><img src="http://cdn.shopify.com/s/files/1/0722/2059/products/solomon.webp?v=1656760863">
+            <p>Solomon Insecticide</p>
+            <div class="star">
+             <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star" style="font-size:24px"></span>
+            </div>
+          <div class="price">
+            <h2><i class="fa fa-inr" style="font-size:20px"></i>1,475</h2><del><i class="fa fa-inr" style="font-size:15px"></i> 2775</del></div>
+            <h3>You Save: <i class="fa fa-inr" style="font-size:18px"></i> 1,300</h3></a>
+        
+         </div>
+         <div class="today">
+           <a href="./fung1.html"><img src="https://5.imimg.com/data5/GH/CL/MY-26070815/fighter-fipronil-insecticides-500x500.jpg">
+            <p>Acre Fighter Fipronil Insecticides</p>
+           <div class="star">
+            <span class="fa fa-star checked"style="font-size:24px" style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+           </div>
+            <div class="price">
+                <h2><i class="fa fa-inr" style="font-size:20px"></i>1,210</h2><del><i class="fa fa-inr" style="font-size:15px"></i> 2314</del></div>
+            <h3>You Save: <i class="fa fa-inr" style="font-size:18px"></i> 1,104</h3></a>
+        
+         </div>
+         <div class="today">
+            <a href="./fung1.html"><img src="https://agribegri.com/productimage/d23669530d53fc217464c33ae19f21ba-09-23-20-18-49-15.jpeg">
+            <p>Pesticide Admit Imidacloprid </p>
+            <div class="star"> 
+                <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            <span class="fa fa-star checked"style="font-size:24px"></span>
+            </div>
+            <div class="price">
+                <h2><i class="fa fa-inr" style="font-size:20px"></i>1,366</h2><del><i class="fa fa-inr" style="font-size:15px"></i> 2679</del></div>
+            <h3>You Save: <i class="fa fa-inr" style="font-size:18px"></i> 1,204</h3></a>
+        </div>
+         </div>
+         <div class="images">
+          <img src="https://cdn.shopify.com/s/files/1/0722/2059/files/Manage-Red-Pumpkin-Beetle-in-Melons---BigHaat-_Recovered_-eng_1_540x.jpg?v=1667388658" alt="">
+          <img src="https://cdn.shopify.com/s/files/1/0722/2059/files/No_Virus_Adaptation_Series-2_English_514b3034-19b3-4b86-a18e-1b353f2495cd_540x.jpg?v=1663052028" alt="">
+          <img src="https://cdn.shopify.com/s/files/1/0722/2059/files/Series-2-Tile-800x1200-anthracnose-eng_1_540x.jpg?v=1668684797" alt="">
+          <img src="https://cdn.shopify.com/s/files/1/0722/2059/files/Series_2_Tile_800x1200_Chemical_Management_Cabbage_eng_540x.jpg?v=1669022471" alt="">
+         </div>
+    <div class="fab">
+        <h1>FAB's PRIORITIES</h1>
+        <div class="human">
+        <div class="details">
+           <img src="https://t4.ftcdn.net/jpg/03/97/25/45/360_F_397254508_QmgoMILfNR1UM20nGEXNmmxWPGyj0xKH.jpg" >
+           <h2>Human Nutrition</h2>
+           <hr class="trai">
+           <p>Better soil and plant health means better human health. We promote best practices in fertilizer use to 
+            support higher crop yields and more nutritious food.</p>
+        </div>
+        <div class="details">
+            <img src="https://www.imf.org/wp-content/uploads/2018/03/BLOG-1024x600-Hand-holding-Plant-on-Soil-iStock-649090040.jpg">
+            <h2>Climate Change</h2>
+            <hr class="trai">
+            <p>We work across the agriculture value chain to reduce greenhouse gas emissions and increase sequestration of carbon in soil.</p>
+        </div>
+            <div  class="details">
+         <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/6163/production/_121513942_gettyimages-1254832141.jpg">
+         <h2>Sustainable Production</h2>
+         <hr class="trai">
+         <p>Fertilizers are fundamental to agriculture and our challenge is to feed the world sustainably. Sustainable fertilizer production is key to increasing our industry’s energy efficiency 
+            and reducing CO2 emissions.</p>
+        </div>
+    </div>
+    </div>
+    
+    <footer id="contact">
+        <p>Fert Agri Boomi(FAB)</p>
+        <p>CONTACT US</p>
+        <div class="Social">
+            <a href="https://www.instagram.com/rp0803/?igshid=YmMyMTA2M2Y%3D" target="_blank"> <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" /></a>
+
+            <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g" target="_blank"> <img
+                    src="https://cdn.iconscout.com/icon/free/png-128/youtube-2752013-2284830.png" /> </a>
+            <a href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app" target="_blank"> <img
+                    src="https://cdn.iconscout.com/icon/free/png-128/gmail-2981844-2476484.png" /> </a>
+
+        </div>
+    </footer>
+
+</body>
+</head>
+
+</html>

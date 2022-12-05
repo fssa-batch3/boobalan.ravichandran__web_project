@@ -1,7 +1,6 @@
 table, th, td {
-    border: 2px solid rgb(159, 153, 153);
+    border: 5px solid  rgb(231, 226, 226);
     border-collapse: collapse;
-    border-radius: 100px;
   }
   h2{
     font-size: 44px;
@@ -19,10 +18,12 @@ table, th, td {
   th{
     padding: 40px 0px;
     font-size: 29px;
+    background-color: rgb(139, 195, 176);
   }
   td{
     font-size: 22px;
     padding: 30px 80px;
+    background-color: rgb(211, 201, 156);
   }
 i{
 padding-left: 10px;

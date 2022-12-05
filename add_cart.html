@@ -1,61 +1,118 @@
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-          <link rel="stylesheet" href="./assets/css/add_cart.css">
-          <title>Add to cart </title>
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unna&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda+One&family=Shrikhand&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="./assets/css/header.css">
-<link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/add_cart.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unna&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Add to cart</title>
 </head>
-    <body>
-        <header>
-        <div class="header">
+
+<body>
+    <div class="header">
+       <ul>
+        <li class="hero_list"><a href="#">Sell on Fert Agri Boomi</a></li>
+       </ul>
+    </div>
+    <header>
+        <div class="head">
             <div>
-            <a hrf="#">
-                <img src="./Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
-            </a>
+                <img src="../../Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
+        </div>
+        <div>
+            <form>
+                <input  type="search" placeholder="Search.." id="search">
+                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+              </form>
         </div>
             <div>
                     <ul class="hero">
-                            <li class="hero_list"><a href="./index.html">Home</a> </li>
-                            <li class="hero_list"><a href="./index.html">Wishlist</a> </li>
-                    <li class="hero_list"><a href="#">My Order</a>
+                     <li class="hero_list1"><a href="../user/wishlist.html"><i id="wish" class="fa fa-heart" style="font-size:21px"></i>Wishlist</a> </li>
+                    <li class="hero_list1"><a href="../user/user_order.html">My orders</a>
                     </li>
-                    <li class="hero_list"><a href="#">Products</a> </li>
-                <li  class="hero_list"><a href="#"><i id="cart" class="fa fa-shopping-cart" style="font-size:30px"></i> Cart</a></li>
-                <a href="#" ><img class="img1" src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" width="40px" height="40px"></a>
+                <li  class="hero_list1"><a href="./add_cart.html"><i id="cart" class="fa fa-shopping-cart" style="font-size:26px"></i> Cart</a></li>
+                </li>
+                <a href="./user_profile.html" ><img class="img1" src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" width="35px" height="35px"></a>
                 </ul>
             </div>
         </div>   
     </header>
+    <div class="nav">
+        <a href="./user_interface.html"><button class="btn1">HOME</button></a>
+        <div class="dropdown">
+            <button class="dropbtn">BRANDS</button>
+            <div class="dropdown-content">
+                <a href="./dhanuka.html">DHANUKA</a>
+                <a href="./dow_agro.html">DOW AGRO SCIENCE</a>
+                <a href="./insecticides.html">UPL</a>
+                <a href="./dhanuka.html">TATA RALLIS</a>
+                <a href="dow_agro.html">ADAMA</a>
+                <a href="./major_nutrients.html">BAYER</a>
+                <a href="./fungicides.html">ARIES AGRO</a>
+                <a href="./secodary_nutrients.html">BARRIX</a>
+               <a href="./offers.html">INDOFIL</a>
+               <a href="./offers.html">RINUJA</a>
+            </div>
+        </div>
+        <div class="dropdown1">
+            <button class="dropbtn1">CROP PROTECTION</button>
+            <div class="dropdown1-content">
+                <a href="./insecticides.html">BIO INSECTICIDES</a>
+                <a href="./fungicides.html">BIO FUNGICIDES</a>
+                <a href="./dow_agro.html">BIO NEMATICIDES</a>
+                <a href="dhanuka.html"> BIO VIRCIDES</a>
+            </div>
+        </div>
+        <div  class="dropdown2">
+             <button class="dropbtn2" > CROP NUTRITION</button>
+            <div class="dropdown2-content">
+                <a href="./major_nutrients.html">MAJOR NUTRIENTS</a>
+                <a href="./secodary_nutrients.html">SECONDARY NUTRIENTS</a>
+                <a href="./dhanuka.html">GROWTH PROMOTERS</a>
+                <a href="./offers.html">GROWTH RETARDANTS</a>
+                <a href="./secodary_nutrients.html">ORGANIC FERTILIZERS</a>
+                <a href="./major_nutrients.html">BIO FERTILIZERS</a>
+                <a href="./secodary_nutrients.html">ANTI STRESSING AGENTS</a>
+                <a href="./major_nutrients.html">MICRO NUTRIENTS</a>
+            </div>
+        </div>
+</div>
     <main>
         <div class="total">
         <div  class="fertilizer">
-            <div class="fert">
-            <img src="https://cdn.shopify.com/s/files/1/0722/2059/products/PADDY_400x.png?v=1644922430">
+           <div class="fert">
+            <a href=""> <img src="https://cdn.shopify.com/s/files/1/0722/2059/products/Sempra_500x.jpg?v=1601734556"></a>
         </div>
         <div>
             <div class="fert1">
-                <p>PADDY GROW Amruth Paddy Microbial Consortia PMC, 
-                    Paddy Special, Bio-Fertilizer, Plant Growth and Development</p>
+              <a href="" > <p>PADDY GROW Amruth Paddy Microbial Consortia PMC, 
+                    Paddy Special, Bio-Fertilizer, Plant Growth and Development</p></a>
                 </div>
                     <div class="fert2">
-                        <p>Price:</p><h2>RS:2400.00</h2>
+                        <p>Price:</p><h2>RS:2400.00</h2></a>
                 </div>
-                <div class="btn1">
-                    <a href="#"> <button type="button">Remove</button></a>
+                <div class="btn11">
+                    <a href="./user_interface.html"> <button type="button">Remove</button></a>
                 </div>
              </div>
             </div>
              <div class="btn2">
-                    <a href="#"> <button type="button">Place Order</button></a>
+                    <a href="./deliver_address.html"> <button type="button">Place Order</button></a>
                 </div>
             </div>
                 

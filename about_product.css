@@ -3,12 +3,13 @@
     flex-direction: column;
     padding: 10px 40px 10px 40px ;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 19px;
   border-radius: 10px;
   margin-left: 90px;
   margin-top: 30px;
+  border: none;
 }
-.rem button:hover{
+#rem1:hover,#rem:hover{
     border: 2px solid red;
     color: white;
     background-color: rgb(44, 40, 40);
@@ -20,10 +21,15 @@
     padding: 10px 65px 10px 65px;
     margin-top: 30px;
     border-radius: 10px;
+    background-color: rgb(250, 138, 25);
+    color:white;
+    border: 3px solid  rgb(250, 138, 25);
 }
 #rem1{
    display: flex;
    flex-direction: row;
+   background-color: rgb(251, 208, 34);
+   border: 3px solid rgb(251, 208, 34);
 }
 #cart{
     padding-top: 7px;
@@ -40,12 +46,14 @@
 .fert1 img{
     margin-left: 50px;
     margin-top: 30px;
+    width:300px;
+    height:300px;
 }
 .fert2 h2{
     margin-top:50px ;
     margin-left: 100px;
     width:750px;
-    font-size: 31px;
+    font-size: 33px;
     color: green;
 }
 .fert3, .fert4 ,.fert5 {
@@ -53,35 +61,17 @@
     margin-left:100px ;
     margin-top: 30px;
 }
-.fert3 h3 ,.fert4 p ,.fert5 p{
- font-size: 22px;
+.fert3 h3  ,.fert5 p{
+ font-size: 26px;
 }
 .fert3 p{
     font-size: 19px;
     padding: 2px 0px 0px 7px;
+    margin-top: 5px;
 }
-.fert4 h4 {
-    font-size: 22px;
-   padding-left: 10px;
-   color: red;
-}
+
 .fert5 h3{
-    font-size: 22px;
-}
-.fert55 h1{
-    margin-top: 2px;
-}
-.fert55 {
-    display: flex;
-    flex-direction: row;
-    margin-left: 50px;
-    margin-top: -2px;
-    border-radius: 10px;
-    border: 1px solid rgb(170, 28, 28);
-}
-.fert55 p{
-    padding: 5px 10px 5px 10px;
-    width: 40px;
+    font-size: 26px;
 }
 .description ,.benifits ,.method{
     margin: 40px 0px 20px 0px;
@@ -90,4 +80,20 @@
     font-size: 19px;
     padding-top: 10px;
     width:1100px
+}
+#option{
+    margin-left: 50px;
+    padding: 5px 10px 5px 10px;
+    font-size: 19px;
+    margin-top: -1px;
+}
+.fert4 p{
+    font-size: 25px;
+    padding-left: 2px;
+}
+.fert4 del{
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 5px;
+    color: red;
 }

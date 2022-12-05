@@ -1,146 +1,67 @@
 
 .fertilizer{
-    background:url(https://climate.copernicus.eu/sites/default/files/styles/hero_image_extra_large_2x/public/2018-07/globalagriculture.jpg?itok=fUmFHs6s);
+background-color: rgb(221, 249, 247);
 background-repeat: no-repeat;
 background-attachment: fixed;
 margin-top: -21px;
-}
-.agri, .agri1, .agri2{
-    display: flex;
-}
-.paddy img{
-    height: 450px;
-    width:480px;
-    margin-top: 80px;
-    margin-left: 130px;
-    border: 2px solid rgb(210, 201, 30);
-    border-radius: 50%;
-}
-.corn img{
-    height: 450px;
-    width:480px;
-    margin-top: 80px;
-    border: 2px solid rgb(49, 144, 12);
-    border-radius: 50%;
-}
 
-.coconut img{
-    height: 450px;
-    width:470px;
-    margin-top: 120px;
-    margin-left: 130px;
-    border: 2px solid rgb(92, 203, 74);
-    border-radius: 50%;
 }
-.cane img{
-    height: 450px;
-    width:460px;
-    margin-top: 120px;
-    margin-left: 30px;
-    border: 2px solid rgb(70, 159, 95);
-    border-radius: 50%;
-}
-.fruits img{
-    height: 450px;
-    width:470px;
-    margin-top: 120px;
-    margin-left: 150px;
-    border: 2px solid rgb(207, 74, 74);
-    border-radius: 50%;
-}
-.vegitable img{
-    height: 450px;
-    width:450px;
-    margin-top: 120px;
-    margin-left: 100px;
-    border: 2px solid rgb(134, 211, 112);
-    border-radius: 50%;
-}
-.paddy button{
-    margin-left: 270px;
-    padding:20px 70px 20px 70px ;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    background-color: rgb(247, 228, 143);
-}
-.corn button{
-    margin-left: 150px;
-    padding:20px 70px 20px 70px ;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    background-color: rgb(247, 228, 143);
-}
-.coconut button{
-    margin-left: 230px;
-    padding:20px 70px 20px 70px ;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    background-color: rgb(247, 228, 143);
-}
-.cane button{
-    margin-left: 150px;
-    padding:20px 70px 20px 70px ;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;background-color: rgb(247, 228, 143);
-}
-.fruits button{
-    margin-left: 285px;
-    padding:20px 70px 20px 70px ;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;background-color: rgb(247, 228, 143);
-}
-.vegitable button{
-    margin-left: 210px;
-    padding:20px 70px 20px 70px ;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;background-color: rgb(247, 228, 143);
-    margin-bottom: 150px;
-}
-.paddy button:hover{
- background-color: rgb(72, 70, 70);
- color: white;
- border: 3px solid rgb(255, 0, 0);
- font-size: 22px;
-}
-.corn button:hover{
-    background-color: rgb(57, 57, 57);
-    color: white;
-    border: 3px solid rgb(254, 16, 16);font-size: 22px;
-   }.cane button:hover{
-    background-color: rgb(34, 33, 33);
-    color: white;
-    border: 3px solid rgb(246, 13, 13);font-size: 22px;
-   }.vegitable button:hover{
-    background-color: rgb(53, 52, 52);
-    color: white;
-    border: 3px solid rgb(241, 14, 14);font-size: 22px;
-   }.fruits button:hover{
-    background-color: rgb(53, 53, 53);
-    color: white;
-    border: 3px solid rgb(255, 18, 18);font-size: 22px;
-   }
-   .coconut button:hover{
-    background-color: rgb(59, 59, 59);
-    color: white;
-    border: 3px solid rgb(255, 4, 4);font-size: 22px;
-   }
-   h1{
+h1{
     padding-left: 460px;
     padding-top: 50px;
     font-size: 55px;
-   }
-   button{
-    letter-spacing: 1px;
-   }
+}
+.agri{
+    display: flex;
+    margin-bottom: 160px;
+    margin-left: 35px;
+}
+.agriculture{
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+.agri_type img{
+    border-radius: 50%;
+    width:390px;
+    height:370px;
+    border: 2px solid green;
+}
+.agri_type img:hover {
+    transform: scale(1.1);
+}
+.agri_type button:hover{
+    transform: scale(1.1);
+    background:linear-gradient(rgb(9, 9, 9),rgb(224, 46, 82));
+}
+.btn10{
+    margin-left: 60px;
+    padding: 16px 35px ;
+    color:white;
+    background:linear-gradient(rgb(9, 9, 172),rgb(202, 196, 127));
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+.btn11{
+    margin-left: 72px;
+    padding: 16px 35px ;
+    color:white;
+    background:linear-gradient(rgb(9, 9, 172),rgb(202, 196, 127));
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 19px;
+    font-weight: bold; letter-spacing: .5px;
+}
+.btn2{
+    margin-left: 78px;
+    padding: 16px 35px ;
+    color:white;
+    background:linear-gradient(rgb(9, 9, 172),rgb(202, 196, 127));
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 19px;
+    font-weight: bold; letter-spacing: .5px;
+}
