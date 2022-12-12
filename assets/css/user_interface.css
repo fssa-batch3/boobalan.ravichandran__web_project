@@ -1,0 +1,19 @@
+.images img{
+    width:345px ;
+    height:520px;
+    padding-left: 25px;
+    margin-left: 2px;
+}
+.images{
+   margin: 80px 50px 100px 30px;
+}
+.hero{
+    margin-left: 30px;
+}
+.fa-sign-out{
+  margin-top: -5px;
+}
+.today a{
+  text-decoration: none;;
+  color: black;
+}

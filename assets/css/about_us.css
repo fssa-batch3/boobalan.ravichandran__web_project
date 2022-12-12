@@ -1,0 +1,202 @@
+p , h1 ,h2{
+    font-family:"El Messiri" ;
+  }
+h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.about{
+    padding: 30px 10px 50px 10px;
+}
+main{
+    background-color: rgb(245, 253, 255);
+}
+.about_us{
+    margin-left: 200px;
+}
+.about_us h1{
+    margin-left: 430px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom:5px solid rgba(246, 60, 9, 0.772);
+    color:rgb(4, 63, 4);
+    width:211px;
+}
+.about_us p{
+    width: 850px;
+    font-size: 19px;
+    margin-left: 150px;
+    text-indent: 10px;
+    margin-bottom: 25px;
+    color:rgb(9, 9, 63);
+    font-weight: bold;
+}
+.about_detail1{
+    display: flex;
+    padding: 30px 50px;
+    background-color: rgb(249, 241, 230);
+    box-shadow: 0px 6px 16px 0px rgb(63, 2, 2);
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+.about_img img{
+    width:500px;
+    height:330px;
+    border-radius: 20%;
+    opacity:0.65;
+   margin-left: 100px;
+   box-shadow: 0px 2px 5px 0px black;
+}
+.about_content1 {
+margin-top: 50px;
+width:720px;
+margin-left: 20px;
+}
+.about_content1 h2{
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: rgb(202, 11, 65);
+}
+.about_content1 p{
+    width:640px;
+    font-size: 18px;
+    margin-left: 40px;
+    text-indent: 20px;
+    color:rgb(13, 13, 66);
+    font-weight: bold;
+}
+.about_detail2{
+    display: flex;
+    padding: 30px 50px;
+    background-color: rgb(241, 238, 235);
+    box-shadow: 0px 6px 16px 0px rgb(0, 0, 0);
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+.about_img1 img{
+    width:500px;
+    height:330px;
+    border-radius: 20%;
+    opacity:0.65;
+   margin-left: 30px;
+   box-shadow: 0px 2px 5px 0px black;
+}
+.about_content2 {
+margin-top: 50px;
+margin-left: 80px;
+}
+.about_content2 h2{
+    margin-left: 250px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    margin-top: 20px;color: rgb(202, 11, 65);
+}
+.about_content2 p{
+    width:510px;
+    font-size: 18px;
+    margin-left: 80px;
+    text-indent: 20px;
+    color:rgb(13, 13, 66);
+    font-weight: bold;
+}
+
+.about_detail3{
+    display: flex;
+    padding: 30px 50px;
+    background-color: rgb(249, 241, 230);
+    box-shadow: 0px 6px 16px 0px rgb(63, 2, 2);
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+.about_img2 img{
+    width:500px;
+    height:330px;
+    border-radius: 20%;
+    opacity:0.65;
+   margin-left: 100px;
+   box-shadow: 0px 2px 5px 0px black;
+}
+.about_content3 {
+margin-top: 50px;
+width:720px;
+margin-left: 20px;
+}
+.about_content3 p{
+    width:630px;
+    font-size: 19px;
+    margin-left: 50px;
+    text-indent: 20px;
+    margin-top: 4.5%; color:rgb(13, 13, 66);
+    font-weight: bold;
+}
+.about_detail4{
+    display: flex;
+    padding: 30px 50px;
+    background-color:  rgb(241, 238, 235);
+    box-shadow: 0px 6px 16px 0px rgb(0, 0, 0);
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+.about_img3 img{
+    width:500px;
+    height:330px;
+    border-radius: 20%;
+    opacity:0.65;
+   margin-left: 40px;
+   box-shadow: 0px 2px 5px 0px black;
+}
+.about_content4 {
+margin-top: 50px;
+width:720px;
+margin-left: 100px;
+}
+.about_content4 h2{
+    margin-left: 250px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    margin-top: 20px;color: rgb(202, 11, 65);
+}
+.about_content4 p{
+    width:630px;
+    font-size: 19px;
+    margin-left: 50px;
+    text-indent: 20px;
+    margin-top: 4.5%; color:rgb(13, 13, 66);
+    font-weight: bold;
+}
+
+.about_detail5{
+    display: flex;
+    padding: 30px 50px;
+    background-color: rgb(249, 241, 230);
+    box-shadow: 0px 6px 16px 0px rgb(63, 2, 2);
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+.about_img4 img{
+    width:500px;
+    height:330px;
+    border-radius: 20%;
+    opacity:0.65;
+   margin-left: 100px;
+   box-shadow: 0px 2px 5px 0px black;
+}
+.about_content5 {
+margin-top: 50px;
+width:720px;
+margin-left: 20px;
+}
+.about_content5 h2{
+    margin-left: 250px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    margin-top: 20px;color: rgb(202, 11, 65);
+}
+.about_content5 p{
+    width:630px;
+    font-size: 19px;
+    margin-left: 50px;
+    text-indent: 20px;
+    margin-top: 4.5%; color:rgb(13, 13, 66);
+    font-weight: bold;
+}

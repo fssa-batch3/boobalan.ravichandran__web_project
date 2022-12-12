@@ -1,0 +1,42 @@
+table, th, td {
+    border: 5px solid  rgb(255, 255, 255);
+    border-collapse: collapse;
+  }
+ main h2{
+    font-size: 44px;
+    padding-left: 500px;
+    padding-bottom: 40px;
+  }
+  main{
+    border: 2px solid rgb(231, 226, 226);
+    background-color: rgb(255, 254, 254);
+    padding: 30px 70px 100px 70px;
+  }
+  table{
+    background-color: rgb(255, 255, 255);
+  }
+  th{
+    padding: 40px 0px;
+    font-size: 29px;
+    background-color: rgb(138, 212, 187);
+  }
+  td{
+    font-size: 22px;
+    padding: 30px 80px;
+    background-color: rgb(233, 230, 219);
+    border: none;
+  }
+i{
+padding-left: 10px;
+}
+.td{
+  border-bottom: 4px solid gray ;
+}
+td a{
+    text-decoration: none;
+}
+td img{
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}

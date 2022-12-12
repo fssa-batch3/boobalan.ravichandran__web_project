@@ -1,0 +1,68 @@
+
+.fertilizer{
+background-color: rgb(249, 247, 204);
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+}
+.fertilizer h1{
+    padding-left: 430px;
+    padding-top: 50px;
+    margin-top: 0px;
+    font-size: 36px;
+    color:rgb(176, 10, 49)
+}
+.agri{
+    display: flex;
+    margin-bottom: 160px;
+    margin-left: 35px;
+}
+.agriculture{
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+}
+.agri_type img{
+    border-radius: 50%;
+    width:390px;
+    height:370px;
+    border: 2px solid green;
+}
+.agri_type img:hover {
+    transform: scale(1.02);
+}
+.agri_type button:hover{
+    background:linear-gradient(rgb(9, 9, 9),rgb(224, 46, 82));
+    transform: scale(1.02);
+}
+.btn10{
+    margin-left: 60px;
+    padding: 16px 35px ;
+    color:white;
+    background:linear-gradient(rgb(6, 6, 88),rgb(38, 60, 201));
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+.btn11{
+    margin-left: 72px;
+    padding: 16px 35px ;
+    color:white;
+    background:linear-gradient(rgb(5, 5, 101),rgb(40, 57, 217));
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 19px;
+    font-weight: bold; letter-spacing: .5px;
+}
+.btn2{
+    margin-left: 78px;
+    padding: 16px 35px ;
+    color:white;
+    background:linear-gradient(rgb(7, 7, 107),rgb(44, 59, 227));
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 19px;
+    font-weight: bold; letter-spacing: .5px;
+}

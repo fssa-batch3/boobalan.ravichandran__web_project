@@ -1,0 +1,128 @@
+.checked {
+    color: orange;
+    margin-bottom: 10px;
+    padding-left: 5px;
+  }
+  main{
+    background-color: rgb(234, 232, 232);
+    padding: 80px 0px 200px 150px;
+  }
+.cart1{
+    background-color: rgb(255, 255, 255);
+    width:720px;
+    padding-top: 50px;
+}
+.cart ,.cart2{
+    display: flex;
+}
+.cart2{
+    margin-left: 50px;
+}
+.cart111,.cart112 ,.cart113 ,.cart114 ,.cart115{
+ display: flex;
+}
+a{
+ text-decoration: none;
+ color:rgb(84, 83, 83)
+}
+.cart22{
+    margin-left: 30px;
+    margin-top: 60px;
+}
+.cart22 h1{
+    font-size: 22px;
+}
+.star{
+    margin-top: 20px;
+}
+.price h2 {
+    margin:12px 0px 20px 20px;
+}
+.price del{
+    margin:17px 0px 20px 20px;
+    font-size: 18;
+    color:red
+}
+.cart22 h3{
+    margin-left: 60px;
+    font-size: 19px;
+}
+.btnn button{
+    margin-left:90px;
+    padding: 12px 70px;
+    font-size: 17px;
+    background-color: orange;
+    color:white;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.bttn button{
+    margin-left:380px;
+    padding: 14px 70px;
+    font-size: 17px;
+    background-color: rgb(255, 102, 0);
+    color:white;
+    border: none;
+    border-radius: 10px;
+}
+.bttn{
+   background-color: white;
+   box-shadow: 0px 0px 4px 0px rgb(131, 130, 130);
+   padding: 15px 20px 15px 0px;
+}
+.cart11{
+    background-color: white;
+    margin-left: 100px;
+    width:340px;
+    height: 340px;
+}
+.cart101 h2{
+ padding-left: 20px;margin-top: 16px;
+ padding-bottom: 13px;
+ border-bottom: 2px solid rgb(236, 234, 234);
+ color: rgb(119, 118, 118);
+}
+.cart111 h2,.cart112 h2 ,.cart113 h2,.cart114 h2{
+    color:rgb(87, 85, 85);
+    font-size: 20.5px;
+    margin:10px 20px;
+    font-weight: normal;
+}
+.cart111 p,.cart112 p ,.cart113 p,.cart114 p{
+    margin-top: 13px;
+    font-size: 17px;
+    color: rgb(68, 67, 67);
+}
+.cart111 p{
+    margin-left: 190px;
+}
+.cart112 p{
+    margin-left: 160px;
+    color:green;
+}
+.cart113 p{
+    margin-left: 79px;
+    color:green;
+}
+.cart114 p{
+    margin-left: 47px;
+    margin-bottom: 20px;
+}
+.cart115{
+    border-top: 2px solid rgb(223, 221, 221);
+    margin: 5px 25px;
+    padding: 10px 0px;
+    border-bottom: 2px solid rgb(223, 221, 221);
+}
+.cart115 h1{
+    font-size: 23px;
+    color:rgb(96, 95, 95);
+}
+.cart115 p{
+    margin-top: 5px;
+    margin-left: 107px;
+    font-size: 19px;
+    font-weight: bold;
+    color:rgb(96, 95, 95);
+}

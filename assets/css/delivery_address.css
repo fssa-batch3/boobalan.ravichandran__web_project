@@ -1,0 +1,81 @@
+
+.delivery{
+ border: 2px solid gray;
+ width:520px;
+ padding: 30px 20px 40px 50px;
+ border-radius: 10px;
+ background-image: url(../images/screen.jpg);
+ color: white;
+ font-weight: bold;
+}
+main{
+    background:linear-gradient(rgb(227, 255, 210),rgb(255, 231, 231));
+    padding: 50px 100px 100px 490px;
+}
+.delivery h1{
+    font-size: 35px;
+    padding-left: 90px;
+    padding-bottom: 30px;
+    color: rgb(255, 210, 225);
+    font-style: italic;
+}
+.delivery label{
+    font-size: 20px;
+}
+label{
+    display: block;
+}
+.disty{
+    width:300px;
+    height: 40px;
+    margin-left:75px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+ 
+.radio{
+    display:flex;
+    padding: 10px 100px 0px 50px;
+    justify-content: space-around;
+}
+.radio label{
+    font-size: 18px;
+}
+
+.btn11 {
+   padding:10px 30px 10px 30px;
+   font-size: 18px;
+   border-radius: 5px;
+   margin: 20px 30px 5px 20px ;
+   background:linear-gradient(#64e1ce,rgb(32, 32, 31));
+   color: white;
+   font-style:inherit;
+}
+.btn22{
+    padding:10px 20px 10px 20px;
+   font-size: 18px;
+   border-radius: 5px;
+   margin: 20px 20px 5px 20px ;
+   background:linear-gradient(rgb(49, 191, 174),rgb(13, 13, 13));
+   color: white; font-style:inherit;
+}
+.btn11:hover {
+    background:linear-gradient(black,rgb(255, 0, 68));
+    color: rgb(249, 244, 244);
+    border: 2px solid  rgb(141, 26, 26);
+    transform: scale(1..25);
+}
+.btn22:hover{
+    background:linear-gradient(black,rgb(20, 135, 10));
+    color: rgb(249, 244, 244);
+    border: 2px solid  rgb(17, 147, 43);
+    transform: scale(1..25);
+}
+.lab{
+    display: inline;
+    margin-left: 2px;
+    font-size:20;
+}

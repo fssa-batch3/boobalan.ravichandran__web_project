@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+          <link rel="stylesheet" href="../../assets/css/product_detail.css">
+          <title>Product details</title>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+          
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="../../assets/css/sell_footer.css">
+<link rel="stylesheet" href="../../assets/css/normalize.css">
+<link rel="stylesheet" href="../../assets/css/seller_header.css">
+</head>
+    <body>
+        <header class="navbar">
+        <div class="header">
+        </div>
+            <div class="head">
+                <div>
+                    <img src="../../Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
+                </div>
+                <div>
+                    <ul class="hero">
+                     <li class="hero_list"><a href="./seller_homepage.html"><i class="fa fa-home" style="font-size:28px"></i>Home</a></li>
+                     <li class="hero_list"><a href="../homepage/index.html"><i class="fa fa-sign-out" style="font-size:21px"></i>Logout</a>
+                     <li class="hero_list"><a href="./profile.html" ><i class="fa fa-user-circle-o" style="font-size:36px"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="dropdown">
+                    <button class="btn">Listings</button>
+                    <div class="dropdown_list">
+                        <a href="./type_agri.html">Add new Listing</a>
+                    </div>
+                </div>
+                <div class="dropdown1">
+                    <button class="btn1">My Orders</button>
+                    <div class="dropdown_list1">
+                        <a href="./new_order.html">New Orders</a>
+                        <a href="./old_order.html">Old Orders</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="Information">
+        <form>
+            <div class="details">
+            <h2>Price, Stock and Shipping Information</h2>
+            <div class="dle">
+            <div>
+                    <label for="skuid"> Seller SKUID</label>
+                    <input type="text" placeholder="Enter Product SKUID" id="skuid" required="true"/> 
+            </div>
+            <div class="list">
+                <label> Listing Status</label>
+                <select id="option">
+                    <option>Select</option>
+                    <option >Active</option>
+                    <option >Inactive</option>
+                </select>
+        </div>
+        </div>
+                   <h3>Price Details</h3>
+           <div class="dle1"> 
+            <div>
+                <label for="mrp"> MRP</label>
+                <input type="text" placeholder="Enter MRP" id="mrp" required="true"/> 
+        </div>
+        <div>
+            <label for="selling"> Your Selling Price</label>
+            <input type="text" placeholder="Enter Selling price" id="selling" required="true"/> 
+    </div>
+</div>
+            <h3>Inventery Details</h3>
+           <div class="dle2">
+             <div>
+                <label> Precurement Type</label>
+                <select id="option1">
+                    <option>Select</option>
+                    <option >In Stack</option>
+                    <option >Express</option>
+                    <option >Made to Order</option>
+                    <option >Domestic Precurement</option>
+                </select>
+        </div>
+        <div>
+            <label for="stock_count"> Stock Count</label>
+            <input type="text" placeholder="Enter Stack Count" id="stock_count"/> 
+    </div>
+    </div><br>
+    <div>
+        <label>Shipping Provider</label>
+        <select id="option2">
+            <option>Select</option>
+            <option >FAB</option>
+            <option >Seller and FAB</option>
+        </select>
+    </div>
+            <h3>Delivery Charge to Customer</h3>
+            <div class="dle3">
+                <div >
+                <label for="local_delivery"> Local Delivery Charge</label>
+                <input type="text" placeholder="Enter Local delivery charge" id="local_delivery"/> 
+        </div>
+        <div>
+            <label for="zonal_delivery"> Zonal Delivery Charge</label>
+            <input type="text" placeholder="Enter Local delivery charge" id="zonal_delivery"/> 
+    </div>
+</div><br>
+        <div class="dle4">
+         <div>
+            <label for="weight"> Packing Weight</label>
+            <input type="text" placeholder="Enter Packing Weight in Kg" id="weight"/>
+         </div>
+         <div>
+            <label for="height"> Packing Height</label>
+            <input type="text" placeholder="Enter Packing Weight in Kg" id="height"/>
+         </div>
+         </div><br>
+
+            <h3>Tax</h3>
+            <div class="dle5">
+            <div>
+                <label for="hsn">HSN</label>
+                <input type="text" placeholder="Enter HSN" id="hsn" required/>
+             </div>
+             <div>
+                <label for="tax_code">Tax Code</label>
+                <input type="text" placeholder="Enter HSN" id="tax_code" required/>
+             </div>
+             </div><br>
+             <h3>Manufactering Details</h3>
+             <div>
+                <label for="country_origin">Country of Origin</label>
+                <input type="text" placeholder="Enter country of origin" id="country_origin" required/>
+             </div><br>
+             <h3>Product Description</h3>
+             <div class="dle6">
+                <div>
+                <label for="color">Fertilizer Color</label>
+                <input type="text" placeholder="Enter Fertilizer color" id="color"/>
+             </div>
+             <div>
+                <label for="product_name">Name of Product</label>
+                <input type="text" placeholder="Enter country of origin" id="product_name" required/>
+             </div>
+             </div><br>
+             <div class="about00">
+                <div  class="abtn">
+                <label>About Product</label>
+                </div>
+                <div>
+                <textarea id="about00"></textarea>
+            </div>
+             </div>
+           <div class="btn111"> <a href="./seller_homepage.html"> <button type="button">Save</button></a></div>
+            </div>
+        </form>
+            </div>
+            </main>
+    </div>
+    <footer id="contact">
+        <h1>Fert Agri Boomi(FAB)</h1>
+       <div class="footer">
+     <div class="icon">   
+        <img src="../../Fert agri.png" alt="">
+    </div>
+       <div class="abt">
+        <a href="../user/about_us.html"><h2>About Us</h2> </a>
+        <a href="../seller/seller_homepage.html"><h2>Home</h2></a>
+       </div>
+       </div>
+       <div class="bottom">
+            <div class="cont">
+                <p>Contact us</p>
+            </div>
+            <div class="Social">
+                <a href="https://www.instagram.com/rp0803/?igshid=YmMyMTA2M2Y%3D" target="_blank"> <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" /></a>
+                <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g" target="_blank"> <img
+                        src="https://cdn.iconscout.com/icon/free/png-128/youtube-2752013-2284830.png" /></a>
+                <a href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app" target="_blank"><img
+                        src="https://cdn.iconscout.com/icon/free/png-128/gmail-2981844-2476484.png" /></a>
+                  <a href="https://twitter.com/agrigoi?lang=en" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt=""></a>
+                <a href="https://www.facebook.com/people/Agriculture/100068310005265/" target="_blank"><img src="https://www.edigitalagency.com.au/wp-content/uploads/Facebook-logo-blue-circle-large-transparent-png.png" alt=""></a>
+                <a href="#"><img src="https://cdn2.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-whatsapp-circle-512.png" alt=""></a>
+    
+            </div>
+        </div>
+        </footer>
+        </body>
+        </html>

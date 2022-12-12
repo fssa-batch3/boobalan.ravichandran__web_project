@@ -1,0 +1,86 @@
+#mobile{
+    width:250px;
+    height: 40px;
+    margin-left: 45px;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#email{
+    width:250px;
+    height: 40px;
+    margin-left:60px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+#password{
+    width:250px;
+    height: 40px;
+    margin-left:98px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.details{
+    border: 1px solid rgb(8, 8, 8);
+    width:480px;
+    padding-left: 40px;
+    padding-top: 20px;
+    background-image: url(../images/screen.jpg);
+    border-radius: 10px;
+    padding-bottom: 50px;
+    box-shadow: 0px 6px 14px 0px  rgb(0, 0, 0) ;
+    color:white;
+}
+button{
+    padding: 12px 50px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    font-weight: bold;
+    background:linear-gradient(rgb(13, 13, 13),rgb(49, 191, 174));
+    letter-spacing: 1px;
+    color: white;
+    font-size: 22px;
+}
+button:hover{
+    background:linear-gradient(rgb(139, 36, 36),rgb(255, 0, 68));
+    color: rgb(255, 255, 255);
+}
+h4{
+    font-size: 21px;
+    padding-left: 230px;
+    margin-top: -5px;
+    margin-bottom:10px;
+}
+h4 a{
+    text-decoration: none;
+    color:rgb(255, 242, 226);
+}
+label {
+    font-size: 21px;
+    font-weight: bold;
+}
+h2{
+    padding-left: 150px;
+   padding-bottom: 50px;
+   margin-top: 20px;
+   font-size: 32px;
+   color:rgb(255, 235, 240)
+}
+.btn{
+    margin-left: 150px;
+    font-size: 20px;
+}
+main{
+   background-image: url(../images/background.webp);
+    padding-left: 480px;
+    padding-top: 170px;
+    padding-bottom: 193px;
+    height:528px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

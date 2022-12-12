@@ -1,0 +1,104 @@
+
+#mobile{
+    width:300px;
+    height: 40px;
+    margin-left: 75px;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#email{
+    width:300px;
+    height: 40px;
+    margin-left:90px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#full_name{
+    width:300px;
+    height: 40px;
+    margin-left:20px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#password{
+    width:300px;
+    height: 40px;
+    margin-left:100px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#password1{
+    width:300px;
+    height: 40px;
+    margin-left:50px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+}
+h4{
+    font-size: 21px;
+    margin-left: 220px;
+
+}
+a{
+    text-decoration: none;
+    color:rgb(251, 242, 230)
+}
+label {
+    font-size: 21px;
+    font-weight: bold;
+}
+h2{
+    padding-left: 140px;
+   padding-bottom: 20px;
+   margin-top: 20px;
+   font-size: 32px;
+}
+.btn{
+    margin-left: 180px;
+    font-size: 20px;
+}
+button{
+    padding: 15px 50px 15px 50px;
+    border-radius: 8px;
+    border: 2px solid rgb(0, 0, 0);
+    font-weight: bold;
+    background:linear-gradient(rgb(13, 13, 13),rgb(49, 191, 174));
+    letter-spacing: 1px;
+    color:white;
+}
+.details{
+    border: 1px solid rgb(0, 0, 0);
+    width:550px;
+    padding-left: 32px;
+    padding-top: 20px;
+    background-image: url(../images/screen.jpg);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
+    color: white;
+}
+button:hover{
+    background:linear-gradient(rgb(172, 15, 15),rgb(255, 0, 68));
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgb(0, 0, 0);
+   
+}
+main{
+    background-image: url(../images/background.webp);
+    padding-left: 460px;
+    padding-top: 110px;
+    padding-bottom: 253px;
+    height:528px;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
