@@ -2,7 +2,7 @@
     background-color: white;
     box-shadow: 0px 6px 14px 0px rgb(80, 79, 79);
     display: flex;
-    padding: 60px 80px 100px 80px;
+    padding: 60px 80px 60px 80px;
 }
 main{
     padding: 80px 170px 100px 170px;
@@ -10,9 +10,9 @@ main{
 .fert12 img{
     width:320px;
     height: 320px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
-.fert13,.fert15 ,.fert16 ,.fert5 ,.address1 {
+.fert13,.fert15 ,.fert16 ,.fert5 ,.fert116{
     display: flex;
     margin-top: 20px;
 }
@@ -32,7 +32,7 @@ main{
     font-size: 22px;
     margin-top: 20px;
 }
-.fert5 h3 ,.fert16 h3 ,.address1 h3{
+.fert5 h3 ,.fert16 h3 ,.address1 h3 ,.fert116 h3{
     font-size: 24px;
 }
 .fert5 p {
@@ -40,7 +40,7 @@ main{
     margin-top: 2px;
     margin-left: 6px;
 }
-.fert16 p{
+.fert16 p ,.fert116 p{
     font-size: 23px;
     margin-top: 2px;
     margin-left: 5px;
@@ -51,9 +51,11 @@ main{
    padding: 50px 70px;
 }
 .address1 h3{
-  width:430px;
+  width:13rem;
+  margin-top: 1.2rem;
 }
 .address1 p{
     font-size: 19px;
     margin-top: 5px;
+    width:20rem;
 }

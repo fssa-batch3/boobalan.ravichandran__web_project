@@ -1,13 +1,13 @@
 main{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAk9930AOzowMIzCV_07aGU8gSWsAgO3CDMfF3XMSNVmc-_-wTJ2FreGttgIKfgcHVWuc&usqp=CAU);
+    background-color: rgb(220, 220, 220);
     padding: 100px 50px 100px 110px;
     margin-left: 0px;
 }
 .details{
-    background-color: aliceblue;
+    background: linear-gradient(-45deg,rgb(255, 225, 0), orange);
     padding: 30px 20px 50px 50px;
     width:38rem;
-    border-radius: 10px;
+    margin-left: 5rem;
 }
 .details h2{
     font-size: 30px;
@@ -67,7 +67,7 @@ label{
 }
 
 #state{
-    margin-left: 10.3rem;
+    margin-left: 10.8rem;
     width:270px;
     height:35px;
     padding: 5px 10px 5px 10px;
@@ -75,7 +75,7 @@ label{
     margin-bottom: 1.5rem; margin-right: 30px;
 }
 #district{
-    margin-left: 9rem;
+    margin-left: 9.5rem;
     width:270px;
     height:35px;
     padding: 5px 10px 5px 10px;
@@ -89,7 +89,7 @@ label{
     font-size: 17px;
 }
 .button{
-    margin-left: 5rem;
+    margin-left: 4.5rem;
     margin-top: 30px;
     display: flex;
 }
@@ -102,15 +102,52 @@ label{
     color: white;
     font-weight: bold;
 }
-.button button:hover{
+.button button:hover ,.btnn button:hover{
     background:linear-gradient(red,black);
     color:white;
     transform: scale(1.1);
 }
 .details1 img{
-    width:20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
+    margin-left: .8rem;
 }
 .form1{
     display: flex;
+}
+.details1{
+    background-color:rgb(243, 164, 19);
+    padding: 160px 30px 0px 30px;
+}
+.details1 h2{
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 1.8rem;
+    margin-bottom: 15px;
+}
+.details1 p{
+    color:white;
+    margin-left: .5rem;
+}
+.details1 label{
+    font-weight: bold;
+}
+#dobb{
+    padding: .4rem .9rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: .7rem;
+    border: none;
+    border-bottom: 2px solid black;
+}
+.btnn {
+    margin: 60px 0px 0px 70px;
+}
+.btnn button{
+    font-size: 1.2rem;
+    padding: .7rem 2.7rem;
+    border-radius: 10px;
+    border: none;
+    background:linear-gradient(rgb(11, 79, 108),rgb(0, 0, 0));
+    color:white
 }

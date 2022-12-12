@@ -67,12 +67,12 @@ label {
     width:300px;
     height: 40px;
     margin-left:90px ;
-    margin-right: 10px;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
     margin-bottom: 20px;
-    border: 2px solid black;margin-right: 30px;
+    border: 2px solid black;
+    margin-right: 30px;
 }
 #local_delivery{
     width:300px;

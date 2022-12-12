@@ -2,6 +2,7 @@ table {
     border: 3px solid  rgb(14, 21, 56);
     border-collapse: collapse;
     border-radius: 10px;
+    width:1300px;
 }
  th{
     border: 4px solid  rgb(14, 21, 56);
@@ -10,8 +11,9 @@ table {
 }
 main{
     padding: 50px 0px 100px 100px;
+    background-color: rgb(23, 23, 63);
 }
-th{
+.thread{
     padding: 30px 80px;
     font-size: 22.5px;
     background:linear-gradient(rgb(215, 210, 118),rgb(150, 6, 66));
@@ -28,9 +30,6 @@ td img{
 }
 td img:hover{
     transform: scale(1.1);
-}
-table{
-    width:1300px;
 }
 #status{
     width:200px;
@@ -56,7 +55,4 @@ td{
     padding-left: 100px;
     font-weight: bold;
     color: rgb(0, 0, 0);  
-}
-main{
-    background-color: rgb(23, 23, 63);
 }

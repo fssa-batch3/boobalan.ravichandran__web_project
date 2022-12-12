@@ -66,13 +66,13 @@ label{
     background:linear-gradient(black,rgb(255, 0, 68));
     color: rgb(249, 244, 244);
     border: 2px solid  rgb(141, 26, 26);
-    transform: scale(1..25);
+    transform: scale(1.2);
 }
 .btn22:hover{
     background:linear-gradient(black,rgb(20, 135, 10));
     color: rgb(249, 244, 244);
     border: 2px solid  rgb(17, 147, 43);
-    transform: scale(1..25);
+    transform: scale(1.2);
 }
 .lab{
     display: inline;

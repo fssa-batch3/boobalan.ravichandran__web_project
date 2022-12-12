@@ -29,6 +29,7 @@
     height:270px;
     border-radius: 10px;
     margin-bottom: 20px;
+    background-color: white;
   }
 .star{
     margin-left: 40px;
@@ -100,9 +101,6 @@
 /*----growth promoters---*/
 .insecticide .promoter{
     margin-left: 600px;
-}
-.today img{
-    background-color: white;
 }
 /*----retardance---*/
 .insecticide .retar{

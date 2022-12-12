@@ -1,12 +1,12 @@
 .wishlist{
     
-  margin:50px 70px 50px 70px;
+  margin:20px 70px 30px 70px;
 }
 .wishlist h2{
     font-size: 34px;
     padding: 20px 0px 20px 70px;
     border-bottom: 6px solid rgb(23, 146, 59);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .fertilizer{
     display: flex;

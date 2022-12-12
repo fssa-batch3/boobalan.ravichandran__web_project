@@ -13,6 +13,7 @@ main{
 }
 h2{
     display: flex;
+    color:rgb(87, 17, 17);
 }
 .del1{
     margin-left: 200px;
@@ -38,9 +39,6 @@ h2{
 }
 .details1 h1{
     margin-top: 50px;
-}
-h2{
-    color:rgb(87, 17, 17);
 }
 .herbicide{
     display: flex;

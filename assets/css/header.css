@@ -4,8 +4,12 @@
   padding: 0;
   box-sizing: border-box;
   }
-  body{
-    font-family:"Noto Serif" ;
+  *{
+    font-family: 'Source Serif 4', serif;
+
+  }
+  nav button{
+    font-family: 'Source serif 4', serif;
   }
   .header{
       background-color: #078537;
@@ -21,6 +25,9 @@
       color:black;
       font-weight: bold;
       border:2px solid rgb(28, 117, 16);
+      margin-left: 20px;
+      margin-top: 50px;
+      background-color: rgb(252, 248, 226);
   }
   .hero_list a:hover {
       background-color: black;
@@ -31,11 +38,6 @@
       width: 230px;
       height: 75px;
       padding: 8px 5px 5px 40px;
-  }
-  .hero_list a{
-      margin-left: 20px;
-      margin-top: 50px;
-      background-color: rgb(252, 248, 226);
   }
   .head{
       display: flex;
