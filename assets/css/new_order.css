@@ -13,6 +13,11 @@ main{
     padding: 50px 0px 100px 100px;
     background-color: rgb(23, 23, 63);
 }
+main table caption{
+    font-size: 44px;
+    padding-bottom: 20px;
+    color:white;
+  }
 .thread{
     padding: 30px 80px;
     font-size: 22.5px;

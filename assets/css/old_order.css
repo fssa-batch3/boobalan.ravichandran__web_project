@@ -9,6 +9,11 @@ table {
     border-collapse: collapse;
     border-radius: 10px;
 }
+main table caption{
+    font-size: 44px;
+    padding-bottom: 20px;
+    color:white;
+  }
 main{
     padding: 50px 0px 100px 100px;
     background-color: rgb(23, 23, 63);

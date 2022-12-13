@@ -8,6 +8,9 @@
         },
         {
             "path": "../../pages/homepage"
+        },
+        {
+            "path": "."
         }
     ]
 }

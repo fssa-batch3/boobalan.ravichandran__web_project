@@ -2,9 +2,8 @@ table, th, td {
     border: 5px solid  rgb(255, 255, 255);
     border-collapse: collapse;
   }
- main h2{
+ main table caption{
     font-size: 44px;
-    padding-left: 500px;
     padding-bottom: 40px;
   }
   main{
