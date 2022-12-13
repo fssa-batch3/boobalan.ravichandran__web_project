@@ -1,13 +1,12 @@
 main{
     background-color: rgb(220, 220, 220);
-    padding: 100px 50px 100px 110px;
+    padding: 50px 50px 100px 160px;
     margin-left: 0px;
 }
 .details{
     background: linear-gradient(-45deg,rgb(255, 225, 0), orange);
     padding: 30px 20px 50px 50px;
     width:38rem;
-    margin-left: 5rem;
 }
 .details h2{
     font-size: 30px;
@@ -101,6 +100,7 @@ label{
     border-radius: 10px;
     color: white;
     font-weight: bold;
+    border: none;
 }
 .button button:hover ,.btnn button:hover{
     background:linear-gradient(red,black);
@@ -114,6 +114,8 @@ label{
 }
 .form1{
     display: flex;
+    box-shadow: 0px 7px 16px 0px black;
+    width:58rem;
 }
 .details1{
     background-color:rgb(243, 164, 19);

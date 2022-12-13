@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "../../pages/user"
+        },
+        {
+            "path": "../../pages/seller"
+        },
+        {
+            "path": "../../pages/homepage"
+        }
+    ]
+}

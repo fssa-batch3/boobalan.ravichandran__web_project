@@ -2,9 +2,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-}
-*{
-  font-family: 'Source Serif 4', serif;
+font-family: 'Source Serif 4', serif;
 }
 .header{
     background-color: #078537;
