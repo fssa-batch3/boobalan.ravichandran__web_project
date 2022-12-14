@@ -26,7 +26,7 @@ table, th, td {
     border: none;
   }
 i{
-padding-left: 10px;
+padding-left:5px;
 }
 .td{
   border-bottom: 4px solid gray ;
@@ -38,4 +38,10 @@ td img{
   width: 120px;
   height: 120px;
   border-radius: 10px;
+}
+.eye a{
+  color:rgb(11, 1, 62)
+}
+.eye a:hover{
+  color:red
 }

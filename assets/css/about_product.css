@@ -53,6 +53,8 @@ main{
     width:400px;
     height:400px;
    border-radius: 10px;
+   box-shadow: 0px 6px 10px 0px gray;
+   padding: 2rem;
 }
 .fert2{
     margin-top: 20px;
@@ -85,13 +87,16 @@ main{
     font-size: 22px;
     color:green;
 }
+.fert1{
+    display: flex;
+}
 .fert5 h3{
     font-size: 26px;
 }
 .description ,.benifits ,.method{
-    margin: 40px 0px 15px 0px;
-    box-shadow: 4px 4px 8px 3px rgb(154, 154, 157);
-    padding: 25px 50px 40px 50px;
+    margin: 10px 0px 0px 0px;
+    
+    padding: 25px 50px 0px 50px;
     border-radius: 10px;
 }
 .description h1 ,.benifits h2,.method h2{
@@ -123,5 +128,14 @@ main{
     margin-left: 30px;
     font-size: 20px;
     margin-top: 5px;
-    color: red;
+    color: rgb(13, 99, 36);
+}
+#wish1{
+    margin-top:4rem;
+    color:rgb(174, 174, 174);
+    margin-left: -3rem;
+    
+}
+#wish1:hover{
+    color: rgb(8, 5, 71);
 }

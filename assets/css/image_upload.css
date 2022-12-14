@@ -33,7 +33,7 @@ label{
     background-color: rgb(245, 222, 193);
 }
 .img11 p{
-    border: 2px solid rgb(201, 210, 210);
+    border: 1px solid rgb(18, 18, 18);
     width:200px;
     height: 150px;
     padding: 200px 70px 50px 100px;
@@ -41,25 +41,29 @@ label{
     font-size: 20px;
     color: rgb(201, 195, 195);
     border-radius: 15px;
-    background-color: aliceblue;
+    background-color: rgb(241, 241, 241);
 }
 .upload11 button{
-    margin-top: 40px;
-    padding: 12px 40px 12px 40px;
+    margin-top: 10px;
+    padding: 12px 40px 18px 40px;
     border-radius: 10px;
     font-size: 19px;
-    margin-left: 515px;
+    margin-left: 495px;
     margin-bottom: 120px;
-    background-color: rgb(245, 227, 206);
+    background-color: rgb(12, 14, 75);
+    color:white;
+    font-weight: bold;
 }
 .upload11 button:hover ,.save111 button:hover ,.cancel11 button:hover{
     background-color: rgb(40, 40, 39);
     border-radius: 14px;
-    border:3px solid rgb(250, 6, 6);
+    border:2px solid rgb(250, 6, 6);
     color: rgb(255, 253, 253);
-    font-size: 22px;
 }
 .bg-img{
     filter: blur(8px);
+}
+.fa-upload{
+    padding-right:1rem;
 }
 
