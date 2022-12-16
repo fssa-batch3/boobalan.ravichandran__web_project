@@ -55,13 +55,16 @@ button:hover{
 }
 h4{
     font-size: 21px;
-    padding-left: 230px;
+    margin-left: 250px;
     margin-top: -5px;
     margin-bottom:10px;
 }
 h4 a{
     text-decoration: none;
-    color:rgb(255, 242, 226);
+    color:rgb(255, 255, 92);
+}
+h4 a:hover{
+    color:rgb(255, 0, 72);
 }
 label {
     font-size: 21px;

@@ -52,7 +52,10 @@ form{
     color:white
 }
 form a{
-    color:rgb(255, 0, 98)
+   color: rgb(255, 255, 136);
+}
+form a:hover{
+    color:rgb(255, 0, 85);
 }
 h4{
     font-size: 21px;

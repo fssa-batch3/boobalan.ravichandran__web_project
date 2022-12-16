@@ -28,7 +28,10 @@ h2{
 }
 .details a{
     text-decoration: none;
-    color: rgb(255, 0, 72);
+    color: rgb(255, 255, 136);
+}
+.details a:hover{
+    color:rgb(255, 0, 98);
 }
 label {
     font-size: 21px;

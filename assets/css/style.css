@@ -281,6 +281,7 @@ font-size: 20px;
   .offers1 img{
     width:250px;
     height:260px;
+    border-radius: 10px;
   }
   .today{
     background-color: rgb(233, 227, 227);

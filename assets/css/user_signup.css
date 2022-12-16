@@ -50,10 +50,6 @@ h4{
     margin-left: 220px;
 
 }
-a{
-    text-decoration: none;
-    color:rgb(251, 242, 230)
-}
 label {
     font-size: 21px;
     font-weight: bold;
@@ -103,4 +99,12 @@ main{
     height:528px;
     background-repeat: no-repeat;
     background-size: cover;
+ }
+ form a{
+    text-decoration: none;
+    color:rgb(255, 204, 137);
+    font-size: 18px;
+ }
+ form a:hover{
+    color:rgb(255, 0, 89);
  }

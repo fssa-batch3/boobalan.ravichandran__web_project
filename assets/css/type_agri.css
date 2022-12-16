@@ -1,8 +1,9 @@
 
 .fertilizer{
-background-color: rgb(255, 254, 238);
+    background-image: url(../images/sell_back.png);
 background-repeat: no-repeat;
 background-attachment: fixed;
+background-size: cover;
 
 }
 .fertilizer h1{
@@ -27,6 +28,10 @@ background-attachment: fixed;
     width:390px;
     height:370px;
     border: 2px solid green;
+    margin-top: 25px;
+    font-size: 19px;
+    font-weight: bold; letter-spacing: .5px;
+    box-shadow: 0px 7px 15px  rgb(255, 213, 0);
 }
 .agri_type img:hover {
     transform: scale(1.02);
@@ -39,7 +44,7 @@ background-attachment: fixed;
     margin-left: 60px;
     padding: 16px 35px ;
     color:white;
-    background:linear-gradient(rgb(4, 4, 62),rgb(10, 21, 122));
+    background:linear-gradient(rgb(4, 4, 62),rgb(6, 14, 88));
     border-radius: 10px;
     margin-top: 25px;
     font-size: 19px;
@@ -50,7 +55,7 @@ background-attachment: fixed;
     margin-left: 72px;
     padding: 16px 35px ;
     color:white;
-    background:linear-gradient(rgb(6, 6, 63),rgb(16, 24, 100));
+    background:linear-gradient(rgb(6, 6, 63),rgb(8, 13, 63));
     border-radius: 10px;
     margin-top: 25px;
     font-size: 19px;
@@ -60,7 +65,7 @@ background-attachment: fixed;
     margin-left: 78px;
     padding: 16px 35px ;
     color:white;
-    background:linear-gradient(rgb(6, 6, 69),rgb(16, 22, 74));
+    background:linear-gradient(rgb(12, 12, 56),rgb(8, 12, 54));
     border-radius: 10px;
     margin-top: 25px;
     font-size: 19px;

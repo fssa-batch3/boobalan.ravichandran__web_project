@@ -38,7 +38,6 @@ main{
 .thank button:hover{
     background-color: rgb(45, 43, 43);
     color:white;
-    font-size: 27px;
-    border:2px solid red;
+    border:1px solid red;
     transform: scale(1.1);
 }
