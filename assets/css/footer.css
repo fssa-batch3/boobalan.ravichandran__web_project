@@ -1,54 +1,79 @@
-.footer{
-	display: flex;
+.about111{
+    display: flex;
+    justify-content: space-around;
+}
+*
+{
+    font-family: 'Source Serif 4', serif;
+}.bottom{
+    display: flex;
 }
 .social img{
-	width:52px;
-	height:50px;
+    width: 70px;
+    height: 70px;
+    margin-left: -1px;
 }
-#contact{
-	background: linear-gradient(rgb(197, 140, 19) ,rgb(248, 206, 144),rgb(197, 140, 19));
-	padding: 10px 100px 20px 30px;
-	box-shadow: 10px 5px 10px 0px rgb(0, 0, 0);
+.footer1{
+    background-color: rgb(255, 195, 66);
 }
-#contact h1{
-	margin:30px 0px 20px 520px;
-	font-size: 42px;
-	color:rgb(22, 72, 12);
-	font-style: italic;
+.img101 img{
+    width:300px;
+    height: 110px;
+    cursor: pointer;
 }
-.icon img{
-    width:450px;
-	height:170px;
+.img101{
+    background:linear-gradient(rgb(244, 185, 76), rgb(255, 210, 125),rgb(249, 188, 74));
+    padding: 10px 0px 5px 550px;
 }
-.abt{
-	margin-left: 750px;
-	margin-top: 40px;
-}
-.abt a{
-	text-decoration: none;
-}
-.abt a h2 {
-	margin-bottom: 50px;
-	font-size: 25px;
-}
-.bottom{
-	display: flex;
-	border-top: 6px solid rgb(139, 17, 49);
-	width:105%;
-	padding: 20px 50px 20px 190px;
-}
-.cont p{
-	font-size: 29px;
+
+.social{
+    margin-left: 570px;
+   }
+   .social a img{
+       width:50px;
+       height:50px;
+       border-radius: 50%;
+       margin-right: 40px;
+       background-color: white;
+   }
+   .cont p{
+	font-size: 23px;
 	font-weight: bold;
 	color: rgb(8, 8, 67);
+    margin-top: .8rem;
 }
-.social{
- margin-left: 420px;
+.quick a{
+   color:rgb(77, 76, 76);
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 18px;
 }
-.social a img{
-	width:45px;
-	height:45px;
-	border-radius: 50%;
-	margin-right: 40px;
-	background-color: white;
+.quick a:hover{
+	color:rgb(255, 0, 85);
+}
+.quick p{
+	margin-top: .7rem;
+}
+.quick h2{
+    font-size: 24px;
+    color:rgb(14, 14, 112)
+}
+.quick{
+    width:15rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+.bottom{
+    background:linear-gradient(rgb(239, 177, 63), rgb(255, 210, 125),rgb(252, 191, 78));
+    padding: 25px 0px 15px 100px;
+    border-top: 6px solid rgb(167, 48, 80);
+    margin: 0rem 1rem 0rem 1rem;
+}
+.rboomi{
+	margin-top: .5rem;
+}
+.rboomi p{
+   color:rgb(74, 74, 74);
+   font-weight: bold;
+   font-size: 18px;
 }

@@ -1,0 +1,99 @@
+body{
+    background-image: url(../images/background.webp);
+    padding: 70px 100px 10px 430px;
+    background-size: cover;
+}
+*{
+    font-family: 'Philosopher', sans-serif;
+     }
+.details{
+        border: 2px solid rgb(22, 30, 36);
+        width:645px;
+        padding-left: 50px;
+        padding-top: 20px;
+        background:url(../images/screen.jpg);
+        border-radius: 10px;
+        padding-bottom: 50px;
+}
+.details label,.details h3{
+    color:white;
+    font-weight:  bold;
+  }
+label{
+    font-size: 21px;
+}
+h3{
+    font-size: 30px;
+    margin-left:10rem;
+}
+
+button{
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 21px;
+    font-weight: bold;
+    background:linear-gradient(rgb(20, 20, 20),rgb(49, 191, 174));
+    color: white;
+    box-shadow: 0px 5px 12px 0px red;
+}
+.btn1{
+    margin-left: 230px;
+}
+button:hover{
+    background:linear-gradient(black,rgb(255, 0, 68));
+    border-radius: 13px;
+    color:white;
+    font-size: 22px;
+    transform: scale(1.1);
+}
+
+#account_holder_name{
+    width:300px;
+    height: 40px;
+    margin-left:73px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px; margin-bottom: 20px;
+}
+#account_number{
+    width:300px;
+    height: 40px;
+    margin-left:15px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px; margin-bottom: 20px;
+}
+#IFSC_code{
+    width:300px;
+    height: 40px;
+    margin-left:75px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px; margin-bottom: 20px;
+}
+#branch_name{
+    width:300px;
+    height: 40px;
+    margin-left:95px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px; margin-bottom: 20px;
+}
+#city{
+    width:300px;
+    height: 40px;
+    margin-left:180px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px; margin-bottom: 20px;
+}
+#state1{
+    width:300px;
+    height: 40px;
+    margin-left:170px ;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 17px;
+    margin-bottom: 10px; margin-bottom: 20px;
+}

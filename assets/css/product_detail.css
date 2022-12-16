@@ -10,15 +10,15 @@ label {
 }
 #skuid{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left: 130px;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
 }
 #option{
-    width:300px;
-    height: 40px;
+    width:320px;
+    height: 41px;
     margin-left:105px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -27,7 +27,7 @@ label {
 }
 #mrp{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:205px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -37,7 +37,7 @@ label {
 }
 #selling{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:70px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -45,7 +45,7 @@ label {
     margin-bottom: 10px;
 }
 #option1{
-    width:300px;
+    width:320px;
     height: 40px;
     margin-left:85px ;
     border-radius: 5px;
@@ -56,7 +56,7 @@ label {
 }
 #stock_count{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:115px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -64,7 +64,7 @@ label {
     margin-bottom: 10px;
 }
 #option2{
-    width:300px;
+    width:320px;
     height: 40px;
     margin-left:90px ;
     border-radius: 5px;
@@ -76,7 +76,7 @@ label {
 }
 #local_delivery{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:52px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -85,7 +85,7 @@ label {
 }
 #zonal_delivery{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:25px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -103,7 +103,7 @@ label {
 }
 #height{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:90px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -111,7 +111,7 @@ label {
 }
 #hsn{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:210px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -120,7 +120,7 @@ label {
 }
 #tax_code{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:140px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -128,7 +128,7 @@ label {
 }
 #country_origin{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:90px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -145,7 +145,7 @@ label {
 }
 #product_name{
     width:300px;
-    height: 40px;
+    height: 37px;
     margin-left:70px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -169,13 +169,15 @@ label {
     margin-top: 30px;
 }
 .details{
-    border: 3px solid rgb(17, 38, 90);
+    border: 3px solid rgb(214, 246, 255);
     width:1170px;
-    margin-left: 125px;
+  margin: 50px 0px 100px 125px;
     padding-left: 50px;
     background: linear-gradient(-90deg,rgb(228, 245, 245),rgb(232, 237, 215)) ;
     border-radius: 10px;
     padding-bottom: 50px;
+    box-shadow: 0px 10px 22px 0px black;
+    padding-right: 30px;
 }
 .btn111 button{
     height: 50px;
@@ -183,7 +185,7 @@ label {
     border-radius: 10px;
     font-size: 20px;
     font-weight: bold;
-    background:linear-gradient(rgb(18, 18, 128),rgb(222, 222, 161));
+    background:linear-gradient(rgb(4, 4, 74),rgb(6, 27, 57));
     margin-left: 500px;
     margin-top: 50px;
     letter-spacing: 1px;

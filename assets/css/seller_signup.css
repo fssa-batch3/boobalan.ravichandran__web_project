@@ -1,15 +1,24 @@
 body{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAk9930AOzowMIzCV_07aGU8gSWsAgO3CDMfF3XMSNVmc-_-wTJ2FreGttgIKfgcHVWuc&usqp=CAU);
-    padding: 80px 100px 100px 410px;
+    background-image: url(../images/background.webp);
+    padding: 60px 100px 30px 410px;
+    background-size: cover;
 }
+*{
+    font-family: 'Philosopher', sans-serif;
+     }
+   
 .details{
     border: 2px solid rgb(22, 30, 36);
-    width:630px;
+    width:613px;
     padding-left: 50px;
     padding-top: 20px;
-    background: linear-gradient(-90deg,rgb(213, 254, 163),rgb(187, 255, 235)) ;
+    background:url(../images/screen.jpg);
     border-radius: 10px;
     padding-bottom: 50px;
+}
+.details label , .details h2 ,.details h4{
+  color:white;
+  font-weight:  bold;
 }
 h2{
    padding-left: 130px;
@@ -17,9 +26,9 @@ h2{
    margin-top: 20px;
    font-size: 32px;
 }
-.hero_list ul li:hover{
-background-color: rgb(8, 154, 8);
-border-radius: 4px;
+.details a{
+    text-decoration: none;
+    color: rgb(255, 0, 72);
 }
 label {
     font-size: 21px;
@@ -27,18 +36,16 @@ label {
 h4{
     font-size: 21px;
 }
-h3{
-    font-size: 24px;
-}
+
 button{
     height: 50px;
     width: 150px;
     border-radius: 10px;
-    border: 2px solid rgb(14, 14, 14);
     font-size: 21px;
     font-weight: bold;
     background:linear-gradient(rgb(13, 13, 13),rgb(49, 191, 174));
     color: white;
+    box-shadow: 0px 7px 18px 0px red;
 }
 .btn1{
     margin-left: 230px;
@@ -46,7 +53,6 @@ button{
 button:hover{
     background:linear-gradient(black,rgb(255, 0, 68));
     border-radius: 13px;
-    border: 2px solid rgba(255, 1, 65, 0.705);
     color:white;
     font-size: 22px;
     transform: scale(1.1);
@@ -54,7 +60,7 @@ button:hover{
 #mobile{
     width:300px;
     height: 40px;
-    margin-left: 135px;
+    margin-left: 95px;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
@@ -63,7 +69,7 @@ button:hover{
 #email{
     width:300px;
     height: 40px;
-    margin-left:150px ;
+    margin-left:110px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
@@ -72,7 +78,7 @@ button:hover{
 #full_name{
     width:300px;
     height: 40px;
-    margin-left:85px ;
+    margin-left:40px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
@@ -80,7 +86,7 @@ button:hover{
 #password{
     width:300px;
     height: 40px;
-    margin-left:155px ;
+    margin-left:113px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
@@ -89,73 +95,13 @@ button:hover{
 #password1{
     width:300px;
     height: 40px;
-    margin-left:110px ;
+    margin-left:65px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
     margin-bottom: 50px;
 }
-#pincode{
-    width:300px;
-    height: 40px;
-    margin-left:150px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px;
-    margin-bottom: 20px;
-}
-#state{
-    width:300px;
-    height: 40px;
-    margin-left:225px ;
-    margin-right: 10px;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px;
-    margin-bottom: 20px;
-}
-#district{
-    width:300px;
-    height: 40px;
-    margin-left:205px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px;
-    margin-bottom: 20px;
-}
-#gstin{
-    width:300px;
-    height: 40px;
-    margin-left:57px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px;
-    margin-bottom: 20px;
-}
-#business_name{
-    width:300px;
-    height: 40px;
-    margin-left:135px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px; margin-bottom: 20px;
-}
-#pan{
-    width:300px;
-    height: 40px;
-    margin-left:55px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px; margin-bottom: 20px;
-}
-#business_type{
-    width:300px;
-    height: 40px;
-    margin-left:143px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px; margin-bottom: 20px;
-}
+
 #account_holder_name{
     width:300px;
     height: 40px;
@@ -199,7 +145,7 @@ button:hover{
 #state1{
     width:300px;
     height: 40px;
-    margin-left:175px ;
+    margin-left:170px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;

@@ -1,6 +1,6 @@
 
 .fertilizer{
-background-color: rgb(249, 247, 204);
+background-color: rgb(255, 254, 238);
 background-repeat: no-repeat;
 background-attachment: fixed;
 
@@ -39,7 +39,7 @@ background-attachment: fixed;
     margin-left: 60px;
     padding: 16px 35px ;
     color:white;
-    background:linear-gradient(rgb(6, 6, 88),rgb(38, 60, 201));
+    background:linear-gradient(rgb(4, 4, 62),rgb(10, 21, 122));
     border-radius: 10px;
     margin-top: 25px;
     font-size: 19px;
@@ -50,7 +50,7 @@ background-attachment: fixed;
     margin-left: 72px;
     padding: 16px 35px ;
     color:white;
-    background:linear-gradient(rgb(5, 5, 101),rgb(40, 57, 217));
+    background:linear-gradient(rgb(6, 6, 63),rgb(16, 24, 100));
     border-radius: 10px;
     margin-top: 25px;
     font-size: 19px;
@@ -60,7 +60,7 @@ background-attachment: fixed;
     margin-left: 78px;
     padding: 16px 35px ;
     color:white;
-    background:linear-gradient(rgb(7, 7, 107),rgb(44, 59, 227));
+    background:linear-gradient(rgb(6, 6, 69),rgb(16, 22, 74));
     border-radius: 10px;
     margin-top: 25px;
     font-size: 19px;
