@@ -49,21 +49,19 @@ label{
 .btn11 {
    padding:10px 30px 10px 30px;
    font-size: 18px;
-   border-radius: 5px;
+   border-radius: 10px;
    margin: 20px 30px 5px 20px ;
    background:linear-gradient(#64e1ce,rgb(32, 32, 31));
    color: white;
    font-style:inherit;
-   border-radius: 10px;
 }
 .btn22{
     padding:10px 20px 10px 20px;
    font-size: 18px;
-   border-radius: 5px;
+   border-radius:10px;
    margin: 20px 20px 5px 20px ;
    background:linear-gradient(rgb(49, 191, 174),rgb(13, 13, 13));
    color: white; font-style:inherit;
-   border-radius: 10px;
 }
 .btn11:hover {
     background:linear-gradient(black,rgb(255, 0, 68));
