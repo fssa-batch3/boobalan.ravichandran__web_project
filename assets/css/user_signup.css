@@ -2,17 +2,17 @@
     font-family: 'Lora', serif;
 }
 #mobile{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left: 80px;
     border-radius: 5px;
     padding-left: 15px;
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 #email{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:95px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -20,8 +20,8 @@
     margin-bottom: 20px;
 }
 #full_name{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:20px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -29,8 +29,8 @@
     margin-bottom: 20px;
 }
 #password{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:100px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -38,8 +38,8 @@
     margin-bottom: 20px;
 }
 #password1{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:50px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -54,14 +54,23 @@ label {
     font-size: 21px;
     font-weight: bold;
 }
+form input{
+    border: none;
+    background:none;
+    border-bottom: 2px solid white;
+    color:white
+}
+input:focus-visible{
+    outline: none;
+}
 h2{
-    padding-left: 140px;
+    margin-left: 120px;
    padding-bottom: 20px;
    margin-top: 20px;
    font-size: 32px;
 }
 .btn{
-    margin-left: 180px;
+    margin-left: 160px;
     font-size: 20px;
 }
 button{
@@ -75,7 +84,7 @@ button{
 }
 .details{
     border: 1px solid rgb(0, 0, 0);
-    width:580px;
+    width:540px;
     padding-left: 32px;
     padding-top: 20px;
     background-image: url(../images/screen.jpg);
@@ -93,7 +102,7 @@ button:hover{
 }
 main{
     background-image: url(../images/background.webp);
-    padding-left: 460px;
+    padding-left: 490px;
     padding-top: 110px;
     padding-bottom: 253px;
     height:528px;

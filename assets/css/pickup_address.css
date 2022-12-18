@@ -1,6 +1,6 @@
 body{
     background-image: url(../images/background.webp);
-    padding: 40px 100px 10px 410px;
+    padding: 40px 100px 10px 470px;
     background-size: cover;
 }
 *{
@@ -8,7 +8,7 @@ body{
      }
 .details{
         border: 2px solid rgb(22, 30, 36);
-        width:630px;
+        width:540px;
         padding-left: 50px;
         padding-top: 20px;
         background:url(../images/screen.jpg);
@@ -23,22 +23,32 @@ label{
     font-size: 21px;
 }
 h3{
-    font-size: 30px;
-    margin-left:4rem;
+    font-size: 27px;
+    margin-left:2.7rem;
+}
+
+form input{
+    border: none;
+    background:none;
+    border-bottom: 2px solid white;
+    color:white
+}
+input:focus-visible{
+    outline: none;
 }
 #pincode{
-    width:300px;
-    height: 40px;
-    margin-left:130px ;
+    width:250px;
+    height: 35px;
+    margin-left:80px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
     margin-bottom: 20px;
 }
 #state{
-    width:300px;
-    height: 40px;
-    margin-left:220px ;
+    width:250px;
+    height: 35px;
+    margin-left:170px ;
     margin-right: 10px;
     border-radius: 5px;
     padding-left: 15px;
@@ -46,43 +56,43 @@ h3{
     margin-bottom: 20px;
 }
 #district{
-    width:300px;
-    height: 40px;
-    margin-left:195px ;
+    width:250px;
+    height: 35px;
+    margin-left:145px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
     margin-bottom: 20px;
 }
 #gstin{
-    width:300px;
-    height: 40px;
-    margin-left:30px ;
+    width:250px;
+    height: 35px;
+    margin-left:40px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
     margin-bottom: 20px;
 }
 #business_name{
-    width:300px;
-    height: 40px;
-    margin-left:120px ;
+    width:250px;
+    height: 35px;
+    margin-left:70px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #pan{
-    width:300px;
-    height: 40px;
-    margin-left:30px ;
+    width:250px;
+    height: 35px;
+    margin-left:40px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #business_type{
-    width:300px;
-    height: 40px;
-    margin-left:129px ;
+    width:250px;
+    height: 35px;
+    margin-left:79px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
@@ -98,7 +108,7 @@ button{
     color: white;
 }
 .btn1{
-    margin-left: 230px;
+    margin-left: 170px;
 }
 button:hover{
     background:linear-gradient(black,rgb(255, 0, 68));

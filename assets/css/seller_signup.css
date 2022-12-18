@@ -1,6 +1,6 @@
 body{
     background-image: url(../images/background.webp);
-    padding: 60px 100px 30px 410px;
+    padding: 60px 100px 30px 450px;
     background-size: cover;
 }
 *{
@@ -9,7 +9,7 @@ body{
    
 .details{
     border: 2px solid rgb(22, 30, 36);
-    width:613px;
+    width:563px;
     padding-left: 50px;
     padding-top: 20px;
     background:url(../images/screen.jpg);
@@ -21,7 +21,7 @@ body{
   font-weight:  bold;
 }
 h2{
-   padding-left: 130px;
+   margin-left: 60px;
    padding-bottom: 30px;
    margin-top: 20px;
    font-size: 32px;
@@ -39,6 +39,15 @@ label {
 h4{
     font-size: 21px;
 }
+form input{
+    border: none;
+    background:none;
+    border-bottom: 2px solid white;
+    color:white
+}
+input:focus-visible{
+    outline: none;
+}
 
 button{
     height: 50px;
@@ -50,7 +59,7 @@ button{
     color: white;
 }
 .btn1{
-    margin-left: 230px;
+    margin-left: 190px;
 }
 button:hover{
     background:linear-gradient(black,rgb(255, 0, 68));
@@ -61,8 +70,8 @@ button:hover{
     border: 2px solid red;
 }
 #mobile{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left: 95px;
     border-radius: 5px;
     padding-left: 15px;
@@ -70,8 +79,8 @@ button:hover{
     margin-bottom: 20px;
 }
 #email{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:110px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -79,16 +88,16 @@ button:hover{
     margin-bottom: 20px;
 }
 #full_name{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:35px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
 }
 #password{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:113px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -96,8 +105,8 @@ button:hover{
     margin-bottom: 20px;
 }
 #password1{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:65px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -106,48 +115,48 @@ button:hover{
 }
 
 #account_holder_name{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:73px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #account_number{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:17px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #IFSC_code{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:72px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #branch_name{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:95px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #city{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:175px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #state1{
-    width:300px;
-    height: 40px;
+    width:250px;
+    height: 35px;
     margin-left:170px ;
     border-radius: 5px;
     padding-left: 15px;

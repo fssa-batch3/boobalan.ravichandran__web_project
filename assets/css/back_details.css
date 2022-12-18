@@ -1,6 +1,6 @@
 body{
     background-image: url(../images/background.webp);
-    padding: 70px 100px 10px 430px;
+    padding: 70px 100px 10px 480px;
     background-size: cover;
 }
 *{
@@ -8,7 +8,7 @@ body{
      }
 .details{
         border: 2px solid rgb(22, 30, 36);
-        width:645px;
+        width:580px;
         padding-left: 50px;
         padding-top: 20px;
         background:url(../images/screen.jpg);
@@ -24,7 +24,16 @@ label{
 }
 h3{
     font-size: 30px;
-    margin-left:10rem;
+    margin-left:7.5rem;
+}
+.details input{
+    border: none;
+    background:none;
+    border-bottom: 2px solid white;
+    color:white
+}
+input:focus-visible{
+    outline: none;
 }
 
 button{
@@ -37,7 +46,7 @@ button{
     color: white;
 }
 .btn1{
-    margin-left: 230px;
+    margin-left: 200px;
 }
 button:hover{
     background:linear-gradient(black,rgb(255, 0, 68));
@@ -49,49 +58,49 @@ button:hover{
 }
 
 #account_holder_name{
-    width:300px;
-    height: 40px;
-    margin-left:73px ;
+    width:250px;
+    height: 35px;
+    margin-left:40px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #account_number{
-    width:300px;
-    height: 40px;
-    margin-left:15px ;
+    width:250px;
+    height: 35px;
+    margin-left:33px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #IFSC_code{
-    width:300px;
-    height: 40px;
-    margin-left:75px ;
+    width:250px;
+    height: 35px;
+    margin-left:100px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #branch_name{
-    width:300px;
-    height: 40px;
-    margin-left:95px ;
+    width:250px;
+    height: 35px;
+    margin-left:120px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #city{
-    width:300px;
-    height: 40px;
-    margin-left:180px ;
+    width:250px;
+    height: 35px;
+    margin-left:150px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px; margin-bottom: 20px;
 }
 #state1{
-    width:300px;
-    height: 40px;
-    margin-left:170px ;
+    width:250px;
+    height: 35px;
+    margin-left:140px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;

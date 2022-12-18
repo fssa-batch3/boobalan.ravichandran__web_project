@@ -270,9 +270,48 @@ font-size: 19px;
     margin-left: 50px;
 }
 .imga img{
-    margin-left: 40px;margin-right: 40px;
-    box-shadow: 0px 5px 10px 0px gray;
-    
+    width: 1400px;
+    height: 500px;
+    float: left;
+}
+.imga figure{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0px;
+  animation: webzone 13s infinite linear;
+}
+.imga{
+  position: relative;
+  width: 100%;
+    height: 500px;
+    width: 1400px;
+    margin: 50px auto;
+    box-shadow: 0px 7px 15px 0px rgb(74, 74, 74);
+    border-radius: 10px;
+    overflow: hidden;
+}
+@keyframes webzone{
+  0% {
+    left: 0%;
+}
+15% {
+    left: 0%;
+}
+20% {
+    left: -100%;
+}
+35% {
+    left: -100%;
+}
+40% {
+    left: -200%;
+}
+60% {
+    left: -200%;
+}
+
+
 }
 .checked {
     color: orange;

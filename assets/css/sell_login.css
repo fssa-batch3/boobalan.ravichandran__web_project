@@ -1,6 +1,6 @@
 #mobile{
     width:250px;
-    height: 40px;
+    height: 35px;
     margin-left: 40px;
     border-radius: 5px;
     padding-left: 15px;
@@ -9,7 +9,7 @@
 }
 #email{
     width:250px;
-    height: 40px;
+    height: 35px;
     margin-left:55px ;
     border-radius: 5px;
     padding-left: 15px;
@@ -18,12 +18,13 @@
 }
 #password{
     width:250px;
-    height: 40px;
+    height: 35px;
     margin-left:95px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 .details{
     border: 2px solid rgb(0, 0, 0);
@@ -69,6 +70,17 @@ h4 a{
 label {
     font-size: 21px;
 }
+
+.details input{
+    border: none;
+    background:none;
+    border-bottom: 2px solid white;
+    color:white
+}
+input:focus-visible{
+    outline: none;
+}
+
 h2{
     padding-left: 140px;
    padding-bottom: 50px;
