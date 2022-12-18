@@ -92,45 +92,80 @@
     <main>
        <div class="delivery">
         <h1>Delivery details</h1>
-        <div class="roots">
-            <label for="full_name">Enter Full Name</label>
-                    <input class="disty" type="text" placeholder="Enter full name" id="full_name" />
-        </div>
-        <div class="roots">
-            <label for="mobile"> Mobile Number </label>
-            <input class="disty" type="number" placeholder="Enter Your Mobile Number" id="mobile"/> 
-        </div>
-        <div class="roots">
-            <label for="door">Door No, Street Name</label>
-            <input class="disty" type="text" placeholder="Enter Door No, Street Name" id="door" />
-        </div>
-        <div class="roots"> 
-            <label for="pincode">Enter Pincode</label>
-                <input class="disty" type="number" placeholder="Enter Pincode" id="pincode"/>
-        </div>
-        <div class="roots">
-            <label for="state">State</label>
-            <input class="disty" type="text" placeholder="Enter Your State" id="state" />
-        </div>
-        <div class="roots">
-            <label  for="district">District</label>
-            <input class="disty" type="text" placeholder="Enter Your District" id="district"/>
-        </div>
-        <div class="radio">
-         <div>
-            <input  type="radio" name="yes_no" id="rad1" /><label class="lab">Home</label> 
+        <div class="contact11">
+            <h3>CONTACT INFORMATION</h3>
+            <div class="first_last">
+               <div>
+                <label for="full_name">FIRST NAME</label>
+                <input class="disty" type="text" placeholder="FIRST NAME" id="first_name" />
+               </div>
+               <div >
+                <label id="full" for="full_name">LAST NAME</label>
+                <input class="disty" type="text" placeholder="LAST NAME" id="last_name" />
+               </div>
             </div>
-            <div>
-            <input type="radio" name="yes_no" id="rad2" />
-            <label class="lab">Work </label> 
+            <div class="first_last">
+                <div>
+                    <label for="mobile">MOBILE NUMBER </label>
+                <input class="disty" type="number" placeholder="MOBILE NUMBER" id="mobile"/> 
+                   </div>
+                   <div>
+                    <label id="full1" for="mobile">EMAIL</label>
+                <input class="disty" type="mail" placeholder="EAMIL ADDRESS" id="email"/> 
+                   </div>
             </div>
-           </div>
-           <div class="btnn">
-           <a href="./user_interface.html"> <button class="btn11">Cancel</button></a> <a href="./thank_order.html"><button class="btn22">Save & Deliver Here</button></a>
-           </div>
-           </div>
         </div>
-       </div>
+        <div class="del_address">
+            <h3>DELIVERY ADDRESS</h3>
+            <div class="del_address1">
+                <div class="img">
+                    <img src="../../assets/images/home.gif" alt="home gif">
+                    <p>HOME</p>
+                </div>
+               <div class="img">
+                <img src="../../assets/images/office.gif" alt=" office gif">
+                <p>OFFICE</p>
+               </div>
+            </div>
+            <div  class="del_address1">
+                <div class="delivery101">
+                     <label>DELIVERY DATE</label>
+                    <input type="date" id="date">
+                </div>
+                <div class="delivery1010">
+                    <label>DELIVERY TIME</label>
+                   <input type="time" id="time">
+               </div>
+            </div>
+            <div class="city_zip">
+                <div class="city_zip1">
+                    <label>CITY</label>
+                    <input type="text" id="city" >
+                </div>
+                <div class="city_zip1">
+                    <label >ADDRESS</label>
+                    <input type="text" id="address">
+                </div>
+                <div class="city_zip1">
+                    <label >ZIP CODE</label>
+                    <input type="text" id="zip">
+                </div>
+            </div>
+            <div class="pay_met">
+                <h3>PAYMENT METHOD</h3>
+                <div class="payment">
+                    <img src="../../assets/images/gpay.gif" alt="gpay">
+                    <img src="../../assets/images/phonepe.gif" alt="phonepe">
+                    <img src="../../assets/images/paytm.gif" alt="paytm">
+                </div>
+            </div>
+        </div>
+         <div class="button">
+            <a href="#"><button>CANCEL</button></a>
+           <a href="./thank_order.html"> <button type="button">SAVE & DELIVER HERE</button></a>
+         </div>
+        </div>
+        
     </main>
     <footer>
         <div class="footer1">
