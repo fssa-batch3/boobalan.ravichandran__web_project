@@ -1,0 +1,28 @@
+.product_upload{
+    background-color: rgb(252, 251, 251);
+    box-shadow: 0px 6px 12px 0px gray;
+    width:800px;
+    padding: 30px ;
+    height:400px;
+    margin: 100px 0px 100px 320px;
+}
+.product_upload img{
+    width:260px;
+    height:260px;
+    margin-left: 250px;
+}
+.product_upload h2{
+   font-size:30px;
+   margin-left: 80px;
+}
+.product_upload button{
+    margin-left: 300px;
+    padding: 12px 50px;
+    border-radius: 10px;
+    background-color: rgb(9, 9, 71);
+    color:white;
+    font-weight: bold;
+}
+.product_upload button:hover{
+    background: linear-gradient(black,rgb(255, 0, 93));
+}

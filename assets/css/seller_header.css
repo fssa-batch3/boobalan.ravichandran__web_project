@@ -10,13 +10,13 @@
      display: flex;
  }
  .header__logo{
-     width: 200px;
-     height: 55px;
-     padding: 8px 5px 5px 40px;
+     width: 170px;
+     height: 58px;
+     padding: 5px 5px 5px 40px;
  }
  .hero{
      display: flex;
-     margin-left:580px;
+     margin-left:630px;
      list-style: none;
  }
  .hero_list a{
@@ -41,7 +41,7 @@
  }
  
  *{
-  font-family: 'Philosopher', sans-serif;
+  font-family: 'Lora', serif;
    }
  
    .nav{
@@ -122,7 +122,7 @@
    }
    .dropdown_list1 a:hover ,.dropdown_list a:hover{
      color:rgb(121, 6, 6);
-     font-size: 19px;
+     font-size: 20px;
    }
    .dropdown1:hover .btn1 {
      color: rgb(0, 0, 0);

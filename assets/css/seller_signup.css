@@ -4,7 +4,7 @@ body{
     background-size: cover;
 }
 *{
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Lora', serif;
      }
    
 .details{
@@ -48,7 +48,6 @@ button{
     font-weight: bold;
     background:linear-gradient(rgb(13, 13, 13),rgb(49, 191, 174));
     color: white;
-    box-shadow: 0px 7px 18px 0px red;
 }
 .btn1{
     margin-left: 230px;
@@ -59,6 +58,7 @@ button:hover{
     color:white;
     font-size: 22px;
     transform: scale(1.1);
+    border: 2px solid red;
 }
 #mobile{
     width:300px;
@@ -81,7 +81,7 @@ button:hover{
 #full_name{
     width:300px;
     height: 40px;
-    margin-left:40px ;
+    margin-left:35px ;
     border-radius: 5px;
     padding-left: 15px;
     font-size: 17px;

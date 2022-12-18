@@ -65,8 +65,9 @@ h2{
     border-bottom: 5px solid rgb(13, 13, 47);
 }
 .about p{
-    font-size: 20px;
+    font-size: 19px;
     color: rgb(95, 10, 10);
+    line-height: 2rem;
 }
 .fa-arrow-circle-left{
     margin: 20px 0px 20px 50px ;

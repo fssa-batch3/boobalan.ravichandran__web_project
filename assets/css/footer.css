@@ -2,13 +2,10 @@
     display: flex;
     justify-content: space-around;
 }
-*
-{
-    font-family: 'Source Serif 4', serif;
-}
+
 .social img{
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: px;
     margin-left: -1px;
 }
 .footer1{

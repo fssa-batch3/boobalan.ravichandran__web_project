@@ -2,7 +2,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: 'Source Serif 4', serif;
+font-family: 'Lora', serif;
 }
 .header{
     background-color: #078537;
@@ -25,7 +25,8 @@ font-family: 'Source Serif 4', serif;
 .hero_list a:hover {
     background-color: black;
     color: white;
-    border:2px solid red;
+    border:1px solid red;
+    transition: .5s;
 }
 .header__logo{
     width: 230px;
@@ -108,6 +109,7 @@ form{
   padding: 16px;
   font-size: 16px;
   border: none;
+  font-weight: bold;
   }
   .dropdown {
     position: relative;
@@ -143,6 +145,7 @@ form{
   padding: 16px;
   font-size: 16px;
   border: none;
+  font-weight: bold;
   }
   .dropdown1 {
     position: relative;
@@ -169,9 +172,9 @@ form{
     display: block;
   }
   .dropdown2-content :hover ,.dropdown1-content :hover ,.dropdown-content :hover{
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
-    color:rgb(142, 1, 1);
+    color:rgb(157, 4, 4);
   }
   .dropdown2:hover .dropdown2-content {
     display: block;
@@ -183,6 +186,7 @@ form{
   padding: 16px;
   font-size: 16px;
   border: none;
+  font-weight: bold;
   }
   .btn1{
     cursor: pointer;
@@ -192,6 +196,7 @@ form{
   font-size: 16px;
   border: none;
   margin-left: 20px;
+  font-weight: bold;
   }
   .dropdown2 {
     position: relative;
@@ -202,7 +207,7 @@ form{
     display: none;
     position: absolute;
     background-color:#e8feda;
-   width: 260px;
+   width: 270px;
     box-shadow: 0px 5px 9px 0px rgb(0, 0, 0);
   }
   .dropdown2:hover .dropbtn2  {
@@ -223,34 +228,33 @@ form{
     width:200px;
     border-radius: 50%;
     margin-left: 80px;
-    border: 2px solid rgb(154, 151, 151);
+   box-shadow: 0px 5px 12px 0px gray;
 }
 .offers img:hover{
-    transform: scale(1.1);
-    transition-delay: .15s;
+    transform: scale(1.05);
+    transition-delay: .2s;
     border-radius: 50%;
-    border: 3px solid rgb(214, 9, 81);
 }
 .offers a{
     text-decoration: none;
 }
 .offers h2{
 color: black;
-font-size: 20px;
+font-size: 19px;
 }
 .offers h2:hover{
     color: green;
 }
 .off{
-    margin-left: 145px;
+    margin-left: 148px;
     margin-top: 10px;
 }
 .off1{
-    margin-left: 130px;
+    margin-left: 125px;
     margin-top: 10px;
 }
 .off2{
-    margin-left: 128px;
+    margin-left: 130px;
     margin-top: 10px;
 }
 .off3{
@@ -258,7 +262,7 @@ font-size: 20px;
     margin-top: 10px;
 }
 .off4{
-    margin-left: 135px;
+    margin-left: 132px;
     margin-top: 10px;
 }
 .h11 h1{
@@ -306,7 +310,7 @@ font-size: 20px;
 }
   
 .star{
-    margin-left: 50px;
+    margin-left: -2px;
     margin-top: 3px;
 }
 .price{
@@ -338,10 +342,10 @@ font-size: 20px;
 .details img {
     width:300px;
     height:200px;
-    box-shadow: 0px 4px 8px 0px rgb(47, 119, 71);
+    box-shadow: 0px 4px 8px 0px rgb(117, 117, 117);
 }
 .details img:hover ,.offers1 img:hover{
-    transform: scale(1.1);
+    transform: scale(1.02);
     transition-delay: .1s;
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px gray;
@@ -358,11 +362,41 @@ font-size: 20px;
     margin-top: 10px;
  }
 .details p {
-   font-size: 19px;
+   font-size: 17px;
    color:rgb(16, 16, 81);
    width: 300px;
+   line-height: 1.4rem;
 }
 .fab h1{
-    font-size: 42px;
-    padding-left: 420px;
+  font-size: 43px;
+  margin-left: 395px;
+}
+.animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #5d0fb1 29%,
+    #ff0055 67%,
+    #ffdd00 100%
+  );
+  margin-top: 20px;
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 60px;
+      margin-left: 500px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }

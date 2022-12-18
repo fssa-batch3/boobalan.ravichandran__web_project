@@ -1,12 +1,14 @@
 
 main{
-    background-color: rgb(19, 26, 52);
+    background-image: url(../images/back.gif);
     padding:120px 150px 280px 150px ;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .thank h1{
-    font-size: 105px;
+    font-size: 95px;
     padding-left: 70px;
-    color: rgb(231, 219, 50);
+    color: rgb(254, 237, 0);
     font-style: italic;
      margin-bottom: 30px;
 }
@@ -17,17 +19,17 @@ main{
 .thank h3{
     padding-left: 200px;
     padding-bottom: 10px;
-    color:rgb(244, 185, 195);
+    color:rgb(240, 255, 236);
 }
 .thank h2{
     padding-left: 300px;
-    color:rgb(244, 192, 201);
+    color:rgb(239, 255, 226);
 }
 #home{
    padding: 10px 5px 10px 30px;
 }
 .thank button{
-    font-size: 25px;
+    font-size: 23px;
     background-color: antiquewhite;
     padding-right: 30px;
     border-radius: 10px;

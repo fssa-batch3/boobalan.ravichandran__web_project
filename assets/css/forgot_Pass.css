@@ -7,6 +7,9 @@
     font-size: 17px;
     margin-bottom: 20px;
 }
+*{
+    font-family: 'Lora', serif;
+}
 #password1{
     width:220px;
     height: 40px;

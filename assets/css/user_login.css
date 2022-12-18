@@ -1,6 +1,5 @@
 *{
-    font-family: 'Source Serif 4', serif;
-}
+    font-family: 'Lora', serif;}
 #mobile{
     width:245px;
     height: 40px;
@@ -50,8 +49,10 @@ button{
     font-size: 22px;
 }
 button:hover{
-    background:linear-gradient(rgb(139, 36, 36),rgb(255, 0, 68));
+    background:linear-gradient(black,rgb(227, 8, 66));
     color: rgb(255, 255, 255);
+    border: 2px solid rgb(218, 6, 73);
+    transform: scale(1.06);
 }
 h4{
     font-size: 21px;
