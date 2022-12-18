@@ -277,7 +277,6 @@ font-size: 19px;
 .imga figure{
   position: relative;
   width: 500%;
-  margin: 0;
   left: 0px;
   animation: webzone 13s infinite linear;
 }
@@ -287,12 +286,12 @@ font-size: 19px;
     width: 1400px;
     margin: 50px auto;
     box-shadow: 0px 7px 15px 0px rgb(74, 74, 74);
-    border-radius: 10px;
-    overflow: hidden;
+    border-radius: 5px;
+    overflow:hidden;
 }
 @keyframes webzone{
   0% {
-    left: 0%;
+    left:0%;
 }
 15% {
     left: 0%;
