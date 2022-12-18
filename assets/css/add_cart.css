@@ -57,7 +57,7 @@ a{
     border: none;
     border-radius: 10px;
     margin-bottom: 20px;
-    border:2px solid orange;
+    border:2px solid rgb(255, 172, 19);
 
 }
 .btnn button:hover ,.bttn button:hover{
@@ -73,7 +73,7 @@ a{
     color:white;
     border: none;
     border-radius: 10px;
-    border: 2px solid  rgb(255, 102, 0);
+    border: 2px solid  rgb(255, 107, 8);
 }
 .bttn{
    background-color: white;
