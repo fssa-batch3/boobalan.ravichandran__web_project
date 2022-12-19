@@ -4,7 +4,6 @@ main{
 }
 .pro_name{
     background: white;
-    box-shadow: 0px 4px 10px 0px gray;
     padding: 50px 0px 30px 250px;
     margin-bottom: 20px;
 }
@@ -16,18 +15,6 @@ main{
 #product_name{
     width:300px;
     padding: 8px 10px;
-}
-.pro_name button{
-    margin-left: 50px;
-    padding: .6rem 3rem;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(3, 21, 58);
-    color: white;
-    font-size: 18px;
-}
-.pro_name button:hover{
-    background: linear-gradient(black,red);
 }
 .up_img{
     border:3px dashed black;
@@ -41,10 +28,29 @@ main{
     width:405px;
     height:380px;
 }
-#uploaded{
+.uploaded{
     margin-left: 370px;
     margin-top: 30px;
     margin-bottom: 50px;
+}
+#uploaded{
+ opacity: 0;
+}
+.uploaded button{
+    width:180px;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    height:55px;
+    border-radius: 10px;
+    color:white;
+    background-color: rgb(10, 10, 49);
+}
+.uploaded button:hover{
+    background: linear-gradient(black, rgb(255, 0, 76));
+    border:2px solid red
+}
+.uploaded input{
+    margin-top: -30px;
 }
 .product1{
     display: flex;

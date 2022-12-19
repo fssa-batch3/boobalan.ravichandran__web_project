@@ -15,6 +15,7 @@
 }
 .city_zip{
     display: flex;
+    margin-top: 50p2;
 }
 .payment{
     display: flex;
@@ -79,29 +80,6 @@ label{
 }
 .img p{
     margin-left: 70px;
-}
-.delivery101 ,.delivery1010{
-    margin-left: 100px;
-    margin-right: 140px;
-    margin-top: 20px;
-}
-#date{
-    width:200px;
-    height:40px;
-    padding: 5px 10px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-#time{
-    width:200px;
-    height:40px;
-    padding: 5px 10px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    margin-left: -40px;
-}
-.delivery1010 label{
-    margin-left: -40px;
 }
 .city_zip1{
     margin-left: 100px;
