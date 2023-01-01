@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
           <link rel="stylesheet" href="../../assets/css/sell_login.css">
-          <title>User Login </title>
+          <title>seller Login </title>
         
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,30 +16,34 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
     <main>
-        <form>
-            <div class="details">
-                
-                <div>
-                    <h2>Seller Login</h2>
-                    <label for="mobile"> Mobile Number </label>
-                       <input type="number" placeholder="Enter Your Mobile Number" id="mobile" required="true"/> 
-               </div><br>
-               <div>
-                   <label for="email">Email address</label>
-                       <input type="email" placeholder="Enter Your Email address" id="email"/>
+        <div class="box">
+        <form action="#" class="form">
+                <img src="../../assets/images/Fert agri.png" alt="logo">
+                    <h1>Seller Login</h1>
+                    <div class="form-group">
+                       <input type="text" id="mobile" class="form-control" required /> 
+                       <label for="mobile" class="form-label"> Email or Phone </label>
                </div>
-               <div>
-                <h4><a href="../seller/forgot_pass.html">Forgot Password?</a></h4><br>
-                   <label for="password">Password</label>
-                   <input type="password" placeholder="Enter password" id="password" required="true" />
+               <div class="form-group">
+                   <input type="password"  id="txtPassword" class="form-control"  required />
+                   <label for="txtPassword" class="form-label">Enter Your Password</label>
                </div>
-              <div><br>
+               <div class="form-group">
+          <label class="showLabel">
+            <input type="checkbox" id="show">
+            Show Password
+          </label>
+               </div>
+              <div>
                 <div class="btn">
+                    <a href="../seller/forgot_pass.html">Forgot Password?</a>
                     <a href="./seller_homepage.html"><button type="button">Login</button></a>
                 </div>
+                <h4 class="singup"> New to FAB?<a href="../seller/seller_singup.html">Create an account</a></h4>
             </div>
-                </div>
         </form>
+        </div>
     </main>
+    <script src="../js/seller_login.js"></script>
     </body>
     </html>

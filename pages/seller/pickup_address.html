@@ -15,42 +15,48 @@
 <link rel="stylesheet" href="../../assets/css/pickup_address.css">
 </head>
 <body>
-    <form>
-        <div class="details">
-            <h3>Give Your Pickup Address Details</h3><br>
-            <div>
-                <label for="pincode">Enter Pincode</label>
-                <input type="number" placeholder="Enter Pincode" id="pincode"/>
-            </div><br>
-            <div>
-                <label for="state">State</label>
-                <input type="text" placeholder="Enter Your State" id="state" />
-                </div><br>
-                <div>
-                    <label for="district">District</label>
-                    <input type="text" placeholder="Enter Your District" id="district"/>
-            </div><br>
-            <div>
-               <label for="gstin"> Your GST Number</label>
-               <input type="text" placeholder="Enter Your GSTIN" id="gstin" required="true"/>
-            </div><br>
-            <div>
-                <label for="business_name">Business Name</label>
-                <input type="text" placeholder="Enter Your Business name" id="business_name" />
-            </div><br>
-            <div>
-                <label for="pan"> Your PAN Number</label>
-                <input type="text" placeholder="Enter Your PAN Number" id="pan" required="true"/>
-             </div><br>
-            <div>
-                <label for="business_type">Business Type</label>
-                <input type="text" placeholder="Enter Your Business type" id="business_type" />
-            </div><br>
+        <div class="box">
+            <form action="#" class="form">
+                    <img src="../../assets/images/Fert agri.png" alt="logo">
+            <h1>Pickup Address Details</h1>
+            <div class="form-group">
+                <input type="number" class="form-control" id="pincode"required max="6"/>
+                <label for="pincode" class="form-label">Pincode</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="state" required/>
+                <label for="state" class="form-label">State</label>
+                </div>
+                <div class="form-group">
+                    <input type="text"class="form-control" id="district"required/>
+                    <label for="district" class="form-label">District</label>
+                    
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="gstin" required="true"/>
+               <label for="gstin" class="form-label"> GST Number</label>
+              
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="business_name" required/>
+                <label for="business_name" class="form-label">Business Name</label>
+               
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="pan" required="true"/>
+                <label for="pan" class="form-label"> PAN Number</label>
+            
+             </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="business_type" required/>
+                <label for="business_type" class="form-label">Business Type</label>
+              
+            </div>
             <div class="btn1">
                 <a href="./bank_details.html"><button type="button">Continue</button></a>
             </div>
+        </form>
         </div>
-    </form>
 
 </body>
 </html>

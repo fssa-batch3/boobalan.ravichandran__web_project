@@ -15,35 +15,38 @@
 <link rel="stylesheet" href="../../assets/css/back_details.css">
 </head>
 <body>
-    <div class="details">
-    <h3>Give Your Bank Details</h3><br>
-    <div>
-        <label for="account_holder_name">Account Holder Name</label>
-        <input type="text" placeholder="Enter Account Holder name" id="account_holder_name"/>
-    </div><br>
-    <div>
-        <label for="account_number"> Bank Account Number</label>
-        <input type="number" placeholder="Enter Bank Account Number" id="account_number"/>
-     </div><br>
-     <div>
-        <label for="IFSC_code">Your IFSC Code</label>
-        <input type="text" placeholder="Enter IFSC Code" id="IFSC_code" />
-    </div><br>
-    <div>
-        <label for="branch_name"> Branch Name</label>
-        <input type="text" placeholder="Enter Branch Name" id="branch_name" />
-    </div><br>
-    <div>
-        <label for="city">Enter City</label>
-        <input type="text" placeholder="Enter City" id="city" />
-    </div><br>
-    <div>
-        <label for="state1">Enter State</label>
-        <input type="text" placeholder="Enter State" id="state1" />
-    </div><br><br>
+    <div class="box">
+        <form action="#" class="form">
+            <img src="../../assets/images/Fert agri.png" alt="logo">
+            <h1>Bank Details</h1>
+    <div class="form-group">
+        <input type="text" class="form-control" id="account_holder_name" required/>
+        <label for="account_holder_name" class="form-label">Account Holder Name</label>
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control" id="account_number"required/>
+        <label for="account_number" class="form-label">Account Number</label>
+     </div>
+     <div class="form-group">
+        <input type="text" class="form-control" id="IFSC_code" required/>
+        <label for="IFSC_code" class="form-label" >IFSC Code</label>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" id="branch_name" required/>
+        <label for="branch_name" class="form-label" > Branch Name</label>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" id="city" required/>
+        <label for="city" class="form-label" >City</label>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" id="state1" required/>
+        <label for="state1" class="form-label" >State</label>
+    </div>
     <div class="btn1">
     <a href="./login.html"><button type="button">Continue</button></a>
 </div>
+</form>
 </div>
  </body>
  </html>

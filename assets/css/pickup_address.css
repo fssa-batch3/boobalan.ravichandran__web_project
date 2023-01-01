@@ -1,120 +1,100 @@
-body{
-    background-image: url(../images/background.webp);
-    padding: 40px 100px 10px 470px;
-    background-size: cover;
-}
 *{
     font-family: 'Lora', serif;
      }
-.details{
-        border: 2px solid rgb(22, 30, 36);
-        width:540px;
-        padding-left: 50px;
-        padding-top: 20px;
-        background:url(../images/screen.jpg);
+     .box{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+    .form{
+        background-color: white;
+        width: 450px;
+        min-height: 400px;
+        padding: 30px;
         border-radius: 10px;
-        padding-bottom: 50px;
-}
-.details label,.details h3{
-    color:white;
-    font-weight:  bold;
-  }
-label{
-    font-size: 21px;
-}
-h3{
-    font-size: 27px;
-    margin-left:2.7rem;
-}
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
 
-form input{
-    border: none;
-    background:none;
-    border-bottom: 2px solid white;
-    color:white
+    .form img{
+        width:200px;
+        height: 80px;
+        display: block;
+        margin: auto;
+    }
+    
+.form h1{
+    font-weight: 600;
+    margin-top: 10px ;
+    margin-bottom: 40px;
+    font-size: 1.625em;
+    align-items: center;
+    padding:0 3em;
 }
-input:focus-visible{
+.form-group{
+    height:32px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    position: relative;
+}
+.form-control{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:92%;
+    height: 100%;
+    background: none;
+    border:1px solid gray;
     outline: none;
-}
-#pincode{
-    width:250px;
-    height: 35px;
-    margin-left:80px ;
-    border-radius: 5px;
-    padding-left: 15px;
+    border-radius: 3px;
+    padding: 5px 16px;
+    z-index: 1;
     font-size: 17px;
-    margin-bottom: 20px;
 }
-#state{
-    width:250px;
-    height: 35px;
-    margin-left:170px ;
-    margin-right: 10px;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px;
-    margin-bottom: 20px;
+.form-label{
+    position: absolute;
+    top:12px;
+    left: 15px;
+    font-size: 16px;
+    color:hwb(0 57% 42%);
+    background-color:white;
+     padding: 0 6px;
+     transition: .2s;
 }
-#district{
-    width:250px;
-    height: 35px;
-    margin-left:145px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px;
-    margin-bottom: 20px;
+.form-control:focus+ .form-label{
+    top:-9px;
+    z-index: 5;
+    color:#1866c9;
+    font-weight: 500;
 }
-#gstin{
-    width:250px;
-    height: 35px;
-    margin-left:40px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px;
-    margin-bottom: 20px;
+.form-control:focus{
+    border: 1.5px solid #1866c9;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-#business_name{
-    width:250px;
-    height: 35px;
-    margin-left:70px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px; margin-bottom: 20px;
+.form-control:not(:focus):valid+label{
+    top:-9px;
+    z-index: 5;
 }
-#pan{
-    width:250px;
-    height: 35px;
-    margin-left:40px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px; margin-bottom: 20px;
+.form-control:valid{
+    border:1.5px solid rgb(4, 152, 4);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-#business_type{
-    width:250px;
-    height: 35px;
-    margin-left:79px ;
-    border-radius: 5px;
-    padding-left: 15px;
-    font-size: 17px; margin-bottom: 20px;
-}
-
-button{
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-    font-size: 21px;
-    font-weight: bold;
-    background:linear-gradient(rgb(20, 20, 20),rgb(49, 191, 174));
-    color: white;
-}
-.btn1{
-    margin-left: 170px;
-}
-button:hover{
-    background:linear-gradient(black,rgb(255, 0, 68));
-    border-radius: 13px;
+.btn1 button{
+    background-color: green;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 3px;
+    display: flex;
+    margin: auto;
     color:white;
-    font-size: 22px;
-    transform: scale(1.1);
-    border: 2px solid red;
+    font-weight: 600;
+    font-size: 18px;
+}
+.btn1 button:hover{
+    background-color: rgb(3, 172, 3);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+a{
+    text-decoration: none;
 }

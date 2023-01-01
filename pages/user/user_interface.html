@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/user_interface.css">
 
 
@@ -28,17 +27,35 @@
        </ul>
     </div>
     <header>
-        <div class="head">
-            <div>
-                <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
+        <!-- // menu bar -->
+    <div class="search_menu">
+        <div class="menu_bar1">
+            <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo1" />
+           <a href="#" class="btn_bar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+           </a>
         </div>
+        <div class="search_bar1">
+            <button class="sear_btn1" type="submit"><i class="fa fa-search"></i></button>
+            <input  class="input00" type="text" placeholder="Search....">
+        </div>
+    </div>
+    <!-- --------------menu bar end -------------------- -->
+
+    <div class="head">
         <div>
-            <form>
-                <input  type="search" placeholder="Search.." id="search">
-                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
-              </form>
-        </div>
-            <div>
+            <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
+    </div>
+    
+    <div class="search_bar">
+        <button class="sear_btn" type="submit"><i class="fa fa-search"></i></button>
+        <input  class="input0" type="text" placeholder="Search....">
+    </div>
+
+        <!-- search bar end -->
+            <div class="navbar_links">
                     <ul class="hero">
                      <li class="hero_list1"><a href="../user/wishlist.html"><i id="wish" class="fa fa-heart" style="font-size:21px"></i>Wishlist</a> </li>
                     <li class="hero_list1"><a href="../user/user_order.html">My orders</a>
@@ -46,7 +63,7 @@
                 <li  class="hero_list1"><a href="./add_cart.html"><i id="cart" class="fa fa-shopping-cart" style="font-size:26px"></i> Cart</a></li>
                 <li class="hero_list1"><a href="../../index.html"><i class="fa fa-sign-out" style="font-size:21px"></i>Logout</a>
                 </li>
-                <a href="./user_profile.html" ><img class="img1" src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="profile" width="35px" height="35px"></a>
+                <a href="./user_profile.html" ><img class="img1" src="../../assets/images/profile in.jpg" alt="profile" width="35px" height="35px"></a>
                 </ul>
             </div>
         </div>   
@@ -94,40 +111,38 @@
        <div class="product">
           <div class="offers">
            <a href="./offers.html">
-            <img src="../../assets/images/fert1.jpg" alt="offers">
+            <img src="../../assets/images/fert1.jpg" alt="offers" class="offers11">
             <h2 class="off">Offers</h2>
            </a>
           </div>
           <div class="offers">
            <a href="./insecticides.html">
-            <img src="../../assets/images/fert2.jpg" alt="Pesticides products">
+            <img src="../../assets/images/fert2.jpg" alt="Pesticides products" class="offers11">
             <h2 class="off1">Insecticides</h2>
            </a>
         </div>
         <div class="offers">
             <a href="./fungicides.html">
-                <img src="../../assets/images/fert3.jpg" alt="Fungicides">
+                <img src="../../assets/images/fert3.jpg" alt="Fungicides" class="offers11">
             <h2 class="off2">Fungicides</h2>
             </a>
         </div>
            <div class="offers">
             <a href="./major_nutrients.html">
-                <img src="../../assets/images/fert4.jpg" alt="Growth Promoters">
+                <img src="../../assets/images/fert4.jpg" alt="Growth Promoters"class="offers11">
             <h2 class="off3">Growth Promoters</h2>
             </a>
            </div>
            <div class="offers">
            <a href="./secodary_nutrients.html">
-            <img src="../../assets/images/fert5.png" alt="Herbicides">
+            <img src="../../assets/images/fert5.png" alt="Herbicides" class="offers11">
             <h2 class="off4">Herbicides</h2>
            </a>
            </div>
        </div>
        <div class="imga">
         <figure>
-            <img src="../../assets/images/fert6.jpg" alt=" adds" >
-        <img src="../../assets/images/background1.png" alt=" adds" >
-        <img src="../../assets/images/fert6.jpg" alt=" adds" >
+            <img src="../../assets/images/fert6.jpg" alt=" adds"  class="figure" >
         </figure>
       </div>
       <div class="container">
@@ -212,12 +227,7 @@
             <h3>You Save: <i class="fa fa-inr" style="font-size:18px"></i> 1,204</h3></a>
         </div>
          </div>
-         <div class="images">
-         <img src="../../assets/images/fert15.webp" alt="interace1">
-         <img src="../../assets/images/fert16.webp" alt="interace2">
-         <img src="../../assets/images/fert17.webp" alt="interace3">
-         <img src="../../assets/images/fert18.webp" alt="interace4">
-         </div>
+        
     <div class="fab">
         <h1>FAB's PRIORITIES</h1>
         <div class="human">
@@ -305,6 +315,9 @@
             </div>
         </div>
     </footer>
+     <!-- ==========javascrip for menu bar -============== -->
+
+     <script src="../js/menubar.js"></script>
     </body>
     </html>
     

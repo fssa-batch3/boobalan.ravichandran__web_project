@@ -5,29 +5,35 @@
   }
   main{
     background-color: rgb(255, 255, 255);
-    padding: 80px 0px 200px 150px;
+    padding: 60px 0px 200px 150px;
+    user-select: none;
   }
 .cart1{
     background-color: rgb(255, 255, 255);
     width:720px;
-    padding-top: 50px;
-    box-shadow: 0px 6px 14px 0px gray;
+    padding-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-.cart ,.cart2{
+.cart {
     display: flex;
+    text-align: center;
 }
+
 .cart2{
+    display: flex;
+    text-align: center;
     margin-left: 50px;
 }
-.cart111,.cart112 ,.cart113 ,.cart114 ,.cart115{
+.cart111,.cart112 ,.cart113 ,.cart115{
  display: flex;
+ justify-content: space-between;
+ padding: 0 20px;
 }
 a{
  text-decoration: none;
  color:rgb(84, 83, 83)
 }
 .cart22{
-    margin-left: 30px;
     margin-top: 60px;
 }
 .cart22 h1{
@@ -37,7 +43,7 @@ a{
     margin-top: 20px;
 }
 .price h2 {
-    margin:12px 0px 20px 20px;
+    margin:12px 0px 20px 30px;
 }
 .price del{
     margin:17px 0px 20px 20px;
@@ -45,24 +51,52 @@ a{
     color:red
 }
 .cart22 h3{
-    margin-left: 60px;
     font-size: 19px;
+}
+
+/* ===========-------------section -----------=============== */
+.cart_details{
+    border-bottom: 2px solid gray;
+    padding-top: 20px;
+}
+/* -----------/ order qty/-------------- */
+.fert5{
+    display: flex;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.fert5 #option{
+ width:60px;
+ height:30px;
+ padding: 5px 10px;
+ margin-left: 20px;
+ font-size: 18px;
+ border-radius: 3px;
+}
+
+
+.btnn {
+    display: flex;
 }
 .btnn button{
     margin-left:90px;
     padding: 12px 70px;
     font-size: 18px;
-    background-color: orange;
-    color:white;
-    border-radius: 10px;
     margin-bottom: 20px;
-    border:2px solid rgb(255, 172, 19);
-
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
 }
-.btnn button:hover ,.bttn button:hover{
-    background:linear-gradient(black,red);
+.btnn button:hover{
+    background-color: rgb(245, 243, 243);
+    color: rgb(0, 0, 0);
+}
+.bttn button:hover{
+    background-color:  rgb(244, 115, 30);;
     color: white;
-    border: 2px solid red;
+    border: 2px solid  rgb(255, 107, 8);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-sizing: border-box;
 }
 .bttn button{
     margin-left:380px;
@@ -75,47 +109,41 @@ a{
 }
 .bttn{
    background-color: white;
-   box-shadow: 0px 0px 4px 0px rgb(131, 130, 130);
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
    padding: 15px 20px 15px 0px;
 }
+
+/* --==================-/ cart total prce details /---------================== */
+
 .cart11{
     background-color: white;
     margin-left: 100px;
     width:340px;
-    height: 340px;
-    box-shadow: 0px 6px 14px 0px gray;
+    max-height: 310px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .cart101 h2{
- padding-left: 20px;margin-top: 16px;
+margin-top: 16px;
  padding-bottom: 13px;
  border-bottom: 2px solid rgb(236, 234, 234);
  color: rgb(119, 118, 118);
 }
-.cart111 h2,.cart112 h2 ,.cart113 h2,.cart114 h2{
+.cart111 h2,.cart112 h2 ,.cart113 h2{
     color:rgb(87, 85, 85);
     font-size: 20.5px;
-    margin:10px 20px;
+    margin:10px 0px;
     font-weight: normal;
 }
-.cart111 p,.cart112 p ,.cart113 p,.cart114 p{
+.cart111 p,.cart112 p ,.cart113 p{
     margin-top: 13px;
     font-size: 17px;
     color: rgb(68, 67, 67);
 }
-.cart111 p{
-    margin-left: 190px;
-}
-.cart112 p{
-    margin-left: 160px;
-    color:green;
-}
-.cart113 p{
-    margin-left: 79px;
-    color:green;
-}
-.cart114 p{
-    margin-left: 30px;
-    margin-bottom: 20px;
+.cart114 h3{
+ color:green;
+ font-weight: 500;
+ margin: 15px 0;
+ font-size: 17px;
 }
 .cart115{
     border-top: 2px solid rgb(223, 221, 221);
@@ -133,4 +161,159 @@ a{
     font-size: 19px;
     font-weight: bold;
     color:rgb(96, 95, 95);
+}
+.bttn101{
+    display: none;
+}
+
+/* -------============/ @media start for mobile screen/-=============---------- */
+@media screen and (max-width:400px){
+    main{
+        background-color: rgb(255, 255, 255);
+        padding:0;
+        user-select: none;
+      }
+      .cart_details{
+        border-bottom:none;
+    }
+    .cart1{
+        background-color: rgb(255, 255, 255);
+        max-width:100vw;
+        padding-top:0;
+        box-shadow:none;
+    }
+    .cart {
+        display: block;
+    }
+    .cart2{
+        margin-left: 0;
+    }
+    /*   =-------/place oder button/--------========  */
+    .bttn{
+        display: none;
+    }
+  /* ---------/ product images/------------ */
+
+  .cart21 img{
+    width:120px;
+    height:130px;
+    margin-left: 20px;
+  }
+
+
+    /* ---------------/remove button/       ----------------======== */
+.remove-button{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 0px 0 0px 210px;
+}
+
+    
+.btnn {
+    display: block;
+}
+.btnn button{
+    margin-left:0;
+    padding: 15px 50px;
+    font-size: 13px;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+  margin-bottom: 0;
+  border-left: 2px solid rgb(212, 211, 211);
+  border-right: 2px solid rgb(220, 219, 219);
+}
+
+.cart22{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.cart22 h1{
+    font-size: 15px;
+}
+.star{
+    margin-top: 10px;
+}
+.cart22 .price h2 {
+    margin:0px 0px 10px -10px;
+    font-size: 15px;
+    display: inline-block;
+}
+.cart22 .price del{
+    margin:17px 0px 20px 20px;
+    font-size: 12px;
+    color:red
+}
+.price{
+    display: block;
+}
+.cart22 h3{
+    font-size: 14px;
+}
+.fert5{
+    margin: 20px 20px 20px 30px;
+}
+.fert5 #option{
+ width:40px;
+ height:25px;
+ padding: 5px 5px;
+ font-size: 13px;
+ font-weight: 500;
+}
+.fert5 h3{
+    font-size: 15px;
+  
+}
+  /* -=================------/ total price details /------------========== */
+.cart11{
+    background-color: white;
+    margin-left:0;
+    width:100vw;
+    max-height:none;
+    box-shadow: none;
+    margin-bottom: 50px;
+}
+
+.cart101 h2{
+    margin-top: 16px;
+     font-size: 15px;
+    }
+    
+.cart111 h2,.cart112 h2 ,.cart113 h2{
+    color:rgb(87, 85, 85);
+    font-size: 15px;
+    margin:10px 0px;
+    font-weight: 500;
+}
+.cart111 p,.cart112 p ,.cart113 p{
+    margin-top: 13px;
+    font-size: 14px;
+}
+
+.cart115{
+    margin: 5px 20px;
+    padding: 10px 0px;
+    border-bottom: 2px solid rgb(223, 221, 221);
+}
+.cart115 h1{
+    font-size: 17px;
+    color:rgb(69, 17, 8);
+}
+.cart115 p{
+    font-size: 16px;
+    color:rgb(69, 5, 5);
+}
+.bttn101{
+    display:flex;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 5px 0px 5px 250px;
+    margin-bottom: 20px;
+}
+.bttn101 button{
+    color:white;
+    background-color: rgb(255, 136, 0);
+    padding: 10px 25px;
+    border-radius: 3px;
+    border: none;
+}
+
 }

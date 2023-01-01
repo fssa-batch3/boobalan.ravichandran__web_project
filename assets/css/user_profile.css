@@ -1,7 +1,9 @@
 main{
    background-color: white;
-    padding: 50px 50px 100px 160px;
-    margin-left: 0px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 70px 0;
 }
 .details{
     background: linear-gradient(-45deg,rgb(254, 250, 227), rgb(249, 251, 219));
@@ -22,8 +24,12 @@ label{
     height:35px;
     padding: 5px 10px 5px 10px;
     font-size: 17px;
-    margin-bottom: 14px;
+    margin-bottom: 40px;
     margin-right: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
 }
 #gender{
     margin-left: 9.5rem;
@@ -31,7 +37,11 @@ label{
     height:35px;
     padding: 5px 10px 5px 10px;
     font-size: 17px;
-    margin-bottom: .1rem;
+    margin-bottom: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
 }
 #email{
     margin-left: 6.2rem;
@@ -39,7 +49,11 @@ label{
     height:35px;
     padding: 5px 10px 5px 10px;
     font-size: 17px;
-    margin-bottom: 1.5rem;
+    margin-bottom:40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
 }
 #mobile{
     margin-left: 5.2rem;
@@ -47,46 +61,26 @@ label{
     height:35px;
     padding: 5px 10px 5px 10px;
     font-size: 17px;
-}
-#door{
-    margin-left: 2rem;
-    width:270px;
-    height:35px;
-    padding: 5px 10px 5px 10px;
-    font-size: 17px;
-    margin-bottom: 1.5rem; margin-right: 30px;
-}
-#pincode{
-    margin-left: 9.3rem;
-    width:270px;
-    height:35px;
-    padding: 5px 10px 5px 10px;
-    font-size: 17px;
-    margin-bottom: .5rem;
+    margin-bottom: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
 }
 
-#state{
-    margin-left: 10.9rem;
+#paswo{
+    margin-left: 8.4rem;
     width:270px;
     height:35px;
     padding: 5px 10px 5px 10px;
     font-size: 17px;
-    margin-bottom: 1.5rem; margin-right: 30px;
+    margin-bottom: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
 }
-#district{
-    margin-left: 9.6rem;
-    width:270px;
-    height:35px;
-    padding: 5px 10px 5px 10px;
-    font-size: 17px;
-}
-#pan{
-    margin-left: 6.7rem;
-    width:270px;
-    height:35px;
-    padding: 5px 10px 5px 10px;
-    font-size: 17px;
-}
+
 .button{
     margin-left: 4.5rem;
     margin-top: 30px;
@@ -96,21 +90,17 @@ label{
     padding: 10px 50px 10px 50px;
     margin-right: 90px;
     font-size: 18px;
-    background:linear-gradient(rgb(11, 79, 108),rgb(0, 0, 0));
-    border-radius: 10px;
+    background-color: rgb(3, 4, 40);
+    border-radius: 5px;
     color: white;
     font-weight: bold;
     border: none;
 }
 .button button:hover ,.btnn button:hover{
-    background:linear-gradient(red,black);
+    background-color: rgb(10, 7, 100);
     color:white;
-    transform: scale(1.1);
-}
-.details1 img{
-    width: 15rem;
-    height: 15rem;
-    margin-left: .8rem;
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .form1{
     display: flex;
@@ -118,8 +108,8 @@ label{
     width:57.85rem;
 }
 .details1{
-    background-color:rgb(232, 253, 255);
-    padding: 160px 20px 0px 30px;
+    background-color:rgb(230, 230, 230);
+    padding: 50px 20px 0px 30px;
     width:400px;
 }
 .details1 h2{
@@ -138,28 +128,164 @@ label{
 }
 #dobb{
     padding: .4rem .9rem;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: .5rem;
     border: none;
     border-bottom: 2px solid black;
 }
-.btnn {
-    margin: 60px 0px 0px 70px;
+/* -------====================/profile image/-----------============= */
+.wrapper{
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    border:5px solid gray;
+border-radius: 50%;
+background:url(../images/profile.png);
+background-size: 100% 100%;
+overflow: hidden;
+margin-left: 15px;
 }
-.btnn button{
-    font-size: 1.2rem;
-    padding: .7rem 2.7rem;
-    border-radius: 10px;
-    border: none;
-    background:linear-gradient(rgb(11, 79, 108),rgb(0, 0, 0));
-    color:white
+.my_file{
+    position: absolute;
+    bottom: 0;
+ outline: none;
+ color: transparent;
+ width:100%;
+    box-sizing: border-box;
+    padding: 25px 90px;
+    cursor: pointer;
+    transition: .5s;
+    background: rgba(0,0,0,.5);
+    opacity: 0;
 }
-form input{
-    border: none;
-    background:none;
-    border-bottom: 2px solid rgb(0, 0, 0);
-    color:rgb(17, 8, 48)
+.my_file::-webkit-file-upload-button{
+    visibility: hidden;
+}
+.my_file::before{
+    content: '\f030';
+    font-size: 50px;
+    font-family: fontAwesome;
+    color:rgb(255, 255, 255);
+    display: inline-block;
+    user-select: none;
+}
+.my_file::after{
+    content: 'update';
+    font-weight: bold;
+    color: white;
+    display: block;
+    font-size: 14px;
+    top:70px;
+    position: absolute;
+    padding-left:3px;
+    padding-top: 5px;
+}
+.my_file:hover{
+    opacity: 1;
+}
+
+/* -------==============/ @media start/=-============---------------- */
+@media screen and (max-width:400px){
+    .form1{
+        display:block;
+        box-shadow: none;
+        width:100vw;
+    }
+    main{
+        margin: 0;
+    }
+    .wrapper{
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+        border:2px solid gray;
+    margin-left:100px;
+    }
+    
+.my_file{
+    position: absolute;
+    width:100%;
+    padding: 20px 50px;
+}
+.my_file::before{
+    font-size: 25px;
+}
+.my_file::after{
+    content: 'Update';
+    font-size: 10px;
+    top:40px;
+    margin-left: -5px;
+}
+/* ---------===============/profile background/------============ */
+.details1{
+    background-color: rgb(252, 254, 252);
+    padding: 20px 20px 20px 30px;
+    width:100vw;
+}
+
+.details1 h2{
+    margin-top:15px;
+    margin-left: 105px;
+    font-size: 15px;
+}
+.details1 p{
+    margin-left: .3rem;
+}
+.details1 label{
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 40px;
 }
 input:focus-visible{
     outline: none;
+}
+#dobb{
+    padding:5px 20px;
+    border-radius: 3px;
+     border-bottom: none;
+    border-bottom: 1px solid black;
+    font-size: 12px;
+}
+label{
+    display: block;
+    font-size: 14px;
+}
+.details h2{
+    font-size:16px;
+    margin-left:100px;
+    margin-bottom: 30px;
+}
+
+.details{
+    background: none;
+    background-color: rgb(252, 255, 252);
+    padding: 20px 10px 30px 20px;
+    width:100vw;
+    border-top: 2px solid rgb(187, 228, 187);
+}
+
+#full_name ,#gender ,#email,#mobile ,#paswo{
+    margin-left:60px;
+     border-bottom: 1.5px solid black;
+     font-size: 13px;
+     padding: 3px 20px;
+     height: 25px;
+     margin-bottom: 30px;
+ }
+ 
+.button{
+    margin-left:70px;
+    margin-top: 30px;
+   
+}
+.button button{
+    padding: 5px 30px 5px 30px;
+    margin-right: 50px;
+    font-size: 12px;
+    background-color: rgb(3, 4, 40);
+    border-radius: 3px;
+}
+footer{
+    display: none;
+}
 }

@@ -1,116 +1,165 @@
+.insecticide{
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .insecticide h1{
-    font-size: 30px;
-    margin-left: 250px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 30px 0px;
+    font-size: 2em;
 }
 .offers1{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding:20px 50px 20px 90px;
+    padding:20px 50px 20px 20px;
+    justify-content: space-around;
 }
 .checked {
     color: orange;
     margin-bottom: 10px;
-    padding-left: 6px;
   }
   .today{
-    width:350px;
-    height:560px;
-    background-color: rgb(235, 235, 235);
-    margin-left: 60px;
-    padding: 30px 0px 60px 50px;
-    margin-bottom: 50px;
-    border-radius: 8px;
+    width:300px;
+    min-height:550px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 30px;
+    padding: 30px 0px 30px 0px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .today a{
+    text-decoration: none;
+    color: black;
   }
   .today img{
     width:250px;
-    height:270px;
-    border-radius: 10px;
+    height:280px;
+    border-radius: 0px;
     margin-bottom: 20px;
-    background-color: white;
   }
-.star{
-    margin-left: 40px;
-    margin-top: 10px;
-}
 .price{
-    display:flex;
-    margin-left: 70px;
+    text-align: center; 
+    justify-content: center;
+    padding: 5px 0;
 }
-.price del{
-    margin-left: 15px;
-    margin-top: 6px;
-    margin-bottom: 12px;
+.price h2{
+  display: inline-block;
+  padding: 5px;
 }
 .today h3{
-    margin-left: 50px;
-    font-size: 23px;
-    padding-bottom: 30px;
+    font-size: 21px;
 }
 .today p{
-    width:210px;
-    padding-top: 5px;
-    font-size: 18px;
-    padding-left: 5px;
-    padding-bottom: 10px;
-    font-weight:bolder; 
-    text-align: center;
-    text-indent: 10px;
+   
+    font-size: 20px;
+   padding: 5px 20px 20px 20px;
+   width:280px;
+    font-weight: bold;   
+    display: flex;
+    text-align: center; 
+    justify-content: center;
   }
   .offers1 img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     transition-delay: .1s;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px 0px rgb(168, 168, 168);
+    border-radius:10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+/* ---------==============Media quary start=================------------- 
+-------------
+-------------
+----------
+--------
+-----
+--
+-----=======================*/
+@media screen and (max-width:400px) {
+  .insecticide h1{
+    padding: 0px 20px 10px 50px;
+    font-size: 13px;
 }
 .insecticide{
-    padding-bottom: 60px;
+  padding-top: 20px;
+  padding-left: 0px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
 }
-.offers1 a{
-    text-decoration: none;
-    color: black;
+.offers1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding:20px 10px 20px 10px;
+  justify-content: space-around;
+  background-color:rgb(254, 238, 238);
 }
-/*------UPL CSS File-----*/
-.insecticide .upl{
-    margin-left: 600px;
+.today img{
+  width:100px;
+  height:120px;
+  border-radius: 0px;
+  margin-bottom: 10px;
 }
+.today{
+  width:170px;
+  min-height:200px;
+  margin-left:0;
+  padding: 15px 0px 15px 0px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.today h3{
+  font-size:14px;
+}
+.today h3 .fa-inr{
+  width:5px;
+  height:5px;
+  padding-right: 10px;
+  padding-left: 2px;
+}
+.today p{
+ 
+  font-size: 11px;
+ padding: 5px 25px 10px 25px;
+ width:170px;
+  font-weight: bold;   
+  display: flex;
+  text-align: center; 
+  justify-content: center;
 
-/*----- TATA Raills----*/
-.insecticide .tata{
-    margin-left: 520px;
 }
-/*----adama gils---*/
-.insecticide .adama{
-    margin-left: 410px;
+.star .fa-star{
+  width:20px;
+  height: 10px;
 }
-/*----Bio Nematicides---*/
-.insecticide .bayer{
-    margin-left: 630px;
+.price h2 .fa-inr{
+  width:2px;
+  height:2px;
+  padding-right: 12px;
 }
-
-/*----nimeticcides---*/
-.insecticide .nematic{
-    margin-left: 540px;
+.price del{
+font-size: 15px;
+color: green;
 }
-/*-----viricides---*/
-.insecticide .viri{
-    margin-left: 450px;
+.price del .fa-inr{
+  width:2px;
+  height:2px;
+  padding-right: 8px;
 }
-/*----growth promoters---*/
-.insecticide .promoter{
-    margin-left: 600px;
+.price h2{
+  font-size: 17px;
+  margin-right: 6px;
 }
-/*----retardance---*/
-.insecticide .retar{
-    margin-left: 600px;
-}
-/*----organic fertilizer---*/
-.insecticide .org{
-    margin-left: 610px;
-}
-/*-----secondary_nutrients---*/
-.insecticide .nutri{
-    margin-left: 27rem;
 }
