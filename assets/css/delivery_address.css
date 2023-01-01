@@ -22,6 +22,8 @@
 }
 .button{
     display: flex;
+    margin-left: 60px;
+    margin-top: 80px;
 }
 label{
     display: block;
@@ -100,10 +102,6 @@ label{
     padding: 5px;
     margin-left: 100px;
     margin-top: 40px;
-}
-.button{
-    margin-left: 60px;
-    margin-top: 80px;
 }
 .button button{
  padding: 10px 40px;

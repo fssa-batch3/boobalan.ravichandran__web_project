@@ -92,7 +92,7 @@ a{
     color: rgb(0, 0, 0);
 }
 .bttn button:hover{
-    background-color:  rgb(244, 115, 30);;
+    background-color:  rgb(244, 115, 30);
     color: white;
     border: 2px solid  rgb(255, 107, 8);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;

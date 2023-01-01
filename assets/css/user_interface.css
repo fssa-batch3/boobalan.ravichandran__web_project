@@ -843,9 +843,6 @@ width: 96%;
 /* =------------/offers product/-----------------= */
 
 .offers1{
-  padding: 8px 10px;
-}
-.offers1{
     display: flex;
     width:100%;
     justify-content: space-around;

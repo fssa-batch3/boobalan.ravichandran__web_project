@@ -318,16 +318,13 @@ a{
 .benifits h2,.method h2{
     color:rgb(139, 11, 51);
     letter-spacing: 0.5px;
+    font-size:14px;
+    font-weight: bold;
 }
 .description h1{
     color:rgb(139, 11, 51);
     letter-spacing: 0.5px;
     font-size: 17px;
-}
-.method h2, .benifits h2{
-    font-size:14px;
-    font-weight: bold;
-
 }
 .description li ,.benifits li , .method li{
     font-size: 10px;
