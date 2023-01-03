@@ -534,4 +534,43 @@ background-color: rgb(4, 4, 77);
   footer{
     display: none;
   }
+  
+ /* ----------------------/mobile footer/----------------========== */
+ .mobile_footer{
+  display: inline-block;
+  font-size: 12px;
+  width:100vw;
+  background-color: #0a043f;
+  color:white;
+ }
+ .mobile_aboutus ,.mobile_social{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+ }
+ .mobile_aboutus a{
+  color:white;
+  text-decoration: none;
+ }
+ .mobile_aboutus a:hover{
+  color:#ffdd00
+ }
+ /* =------------------/social media img/-------------======= */
+ .mobile_social img{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  margin-left:5vw;
+  background-color: white;
+ }
+ .copyright{
+  display: flex;
+  padding: 5px 10vw;
+ }
+ .copyright span{
+  color:#ffdd00;
+  font-weight: bold;
+  margin-left: 1vw;
+ }
 }

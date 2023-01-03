@@ -101,3 +101,12 @@ a{
 .showLabel{
     font-size: 15px;
 }
+
+/* ----------/@media  start/-------------==============*/
+
+@media screen and (max-width:400px) {
+    .form{
+        box-shadow:none;
+    }
+    
+}

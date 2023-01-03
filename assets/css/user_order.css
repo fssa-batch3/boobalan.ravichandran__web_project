@@ -45,3 +45,40 @@ td img{
 .eye a:hover{
   color:red
 }
+.mobile_order_page{
+  display: none;
+}
+
+@media screen and (max-width:400px){
+  main{
+    display: none;
+  }
+  .mobile_order_page{
+    display:inline-block;
+  }
+  .mobile_order_page h2{
+    font-size: 18px;
+   text-align: center;
+  }
+  .mobile_order_content{
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    width:100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 10px 10px;
+  }
+  .order_image img{
+    width: 140px;
+    height:140px;
+    box-sizing: border-box;
+  
+  }
+  .order_delivery_date p{
+   font-size: 14px;
+   padding: 5px 0;
+  }
+  .order_delivery_details a{
+    color:black;
+  }
+}

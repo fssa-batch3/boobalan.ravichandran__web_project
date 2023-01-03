@@ -45,6 +45,9 @@
     color:rgb(49, 5, 5);
     margin-left: 10px;
 }
+#win101{
+    display: none;
+}
 .remov{
     margin-left: 27rem;
     padding: .8rem 3rem;
@@ -59,4 +62,51 @@
 .remov:hover{
     background-color: rgb(4, 4, 105);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+/* ---------------/@media mobile resposive start/------------============= */
+
+@media screen and (max-width:400px) {
+    .wishlist{
+        margin:0 0 50px 0;
+      }
+      .wishlist h2{
+        display: inline-block;
+        font-size:17px;
+        padding: 15px 0px 10px 20px;
+        margin-bottom: 10px;
+    }
+    #win{
+        display: none;
+    }
+    #win101{
+        display:inline-flex;
+        color:rgb(49, 5, 5);
+        margin-left: 5px;
+    }
+    .fertilizer{
+        margin:0 ;
+        border-radius:0;
+    }
+    
+.fert1 img{
+    width: 170px;
+    height: 170px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.fert2 p{
+    font-size: 14px;
+    width: 200px;
+    padding: 50px 0px 0px 10px;
+   }
+   
+.remov{
+    margin-left: 100px;
+    padding: 8px 20px;
+    margin-top: 50px;
+    border-radius:3px;
+    font-size: 13px;
+}
 }
