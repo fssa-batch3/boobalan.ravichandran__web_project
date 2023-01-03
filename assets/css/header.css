@@ -40,7 +40,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      width:1450px;
+      width:98.5vw;
   }
 
   /* search bar start  */
@@ -254,17 +254,17 @@ justify-content: space-around;
 
 /* @meadi quiry */
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 450px){
 
 
   /* ---------------menu bar=============== */
   .head{
-    width:393px;
+    width:100vw;
   }
   .navbar_links{
     flex-direction: column;
     background-color:rgb(3, 71, 3);
-    width:420px;
+    width:100vw;
     position: relative;
     display:none ;
   box-sizing: border-box;

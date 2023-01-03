@@ -343,11 +343,13 @@ left: 0;
    
    
   .offers1{
-    display: flex;
-    width:100%;
-    justify-content: space-around;
-    overflow-x: scroll;
-    padding: 20px 0;
+    display:grid;
+    gap:2.1vw;
+    grid-auto-flow:column;
+    grid-auto-columns:18%;
+    overflow-x: auto;
+    padding: 20px 20px;
+    overscroll-behavior-inline: contain;
   }
   .offers1::-webkit-scrollbar{
     width: 0;
@@ -836,12 +838,13 @@ width: 96%;
 /* =------------/offers product/-----------------= */
 
 .offers1{
-  display:flex;
-  width:90vw;
-  justify-content: space-around;
-  overflow-x: scroll;
-  padding: 20px 0px 20px 99.5vw;
-  margin-left:0px;
+  display:grid;
+    gap:2.1vw;
+    grid-auto-flow:column;
+    grid-auto-columns:55%;
+    overflow-x: auto;
+    padding: 20px 50px 20px 20px;
+    overscroll-behavior-inline: contain;
 }
 .offers1 img{
   width:80px;
@@ -948,7 +951,9 @@ width: 96%;
  }
  .copyright{
   display: flex;
-  padding: 5px 10vw;
+  padding: 5px 0vw;
+  justify-content: center;
+  text-align: center;
  }
  .copyright span{
   color:#ffdd00;
