@@ -353,13 +353,13 @@ left: 0;
     width: 0;
   }
   .offers1 img{
-    width:250px;
-    height:260px;
+    width:220px;
+    height:240px;
     border-radius: 10px;
   }
   .today{
     background-color: rgb(255, 255, 255);
-    padding: 10px 10px 20px 10px ;
+    padding:10px 10px 20px 18px ;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
