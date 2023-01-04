@@ -23,31 +23,31 @@
         <h1>Create Your Account</h1>
         <div class="form-group">
              
-                <input type="number" class="form-control" id="mobile" required="true"/> 
+                <input type="number" class="form-control" id="mobile" required="true" value="9629223356" /> 
                 <label for="mobile"  class="form-label"> Mobile Number </label>
         </div>
         <div class="form-group">
            
-                <input type="email" class="form-control" id="email" required/>
+                <input type="email" class="form-control" id="email" required value="rboomibalan459@gmail.com"/>
                 <label for="email" class="form-label">Email address</label>
         </div>
         <div class="form-group" >
             
-            <input type="text"class="form-control" id="full_name" required/>
+            <input type="text"class="form-control" id="full_name" required value="Boobalan"/>
             <label for="full_name"  class="form-label">Enter Your Full Name</label>
         </div>
         <div class="form-group">
            
-            <input type="password" class="form-control" id="txtPassword" required="true" />
+            <input type="password" class="form-control" id="txtPassword" required="true" value="password" />
             <label for="txtPassword"  class="form-label">Set Password</label>
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" id="TXTpassword" required="true" />
+            <input type="password" class="form-control" id="TXTpassword" required="true" value="confirm pasword"/>
             <label for="TXTpassword"  class="form-label">Confirm Password</label>
         </div>
         <div class="form-group">
             <label class="showLabel">
-              <input type="checkbox" id="show">
+              <input type="checkbox" id="show" value="checkbox">
               Show Password
             </label>
                  </div>
@@ -56,5 +56,22 @@
         </div>
         </form>
     </div>
+    <script>
+        const email = document.getElementById("email").value
+        const mobile = document.getElementById("mobile").value
+        const full_name = document.getElementById("full_name").value
+        const txtPassword = document.getElementById("txtPassword").value
+        const TXTpassword = document.getElementById("TXTpassword").value
+        const show = document.getElementById("show").value
+
+        console.log(email)
+        console.log(mobile)
+        console.log(full_name)
+        console.log(txtPassword)
+        console.log(TXTpassword)
+        console.log(show)
+
+
+    </script>
 </body>
 </html>

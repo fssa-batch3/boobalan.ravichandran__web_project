@@ -250,7 +250,9 @@ justify-content: space-around;
     .search_menu{
       display: none;
     }
-
+.mobile_footer{
+  display: none;
+}
 
 /* @meadi quiry */
 

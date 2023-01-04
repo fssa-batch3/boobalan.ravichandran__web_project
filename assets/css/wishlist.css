@@ -87,6 +87,7 @@
     .fertilizer{
         margin:0 ;
         border-radius:0;
+        width:100vw;
     }
     
 .fert1 img{
@@ -103,7 +104,7 @@
    }
    
 .remov{
-    margin-left: 100px;
+    margin-left: 17vw;
     padding: 8px 20px;
     margin-top: 50px;
     border-radius:3px;
