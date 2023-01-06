@@ -21,11 +21,11 @@
             <img src="../../assets/images/Fert agri.png" alt="logo">
                 <h1>User Login</h1>
                 <div class="form-group">
-                   <input type="text" id="mobile" class="form-control" required  value="rp193255@gamil.com/9629223356"/> 
+                   <input type="text" id="mobile" class="form-control" required /> 
                    <label for="mobile" class="form-label"> Email or Phone </label>
            </div>
            <div class="form-group">
-               <input type="password"  id="txtPassword" class="form-control"  required value="123456**" />
+               <input type="password"  id="txtPassword" class="form-control"  required />
                <label for="txtPassword" class="form-label">Enter Your Password</label>
            </div>
            <div class="form-group">
@@ -37,7 +37,9 @@
           <div>
             <div class="btn">
                 <a href="forgot_password.html">Forgot Password?</a>
-                <a href="../user/user_interface.html"><button type="button">Login</button></a>
+
+                
+                <button type="button" onclick="login()" >Login</button>
             </div>
             <h4 class="singup"> New to FAB?<a href="../user/user_signup.html">Create an account</a></h4>
         </div>
@@ -45,11 +47,18 @@
     </div>
 </main>
 <script>
+    function login(){
+        
+
     const email = document.getElementById("mobile").value
     const password = document.getElementById("txtPassword").value
 
     console.log(email)
     console.log(password)
+
+    window.location.href="./user_interface.html"
+    }
+
 </script>
 <script src="../js/seller_login.js"></script>
 </body>

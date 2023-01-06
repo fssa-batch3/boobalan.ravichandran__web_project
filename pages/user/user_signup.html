@@ -23,26 +23,26 @@
         <h1>Create Your Account</h1>
         <div class="form-group">
              
-                <input type="number" class="form-control" id="mobile" required="true" value="9629223356" /> 
+                <input type="number" class="form-control" id="mobile" required="true"/> 
                 <label for="mobile"  class="form-label"> Mobile Number </label>
         </div>
         <div class="form-group">
            
-                <input type="email" class="form-control" id="email" required value="rboomibalan459@gmail.com"/>
+                <input type="email" class="form-control" id="email" required />
                 <label for="email" class="form-label">Email address</label>
         </div>
         <div class="form-group" >
             
-            <input type="text"class="form-control" id="full_name" required value="Boobalan"/>
+            <input type="text"class="form-control" id="full_name" required />
             <label for="full_name"  class="form-label">Enter Your Full Name</label>
         </div>
         <div class="form-group">
            
-            <input type="password" class="form-control" id="txtPassword" required="true" value="password" />
+            <input type="password" class="form-control" id="txtPassword" required="true" />
             <label for="txtPassword"  class="form-label">Set Password</label>
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" id="TXTpassword" required="true" value="confirm pasword"/>
+            <input type="password" class="form-control" id="TXTpassword" required="true" />
             <label for="TXTpassword"  class="form-label">Confirm Password</label>
         </div>
         <div class="form-group">
@@ -52,11 +52,12 @@
             </label>
                  </div>
         <div class="btn1">
-            <a href="./user_login.html"><button type="button">Continue</button></a>
+          <button type="button" onclick="signup()">Continue</button>
         </div>
         </form>
     </div>
     <script>
+       function signup(){
         const email = document.getElementById("email").value
         const mobile = document.getElementById("mobile").value
         const full_name = document.getElementById("full_name").value
@@ -71,7 +72,8 @@
         console.log(TXTpassword)
         console.log(show)
 
-
-    </script>
+        window.location.href= "./user_login.html"
+       }
+         </script>
 </body>
 </html>

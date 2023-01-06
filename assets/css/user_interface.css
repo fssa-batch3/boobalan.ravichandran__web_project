@@ -18,7 +18,7 @@
   .hero_list a{
       text-decoration: none;
       padding: 8px 10px 8px 10px;
-      border-radius: 15px;
+      border-radius: 5px;
       color:black;
       font-weight: bold;
       background-color: rgb(211, 255, 208);
@@ -460,9 +460,11 @@ left: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
-  display: inline-block;
-      font-size: 60px;
-      margin-left: 500px;
+  display: flex;
+      font-size:50px;
+ 
+ justify-content: center;
+ align-items: center;
 }
 
 @keyframes textclip {
