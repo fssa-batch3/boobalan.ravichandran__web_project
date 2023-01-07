@@ -61,16 +61,22 @@
         const email = document.getElementById("email").value
         const mobile = document.getElementById("mobile").value
         const full_name = document.getElementById("full_name").value
-        const txtPassword = document.getElementById("txtPassword").value
-        const TXTpassword = document.getElementById("TXTpassword").value
+        const password = document.getElementById("txtPassword").value
+        const confirmpassword = document.getElementById("TXTpassword").value
         const show = document.getElementById("show").value
 
         console.log(email)
         console.log(mobile)
         console.log(full_name)
-        console.log(txtPassword)
-        console.log(TXTpassword)
+        console.log(password)
+        console.log(confirmpassword)
         console.log(show)
+
+        localStorage.setItem("eamil", email)
+        localStorage.setItem("mobile", mobile)
+        localStorage.setItem("fullname", full_name)
+        localStorage.setItem("loginpassword",password)
+        localStorage.setItem("confirmpassword", confirmpassword)
 
         window.location.href= "./user_login.html"
        }

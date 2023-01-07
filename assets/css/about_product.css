@@ -202,17 +202,16 @@ main{
     margin-top:20px ;
     margin-left: 60px;
     width:280px;
-    font-size: 14px;
+    font-size: 19px;
     color: rgb(1, 92, 1);
     text-align: center;
 }
 .fert3 h3 {
-    font-size: 13px;
+    font-size: 15px;
     display: inline-block;
    }
    .fert3{
-    width:300px;
-    margin-left: 50px;
+    margin-left: 40px;
    text-align: center;
    margin-top: 10px;
    }
@@ -228,8 +227,8 @@ main{
     font-size: 18px;
 }
 .fert4 del{
-    margin-left: 30px;
-    font-size:15px;
+    margin-left: 20px;
+    font-size:16px;
     margin-top: 6px;
     color: rgb(13, 99, 36);
 } 
@@ -254,8 +253,11 @@ main{
     color:green;
 }
 .fert4 ,.fert5 ,.fert55 {
-    margin-left:100px ;
+    margin-left:0 ;
     margin-top: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .fert5 h3{
     font-size: 15px;
@@ -267,6 +269,7 @@ main{
     font-size:15px;
     margin-top: -1px;
     border-radius: 5px;
+    height: 4vh;
 }
 /* -----============-------add to cart and buy now section --------=========== */
 
@@ -334,4 +337,9 @@ a{
     letter-spacing: 0.2px;
     line-height:15px;
 }
+.method{
+    padding-bottom: 50px;
+}
+/* ==================/ weight of product/-----------------========== */
+
 }

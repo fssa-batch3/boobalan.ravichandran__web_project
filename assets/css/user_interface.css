@@ -462,7 +462,6 @@ left: 0;
   animation: textclip 2s linear infinite;
   display: flex;
       font-size:50px;
- 
  justify-content: center;
  align-items: center;
 }
@@ -856,7 +855,7 @@ width: 96%;
   grid-auto-flow:column;
   grid-auto-columns:55%;
   overflow-x: auto;
-  padding: 20px 50px 20px 20px;
+  padding: 20px 40px 20px 20px;
   overscroll-behavior-inline: contain;
   }
 .offers1 img{
@@ -870,8 +869,8 @@ width: 96%;
   padding: 10px 10px 20px 10px ;
   margin-bottom: 25px;
   margin-left:2vw;
-  border-radius: 3px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 .today p {
   font-size: 10px;
@@ -879,12 +878,16 @@ width: 96%;
 }
 
 .price{
-  margin-left: 27px;
-  font-size: 10px;
+  margin-left: 0;
+  display:flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
 }
 .price del{
   margin-left: 5px;
- font-size: 10px;
+ font-size: 11px;
+ margin-bottom: auto;
 }
 .today h3{
   font-size: 13px;

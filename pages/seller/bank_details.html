@@ -44,9 +44,31 @@
         <label for="state1" class="form-label" >State</label>
     </div>
     <div class="btn1">
-    <a href="./login.html"><button type="button">Continue</button></a>
+<button  type="button" onclick="bank()">Continue</button>
 </div>
 </form>
 </div>
+<script>
+    function bank(){
+        const holder=document.getElementById("account_holder_name").value
+        const account=document.getElementById("account_number").value
+        const ifsc=document.getElementById("IFSC_code").value
+        const branch=document.getElementById("branch_name").value
+        const city=document.getElementById("city").value
+        const state=document.getElementById("state1").value
+
+        console.log(holder)
+        console.log(account)
+        console.log(ifsc)
+        console.log(branch)
+        console.log(city)
+        console.log(state)
+
+
+
+ window.location.href="./login.html"
+
+    }
+</script>
  </body>
  </html>

@@ -221,7 +221,7 @@ margin-left: 15px;
 }
 /* ---------===============/profile background/------============ */
 .details1{
-    background-color: rgb(252, 254, 252);
+    background-color: rgb(247, 240, 217);
     padding: 20px 20px 20px 30px;
     width:100vw;
 }
@@ -251,42 +251,49 @@ input:focus-visible{
 }
 label{
     display: block;
-    font-size: 14px;
+    font-size: 16px;
 }
 .details h2{
-    font-size:16px;
+    font-size:18px;
     margin-left:100px;
     margin-bottom: 30px;
 }
 
 .details{
     background: none;
-    background-color: rgb(252, 255, 252);
+    background-color: rgb(247, 240, 217);
     padding: 20px 10px 30px 20px;
     width:100vw;
-    border-top: 2px solid rgb(187, 228, 187);
 }
 
 #full_name ,#gender ,#email,#mobile ,#paswo{
-    margin-left:60px;
-     border-bottom: 1.5px solid black;
-     font-size: 13px;
-     padding: 3px 20px;
-     height: 25px;
+    margin-left:0;
+     font-size: 15px;
+     padding: 5px 20px;
+     height:4vh;
+     width:88vw;
      margin-bottom: 30px;
+  border:1.5px solid gray;
+     outline:gray;
+     margin-top: 10px;
+     background-color: rgb(255, 248, 239);
+     border-radius:3px;
  }
  
 .button{
     margin-left:70px;
     margin-top: 30px;
-   
 }
 .button button{
     padding: 5px 30px 5px 30px;
     margin-right: 50px;
-    font-size: 12px;
-    background-color: rgb(3, 4, 40);
+    font-size: 13px;
+    background-color: rgb(5, 83, 33);
     border-radius: 3px;
+}
+.button button:hover{
+    background-color: rgb(3, 140, 53);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 footer{
     display: none;

@@ -116,7 +116,7 @@
                     <div class="wrapper">
                             <input type="file" class="my_file">
                     </div>
-                    <h2>Name:<p>Boobalan</p></h2>
+                    <h2>Name:<p id="user_name">Boobalan</p></h2>
              <label for="dobb"> Date of Birth   <input type="date" placeholder="date of birth" id="dobb"></label>
             
                  </div>
@@ -140,7 +140,7 @@
                </div>
                <div>
                 <label for="paswo">Password</label>
-                <input type="password" placeholder="********" id="paswo">
+                <input type="password" id="paswo">
                </div>
              <div class="button">
                 <a href="../user/user_interface.html"><button type="button">Save</button></a>
@@ -230,6 +230,26 @@
   </div>
   </div>
   </div>
+  <script>
+    const full_name= localStorage.getItem("fullname")
+    console.log(full_name);
+    const mobile_number=localStorage.getItem("mobile")
+    console.log(mobile_number);
+    const user_email= localStorage.getItem("eamil")
+    console.log(user_email);
+    const login_password= localStorage.getItem("loginpassword")
+    console.log(login_password);
+    
+
+    document.getElementById("full_name").value = full_name
+    document.getElementById("email").value = user_email
+    document.getElementById("mobile").value = mobile_number
+    document.getElementById("paswo").value = login_password
+
+    // document.getElementById("user_name").innerText = fullname
+
+
+  </script>
 <script src="../js/menubar.js"></script>
     </body>
     </html>
