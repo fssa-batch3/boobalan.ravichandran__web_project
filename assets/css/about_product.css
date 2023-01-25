@@ -1,7 +1,7 @@
 #rem1{
-    padding: 16px 180px;
+    padding: 16px 190px;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius:3px;
     border: none;
     background-color: rgb(248, 195, 4);
     color: rgb(6, 6, 41);
@@ -9,19 +9,25 @@
 
 }
 #rem2{
-    padding: 16px 197px;
+    padding: 16px 209px;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 3px;
     border: none;
     background-color: rgb(4, 4, 72);
-    color:rgb(255, 234, 0)
+    color:rgb(255, 234, 0);
 }
 a{
     text-decoration: none;
 }
-#rem1:hover ,#rem2:hover {
-    background: linear-gradient(rgb(189, 4, 41),rgb(255, 0, 21));
-    color:rgb(255, 255, 255);
+#rem1:hover {
+    background-image: linear-gradient(to right, #eec120 0%, #ff7954 51%, #f9c61d 100%);
+    color: rgb(7, 6, 67);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#rem2:hover {
+    background-image: linear-gradient(to right, #43a3a6 0%,#180db8 51%, #47a7ac 100%);
+    color: rgb(225, 200, 9);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .rem{
@@ -293,10 +299,6 @@ main{
 }
 a{
     text-decoration: none;
-}
-#rem1:hover ,#rem2:hover {
-    background: linear-gradient(rgb(189, 4, 41),rgb(255, 0, 21));
-    color:rgb(255, 255, 255);
 }
 .rem{
     margin-left: 20px;
