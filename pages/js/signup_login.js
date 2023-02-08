@@ -3,17 +3,17 @@ function signUp(e) {
     e.preventDefault();
 
      let email = document.getElementById("email").value
-         mobile = document.getElementById("mobile").value
-        full_name = document.getElementById("full_name").value
-       password = document.getElementById("txtPassword").value
-        confirmpassword = document.getElementById("TXTpassword").value
+     let  mobile = document.getElementById("mobile").value
+     let full_name = document.getElementById("full_name").value
+     let password = document.getElementById("txtPassword").value
+     let  confirmpassword = document.getElementById("TXTpassword").value
 
         //   // Parsing the JSON string back into an array, or creating an empty array if there's no data
     let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
     let exist = user_list.length &&
         JSON.parse(localStorage.getItem('user_list')).some(
             function (data){
-            data.mobile.toLowerCase() == mobile.toLowerCase() ||
+            data.mobile.toLowerCase() == mobile.toLowerCase() &&
             data.email.toLowerCase() == email.toLowerCase()
             }
         );
@@ -48,7 +48,7 @@ function signUp(e) {
 
 const signIn = e =>{
         let mobile = document.getElementById('mobile').value,
-            password = document.getElementById('txtPassword').value;
+          password = document.getElementById('txtPassword').value;
         let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
         let exist = user_list.length &&
         JSON.parse(localStorage.getItem('user_list')).some(data =>
