@@ -11,11 +11,10 @@ function signUp(e) {
         //   // Parsing the JSON string back into an array, or creating an empty array if there's no data
     let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
     let exist = user_list.length &&
-        JSON.parse(localStorage.getItem('user_list')).some(
-            function (data){
+        JSON.parse(localStorage.getItem('user_list')).some(data =>
             data.mobile.toLowerCase() == mobile.toLowerCase() &&
             data.email.toLowerCase() == email.toLowerCase()
-            }
+            
         );
 
 
