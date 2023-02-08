@@ -3,10 +3,10 @@
     font-size: 18px;
     border-radius:3px;
     border: none;
-    background-color: rgb(248, 195, 4);
-    color: rgb(6, 6, 41);
+    background-color:#ee7036ce;
+    color: rgb(28, 10, 44);
     margin-bottom: 27px;
-
+   font-weight: bold;
 }
 #rem2{
     padding: 16px 209px;
@@ -84,6 +84,7 @@ main{
 .fert3 h3  ,.fert5 p{
  font-size: 24px;
 }
+
 .fert3 p{
     font-size: 19px;
     padding: 2px 0px 0px 7px;
@@ -224,7 +225,7 @@ main{
    .fert3 p{
     font-size: 12px;
     padding: 2px 0px 0px 10px;
-    margin-top: 0;
+    margin-top: 0px;
 }
  .fert4 p {
     display: inline-block;
@@ -245,7 +246,7 @@ main{
     font-size: 15px;
 }
 .fert55 p{
-    font-size: 15px;
+    font-size: 20px;
     color:rgb(17, 35, 30);
     margin-left: 30px;
     font-weight: bold;
@@ -345,3 +346,197 @@ a{
 /* ==================/ weight of product/-----------------========== */
 
 }
+
+@media screen and (min-width: 400px) and (max-width: 640px) {
+    .fert1 img{
+       margin: 0;
+        width:80vw;
+        height:45vh;
+       border-radius: 0;
+       box-shadow:none;
+       padding: 2rem;
+    }
+    .fert1{
+        padding: 0 40px;
+    }
+    .total{
+        padding:0;
+        background-color:rgb(255, 255, 255);
+        box-shadow:none;
+    }
+    .fertilizer{
+        display:block;
+        margin-left: 0;
+    }
+    main{
+        padding: 0;
+    }
+    #wish1{
+        color:rgb(174, 174, 174);
+        margin-left: -1.4rem;
+        position:absolute;
+        margin-top: -1.2rem;
+    }
+     
+    .fert1 a{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 8px ,rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        padding: 27px;
+        width:30px;
+        height: 30px;
+        border-radius: 50px;
+        margin-left: -3.4rem;
+        position: relative;
+        margin-top:2rem;
+        background-color: white;
+    }
+    
+    /* p===============-------product name------------ */
+    .fert2 h2{
+        margin-top:20px ;
+        margin-left: 22vw;
+        width:280px;
+        font-size: 22px;
+        color: rgb(1, 92, 1);
+        text-align: center;
+    }
+    .fert3 h3 {
+        font-size: 20px;
+        display: inline-block;
+       }
+       .fert3{
+        
+       text-align: center;
+       margin-top: 10px;
+       margin-left: 0px;
+       align-items: center;
+       justify-content: center;
+       }
+       .fert3 p{
+        font-size: 15px;
+        padding: 2px 0px 0px 10px;
+        margin-top: 0px;
+    }
+     .fert4 p {
+        display: inline-block;
+        margin-left:25px ;
+        margin-top: 5px;
+        font-size:20px;
+    }
+    .fert4 del{
+        margin-left: 20px;
+        font-size:16px;
+        margin-top: 6px;
+        color: rgb(13, 99, 36);
+    } 
+    .fert4 .fa-inr{
+        width:5px;
+        height: 5px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    .fert55 p{
+        font-size: 15px;
+        color:rgb(17, 35, 30);
+        margin-left: 30px;
+        font-weight: bold;
+    }
+    .fert55 .fa-inr{
+        width:5px;
+        height: 5px;
+        margin-right: 7px;
+        margin-left: 5px;
+        font-size: 16px;
+        color:green;
+    }
+    .fert4 ,.fert5 ,.fert55 {
+        margin-left:0 ;
+        margin-top: 15px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .fert5 h3{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+    #option{
+        margin-left: 20px;
+        padding: 2px 8px 2px 8px;
+        font-size:15px;
+        margin-top: -1px;
+        border-radius: 5px;
+        height: 4vh;
+    }
+    /* -----============-------add to cart and buy now section --------=========== */
+    
+    #rem1{
+        padding: 12px 133px;
+        font-size: 15px;
+        border-radius: 3px;
+        border: none;
+        background-color: rgb(248, 195, 4);
+        color: rgb(6, 6, 41);
+        margin-bottom: 15px;
+        display: inline;
+        align-items: center;
+        justify-content: center;
+
+    
+    }
+    #rem2{
+        padding: 12px 150px;
+        font-size: 15px;
+        border-radius:3px;
+        border: none;
+        background-color: rgb(4, 4, 72);
+        color:rgb(255, 234, 0)
+    }
+    a{
+        text-decoration: none;
+    }
+    .rem{
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+    .rem a button .fa-shopping-cart{
+        padding-right: 10px;
+    }
+    #thunder{
+        padding-right: 8px;
+    }
+    #option option{
+        padding: 2px 4px;
+    }
+    
+    .description ,.benifits ,.method{
+        margin: 5px 0px 0px 0px;
+        
+        padding: 10px 20px 0px 20px;
+        border-radius: 10px;
+    }
+    .benifits h2,.method h2{
+        color:rgb(139, 11, 51);
+        letter-spacing: 0.5px;
+        font-size:16px;
+        font-weight: bold;
+    }
+    .description h1{
+        color:rgb(139, 11, 51);
+        letter-spacing: 0.5px;
+        font-size: 17px;
+    }
+    .description li ,.benifits li , .method li{
+        font-size: 13px;
+        padding-top: 10px;
+        width:93vw;
+        color:rgb(11, 11, 51);
+        letter-spacing: 0.2px;
+        line-height:20px;
+    }
+    .method{
+        padding-bottom: 50px;
+    }
+    /* ==================/ weight of product/-----------------========== */
+    
+    }
+    

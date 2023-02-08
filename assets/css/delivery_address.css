@@ -109,11 +109,12 @@ label{
  background-color: rgb(6, 6, 36);
  color: white;
  font-size: 18px;
- border-radius: 10px;
+ border-radius: 3px;
 }
 .button button:hover{
-    background: linear-gradient(black,rgb(255, 0, 76));
-    border: 2px solid red;
+    background: linear-gradient(rgb(10, 2, 114),rgb(14, 3, 99));
+    border: 2px solid rgb(30, 1, 104);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 .delivery input{
     border: 3px solid rgb(155, 155, 155);

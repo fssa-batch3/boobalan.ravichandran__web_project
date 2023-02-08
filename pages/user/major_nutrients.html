@@ -199,9 +199,10 @@
   </div>
   </div>
 <script src="../js/menubar.js"></script>
-
-
 <script>
+
+    const n = 12;
+
     let div_today;
     let insecticide_a;
     let insecticide_img;
@@ -212,182 +213,252 @@
     let price_h2;
     let price_del;
     let save_h3;
-    
-    const product_name =[
+
+    const product_name = [
         {
-            'fert_name':'GEOLIFE NANO FERT 19:19:19 NPK (WATER SOLUBLE FERTILIZER)',
-            'pro_link':'./major1.html',
-            'pro_img':'../../assets/images/Major nutrients/maj1.webp',
-            'img_alt':'GEOLIFE NANO FERT 19:19:19 NPK (WATER SOLUBLE FERTILIZER)',
-            'new_price':'₹1,835',
-            'old_price':'₹2,044',
-            'save_price':'You Save: ₹ 209'
+            "category": "major nutrients",
+            "pro_link": "./adama1.html",
+           
+            "price": {
+                "text":"You Save",
+                "currency": "₹",
+                "actual_price": 2044,
+                "discount": 209,
+                "final_price":1835,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj1.webp",
+                "name": "GEOLIFE NANO FERT 19:19:19 NPK (WATER SOLUBLE FERTILIZER)"
+            },
         },
         {
-            'fert_name':'AL SACH NPK 00:00:50 FERTILIZER',
-            'pro_link':'./major2.html',
-            'pro_img':'../../assets/images/Major nutrients/maj2.jpg',
-            'img_alt': 'AL SACH NPK 00:00:50 FERTILIZER',
-            'new_price':'₹1,580',
-            'old_price':'₹1,700',
-            'save_price':'You Save: ₹ 120'
+            "pro_link": "./adama1.html",
+            "price": {
+                "text":"You Save",
+                "currency": "₹",
+                "actual_price": 1700,
+                "discount": 120,
+                "final_price":1580,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj2.jpg",
+                "name": "AL SACH NPK 00:00:50 FERTILIZER "
+            },
         },
         {
-            'fert_name':'GALWAY G - PROM ADVANCE (PHOSPHATE FERTILIZER)',
-            'pro_link':'./major3.html',
-            'pro_img':'../../assets/images/Major nutrients/maj3.avif',
-            'img_alt': 'GALWAY G - PROM ADVANCE (PHOSPHATE FERTILIZER)',
-            'new_price':'₹1,000',
-            'old_price':'₹2,000',
-            'save_price':'You Save: ₹ 1000'
+            "pro_link": "./adama1.html",
+            "price": {
+                "text":"You Save",
+                "currency": "₹",
+                "actual_price":2000,
+                "discount":1000,
+                "final_price":1000
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj3.avif",
+                "name": "GALWAY G - PROM ADVANCE (PHOSPHATE FERTILIZER)"
+            },
+        },
+         {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":2314,
+                "discount": 1104,
+                "final_price": 1210,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj4.avif",
+                "name": "NANO FERT 00:00:50 NPK (WATER SOLUBLE FERTILIZER)"
+         },
         },
         {
-            'fert_name':'NANO FERT 00:00:50 NPK (WATER SOLUBLE FERTILIZER)',
-            'pro_link':'./major4.html',
-            'pro_img':'../../assets/images/Major nutrients/maj4.avif',
-            'img_alt': 'NANO FERT 00:00:50 NPK (WATER SOLUBLE FERTILIZER)',
-            'new_price':'₹1,210',
-            'old_price':'₹2,314',
-            'save_price':'You Save: ₹ 1,104'
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":1250,
+                "discount": 395,
+                "final_price":855,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj5.avif",
+                "name": "GEOLIFE NANO MG (MAJOR NUTRIENTS)"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":1250,
+                "discount": 275,
+                "final_price":975,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj6.avif",
+                "name": "SHAMROCK OVERSEAS LIMITED NPK 20:20:20 FERTILIZER"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":1760,
+                "discount": 510,
+                "final_price":1250 ,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj7.jpg",
+                "name":"NANO FERT 00:00:50 NPK"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":885,
+                "discount": 86,
+                "final_price":799 ,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj8.avif",
+                "name": "ZEALBOR BORON 20%"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":850,
+                "discount": 210,
+                "final_price": 640,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj9.jpg",
+                "name": "VANPROZ V-BIND"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":2475,
+                "discount": 475,
+                "final_price": 2000,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj10.avif",
+                "name": "GANGOTHRI ORGANIC-K POTASSIUM"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":2653,
+                "discount": 1163,
+                "final_price": 1490,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj11.avif",
+                "name": " RILON INSECTICIDE"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":2420,
+                "discount": 700,
+                "final_price": 1720,
+            },
+            "image": {
+                "source": "../../assets/images/Major nutrients/maj12.jpg",
+                "name": " MULTIPLEX MULTI MAG (MAGNESIUM SULPHATE)"
+         },
         }
-        ,
-        {
-            'fert_name':'GEOLIFE NANO MG (MAJOR NUTRIENTS)',
-            'pro_link':'./major5.html',
-            'pro_img':'../../assets/images/Major nutrients/maj5.avif',
-            'img_alt': 'GEOLIFE NANO MG (MAJOR NUTRIENTS)',
-            'new_price':'₹855',
-            'old_price':'₹1,250',
-            'save_price':'You Save: ₹ 395'
-        },
-        {
-            'fert_name':'SHAMROCK OVERSEAS LIMITED NPK 20:20:20 FERTILIZER',
-            'pro_link':'./major6.html',
-            'pro_img':'../../assets/images/Major nutrients/maj6.avif',
-            'img_alt': 'SHAMROCK OVERSEAS LIMITED NPK 20:20:20 FERTILIZER',
-            'new_price':'₹975',
-            'old_price':'₹1,250',
-            'save_price':'You Save: ₹ 275'
-        },
-        {
-            'fert_name':'NANO FERT 00:00:50 NPK',
-            'pro_link':'./major1.html',
-            'pro_img':'../../assets/images/Major nutrients/maj7.jpg',
-            'img_alt': 'NANO FERT 00:00:50 NPK',
-            'new_price':'₹1,250',
-            'old_price':'₹1,760',
-            'save_price':'You Save: ₹ 510'
-        },
-        {
-            'fert_name':'ZEALBOR BORON 20%',
-            'pro_link':'./major6.html',
-            'pro_img':'../../assets/images/Major nutrients/maj8.avif',
-            'img_alt': 'ZEALBOR BORON 20%',
-            'new_price':'₹799',
-            'old_price':'₹885',
-            'save_price':'You Save: ₹ 86'
-        },
-        {
-            'fert_name':'VANPROZ V-BIND',
-            'pro_link':'./major2.html',
-            'pro_img':'../../assets/images/Major nutrients/maj9.jpg',
-            'img_alt': 'VANPROZ V-BIND',
-            'new_price':'₹640',
-            'old_price':'₹850',
-            'save_price':'You Save: ₹ 210'
-        },
-        {
-            'fert_name':'GANGOTHRI ORGANIC-K POTASSIUM',
-            'pro_link':'./major4.html',
-            'pro_img':'../../assets/images/Major nutrients/maj10.avif',
-            'img_alt': 'GANGOTHRI ORGANIC-K POTASSIUM',
-            'new_price':'₹2,000',
-            'old_price':'₹2,475',
-            'save_price':'You Save: ₹ 475'
-        },
-        {
-            'fert_name':' RILON INSECTICIDE',
-            'pro_link':'./major3.html',
-            'pro_img':'../../assets/images/Major nutrients/maj11.avif',
-            'img_alt': 'RILON INSECTICIDE',
-            'new_price':'₹1,490',
-            'old_price':'₹2,653',
-            'save_price':'You Save: ₹ 1,163'
-        },
-        {
-            'fert_name':'MULTIPLEX MULTI MAG (MAGNESIUM SULPHATE) ',
-            'pro_link':'./major6.html',
-            'pro_img':'../../assets/images/Major nutrients/maj12.jpg',
-            'img_alt': 'MULTIPLEX MULTI MAG (MAGNESIUM SULPHATE)',
-            'new_price':'₹1,720',
-            'old_price':'₹2,420',
-            'save_price':'You Save: ₹ 700'
-        }
-    
+
     ]
-    
-    
-    for(i=0; i<12; i++){
+
+
+    for (i = 0; i < n; i++) {
         // <div class="insecticide"> </div>
-    div_today = document.createElement("div");
-    div_today.setAttribute("class", "today");
-    document.querySelector("div.offers1").append(div_today);
-    console.log(div_today);
-    
-    // product page link----------------------->
-    // <a>---------------------</a>
-     insecticide_a = document.createElement("a");
-     insecticide_a.setAttribute("href",product_name[i]["pro_link"] );
-     div_today.append(insecticide_a);
-    
-    //  product image------------------
-    insecticide_img = document.createElement("img");
-    insecticide_img.setAttribute("src",product_name[i]["pro_img"]);
-    insecticide_img.setAttribute("alt",product_name[i]["img_alt"]);
-    insecticide_a.append(insecticide_img);
-    
-    
-    //  product name----------------------.
-     pro_name = document.createElement("p");
-     pro_name.innerText=product_name[i]["fert_name"];
-     insecticide_a.append(pro_name);
-    
-    //  star div start---------------------
-    div_star = document.createElement("div");
-    div_star.setAttribute("class", "star");
-    insecticide_a.append(div_star);
-    
-    for(j=0; j<5; j++){
-        star_span = document.createElement("span");
-    star_span.setAttribute("class","fa fa-star checked");
-    star_span.setAttribute("style", "font-size:24px");
-    div_star.append(star_span);
+        div_today = document.createElement("div");
+        div_today.setAttribute("class", "today");
+        document.querySelector("div.offers1").append(div_today);
+        console.log(div_today);
+
+        // product page link----------------------->
+        // <a>---------------------</a>
+        insecticide_a = document.createElement("a");
+        insecticide_a.setAttribute("href", product_name[i]["pro_link"]);
+        div_today.append(insecticide_a);
+
+        //  product image------------------
+        insecticide_img = document.createElement("img");
+        insecticide_img.setAttribute("src", product_name[i]["image"]["source"]);
+        insecticide_img.setAttribute("alt", product_name[i]["image"]["name"]);
+        insecticide_a.append(insecticide_img);
+
+
+        //  product name----------------------.
+        pro_name = document.createElement("p");
+        pro_name.innerText = product_name[i]["image"]["name"];
+        insecticide_a.append(pro_name);
+
+        //  star div start---------------------
+        div_star = document.createElement("div");
+        div_star.setAttribute("class", "star");
+        insecticide_a.append(div_star);
+
+        for (j = 0; j < 5; j++) {
+            star_span = document.createElement("span");
+            star_span.setAttribute("class", "fa fa-star checked");
+            star_span.setAttribute("style", "font-size:24px");
+            div_star.append(star_span);
+        }
+
+        // price--------------------
+        div_price = document.createElement("div");
+        div_price.setAttribute("class", "price");
+        insecticide_a.append(div_price);
+
+        // current price--------------------
+        const currency_2 = product_name[i]["price"]["currency"];
+        const price= product_name[i]["price"]["final_price"];
+        price_h2 = document.createElement("h2");
+        price_h2.innerText = currency_2 +  price;
+        div_price.append(price_h2);
+
+        // old price----------------------
+        const currency_1 = product_name[i]["price"]["currency"];
+        const old_price= product_name[i]["price"]["actual_price"];
+        price_del = document.createElement("del");
+        price_del.innerText = currency_1 + old_price;
+        div_price.append(price_del);
+
+        // save price details------------------
+        save_h3 = document.createElement("h3");
+        const currency = product_name[i]["price"]["currency"];
+        const discount = product_name[i]["price"]["discount"];
+        const you_save = product_name[i]["price"]["text"]
+        save_h3.innerText = you_save + "  " + currency + " " + discount ;
+        insecticide_a.append(save_h3);
+
+        document.querySelector("div.offers1").append(div_today);
+
     }
-    
-    // price--------------------
-    div_price = document.createElement("div");
-    div_price.setAttribute("class", "price");
-    insecticide_a.append(div_price);
-    
-    // current price--------------------
-    price_h2 = document.createElement("h2");
-    price_h2.innerText=product_name[i]["new_price"];
-    div_price.append(price_h2);
-    
-    // old price----------------------
-    price_del = document.createElement("del");
-    price_del.innerText=product_name[i]["old_price"];
-    div_price.append(price_del);
-    
-    // save price details------------------
-    save_h3 = document.createElement("h3");
-    save_h3.innerText=product_name[i]["save_price"]
-    insecticide_a.append(save_h3);
-    
-     document.querySelector("div.offers1").append(div_today);
-    
-    }
-    </script>
+</script>
+
+
     </body>
     </html>
     

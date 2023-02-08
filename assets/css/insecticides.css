@@ -22,6 +22,9 @@
     color: orange;
     margin-bottom: 10px;
   }
+  .today span{
+    margin: 3px;
+  }
   .today{
     width:300px;
     min-height:550px;
@@ -83,7 +86,7 @@
 -----
 --
 -----=======================*/
-@media screen and (max-width:400px) {
+@media screen and (max-width:700px ) {
   .insecticide h1{
     padding: 30px 20px 10px 20px;
     font-size: 13px;

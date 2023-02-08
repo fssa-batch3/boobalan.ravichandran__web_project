@@ -390,9 +390,12 @@
 
         // current price--------------------
         const currency_2 = product_name[i]["price"]["currency"];
-        const price= product_name[i]["price"]["final_price"];
+        const old_price1= product_name[i]["price"]["actual_price"];
+        const discount1 = product_name[i]["price"]["discount"];
         price_h2 = document.createElement("h2");
-        price_h2.innerText = currency_2 +  price;
+        const current_price = old_price1 - discount1;
+        price_h2.innerText = currency_2 + current_price ;
+        // currency_2 +  price ;
         div_price.append(price_h2);
 
         // old price----------------------

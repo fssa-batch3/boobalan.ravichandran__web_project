@@ -9,7 +9,7 @@
     margin-left: -1px;
 }
 .footer1{
-    background-color: rgb(255, 195, 66);
+    background-color:#E8CCC7;
 }
 .img101 img{
     width:300px;
@@ -17,7 +17,7 @@
     cursor: pointer;
 }
 .img101{
-    background:linear-gradient(rgb(244, 185, 76), rgb(255, 210, 125),rgb(249, 188, 74));
+    background:linear-gradient(#e0c5c0, #ffeeeb,#dec3bf);
     padding: 10px 0px 5px 550px;
 }
 
@@ -59,7 +59,7 @@
     margin-bottom: 2rem;
 }
 .bottom{
-    background:linear-gradient(rgb(239, 177, 63), rgb(255, 210, 125),rgb(252, 191, 78));
+    background:linear-gradient(#e0c5c0, #ffeeeb,#dec3bf);
     padding: 25px 0px 15px 100px;
     border-top: 6px solid rgb(167, 48, 80);
     margin: 0rem 1rem 0rem 1rem;

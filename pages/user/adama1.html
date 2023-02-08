@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,71 +115,31 @@
     <main>
        <div class="total">
         <div class="fertilizer">
-            <div  class="fert1">
-            <img src="../../assets/images/Adama/ada1.avif" alt="AGIL HERBICIDE order page" >
-            <a href="./wishlist.html"><i id="wish1" class="fa fa-heart" style="font-size:36px"></i></a>
-             </div>
-             <div class="fert2">
-                <h2>AGIL HERBICIDE</h2>
-                <div class="fert3">
-                    <h3>Company / Manufacture:</h3><p>Adama - Fertilizers</p>
-                </div>
-                <div class="fert4">
-                 <p>₹835</p><del>₹1,044</del>
-                </div>
-                <div class="fert55"><p>You Save: ₹209</p></div>
-                <div class="fert5">
-                    <h3>Order Qty</h3>
-                         <select id="option">
-                                <option>1</option>
-                                <option >2</option>
-                                <option >3</option>
-                                <option >4</option>
-                                <option >5</option>
-                                <option >6</option>
-                        </select>
-                </div>
-                <div class="fert5">
-                    <h3>Weight</h3>
-                         <select id="option">
-                                <option>250g</option>
-                                <option >400g</option>
-                                <option >500g</option>
-                                <option >700g</option>
-                                <option >1000g</option>
-                                <option >1500g</option>
-                        </select>
-                </div>
-                <div class="rem">
-                    <a href="./add_cart.html"><button id="rem1"><i id="cart" class="fa fa-shopping-cart" style="font-size:25px"></i>GO TO CART</button></a>
-                    <div>
-                        <a href="./deliver_address.html"><button id="rem2"><i id="thunder" class="fa fa-bolt" style="font-size:23px"></i>BUY NOW</button></a> 
-                    </div>
-
-                 </div>
-            </div>
-
-        </div>
-    <div class="description">
-        <h1>Descriptions</h1>
-        <ul>
-        <li>Agil Herbicide is a herbicide of the aryloxyphenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.
-            Agil is used for selective weed control in many broadleaf crops such as sugarbeet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.</li>
-</ul>
-        </div>
-    <div class="benifits">
-        <h2> Benefits</h2><ul>
-        <li>Agil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.</li>
-           <li> Rainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.</li>
-           <li>Agil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.</li>
-    </ul></div>
-    <div class="method">
-        <h2>Method of Application</h2>
-        <ul>
-        <li>Dozo Maxx controls major broad and Narrow leaves weeds.
-            It provides longer duration of weed free period of 25-30 days after application.</li>
-        <li> Also gives good results in Nursery, seed & Root treatments during transplantation.</li></ul>
+           <!-- .......................////
+        ////////////////// -->
     </div>
+        <div class="description">
+            <h1>Descriptions</h1>
+            <ul>
+            <li>Agil Herbicide is a herbicide of the aryloxyphenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.
+                Agil is used for selective weed control in many broadleaf crops such as sugarbeet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.</li>
+    </ul>
+            </div>
+        <div class="benifits">
+            <h2> Benefits</h2><ul>
+            <li>Agil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.</li>
+               <li> Rainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.</li>
+               <li>Agil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.</li>
+        </ul></div>
+        <div class="method">
+            <h2>Method of Application</h2>
+            <ul>
+            <li>Dozo Maxx controls major broad and Narrow leaves weeds.
+                It provides longer duration of weed free period of 25-30 days after application.</li>
+            <li> Also gives good results in Nursery, seed & Root treatments during transplantation.</li></ul>
+        </div>
+    
+
     </div>
     </main>
     
@@ -210,5 +169,338 @@
   </div>
   </div>
 <script src="../js/menubar.js"></script>
+
+<!-- /////////////   script tag start     ///// -->
+<script>
+
+   let  div_fetilizer;
+   let  div_fert1;
+   let  product_img ;
+   let  product_a;
+   let  product_i;
+   let  div_fert2;
+   let  div_fert2_h2;
+   let  div_fert3;
+   let  div_fert3_h3;
+   let  div_fert3_p;
+   let  div_fert4;
+   let  div_fert4_p;
+   let  div_fert4_del;
+   let  div_fert55;
+   let  div_fert55_p;
+   let  div_fert5;
+   let  div_fert5_h3;
+   let  select;
+   let  option1;
+   let  div_fert5_1;
+   let  div_fert5_h3_1;
+   let  div_rem;
+   let  rem_a ;
+   let  rem_button ;
+   let  rem_i;
+   let  div_div;
+   let  div_a;
+   let  rem2_button;
+   let  div_i;
+//    let  div_description;
+//    let  description_h1;
+//    let  description_ul;
+//    let  description_li1;
+//    let  div_benifits;
+//    let  benifits_h2;
+//    let  benifits_ul;
+//    let  benifits_li1;
+//    let  benifits_li2;
+//    let  benifits_li3;
+//    let  div_method;
+//    let  method_h2;
+//    let  method_ul;
+//    let  method_li1;
+//    let  method_li2;
+
+
+
+    const details = {
+         "product_name":"AGIL HERBICIDE",
+         "production_place":"Company / Manufacture:",
+         "company":"Adama - Fertilizers",
+         "wishlist_page": "./wishlist.html",
+         "image":{
+            "source":"../../assets/images/Adama/ada1.avif",
+            "alt" : "AGIL HERBICIDE order page"
+         },
+          "price":{
+                    "text":"You Save",
+                    "currency": "₹",
+                    "actual_price": 1044,
+                    "discount": 209
+          },
+         "qty_name":"Order Qty",
+         "quantity": [1,2,3,4,5,6,7],
+         "qty_weight": "weight :",
+         "qty_units":"ml",
+         "product_quantity": 500,
+         "cart":{
+                "source": "./add_cart.html ",
+                "text": "GO TO CART"
+         },
+         "buy_now":{
+            "source":"./deliver_address.html ",
+            "text":"BUY NOW "
+         }
+        
+      
+        }
+
+// <div class="fertilizer">...</div>
+     div_fetilizer = document.createElement("div");
+        div_fetilizer.setAttribute("class", "fertilizer");
+        document.querySelector("div.total").prepend(div_fetilizer);
+        console.log(div_fetilizer);
+
+//  <div  class="fert1">..</div>
+      div_fert1 = document.createElement("div");
+      div_fert1.setAttribute("class", " fert1");
+      div_fetilizer.append(div_fert1);
+
+//  <img src="../../assets/images/Adama/ada1.avif" alt="AGIL HERBICIDE order page" >
+    product_img = document.createElement("img");
+    product_img.setAttribute("src", details["image"]["source"]);
+    product_img.setAttribute("alt", details["image"]["alt"]);
+    div_fert1.append(product_img);
+    
+//    <a href="./wishlist.html"><i id="wish1" class="fa fa-heart" style="font-size:36px"></i></a>
+    product_a = document.createElement("a");
+    product_a.setAttribute("href", details["wishlist_page"]);
+    div_fert1.append(product_a);
+  
+
+    product_i = document.createElement("i");
+    product_i.setAttribute("id", "wish1");
+    product_i.setAttribute("class", "fa fa-heart");
+    product_i.setAttribute("style","font-size:36px" );
+    product_a.append(product_i);
+
+// <div class="fert2"> <h2>....</h2>  </div>
+   div_fert2 = document.createElement("div");
+   div_fert2.setAttribute("class", "fert2");
+   div_fetilizer.append(div_fert2);
+
+   div_fert2_h2 = document.createElement("h2");
+   div_fert2_h2.innerText = details ["product_name"];
+   div_fert2.append(div_fert2_h2);
+
+//    <div class="fert3">....</div>
+    div_fert3 = document.createElement("div");
+    div_fert3.setAttribute("class", "fert3");
+    div_fert2.append(div_fert3);
+   
+// <h3>...</h3>
+   div_fert3_h3 = document.createElement("h3");
+   div_fert3_h3.innerText= details["production_place"];
+   div_fert3.append(div_fert3_h3);
+
+// <p>...</p>
+   div_fert3_p = document.createElement("p");
+   div_fert3_p.innerText = details["company"];
+   div_fert3.append(div_fert3_p);
+
+//  <div class="fert4">..</div>
+    div_fert4 = document.createElement("div");
+    div_fert4.setAttribute("class", "fert4");
+    div_fert2.append(div_fert4);
+
+// <p>...</p>
+   div_fert4_p = document.createElement("p");
+   const currency = details["price"]["currency"];
+   const actual_price = details["price"]["actual_price"];
+   const discount = details["price"]["discount"];
+   const current_price = actual_price - discount;
+   div_fert4_p.innerText =  currency + current_price;
+   div_fert4.append(div_fert4_p);
+
+// <del>...</del>
+    div_fert4_del = document.createElement("del");
+    div_fert4_del.innerText = details["price"]["actual_price"];
+   div_fert4.append(div_fert4_del);
+
+// <div class="fert55">..</div>
+    div_fert55 = document.createElement("div");
+    div_fert55.setAttribute("class", "fert55");
+    div_fert2.append(div_fert55);
+
+// <p>...</p>
+   div_fert55_p = document.createElement("p");
+   const you_save = details["price"]["text"];
+   div_fert55_p.innerText = you_save +" " + currency + discount
+   div_fert55.append(div_fert55_p);
+
+//  <div class="fert5">..</div>
+    div_fert5 = document.createElement("div");
+    div_fert5.setAttribute("class", "fert5");
+    div_fert2.append(div_fert5);
+// <h3>...</h3>
+   div_fert5_h3 = document.createElement("h3");
+   div_fert5_h3.innerText = details["qty_name"];
+   div_fert5.append(div_fert5_h3);
+
+//   <select id="option">...</select>
+    select = document.createElement("select");
+    select.setAttribute("id", "option");
+    div_fert5.append(select);
+
+// <option>....</option>
+   for(i=0; i<=6; i++){
+    option1 = document.createElement("option");
+    option1.innerText = details["quantity"][i];
+    select.append(option1);
+   }
+    // option2 = document.createElement("option");
+    // option2.innerText = details["quantity"][1];
+    // select.append(option2);
+    // option3 = document.createElement("option");
+    // option3.innerText = details["quantity"][2];
+    // select.append(option3);
+    // option4 = document.createElement("option");
+    // option4.innerText = details["quantity"][3];
+    // select.append(option4);
+    // option5 = document.createElement("option");
+    // option5.innerText = details["quantity"][4];
+    // select.append(option5);
+    // option6 = document.createElement("option");
+    // option6.innerText = details["quantity"][5];
+    // select.append(option6);
+    // option7 = document.createElement("option");
+    // option7.innerText = details["quantity"][6];
+    // select.append(option7);
+
+//  <div class="fert5">..</div>
+    div_fert5_1 = document.createElement("div");
+    div_fert5_1.setAttribute("class", "fert5");
+    div_fert2.append(div_fert5_1);
+// <h3>...</h3>
+   div_fert5_h3_1 = document.createElement("h3");
+   const weight = details["qty_weight"];
+   const quantity = details["product_quantity"];
+   const units = details["qty_units"];
+   div_fert5_h3_1.innerText = weight + " " + quantity + units;
+   div_fert5_1.append(div_fert5_h3_1);
+
+//  <div class="rem">...</div>
+    div_rem = document.createElement("div");
+    div_rem.setAttribute("class", "rem");
+    div_fert2.append(div_rem);
+
+//<a href="./add_cart.html">...</a>
+    rem_a = document.createElement("a");
+    rem_a .setAttribute("href",details["cart"]["source"]);
+    div_rem.append(rem_a );
+
+// <button id="rem1">.....</button>
+    rem_button = document.createElement("button");
+    rem_button .setAttribute("id", "rem1");
+    rem_button.innerText = details["cart"]["text"];
+    rem_a.append(rem_button );
+//<i>...</i>
+    rem_i = document.createElement("i");
+    rem_i.setAttribute("id", "cart");
+    rem_i.setAttribute("class", "fa fa-shopping-cart");
+    rem_i.setAttribute("style","font-size:25px" );
+    rem_button.prepend(rem_i);
+
+//<div>...</div>
+    div_div = document.createElement("div");
+    div_rem.append(div_div);
+
+// <a>...<a>
+    div_a = document.createElement("a");
+    div_a .setAttribute("href",details["buy_now"]["source"]);
+    div_div.append(div_a );
+
+// <button id="rem2">.....</button>
+    rem2_button = document.createElement("button");
+    rem2_button .setAttribute("id", "rem2");
+    rem2_button.innerText = details["buy_now"]["text"];
+    div_a.append(rem2_button );
+
+// <i>...</i>
+    div_i = document.createElement("i");
+    div_i.setAttribute("id", "thunder");
+    div_i.setAttribute("class", "fa fa-bolt");
+    div_i.setAttribute("style","font-size:25px" );
+    rem2_button.prepend(div_i);
+
+// //   <div class="description">...</div>
+//     div_description = document.createElement("div");
+//     div_description.setAttribute("class", "description");
+//     document.querySelector("div.total").append(div_description);
+
+// // <h1>...</h1>
+//     description_h1 = document.createElement("h1");
+//     description_h1 .innerText = details["description"]["heading"];
+//     div_description.append(description_h1);
+
+// // <ul>...</ul>
+//     description_ul = document.createElement("ul");
+//     div_description.append(description_ul);
+
+// // <li>...</li>
+//     description_li1 = document.createElement("li");
+//     description_li1.innerText = details["description"]["explanation"];
+//     description_ul.append(description_li1);
+
+// //   <div class="benifits">...</div>
+//     div_benifits = document.createElement("div");
+//     div_benifits.setAttribute("class", "benifits");
+//     document.querySelector("div.total").append(div_benifits);
+
+//     // <h2>...</h2>
+//     benifits_h2 = document.createElement("h2");
+//     benifits_h2.innerText = details["benefits"]["heading"];
+//     div_benifits.append(benifits_h2);
+
+// // <ul>...</ul>
+//     benifits_ul = document.createElement("ul");
+//     div_benifits.append(benifits_ul);
+
+// // <li>...</li>
+//     benifits_li1 = document.createElement("li");
+//     benifits_li1.innerText = details["benefits"]["advantage_one"];
+//     benifits_ul.append(benifits_li1);
+    
+// // <li>...</li>
+//     benifits_li2 = document.createElement("li");
+//     benifits_li2.innerText = details["benefits"]["advantage_two"];
+//     benifits_ul.append(benifits_li2);
+    
+// // <li>...</li>
+//     benifits_li3 = document.createElement("li");
+//     benifits_li3.innerText = details["benefits"]["advantage_three"];
+//     benifits_ul.append(benifits_li3);
+
+// //   <div class="method">...</div>
+//     div_method = document.createElement("div");
+//     div_method.setAttribute("class", "method");
+//     document.querySelector("div.total").append(div_method);
+
+//     // <h2>...</h2>
+//     method_h2 = document.createElement("h2");
+//     method_h2.innerText = details["application"]["name"];
+//     div_method.append(method_h2);
+
+// // <ul>...</ul>
+//     method_ul = document.createElement("ul");
+//     div_method.append(method_ul);
+
+// // <li>...</li>
+//     method_li1 = document.createElement("li");
+//     method_li1.innerText = details["application"]["methodology_one"];
+//     method_ul.append(method_li1);
+    
+// // <li>...</li>
+//     method_li2 = document.createElement("li");
+//     method_li2.innerText = details["application"]["methodology_two"];
+//     method_ul.append(method_li2);
+</script>
 </body>
 </html>

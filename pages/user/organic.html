@@ -111,50 +111,8 @@
         <div class="insecticide">
             <h1 class="org">Organic Fertilizers</h1>
             <div class="offers1">
-                <div class="today">
-                    <a href="./org1.html"><img src="../../assets/images/organic/org1.avif" alt="REVITAL F 98% ORGANIC FERTILIZER">
-                    <p>REVITAL F 98% ORGANIC FERTILIZER</p>
-                    <div class="star">
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star"style="font-size:24px"></span>
-                    <span class="fa fa-star" style="font-size:24px"></span>
-                    </div>
-                   <div class="price">
-                    <h2>₹835</h2><del>₹ 1,044</del></div>
-                    <h3>You Save: ₹209</h3></a>
-                   
-                </div>
-                <div class="today">
-                    <a href="./org2.html"><img src="../../assets/images/organic/org2.avif" alt="Hifield Organic AMIPRO 80">
-                    <p>Hifield Organic AMIPRO 80</p>
-                    <div class="star">
-                    <span class="fa fa-star checked" style="font-size:24px"></span>
-                    <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star "style="font-size:24px"></span>
-                    </div>
-                    <div class="price">
-                        <h2>₹1,186</h2><del>₹ 1,420</del></div>
-                        <h3>You Save: ₹234</h3></a>
-                </div>
-                 <div class="today">
-                    <a href="./org3.html"><img src="../../assets/images/organic/org3.avif" alt="HIFIELD ORGANIC RETAIN BULLET">
-                    <p>HIFIELD ORGANIC RETAIN BULLET</p>
-                    <div class="star">
-                     <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star checked"style="font-size:24px"></span>
-                    <span class="fa fa-star" style="font-size:24px"></span>
-                    </div>
-                  <div class="price">
-                    <h2>₹1,200</h2><del>₹ 2,050</del></div>
-                    <h3>You Save: ₹ 850</h3></a>
-                
-                 </div>
+                <!--     /./////////////
+                /////////////// -->
                  
         
                  </div>
@@ -242,6 +200,206 @@
   </div>
   </div>
 <script src="../js/menubar.js"></script>
+
+<script>
+    const n = 8;
+    let div_today;
+    let insecticide_a;
+    let insecticide_img;
+    let pro_name;
+    let div_star;
+    let star_span;
+    let div_price;
+    let price_h2;
+    let price_del;
+    let save_h3;
+
+    const product_name = [
+        {
+            "category": "Insecticides",
+            "pro_link": "./adama1.html",
+           
+            "price": {
+                "text":"You Save",
+                "currency": "₹",
+                "actual_price": 1044,
+                "discount": 209,
+                "final_price":835,
+            },
+            "image": {
+                "source": "../../assets/images/organic/org1.avif",
+                "name": "REVITAL F 98% ORGANIC FERTILIZER"
+            },
+        },
+        {
+            "pro_link": "./adama1.html",
+            "price": {
+                "text":"You Save",
+                "currency": "₹",
+                "actual_price": 1420,
+                "discount": 234,
+                "final_price":1886,
+            },
+            "image": {
+                "source": "../../assets/images/organic/org2.avif",
+                "name": "Hifield Organic AMIPRO 80"
+            },
+        },
+        {
+            "pro_link": "./adama1.html",
+            "price": {
+                "text":"You Save",
+                "currency": "₹",
+                "actual_price":2050,
+                "discount":850,
+                "final_price":1200
+            },
+            "image": {
+                "source": "../../assets/images/organic/org3.avif",
+                "name": "HIFIELD ORGANIC RETAIN BULLET"
+            },
+        },
+         {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":2314,
+                "discount": 1204,
+                "final_price": 1110,
+            },
+            "image": {
+                "source": "../../assets/images/Insecticide/ins4.jpg",
+                "name": " ACRE FIGHTER FIPRONIL INSECTICIDE"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":551,
+                "discount": 296,
+                "final_price": 255,
+            },
+            "image": {
+                "source": "../../assets/images/Insecticide/ins5.avif",
+                "name": "EM 1 INSECTICIDE"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":750,
+                "discount": 200,
+                "final_price":550,
+            },
+            "image": {
+                "source": "../../assets/images/Insecticide/ins6.avif",
+                "name": "PROFEX SUPER INSECTICID"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":1760,
+                "discount": 510,
+                "final_price":1250 ,
+            },
+            "image": {
+                "source": "../../assets/images/Insecticide/ins7.jpg",
+                "name": "GREEN MAGIC BROCCOL"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":885,
+                "discount": 386,
+                "final_price":499 ,
+            },
+            "image": {
+                "source": "../../assets/images/Insecticide/ins8.avif",
+                "name": "AREVA INSECTICIDE"
+         },
+        }
+    ]
+
+
+    for (i = 0; i < n; i++) {
+        // <div class="insecticide"> </div>
+        div_today = document.createElement("div");
+        div_today.setAttribute("class", "today");
+        document.querySelector("div.offers1").append(div_today);
+        console.log(div_today);
+
+        // product page link----------------------->
+        // <a>---------------------</a>
+        insecticide_a = document.createElement("a");
+        insecticide_a.setAttribute("href", product_name[i]["pro_link"]);
+        div_today.append(insecticide_a);
+
+        //  product image------------------
+        insecticide_img = document.createElement("img");
+        insecticide_img.setAttribute("src", product_name[i]["image"]["source"]);
+        insecticide_img.setAttribute("alt", product_name[i]["image"]["name"]);
+        insecticide_a.append(insecticide_img);
+
+
+        //  product name----------------------.
+        pro_name = document.createElement("p");
+        pro_name.innerText = product_name[i]["image"]["name"];
+        insecticide_a.append(pro_name);
+
+        //  star div start---------------------
+        div_star = document.createElement("div");
+        div_star.setAttribute("class", "star");
+        insecticide_a.append(div_star);
+
+        for (j = 0; j < 5; j++) {
+            star_span = document.createElement("span");
+            star_span.setAttribute("class", "fa fa-star checked");
+            star_span.setAttribute("style", "font-size:24px");
+            div_star.append(star_span);
+        }
+
+        // price--------------------
+        div_price = document.createElement("div");
+        div_price.setAttribute("class", "price");
+        insecticide_a.append(div_price);
+
+        // current price--------------------
+        const currency_2 = product_name[i]["price"]["currency"];
+        const price= product_name[i]["price"]["final_price"];
+        price_h2 = document.createElement("h2");
+        price_h2.innerText = currency_2 +  price;
+        div_price.append(price_h2);
+
+        // old price----------------------
+        const currency_1 = product_name[i]["price"]["currency"];
+        const old_price= product_name[i]["price"]["actual_price"];
+        price_del = document.createElement("del");
+        price_del.innerText = currency_1 + old_price;
+        div_price.append(price_del);
+
+        // save price details------------------
+        save_h3 = document.createElement("h3");
+        const currency = product_name[i]["price"]["currency"];
+        const discount = product_name[i]["price"]["discount"];
+        const you_save = product_name[i]["price"]["text"]
+        save_h3.innerText = you_save + "  " + currency + " " + discount ;
+        insecticide_a.append(save_h3);
+
+        document.querySelector("div.offers1").append(div_today);
+
+    }
+</script>
     </body>
     </html>
     

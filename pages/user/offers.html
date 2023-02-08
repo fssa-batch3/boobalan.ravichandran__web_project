@@ -113,95 +113,8 @@
             <h1>Today Offers</h1>
             <div>
                 <div class="offers1">
-                    <div class="today">
-                        <a href="./off1.html"><img src="../../assets/images/offers/off2.jpg" alt="Sumitomo Lano Pyriproxyfen 10% SC Insecticides">
-                        <p>Sumitomo Lano Pyriproxyfen 10% SC Insecticides</p>
-                        <div class="star">
-                            <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star"style="font-size:24px"></span>
-                        <span class="fa fa-star" style="font-size:24px"></span>
-                        </div>
-                       <div class="price">
-                        <h2>₹1040</h2><del>₹ 2040</del></div>
-                        <h3>You Save: ₹ 1,000</h3></a>
-                       
-                    </div>
-                    <div class="today">
-                       <a href="./off2.html"> <img src="../../assets/images/offers/off3.webp" alt="Adama Barazide Insecticides, Plastic Bottle, 1 Litre">
-                        <p>Adama Barazide Insecticides, Plastic Bottle, 1 Litre</p>
-                        <div class="star">
-                        <span class="fa fa-star checked" style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        </div>
-                        <div class="price">
-                            <h2>₹1,550</h2><del>₹ 2952</del></div>
-                            <h3>You Save: ₹ 1,402</h3></a>
-                    </div>
-                     <div class="today">
-                       <a href="./off3.html"> <img src="../../assets/images/offers/off4.webp" alt="Solomon Insecticide">
-                        <p>Solomon Insecticide</p>
-                        <div class="star">
-                         <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star" style="font-size:24px"></span>
-                        </div>
-                      <div class="price">
-                        <h2>₹1,475</h2><del>₹ 2775</del></div>
-                        <h3>You Save: ₹ 1,300</h3></a>
-                    
-                     </div>
-                     <div class="today">
-                        <a href="./bay1.html"><img src="../../assets/images/offers/off5.jpg" alt="Acre Fighter Fipronil Insecticides">
-                        <p>Acre Fighter Fipronil Insecticides</p>
-                       <div class="star">
-                        <span class="fa fa-star checked"style="font-size:24px" style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                       </div>
-                        <div class="price">
-                            <h2>₹1,210</h2><del>₹ 2314</del></div>
-                        <h3>You Save: ₹ 1,104</h3></a>
-                    
-                     </div>
-                     <div class="today">
-                        <a href="./dhan2.html"><img src="../../assets/images/offers/off6.jpeg" alt="Pesticide Admit Imidacloprid">
-                        <p>Pesticide Admit Imidacloprid </p>
-                        <div class="star"> 
-                            <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        </div>
-                        <div class="price">
-                            <h2>₹1,366</h2><del>₹ 2679</del></div>
-                        <h3>You Save: ₹ 1,204</h3></a>
-                    </div>
-                    <div class="today">
-                        <a href="./dow2.html"><img src="../../assets/images/offers/off7.avif" alt=" DR SOIL ARECA SPECIAL BIO FERTILIZER">
-                        <p> DR SOIL ARECA SPECIAL BIO FERTILIZER</p>
-                        <div class="star"> 
-                            <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        <span class="fa fa-star checked"style="font-size:24px"></span>
-                        </div>
-                        <div class="price">
-                            <h2>₹2,537</h2><del>₹ 2750</del></div>
-                        <h3>You Save: ₹ 213</h3></a>
-                    </div>
-            
-                     </div>
+                    <!--  /////////////
+                    /////// -->
             </div>
         </div>
     </main>
@@ -287,5 +200,181 @@
   </div>
   </div>
 <script src="../js/menubar.js"></script>
+
+
+<!-- ////////////  offers page script part      /////////// -->
+
+
+<script>
+    const n = 6;
+    let div_today;
+    let insecticide_a;
+    let insecticide_img;
+    let pro_name;
+    let div_star;
+    let star_span;
+    let div_price;
+    let price_h2;
+    let price_del;
+    let save_h3;
+
+    const product_name = [
+        {
+            "category": "offers for all varieties",
+            "pro_link": "./adama1.html",
+           
+            "price": {
+                "text":"You Save",
+                "currency": "₹",
+                "actual_price": 2040,
+                "discount": 1000,
+                "final_price":1040,
+            },
+            "image": {
+                "source": "../../assets/images/offers/off2.jpg",
+                "name": "Sumitomo Lano Pyriproxyfen 10% SC Insecticides"
+            },
+        },
+        {
+            "pro_link": "./adama1.html",
+            "price": {
+                "text":"You Save",
+                "currency": "₹",
+                "actual_price": 2952,
+                "discount": 1402,
+                "final_price":1550,
+            },
+            "image": {
+                "source": "../../assets/images/offers/off3.webp",
+                "name": "Adama Barazide Insecticides, Plastic Bottle, 1 Litre"
+            },
+        },
+        {
+            "pro_link": "./adama1.html",
+            "price": {
+                "text":"You Save",
+                "currency": "₹",
+                "actual_price":2775,
+                "discount":1300,
+                "final_price":1475
+            },
+            "image": {
+                "source": "../../assets/images/offers/off4.webp",
+                "name": "Solomon Insecticide"
+            },
+        },
+         {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":2314,
+                "discount": 1104,
+                "final_price": 1210,
+            },
+            "image": {
+                "source": "../../assets/images/offers/off5.jpg",
+                "name": "Acre Fighter Fipronil Insecticides"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":2679,
+                "discount": 1204,
+                "final_price": 1366,
+            },
+            "image": {
+                "source": "../../assets/images/offers/off6.jpeg",
+                "name": "Pesticide Admit Imidacloprid"
+         },
+        },
+        {
+            "pro_link":"./adama1.html",
+            "price":{
+                "text":"You Save",
+                "currency":"₹",
+                "actual_price":2750,
+                "discount": 213,
+                "final_price":2537,
+            },
+            "image": {
+                "source": "../../assets/images/offers/off7.avif",
+                "name": " DR SOIL ARECA SPECIAL BIO FERTILIZER"
+         },
+        }
+    ]
+
+
+    for (i = 0; i < n; i++) {
+        // <div class="insecticide"> </div>
+        div_today = document.createElement("div");
+        div_today.setAttribute("class", "today");
+        document.querySelector("div.offers1").append(div_today);
+        console.log(div_today);
+
+        // product page link----------------------->
+        // <a>---------------------</a>
+        insecticide_a = document.createElement("a");
+        insecticide_a.setAttribute("href", product_name[i]["pro_link"]);
+        div_today.append(insecticide_a);
+
+        //  product image------------------
+        insecticide_img = document.createElement("img");
+        insecticide_img.setAttribute("src", product_name[i]["image"]["source"]);
+        insecticide_img.setAttribute("alt", product_name[i]["image"]["name"]);
+        insecticide_a.append(insecticide_img);
+
+
+        //  product name----------------------.
+        pro_name = document.createElement("p");
+        pro_name.innerText = product_name[i]["image"]["name"];
+        insecticide_a.append(pro_name);
+
+        //  star div start---------------------
+        div_star = document.createElement("div");
+        div_star.setAttribute("class", "star");
+        insecticide_a.append(div_star);
+
+        for (j = 0; j < 5; j++) {
+            star_span = document.createElement("span");
+            star_span.setAttribute("class", "fa fa-star checked");
+            star_span.setAttribute("style", "font-size:24px");
+            div_star.append(star_span);
+        }
+
+        // price--------------------
+        div_price = document.createElement("div");
+        div_price.setAttribute("class", "price");
+        insecticide_a.append(div_price);
+
+        // current price--------------------
+        const currency_2 = product_name[i]["price"]["currency"];
+        const price= product_name[i]["price"]["final_price"];
+        price_h2 = document.createElement("h2");
+        price_h2.innerText = currency_2 +  price;
+        div_price.append(price_h2);
+
+        // old price----------------------
+        const currency_1 = product_name[i]["price"]["currency"];
+        const old_price= product_name[i]["price"]["actual_price"];
+        price_del = document.createElement("del");
+        price_del.innerText = currency_1 + old_price;
+        div_price.append(price_del);
+
+        // save price details------------------
+        save_h3 = document.createElement("h3");
+        const currency = product_name[i]["price"]["currency"];
+        const discount = product_name[i]["price"]["discount"];
+        const you_save = product_name[i]["price"]["text"]
+        save_h3.innerText = you_save + "  " + currency + " " + discount ;
+        insecticide_a.append(save_h3);
+
+        document.querySelector("div.offers1").append(div_today);
+
+    }
+</script>
 </body>
 </html>

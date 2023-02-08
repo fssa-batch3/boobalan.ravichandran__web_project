@@ -138,10 +138,7 @@
                     <label for="mobile"> Mobile Number </label>
                        <input type="number" placeholder="Your Mobile Number" id="mobile"/> 
                </div>
-               <div>
-                <label for="paswo">Password</label>
-                <input type="password" id="paswo">
-               </div>
+              
              <div class="button">
                 <a href="../user/user_interface.html"><button type="button">Save</button></a>
                 <a href="../user/./user_profile.html"><button type="button">Edit</button></a>
@@ -231,20 +228,19 @@
   </div>
   </div>
   <script>
-    const full_name= localStorage.getItem("fullname")
+    const full_name= localStorage.getItem("full_name")
     console.log(full_name);
     const mobile_number=localStorage.getItem("mobile")
     console.log(mobile_number);
-    const user_email= localStorage.getItem("eamil")
+    const user_email= localStorage.getItem("email")
     console.log(user_email);
-    const login_password= localStorage.getItem("loginpassword")
-    console.log(login_password);
+    
     
 
     document.getElementById("full_name").value = full_name
     document.getElementById("email").value = user_email
     document.getElementById("mobile").value = mobile_number
-    document.getElementById("paswo").value = login_password
+   
 
     // document.getElementById("user_name").innerText = fullname
 

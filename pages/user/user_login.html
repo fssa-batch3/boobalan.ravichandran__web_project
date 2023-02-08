@@ -17,12 +17,12 @@
 </head>
 <main>
     <div class="box">
-    <form action="#" class="form">
+    <form action="#" class="form"  role="form" onsubmit="signIn(event);">
             <img src="../../assets/images/Fert agri.png" alt="logo">
                 <h1>User Login</h1>
                 <div class="form-group">
                    <input type="text" id="mobile" class="form-control" required /> 
-                   <label for="mobile" class="form-label"> Email or Phone </label>
+                   <label for="mobile" class="form-label"> Phone Number</label>
            </div>
            <div class="form-group">
                <input type="password"  id="txtPassword" class="form-control"  required />
@@ -39,29 +39,53 @@
                 <a href="forgot_password.html">Forgot Password?</a>
 
                 
-                <button type="button" onclick="login()" >Login</button>
+                <button type="submit" >Login</button>
             </div>
             <h4 class="singup"> New to FAB?<a href="../user/user_signup.html">Create an account</a></h4>
         </div>
     </form>
     </div>
 </main>
-<script>
-    function login(){
+<script src="../js/signup_login.js">
+    // function login(){
         
 
-    const email = document.getElementById("mobile").value
-    const password = document.getElementById("txtPassword").value
+    // const phone = document.getElementById("mobile").value;
+    // const password = document.getElementById("txtPassword").value;
 
-    console.log(email)
-    console.log(password)
+    // // console.log(email);
+    // // console.log(password);
 
-    localStorage.setItem("email_phone", email)
-    localStorage.setItem("password", password)
+    // // localStorage.setItem("email_phone", email)
+    // // localStorage.setItem("password", password)
 
 
-    window.location.href="./user_interface.html"
-    }
+    // //get data from local storage
+    // const getphone = localStorage.getItem("users", phone);
+    // const getpass = localStorage.getItem("users", password);
+    // alert("Login Succesfull ✅");
+    //       window.location.href="./user_interface.html";
+
+    // if ( phone == getphone)
+    // {
+    //     if ( password == getpass)
+    //     {
+    //       alert("Login Succesfull ✅");
+    //       window.location.href="./user_interface.html";
+    //     }
+    //     else
+    //     {
+    //         alert("Wrong Password ❌");
+    //     }
+    // }
+    // else
+    // {
+    //     alert("Invalid Mobile number 👿👿😈")
+    // }
+    
+    // }
+
+    
 
 </script>
 <script src="../js/seller_login.js"></script>
