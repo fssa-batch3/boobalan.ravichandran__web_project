@@ -4,7 +4,7 @@ main{
    /* justify-content: center; */
   align-items: center;
    margin: 90px 0;
-   margin-left: 150px;
+   margin-left: 130px;
    color: rgb(255, 255, 255);
 }
 :root{
@@ -24,8 +24,22 @@ main{
 label{
     font-size: 18px;
 }
+#full_name1{
+    margin-left:.5rem;
+     width:270px;
+     height:35px;
+     padding: 5px 10px 5px 10px;
+     font-size: 25px;
+     margin-bottom: 40px;
+     margin-right: 30px;
+     background-color: transparent;
+     outline: none;
+     border: none;
+     color: rgb(255, 255, 255);
+ }
+
 #full_name{
-   margin-left: 8.2rem;
+   margin-left: 7.2rem;
     width:270px;
     height:35px;
     padding: 5px 10px 5px 10px;
@@ -36,9 +50,10 @@ label{
     outline: none;
     border: none;
     border-bottom: 2px solid black;color: rgb(0, 0, 0);
+    cursor: pointer;
 }
 #gender{
-    margin-left: 9.5rem;
+    margin-left: 8.5rem;
     width:270px;
     height:35px;
     padding: 5px 10px 5px 10px;
@@ -50,7 +65,7 @@ label{
     border-bottom: 2px solid black;color: rgb(0, 0, 0);
 }
 #email{
-    margin-left: 6.2rem;
+    margin-left: 5.2rem;
     width:270px;
     height:35px;
     padding: 5px 10px 5px 10px;
@@ -62,7 +77,55 @@ label{
     border-bottom: 2px solid black;color: rgb(0, 0, 0);
 }
 #mobile{
-    margin-left: 5.2rem;
+    margin-left: 4.2rem;
+    width:270px;
+    height:35px;
+    padding: 5px 10px 5px 10px;
+    font-size: 17px;
+    margin-bottom: 40px;
+    background-color: rgb(220, 243, 255);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;color: rgb(0, 0, 0);
+}
+#street{
+    margin-left: 5.8rem;
+    width:270px;
+    height:35px;
+    padding: 5px 10px 5px 10px;
+    font-size: 17px;
+    margin-bottom: 40px;
+    background-color: rgb(220, 243, 255);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;color: rgb(0, 0, 0);
+    margin-right: 20px;
+}
+#city{
+    margin-left:6.9rem;
+    width:270px;
+    height:35px;
+    padding: 5px 10px 5px 10px;
+    font-size: 17px;
+    margin-bottom: 40px;
+    background-color: rgb(220, 243, 255);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;color: rgb(0, 0, 0);
+}
+#district{
+    margin-left: 5.1rem;
+    width:270px;
+    height:35px;
+    padding: 5px 10px 5px 10px;
+    font-size: 17px;
+    margin-bottom: 40px;
+    background-color: rgb(220, 243, 255);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;color: rgb(0, 0, 0);
+}#state{
+    margin-left: 6.4rem;
     width:270px;
     height:35px;
     padding: 5px 10px 5px 10px;
@@ -74,14 +137,17 @@ label{
     border-bottom: 2px solid black;color: rgb(0, 0, 0);
 }
 
+
+
+
 .button{
-    margin-left: 4.5rem;
+    margin-left: 23.5rem;
     margin-top: 30px;
     display: flex;
 }
 .button button{
     padding: 10px 50px 10px 50px;
-    margin-right: 90px;
+
     font-size: 18px;
     background-color: rgb(3, 4, 40);
     border-radius: 5px;
@@ -90,7 +156,7 @@ label{
     border: none;
 }
 .button button:hover ,.btnn button:hover{
-    background-color: rgb(10, 7, 100);
+    background: linear-gradient(to top, #3830d0 0%, #330867 100%);
     color:white;
     transform: scale(1.02);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -103,7 +169,7 @@ label{
 .details1{
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     padding: 50px 100px 0px 100px;
-    width:600px;
+    width:500px;
 }
 .details1 h2{
     display: flex;
@@ -118,6 +184,7 @@ label{
 .details1 label{
     font-weight: bold;
     display: flex;
+    font-size: 22px;
 }
 #dobb{
     padding: .4rem .5rem;
@@ -137,6 +204,7 @@ background:url(../images/profile.png);
 background-size: 100% 100%;
 overflow: hidden;
 margin-left: 15px;
+margin-top: 100px;
 }
 .my_file{
     position: absolute;

@@ -2,9 +2,9 @@
 function signUp(e) {
     e.preventDefault();
 
-     let email = document.getElementById("email").value
-     let  mobile = document.getElementById("mobile").value
-     let full_name = document.getElementById("full_name").value
+     let email = document.getElementById("email").value.trim();
+     let  mobile = document.getElementById("mobile").value.trim();
+     let full_name = document.getElementById("full_name").value.trim();
      let password = document.getElementById("txtPassword").value
      let  confirmpassword = document.getElementById("TXTpassword").value
 
@@ -12,38 +12,49 @@ function signUp(e) {
     let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
     let exist = user_list.length &&
         JSON.parse(localStorage.getItem('user_list')).some(data =>
-            data.mobile.toLowerCase() == mobile.toLowerCase() &&
+            data.mobile.toLowerCase() == mobile.toLowerCase() ||
             data.email.toLowerCase() == email.toLowerCase()
             
         );
 
 
     if(!exist){
-        user_list.push({ "email": email, "mobile": mobile, "full_name" : full_name, "password":  password,
-         confirmpassword });
+        if( password == confirmpassword)
+        {
+        user_list.push({ 
+            "email": email,
+         "mobile": mobile, 
+         "full_name" : full_name, 
+         "password":  password,
+         "confirmpassword": confirmpassword ,
+         date_birth,
+         gender,
+         street,
+         city,
+         district,
+         state
+          
+        });
         localStorage.setItem('user_list', JSON.stringify(user_list));
+      
         console.log(localStorage.getItem('user_list'));
         document.querySelector('form').reset();
         document.getElementById('mobile').focus();
         document.getElementById('email').focus();
-        if( password == confirmpassword)
-        {
             alert("Account created Successfully ✅");
              location.href="./user_login.html";
         }
         else{
-            alert("Invalid Confirm password  ❌");
+            alert("Invalid Confirm password ..❌");
         }
-    
-    
     }
     else{
         alert('Sorry the User already Exist  ..❌!! \n Try with different Phone number or email');
         document.querySelector('form').reset();
     }
     
-   
 }
+
 
 const signIn = e =>{
         let mobile = document.getElementById('mobile').value,
@@ -52,13 +63,15 @@ const signIn = e =>{
         let exist = user_list.length &&
         JSON.parse(localStorage.getItem('user_list')).some(data =>
             data.mobile.toLowerCase() == mobile &&
-            data.password.toLowerCase() == password);
+            data.password == password);
         if(!exist){
             alert("Incorrect login credentials..❌");
         }
         else{
             alert("Your login in successful ..✅");
             location.href = "./user_interface.html";
+            localStorage.setItem("user_data", JSON.stringify(mobile));
         }
         e.preventDefault();
     }
+

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-    <link rel="stylesheet" href="./assets/css/normalize.css">
+   
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/user_profile.css">
@@ -116,32 +116,45 @@
                     <div class="wrapper">
                             <input type="file" class="my_file">
                     </div>
-                    <h2>Name:<p id="user_name">Boobalan</p></h2>
-             <label for="dobb"> Date of Birth   <input type="date" placeholder="date of birth" id="dobb"></label>
+                    <h2>Name:<p id="user_name">  <input type="text" placeholder="Full name" id="full_name1" readonly/>
+                    </p></h2>
+             <label for="dobb"> Date of Birth   <input type="date" placeholder="date of birth" id="dobb" disabled></label>
             
                  </div>
             <div class="details">
                 <h2>Personal Information</h2>
                 <div>
-                    <label for="full_name">Full Name</label>
-                    <input type="text" placeholder="Full name" id="full_name" />
+                    <label for="full_name" >Full Name</label>
+                    <input type="text" placeholder="Full name" id="full_name" disabled/>
             
                     <label for="gender">Gender</label>
-                    <input type="text" placeholder="Gender" id="gender" />
+                    <input type="text" placeholder="Gender" id="gender" disabled/>
                 </div>
 
 
                 <div>
                     <label for="email">Email address</label>
-                        <input type="email" placeholder="Your Email address" id="email"/>
+                        <input type="email" placeholder="Your Email address" id="email" disabled/>
 
                     <label for="mobile"> Mobile Number </label>
-                       <input type="number" placeholder="Your Mobile Number" id="mobile"/> 
+                       <input type="number" placeholder="Your Mobile Number" id="mobile" disabled/> 
                </div>
               
+               <div>
+                <label for="street"> Street Name </label>
+                <input type="text"  id="street" disabled/> 
+                <label for="city"> City Name</label>
+                <input type="text"  id="city" disabled/> 
+               </div>
+               <div>
+                <label for="district"> District Name</label>
+                <input type="text"  id="district" disabled/> 
+                <label for="state"> State Name </label>
+                <input type="text"  id="state" disabled/> 
+               </div>
              <div class="button">
-                <a href="../user/user_interface.html"><button type="button">Save</button></a>
-                <a href="../user/./user_profile.html"><button type="button">Edit</button></a>
+          
+                <a href="../user/user_profile_edit.html"><button type="button">Edit</button></a>
              </div>
             </div>
             </div>
@@ -228,25 +241,40 @@
   </div>
   </div>
   <script>
-    const full_name= localStorage.getItem("full_name")
-    console.log(full_name);
-    const mobile_number=localStorage.getItem("mobile")
-    console.log(mobile_number);
-    const user_email= localStorage.getItem("email")
-    console.log(user_email);
-    
+ 
+ //get value from local storage
+ let user_data = JSON.parse(localStorage.getItem("user_data"));
+ let user_list= JSON.parse(localStorage.getItem("user_list"));
+
+        function profile_data(e){
+            return e.mobile == user_data;
+        }
+        person_data = user_list.find(profile_data);
+
+        
+        document.getElementById("full_name").value = person_data["full_name"];
+        document.getElementById("dobb").value = person_data["date_birth"];
+        document.getElementById("full_name1").value = person_data["full_name"];
+        document.getElementById("mobile").value = person_data["mobile"];
+        document.getElementById("email").value = person_data["email"];
+        document.getElementById("gender").value = person_data["gender"];
+        document.getElementById("street").value = person_data["street"];
+        document.getElementById("city").value = person_data["city"];
+        document.getElementById("district").value = person_data["district"];
+        document.getElementById("state").value = person_data["state"];
     
 
-    document.getElementById("full_name").value = full_name
-    document.getElementById("email").value = user_email
-    document.getElementById("mobile").value = mobile_number
-   
+    // document.getElementById("full_name").value = full_name;
+    // document.getElementById("email").value = user_email;
+    // document.getElementById("gender").value = gender;
+    // document.getElementById("mobile").value = mobile_number;
 
-    // document.getElementById("user_name").innerText = fullname
 
 
   </script>
 <script src="../js/menubar.js"></script>
+
+
     </body>
     </html>
     

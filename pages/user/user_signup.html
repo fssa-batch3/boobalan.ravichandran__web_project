@@ -23,26 +23,30 @@
         <h1>Create Your Account</h1>
         <div class="form-group">
              
-                <input type="number" class="form-control" id="mobile" required="true"/> 
+                <input type="number" class="form-control" id="mobile" required="true" pattern="[0-9].{9}" title="Enter 10 number only"  maxlength="10" /> 
                 <label for="mobile"  class="form-label"> Mobile Number </label>
         </div>
+        <div class="error"></div>
         <div class="form-group">
-           
-                <input type="email" class="form-control" id="email" required />
+                <input type="email" class="form-control" id="email" required  name="submit"  value="" >
                 <label for="email" class="form-label">Email address</label>
         </div>
         <div class="form-group" >
             
-            <input type="text"class="form-control" id="full_name" required />
+            <input type="text"class="form-control" id="full_name" required="true"  pattern="[a-zA-Z]+"/>
             <label for="full_name"  class="form-label">Enter Your Full Name</label>
         </div>
+        
         <div class="form-group">
            
-            <input type="password" class="form-control" id="txtPassword" required="true" />
+            <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="6" 
+            title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters"    required="true"/>
             <label for="txtPassword"  class="form-label">Set Password</label>
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" id="TXTpassword" required="true" />
+            <input type="password" class="form-control" id="TXTpassword" 
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="6" 
+             title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters"  required="true"/>
             <label for="TXTpassword"  class="form-label">Confirm Password</label>
         </div>
         <div class="form-group">
@@ -52,12 +56,33 @@
             </label>
                  </div>
         <div class="btn1">
-          <button type="submit" >Continue</button>
+          <button type="submit" >Register</button>
         </div>
         </form>
     </div>
     <script src="../js/signup_login.js"> </script>
-        
+        <!-- <script>
+             let email = document.getElementById("email").value
+             function ValidateEmail(inputText)
+            {
+            let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(inputText.value.match(mailformat))
+            {
+            alert("Valid email address!");
+            document.form1.text1.focus();
+            return true;
+            }
+            else if( email == ""){
+                alert("Valid email address!");
+            }
+            else
+            {
+            alert("You have entered an invalid email address!");
+            document.form1.text1.focus();
+            return false;
+            }
+            }
+        </script> -->
 <!-- 
 //        function signup(){
 //         const email = document.getElementById("email").value
