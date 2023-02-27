@@ -11,13 +11,13 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
 
 List of features:
 1. User CRUD:
-*User sign up.
-*User login.
-*User edit data in profile page.
-*User delete account.
+* User sign up.
+* User login.
+* User edit data in profile page.
+* User delete account.
 
 2. Product CRUD:
-*Product Create.
-*product showing.
-*Edit product details.
-*Delete product.
+* Product Create.
+* product showing.
+* Edit product details.
+* Delete product.
