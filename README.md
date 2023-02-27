@@ -1,5 +1,5 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_boobalan.ravichandran__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_boobalan.ravichandran__web_project)
-Fert Agro Boomi
+# Fert Agro Boomi
 
 This project is about Fertilizers,Fungicides,Growth Promoters buying website. The following are my wireframe, problem statement, userflow.
 * Wireframe link: https://drive.google.com/drive/u/0/folders/1GmGFyJsOcinWxKe0CQtdE-LAJ83ncgCG
