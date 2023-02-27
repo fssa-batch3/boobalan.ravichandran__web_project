@@ -9,7 +9,8 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
 * Userflow: https://drive.google.com/drive/u/0/folders/1GmGFyJsOcinWxKe0CQtdE-LAJ83ncgCG
 
 
-List of features:
+# List of features:
+
 # User CRUD:
 * User sign up.
 * User login.
