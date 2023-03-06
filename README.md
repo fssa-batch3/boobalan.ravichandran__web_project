@@ -22,3 +22,25 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
 * product showing.
 * Edit product details.
 * Delete product.
+
+### Category CRUD
+* Category Create.
+* Category showing.
+* Edit category details.
+* Delete category.
+
+### Order 
+* Create Order.
+* Read Order.
+* Delete order.
+
+### Wishlist 
+* Wishlist Create.
+* Wishlist Read.
+* Delete Wishlist.
+
+### Add to cart
+* Add to cart Create.
+* Add to cart Read.
+* Add to cart Update.
+* Add to cart Delete.
