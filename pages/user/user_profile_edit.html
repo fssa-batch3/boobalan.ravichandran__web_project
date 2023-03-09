@@ -22,7 +22,7 @@
 <body>
    
     <main>
-        <form  onsubmit="update(event)">
+        <form  >
 
             <div class="details">
                 <h2>Edit Personal Details</h2>
@@ -54,7 +54,8 @@
                 <input type="text"  id="state"/> 
                </div>
              <div class="button">
-                <button type="submit">Save</button>
+                <button type="submit " id="save_data">Save</button>
+                <a href="./user_profile.html"><button type="button">Cancel</button></a>
              </div>
             </div>
             </div>
@@ -77,20 +78,19 @@
         function profile_data(e){
             return e.mobile == user_data;
         }
-        person_data = user_list.find(profile_data);
+        const person_data = user_list.find(profile_data);
 
         // document.getElementById("id name").value = person_data["variable name"];
-
-        document.getElementById("full_name").innerText = person_data["full_name"];
-        document.getElementById("gender").innerText = person_data["gender"];
-        document.getElementById("dobb").innerText = person_data["date_birth"];
-        document.getElementById("street").innerText = person_data["street"];
-        document.getElementById("city").innerText = person_data["city"];
-        document.getElementById("district").innerText= person_data["district"];
-        document.getElementById("state").innerText = person_data["state"];
-
+       
+        document.getElementById("full_name").value = person_data["full_name"];
+        document.getElementById("gender").value = person_data["gender"];
+        document.getElementById("dobb").value = person_data["date_birth"];
+        document.getElementById("street").value = person_data["street"];
+        document.getElementById("city").value= person_data["city"];
+        document.getElementById("district").value= person_data["district"];
+        document.getElementById("state").value = person_data["state"];
         
-
+document.getElementById("save_data").addEventListener("click",
     function update(e){
         e.preventDefault();
         let up_name = document.getElementById("full_name").value
@@ -116,6 +116,7 @@
 
 
     }
+)
   
 
 

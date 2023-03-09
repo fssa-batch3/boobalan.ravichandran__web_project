@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-    <link rel="stylesheet" href="./assets/css/normalize.css">
+
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -109,72 +109,72 @@
         </div>
 </div>
     <main>
-       <div class="delivery">
-        <h1>Delivery details</h1>
-        <div class="contact11">
-            <h3>CONTACT INFORMATION</h3>
-            <div class="first_last">
-               <div>
-                <label for="full_name">FIRST NAME</label>
-                <input class="disty" type="text" placeholder="FIRST NAME" id="first_name" />
-               </div>
-               <div >
-                <label id="full" for="full_name">LAST NAME</label>
-                <input class="disty" type="text" placeholder="LAST NAME" id="last_name" />
-               </div>
-            </div>
-            <div class="first_last">
-                <div>
-                    <label for="mobile">MOBILE NUMBER </label>
-                <input class="disty" type="number" placeholder="MOBILE NUMBER" id="mobile"/> 
-                   </div>
+       <form>
+        <div class="delivery">
+            <h1>Delivery details</h1>
+            <div class="contact11">
+                <h3>CONTACT INFORMATION</h3>
+                <div class="first_last">
                    <div>
-                    <label id="full1" for="mobile">EMAIL</label>
-                <input class="disty" type="mail" placeholder="EAMIL ADDRESS" id="email"/> 
+                    <label for="full_name">First Name</label>
+                    <input class="disty" type="text" placeholder="FIRST NAME" id="first_name" />
                    </div>
-            </div>
-        </div>
-        <div class="del_address">
-            <h3>DELIVERY ADDRESS</h3>
-            <div class="del_address1">
-                <div class="img">
-                    <img src="../../assets/images/home.gif" alt="home gif">
-                    <p>HOME</p>
+                   <div >
+                    <label id="full" for="full_name">Last Name</label>
+                    <input class="disty" type="text" placeholder="LAST NAME" id="last_name" />
+                   </div>
                 </div>
-               <div class="img">
-                <img src="../../assets/images/office.gif" alt=" office gif">
-                <p>OFFICE</p>
-               </div>
-            </div>
-            <div class="city_zip">
-                <div class="city_zip1">
-                    <label>CITY</label>
-                    <input type="text" id="city" >
-                </div>
-                <div class="city_zip1">
-                    <label >ADDRESS</label>
-                    <input type="text" id="address">
-                </div>
-                <div class="city_zip1">
-                    <label >ZIP CODE</label>
-                    <input type="text" id="zip">
+                <div class="first_last">
+                    <div>
+                        <label for="mobile">Mobile Number</label>
+                    <input class="disty" type="number" placeholder="MOBILE NUMBER" id="mobile"/> 
+                       </div>
+                       <div>
+                        <label id="full1" for="mobile">Email</label>
+                    <input class="disty" type="mail" placeholder="EAMIL ADDRESS" id="email"/> 
+                       </div>
                 </div>
             </div>
-            <div class="pay_met">
-                <h3>PAYMENT METHOD</h3>
-                <div class="payment">
-                    <img src="../../assets/images/gpay.gif" alt="gpay">
-                    <img src="../../assets/images/phonepe.gif" alt="phonepe">
-                    <img src="../../assets/images/paytm.gif" alt="paytm">
+            <div class="del_address">
+                <h3>DELIVERY ADDRESS</h3>
+                <div class="del_address1">
+                    <div class="img">
+                        <img src="../../assets/images/home.gif" alt="home " id="home" >
+                        <p>Home</p>
+                    </div>
+                   <div class="img">
+                    <img src="../../assets/images/office.gif" alt=" office gif" id="office" >
+                    <p>Office</p>
+                   </div>
                 </div>
+                <div class="city_zip">
+                   <div class="deliver_address">
+                    <label >Address</label>
+                    <textarea id="address"></textarea>
+                   </div>
+                    <div class="city_zip1">
+                        <label >Zip Code</label>
+                        <input type="text" id="zip">
+                        
+                    <div id="zip-error" style="color: red;"></div>
+                    </div>
+                </div>
+                <!-- <div class="pay_met">
+                    <h3>PAYMENT METHOD</h3>
+                    <div class="payment">
+                        <img src="../../assets/images/gpay.gif" alt="gpay">
+                        <img src="../../assets/images/phonepe.gif" alt="phonepe">
+                        <img src="../../assets/images/paytm.gif" alt="paytm">
+                    </div>
+                </div> -->
             </div>
-        </div>
-         <div class="button">
-            <a href="#"><button>CANCEL</button></a>
-           <a href="./thank_order.html"> <button type="button">SAVE & DELIVER HERE</button></a>
-         </div>
-        </div>
-        
+             <div class="button">
+                <a href="#"><button>Cancel</button></a>
+               <a href="./thank_order.html"> <button type="submit" id="save_delivery">Save & Deliver Here</button></a>
+             </div>
+            </div>
+            
+       </form>
     </main>
     <footer>
         <div class="footer1">
@@ -257,6 +257,87 @@
   </div>
   </div>
 <script src="../js/menubar.js"></script>
+
+<script>
+const productUniqueId = new URLSearchParams(window.location.search).get('orderUnique');
+
+const orderDeliveryData = JSON.parse(localStorage.getItem("orderData")) || [];
+
+const loadProduct = orderDeliveryData.find(detail => detail.orderUniqueId == productUniqueId);
+
+document.getElementById("first_name").value = loadProduct["firstName"];
+document.getElementById("last_name").value = loadProduct["lastName"];
+document.getElementById("mobile").value = loadProduct["phoneNumber"];
+document.getElementById("email").value = loadProduct["email"];
+document.getElementById("address").value = loadProduct["address"];
+document.getElementById("zip").value = loadProduct["zipCode"];
+
+const homeImg = document.getElementById("home");
+const officeImg = document.getElementById("office");
+
+let deliveryPlace = loadProduct["deliveryPlace"];
+if (deliveryPlace === "home") {
+  homeImg.classList.add("selected");
+} else if (deliveryPlace === "office") {
+  officeImg.classList.add("selected");
+}
+
+homeImg.addEventListener("click", function() {
+  if (!homeImg.classList.contains("selected")) {
+    homeImg.classList.add("selected");
+    officeImg.classList.remove("selected");
+    deliveryPlace = "home";
+  }
+});
+
+officeImg.addEventListener("click", function() {
+  if (!officeImg.classList.contains("selected")) {
+    officeImg.classList.add("selected");
+    homeImg.classList.remove("selected");
+    deliveryPlace = "office";
+  }
+});
+
+document.getElementById("save_delivery").addEventListener("click", function addProductDate(e) {
+    e.preventDefault();
+    const deliveryFirstName = document.getElementById("first_name").value;
+    const deliveryLastName = document.getElementById("last_name").value;
+    const deliveryMobile = document.getElementById("mobile").value;
+    const deliveryEmail = document.getElementById("email").value;
+    const deliveryAddress = document.getElementById("address").value;
+    const deliveryZipcode = document.getElementById("zip").value;
+
+    const zipRegex = /^6\d{5}$/;
+    if (!zipRegex.test(deliveryZipcode)) {
+      const zipError = document.getElementById("zip-error");
+      zipError.textContent = "Invalid zip code format (should start with 6 and have a length of 6)";
+      return;
+    }
+
+    loadProduct["firstName"] = deliveryFirstName;
+    loadProduct["lastName"] = deliveryLastName;
+    loadProduct["phoneNumber"] = deliveryMobile;
+    loadProduct["email"] = deliveryEmail;
+    loadProduct["deliveryPlace"] = deliveryPlace;
+    loadProduct["address"] = deliveryAddress;
+    loadProduct["zipCode"] = deliveryZipcode;
+
+
+   
+    localStorage.setItem("orderData", JSON.stringify(orderDeliveryData));
+document.querySelector('form').reset();
+    alert("Your order has been successfully accepted..✅");
+
+    const newWindow = window.open("http://127.0.0.1:5500/pages/user/thank_order.html", "_blank");
+newWindow.location.href = "http://127.0.0.1:5500/pages/user/thank_order.html";
+
+  
+});
+
+
+
+
+</script>
     </body>
     </html>
     

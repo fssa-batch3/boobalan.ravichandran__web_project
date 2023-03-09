@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-    <link rel="stylesheet" href="./assets/css/normalize.css">
+
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
@@ -114,11 +114,18 @@
 </div>
     <main>
        <div class="total">
-        <div class="fertilizer">
-           <!-- .......................////
-        ////////////////// -->
-    </div>
-        <div class="description">
+        <div class="userAlert" style="display: none;" id="like">
+            <div class="like">
+               <span class="LikeAlert"><img src="https://img.icons8.com/fluency/512/checked.png" alt="tick"> Added to your Wishlist</span>
+               </div>
+          </div>
+          <div class="userAlert" style="display: none;" id="dislike">
+            <div class="dislike">
+          <span class="LikeAlert"><img src="https://img.icons8.com/fluency/512/checked.png" alt="tick">Removed from your Wishlist</span>
+          </div>
+          </div>
+        
+        <!-- <div class="description">
             <h1>Descriptions</h1>
             <ul>
             <li>Agil Herbicide is a herbicide of the aryloxyphenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.
@@ -137,7 +144,7 @@
             <li>Dozo Maxx controls major broad and Narrow leaves weeds.
                 It provides longer duration of weed free period of 25-30 days after application.</li>
             <li> Also gives good results in Nursery, seed & Root treatments during transplantation.</li></ul>
-        </div>
+        </div> -->
     
 
     </div>
@@ -173,6 +180,24 @@
 <!-- /////////////   script tag start     ///// -->
 <script>
 
+// const productList= JSON.parse(localStorage.getItem("bio_vircides_details"))
+
+
+const productId = new URLSearchParams(window.location.search).get('product_id');
+// const productDetails = JSON.parse(localStorage.getItem('adama_details'));
+const dhanukaDetails = JSON.parse(localStorage.getItem('dhanuka_details'));
+const dowAgroScienceDetails = JSON.parse(localStorage.getItem("dow_agro_science_details"));
+
+
+
+  const loadProduct = 
+//   productDetails.find(product => product.product_unique_id === productId) ||
+   dhanukaDetails.find(detail => detail.product_unique_id === productId) ||
+   dowAgroScienceDetails.find(detail => detail.product_unique_id === productId)
+
+
+
+
    let  div_fetilizer;
    let  div_fert1;
    let  product_img ;
@@ -202,61 +227,28 @@
    let  div_a;
    let  rem2_button;
    let  div_i;
-//    let  div_description;
-//    let  description_h1;
-//    let  description_ul;
-//    let  description_li1;
-//    let  div_benifits;
-//    let  benifits_h2;
-//    let  benifits_ul;
-//    let  benifits_li1;
-//    let  benifits_li2;
-//    let  benifits_li3;
-//    let  div_method;
-//    let  method_h2;
-//    let  method_ul;
-//    let  method_li1;
-//    let  method_li2;
+   let  div_description;
+   let  description_h1;
+   let  description_ul;
+   let  description_li1;
+   let  div_benifits;
+   let  benifits_h2;
+   let  benifits_ul;
+   let  benifits_li1;
+  
+   let  div_method;
+   let  method_h2;
+   let  method_ul;
+   let  method_li1;
+ 
 
 
-
-    const details = {
-         "product_name":"AGIL HERBICIDE",
-         "production_place":"Company / Manufacture:",
-         "company":"Adama - Fertilizers",
-         "wishlist_page": "./wishlist.html",
-         "image":{
-            "source":"../../assets/images/Adama/ada1.avif",
-            "alt" : "AGIL HERBICIDE order page"
-         },
-          "price":{
-                    "text":"You Save",
-                    "currency": "₹",
-                    "actual_price": 1044,
-                    "discount": 209
-          },
-         "qty_name":"Order Qty",
-         "quantity": [1,2,3,4,5,6,7],
-         "qty_weight": "weight :",
-         "qty_units":"ml",
-         "product_quantity": 500,
-         "cart":{
-                "source": "./add_cart.html ",
-                "text": "GO TO CART"
-         },
-         "buy_now":{
-            "source":"./deliver_address.html ",
-            "text":"BUY NOW "
-         }
-        
-      
-        }
 
 // <div class="fertilizer">...</div>
      div_fetilizer = document.createElement("div");
         div_fetilizer.setAttribute("class", "fertilizer");
         document.querySelector("div.total").prepend(div_fetilizer);
-        console.log(div_fetilizer);
+        // console.log(div_fetilizer);
 
 //  <div  class="fert1">..</div>
       div_fert1 = document.createElement("div");
@@ -265,13 +257,14 @@
 
 //  <img src="../../assets/images/Adama/ada1.avif" alt="AGIL HERBICIDE order page" >
     product_img = document.createElement("img");
-    product_img.setAttribute("src", details["image"]["source"]);
-    product_img.setAttribute("alt", details["image"]["alt"]);
+    product_img.setAttribute("src", loadProduct["source"]);
+    product_img.setAttribute("alt", loadProduct["product_name"]);
+    product_img.setAttribute("id","product_image");
     div_fert1.append(product_img);
     
 //    <a href="./wishlist.html"><i id="wish1" class="fa fa-heart" style="font-size:36px"></i></a>
     product_a = document.createElement("a");
-    product_a.setAttribute("href", details["wishlist_page"]);
+    // product_a.setAttribute("href", "");
     div_fert1.append(product_a);
   
 
@@ -287,7 +280,8 @@
    div_fetilizer.append(div_fert2);
 
    div_fert2_h2 = document.createElement("h2");
-   div_fert2_h2.innerText = details ["product_name"];
+   div_fert2_h2.innerText = loadProduct["product_name"];
+   div_fert2_h2.setAttribute("id","pro_name");
    div_fert2.append(div_fert2_h2);
 
 //    <div class="fert3">....</div>
@@ -297,12 +291,12 @@
    
 // <h3>...</h3>
    div_fert3_h3 = document.createElement("h3");
-   div_fert3_h3.innerText= details["production_place"];
+   div_fert3_h3.innerText= "Company / Manufacture:";
    div_fert3.append(div_fert3_h3);
 
 // <p>...</p>
    div_fert3_p = document.createElement("p");
-   div_fert3_p.innerText = details["company"];
+   div_fert3_p.innerText = loadProduct["manufacture_company"];
    div_fert3.append(div_fert3_p);
 
 //  <div class="fert4">..</div>
@@ -312,16 +306,16 @@
 
 // <p>...</p>
    div_fert4_p = document.createElement("p");
-   const currency = details["price"]["currency"];
-   const actual_price = details["price"]["actual_price"];
-   const discount = details["price"]["discount"];
+   const actual_price = loadProduct["actual_price"];
+   const discount = loadProduct["discount"];
    const current_price = actual_price - discount;
-   div_fert4_p.innerText =  currency + current_price;
+   div_fert4_p.innerText =  "₹" + current_price;
    div_fert4.append(div_fert4_p);
 
 // <del>...</del>
     div_fert4_del = document.createElement("del");
-    div_fert4_del.innerText = details["price"]["actual_price"];
+    div_fert4_del.innerText = loadProduct["actual_price"] ;
+    div_fert4_del.setAttribute("id","actual_price");
    div_fert4.append(div_fert4_del);
 
 // <div class="fert55">..</div>
@@ -331,48 +325,33 @@
 
 // <p>...</p>
    div_fert55_p = document.createElement("p");
-   const you_save = details["price"]["text"];
-   div_fert55_p.innerText = you_save +" " + currency + discount
+   div_fert55_p.innerText = "You Save" +" " + "₹" + discount
+   div_fert55_p.setAttribute("id","dicount");
    div_fert55.append(div_fert55_p);
 
 //  <div class="fert5">..</div>
     div_fert5 = document.createElement("div");
     div_fert5.setAttribute("class", "fert5");
     div_fert2.append(div_fert5);
-// <h3>...</h3>
-   div_fert5_h3 = document.createElement("h3");
-   div_fert5_h3.innerText = details["qty_name"];
-   div_fert5.append(div_fert5_h3);
+// // <h3>...</h3>
+//    div_fert5_h3 = document.createElement("h3");
+//    div_fert5_h3.innerText ="Order Qty";
+//    div_fert5.append(div_fert5_h3);
 
-//   <select id="option">...</select>
-    select = document.createElement("select");
-    select.setAttribute("id", "option");
-    div_fert5.append(select);
+// //   <select id="option">...</select>
+//     select = document.createElement("select");
+//     select.setAttribute("id", "option");
+//     div_fert5.append(select);
 
-// <option>....</option>
-   for(i=0; i<=6; i++){
-    option1 = document.createElement("option");
-    option1.innerText = details["quantity"][i];
-    select.append(option1);
-   }
-    // option2 = document.createElement("option");
-    // option2.innerText = details["quantity"][1];
-    // select.append(option2);
-    // option3 = document.createElement("option");
-    // option3.innerText = details["quantity"][2];
-    // select.append(option3);
-    // option4 = document.createElement("option");
-    // option4.innerText = details["quantity"][3];
-    // select.append(option4);
-    // option5 = document.createElement("option");
-    // option5.innerText = details["quantity"][4];
-    // select.append(option5);
-    // option6 = document.createElement("option");
-    // option6.innerText = details["quantity"][5];
-    // select.append(option6);
-    // option7 = document.createElement("option");
-    // option7.innerText = details["quantity"][6];
-    // select.append(option7);
+// // <option>....</option>
+// for(i=1; i<=7; i++){
+//     option1 = document.createElement("option");
+//     option1.innerText = i;
+    
+//     select.append(option1);
+//    }
+    
+
 
 //  <div class="fert5">..</div>
     div_fert5_1 = document.createElement("div");
@@ -380,10 +359,8 @@
     div_fert2.append(div_fert5_1);
 // <h3>...</h3>
    div_fert5_h3_1 = document.createElement("h3");
-   const weight = details["qty_weight"];
-   const quantity = details["product_quantity"];
-   const units = details["qty_units"];
-   div_fert5_h3_1.innerText = weight + " " + quantity + units;
+   
+   div_fert5_h3_1.innerText = "Weight" + " " + loadProduct["product_weight"]
    div_fert5_1.append(div_fert5_h3_1);
 
 //  <div class="rem">...</div>
@@ -393,13 +370,13 @@
 
 //<a href="./add_cart.html">...</a>
     rem_a = document.createElement("a");
-    rem_a .setAttribute("href",details["cart"]["source"]);
+    rem_a .setAttribute("href"," ");
     div_rem.append(rem_a );
 
 // <button id="rem1">.....</button>
     rem_button = document.createElement("button");
     rem_button .setAttribute("id", "rem1");
-    rem_button.innerText = details["cart"]["text"];
+    rem_button.innerText = "GO TO CART";
     rem_a.append(rem_button );
 //<i>...</i>
     rem_i = document.createElement("i");
@@ -414,13 +391,14 @@
 
 // <a>...<a>
     div_a = document.createElement("a");
-    div_a .setAttribute("href",details["buy_now"]["source"]);
+    div_a .setAttribute("href", "http://127.0.0.1:5500/pages/user/order_summary.html?order=" + loadProduct["product_unique_id"]);
     div_div.append(div_a );
 
 // <button id="rem2">.....</button>
     rem2_button = document.createElement("button");
     rem2_button .setAttribute("id", "rem2");
-    rem2_button.innerText = details["buy_now"]["text"];
+    rem2_button.setAttribute("type","submit");
+    rem2_button.innerText = "BUY NOW ";
     div_a.append(rem2_button );
 
 // <i>...</i>
@@ -430,77 +408,233 @@
     div_i.setAttribute("style","font-size:25px" );
     rem2_button.prepend(div_i);
 
-// //   <div class="description">...</div>
-//     div_description = document.createElement("div");
-//     div_description.setAttribute("class", "description");
-//     document.querySelector("div.total").append(div_description);
+//   <div class="description">...</div>
+    div_description = document.createElement("div");
+    div_description.setAttribute("class", "description");
+    document.querySelector("div.total").append(div_description);
 
-// // <h1>...</h1>
-//     description_h1 = document.createElement("h1");
-//     description_h1 .innerText = details["description"]["heading"];
-//     div_description.append(description_h1);
+// <h1>...</h1>
+    description_h1 = document.createElement("h1");
+    description_h1 .innerText ="Descriptions";
+    div_description.append(description_h1);
 
-// // <ul>...</ul>
-//     description_ul = document.createElement("ul");
-//     div_description.append(description_ul);
+// <ul>...</ul>
+    description_ul = document.createElement("ul");
+    div_description.append(description_ul);
 
-// // <li>...</li>
-//     description_li1 = document.createElement("li");
-//     description_li1.innerText = details["description"]["explanation"];
-//     description_ul.append(description_li1);
+// <li>...</li>
+    description_li1 = document.createElement("li");
+    description_li1.innerText = loadProduct["description"];
+    description_ul.append(description_li1);
 
-// //   <div class="benifits">...</div>
-//     div_benifits = document.createElement("div");
-//     div_benifits.setAttribute("class", "benifits");
-//     document.querySelector("div.total").append(div_benifits);
+//   <div class="benifits">...</div>
+    div_benifits = document.createElement("div");
+    div_benifits.setAttribute("class", "benifits");
+    document.querySelector("div.total").append(div_benifits);
 
-//     // <h2>...</h2>
-//     benifits_h2 = document.createElement("h2");
-//     benifits_h2.innerText = details["benefits"]["heading"];
-//     div_benifits.append(benifits_h2);
+    // <h2>...</h2>
+    benifits_h2 = document.createElement("h2");
+    benifits_h2.innerText = "Benefits";
+    div_benifits.append(benifits_h2);
 
-// // <ul>...</ul>
-//     benifits_ul = document.createElement("ul");
-//     div_benifits.append(benifits_ul);
+// <ul>...</ul>
+    benifits_ul = document.createElement("ul");
+    div_benifits.append(benifits_ul);
 
-// // <li>...</li>
-//     benifits_li1 = document.createElement("li");
-//     benifits_li1.innerText = details["benefits"]["advantage_one"];
-//     benifits_ul.append(benifits_li1);
+// <li>...</li>
+    benifits_li1 = document.createElement("li");
+    benifits_li1.innerText = loadProduct["benifits"];
+    benifits_ul.append(benifits_li1);
+
+//   <div class="method">...</div>
+    div_method = document.createElement("div");
+    div_method.setAttribute("class", "method");
+    document.querySelector("div.total").append(div_method);
+
+    // <h2>...</h2>
+    method_h2 = document.createElement("h2");
+    method_h2.innerText = "Method of Application";
+    div_method.append(method_h2);
+
+// <ul>...</ul>
+    method_ul = document.createElement("ul");
+    div_method.append(method_ul);
+
+// <li>...</li>
+    method_li1 = document.createElement("li");
+    method_li1.innerText = loadProduct["application"];
+    method_ul.append(method_li1);
     
-// // <li>...</li>
-//     benifits_li2 = document.createElement("li");
-//     benifits_li2.innerText = details["benefits"]["advantage_two"];
-//     benifits_ul.append(benifits_li2);
-    
-// // <li>...</li>
-//     benifits_li3 = document.createElement("li");
-//     benifits_li3.innerText = details["benefits"]["advantage_three"];
-//     benifits_ul.append(benifits_li3);
 
-// //   <div class="method">...</div>
-//     div_method = document.createElement("div");
-//     div_method.setAttribute("class", "method");
-//     document.querySelector("div.total").append(div_method);
+//    let orderQuantity = document.getElementById("option").value
 
-//     // <h2>...</h2>
-//     method_h2 = document.createElement("h2");
-//     method_h2.innerText = details["application"]["name"];
-//     div_method.append(method_h2);
 
-// // <ul>...</ul>
-//     method_ul = document.createElement("ul");
-//     div_method.append(method_ul);
+// document.getElementById("rem2").addEventListener("click",
+//     function buyNow(e){
+//         e.preventDefault();
+//         let order_summary_details = JSON.parse(localStorage.getItem('order_summary_details')) || [];
 
-// // <li>...</li>
-//     method_li1 = document.createElement("li");
-//     method_li1.innerText = details["application"]["methodology_one"];
-//     method_ul.append(method_li1);
-    
-// // <li>...</li>
-//     method_li2 = document.createElement("li");
-//     method_li2.innerText = details["application"]["methodology_two"];
-//     method_ul.append(method_li2);
+//         let exit = order_summary_details.some(data =>
+//          data.order_summary_details == order_summary_details 
+//          );
+
+//          if(!exit){
+
+
+//         order_summary_details.push({
+//               "productName": loadProduct["product_name"],
+//               "actualPrice" : loadProduct["actual_price"],
+//               "discountPrice" : loadProduct["discount"],
+//               "productImage": loadProduct["source"],
+//               "productWeight": loadProduct["product_weight"]
+
+
+// });
+// localStorage.setItem("order_summary_details",JSON.stringify(order_summary_details));
+//          }
+// location.href="../user/order_summary.html"
+
+// }
+// )
+
+
+// let button = document.querySelector("#wish1");
+
+
+// button.addEventListener("click",
+// function(event) {
+//     this.classList.toggle("fa-solid");
+//     this.classList.toggle("true");
+
+//     let wishlisstItem = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
+//     let productUniqueId  = wishlisstItem["product_id"];
+//     let exit = wishlisstItem.length &&
+//     JSON.parse(localStorage.getItem("wishlisstItem")).some(data =>
+//     data.product_id == productUniqueId)
+
+
+//    if(this.classList.contains("true")&&!exit){
+//     this.setAttribute("like", "true");
+//     wishlisstItem.push({
+//         "product_id":loadProduct["product_unique_id"],
+//         "product_name":loadProduct["product_name"],
+//         "product_price":loadProduct["actual_price"],
+//         "product_discount":loadProduct["discount"],
+//         "product_image":loadProduct["source"]
+
+//     })
+//     localStorage.setItem("wishlisstItem",JSON.stringify(wishlisstItem));
+//    }
+
+//    else{
+//     this.setAttribute("like", "false");
+//     let wishlistRemove = JSON.parse(localStorage.getItem("wishlisstItem")) ;
+//      function removeWish(e){
+//         return e.product_id ==productUniqueId;
+//      }
+//      wish_product = wishlistRemove.find(removeWish);
+//      const indexOfwish = wishlistRemove.indexOf(wish_product);
+//      wishlistRemove.splice(indexOfwish, 1);
+//      localStorage.setItem("wishlisstItem",JSON.stringify(wishlistRemove));
+//    }
+
+// })
+let button = document.querySelector("#wish1");
+
+button.addEventListener("click", function(event) {
+    this.classList.toggle("fa-solid");
+    this.classList.toggle("true");
+    this.classList.toggle("active");
+    this.style.color = "rgb(7, 14, 88)";
+
+    let wishlisstItem = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
+    let productUniqueId = loadProduct["product_unique_id"];
+    let exit = wishlisstItem.length && wishlisstItem.some(data => data.product_id == productUniqueId);
+
+    if (this.classList.contains("true") && !exit) {
+        this.setAttribute("like", "true");
+       
+        wishlisstItem.push({
+            "product_id": productUniqueId,
+            "product_name": loadProduct["product_name"],
+            "product_price": loadProduct["actual_price"],
+            "product_discount": loadProduct["discount"],
+            "product_image": loadProduct["source"]
+        });
+        localStorage.setItem("wishlisstItem", JSON.stringify(wishlisstItem));
+        // showMessage("Added to your Wishlist");
+    } else {
+        this.setAttribute("like", "false");
+        let wishlistRemove = wishlisstItem.filter(data => data.product_id != productUniqueId);
+        localStorage.setItem("wishlisstItem", JSON.stringify(wishlistRemove));
+         this.style.color = "rgb(198, 198, 198)";
+        // showMessage("Removed from your Wishlist");
+    }
+});
+
+function timeout(){ 
+    let like=document.getElementById("like")
+    like.style.display="none";
+}
+
+function timeout2(){
+    let dislike=document.getElementById("dislike")
+    dislike.style.display="none";
+}
+
+function likeAlert(){
+    if(this.classList.contains("active")){
+        let like=document.getElementById("like")
+        like.style.display="block"
+        setTimeout(timeout,1200)
+    } else {
+        let dislike=document.getElementById("dislike")
+        dislike.style.display= "block";
+        setTimeout(timeout2,1200)
+    }
+}
+
+button.addEventListener("click",likeAlert)
+
+function findLike(){
+    let wishlisstItem = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
+    let productUniqueId = loadProduct["product_unique_id"];
+    let exit = wishlisstItem.length && wishlisstItem.some(data => data.product_id == productUniqueId);
+    if(exit){
+        button.classList.add("fa-solid");
+        button.classList.add("true");
+        button.classList.add("active");
+        button.style.color = "rgb(7, 14, 88)";
+    } else {
+        button.classList.remove("fa-solid");
+        button.classList.remove("true");
+        button.classList.remove("active");
+        button.style.color = "rgb(198, 198, 198)";
+    }
+}
+
+
+window.onload = function() {
+    findLike();
+}
+
+
+// function findLike(){
+//     let wishlisstItem = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
+//     let productUniqueId = loadProduct["product_unique_id"];
+//     let exit = wishlisstItem.length && wishlisstItem.some(data => data.product_id == productUniqueId);
+//         if(exit){
+//           button.classList.toggle("fa-solid")
+//           button.style.color = "rgb(7, 14, 88)";
+//         }
+//         else{
+//             button.style.color="rgb(198, 198, 198)";
+//         }
+//   }
+//   window.onload = function() {
+//     findLike();
+// }
+
 </script>
 </body>
 </html>

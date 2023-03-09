@@ -194,6 +194,27 @@
   </div>
   </div>
   </div>
-<script src="../js/menubar.js"></script>
+<script src="../js/menubar.js"> </script>
+<!-- <script>
+    const quantitySelect = document.getElementById("quantity");
+const weightSelect = document.getElementById("weight");
+const actualPrice = document.getElementById("actual-price");
+const discountedPrice = document.getElementById("discounted-price");
+const savings = document.getElementById("savings");
+
+quantitySelect.addEventListener("change", updatePrice);
+weightSelect.addEventListener("change", updatePrice);
+
+function updatePrice() {
+  const quantity = parseInt(quantitySelect.value);
+  const weight = parseInt(weightSelect.value);
+  const price = quantity * weight * 3;
+  const discount = Math.round(price * 0.1);
+  actualPrice.innerText = `₹${price}`;
+  discountedPrice.innerText = `₹${price - discount}`;
+  savings.innerText = `You Save: ₹${discount}`;
+}
+
+</script> -->
 </body>
 </html>

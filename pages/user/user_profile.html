@@ -108,54 +108,64 @@
         </div>
 </div>
     <main>
-        <form>
-            <div class="form1">
+        <form >
+            <div class="form1" >
 
                 <div class="details1">
 
                     <div class="wrapper">
                             <input type="file" class="my_file">
                     </div>
-                    <h2>Name:<p id="user_name">  <input type="text" placeholder="Full name" id="full_name1" readonly/>
+                    <h2>Name:<p id="user_name">  <input type="text"  id="full_name1" readonly/>
                     </p></h2>
-             <label for="dobb"> Date of Birth   <input type="date" placeholder="date of birth" id="dobb" disabled></label>
+             <label for="dobb"> Date of Birth : <input type="date"  id="dobb" disabled></label>
             
                  </div>
             <div class="details">
                 <h2>Personal Information</h2>
                 <div>
                     <label for="full_name" >Full Name</label>
-                    <input type="text" placeholder="Full name" id="full_name" disabled/>
-            
+                    <input type="text"  id="full_name" disabled/>
+                </div>
+                <div>
                     <label for="gender">Gender</label>
-                    <input type="text" placeholder="Gender" id="gender" disabled/>
+                    <input type="text" id="gender" disabled/>
                 </div>
 
 
                 <div>
                     <label for="email">Email address</label>
-                        <input type="email" placeholder="Your Email address" id="email" disabled/>
-
+                        <input type="email" id="email" disabled/>
+</div>
+<div>
                     <label for="mobile"> Mobile Number </label>
-                       <input type="number" placeholder="Your Mobile Number" id="mobile" disabled/> 
+                       <input type="number" id="mobile" disabled/> 
                </div>
               
                <div>
                 <label for="street"> Street Name </label>
                 <input type="text"  id="street" disabled/> 
+                </div>
+                <div>
                 <label for="city"> City Name</label>
                 <input type="text"  id="city" disabled/> 
                </div>
                <div>
                 <label for="district"> District Name</label>
                 <input type="text"  id="district" disabled/> 
+                </div>
+                <div>
                 <label for="state"> State Name </label>
                 <input type="text"  id="state" disabled/> 
                </div>
              <div class="button">
           
-                <a href="../user/user_profile_edit.html"><button type="button">Edit</button></a>
+                <button type="button" id="edit" >Edit</button></a>
+                <button type="submit" id="del_account">Delete</button>
              </div>
+             <!-- <div>
+                <button type="submit" onclick="logOut()">Logout</button>
+             </div> -->
             </div>
             </div>
         </form>
@@ -242,6 +252,15 @@
   </div>
   <script>
  
+
+
+    document.getElementById("edit").addEventListener("click", 
+     function edit(){
+        window.location.href="./user_profile_edit.html";
+    }
+    )
+
+ 
  //get value from local storage
  let user_data = JSON.parse(localStorage.getItem("user_data"));
  let user_list= JSON.parse(localStorage.getItem("user_list"));
@@ -249,32 +268,63 @@
         function profile_data(e){
             return e.mobile == user_data;
         }
+
+
+       person_data = user_list.find(profile_data);
+
+    document.getElementById("full_name").value = person_data["full_name"];
+    document.getElementById("dobb").value = person_data["date_birth"]
+        document.getElementById("full_name1").value = person_data["full_name"]
+        document.getElementById("mobile").value = person_data["mobile"]
+        document.getElementById("email").value = person_data["email"]
+        document.getElementById("gender").value = person_data["gender"]
+        document.getElementById("street").value = person_data["street"]
+        document.getElementById("city").value = person_data["city"]
+        document.getElementById("district").value = person_data["district"]
+        document.getElementById("state").value = person_data["state"]
+
+//  logout function
+const del_account = document.getElementById("del_account")
+     del_account.addEventListener("click",
+     function deleteAcc(e)
+        {
+            if(confirm("Are you sure to delete your account?")){
+                  e.preventDefault();
+            //get value from local storage
+            let user_data = JSON.parse(localStorage.getItem("user_data"));
+            let user_list= JSON.parse(localStorage.getItem("user_list"));
+
+        function profile_data(e){
+            return e.mobile == user_data;
+        }
+         // finding the userData which unique_id correctly matches
         person_data = user_list.find(profile_data);
-
         
-        document.getElementById("full_name").value = person_data["full_name"];
-        document.getElementById("dobb").value = person_data["date_birth"];
-        document.getElementById("full_name1").value = person_data["full_name"];
-        document.getElementById("mobile").value = person_data["mobile"];
-        document.getElementById("email").value = person_data["email"];
-        document.getElementById("gender").value = person_data["gender"];
-        document.getElementById("street").value = person_data["street"];
-        document.getElementById("city").value = person_data["city"];
-        document.getElementById("district").value = person_data["district"];
-        document.getElementById("state").value = person_data["state"];
-    
 
-    // document.getElementById("full_name").value = full_name;
-    // document.getElementById("email").value = user_email;
-    // document.getElementById("gender").value = gender;
-    // document.getElementById("mobile").value = mobile_number;
+            const indexOfUser = user_list.indexOf(person_data);
 
+            // console.log(result);
+            // user_list.splice(position(which means index 1,2,3,4), counting);
+            user_list.splice(indexOfUser, 1);
+            localStorage.setItem("user_list", JSON.stringify(user_list));
+            window.location.href="../../index.html";
+        };
+
+    }
+)
 
 
   </script>
 <script src="../js/menubar.js"></script>
 
 
+<!-- <script>
+const uuid = require('uuid')
+const unique_id = uuid.v4();
+
+ 
+</script>  -->
+
     </body>
     </html>
-    
+    <a href=""></a>

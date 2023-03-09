@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-        <link rel="stylesheet" href="./assets/css/normalize.css">
+        
         <link rel="stylesheet" href="../../assets/css/footer.css">
         <link rel="stylesheet" href="../../assets/css/header.css">
         <link rel="stylesheet" href="../../assets/css/wishlist.css">
@@ -109,43 +109,27 @@
 </div>
     <main>
         <div class="wishlist">
-            <h2>My collections<i id="win" class="fa fa-heart" style="font-size:35px"></i><i id="win101" class="fa fa-heart" style="font-size:20px"></i></h2>
-            <div class="fertilizer">
+            <h2>My collections<i id="win" class="fa fa-heart" style="font-size:35px"></i></i></h2>
+            <!-- <div class="fertilizer">
                 <div  class="fert1">
                     <a href="./dhanu1.html"><img src="../../assets/images/dhanuka/dhan1.jpg" alt="SEMPRA HERBICIDE"></a>
                  </div>
                  <div class="fert2">
-                    <a href="./dhanu1.html"><p>SEMPRA HERBICIDE</p></a>
+                    <div class="product_details">
+                        <a href="./dhanu1.html"><p>SEMPRA HERBICIDE</p></a>
+                    <div class="pro_price">
+                        <h2>---</h2>
+                        <h3>....</h3>
+                    </div>
+                     <div class="you_save">
+                        <h2>---</h2>
+                     </div>
+                     </div>
+
                     <a href="../user/user_interface.html"><button class="remov">Remove</button></a>
                  </div>
-            </div>
-            <div class="fertilizer">
-                <div class="fert1">
-               <a href="./adama.html"> <img src="../../assets/images/Adama/ada1.avif" alt="AGIL HERBICIDE"></a>
-                </div>
-                <div class="fert2">
-                <a href="./adama1.html"><p>AGIL HERBICIDE</p></a>
-                <a href="../user/user_interface.html"><button class="remov">Remove</button></a>
-            </div>
-            </div>
-            <div class="fertilizer">
-                <div class="fert1">
-                    <a href="./bio2.html"><img src="../../assets/images/Bio Fertilizers/bio2.avif" alt="GEOLIFE VIGORE GOLD"></a>
-                </div>
-                <div class="fert2">
-                    <a href="bio2.html"><p>GEOLIFE VIGORE GOLD</p></a>
-                    <a href="../user/user_interface.html"><button class="remov">Remove</button></a>
-                </div>
-            </div>
-            <div class="fertilizer">
-                <div class="fert1">
-                    <a href="./vir3.html"><img src="../../assets/images/Viricides/vir3.avif" alt="GEOLIFE NO VIRUS (BIO VIRICIDE FOR CHILLI PLANTS)"></a>
-                </div>
-                <div class="fert2">
-                    <a href="vir3.html"><p>GEOLIFE NO VIRUS </p></a>
-                    <a href="../user/user_interface.html"><button class="remov">Remove</button></a>
-                </div>
-            </div>
+            </div> -->
+            
         </div>
     </main>
     <footer>
@@ -230,13 +214,104 @@
   </div>
 <script src="../js/menubar.js"></script>
 
-<!-- <script>
-     div_fetilizer = document.createElement("div");
-        div_fetilizer.setAttribute("class", "fertilizer");
-        document.querySelector("div.total").append(div_fetilizer);
-        console.log(div_fetilizer);
+<script>
 
-</script> -->
+
+
+// -------wishlist product get here -------
+let wishListProduct = JSON.parse(localStorage.getItem("wishlisstItem"));
+
+
+
+for(i=0; i<wishListProduct.length; i++){
+
+     div_fertilizer = document.createElement("div");
+    div_fertilizer.setAttribute("class", "fertilizer");
+    document.querySelector("div.wishlist").append(div_fertilizer);
+        // console.log(div_fetilizer);
+
+    //  <div  class="fert1">
+    div_fert1 = document.createElement("div");
+    div_fert1.setAttribute("class", "fert1");
+    div_fertilizer.appendChild(div_fert1);
+
+  
+    fert_a = document.createElement("a");
+    fert_a.setAttribute("href", "");
+    div_fert1.append(fert_a);
+
+    image = document.createElement("img");
+    image.setAttribute("src", wishListProduct[i]["product_image"]);
+    fert_a.append(image);
+
+     //  <div  class="fert2">
+        div_fert2 = document.createElement("div");
+    div_fert2.setAttribute("class", "fert2");
+    div_fertilizer.appendChild(div_fert2);
+    
+    div_product_details = document.createElement("div");
+    div_product_details.setAttribute("class", "product_details");
+    div_fert2.append(div_product_details);
+    
+
+    fert2_a = document.createElement("a");
+    fert2_a.setAttribute("href", "");
+    div_product_details.append(fert2_a);
+
+    fert2_p = document.createElement("p");
+    fert2_p.innerText = wishListProduct[i]["product_name"];
+    fert2_a.append(fert2_p);
+
+    // <div class="pro_price">
+    //                     <h2>---</h2>
+    //                     <h3>....</h3>
+    //                 </div>
+    div_pro_price = document.createElement("div");
+    div_pro_price.setAttribute("class","pro_price");
+    div_product_details.append(div_pro_price);
+
+    div_pro_price_h2 = document.createElement("h2");
+   let discount = wishListProduct[i]["product_discount"]
+    let actual_price = wishListProduct[i]["product_price"];
+    curre_price = actual_price-discount
+    div_pro_price_h2.innerText = "₹" + curre_price;
+    div_pro_price.append(div_pro_price_h2);
+
+    div_pro_price_h3 = document.createElement("h3");
+    div_pro_price_h3.innerText = "₹" + actual_price;
+    div_pro_price.append(div_pro_price_h3);
+
+    // <div class="you_save">
+    div_pro_save = document.createElement("div");
+    div_pro_save.setAttribute("class","you_save");
+    div_product_details.append(div_pro_save);
+
+    div_discount = document.createElement("h2");
+    div_discount.innerText= "You Save:" +" " + "₹" +discount;
+    div_pro_save.appendChild(div_discount);
+
+
+    fert2_button = document.createElement("button");
+    fert2_button.setAttribute("class","remov");
+    fert2_button.setAttribute("id","remove_wishlist");
+    fert2_button.setAttribute("data-product-id", wishListProduct[i]["product_id"]);
+    fert2_button.innerText = "Remove";
+    div_fert2.append(fert2_button)
+
+
+     }
+
+     document.querySelector("#remove_wishlist").addEventListener("click", function removeWishList(event){
+  const productId = this.dataset.productId;
+  this.setAttribute("like", "false");
+  const updatedWishlist = wishListProduct.filter(product => product.product_id !== productId);
+  localStorage.setItem("wishlisstItem", JSON.stringify(updatedWishlist));
+  this.style.color = "rgb(198, 198, 198)";
+  location.reload();
+});
+
+
+</script>
     </body>
     </html>
     

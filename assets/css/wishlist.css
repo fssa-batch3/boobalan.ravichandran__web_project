@@ -9,15 +9,16 @@
 }
 .fertilizer{
     display: flex;
-    margin: 20px 50px 25px 50px ;
+    margin: 5px 50px 5px 50px ;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 10px 100px 10px 50px;
 }
 .fert1 img{
     width: 220px;
     height: 220px;
-    margin: 10px 100px 10px 200px;
+    margin: 10px 50px 10px 100px;
     padding: 20px ;
     border-radius: 5px;
 }
@@ -29,8 +30,8 @@
  font-size: 20px;
  font-weight: bolder;
  width: 550px;
- padding: 100px 0px 0px 60px;
- color: rgb(113, 28, 44);
+ padding: 20px 0px 0px 60px;
+ color: rgb(218, 16, 67);
 }
 .fert2 p:hover{
     color: rgb(14, 118, 14);
@@ -49,19 +50,48 @@
     display: none;
 }
 .remov{
-    margin-left: 27rem;
-    padding: .8rem 3rem;
-    margin-top: 1rem;
+    /* padding: .8rem 3rem; */
     background-color: rgb(6, 6, 51);
     color:white;
     border-radius:5px;
     font-size: 18px;
     font-weight: bold;
     border: none;
+    width:180px;
+    height:50px;
+    margin-top: 100px;
+    /* margin-left: -50px; */
 }
 .remov:hover{
-    background-color: rgb(4, 4, 105);
+    background-color: rgb(15, 15, 159);
     box-shadow:rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.pro_price{
+    display: flex;
+    width:300px;
+   
+   margin-top: 25px;
+}
+.pro_price h2{
+    font-size: 24px;
+}
+.pro_price h3{
+    font-size: 20px;
+    text-decoration: line-through;
+    margin-top: 12px;
+    margin-left: 30px;
+    color:rgb(22, 120, 7)
+}
+.fert2{
+    display:flex;
+    margin-top: 20px;
+}
+.product_details a p{
+    font-size: 25px;
+}
+.you_save h2{
+    color:rgb(25, 3, 52);
+    font-size: 23px;
 }
 
 /* ---------------/@media mobile resposive start/------------============= */

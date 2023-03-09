@@ -2,19 +2,24 @@
 function signUp(e) {
     e.preventDefault();
 
-     let email = document.getElementById("email").value.trim();
-     let  mobile = document.getElementById("mobile").value.trim();
-     let full_name = document.getElementById("full_name").value.trim();
-     let password = document.getElementById("txtPassword").value
-     let  confirmpassword = document.getElementById("TXTpassword").value
-
+     let email = document.getElementById("email").value
+        mobile = document.getElementById("mobile").value
+        full_name = document.getElementById("full_name").value
+        password = document.getElementById("txtPassword").value
+         confirmpassword = document.getElementById("TXTpassword").value
+         unique_id = uuidv4();
+         date_birth = "";
+         gender = "";
+        street = "";
+         city = "";
+        district ="";
+        state = "";
         //   // Parsing the JSON string back into an array, or creating an empty array if there's no data
     let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
     let exist = user_list.length &&
         JSON.parse(localStorage.getItem('user_list')).some(data =>
             data.mobile.toLowerCase() == mobile.toLowerCase() ||
             data.email.toLowerCase() == email.toLowerCase()
-            
         );
 
 
@@ -22,22 +27,23 @@ function signUp(e) {
         if( password == confirmpassword)
         {
         user_list.push({ 
-            "email": email,
-         "mobile": mobile, 
-         "full_name" : full_name, 
-         "password":  password,
-         "confirmpassword": confirmpassword ,
-         date_birth,
+        full_name,
+        email, 
+        mobile, 
+        password,
+         confirmpassword ,
+        date_birth,
          gender,
          street,
          city,
          district,
-         state
+         state,
+         unique_id
           
         });
         localStorage.setItem('user_list', JSON.stringify(user_list));
       
-        console.log(localStorage.getItem('user_list'));
+        // console.log(localStorage.getItem('user_list'));
         document.querySelector('form').reset();
         document.getElementById('mobile').focus();
         document.getElementById('email').focus();

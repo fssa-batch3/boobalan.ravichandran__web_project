@@ -121,6 +121,7 @@
     <main>
         <div class="insecticide">
             <h1 class="adama">Adama - Best Quality Pesticides for Plants Protection</h1>
+            <h1 class="adama">ஆடாமா - தாவர பாதுகாப்புக்கான சிறந்த தரமான பூச்சிக்கொல்லிகள்</h1>
             <div class="offers1">
                 <!-- /////////////////////// -->
 
@@ -220,7 +221,7 @@
         </div>
     </div>
     <script src="../js/menubar.js"></script>
-    <script>
+    <!-- <script>
         let div_today;
         let insecticide_a;
         let insecticide_img;
@@ -235,8 +236,6 @@
         const product_name = [
             {
                 "category": "fertilizer",
-
-
                 "price": {
                     "actual_price": 1044,
                     "discount": 209,
@@ -244,16 +243,10 @@
                 },
                 "image": {
                     "source": "../../assets/images/Adama/ada1.avif",
-                    "name": "AGIL HERBICID"
+                    "name": "AGIL HERBICID(அஜில் ஹெர்பிசிட்)"
                 },
-                
-                "production_place": "Company / Manufacture:",
-                "company": "Adama - Fertilizers",
-               
-                "qty_name": "Order Qty",
-                "quantity": [1, 2, 3, 4, 5, 6, 7],
-                "qty_weight": "weight :",
-                "qty_units": "ml",
+                "production_company": "Adama - Fertilizers",
+                "number_of_product": [1, 2, 3, 4, 5, 6, 7],
                 "product_quantity": 500,
 
             },
@@ -268,7 +261,7 @@
                 },
                 "image": {
                     "source": "../../assets/images/Adama/ada2.avif",
-                    "name": "PLETHORA INSECTICIDE"
+                    "name": "PLETHORA INSECTICIDE(ப்ளெதோரா பூச்சிக்கொல்லி)"
                 },
             },
             {
@@ -282,7 +275,7 @@
                 },
                 "image": {
                     "source": "../../assets/images/Adama/ada3.avif",
-                    "name": "CUSTODIA FUNGICIDE "
+                    "name": "CUSTODIA FUNGICIDE(கஸ்டோடியா பூஞ்சைக் கொல்லி) "
                 },
             },
             {
@@ -296,7 +289,7 @@
                 },
                 "image": {
                     "source": "../../assets/images/Adama/ada4.avif",
-                    "name": " TAKAF INSECTICIDE"
+                    "name": " TAKAF INSECTICIDE(தகாஃப் பூச்சிக்கொல்லி)"
                 },
             },
             {
@@ -310,7 +303,7 @@
                 },
                 "image": {
                     "source": "../../assets/images/Adama/ada5.avif",
-                    "name": "ZOHAR INSECTICIDE"
+                    "name": "ZOHAR INSECTICIDE(ஜோஹர் பூச்சிக்கொல்லி)"
                 },
             },
             {
@@ -324,7 +317,7 @@
                 },
                 "image": {
                     "source": "../../assets/images/Adama/ADA6.avif",
-                    "name": " TAPUZ INSECTICIDE"
+                    "name": " TAPUZ INSECTICIDE(தப்புஸ் பூச்சிக்கொல்லி)"
                 },
             },
             {
@@ -338,7 +331,7 @@
                 },
                 "image": {
                     "source": "../../assets/images/Adama/ada7.avif",
-                    "name": "FLAMBERGE BIO STIMULANT "
+                    "name": "FLAMBERGE BIO STIMULANT(flamberge உயிர் தூண்டுதல்) "
                 },
             },
             {
@@ -352,7 +345,7 @@
                 },
                 "image": {
                     "source": "../../assets/images/Adama/ada8.avif",
-                    "name": "SHAKED HERBICIDE "
+                    "name": "SHAKED HERBICIDE(shaked களைக்கொல்லி) "
                 },
             },
             {
@@ -366,22 +359,22 @@
                 },
                 "image": {
                     "source": "../../assets/images/Adama/ada9.avif",
-                    "name": "BENMAIN FUNGICIDE "
+                    "name": "BENMAIN FUNGICIDE(பென்மைன் பூஞ்சைக் கொல்லி) "
                 },
             }
-
+      
         ]
 
 
-        for (i = 0; i < 9; i++) {
+        for (i = 0; i < product_name.length; i++) {
             // <div class="insecticide"> </div>
             div_today = document.createElement("div");
             div_today.setAttribute("class", "today");
             document.querySelector("div.offers1").append(div_today);
             console.log(div_today);
 
-            // product page link----------------------->
-            // <a>---------------------</a>
+            // product page link-----------------------
+          //  // <a>---------------------</a>
             insecticide_a = document.createElement("a");
             insecticide_a.setAttribute("href", product_name[i]["pro_link"]);
             div_today.append(insecticide_a);
@@ -424,10 +417,10 @@
             div_price.append(price_h2);
 
             // old price----------------------
-            const currency_1 = product_name[i]["price"]["currency"];
+            
             const old_price = product_name[i]["price"]["actual_price"];
             price_del = document.createElement("del");
-            price_del.innerText = currency_1 + old_price;
+            price_del.innerText = "₹" + old_price;
             div_price.append(price_del);
 
             // save price details------------------
@@ -439,6 +432,96 @@
             document.querySelector("div.offers1").append(div_today);
 
         }
+    </script> -->
+    <script>
+        
+    let div_today;
+        let insecticide_a;
+        let insecticide_img;
+        let pro_name;
+        let div_star;
+        let star_span;
+        let div_price;
+        let price_h2;
+        let price_del;
+        let save_h3;
+        
+  let product_details = JSON.parse(localStorage.getItem("adama_details"))
+
+  
+        
+
+        for (i = 0; i < product_details.length; i++) {
+            // <div class="insecticide"> </div>
+            div_today = document.createElement("div");
+            div_today.setAttribute("class", "today");
+            div_today.setAttribute("data-id",product_details[i]["product_unique_id"])
+            document.querySelector("div.offers1").append(div_today);
+            console.log(div_today);
+
+            // product page link----------------------->
+            // <a>---------------------</a>
+            insecticide_a = document.createElement("a");
+            // insecticide_a.setAttribute("href","../../pages/user/adama1.html"+"?product="+product_details[i]["product_unique_id"]);
+            insecticide_a.setAttribute("href", "http://127.0.0.1:5500/pages/user/product_details.html?product=" + encodeURIComponent(product_details[i]["product_name"]) + "&product_id=" + product_details[i]["product_unique_id"]);
+            div_today.append(insecticide_a);
+
+            //  product image------------------
+            insecticide_img = document.createElement("img");
+            insecticide_img.setAttribute("src",product_details[i]["source"]);
+            insecticide_img.setAttribute("alt", "");
+            insecticide_a.append(insecticide_img);
+
+            
+        
+            //  product name----------------------.
+            pro_name = document.createElement("p");
+            pro_name.innerText = product_details[i]["product_name"];
+            insecticide_a.append(pro_name);
+
+            //  star div start---------------------
+            div_star = document.createElement("div");
+            div_star.setAttribute("class", "star");
+            insecticide_a.append(div_star);
+
+            // for (j = 0; j < 5; j++) {
+            //     star_span = document.createElement("span");
+            //     star_span.setAttribute("class", "fa fa-star checked");
+            //     star_span.setAttribute("style", "font-size:24px");
+            //     div_star.append(star_span);
+            // }
+
+            // price--------------------
+            div_price = document.createElement("div");
+            div_price.setAttribute("class", "price");
+            insecticide_a.append(div_price);
+
+            // current price--------------------
+            const old_price1 = product_details[i]["actual_price"];
+            const discount1 = product_details[i]["discount"];
+            const price = old_price1 - discount1;
+            price_h2 = document.createElement("h2");
+            price_h2.innerText =  "₹" + price;
+            div_price.append(price_h2);
+
+            // old price----------------------
+            
+            const old_price = product_details[i]["actual_price"];
+            price_del = document.createElement("del");
+            price_del.innerText = "₹" + old_price;
+            div_price.append(price_del);
+
+            // save price details------------------
+            save_h3 = document.createElement("h3");
+            const discount = product_details[i]["discount"];
+            save_h3.innerText = "You Save" + "  " + "₹"+ " " + discount;
+            insecticide_a.append(save_h3);
+
+            document.querySelector("div.offers1").append(div_today);
+
+        }
+
+        
     </script>
 </body>
 
