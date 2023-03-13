@@ -4,20 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" /><link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
-   
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-        
-        <link rel="stylesheet" href="../../assets/css/footer.css">
-        <link rel="stylesheet" href="../../assets/css/header.css">
-        <link rel="stylesheet" href="../../assets/css/wishlist.css">
+
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/delivery_address.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <title>Fert agri Boomi</title>
-    </head>
+    <title>Delivery address</title>
+</head>
 
 <body>
     <div class="header">
@@ -108,30 +109,72 @@
         </div>
 </div>
     <main>
-        <img id="empty-wishlist" src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-2130356-1800917.png" alt="wishlist image">
-        <div class="wishlist">
-            <!-- <h2 id="collection">My collections<i id="win" class="fa fa-heart" style="font-size:35px"></i></i></h2> -->
-            <!-- <div class="fertilizer">
-                <div  class="fert1">
-                    <a href="./dhanu1.html"><img src="../../assets/images/dhanuka/dhan1.jpg" alt="SEMPRA HERBICIDE"></a>
-                 </div>
-                 <div class="fert2">
-                    <div class="product_details">
-                        <a href="./dhanu1.html"><p>SEMPRA HERBICIDE</p></a>
-                    <div class="pro_price">
-                        <h2>---</h2>
-                        <h3>....</h3>
+       <form>
+        <div class="delivery">
+            <h1>Delivery details</h1>
+            <div class="contact11">
+                <h3>CONTACT INFORMATION</h3>
+                <div class="first_last">
+                   <div>
+                    <label for="full_name">First Name</label>
+                    <input class="disty" type="text" placeholder="FIRST NAME" id="first_name" />
+                   </div>
+                   <div >
+                    <label id="full" for="full_name">Last Name</label>
+                    <input class="disty" type="text" placeholder="LAST NAME" id="last_name" />
+                   </div>
+                </div>
+                <div class="first_last">
+                    <div>
+                        <label for="mobile">Mobile Number</label>
+                    <input class="disty" type="number" placeholder="MOBILE NUMBER" id="mobile"/> 
+                       </div>
+                       <div>
+                        <label id="full1" for="mobile">Email</label>
+                    <input class="disty" type="mail" placeholder="EAMIL ADDRESS" id="email"/> 
+                       </div>
+                </div>
+            </div>
+            <div class="del_address">
+                <h3>DELIVERY ADDRESS</h3>
+                <div class="del_address1">
+                    <div class="img">
+                        <img src="../../assets/images/home.gif" alt="home " id="home" >
+                        <p>Home</p>
                     </div>
-                     <div class="you_save">
-                        <h2>---</h2>
-                     </div>
-                     </div>
-
-                    <a href="../user/user_interface.html"><button class="remov">Remove</button></a>
-                 </div>
-            </div> -->
+                   <div class="img">
+                    <img src="../../assets/images/office.gif" alt=" office gif" id="office" >
+                    <p>Office</p>
+                   </div>
+                </div>
+                <div class="city_zip">
+                   <div class="deliver_address">
+                    <label >Address</label>
+                    <textarea id="address"></textarea>
+                   </div>
+                    <div class="city_zip1">
+                        <label >Zip Code</label>
+                        <input type="text" id="zip">
+                        
+                    <div id="zip-error" style="color: red;"></div>
+                    </div>
+                </div>
+                <!-- <div class="pay_met">
+                    <h3>PAYMENT METHOD</h3>
+                    <div class="payment">
+                        <img src="../../assets/images/gpay.gif" alt="gpay">
+                        <img src="../../assets/images/phonepe.gif" alt="phonepe">
+                        <img src="../../assets/images/paytm.gif" alt="paytm">
+                    </div>
+                </div> -->
+            </div>
+             <div class="button">
+                <a href="#"><button>Cancel</button></a>
+               <a href="./thank_order.html"> <button type="submit" id="save_delivery">Save & Deliver Here</button></a>
+             </div>
+            </div>
             
-        </div>
+       </form>
     </main>
     <footer>
         <div class="footer1">
@@ -214,119 +257,100 @@
   </div>
   </div>
 <script src="../js/menubar.js"></script>
-
 <script>
 
+const ProductStatus = new URLSearchParams(window.location.search).get('delivery-status');
+
+const orderDeliveryData = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) || [];
 
 
-// -------wishlist product get here -------
-let wishListProduct = JSON.parse(localStorage.getItem("wishlisstItem"));
+const loadProduct = orderDeliveryData.filter(detail => detail.deliveryStatus == ProductStatus);
 
+const homeImg = document.getElementById("home");
+const officeImg = document.getElementById("office");
 
+let deliveryPlace = loadProduct["deliveryPlace"];
+if (deliveryPlace === "home") {
+  homeImg.classList.add("selected");
+} else if (deliveryPlace === "office") {
+  officeImg.classList.add("selected");
+}
 
-for(i=0; i<wishListProduct.length; i++){
-
-     div_fertilizer = document.createElement("div");
-    div_fertilizer.setAttribute("class", "fertilizer");
-    document.querySelector("div.wishlist").append(div_fertilizer);
-        // console.log(div_fetilizer);
-
-    //  <div  class="fert1">
-    div_fert1 = document.createElement("div");
-    div_fert1.setAttribute("class", "fert1");
-    div_fertilizer.appendChild(div_fert1);
-
-  
-    fert_a = document.createElement("a");
-    fert_a.setAttribute("href", "");
-    div_fert1.append(fert_a);
-
-    image = document.createElement("img");
-    image.setAttribute("src", wishListProduct[i]["product_image"]);
-    fert_a.append(image);
-
-     //  <div  class="fert2">
-        div_fert2 = document.createElement("div");
-    div_fert2.setAttribute("class", "fert2");
-    div_fertilizer.appendChild(div_fert2);
-    
-    div_product_details = document.createElement("div");
-    div_product_details.setAttribute("class", "product_details");
-    div_fert2.append(div_product_details);
-    
-
-    fert2_a = document.createElement("a");
-    fert2_a.setAttribute("href", "");
-    div_product_details.append(fert2_a);
-
-    fert2_p = document.createElement("p");
-    fert2_p.innerText = wishListProduct[i]["product_name"];
-    fert2_a.append(fert2_p);
-
-    // <div class="pro_price">
-    //                     <h2>---</h2>
-    //                     <h3>....</h3>
-    //                 </div>
-    div_pro_price = document.createElement("div");
-    div_pro_price.setAttribute("class","pro_price");
-    div_product_details.append(div_pro_price);
-
-    div_pro_price_h2 = document.createElement("h2");
-   let discount = wishListProduct[i]["product_discount"]
-    let actual_price = wishListProduct[i]["product_price"];
-    curre_price = actual_price-discount
-    div_pro_price_h2.innerText = "₹" + curre_price;
-    div_pro_price.append(div_pro_price_h2);
-
-    div_pro_price_h3 = document.createElement("h3");
-    div_pro_price_h3.innerText = "₹" + actual_price;
-    div_pro_price.append(div_pro_price_h3);
-
-    // <div class="you_save">
-    div_pro_save = document.createElement("div");
-    div_pro_save.setAttribute("class","you_save");
-    div_product_details.append(div_pro_save);
-
-    div_discount = document.createElement("h2");
-    div_discount.innerText= "You Save:" +" " + "₹" +discount;
-    div_pro_save.appendChild(div_discount);
-
-
-    fert2_button = document.createElement("button");
-    fert2_button.setAttribute("class","remov");
-    fert2_button.setAttribute("id","remove_wishlist");
-    fert2_button.setAttribute("data-product-id", wishListProduct[i]["product_id"]);
-    fert2_button.innerText = "Remove";
-    div_fert2.append(fert2_button)
-
-
-     }
-
-     document.querySelector("#remove_wishlist").addEventListener("click", 
-     function removeWishList(event){
-  const productId = this.dataset.productId;
-  this.setAttribute("like", "false");
-  const updatedWishlist = wishListProduct.filter(product => product.product_id !== productId);
-  localStorage.setItem("wishlisstItem", JSON.stringify(updatedWishlist));
-  this.style.color = "rgb(198, 198, 198)";
-  location.reload();
+homeImg.addEventListener("click", function() {
+  if (!homeImg.classList.contains("selected")) {
+    homeImg.classList.add("selected");
+    officeImg.classList.remove("selected");
+    deliveryPlace = "home";
+  }
 });
 
-let emptyWishList = document.getElementById("empty-wishlist");
-let shownProducts = document.querySelector(".wishlist");
+officeImg.addEventListener("click", function() {
+  if (!officeImg.classList.contains("selected")) {
+    officeImg.classList.add("selected");
+    homeImg.classList.remove("selected");
+    deliveryPlace = "office";
+  }
+});
 
 
-if(wishListProduct.length == 0){
-    emptyWishList.style.display="block";
-    shownProducts.style.display="none";
-    
-}
-else{
-    emptyWishList.style.display="none";
-    shownProducts.style.display="block";
-}
+document.getElementById("save_delivery").addEventListener("click", function addProductDate(e) {
+  e.preventDefault();
+  const deliveryFirstName = document.getElementById("first_name").value;
+  const deliveryLastName = document.getElementById("last_name").value;
+  const deliveryMobile = document.getElementById("mobile").value;
+  const deliveryEmail = document.getElementById("email").value;
+  const deliveryAddress = document.getElementById("address").value;
+  const deliveryZipcode = document.getElementById("zip").value;
+  const deliveryStatus = "flase"  
+
+
+  const zipRegex = /^6\d{5}$/;
+  if (!zipRegex.test(deliveryZipcode)) {
+    const zipError = document.getElementById("zip-error");
+    zipError.textContent = "Invalid zip code format (should start with 6 and have a length of 6)";
+    return;
+  }
+
+  // Update the delivery status to false
+
+
+  // Loop through the loadProduct array and update each item
+  for (let i = 0; i < loadProduct.length; i++) {
+    loadProduct[i]["firstName"] = deliveryFirstName;
+    loadProduct[i]["lastName"] = deliveryLastName;
+    loadProduct[i]["phoneNumber"] = deliveryMobile;
+    loadProduct[i]["email"] = deliveryEmail;
+    loadProduct[i]["deliveryPlace"] = deliveryPlace;
+    loadProduct[i]["address"] = deliveryAddress;
+    loadProduct[i]["zipCode"] = deliveryZipcode;
+    loadProduct[i]["deliveryStatus"] = deliveryStatus;
+  }
+
+  // Update the orderDeliveryData array with the updated loadProduct array
+  localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
+
+  alert("Your order has been successfully accepted..✅");
+  
+  document.querySelector('form').reset();
+//   localStorage.setItem("addToCartItem", "some data"); // adding some data to the "addToCartItem" key in localStorage
+
+localStorage.setItem("addToCartItem", JSON.stringify([])); // setting the value of "addToCartItem" key to an empty array
+// removing the data associated with the "addToCartItem" key
+
+
+  const newWindow = window.open("http://127.0.0.1:5500/pages/user/thank_order.html", "_blank");
+  newWindow.location.href = "http://127.0.0.1:5500/pages/user/thank_order.html";
+});
+
+window.addEventListener("beforeunload", function() {
+  const orderDeliveryData = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct"));
+
+  if (orderDeliveryData.length > 0 && orderDeliveryData[orderDeliveryData.length - 1]["deliveryStatus"] === "true") {
+    orderDeliveryData.pop();
+    localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
+  }
+});
 
 </script>
-    </body>
-    </html>
-    
+</body>
+</html>

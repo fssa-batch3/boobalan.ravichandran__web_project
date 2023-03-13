@@ -261,7 +261,8 @@
 <script>
 const productUniqueId = new URLSearchParams(window.location.search).get('orderUnique');
 
-const orderDeliveryData = JSON.parse(localStorage.getItem("orderData")) || [];
+
+const orderDeliveryData = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) || [];
 
 const loadProduct = orderDeliveryData.find(detail => detail.orderUniqueId == productUniqueId);
 
@@ -306,7 +307,7 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     const deliveryEmail = document.getElementById("email").value;
     const deliveryAddress = document.getElementById("address").value;
     const deliveryZipcode = document.getElementById("zip").value;
-
+    const deliveruStatus = "flase"  
     const zipRegex = /^6\d{5}$/;
     if (!zipRegex.test(deliveryZipcode)) {
       const zipError = document.getElementById("zip-error");
@@ -321,10 +322,11 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     loadProduct["deliveryPlace"] = deliveryPlace;
     loadProduct["address"] = deliveryAddress;
     loadProduct["zipCode"] = deliveryZipcode;
+    loadProduct["deliveruStatus"] = deliveruStatus;
 
 
    
-    localStorage.setItem("orderData", JSON.stringify(orderDeliveryData));
+    localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
 document.querySelector('form').reset();
     alert("Your order has been successfully accepted..✅");
 

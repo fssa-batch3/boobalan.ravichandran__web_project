@@ -93,6 +93,12 @@
     color:rgb(25, 3, 52);
     font-size: 23px;
 }
+#empty-wishlist{
+    width:850px;
+    height:700px;
+    padding: 100px;
+    margin-left: 300px;
+}
 
 /* ---------------/@media mobile resposive start/------------============= */
 

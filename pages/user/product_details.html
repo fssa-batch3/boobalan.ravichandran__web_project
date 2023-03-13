@@ -187,13 +187,15 @@ const productId = new URLSearchParams(window.location.search).get('product_id');
 // const productDetails = JSON.parse(localStorage.getItem('adama_details'));
 const dhanukaDetails = JSON.parse(localStorage.getItem('dhanuka_details'));
 const dowAgroScienceDetails = JSON.parse(localStorage.getItem("dow_agro_science_details"));
+const uplDetails = JSON.parse(localStorage.getItem("upl_details"))
 
 
 
   const loadProduct = 
 //   productDetails.find(product => product.product_unique_id === productId) ||
    dhanukaDetails.find(detail => detail.product_unique_id === productId) ||
-   dowAgroScienceDetails.find(detail => detail.product_unique_id === productId)
+   dowAgroScienceDetails.find(detail => detail.product_unique_id === productId) ||
+   uplDetails.find(detail => detail.product_unique_id === productId)
 
 
 
@@ -370,7 +372,8 @@ const dowAgroScienceDetails = JSON.parse(localStorage.getItem("dow_agro_science_
 
 //<a href="./add_cart.html">...</a>
     rem_a = document.createElement("a");
-    rem_a .setAttribute("href"," ");
+    rem_a.setAttribute("id", "go_to_cart");
+    rem_a .setAttribute("href","http://127.0.0.1:5500/pages/user/add_cart.html");
     div_rem.append(rem_a );
 
 // <button id="rem1">.....</button>
@@ -466,79 +469,8 @@ const dowAgroScienceDetails = JSON.parse(localStorage.getItem("dow_agro_science_
     method_ul.append(method_li1);
     
 
-//    let orderQuantity = document.getElementById("option").value
 
-
-// document.getElementById("rem2").addEventListener("click",
-//     function buyNow(e){
-//         e.preventDefault();
-//         let order_summary_details = JSON.parse(localStorage.getItem('order_summary_details')) || [];
-
-//         let exit = order_summary_details.some(data =>
-//          data.order_summary_details == order_summary_details 
-//          );
-
-//          if(!exit){
-
-
-//         order_summary_details.push({
-//               "productName": loadProduct["product_name"],
-//               "actualPrice" : loadProduct["actual_price"],
-//               "discountPrice" : loadProduct["discount"],
-//               "productImage": loadProduct["source"],
-//               "productWeight": loadProduct["product_weight"]
-
-
-// });
-// localStorage.setItem("order_summary_details",JSON.stringify(order_summary_details));
-//          }
-// location.href="../user/order_summary.html"
-
-// }
-// )
-
-
-// let button = document.querySelector("#wish1");
-
-
-// button.addEventListener("click",
-// function(event) {
-//     this.classList.toggle("fa-solid");
-//     this.classList.toggle("true");
-
-//     let wishlisstItem = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
-//     let productUniqueId  = wishlisstItem["product_id"];
-//     let exit = wishlisstItem.length &&
-//     JSON.parse(localStorage.getItem("wishlisstItem")).some(data =>
-//     data.product_id == productUniqueId)
-
-
-//    if(this.classList.contains("true")&&!exit){
-//     this.setAttribute("like", "true");
-//     wishlisstItem.push({
-//         "product_id":loadProduct["product_unique_id"],
-//         "product_name":loadProduct["product_name"],
-//         "product_price":loadProduct["actual_price"],
-//         "product_discount":loadProduct["discount"],
-//         "product_image":loadProduct["source"]
-
-//     })
-//     localStorage.setItem("wishlisstItem",JSON.stringify(wishlisstItem));
-//    }
-
-//    else{
-//     this.setAttribute("like", "false");
-//     let wishlistRemove = JSON.parse(localStorage.getItem("wishlisstItem")) ;
-//      function removeWish(e){
-//         return e.product_id ==productUniqueId;
-//      }
-//      wish_product = wishlistRemove.find(removeWish);
-//      const indexOfwish = wishlistRemove.indexOf(wish_product);
-//      wishlistRemove.splice(indexOfwish, 1);
-//      localStorage.setItem("wishlisstItem",JSON.stringify(wishlistRemove));
-//    }
-
-// })
+    // ----------------------------------
 let button = document.querySelector("#wish1");
 
 button.addEventListener("click", function(event) {
@@ -618,22 +550,27 @@ window.onload = function() {
     findLike();
 }
 
+// ------------------ Add to cart buttons--------------
 
-// function findLike(){
-//     let wishlisstItem = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
-//     let productUniqueId = loadProduct["product_unique_id"];
-//     let exit = wishlisstItem.length && wishlisstItem.some(data => data.product_id == productUniqueId);
-//         if(exit){
-//           button.classList.toggle("fa-solid")
-//           button.style.color = "rgb(7, 14, 88)";
-//         }
-//         else{
-//             button.style.color="rgb(198, 198, 198)";
-//         }
-//   }
-//   window.onload = function() {
-//     findLike();
-// }
+document.getElementById("rem1").addEventListener("click", function addToCart(){
+    let addToCartItem = JSON.parse(localStorage.getItem("addToCartItem")) || [];
+    let addProductId = loadProduct["product_unique_id"];
+
+    let productExists = addToCartItem.some(data => data.cart_id === addProductId);
+    if(!productExists){
+        addToCartItem.push({
+            "cart_id": addProductId
+        })
+        localStorage.setItem("addToCartItem", JSON.stringify(addToCartItem));
+    } 
+    else(
+        alert("Product already in cart")
+        
+    )
+})
+
+
+
 
 </script>
 </body>

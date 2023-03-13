@@ -266,7 +266,7 @@ quantityDropdown.addEventListener('change', () => {
 
     <script>
       
-// Get the form element and listen for the submit event
+
 // Get the form element and listen for the submit event
 const orderForm = document.querySelector('form');
 orderForm.addEventListener('submit', (event) => {
@@ -282,7 +282,7 @@ orderForm.addEventListener('submit', (event) => {
   const productWeight = document.querySelector('#weight').value;
   const orderDate = new Date().toLocaleDateString();
   const deliveryDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString();
-
+  const deliveruStatus = "true";
   // Get the user information
   const firstName = "";
   const lastName = "";
@@ -294,6 +294,7 @@ orderForm.addEventListener('submit', (event) => {
   const zipCode = "";
   const deliveryPlace = "";
   const paymentMethod = "";
+  
 
   // Get current time and format it as a string
   const currentTime = new Date();
@@ -312,7 +313,7 @@ orderForm.addEventListener('submit', (event) => {
 //     alert('You have already placed an order within the last 5 minutes. Please wait a while before placing another order.');
 //     return;
 //   }
- const orderData = JSON.parse(localStorage.getItem('orderData')) || [];
+ const orderData = JSON.parse(localStorage.getItem('addtoCartDeliveryProduct')) || [];
 const lastOrderTime = orderData.length > 0 ? new Date(orderData[orderData.length - 1].timestamp) : null;
 const timeDifference = lastOrderTime ? (currentTime - lastOrderTime) / (1000 * 60) : Infinity;
 
@@ -342,12 +343,13 @@ if (timeDifference < 2) {
     paymentMethod,
     timestamp: currentTime.getTime(),
     orderUniqueId: uid,
-    timeString 
+    timeString,
+    deliveruStatus
   };
   
   // Store the new object in localStorage
   orderData.push(newOrder);
-  localStorage.setItem('orderData', JSON.stringify(orderData));
+  localStorage.setItem('addtoCartDeliveryProduct', JSON.stringify(orderData));
  
   location.href = `http://127.0.0.1:5500/pages/user/deliver_address.html?delivery_address=${encodeURIComponent(loadProduct["product_unique_id"])}&orderUnique=${uid}`;
 });
