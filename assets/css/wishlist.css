@@ -1,10 +1,11 @@
 .wishlist{
     
-  margin:20px 70px 30px 70px;
+  margin: 0px 70px 30px 70px;
 }
 main{
     min-height: 100vh;
-    background-color: rgb(243, 243, 255);
+    background-color: rgb(243, 245, 249);
+    padding-top: 40px;
 }
 .wishlist h2{
     font-size: 28px;

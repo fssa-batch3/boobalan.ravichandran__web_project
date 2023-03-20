@@ -22,7 +22,8 @@ table, th, td {
   th{
     padding: 40px 20px;
     font-size: 23px;
-    background-color: #2874f0;
+    /* background-color: #2874f0; */
+    background-color:#07357f ;
     color: white;
     font-weight: 300;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;

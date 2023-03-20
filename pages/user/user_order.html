@@ -385,11 +385,16 @@ if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
  // console.log(threeDaysBeforeDate); // Output: 20/03/2023
 
   if (formattedDate >= threeDaysBeforeDate) {
-    td_3.innerText = "Shipped";
+   
+    const status = "Shipped";
+    getOrderDetails[i]["orderStatus"] = status;
+    localStorage.setItem("addtoCartDeliveryProduct",JSON.stringify(getOrderDetails))
   } 
 
   if (formattedDate > deliverydate) {
-    td_3.innerText = "Delivered";
+    const ord_status = "Delivered";
+    getOrderDetails[i]["orderStatus"] = ord_status;
+    localStorage.setItem("addtoCartDeliveryProduct",JSON.stringify(getOrderDetails))
   }
 }
 
