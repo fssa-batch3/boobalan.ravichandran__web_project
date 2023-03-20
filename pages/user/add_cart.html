@@ -333,20 +333,6 @@
 
 
 
-let div_btnn = document.createElement("div");
-div_btnn.setAttribute("class", "bttn");
-document.querySelector(".cart1").prepend(div_btnn);
-
-let div_btnn_a = document.createElement("a");
-div_btnn.append(div_btnn_a);
-
-let div_btnn_button = document.createElement("button");
-div_btnn_button.setAttribute("id","place_order");
-div_btnn_button.setAttribute("type","submit");
-div_btnn_button.innerText ="Place order";
-div_btnn_a.append(div_btnn_button);
-
-
 //  <div class="cart101"> <h2>Price Details</h2> </div>
 
 let div_cart11 = document.createElement("div");
@@ -441,8 +427,7 @@ let allProducts = dhanukaDetails.concat(uplDetails, dowAgroScienceDetails);
 
 let loadProduct = allProducts.filter(product => cartIds.some(uuid => uuid.cart_id === product.product_unique_id));
 
-
-  let totalPrice = 0;
+let totalPrice = 0;
 let totalDiscount = 0;
 
 // Calculate initial total price and discount
@@ -453,13 +438,12 @@ for (let i = 0; i < loadProduct.length; i++) {
   const discount = product["discount"] * quantity;
   totalPrice += price;
   totalDiscount += discount;
-  
 }
 
 // Display initial total price and discount
-div_cart111_p.innerText = ` ₹${totalPrice}`;
-div_cart112_p.innerText = ` -₹${totalDiscount}`;
-div_cart115_p.innerText = `₹${totalPrice - totalDiscount}`
+div_cart111_p.innerText = "₹" + `${totalPrice}`;
+div_cart112_p.innerText = "₹" + `${totalDiscount}`;
+div_cart115_p.innerText = "₹" + `${totalPrice - totalDiscount}`
 div_cart114_h2.innerText = `You will save ₹${totalDiscount} on this order `
 
 
@@ -534,26 +518,52 @@ function addToCartItem(product) {
   productEl.innerHTML = productInCart;
 
   const select = productEl.querySelector("#option");
-  select.addEventListener("change", () => {
-  const quantity = select.value;
+//   select.addEventListener("change", () => {
+//   const quantity = select.value;
+//   const priceEl = productEl.querySelector("#product_pri");
+//   const actualPriceEl = productEl.querySelector("#actual_price");
+//   const discountEl = productEl.querySelector("#discount");
+//   const price = (product["actual_price"] - product["discount"]) * quantity;
+//   const actualPrice = product["actual_price"] * quantity;
+//   const discount = product["discount"] * quantity;
+//   priceEl.textContent = `₹${price}`;
+//   actualPriceEl.textContent = `₹${actualPrice}`;
+//   discountEl.textContent = `You Save: ₹${discount}`;
+
+//   // update total price and discount
+//   totalPrice += price;
+//   totalDiscount += discount;
+
+//   div_cart111_p.innerText = `₹${totalPrice}`;
+//   div_cart112_p.innerText = ` ₹${totalDiscount}`;
+//   div_cart115_p.innerText = `₹${totalPrice - totalDiscount}`
+//   div_cart114_h2.innerText = `You will save ₹${totalDiscount} on this order `
+// });
+select.addEventListener("change", () => {
+  const oldQuantity = product.quantity || 1; // use 1 as default if quantity is not defined
+  const newQuantity = select.value;
   const priceEl = productEl.querySelector("#product_pri");
   const actualPriceEl = productEl.querySelector("#actual_price");
   const discountEl = productEl.querySelector("#discount");
-  const price = (product["actual_price"] - product["discount"]) * quantity;
-  const actualPrice = product["actual_price"] * quantity;
-  const discount = product["discount"] * quantity;
-  priceEl.textContent = `₹${price}`;
-  actualPriceEl.textContent = `₹${actualPrice}`;
-  discountEl.textContent = `You Save: ₹${discount}`;
-
+  const oldPrice = (product["actual_price"] - product["discount"]) * oldQuantity;
+  const oldDiscount = product["discount"] * oldQuantity;
+  const newPrice = (product["actual_price"] - product["discount"]) * newQuantity;
+  const newDiscount = product["discount"] * newQuantity;
+  priceEl.textContent = `₹${newPrice}`;
+  actualPriceEl.textContent = `₹${product["actual_price"] * newQuantity}`;
+  discountEl.textContent = `You Save: ₹${newDiscount}`;
+  
   // update total price and discount
-  totalPrice += price;
-  totalDiscount += discount;
+  totalPrice = totalPrice - oldPrice + newPrice;
+  totalDiscount = totalDiscount - oldDiscount + newDiscount;
 
-  div_cart111_p.innerText = `₹${totalPrice}`;
-  div_cart112_p.innerText = ` ₹${totalDiscount}`;
-  div_cart115_p.innerText = `₹${totalPrice - totalDiscount}`
-  div_cart114_h2.innerText = `You will save ₹${totalDiscount} on this order `
+  div_cart111_p.innerText = "₹" + `${totalPrice}`;
+  div_cart112_p.innerText = "₹" + `${totalDiscount}`;
+  div_cart115_p.innerText = "₹" + `${totalPrice - totalDiscount}`
+  div_cart114_h2.innerText = `You will save ₹${totalDiscount} on this order `;
+  
+  // update product quantity in the cart
+  product.quantity = newQuantity;
 });
 
 
@@ -567,7 +577,7 @@ function addToCartItem(product) {
   for (let i = 0; i < loadProduct.length; i++) {
     const product = loadProduct[i];
     const productInCart = addToCartItem(product);
-    cartContainer.prepend(productInCart);
+    cartContainer.append(productInCart);
     const quantity = productInCart.querySelector("#option").value;
   const price = (product["actual_price"] - product["discount"]) * quantity;
  
@@ -592,10 +602,27 @@ else{
 }
 
 
+// ----------------------place porder button creating--------------
+
+let div_btnn = document.createElement("div");
+div_btnn.setAttribute("class", "bttn");
+cartContainer.append(div_btnn);
+
+let div_btnn_a = document.createElement("a");
+div_btnn.append(div_btnn_a);
+
+let div_btnn_button = document.createElement("button");
+div_btnn_button.setAttribute("id","place_order");
+div_btnn_button.setAttribute("type","submit");
+div_btnn_button.innerText ="Place order";
+div_btnn_a.append(div_btnn_button);
+
+
+
 // ---- store all products details in local storage
 document.getElementById("place_order").addEventListener("click", function placeOrder() {
   const addtoCartDeliveryProduct = JSON.parse(localStorage.getItem('addtoCartDeliveryProduct')) || [];
-  const deliveryStatus = "true";
+  const deliveryStatus = "false";
   
   const cartItems = document.querySelectorAll(".cart_details");
   
@@ -606,16 +633,16 @@ document.getElementById("place_order").addEventListener("click", function placeO
       const cartItem = cartItems[i];
       const productImage = cartItem.querySelector(".cart21 img").getAttribute("src");
       const productName = cartItem.querySelector("#product_name").textContent;
-      const productCurrentPrice = cartItem.querySelector("#product_pri").textContent;
-      const productActualPrice = cartItem.querySelector("#actual_price").textContent;
-      const ProductDiscount = cartItem.querySelector("#discount").textContent;
+      const productCurrentPrice = cartItem.querySelector("#product_pri").textContent.replace(/₹/g, '');
+      const productActualPrice = cartItem.querySelector("#actual_price").textContent.replace(/₹/g, '');
+      const ProductDiscount = cartItem.querySelector("#discount").textContent.replace(/₹/g, '');
       const proQuantity = cartItem.querySelector('#option').value;
-      const productTotalPrice = document.querySelector("#total-price").textContent;
-      const productTotalDiscount = document.querySelector('#total-discount').textContent;
-      const productFinalPrice = document.querySelector('#final-price').textContent;
+      const productTotalPrice = document.querySelector("#total-price").textContent.replace(/₹/g, '');
+      const productTotalDiscount = document.querySelector('#total-discount').textContent.replace(/₹/g, '');
+      const productFinalPrice = document.querySelector('#final-price').textContent.replace(/₹/g, '');
       const orderDate = new Date().toLocaleDateString();
       const deliveryDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString();
-      const deliveryStatus = "true";
+      // const deliveryStatus = "false";
       // Get the user information
       const firstName = "";
       const lastName = "";
@@ -627,6 +654,7 @@ document.getElementById("place_order").addEventListener("click", function placeO
       const zipCode = "";
       const deliveryPlace = "";
       const paymentMethod = "";
+      const orderStatus = "";
 
       // Generate a unique ID for the order
       const uid = (new Date().getTime()).toString(24);
@@ -656,6 +684,7 @@ document.getElementById("place_order").addEventListener("click", function placeO
         zipCode,
         deliveryPlace,
         paymentMethod,
+        orderStatus
       };
 
       addtoCartDeliveryProduct.push(addProduct);
@@ -666,54 +695,6 @@ document.getElementById("place_order").addEventListener("click", function placeO
     location.href = "http://127.0.0.1:5500/pages/user/delivery_addtocart.html?delivery-status=" + deliveryStatus;
   }
 });
-
-// document.getElementById("place_order").addEventListener("click", function placeOrder() {
-//   let addtoCartDeliveryProduct = JSON.parse(localStorage.getItem('addtoCartDeliveryProduct')) || [];
-
-//   const products = document.querySelectorAll('.cart_details');
-
-//   products.forEach((product) => {
-//     const productName = product.querySelector("#product_name").textContent;
-//     const proQuantity = product.querySelector('#option').value;
-
-//     // check if product already exists in the array
-//     const productIndex = addtoCartDeliveryProduct.findIndex((item) => item.productName === productName);
-//     if (productIndex !== -1) {
-//       // if product already exists, update the quantity
-//       addtoCartDeliveryProduct[productIndex].proQuantity = parseInt(addtoCartDeliveryProduct[productIndex].proQuantity) + parseInt(proQuantity);
-      
-//     } else {
-//       // if product doesn't exist, add it to the array
-//       const productImage = product.querySelector(".cart21 img").getAttribute("src");
-//       const productCurrentPrice = product.querySelector("#product_pri").textContent;
-//       const productActualPrice = product.querySelector("#actual_price").textContent;
-//       const ProductDiscount = product.querySelector("#discount").textContent;
-//         const productTotalPrice = document.querySelector("#total-price").textContent;
-//     const productTotalDiscount = document.querySelector('#total-discount').textContent;
-//     const productFinalPrice = document.querySelector('#final-price').textContent;
-//       const deliveryStatus = "true";
-
-//       const addProduct = {
-//         productImage,
-//         productName,
-//         productCurrentPrice,
-//         productActualPrice,
-//         ProductDiscount,
-//         proQuantity,
-//         productTotalPrice,
-//         productTotalDiscount,
-//         productFinalPrice,
-//         deliveryStatus
-//       };
-
-//       addtoCartDeliveryProduct.push(addProduct);
-//     }
-//   });
-
-//   localStorage.setItem('addtoCartDeliveryProduct', JSON.stringify(addtoCartDeliveryProduct));
-//   alert("Order details stored successfully.");
-// });
-
 
   
 </script>

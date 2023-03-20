@@ -282,7 +282,7 @@ orderForm.addEventListener('submit', (event) => {
   const productWeight = document.querySelector('#weight').value;
   const orderDate = new Date().toLocaleDateString();
   const deliveryDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString();
-  const deliveruStatus = "true";
+  const deliveryStatus = "false";
   // Get the user information
   const firstName = "";
   const lastName = "";
@@ -294,7 +294,7 @@ orderForm.addEventListener('submit', (event) => {
   const zipCode = "";
   const deliveryPlace = "";
   const paymentMethod = "";
-  
+  const orderStatus = "";
 
   // Get current time and format it as a string
   const currentTime = new Date();
@@ -303,33 +303,17 @@ orderForm.addEventListener('submit', (event) => {
   // Generate a unique ID for the order
   const uid = (new Date().getTime()).toString(24);
 
-  // Check if the data already exists in localStorage and if the last order was placed less than 15 minutes ago
-//   const orderData = JSON.parse(localStorage.getItem('orderData')) || [];
-//   const lastOrderTime = orderData.length > 0 ? new Date(orderData[orderData.length - 1].timestamp) : null;
-//   // const timeDifference = lastOrderTime ? (currentTime - lastOrderTime) / (1000 * 60 *5) : Infinity;
-//   const timeDifference = lastOrderTime ? (currentTime - lastOrderTime) / (1000 * 60 * 5) : Infinity;
 
-//   if (timeDifference < 1) {
-//     alert('You have already placed an order within the last 5 minutes. Please wait a while before placing another order.');
-//     return;
-//   }
  const orderData = JSON.parse(localStorage.getItem('addtoCartDeliveryProduct')) || [];
-const lastOrderTime = orderData.length > 0 ? new Date(orderData[orderData.length - 1].timestamp) : null;
-const timeDifference = lastOrderTime ? (currentTime - lastOrderTime) / (1000 * 60) : Infinity;
-
-if (timeDifference < 2) {
-  alert('You have already placed an order within the last 2 minutes. Please wait a while before placing another order.');
-  return;
-}
 
   // Create a new object with the input values
   const newOrder = {
     productName,
     productImage,
-    productPrice,
-    quantity,
-    discount,
-    actualPrice,
+    "productCurrentPrice":productPrice,
+    "proQuantity":quantity,
+    "ProductDiscount":discount,
+    "productActualPrice":actualPrice,
     productWeight,
     orderDate,
     deliveryDate,
@@ -341,10 +325,10 @@ if (timeDifference < 2) {
     zipCode,
     deliveryPlace,
     paymentMethod,
-    timestamp: currentTime.getTime(),
+  
     orderUniqueId: uid,
     timeString,
-    deliveruStatus
+    deliveryStatus
   };
   
   // Store the new object in localStorage

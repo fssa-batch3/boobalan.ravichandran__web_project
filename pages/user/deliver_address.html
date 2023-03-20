@@ -307,7 +307,8 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     const deliveryEmail = document.getElementById("email").value;
     const deliveryAddress = document.getElementById("address").value;
     const deliveryZipcode = document.getElementById("zip").value;
-    const deliveruStatus = "flase"  
+    const deliveryStatus = "true"  ;
+    const orderStatus = "Processing";
     const zipRegex = /^6\d{5}$/;
     if (!zipRegex.test(deliveryZipcode)) {
       const zipError = document.getElementById("zip-error");
@@ -322,7 +323,8 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     loadProduct["deliveryPlace"] = deliveryPlace;
     loadProduct["address"] = deliveryAddress;
     loadProduct["zipCode"] = deliveryZipcode;
-    loadProduct["deliveruStatus"] = deliveruStatus;
+    loadProduct["deliveryStatus"] = deliveryStatus;
+    loadProduct["orderStatus"] = orderStatus; 
 
 
    
@@ -337,7 +339,15 @@ newWindow.location.href = "http://127.0.0.1:5500/pages/user/thank_order.html";
 });
 
 
+// ---------------
+window.addEventListener("beforeunload", function() {
+  const orderDeliveryData = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct"));
 
+  if (orderDeliveryData.length > 0 && orderDeliveryData[orderDeliveryData.length - 1]["deliveryStatus"] === "false") {
+    orderDeliveryData.pop();
+    localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
+  }
+});
 
 </script>
     </body>

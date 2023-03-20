@@ -301,7 +301,8 @@ document.getElementById("save_delivery").addEventListener("click", function addP
   const deliveryEmail = document.getElementById("email").value;
   const deliveryAddress = document.getElementById("address").value;
   const deliveryZipcode = document.getElementById("zip").value;
-  const deliveryStatus = "flase"  
+  const deliveryStatus = "true"  ;
+  const orderStatus = "Processing";
 
 
   const zipRegex = /^6\d{5}$/;
@@ -324,6 +325,7 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     loadProduct[i]["address"] = deliveryAddress;
     loadProduct[i]["zipCode"] = deliveryZipcode;
     loadProduct[i]["deliveryStatus"] = deliveryStatus;
+   loadProduct[i]["orderStatus"]= orderStatus;
   }
 
   // Update the orderDeliveryData array with the updated loadProduct array
@@ -345,7 +347,7 @@ localStorage.setItem("addToCartItem", JSON.stringify([])); // setting the value 
 window.addEventListener("beforeunload", function() {
   const orderDeliveryData = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct"));
 
-  if (orderDeliveryData.length > 0 && orderDeliveryData[orderDeliveryData.length - 1]["deliveryStatus"] === "true") {
+  if (orderDeliveryData.length > 0 && orderDeliveryData[orderDeliveryData.length - 1]["deliveryStatus"] === "false") {
     orderDeliveryData.pop();
     localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
   }
