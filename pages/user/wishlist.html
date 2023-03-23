@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-        
+        <link rel="stylesheet" href="../../assets/css/style.css">
         <link rel="stylesheet" href="../../assets/css/footer.css">
         <link rel="stylesheet" href="../../assets/css/header.css">
         <link rel="stylesheet" href="../../assets/css/wishlist.css">
@@ -20,93 +20,7 @@
     </head>
 
 <body>
-    <div class="header">
-       <ul>
-        <li class="hero_list"><a href="#">Sell on Fert Agri Boomi</a></li>
-       </ul>
-    </div>
-    <header>
-        <!-- // menu bar -->
-    <div class="search_menu">
-        <div class="menu_bar1">
-            <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo1" />
-           <a href="#" class="btn_bar">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-           </a>
-        </div>
-        <div class="search_bar1">
-            <button class="sear_btn1" type="submit"><i class="fa fa-search"></i></button>
-            <input  class="input00" type="text" placeholder="Search....">
-        </div>
-    </div>
-    <!-- --------------menu bar end -------------------- -->
-
-    <div class="head">
-        <div>
-            <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
-    </div>
     
-    <div class="search_bar">
-        <button class="sear_btn" type="submit"><i class="fa fa-search"></i></button>
-        <input  class="input0" type="text" placeholder="Search....">
-    </div>
-
-        <!-- search bar end -->
-            <div class="navbar_links">
-                    <ul class="hero">
-                     <li class="hero_list1"><a href="../user/wishlist.html"><i id="wish" class="fa fa-heart" style="font-size:21px"></i>Wishlist</a> </li>
-                    <li class="hero_list1"><a href="../user/user_order.html">My orders</a>
-                    </li>
-                <li  class="hero_list1"><a href="./add_cart.html"><i id="cart" class="fa fa-shopping-cart" style="font-size:26px"></i> Cart</a></li>
-                <li class="hero_list1"><a href="../../index.html"><i class="fa fa-sign-out" style="font-size:21px"></i>Logout</a>
-                </li>
-                <a href="./user_profile.html" ><img class="img1" src="../../assets/images/profile in.jpg" alt="profile" width="35px" height="35px"></a>
-                </ul>
-            </div>
-        </div>   
-    </header>
-    <div class="nav">
-        <a href="./user_interface.html"><button class="btn1">HOME</button></a>
-        <div class="dropdown">
-            <button class="dropbtn">BRANDS</button>
-            <div class="dropdown-content">
-                <a href="./dhanuka.html">DHANUKA</a>
-                <a href="./dow_agro.html">DOW AGRO SCIENCE</a>
-                <a href="./upl.html">UPL</a>
-                <a href="./tata.html">TATA RALLIS</a>
-                <a href="adama.html">ADAMA</a>
-                <a href="./bayer.html">BAYER</a>
-                <a href="./upl.html">ARIES AGRO</a>
-                <a href="./promoters.html">BARRIX</a>
-               <a href="./bio_fertilizer.html">INDOFIL</a>
-               <a href="./tata.html">RINUJA</a>
-            </div>
-        </div>
-        <div class="dropdown1">
-            <button class="dropbtn1">CROP PROTECTION</button>
-            <div class="dropdown1-content">
-                <a href="./insecticides.html">BIO INSECTICIDES</a>
-                <a href="./fungicides.html">BIO FUNGICIDES</a>
-                <a href="./nematicides.html">BIO NEMATICIDES</a>
-                <a href="viricides.html"> BIO VIRCIDES</a>
-            </div>
-        </div>
-        <div  class="dropdown2">
-             <button class="dropbtn2" > CROP NUTRITION</button>
-            <div class="dropdown2-content">
-                <a href="./major_nutrients.html">MAJOR NUTRIENTS</a>
-                <a href="./secodary_nutrients.html">SECONDARY NUTRIENTS</a>
-                <a href="./promoters.html">GROWTH PROMOTERS</a>
-                <a href="./retardants.html">GROWTH RETARDANTS</a>
-                <a href="./organic.html">ORGANIC FERTILIZERS</a>
-                <a href="./bio_fertilizer.html">BIO FERTILIZERS</a>
-                <a href="./secodary_nutrients.html">ANTI STRESSING AGENTS</a>
-                <a href="./viricides.html">MICRO NUTRIENTS</a>
-            </div>
-        </div>
-</div>
     <main>
         <img id="empty-wishlist" src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-2130356-1800917.png" alt="wishlist image">
         <div class="wishlist">
@@ -213,18 +127,26 @@
   </div>
   </div>
   </div>
-<script src="../js/menubar.js"></script>
+<!-- <script src="../js/menubar.js"></script> -->
 
 <script>
 
-
+const logedUser = JSON.parse(localStorage.getItem("user_data"));
 
 // -------wishlist product get here -------
-let wishListProduct = JSON.parse(localStorage.getItem("wishlisstItem"));
+const wishListProduct = JSON.parse(localStorage.getItem("wishlisstItem"));
+const dhanukaDetails = JSON.parse(localStorage.getItem('dhanuka_details'));
+const uplDetails = JSON.parse(localStorage.getItem('upl_details'));
+const dowAgroScienceDetails = JSON.parse(localStorage.getItem("dow_agro_science_details"));
+
+const allProducts = dhanukaDetails.concat(uplDetails, dowAgroScienceDetails);
+
+const findLogedUserWishlist = wishListProduct.filter(details => details.userUniqueId == logedUser)
+
+const wishProducts = allProducts.filter(product => findLogedUserWishlist.some(uuid => uuid.product_id === product.product_unique_id));
 
 
-
-for(i=0; i<wishListProduct.length; i++){
+for(i=0; i<wishProducts.length; i++){
 
      div_fertilizer = document.createElement("div");
     div_fertilizer.setAttribute("class", "fertilizer");
@@ -242,7 +164,7 @@ for(i=0; i<wishListProduct.length; i++){
     div_fert1.append(fert_a);
 
     image = document.createElement("img");
-    image.setAttribute("src", wishListProduct[i]["product_image"]);
+    image.setAttribute("src", wishProducts[i]["source"]);
     fert_a.append(image);
 
      //  <div  class="fert2">
@@ -260,7 +182,7 @@ for(i=0; i<wishListProduct.length; i++){
     div_product_details.append(fert2_a);
 
     fert2_p = document.createElement("p");
-    fert2_p.innerText = wishListProduct[i]["product_name"];
+    fert2_p.innerText = wishProducts[i]["product_name"];
     fert2_a.append(fert2_p);
 
     // <div class="pro_price">
@@ -272,8 +194,8 @@ for(i=0; i<wishListProduct.length; i++){
     div_product_details.append(div_pro_price);
 
     div_pro_price_h2 = document.createElement("h2");
-   let discount = wishListProduct[i]["product_discount"]
-    let actual_price = wishListProduct[i]["product_price"];
+   let discount = wishProducts[i]["discount"]
+    let actual_price = wishProducts[i]["actual_price"];
     curre_price = actual_price-discount
     div_pro_price_h2.innerText = "₹" + curre_price;
     div_pro_price.append(div_pro_price_h2);
@@ -295,7 +217,7 @@ for(i=0; i<wishListProduct.length; i++){
     fert2_button = document.createElement("button");
     fert2_button.setAttribute("class","remov");
     fert2_button.setAttribute("id","remove_wishlist");
-    fert2_button.setAttribute("data-product-id", wishListProduct[i]["product_id"]);
+    fert2_button.setAttribute("data-product-id",wishProducts[i]["product_unique_id"] );
     fert2_button.innerText = "Remove";
     div_fert2.append(fert2_button)
 
@@ -327,6 +249,7 @@ else{
 }
 
 </script>
+<script src="../js/header.js"></script>
     </body>
     </html>
     

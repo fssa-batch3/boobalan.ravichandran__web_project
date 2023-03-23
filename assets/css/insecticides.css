@@ -26,13 +26,13 @@
     margin: 3px;
   }
   .today{
-    width:300px;
-    min-height:550px;
+    width:320px;
+    min-height:450px;
     background-color: rgb(255, 255, 255);
     margin-left: 30px;
     padding: 30px 0px 30px 0px;
     margin-bottom: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     display: flex;
     justify-content: center;
@@ -48,17 +48,33 @@
     border-radius: 0px;
     margin-bottom: 20px;
   }
-.price{
+.price ,.price11{
+  display: flex;
     text-align: center; 
-    justify-content: center;
-    padding: 5px 0;
+    justify-content: space-between;
+    padding: 10px 0px;
+     ;
 }
-.price h2{
-  display: inline-block;
-  padding: 5px;
+.price h4{
+  font-size: 20px;
+  color:rgb(10, 95, 10)
+}
+.pricecontain{
+  border-bottom: 2px solid green;
+  /* border-top: 2px solid green; */
+}
+
+.price11 del{
+  font-size: 19px;
+  color:rgb(96, 8, 56);
+  font-weight: bold;
 }
 .today h3{
     font-size: 21px;
+}
+.div_save{
+  padding: 15px 0px 0px 0px;
+  
 }
 .today p{
    
@@ -71,10 +87,10 @@
     justify-content: center;
   }
   .offers1 img:hover {
-    transform: scale(1.05);
-    transition-delay: .1s;
-    border-radius:10px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transform:0;
+    transition-delay: 0s;
+    border-radius:0px;
+    box-shadow: none;
 }
 
 

@@ -75,7 +75,8 @@ const signIn = e =>{
         }
         else{
             alert("Your login in successful ..✅");
-            location.href = "./user_interface.html";
+            document.querySelector('form').reset();
+            location.href = "../../index.html";
             localStorage.setItem("user_data", JSON.stringify(mobile));
         }
         e.preventDefault();

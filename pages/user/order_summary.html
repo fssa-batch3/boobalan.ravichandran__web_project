@@ -267,6 +267,7 @@ quantityDropdown.addEventListener('change', () => {
     <script>
       
 
+      const logedUser = JSON.parse(localStorage.getItem("user_data"));
 // Get the form element and listen for the submit event
 const orderForm = document.querySelector('form');
 orderForm.addEventListener('submit', (event) => {
@@ -328,7 +329,8 @@ orderForm.addEventListener('submit', (event) => {
   
     orderUniqueId: uid,
     timeString,
-    deliveryStatus
+    deliveryStatus,
+    userUniqueId : logedUser,
   };
   
   // Store the new object in localStorage
@@ -342,5 +344,6 @@ orderForm.addEventListener('submit', (event) => {
 
 
     </script>
+    
 </body>
 </html>

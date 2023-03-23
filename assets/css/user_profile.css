@@ -11,7 +11,7 @@ main{
 :root{
     --my-profile-fontfamily:fontAwesome;
 }
-.details{
+.details2{
     /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
   
     padding: 30px 40px 30px 80px;
@@ -22,7 +22,7 @@ main{
     
 
 }
-.details h2{
+.details2 h2{
     font-size: 35px;
  display: flex;
     margin-bottom: 40px;
