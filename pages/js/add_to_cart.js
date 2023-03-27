@@ -80,7 +80,7 @@ div_cart114.append(div_cart114_h2);
 
 
 const logedUser = JSON.parse(localStorage.getItem("user_data"));
-const cartIds = JSON.parse(localStorage.getItem("addToCartItem"));
+const cartIds = JSON.parse(localStorage.getItem("addToCartItem")) || [];
 const dhanukaDetails = JSON.parse(localStorage.getItem('dhanuka_details'));
 const uplDetails = JSON.parse(localStorage.getItem('adama_details'));
 const dowAgroScienceDetails = JSON.parse(localStorage.getItem("dow_agro_science_details"));

@@ -4,17 +4,18 @@ const root = window.location.origin
 //     <button class="sear_btn" type="submit"><i class="fa fa-search"></i></button>
 //     <input  class="input0" type="text" placeholder="Search....">
 // </div>
-const cartItems = JSON.parse(localStorage.getItem("addToCartItem"));
+const cartItems = JSON.parse(localStorage.getItem("addToCartItem")) || [];
 const loinFindUser = JSON.parse(localStorage.getItem("user_data"));
 
 const cartCount = cartItems.filter(details => details.userUniqueId == loinFindUser);
  const cartValueCount = cartCount.length;
 
  
- const wishlist =JSON.parse(localStorage.getItem("wishlisstItem"));
- const wishlistCount = wishlist.filter(data => data.userUniqueId == loinFindUser);
- const wishlistValueCount = wishlistCount.length;
- 
+ const wishlist = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
+const wishlistCount = wishlist.filter(data => data.userUniqueId == loinFindUser);
+const wishlistValueCount = wishlistCount.length;
+
+
 const beforeLogin = 
 ` <div class="all_header">
 <div class="header">
@@ -263,7 +264,6 @@ if (loginUser) {
   userLoginElement?.addEventListener("click", () => document.body.innerHTML = beforeLogin);
 //   const beforeLoginElement = document.querySelector(".all_header");
 //   beforeLoginElement?.remove();
-
 const cart = document.getElementById("span_count");
 const wish = document.getElementById("wish_span_count");
 if(cartValueCount == 0){
@@ -274,6 +274,7 @@ if(cartValueCount == 0){
 if(wishlistValueCount == 0){
     wish.style.display = "none";
 }
+ 
   const userLogoutElement = document.getElementById("user_logout");
   userLogoutElement?.addEventListener("click", () => {
     localStorage.removeItem("user_data");
