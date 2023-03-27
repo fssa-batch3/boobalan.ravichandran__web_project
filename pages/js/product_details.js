@@ -410,7 +410,7 @@ window.onload = function() {
 
 // ------------------ Add to cart buttons--------------
 
-
+const add_path = window.location.origin
 function addToCart(){
     if(loginUserDetails){
         const logedUserDetails = JSON.parse(localStorage.getItem("user_data"));
@@ -424,7 +424,9 @@ function addToCart(){
             "userUniqueId": loginUserDetails
         })
         localStorage.setItem("addToCartItem", JSON.stringify(addToCartItem));
-      rem_a.setAttribute("href","http://127.0.0.1:5500/pages/user/add_cart.html")
+
+        const add_root = `${add_path}/pages/user/add_cart.html`
+      rem_a.setAttribute("href",add_root)
     } 
     else(
         alert("Product already in cart")
@@ -441,10 +443,12 @@ document.getElementById("rem1").addEventListener("click", addToCart)
 document.getElementById("rem2").addEventListener("click",
 function buyNow(){
     if(loginUserDetails){
-        div_a.setAttribute("href", "http://127.0.0.1:5500/pages/user/order_summary.html?order=" + loadProduct["product_unique_id"])
+        const product_id = loadProduct["product_unique_id"]
+        const wish_p = `${add_path}/pages/user/order_summary.html?order=`+ product_id;
+        div_a.setAttribute("href", wish_p )
     }
 else{
-    window.location.href = "../user/user_login.html";
+    window.location.href = `${add_path}/user/user_login.html`;
 }
 });
 

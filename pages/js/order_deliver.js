@@ -7,6 +7,8 @@
    const orderedProducts  = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct"))
    const getProductDetails = orderedProducts.find(details=>
    details.orderUniqueId == productUniqueId);
+
+   const path_root = window.location.origin
    
     div_fert12 = document.createElement("div");
     div_fert12.setAttribute("class", "fert12");
@@ -166,7 +168,9 @@ const formattedDate = `${day}/${month}/${year}`;
 
 document.getElementById("back").addEventListener("click", 
 function backHome(){
-    location.href = "http://127.0.0.1:5500/pages/user/user_order.html";
+const path_pros = `${path_root}/pages/user/user_order.html`
+
+    location.href = path_pros;
 }
 );
 
@@ -178,8 +182,8 @@ function cancelOrder(){
         const orderSts = "Cancelled";
          getProductDetails["orderStatus"] = orderSts;
          localStorage.setItem("addtoCartDeliveryProduct",JSON.stringify(orderedProducts))
-
-        location.href = "http://127.0.0.1:5500/pages/user/user_order.html";
+         const path_pros = `${path_root}/pages/user/user_order.html`
+        location.href = path_pros;
     }
 })
 }
@@ -191,7 +195,9 @@ else{
 if(getProductDetails["orderStatus"] == "Cancelled"){
     cancel_button.style.display = "none";
 }
-
+else{
+    cancel_button.style.display = "block";
+}
 // // after delivered product order status has been changed "Delivered"
 
 

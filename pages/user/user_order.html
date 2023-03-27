@@ -233,6 +233,11 @@
     //           </tr>
     const logedUserDetails = JSON.parse(localStorage.getItem("user_data"));
     const orderDetails = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct"));
+
+    const pro_path = window.location.origin
+
+
+
 const deliverStatus ="true";
 const getOrderDetails = orderDetails.filter(details=>details.deliveryStatus == deliverStatus && details.userUniqueId == logedUserDetails);
 for(let i=0;i<getOrderDetails.length; i++){
@@ -261,8 +266,12 @@ for(let i=0;i<getOrderDetails.length; i++){
   td_5.setAttribute("class","eye");
   tr.append(td_5);
 
+
+            const product_id = getOrderDetails[i]["orderUniqueId"];
+              const product_url = `${pro_path}/pages/user/order_deliver.html?orderDetails=`+ product_id;
+            // <div class="insecticide"> </div>
   let td_5_a = document.createElement("a");
-  td_5_a.setAttribute("href", "http://127.0.0.1:5500/pages/user/order_deliver.html?orderDetails=" + getOrderDetails[i]["orderUniqueId"]);
+  td_5_a.setAttribute("href", product_url);
   td_5_a.innerText ="View"
   td_5.append(td_5_a);
 
@@ -281,13 +290,15 @@ for(let i=0;i<getOrderDetails.length; i++){
   if (day.length < 2) day = '0' + day;
 
   return [day, month, year].join('/');
-}
+
+  
 if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
   const currentDate = new Date();
   const day = String(currentDate.getDate()).padStart(2, '0');
   const month = String(currentDate.getMonth() + 1).padStart(2, '0');
   const year = currentDate.getFullYear();
   const formattedDate = `${day}/${month}/${year}`;
+ 
 
 
   const deliverydate = getOrderDetails[i]["deliveryDate"];
@@ -311,6 +322,7 @@ if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
   }
 }
 
+}
 }
 
 const orderMessage = document.getElementById("empty_orderr");

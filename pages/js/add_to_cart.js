@@ -142,6 +142,7 @@ function removeProductFromCart(cartId) {
   }
 }
 
+const path_pro = window.location.origin
 
 
 function addToCartItem(product) {
@@ -149,10 +150,10 @@ function addToCartItem(product) {
     <div class="cart_details">
       <div class="cart2">
         <div class="cart21">
-          <a href="http://127.0.0.1:5500/pages/user/product_details.html?product=${encodeURIComponent(product["product_name"])}&product_id=${product["product_unique_id"]}"><img src="${product["source"]}" alt="DHANUKA M45 FUNGICIDE"></a>
+          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(product["product_name"])}&product_id=${product["product_unique_id"]}"><img src="${product["source"]}" alt="DHANUKA M45 FUNGICIDE"></a>
         </div>
         <div class="cart22">
-          <a href="http://127.0.0.1:5500/pages/user/product_details.html?product=${encodeURIComponent(product["product_name"])}&product_id=${product["product_unique_id"]}">
+          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(product["product_name"])}&product_id=${product["product_unique_id"]}">
             <h1 id="product_name">${product["product_name"]}</h1>
             <div class="price">
               <h2 id="product_pri">₹${product["actual_price"] - product["discount"]}</h2>
@@ -341,9 +342,14 @@ document.getElementById("place_order").addEventListener("click", function placeO
       addtoCartDeliveryProduct.push(addProduct);
     }
 
+    
+              const product_url = `${path_pro}/pages/user/delivery_addtocart.html?delivery-status=`+ deliveryStatus;
+
+
+
     localStorage.setItem('addtoCartDeliveryProduct', JSON.stringify(addtoCartDeliveryProduct));
     alert("order details stored successfully");
-    location.href = "http://127.0.0.1:5500/pages/user/delivery_addtocart.html?delivery-status=" + deliveryStatus;
+    location.href = product_url;
   }
 });
 

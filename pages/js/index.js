@@ -9,7 +9,7 @@
        
     // </div>
     let product_details = JSON.parse(localStorage.getItem("dhanuka_details"));
-
+  const product_path = window.location.origin
 
     for (i = 0; i < product_details.length; i++) {
     div_today = document.createElement("div");
@@ -17,10 +17,14 @@
             div_today.setAttribute("data-id",product_details[i]["product_unique_id"])
             document.querySelector("div.offers1").append(div_today);
             console.log(div_today);
+           
+            const product_name = encodeURIComponent(product_details[i]["product_name"]);
+            const product_id = product_details[i]["product_unique_id"];
+              const product_url = `${product_path}/pages/user/product_details.html?product=${product_name}&product_id=${product_id}`;
 
             insecticide_a = document.createElement("a");
             // insecticide_a.setAttribute("href","../../pages/user/adama1.html"+"?product="+product_details[i]["product_unique_id"]);
-            insecticide_a.setAttribute("href", "http://127.0.0.1:5500/pages/user/product_details.html?product=" + encodeURIComponent(product_details[i]["product_name"]) + "&product_id=" + product_details[i]["product_unique_id"]);
+            insecticide_a.setAttribute("href", product_url);
             div_today.append(insecticide_a);
 
             

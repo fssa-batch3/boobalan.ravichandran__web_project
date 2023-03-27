@@ -210,8 +210,13 @@ userUniqueId : logedUser,
 // Store the new object in localStorage
 orderData.push(newOrder);
 localStorage.setItem('addtoCartDeliveryProduct', JSON.stringify(orderData));
+// const product_uud = encodeURIComponent(loadProduct["product_unique_id"]);
+// const product_id = product_details[i]["product_unique_id"];
+//   const product_url = `${root_path}/pages/user/product_details.html?product=${product_name}&product_id=${product_id}`;
 
-location.href = `http://127.0.0.1:5500/pages/user/deliver_address.html?delivery_address=${encodeURIComponent(loadProduct["product_unique_id"])}&orderUnique=${uid}`;
+const path_roo = window.location.origin
+
+location.href = `${path_roo}/pages/user/deliver_address.html?delivery_address=${encodeURIComponent(loadProduct["product_unique_id"])}&orderUnique=${uid}`;
 });
 
 

@@ -39,6 +39,8 @@ officeImg.addEventListener("click", function() {
   }
 });
 
+const loc_path = window.location.origin
+
 document.getElementById("save_delivery").addEventListener("click", function addProductDate(e) {
     e.preventDefault();
     const deliveryFirstName = document.getElementById("first_name").value;
@@ -72,8 +74,10 @@ document.getElementById("save_delivery").addEventListener("click", function addP
 document.querySelector('form').reset();
     alert("Your order has been successfully accepted..✅");
 
-    const newWindow = window.open("http://127.0.0.1:5500/pages/user/thank_order.html", "_blank");
-newWindow.location.href = "http://127.0.0.1:5500/pages/user/thank_order.html";
+  const pro_url = `${loc_path}/pages/user/thank_order.html`
+
+    const newWindow = window.open(pro_url, "_blank");
+newWindow.location.href = pro_url;
 
   
 });

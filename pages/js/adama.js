@@ -12,11 +12,16 @@
         let save_h3;
         
   let product_details = JSON.parse(localStorage.getItem("adama_details"))
-
-  
+  const root_path = window.location.origin
         
 
         for (i = 0; i < product_details.length; i++) {
+
+            const product_name = encodeURIComponent(product_details[i]["product_name"]);
+            const product_id = product_details[i]["product_unique_id"];
+              const product_url = `${root_path}/pages/user/product_details.html?product=${product_name}&product_id=${product_id}`;
+
+
             // <div class="insecticide"> </div>
             div_today = document.createElement("div");
             div_today.setAttribute("class", "today");
@@ -28,7 +33,7 @@
             // <a>---------------------</a>
             insecticide_a = document.createElement("a");
             // insecticide_a.setAttribute("href","../../pages/user/adama1.html"+"?product="+product_details[i]["product_unique_id"]);
-            insecticide_a.setAttribute("href", "http://127.0.0.1:5500/pages/user/product_details.html?product=" + encodeURIComponent(product_details[i]["product_name"]) + "&product_id=" + product_details[i]["product_unique_id"]);
+            insecticide_a.setAttribute("href", product_url);
             div_today.append(insecticide_a);
 
             //  product image------------------

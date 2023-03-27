@@ -55,7 +55,7 @@ document.getElementById("save_delivery").addEventListener("click", function addP
 
   // Update the delivery status to false
 
-
+  const loc_path = window.location.origin
   // Loop through the loadProduct array and update each item
   for (let i = 0; i < loadProduct.length; i++) {
     loadProduct[i]["firstName"] = deliveryFirstName;
@@ -88,8 +88,12 @@ addToCartItem = addToCartItem.filter(item => item.userUniqueId !== logedUser);
 // Update the addToCartItem array in local storage with the new array
 localStorage.setItem("addToCartItem", JSON.stringify(addToCartItem));
 
-  const newWindow = window.open("http://127.0.0.1:5500/pages/user/thank_order.html", "_blank");
-  newWindow.location.href = "http://127.0.0.1:5500/pages/user/thank_order.html";
+const pro_url = `${loc_path}/pages/user/thank_order.html`
+
+    const newWindow = window.open(pro_url, "_blank");
+newWindow.location.href = pro_url;
+
+
 });
 
 window.addEventListener("beforeunload", function() {

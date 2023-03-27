@@ -13,9 +13,9 @@ const allProducts = dhanukaDetails.concat(adamaDetails, dowAgroScienceDetails);
 const findLogedUserWishlist = wishListProduct.filter(details => details.userUniqueId == logedUser)
 
 const wishProducts = allProducts.filter(product => findLogedUserWishlist.some(uuid => uuid.product_id === product.product_unique_id));
-const path = window.location.origin
-for (i = 0; i < wishProducts.length; i++) {
 
+for (i = 0; i < wishProducts.length; i++) {
+    const root_path = window.location.origin
   div_fertilizer = document.createElement("div");
   div_fertilizer.setAttribute("class", "fertilizer");
   document.querySelector("div.wishlist").append(div_fertilizer);
@@ -25,9 +25,14 @@ for (i = 0; i < wishProducts.length; i++) {
   div_fert1.setAttribute("class", "fert1");
   div_fertilizer.appendChild(div_fert1);
 
+  const product_name = encodeURIComponent(wishProducts[i]["product_name"]);
+  const product_id = wishProducts[i]["product_unique_id"];
+    const product_url = `${root_path}/pages/user/product_details.html?product=${product_name}&product_id=${product_id}`;
 
+
+    
   fert_a = document.createElement("a");
-  fert_a.setAttribute("href", "http://127.0.0.1:5500/pages/user/product_details.html?product=" + encodeURIComponent(wishProducts[i]["product_name"]) + "&product_id=" + wishProducts[i]["product_unique_id"]);
+  fert_a.setAttribute("href", product_url);
   div_fert1.append(fert_a);
 
   image = document.createElement("img");
@@ -95,17 +100,18 @@ for (i = 0; i < wishProducts.length; i++) {
     this.style.color = "rgb(198, 198, 198)";
     location.reload();
   });
-  const emptyWishList = document.getElementById("empty-wishlist");
-  const shownProducts = document.querySelector(".wishlist");
-  if(updatedWishlist.length == 0){
-    emptyWishList.style.display="block";
-    shownProducts.style.display="none";
-  }
-  else{
-    emptyWishList.style.display="none";
-    shownProducts.style.display="block";
-  }
 
 }
 
 
+
+const emptyWishList = document.getElementById("empty-wishlist");
+const shownProducts = document.querySelector(".wishlist");
+if(wishProducts.length == 0){
+  emptyWishList.style.display="block";
+  shownProducts.style.display="none";
+}
+else{
+  emptyWishList.style.display="none";
+  shownProducts.style.display="block";
+}
