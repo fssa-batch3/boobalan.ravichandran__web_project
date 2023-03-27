@@ -44,31 +44,59 @@
         <label for="state1" class="form-label" >State</label>
     </div>
     <div class="btn1">
-<button  type="button" onclick="bank()">Continue</button>
+<button  type="submit" id="bankDetails">Continue</button>
 </div>
 </form>
 </div>
 <script>
-    function bank(){
-        const holder=document.getElementById("account_holder_name").value
-        const account=document.getElementById("account_number").value
-        const ifsc=document.getElementById("IFSC_code").value
-        const branch=document.getElementById("branch_name").value
-        const city=document.getElementById("city").value
-        const state=document.getElementById("state1").value
-
-        console.log(holder)
-        console.log(account)
-        console.log(ifsc)
-        console.log(branch)
-        console.log(city)
-        console.log(state)
+   
 
 
+      
 
- window.location.href="./login.html"
+    
+const sellerPhoneNumber = new URLSearchParams(window.location.search).get('seller_number');
+const sellerDetails = JSON.parse(localStorage.getItem("seller_list"));
 
-    }
+const SellerAccountFindIndex = sellerDetails.findIndex(detail =>
+  detail.signupDetails.sel_phone === sellerPhoneNumber
+);
+
+if (SellerAccountFindIndex >= 0) {
+  document.getElementById("bankDetails").addEventListener("click", function pickUpDetails(e) {
+    e.preventDefault();
+    const holder = document.getElementById("account_holder_name").value
+        const account = document.getElementById("account_number").value
+        const ifsc = document.getElementById("IFSC_code").value
+        const branch = document.getElementById("branch_name").value
+        const city = document.getElementById("city").value
+        const state = document.getElementById("state1").value
+
+        if (holder === '' || account === '' || ifsc === '' || branch === '' || city === '' || state === '' ) {
+    alert('Please fill in all the required fields before continuing.');
+    return;
+  }
+
+    sellerDetails[SellerAccountFindIndex].bankDetails = {
+    
+        account_holder_name: holder,
+          account_number: account,
+          ifsc_code: ifsc,
+          branch_name: branch,
+          city_name: city,
+          state_name: state
+    };
+
+    localStorage.setItem("seller_list", JSON.stringify(sellerDetails));
+    alert("Your bank details have been successfully accepted. ✅");
+    location.href = "./login.html";
+    document.querySelector('form').reset();
+  });
+}
+
+
+
+  
 </script>
  </body>
  </html>

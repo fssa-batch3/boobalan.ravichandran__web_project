@@ -1,8 +1,6 @@
 table, th, td {
     border: 1px solid  rgb(250, 249, 255);
     border-collapse: collapse;
-    font-family: Roboto,Arial,sans-serif;
-   
     
   }
  main table caption{

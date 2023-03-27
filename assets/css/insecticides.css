@@ -1,6 +1,6 @@
 .insecticide{
     padding-top: 20px;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-bottom: 100px;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding:20px 50px 20px 20px;
+    padding:20px 20px 20px 20px;
     justify-content: space-around;
 }
 .checked {
@@ -29,14 +29,19 @@
     width:320px;
     min-height:450px;
     background-color: rgb(255, 255, 255);
-    margin-left: 30px;
+    
     padding: 30px 0px 30px 0px;
     margin-bottom: 40px;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border: 1px solid rgb(183, 183, 183);
+
     display: flex;
     justify-content: center;
     text-align: center;
+  }
+  .today:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    transform: 3s;
   }
   .today a{
     text-decoration: none;
@@ -56,7 +61,7 @@
      ;
 }
 .price h4{
-  font-size: 20px;
+  font-size: 21px;
   color:rgb(10, 95, 10)
 }
 .pricecontain{
@@ -86,13 +91,7 @@
     text-align: center; 
     justify-content: center;
   }
-  .offers1 img:hover {
-    transform:0;
-    transition-delay: 0s;
-    border-radius:0px;
-    box-shadow: none;
-}
-
+ 
 
 /* ---------==============Media quary start=================------------- 
 -------------

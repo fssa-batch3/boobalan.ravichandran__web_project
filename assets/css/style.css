@@ -12,6 +12,7 @@
   .header{
       background-color:var(--nav-backgroung);
       padding: 15px 100px;
+
   }
   .hero_list ,.hero_list1,.hero_list11{
       list-style: none;
@@ -32,14 +33,14 @@
     border:1px solid white;
   }
   .header__logo{
-      width:14vw;
+      width:13.5vw;
       height: 8vh;
       padding: 8px 5px 5px 40px;
   }
 
   .head{
       display: flex;
-      justify-content: space-around;
+   
       align-items: center;
       width:1450px;
   }
@@ -47,10 +48,10 @@
   /* search bar start  */
 
     .search_bar{
-   width:30vw;
+   width:27vw;
      height: 40px;
      position: relative;
-     margin: auto;
+     margin: 0vh 6vw
     }
     .search_bar .input0{
       width: 100%;
@@ -107,12 +108,25 @@ justify-content: space-around;
   background-color: orangered;
   padding: 10px 60px;
   border-radius: 5px;
+  
 }
 .hero .hero_list11 a{
   text-decoration: none;
   color:rgb(11, 2, 51);
   font-weight: bold;
+  display: flex;
+  margin-left: 40px;
  
+}
+
+.hero .hero_list11 img{
+  width:35px;
+  height: 35px;
+ 
+}
+.hero .all_nave_links .hero_list11 a p{
+margin-top: 10px;
+margin-left:3px;
 }
 
 
@@ -130,6 +144,55 @@ justify-content: space-around;
 }
 .seller{
   color:transparent
+}
+
+#span_count{
+  background-color:rgb(255, 136, 0);
+  padding: 4px 16px 20px 10px;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: relative;
+  color:white;
+ 
+  font-size: 13px;
+  width:16px;
+  height: 25px;
+margin-left: -18px;
+margin-top: -10px;
+
+}
+#wish_span_count{
+  background-color:rgb(4, 18, 102);
+  padding: 4px 16px 20px 10px;
+  border-radius: 50px;
+  position: relative;
+  border: 2px solid white;
+  color:white;
+  font-size: 13px;
+  width:16px;
+  height: 25px;
+margin-left: -18px;
+margin-top: -10px;
+
+}
+/* #wish_name,#cart_name{
+  margin-left: -5px;
+} */
+#order_del{
+  width:38px;
+  height: 42px;
+  margin-top: -2px;
+}
+.all_nave_links{
+  display: flex;
+  margin-right: 2vw;
+}
+.navbar_links{
+  margin-left: 6vw;
+  display: flex;
+}
+  #profile_icon{
+  margin-left: 200px;
 }
 /* head class end */
 
@@ -314,6 +377,7 @@ left: 0;
   width:90%;
   height:90%;
 }
+
 .offers h2:hover{
     color: green;
 }
@@ -367,9 +431,9 @@ left: 0;
     display:grid;
     gap:2.1vw;
     grid-auto-flow:column;
-    grid-auto-columns:18%;
+    grid-auto-columns:22%;
     overflow-x: auto;
-    padding: 20px 20px;
+    padding:20px 50px 20px 20px;
     overscroll-behavior-inline: contain;
   }
   .offers1::-webkit-scrollbar{
@@ -380,6 +444,8 @@ left: 0;
     height:240px;
     border-radius: 10px;
   }
+ 
+  /* }
   .today{
     background-color: rgb(255, 255, 255);
     padding: 10px 10px 20px 18px ;
@@ -413,7 +479,75 @@ left: 0;
     margin-left: 15px;
     margin-top: 6px;
     margin-bottom: 12px;
+} */
+
+#interface .today{
+  width:320px;
+  min-height:450px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 20px 20px 18px ;
+    border-radius: 5px;
+  border: 1px solid rgb(183, 183, 183);
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
+#interface .today:hover{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transform: 3s;
+}
+.today a{
+  text-decoration: none;
+  color: black;
+}
+.today img{
+  width:250px;
+  height:280px;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+.price ,.price11{
+display: flex;
+  text-align: center; 
+  justify-content: space-between;
+  padding: 10px 0px;
+   ;
+}
+.price h4{
+font-size: 21px;
+color:rgb(10, 95, 10)
+}
+.pricecontain{
+border-bottom: 2px solid green;
+/* border-top: 2px solid green; */
+}
+
+.price11 del{
+font-size: 19px;
+color:rgb(96, 8, 56);
+font-weight: bold;
+}
+.today h3{
+  font-size: 21px;
+}
+.div_save{
+padding: 15px 0px 0px 0px;
+
+}
+.today p{
+ 
+  font-size: 20px;
+ padding: 5px 20px 20px 20px;
+ width:280px;
+  font-weight: bold;   
+  display: flex;
+  text-align: center; 
+  justify-content: center;
+}
+
+
+
 .fab{
     border:2px solid rgb(249, 249, 249);
     background-color: white ;
@@ -440,7 +574,7 @@ left: 0;
     height:200px;
     box-shadow: 0px 4px 8px 0px rgb(117, 117, 117);
 }
-.details img:hover ,.offers1 img:hover{
+.details img:hover {
     transform: scale(1.02);
     transition-delay: .1s;
     border-radius: 10px;

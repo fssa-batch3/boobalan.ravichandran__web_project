@@ -1,3 +1,7 @@
+.search_menu,.mobile_footer{
+    display: none;
+}
+
 .checked {
     color: orange;
     margin-bottom: 10px;
@@ -61,7 +65,9 @@ a{
 
 .price{
     margin: 10px 10px 10px -10px;
+    display: flex;
     
+    margin-left: 50px;
 }
 /* ===========-------------section -----------=============== */
 .cart_details{
@@ -132,6 +138,8 @@ a{
     min-width:340px;
     max-height: 310px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    position: sticky;
+    top: 0;
 }
 .cart101 h2{
 margin-top: 16px;
@@ -195,6 +203,7 @@ margin-top: 16px;
 #discount{
     color:green ;
     font-size: 21px;
+    margin-left: -10px;
 }
 
 /* -------============/ @media start for mobile screen/-=============---------- */

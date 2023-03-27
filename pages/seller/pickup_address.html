@@ -16,11 +16,11 @@
 </head>
 <body>
         <div class="box">
-            <form action="#" class="form">
+            <form class="form">
                     <img src="../../assets/images/Fert agri.png" alt="logo">
             <h1>Pickup Address Details</h1>
             <div class="form-group">
-                <input type="number" class="form-control" id="pincode"required max="6"/>
+                <input type="number" class="form-control" id="pincode" required/>
                 <label for="pincode" class="form-label">Pincode</label>
             </div>
             <div class="form-group">
@@ -53,10 +53,55 @@
               
             </div>
             <div class="btn1">
-                <a href="./bank_details.html"><button type="button">Continue</button></a>
+              <button type="submit" id="pickup_address">Continue</button>
             </div>
         </form>
         </div>
+<script>
 
+    
+const sellerPhoneNumber = new URLSearchParams(window.location.search).get('seller_phone_number');
+const sellerDetails = JSON.parse(localStorage.getItem("seller_list"));
+
+const SellerAccountFindIndex = sellerDetails.findIndex(detail =>
+  detail.signupDetails.sel_phone === sellerPhoneNumber
+);
+
+
+if (SellerAccountFindIndex >= 0) {
+  document.getElementById("pickup_address").addEventListener("click", function pickUpDetails(e) {
+    e.preventDefault();
+    const pick_pincode = document.getElementById("pincode").value;
+    const pick_state = document.getElementById("state").value;
+    const pick_district = document.getElementById("district").value;
+    const GST_number = document.getElementById("gstin").value;
+    const business_name = document.getElementById("business_name").value;
+    const pan_number = document.getElementById("pan").value;
+    const business_type = document.getElementById("business_type").value;
+
+    if (pick_pincode === '' || pick_state === '' || pick_district === '' || GST_number === '' || pan_number === '' || business_name === '' || business_type === '' ) {
+    alert('Please fill in all the required fields before continuing.');
+    return;
+  }
+
+    sellerDetails[SellerAccountFindIndex].pickUpDetails = {
+      sell_pincode: pick_pincode,
+      sell_state: pick_state,
+      sell_district: pick_district,
+      GST_number: GST_number,
+      business_name: business_name,
+      PAN_number: pan_number,
+      business_type: business_type
+    };
+
+    localStorage.setItem("seller_list", JSON.stringify(sellerDetails));
+    alert("Your pickup address details have been successfully accepted. ✅");
+    location.href = "./bank_details.html?seller_number=" + sellerPhoneNumber;
+       document.querySelector('form').reset();
+  });
+}
+
+
+</script>
 </body>
 </html>
