@@ -11,7 +11,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
 
 ## Buyer
 
-### Create an account
+### Create an account[Completed]
 - Scenario 1: Successfully create an account
     - Steps:
         1. Navigate to the registration page.
@@ -20,7 +20,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The user is redirected to the login page.
 
-### Create an account
+### Create an account[Completed]
 - Scenario 1: Successfully login in to account
     - Steps:
         1. Navigate to the login page.
@@ -30,7 +30,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
         - The user is redirected to the home page.
 
 
-### View products/items
+### View products/items[Completed]
 - Scenario 1: Successfully view products/items
     - Steps:
         1. Log in as a buyer.
@@ -39,7 +39,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The user can view the list of available products/items.
 
-### View product/item details
+### View product/item details[Completed]
 - Scenario 1: Successfully view product/item details
     - Steps:
         1. Log in as a buyer.
@@ -48,7 +48,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The user can view the details of the selected product/item.
 
-### Buy a product/item
+### Buy a product/item[Completed]
 - Scenario 1: Successfully purchase a product/item
     - Steps:
         1. Log in as a buyer.
@@ -61,7 +61,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The user is redirected to the "Thank you for your order" page.
 
-### Add product/item to cart
+### Add product/item to cart[Completed]
 - Scenario 1: Successfully add product/item to cart
     - Steps:
         1. Log in as a buyer.
@@ -71,7 +71,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The product/item is added to the user's cart.
 
-### View items in cart
+### View items in cart[Completed]
 - Scenario 1: Successfully view items in cart
     - Steps:
         1. Log in as a buyer.
@@ -80,7 +80,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The user can view the list of items in the cart.
 
-### Remove item from cart
+### Remove item from cart[Completed]
 - Scenario 1: Successfully remove item from cart
     - Steps:
         1. Log in as a buyer.
@@ -90,7 +90,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
         - The item is removed from the user's cart.
 
 
-### Add product/item to wishlist
+### Add product/item to wishlist[Completed]
 - Scenario 1: Successfully add product/item to wishlist
     - Steps:
         1. Log in as a buyer.
@@ -100,7 +100,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The product/item is added to the user's wishlist.
 
-### View items in wishlist
+### View items in wishlist[Completed]
 - Scenario 1: Successfully view items in wishlist
     - Steps:
         1. Log in as a buyer.
@@ -109,7 +109,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The user can view the list of items in the wishlist.
 
-### Remove item from wishlist
+### Remove item from wishlist[Completed]
 - Scenario 1: Successfully remove item from wishlist
     - Steps:
         1. Log in as a buyer.
