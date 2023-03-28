@@ -281,48 +281,48 @@ for(let i=0;i<getOrderDetails.length; i++){
   td_5_a.append(td_5_a_i);
 
   function formatDate(date) {
-  var d = new Date(date),
-  month = '' + (d.getMonth() + 1),
-  day = '' + d.getDate(),
-  year = d.getFullYear();
+    var d = new Date(date),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
+    year = d.getFullYear();
 
-  if (month.length < 2) month = '0' + month;
-  if (day.length < 2) day = '0' + day;
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
 
-  return [day, month, year].join('/');
-
-  
-if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
-  const currentDate = new Date();
-  const day = String(currentDate.getDate()).padStart(2, '0');
-  const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-  const year = currentDate.getFullYear();
-  const formattedDate = `${day}/${month}/${year}`;
- 
-
-
-  const deliverydate = getOrderDetails[i]["deliveryDate"];
-  const [inputDay, inputMonth, inputYear] = deliverydate.split("/");
-  const inputDateObj = new Date(`${inputMonth}/${inputDay}/${inputYear}`);
-  inputDateObj.setDate(inputDateObj.getDate() - 3);
-  const threeDaysBeforeDate = `${String(inputDateObj.getDate()).padStart(2, '0')}/${String(inputDateObj.getMonth() + 1).padStart(2, '0')}/${inputDateObj.getFullYear()}`;
- // console.log(threeDaysBeforeDate); // Output: 20/03/2023
-
-  if (formattedDate >= threeDaysBeforeDate) {
-   
-    const status = "Shipped";
-    getOrderDetails[i]["orderStatus"] = status;
-    localStorage.setItem("addtoCartDeliveryProduct",JSON.stringify(getOrderDetails))
-  } 
-
-  if (formattedDate > deliverydate) {
-    const ord_status = "Delivered";
-    getOrderDetails[i]["orderStatus"] = ord_status;
-    localStorage.setItem("addtoCartDeliveryProduct",JSON.stringify(getOrderDetails))
+    return [day, month, year].join('/');
   }
-}
 
-}
+  if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
+    const currentDate = new Date();
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const year = currentDate.getFullYear();
+    const formattedDate = `${day}/${month}/${year}`;
+
+    console.log("formattedDate:", formattedDate);
+
+    const deliverydate = getOrderDetails[i]["deliveryDate"];
+    const [inputDay, inputMonth, inputYear] = deliverydate.split("/");
+    const inputDateObj = new Date(`${inputMonth}/${inputDay}/${inputYear}`);
+    inputDateObj.setDate(inputDateObj.getDate() - 3);
+    const threeDaysBeforeDate = `${String(inputDateObj.getDate()).padStart(2, '0')}/${String(inputDateObj.getMonth() + 1).padStart(2, '0')}/${inputDateObj.getFullYear()}`;
+
+    console.log("deliverydate:", deliverydate);
+    console.log("threeDaysBeforeDate:", threeDaysBeforeDate);
+       
+    if (formattedDate <= threeDaysBeforeDate) {
+      const status = "Shipped";
+      getOrderDetails[i]["orderStatus"] = status;
+      localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(getOrderDetails));
+    } 
+
+    if (formattedDate < deliverydate) {
+      const ord_status = "Delivered";
+      getOrderDetails[i]["orderStatus"] = ord_status;
+      localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(getOrderDetails));
+    }
+  }
+
 }
 
 const orderMessage = document.getElementById("empty_orderr");
