@@ -232,7 +232,7 @@
 
     //           </tr>
     const logedUserDetails = JSON.parse(localStorage.getItem("user_data"));
-    const orderDetails = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct"));
+    const orderDetails = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) || [];
 
     const pro_path = window.location.origin
 
@@ -290,7 +290,7 @@ for(let i=0;i<getOrderDetails.length; i++){
   if (day.length < 2) day = '0' + day;
 
   return [day, month, year].join('/');
-
+  }
   
 if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
   const currentDate = new Date();
@@ -323,7 +323,7 @@ if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
 }
 
 }
-}
+
 
 const orderMessage = document.getElementById("empty_orderr");
 const orderTable = document.getElementById("order_tablee");
