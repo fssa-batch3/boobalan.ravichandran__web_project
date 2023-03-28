@@ -15,7 +15,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
 - Scenario 1: Successfully create an account
     - Steps:
         1. Navigate to the registration page.
-        2. Enter the required information such as mobile number, email, first name, last name and password.
+        2. Enter the required information such as mobile number, email, full name and password.
         3. Click the "Register" button.
     - Expected Result:
         - The user is redirected to the login page.
@@ -117,3 +117,32 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
         3. Remove the selected item from the wishlist.
     - Expected Result:
         - The item is removed from the user's wishlist.
+
+### Profile Account
+- Scenario 1: Successfully created a new profile account
+    - Steps:
+        1. Log in as a buyer.
+        2. Navigate to the user index page.
+        3. Click "Profile" Icon.
+    - Expected Result:
+        - The user is redirected to the Personal Information page.
+
+### Edit Profile Account
+- Scenario 1: Successfully read data in profile account
+    - Steps:
+        1. Navigate to the user index page.
+        2. If the user wants to edit their profile.
+        3. Click "Edit" Button.
+    - Expected Result:
+        - The user is redirected to the Edit Personal Details Page.
+
+### Update Profile Account
+- Scenario 1: Successfully read data in profile account
+    - Steps:
+        1. Navigate to the user Edit Personal Details Page.
+        2. Enter the required information such as full name, gender, date of birth, Street Name, City Name, District Name and
+        State Name
+        3. Click "save" Button.
+    - Expected Result:
+        - The user is redirected to the Personal Information Page.
+

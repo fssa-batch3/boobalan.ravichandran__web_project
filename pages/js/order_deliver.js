@@ -90,14 +90,9 @@ const formattedDate = `${day}/${month}/${year}`;
 
 
 
-   const deliverydate = getProductDetails["deliveryDate"];
-//  if(deliverydate == formattedDate){
-//     fert16_p.innerText = "Completed";
-//  }
-//  else{
-//     fert16_p.innerText = "Processing"
-//  }
 
+   const deliverydate = getProductDetails["deliveryDate"];
+   
 
   // <div class="fert116">
       //              <h3>Date:</h3><p>15/08/2022</p> </div>>    
@@ -165,42 +160,35 @@ const formattedDate = `${day}/${month}/${year}`;
 
 
 
-
-document.getElementById("back").addEventListener("click", 
-function backHome(){
-const path_pros = `${path_root}/pages/user/user_order.html`
-
+   document.getElementById("back").addEventListener("click", function backHome() {
+    const path_pros = `${path_root}/pages/user/user_order.html`
     location.href = path_pros;
-}
-);
+});
 
-if(formattedDate < deliverydate){
-    document.getElementById("cancel").addEventListener("click",
-function cancelOrder(){
-    const confirmed = confirm("Are you sure you want to cancel this order?");
-    if(confirmed){
-        const orderSts = "Cancelled";
-         getProductDetails["orderStatus"] = orderSts;
-         localStorage.setItem("addtoCartDeliveryProduct",JSON.stringify(orderedProducts))
-         const path_pros = `${path_root}/pages/user/user_order.html`
-        location.href = path_pros;
+document.getElementById("cancel").addEventListener("click", function cancelOrder() {
+    if (formattedDate > deliverydate) {
+        const confirmed = confirm("Are you sure you want to cancel this order?");
+        if (confirmed) {
+            const orderSts = "Cancelled";
+            getProductDetails["orderStatus"] = orderSts;
+            localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderedProducts));
+            const path_pros = `${path_root}/pages/user/user_order.html`
+            console.log(path_pros);
+            location.href = path_pros;
+        }
     }
-})
-}
-else{
+});
+
+const ord_status = "Delivered";
+
+
+if (getProductDetails["orderStatus"] == ord_status){
     cancel_button.style.display = "none";
-}
+};
 
 // Incase user want to cancell the order that status have to update for Cancelled
 if(getProductDetails["orderStatus"] == "Cancelled"){
     cancel_button.style.display = "none";
 }
-else{
-    cancel_button.style.display = "block";
-}
-// // after delivered product order status has been changed "Delivered"
 
 
-// if(formattedDate > deliverydate){
-//     fert16_p.innerText= "Delivered"
-// }

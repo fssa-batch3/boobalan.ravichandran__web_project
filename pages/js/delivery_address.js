@@ -39,7 +39,7 @@ officeImg.addEventListener("click", function() {
   }
 });
 
-const loc_path = window.location.origin
+
 
 document.getElementById("save_delivery").addEventListener("click", function addProductDate(e) {
     e.preventDefault();
@@ -73,8 +73,8 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
 document.querySelector('form').reset();
     alert("Your order has been successfully accepted..✅");
-
-  const pro_url = `${loc_path}/pages/user/thank_order.html`
+    const local_path = window.location.origin
+  const pro_url = `${local_path}/pages/user/thank_order.html`
 
     const newWindow = window.open(pro_url, "_blank");
 newWindow.location.href = pro_url;
