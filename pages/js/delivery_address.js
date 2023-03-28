@@ -71,8 +71,9 @@ document.getElementById("save_delivery").addEventListener("click", function addP
 
    
     localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
-document.querySelector('form').reset();
+
     alert("Your order has been successfully accepted..✅");
+    document.querySelector('form').reset();
     const local_path = window.location.origin
   const pro_url = `${local_path}/pages/user/thank_order.html`
 

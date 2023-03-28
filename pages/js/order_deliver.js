@@ -134,7 +134,7 @@ const formattedDate = `${day}/${month}/${year}`;
    div_fert117.append(fert117_h3);
 
    
-   fert117_p = document.createElement("p");
+   fert117_p = document.createElement("textarea");
    fert117_p.innerText= getProductDetails["address"];
    div_fert117.append(fert117_p);
 
@@ -179,10 +179,10 @@ document.getElementById("cancel").addEventListener("click", function cancelOrder
     }
 });
 
-const ord_status = "Delivered";
 
 
-if (getProductDetails["orderStatus"] == ord_status){
+
+if (getProductDetails["orderStatus"] == "Delivered"){
     cancel_button.style.display = "none";
 };
 

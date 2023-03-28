@@ -290,7 +290,7 @@ for(let i=0;i<getOrderDetails.length; i++){
   if (day.length < 2) day = '0' + day;
 
   return [day, month, year].join('/');
-  }
+
   
 if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
   const currentDate = new Date();
@@ -323,7 +323,7 @@ if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
 }
 
 }
-
+}
 
 const orderMessage = document.getElementById("empty_orderr");
 const orderTable = document.getElementById("order_tablee");
@@ -342,7 +342,7 @@ else{
 
 document.getElementById("start_shopping").addEventListener("click",
 function startShooping(){
-    location.href="http://127.0.0.1:5500/index.htmlgit sta"
+    location.href=`${pro_path}/index.html`
 })
 </script>
 <script src="../js/header.js"></script>
