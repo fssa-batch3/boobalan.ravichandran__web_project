@@ -9,6 +9,43 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
 * Userflow: https://drive.google.com/drive/u/0/folders/1GmGFyJsOcinWxKe0CQtdE-LAJ83ncgCG
 
 
+## List of features:
+
+### User CRUD[Completed]
+* User sign up.
+* User login.
+* User edit data in profile page.
+* User delete account.
+
+### Product CRUD[Completed]
+* Product Create.
+* product showing.
+* Edit product details.
+* Delete product.
+
+### Category CRUD[Completed]
+* Category Create.
+* Category showing.
+* Edit category details.
+* Delete category.
+
+### Order[Completed]
+* Create Order.
+* Read Order.
+* Delete order.
+
+### Wishlist[Completed]
+* Wishlist Create.
+* Wishlist Read.
+* Delete Wishlist.
+
+### Add to cart[Completed]
+* Add to cart Create.
+* Add to cart Read.
+* Add to cart Update.
+* Add to cart Delete.
+
+
 ## Buyer
 
 ### Create an account[Completed]
