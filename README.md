@@ -48,23 +48,25 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
 
 ## Buyer
 
-### Create an account[Completed]
+### Login page[Completed]
 - Scenario 1: Successfully create an account
+    - Steps:
+        1. Navigate to the login page.
+        2. Enter the required information such as mobile number, and password.
+        3. Click the "login" button.
+        4. User does not have an account, click "Create an account".
+    - Expected Result:
+        - The user is redirected to the Create Your Account page.
+        - User click on "Login" button and user will be redirected to home page
+
+### Register page[Completed]
+- Scenario 1: Successfully login in to account
     - Steps:
         1. Navigate to the registration page.
         2. Enter the required information such as mobile number, email, full name and password.
         3. Click the "Register" button.
     - Expected Result:
         - The user is redirected to the login page.
-
-### Create an account[Completed]
-- Scenario 1: Successfully login in to account
-    - Steps:
-        1. Navigate to the login page.
-        2. Enter the required information such as mobile number, and password.
-        3. Click the "login" button.
-    - Expected Result:
-        - The user is redirected to the home page.
 
 
 ### View products/items[Completed]
