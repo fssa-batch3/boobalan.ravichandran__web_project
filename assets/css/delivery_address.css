@@ -1,3 +1,6 @@
+input{
+    font-size: 16px;
+}
 .delivery{
     background-color: rgb(246, 245, 245);
     box-shadow: 0px 5px 13px 0px gray;
@@ -123,11 +126,12 @@ label{
 
 /* ---------------dleivery address---------- */
 #address{
-    width:400px;
-    height:100px;
+    width:300px;
+    height:150px;
     font-size: 18px;
     padding: 10px;
     resize: none;
+    margin-top: 10px;
 }
 
 img.selected {

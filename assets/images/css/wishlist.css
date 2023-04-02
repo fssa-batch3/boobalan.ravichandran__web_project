@@ -1,0 +1,155 @@
+.wishlist{
+    
+  margin: 0px 70px 30px 70px;
+}
+main{
+    min-height: 100vh;
+    background-color: rgb(243, 245, 249);
+    padding-top: 40px;
+}
+.wishlist h2{
+    font-size: 28px;
+    padding: 10px 0px 10px 70px;
+    margin-bottom: 20px;
+}
+.fertilizer{
+    display: flex;
+    margin: 5px 50px 5px 50px ;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 10px 100px 10px 50px;
+    
+}
+.fert1 img{
+    width: 220px;
+    height: 220px;
+    margin: 10px 50px 10px 100px;
+    padding: 20px ;
+    border-radius: 5px;
+}
+.fert1 img:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transform: scale(1.02);
+}
+.fert2 p{
+ font-size: 20px;
+ font-weight: bolder;
+ width: 550px;
+ padding: 20px 0px 0px 60px;
+ color: rgb(218, 16, 67);
+}
+.fert2 p:hover{
+    color: rgb(14, 118, 14);
+}
+.fert1 p:hover{
+    color: rgb(14, 118, 14);
+}
+.fert1 a , .fert2 a{
+    text-decoration: none;
+}
+#win{
+    color:rgb(49, 5, 5);
+    margin-left: 10px;
+}
+#win101{
+    display: none;
+}
+.remov{
+    /* padding: .8rem 3rem; */
+    background-color: rgb(6, 6, 51);
+    color:white;
+    border-radius:5px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    width:180px;
+    height:50px;
+    margin-top: 100px;
+    /* margin-left: -50px; */
+}
+.remov:hover{
+    background-color: rgb(15, 15, 159);
+    box-shadow:rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.pro_price{
+    display: flex;
+    width:300px;
+   
+   margin-top: 25px;
+}
+.pro_price h2{
+    font-size: 24px;
+}
+.pro_price h3{
+    font-size: 20px;
+    text-decoration: line-through;
+    margin-top: 12px;
+    margin-left: 30px;
+    color:rgb(22, 120, 7)
+}
+.fert2{
+    display:flex;
+    margin-top: 20px;
+}
+.product_details a p{
+    font-size: 25px;
+}
+.you_save h2{
+    color:rgb(25, 3, 52);
+    font-size: 23px;
+}
+#empty-wishlist{
+    width:850px;
+    height:700px;
+    padding: 100px;
+    margin-left: 300px;
+}
+
+/* ---------------/@media mobile resposive start/------------============= */
+
+@media screen and (max-width:450px) {
+    .wishlist{
+        margin:0 0 50px 0;
+      }
+      .wishlist h2{
+        display: inline-block;
+        font-size:17px;
+        padding: 15px 0px 10px 20px;
+        margin-bottom: 10px;
+    }
+    #win{
+        display: none;
+    }
+    #win101{
+        display:inline-flex;
+        color:rgb(49, 5, 5);
+        margin-left: 5px;
+    }
+    .fertilizer{
+        margin:0 ;
+        border-radius:0;
+        width:100vw;
+    }
+    
+.fert1 img{
+    width: 170px;
+    height: 170px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.fert2 p{
+    font-size: 14px;
+    width: 200px;
+    padding: 50px 0px 0px 10px;
+   }
+   
+.remov{
+    margin-left: 17vw;
+    padding: 8px 20px;
+    margin-top: 50px;
+    border-radius:3px;
+    font-size: 13px;
+}
+}

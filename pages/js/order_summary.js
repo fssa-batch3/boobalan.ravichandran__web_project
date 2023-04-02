@@ -200,7 +200,6 @@ address,
 zipCode,
 deliveryPlace,
 paymentMethod,
-
 orderUniqueId: uid,
 timeString,
 deliveryStatus,

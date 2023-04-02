@@ -54,12 +54,7 @@
             div_star.setAttribute("class", "star");
             insecticide_a.append(div_star);
 
-            // for (j = 0; j < 5; j++) {
-            //     star_span = document.createElement("span");
-            //     star_span.setAttribute("class", "fa fa-star checked");
-            //     star_span.setAttribute("style", "font-size:24px");
-            //     div_star.append(star_span);
-            // }
+         
             div_pricecontain = document.createElement("div");
             div_pricecontain.setAttribute("class", "pricecontain");
             insecticide_a.append(div_pricecontain);

@@ -56,6 +56,8 @@ const beforeLogin =
 <!-- hero class start -->
     <div class="navbar_links">
             <ul class="hero">
+           
+            <li class="hero_list11" id="useraboutus"><a href="${root}/pages/user/about_us.html">About Us</a>
             <li class="hero_list1" id="userLogin"><a href="${root}/pages/user/user_login.html">Login</a>
             </li>
        
@@ -204,57 +206,6 @@ const AfterLogin =
 </div>
 </div>`
 
-
-// let loginUser = JSON.parse(localStorage.getItem("user_data"));
-
-// if (loginUser) {
-//   document.body.insertAdjacentHTML("afterbegin",AfterLogin);
-
-  
-
-//   function loginClickHandler() {
-//     document.body.innerHTML.insertAdjacentHTML("afterbegin",beforeLogin);
-//   }
-
-//   const userLoginElement = document.getElementById("userLogin");
-//   if (userLoginElement) {
-//     userLoginElement.addEventListener("click", loginClickHandler);
-//   }
-
-//   // remove the beforeLogin content if it exists
-//   const beforeLoginElement = document.querySelector(".all_header");
-//   if (beforeLoginElement) {
-//     beforeLoginElement.remove();
-//   }
-  
-//   const userLogoutElement = document.getElementById("user_logout");
-//   if (userLogoutElement) {
-//     userLogoutElement.addEventListener("click", () => {
-//       localStorage.removeItem("user_data");
-//       document.body.innerHTML = beforeLogin;
-//     });
-//   }
-  
-// } else {
-//   document.body.insertAdjacentHTML("afterbegin",beforeLogin);
-
-//   function removeLoginClickHandler() {
-//     document.body.insertAdjacentHTML("afterbegin", AfterLogin);
-//   }
-
-//   const userLoginElement = document.getElementById("user_logout");
-//   if (userLoginElement) {
-//     userLoginElement.removeEventListener("click", removeLoginClickHandler);
-//   }
-
-//   // remove the afterLogin content if it exists
-//   const afterLoginElement = document.querySelector(".user_header");
-//   if (afterLoginElement) {
-//     afterLoginElement.remove();
-//   }
-//   localStorage.removeItem("user_data");
-// }
-
  
 const loginUser = JSON.parse(localStorage.getItem("user_data"));
 
@@ -264,6 +215,8 @@ if (loginUser) {
   userLoginElement?.addEventListener("click", () => document.body.innerHTML = beforeLogin);
 //   const beforeLoginElement = document.querySelector(".all_header");
 //   beforeLoginElement?.remove();
+
+// cart----------
 const cart = document.getElementById("span_count");
 const wish = document.getElementById("wish_span_count");
 if(cartValueCount == 0){

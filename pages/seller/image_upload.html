@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-          <link rel="stylesheet" href="../../assets/css/image_upload.css">
+        
 
          
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,69 +15,67 @@
           
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<link rel="stylesheet" href="../../assets/css/image_upload.css">
 <link rel="stylesheet" href="../../assets/css/sell_footer.css">
-<link rel="stylesheet" href="../../assets/css/normalize.css">
 <link rel="stylesheet" href="../../assets/css/seller_header.css">
 </head>
     <body>
-        <header class="navbar">
-        <div class="header">
-        </div>
+        
+        <header>
             <div class="head">
-                <div>
+                <div class="fert_logo">
                     <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
                 </div>
-                <div>
+                <div class="seller_header">
                     <ul class="hero">
-                     <li class="hero_list"><a href="./seller_homepage.html"><i class="fa fa-home" style="font-size:28px"></i>Home</a></li>
-                     <li class="hero_list"><a href="../../index.html"><i class="fa fa-sign-out" style="font-size:21px"></i>Logout</a>
+                     <li class="hero_list"><a href="./seller_homepage.html">Home</a></li>
+                     
+                     <li class="hero_list"><a href="./image_upload.html" >Add new Listing</a></li>
+                     <li class="hero_list"><a href="./new_order.html" >New Orders</a></li>
+                     <li class="hero_list"><a href="./profile.html" >Old Orders</a></li>
+                     <li class="hero_list"><a href="../../index.html">Logout</a>
                      <li class="hero_list"><a href="./profile.html" ><i class="fa fa-user-circle-o" style="font-size:36px"></i></a></li>
+                    
                     </ul>
                 </div>
             </div>
-            <div class="nav">
-                <div class="dropdown">
-                    <button class="btn">Listings</button>
-                    <div class="dropdown_list">
-                        <a href="./type_agri.html">Add new Listing</a>
-                    </div>
-                </div>
-                <div class="dropdown1">
-                    <button class="btn1">My Orders</button>
-                    <div class="dropdown_list1">
-                        <a href="./new_order.html">New Orders</a>
-                        <a href="./old_order.html">Old Orders</a>
-                    </div>
-                </div>
-            </div>
+           
         </header>
         <main>
-            <div class="pro_name">
-                <label for="product_name">Product Name</label>
-                <input type="text" placeholder="Enter Product name" id="product_name" />
-            </div>
+           
             <div class="product1">
-          <div>
+          
             <div class="up_img">
-                <img src="../../assets/images/upload.jpg" alt="upload image">
+               <img src="../../assets/images/upload.jpg" alt="upload image" >
+               
+               <input type="file" id="uploaded"> 
                </div>
-               <div class="uploaded">
-               <button> <i id="uplload" type="file" class="fa fa-upload" style="font-size:24px"></i>Upload <input type="file" id="uploaded"></button>
-               </div>
-          </div>
-          <div class="front_view">
-            <img src="../../assets/images/upload.jpg"  alt="front view">
-            <p>Front View</p>
-          </div>
-          <div class="back_view">
-            <img src="../../assets/images/upload.jpg"  alt="back view">
-            <p>Back View</p>
-          </div>
+            
+          <div class="pro_name">
+            <label for="product_name">Product Name</label>
+            <input type="text" placeholder="Enter Product name" id="product_name" />
+         
+                <div>
+                        <label for="skuid"> Seller SKUID</label>
+                        <input type="text" placeholder="Enter Product SKUID" id="skuid" required="true"/> 
+                </div>
+                <div class="list">
+                    <label> Listing Status</label>
+                    <select id="option">
+                        <option>Select</option>
+                        <option >Active</option>
+                        <option >Inactive</option>
+                    </select>
+            </div>
+       
+        </div>
+         
         </div>
         <div class="save_edit">
             <a href="#"><button>Cancel</button></a>
             <a href="./product_detail.html"><button>Save</button></a>
         </div>
+        </main>
         <footer id="contact">
             <h1>Fert Agri Boomi(FAB)</h1>
            <div class="footer">

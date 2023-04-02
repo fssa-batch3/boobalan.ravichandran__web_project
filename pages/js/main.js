@@ -167,3 +167,130 @@ if(!adama_details){
        ]
    ));
     };
+    // -------------- add to cart items --------------
+    const addToCartItem = JSON.parse(localStorage.getItem("addToCartItem"));
+    if(!addToCartItem){
+    
+       localStorage.setItem("addToCartItem", JSON.stringify(
+        [
+            {
+                cart_id: "bb730660-a90d-49ee-b22a-6a415e564790",
+                userUniqueId: "9629223357"
+            },
+            {
+                cart_id: "b79c04fef-0b90-4750-a944-f9d3401e7308",
+                userUniqueId: "9629223357"
+            },
+            
+            {
+                cart_id: "23217f2c-c41f-41c5-b25b-c28b28352fd6",
+                userUniqueId: "9629223357"
+            }
+            
+        ]));
+    };
+    
+    // ----wishlist items --------------------------------
+    const wishlisstItem = JSON.parse(localStorage.getItem("wishlisstItem"));
+    if(!wishlisstItem){
+    
+       localStorage.setItem("wishlisstItem", JSON.stringify(
+        [
+            {
+                product_id: "edd30055-e3ab-4515-817f-aa0624d7fc3e",
+                userUniqueId: "9629223357"
+            },
+            {
+                product_id: "79c04fef-0b90-4750-a944-f9d3401e7308",
+                userUniqueId: "9629223357"
+            },
+            {
+                product_id: "23217f2c-c41f-41c5-b25b-c28b28352fd6",
+                userUniqueId: "9629223357"
+            }
+        ]));
+    };
+// user order details-------------
+const addtoCartDeliveryProduct = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct"));
+    if(!addtoCartDeliveryProduct){
+    
+       localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(
+        [
+            {
+                ProductDiscount: "110",
+                address: "1/38 kudi street thirunedungulam, trichy -620015",
+                deliveryDate: "08/04/2023",
+                deliveryPlace: "home",
+                deliveryStatus: "true",
+                email: "rboomibalan461@gmail.com",
+                firstName: "booabaln",
+                lastName: "R",
+                orderDate: "01/04/2023",
+                orderStatus: "Cancelled",
+                orderUniqueId: "f68mi12ic",
+                paymentMethod: "",
+                phoneNumber: "9629223356",
+                proQuantity: "1",
+                productActualPrice: "980",
+                productCurrentPrice: "870",
+          
+                productImage: "../../assets/images/dhanuka/dhan1.jpg",
+                productName: "SEMPRA HERBICIDE",
+                timeString: "19:45:30",
+                userUniqueId: "9629223357",
+                zipCode: "620015"
+            },
+            {
+                ProductDiscount: "You Save: 110",
+                address: "4/95 sivan kovil street , melvakam, chennai-600015",
+                deliveryDate: "10/04/2023",
+                deliveryPlace: "home",
+                deliveryStatus: "true",
+                email: "rboomibalan459@gmail.com",
+                firstName: "booabalan",
+                lastName: "R",
+                orderDate: "01/04/2023",
+                orderStatus: "Processing",
+                orderUniqueId: "f69686501",
+                paymentMethod: "",
+                phoneNumber: "9629223357",
+                proQuantity: "1",
+                productActualPrice: "1200",
+                productCurrentPrice: "800",
+             
+                productImage: "../../assets/images/dhanuka/dhan3.avif",
+                productName: "DHANUKA KASU-B FUNGICIDE" ,
+             
+                timeString: "19:45:30",
+                userUniqueId: "9629223357",
+                zipCode: "620015"
+            }
+        ]
+       ));
+    };
+
+    // user signup details------------------
+    const user_list = JSON.parse(localStorage.getItem("user_list"));
+    if(!user_list){
+    
+       localStorage.setItem("user_list", JSON.stringify(
+        [
+          {
+            city: "Tirunedungulam",
+            confirmpassword: "Amazon99@",
+            date_birth: "2023-03-25",
+            district: "Trichy",
+            email: "rb@gmail.com",
+            full_name: "Boobalan",
+            gender: "male",
+            mobile: "9629223356",
+            password: "Amazon99@",
+            state: "Tamil Nadu",
+            street: "kudi atreet",
+            unique_id: "f70d8b96-2771-40dc-914a-ee568e7f0094"
+          }
+        ]
+       ));
+    
+    };
+    

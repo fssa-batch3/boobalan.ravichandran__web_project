@@ -51,6 +51,21 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     const deliveryZipcode = document.getElementById("zip").value;
     const deliveryStatus = "true"  ;
     const orderStatus = "Processing";
+
+
+  // check if required fields are empty
+  if ( deliveryFirstName === "" || deliveryLastName === "" || deliveryMobile === "" || deliveryEmail === "" || deliveryAddress === "" || deliveryZipcode === "") {
+    alert("Please fill in all the required fields.");
+    return false;
+  }
+
+  // validate email format using regular expression
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(deliveryEmail)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
     const zipRegex = /^6\d{5}$/;
     if (!zipRegex.test(deliveryZipcode)) {
       const zipError = document.getElementById("zip-error");
@@ -73,13 +88,14 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
 
     alert("Your order has been successfully accepted..✅");
-    document.querySelector('form').reset();
+
     const local_path = window.location.origin
   const pro_url = `${local_path}/pages/user/thank_order.html`
 
-    const newWindow = window.open(pro_url, "_blank");
-newWindow.location.href = pro_url;
-
+//     const newWindow = window.open(pro_url, "_blank");
+// newWindow.location.href = pro_url;
+window.location.href = pro_url
+document.querySelector('form').reset();
   
 });
 
@@ -93,3 +109,5 @@ window.addEventListener("beforeunload", function() {
     localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
   }
 });
+
+

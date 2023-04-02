@@ -63,7 +63,8 @@ const adamaDetails = JSON.parse(localStorage.getItem("adama_details"))
    let  method_ul;
    let  method_li1;
  
-
+//--------------------------live server location get --------------------
+const add_path = window.location.origin
 
 
 // <div class="fertilizer">...</div>
@@ -113,12 +114,13 @@ const adamaDetails = JSON.parse(localStorage.getItem("adama_details"))
    
 // <h3>...</h3>
    div_fert3_h3 = document.createElement("h3");
-   div_fert3_h3.innerText= "Company / Manufacture:";
+   div_fert3_h3.innerText= "Manufacture:";
    div_fert3.append(div_fert3_h3);
 
 // <p>...</p>
    div_fert3_p = document.createElement("p");
-   div_fert3_p.innerText = loadProduct["manufacture_company"];
+   div_fert3_p.innerText = " " + loadProduct["manufacture_company"];
+   div_fert3_p.setAttribute("id","manufact")
    div_fert3.append(div_fert3_p);
 
 //  <div class="fert4">..</div>
@@ -136,7 +138,7 @@ const adamaDetails = JSON.parse(localStorage.getItem("adama_details"))
 
 // <del>...</del>
     div_fert4_del = document.createElement("del");
-    div_fert4_del.innerText = loadProduct["actual_price"] ;
+    div_fert4_del.innerText = "₹"+ loadProduct["actual_price"] ;
     div_fert4_del.setAttribute("id","actual_price");
    div_fert4.append(div_fert4_del);
 
@@ -156,23 +158,7 @@ const adamaDetails = JSON.parse(localStorage.getItem("adama_details"))
     div_fert5.setAttribute("class", "fert5");
     div_fert2.append(div_fert5);
 // // <h3>...</h3>
-//    div_fert5_h3 = document.createElement("h3");
-//    div_fert5_h3.innerText ="Order Qty";
-//    div_fert5.append(div_fert5_h3);
 
-// //   <select id="option">...</select>
-//     select = document.createElement("select");
-//     select.setAttribute("id", "option");
-//     div_fert5.append(select);
-
-// // <option>....</option>
-// for(i=1; i<=7; i++){
-//     option1 = document.createElement("option");
-//     option1.innerText = i;
-    
-//     select.append(option1);
-//    }
-    
 
 
 //  <div class="fert5">..</div>
@@ -182,7 +168,7 @@ const adamaDetails = JSON.parse(localStorage.getItem("adama_details"))
 // <h3>...</h3>
    div_fert5_h3_1 = document.createElement("h3");
    
-   div_fert5_h3_1.innerText = "Weight" + " " + loadProduct["product_weight"]
+   div_fert5_h3_1.innerText = "Weight" +":"+ " " + loadProduct["product_weight"]
    div_fert5_1.append(div_fert5_h3_1);
 
 //  <div class="rem">...</div>
@@ -230,6 +216,32 @@ const adamaDetails = JSON.parse(localStorage.getItem("adama_details"))
     div_i.setAttribute("style","font-size:25px" );
     rem2_button.prepend(div_i);
 
+
+    //   <div class="offers1">...</div>
+related_product = document.createElement("div");
+related_product.setAttribute("class", "related_product");
+document.querySelector("div.total").append(related_product);
+
+related_product_h1 = document.createElement("h1");
+related_product_h1.innerText = "Related Products";
+related_product.append(related_product_h1);
+
+const related_img = `${add_path}/assets/images/add-to-cart.png`;
+
+related_product_img = document.createElement("img");
+related_product_img.setAttribute("src", related_img)
+related_product.append(related_product_img);
+
+ 
+//   <div class="offers1">...</div>
+crop_offers1 = document.createElement("div");
+crop_offers1.setAttribute("class", "offerscrop");
+document.querySelector("div.total").append(crop_offers1);
+
+crop_description = document.createElement("div");
+crop_description.setAttribute("class", "crop_description");
+document.querySelector("div.total").append(crop_description);
+
 //   <div class="description">...</div>
     div_description = document.createElement("div");
     div_description.setAttribute("class", "description");
@@ -238,16 +250,24 @@ const adamaDetails = JSON.parse(localStorage.getItem("adama_details"))
 // <h1>...</h1>
     description_h1 = document.createElement("h1");
     description_h1 .innerText ="Descriptions";
-    div_description.append(description_h1);
+    description_h1 .setAttribute("id", "descriptiondes");
+    description_h1 .setAttribute("type", "submit");
+    crop_description.append(description_h1);
 
 // <ul>...</ul>
     description_ul = document.createElement("ul");
+    description_ul.setAttribute("id", "descriptionul");
     div_description.append(description_ul);
 
 // <li>...</li>
     description_li1 = document.createElement("li");
     description_li1.innerText = loadProduct["description"];
     description_ul.append(description_li1);
+
+    bdescription_inn = document.createElement("h3");
+    bdescription_inn.innerText = "Descriptions";
+    bdescription_inn .setAttribute("id", "descriptionin");
+    description_li1.prepend(bdescription_inn);
 
 //   <div class="benifits">...</div>
     div_benifits = document.createElement("div");
@@ -257,16 +277,24 @@ const adamaDetails = JSON.parse(localStorage.getItem("adama_details"))
     // <h2>...</h2>
     benifits_h2 = document.createElement("h2");
     benifits_h2.innerText = "Benefits";
-    div_benifits.append(benifits_h2);
+    benifits_h2 .setAttribute("id", "benifitsbeni");
+    crop_description.append(benifits_h2);
 
 // <ul>...</ul>
     benifits_ul = document.createElement("ul");
+    benifits_ul.setAttribute("id", "benifitsul");
     div_benifits.append(benifits_ul);
 
 // <li>...</li>
     benifits_li1 = document.createElement("li");
     benifits_li1.innerText = loadProduct["benifits"];
     benifits_ul.append(benifits_li1);
+
+    benifits_inn = document.createElement("h3");
+    benifits_inn.innerText = "Benefits";
+    benifits_inn .setAttribute("id", "benifitsin");
+    benifits_li1.prepend(benifits_inn);
+
 
 //   <div class="method">...</div>
     div_method = document.createElement("div");
@@ -276,17 +304,25 @@ const adamaDetails = JSON.parse(localStorage.getItem("adama_details"))
     // <h2>...</h2>
     method_h2 = document.createElement("h2");
     method_h2.innerText = "Method of Application";
-    div_method.append(method_h2);
+    method_h2 .setAttribute("id", "applicationapp");
+    crop_description.append(method_h2);
 
 // <ul>...</ul>
     method_ul = document.createElement("ul");
+    method_ul.setAttribute("id","applicationul")
     div_method.append(method_ul);
+
 
 // <li>...</li>
     method_li1 = document.createElement("li");
     method_li1.innerText = loadProduct["application"];
     method_ul.append(method_li1);
     
+    
+    application_inn = document.createElement("h3");
+    application_inn.innerText = "Method of Application";
+    application_inn .setAttribute("id", "applicationin");
+    method_li1.prepend(application_inn);
 
 
     // ----------------------------------
@@ -334,7 +370,7 @@ if(loginUserDetails){
     }
 }
 else{
-    window.location.href = "../user/user_login.html";
+    window.location.href = `${add_path}/pages/user/user_login.html`;
 
 }
 
@@ -369,7 +405,7 @@ if(loginUserDetails){
         setTimeout(timeout2,1200)
     }}
 else{
-    window.location.href = "../user/user_login.html";
+    window.location.href = `${add_path}/pages/user/user_login.html`;
 }
 }
 
@@ -410,7 +446,7 @@ window.onload = function() {
 
 // ------------------ Add to cart buttons--------------
 
-const add_path = window.location.origin
+
 function addToCart(){
     if(loginUserDetails){
         const logedUserDetails = JSON.parse(localStorage.getItem("user_data"));
@@ -434,7 +470,7 @@ function addToCart(){
     )
 }
 else{
-    window.location.href = "../user/user_login.html";
+    window.location.href = `${add_path}/pages/user/user_login.html`;
 }
 }
 document.getElementById("rem1").addEventListener("click", addToCart)
@@ -448,7 +484,87 @@ function buyNow(){
         div_a.setAttribute("href", wish_p )
     }
 else{
-    window.location.href = `${add_path}/user/user_login.html`;
+    window.location.href = `${add_path}/pages/user/user_login.html`;
 }
 });
+
+const descriptionCrop = document.getElementById("descriptiondes");
+const benifitsCrop = document.getElementById("benifitsbeni");
+const applicationCrop = document.getElementById("applicationapp");
+const descriptionCropUl = document.getElementById("descriptionul");
+const benifitsCropUl = document.getElementById("benifitsul");
+const applicationCropUl = document.getElementById("applicationul");
+applicationCropUl.style.display ="none";
+benifitsCropUl.style.display ="none";
+descriptionCropUl.style.display = "none";
+
+descriptionCrop.addEventListener("click",
+function description(){
+    descriptionCropUl.style.display = "inline";
+    benifitsCropUl.style.display = "none";
+    applicationCropUl.style.display ="none"
+    
+}
+);
+benifitsCrop.addEventListener("click",
+function description(){
+    benifitsCropUl.style.display = "inline";
+    descriptionCropUl.style.display = "none";
+    applicationCropUl.style.display ="none"
+    
+}
+);
+applicationCrop.addEventListener("click",
+function description(){
+    applicationCropUl.style.display = "inline";
+    descriptionCropUl.style.display = "none";
+    benifitsCropUl.style.display ="none"
+}
+);
+
+const pageProduct = loadProduct["category"]
+
+const findRelated = [
+    ...dhanukaDetails.filter(detail => detail.category === pageProduct),
+    ...dowAgroScienceDetails.filter(detail => detail.category === pageProduct),
+    ...adamaDetails.filter(detail => detail.category === pageProduct),
+  ].filter(Boolean); // remove any falsy values (e.g. empty arrays)
+  
+
+  const product_path = window.location.origin
+
+    for (i = 0; i < findRelated.length; i++) {
+    div_today = document.createElement("div");
+            div_today.setAttribute("class", "todaycrop");
+            div_today.setAttribute("data-id",findRelated[i]["product_unique_id"])
+            document.querySelector("div.offerscrop").append(div_today);
+            
+           
+            const product_name = encodeURIComponent(findRelated[i]["product_name"]);
+            const product_id = findRelated[i]["product_unique_id"];
+              const product_url = `${product_path}/pages/user/product_details.html?product=${product_name}&product_id=${product_id}`;
+
+            insecticide_a = document.createElement("a");
+            // insecticide_a.setAttribute("href","../../pages/user/adama1.html"+"?product="+product_details[i]["product_unique_id"]);
+            insecticide_a.setAttribute("href", product_url);
+            div_today.append(insecticide_a);
+
+            
+            //  product image------------------
+            insecticide_img = document.createElement("img");
+            insecticide_img.setAttribute("src",findRelated[i]["source"]);
+            insecticide_img.setAttribute("alt", findRelated[i]["product_name"]);
+            insecticide_a.append(insecticide_img);
+
+            
+            //  product name----------------------.
+            pro_name = document.createElement("p");
+            pro_name.innerText = findRelated[i]["product_name"];
+            insecticide_a.append(pro_name);
+
+
+            document.querySelector("div.offerscrop").append(div_today);
+
+    }
+
 

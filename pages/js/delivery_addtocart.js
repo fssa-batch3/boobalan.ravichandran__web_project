@@ -46,6 +46,21 @@ document.getElementById("save_delivery").addEventListener("click", function addP
   const orderStatus = "Processing";
 
 
+
+  // check if required fields are empty
+  if ( deliveryFirstName === "" || deliveryLastName === "" || deliveryMobile === "" || deliveryEmail === "" || deliveryAddress === "" || deliveryZipcode === "") {
+    alert("Please fill in all the required fields.");
+    return false;
+  }
+
+  // validate email format using regular expression
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(deliveryEmail)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  
   const zipRegex = /^6\d{5}$/;
   if (!zipRegex.test(deliveryZipcode)) {
     const zipError = document.getElementById("zip-error");
@@ -75,8 +90,7 @@ document.getElementById("save_delivery").addEventListener("click", function addP
   alert("Your order has been successfully accepted..✅");
   
   document.querySelector('form').reset();
-//   localStorage.setItem("addToCartItem", "some data"); // adding some data to the "addToCartItem" key in localStorage
-/// setting the value of "addToCartItem" key to an empty array
+
 // removing the data associated with the "addToCartItem" key
 
 const logedUser = JSON.parse(localStorage.getItem("user_data"));
@@ -90,8 +104,7 @@ localStorage.setItem("addToCartItem", JSON.stringify(addToCartItem));
 
 const pro_url = `${loc_path}/pages/user/thank_order.html`
 
-    const newWindow = window.open(pro_url, "_blank");
-newWindow.location.href = pro_url;
+window.location.href = pro_url;
 
 
 });

@@ -310,13 +310,13 @@ for(let i=0;i<getOrderDetails.length; i++){
     console.log("deliverydate:", deliverydate);
     console.log("threeDaysBeforeDate:", threeDaysBeforeDate);
        
-    if (formattedDate <= threeDaysBeforeDate) {
+    if (formattedDate === threeDaysBeforeDate) {
       const status = "Shipped";
       getOrderDetails[i]["orderStatus"] = status;
       localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(getOrderDetails));
     } 
 
-    if (formattedDate < deliverydate) {
+    if (formattedDate === deliverydate) {
       const ord_status = "Delivered";
       getOrderDetails[i]["orderStatus"] = ord_status;
       localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(getOrderDetails));

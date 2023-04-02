@@ -4,7 +4,7 @@ table, th, td {
     
   }
  main table caption{
-    font-size: 44px;
+    font-size: 30px;
     padding-bottom: 40px;
   
   }
@@ -27,7 +27,7 @@ table, th, td {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
   td{
-    font-size: 22px;
+    font-size: 20px;
     width: 267px;
     padding: 25px 0;
     background-color: rgb(255, 255, 255);

@@ -56,7 +56,7 @@
     top:11px;
     left: 15px;
     font-size: 16px;
-    color:hwb(0 57% 42%);
+    color:hwb(0 19% 81%);
     background-color:white;
      padding: 0 6px;
      transition: .2s;
@@ -104,6 +104,58 @@ a{
 .showLabel{
     font-size: 15px;
 }
+
+.password_valid{
+    margin-bottom: 5px;
+}
+.password_valid input[type="checkbox"] {
+    /* Change the color of the checkbox when it is checked */
+    --checkbox-color-checked: green;
+  
+    /* Change the color of the checkbox when it is not checked */
+    --checkbox-color-unchecked: gray;
+  
+    /* Set the size of the checkbox */
+    width: 15px;
+    height: 15px;
+  
+    /* Remove the default browser styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    /* Create the custom checkbox */
+    border: 1.5px solid var(--checkbox-color-unchecked);
+    border-radius: 2px;
+    background-color: white;
+    transition: border-color 0.2s ease-in-out;
+    padding: 2px;
+  
+    /* Position the checkmark inside the checkbox */
+    position: relative;
+  }
+  
+  /* Style the checkmark inside the checkbox */
+  .password_valid input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: var(--checkbox-color-checked);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  /* Show the checkmark when the checkbox is checked */
+  .password_valid input[type="checkbox"]:checked::after {
+    opacity: 1;
+  }
+  
+
 
 /* ----------/@media  start/-------------==============*/
 

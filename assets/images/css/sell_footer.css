@@ -1,0 +1,52 @@
+.footer{
+	display: flex;
+}
+.social img{
+	width:52px;
+	height:50px;
+}
+#contact{
+	background: linear-gradient(rgb(255, 224, 234) ,rgb(255, 248, 225),rgb(255, 234, 239));
+	padding: 10px 100px 20px 30px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
+#contact h1{
+	margin:30px 0px 20px 560px;
+	font-size: 32px;
+	color:rgb(11, 100, 18);
+}
+.icon img{
+    width:270px;
+	height:100px;
+	margin-left: 60px;
+}
+.abt{
+	margin-left: 850px;
+}
+.abt a{
+	text-decoration: none;
+}
+.abt a h2 {
+	margin-bottom: 50px;
+}
+.bottom{
+	border-top: 6px solid rgb(173, 14, 57);
+	width:87%;
+	padding: 20px 50px 20px 140px;
+	display: flex;
+}
+.cont p{
+	font-size: 29px;
+	font-weight: bold;
+	color: rgb(8, 8, 67);
+    margin-top: -0px;
+}
+.social{
+ margin-left: 460px;
+}
+.social a img{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+	margin-right: 40px;
+	background-color: white;
+}

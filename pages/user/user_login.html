@@ -21,7 +21,7 @@
             <img src="../../assets/images/Fert agri.png" alt="logo">
                 <h1>User Login</h1>
                 <div class="form-group">
-                   <input type="text" id="mobile" class="form-control" required maxlength="10" /> 
+                   <input type="text" id="mobile" class="form-control" pattern="[0-9].{9}" title="Enter 10 number only"  maxlength="10" required /> 
                    <label for="mobile" class="form-label"> Phone Number</label>
            </div>
            <div class="form-group">
@@ -49,44 +49,7 @@
     </div>
 </main>
 <script src="../js/signup_login.js">
-    // function login(){
-        
-
-    // const phone = document.getElementById("mobile").value;
-    // const password = document.getElementById("txtPassword").value;
-
-    // // console.log(email);
-    // // console.log(password);
-
-    // // localStorage.setItem("email_phone", email)
-    // // localStorage.setItem("password", password)
-
-
-    // //get data from local storage
-    // const getphone = localStorage.getItem("users", phone);
-    // const getpass = localStorage.getItem("users", password);
-    // alert("Login Succesfull ✅");
-    //       window.location.href="./user_interface.html";
-
-    // if ( phone == getphone)
-    // {
-    //     if ( password == getpass)
-    //     {
-    //       alert("Login Succesfull ✅");
-    //       window.location.href="./user_interface.html";
-    //     }
-    //     else
-    //     {
-    //         alert("Wrong Password ❌");
-    //     }
-    // }
-    // else
-    // {
-    //     alert("Invalid Mobile number 👿👿😈")
-    // }
-    
-    // }
-
+ 
     
 
 </script>

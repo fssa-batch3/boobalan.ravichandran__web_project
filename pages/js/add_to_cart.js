@@ -85,8 +85,6 @@ const dhanukaDetails = JSON.parse(localStorage.getItem('dhanuka_details'));
 const uplDetails = JSON.parse(localStorage.getItem('adama_details'));
 const dowAgroScienceDetails = JSON.parse(localStorage.getItem("dow_agro_science_details"));
 
- // cart21_a.setAttribute("href", "http://127.0.0.1:5500/pages/user/product_details.html?product_id=" + loadProduct[i]["product_unique_id"]);
-  // document.querySelector("")
 
 
 
@@ -189,7 +187,7 @@ function addToCartItem(product) {
 
   const select = productEl.querySelector("#option");
 
-// });
+
 select.addEventListener("change", () => {
   const oldQuantity = product.quantity || 1; // use 1 as default if quantity is not defined
   const newQuantity = select.value;
@@ -286,7 +284,10 @@ document.getElementById("place_order").addEventListener("click", function placeO
       const productName = cartItem.querySelector("#product_name").textContent;
       const productCurrentPrice = cartItem.querySelector("#product_pri").textContent.replace(/₹/g, '');
       const productActualPrice = cartItem.querySelector("#actual_price").textContent.replace(/₹/g, '');
-      const ProductDiscount = cartItem.querySelector("#discount").textContent.replace(/₹/g, '');
+      const discountText = cartItem.querySelector("#discount").textContent;
+      const ProductDiscount = parseInt(discountText.match(/\d+/)[0]);
+  
+      
       const proQuantity = cartItem.querySelector('#option').value;
       const productTotalPrice = document.querySelector("#total-price").textContent.replace(/₹/g, '');
       const productTotalDiscount = document.querySelector('#total-discount').textContent.replace(/₹/g, '');
@@ -319,9 +320,7 @@ document.getElementById("place_order").addEventListener("click", function placeO
         productActualPrice,
         ProductDiscount,
         proQuantity,
-        productTotalPrice,
-        productTotalDiscount,
-        productFinalPrice,
+    
         deliveryStatus,
         orderUniqueId: uid,
         orderDate,

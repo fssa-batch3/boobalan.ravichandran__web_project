@@ -160,35 +160,28 @@ const formattedDate = `${day}/${month}/${year}`;
 
 
 
+document.querySelector("#cancel").addEventListener("click", function cancelOrder(){
+  
+    const confirmed = confirm("Are you sure you want to cancel this order?");
+    if (confirmed) {
+      const orderSts = "Cancelled";
+      getProductDetails["orderStatus"] = orderSts;
+      localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderedProducts));
+      const path_pros = `${path_root}/pages/user/user_order.html`;
+      location.href = path_pros;
+    }
+
+});
+
    document.getElementById("back").addEventListener("click", function backHome() {
     const path_pros = `${path_root}/pages/user/user_order.html`
     location.href = path_pros;
 });
 
-document.getElementById("cancel").addEventListener("click", function cancelOrder() {
-    if (formattedDate > deliverydate) {
-        const confirmed = confirm("Are you sure you want to cancel this order?");
-        if (confirmed) {
-            const orderSts = "Cancelled";
-            getProductDetails["orderStatus"] = orderSts;
-            localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderedProducts));
-            const path_pros = `${path_root}/pages/user/user_order.html`
-            console.log(path_pros);
-            location.href = path_pros;
-        }
-    }
-});
 
 
-
-
-if (getProductDetails["orderStatus"] == "Delivered"){
+if (getProductDetails["orderStatus"] == "Delivered" || getProductDetails["orderStatus"] == "Cancelled"){
     cancel_button.style.display = "none";
 };
-
-// Incase user want to cancell the order that status have to update for Cancelled
-if(getProductDetails["orderStatus"] == "Cancelled"){
-    cancel_button.style.display = "none";
-}
 
 

@@ -23,7 +23,7 @@
         <h1>Create Your Account</h1>
         <div class="form-group">
              
-                <input type="number" class="form-control" id="mobile" required="true" pattern="[0-9].{9}" title="Enter 10 number only"  maxlength="10" /> 
+                <input type="text" class="form-control" id="mobile" required="true" pattern="[0-9].{9}" title="Enter 10 number only"  maxlength="10" /> 
                 <label for="mobile"  class="form-label"> Mobile Number </label>
         </div>
         <div class="error"></div>
@@ -36,22 +36,61 @@
             <input type="text"class="form-control" id="full_name" required="true"  pattern="[a-zA-Z]+"/>
             <label for="full_name"  class="form-label">Enter Your Full Name</label>
         </div>
-        
+<!--         
         <div class="form-group">
            
-            <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="6" 
-            title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters"    required="true"/>
+            <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$"  
+              required="true"/>
             <label for="txtPassword"  class="form-label">Set Password</label>
+            <div id="passwordError" ></div>
+        </div> -->
+        <div class="form-group">
+          <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" required="true"/>
+          <label for="txtPassword" class="form-label">Set Password</label>
+          <div id="passwordError"></div>
         </div>
+        <div class="password_valid">
+          <label>
+            <input type="checkbox" id="chkUppercase" disabled>
+            1 Uppercase letter
+          </label>
+        </div>
+        <div class="password_valid"  >
+          <label>
+            <input type="checkbox" id="chkLowercase" disabled>
+            1 Lowercase letter
+          </label>
+        </div>
+        <div class="password_valid">
+          <label>
+            <input type="checkbox" id="chkSpecialChar" disabled>
+            1 Special character
+          </label>
+        </div>
+        <div class="password_valid">
+          <label>
+            <input type="checkbox" id="chkNumber" disabled>
+            1 Number
+          </label>
+        </div>
+        <div class="password_valid">
+          <label>
+            <input type="checkbox" id="chkMinLength" disabled>
+            Minimum 8 characters
+          </label>
+        </div>
+        
+   
+      
+        <div class="paserror"></div>
         <div class="form-group">
             <input type="password" class="form-control" id="TXTpassword" 
-              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="6" 
-             title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters"  required="true"/>
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$"   required="true"/>
             <label for="TXTpassword"  class="form-label">Confirm Password</label>
         </div>
         <div class="form-group">
             <label class="showLabel">
-              <input type="checkbox" id="show" value="checkbox">
+              <input type="checkbox" id="show" >
               Show Password
             </label>
                  </div>
@@ -63,5 +102,57 @@
     <script src="../js/signup_login.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
        
+    <script>
+        const mobileInput = document.getElementById('mobile');
+const errorMessage = document.querySelector('.error');
+
+mobileInput.addEventListener('input', () => {
+  if (mobileInput.value.length < 10) {
+    errorMessage.textContent = 'Enter 10 numbers only.';
+    errorMessage.style.color = 'red';
+  } else if(mobileInput.value.length > 10){
+    errorMessage.textContent = 'Do not enter more than 10 numbers.';
+    errorMessage.style.color = 'red';
+  }else {
+    errorMessage.textContent = '';
+  }
+});
+// //Please enter one number, one special character, one uppercase letter, and one lowercase letter. 8 characters minimum, 10 characters maximum
+const passwordInput = document.getElementById('txtPassword');
+const uppercaseCheckbox = document.getElementById('chkUppercase');
+const lowercaseCheckbox = document.getElementById('chkLowercase');
+const specialCharCheckbox = document.getElementById('chkSpecialChar');
+const numberCheckbox = document.getElementById('chkNumber');
+const minLengthCheckbox = document.getElementById('chkMinLength');
+
+passwordInput.addEventListener('input', () => {
+  const passwordValue = passwordInput.value;
+
+  // Check for uppercase letter
+  const hasUppercase = /[A-Z]/.test(passwordValue);
+  uppercaseCheckbox.checked = hasUppercase;
+
+  // Check for lowercase letter
+  const hasLowercase = /[a-z]/.test(passwordValue);
+  lowercaseCheckbox.checked = hasLowercase;
+
+  // Check for special character
+  const hasSpecialChar = /[!@#$%^&*_=+-]/.test(passwordValue);
+  specialCharCheckbox.checked = hasSpecialChar;
+
+  // Check for number
+  const hasNumber = /\d/.test(passwordValue);
+  numberCheckbox.checked = hasNumber;
+
+  // Check for minimum length
+  const hasMinLength = passwordValue.length >= 8;
+  minLengthCheckbox.checked = hasMinLength;
+});
+
+
+
+
+    </script>
+  <script src="../js/seller_login.js"></script>
 </body>
 </html>
