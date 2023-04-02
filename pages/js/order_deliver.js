@@ -71,17 +71,7 @@ let fert101_h2 = document.createElement("h2");
    fert16_p.innerText=getProductDetails["orderStatus"];
    div_fert16.append(fert16_p);
    
-   function formatDate(date) {
-  const d = new Date(date),
-    month = '' + (d.getMonth() + 1),
-    day = '' + d.getDate(),
-    year = d.getFullYear();
-
-  if (month.length < 2) month = '0' + month;
-  if (day.length < 2) day = '0' + day;
-
-  return [day, month, year].join('-');
-}
+  
 const currentDate = new Date();
 const day = String(currentDate.getDate()).padStart(2, '0');
 const month = String(currentDate.getMonth() + 1).padStart(2, '0');
