@@ -43,6 +43,7 @@ input{
 }
 #full_name1{
     margin-left:.2rem;
+    margin-right: 50px;
      width:270px;
      height:35px;
      padding: 5px 10px 5px 10px;
@@ -52,7 +53,7 @@ input{
      outline: none;
      border: none;
      color: rgb(255, 255, 255);
-     margin-right: 50px;
+   
      
  }
 
