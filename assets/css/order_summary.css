@@ -25,7 +25,7 @@
 }
 #delivery-date {
     font-weight: bold;
-    color:rgb(2, 54, 22);
+    color:#07760b;
     margin-left: 10px;
 }
 form img{
@@ -191,9 +191,7 @@ button {
   #order-date{
     color:rgb(0, 42, 255)
   }
-  #delivery-date{
-    color:#07760b
-  }
+  
   /* ------------loading symbol  -------- */
  
   /* .loader {

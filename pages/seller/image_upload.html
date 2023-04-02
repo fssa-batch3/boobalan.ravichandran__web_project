@@ -53,15 +53,15 @@
             
           <div class="pro_name">
             <label for="product_name">Product Name</label>
-            <input type="text" placeholder="Enter Product name" id="product_name" />
+            <input type="text" class="seller_select" placeholder="Enter Product name" id="product_name" />
          
                 <div>
                         <label for="skuid"> Seller SKUID</label>
-                        <input type="text" placeholder="Enter Product SKUID" id="skuid" required="true"/> 
+                        <input type="text" class="seller_select"placeholder="Enter Product SKUID" id="skuid" required="true"/> 
                 </div>
                 <div class="list">
                     <label> Listing Status</label>
-                    <select id="option">
+                    <select id="option" class="seller_select">
                         <option>Select</option>
                         <option >Active</option>
                         <option >Inactive</option>
@@ -73,7 +73,7 @@
         </div>
         <div class="save_edit">
             <a href="#"><button>Cancel</button></a>
-            <a href="./product_detail.html"><button>Save</button></a>
+            <a href="./product_detail.html"><button id="save_data">Save</button></a>
         </div>
         </main>
         <footer id="contact">
@@ -104,5 +104,33 @@
             </footer>
     
     </body>
-    
+    <script>
+const uploadedInput = document.querySelector("#uploaded");
+const previewImg = document.querySelector(".up_img img");
+const saveButton = document.querySelector("#save_data");
+
+uploadedInput.addEventListener("change", function () {
+  const selectedFile = uploadedInput.files[0];
+
+  if (selectedFile) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function () {
+      previewImg.setAttribute("src", reader.result);
+      localStorage.setItem("selectedImage", reader.result);
+    });
+
+    reader.readAsDataURL(selectedFile);
+  }
+});
+
+// saveButton.addEventListener("click", function () {
+//   const selectedImage = localStorage.getItem("selectedImage");
+//   // Do something with the selected image, e.g., send it to a server or display it on another page.
+// });
+
+
+
+
+    </script>
     </html>

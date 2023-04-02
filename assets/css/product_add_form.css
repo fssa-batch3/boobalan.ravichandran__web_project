@@ -77,11 +77,11 @@
     .form-group a:hover{
         color: rgb(255, 0, 123);
     }
-    .form-group textarea{
-        margin-right: 20px;
-    }
+   
     .form-group textarea{
         font-size: 19px;
         padding:5px 10px 5px 15px;
+        margin-right: 20px;
+
             /* resize: none; */
     }

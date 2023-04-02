@@ -98,10 +98,10 @@ let totalPrice = 0;
 let totalDiscount = 0;
 
 // Calculate initial total price and discount
-for (let i = 0; i < loadProduct.length; i++) {
+for(let i = 0; i < loadProduct.length; i++) {
   const product = loadProduct[i];
   const quantity = 1; // default quantity is 1
-  const price = (product["actual_price"] - product["discount"]) * quantity;
+  const price = (product["actual_price"]) * quantity;
   const discount = product["discount"] * quantity;
   totalPrice += price;
   totalDiscount += discount;
@@ -180,7 +180,7 @@ function addToCartItem(product) {
       </div>
     </div>
   `;
-  const cart21_a = document.createElement("a");
+
  
   const productEl = document.createElement("div");
   productEl.innerHTML = productInCart;
@@ -223,14 +223,14 @@ select.addEventListener("change", () => {
   const cartContainer = document.querySelector(".cart1");
 
 
-  for (let i = 0; i < loadProduct.length; i++) {
+  for(let i = 0; i < loadProduct.length; i++) {
     const product = loadProduct[i];
     const productInCart = addToCartItem(product);
     cartContainer.append(productInCart);
     const quantity = productInCart.querySelector("#option").value;
-  const price = (product["actual_price"] - product["discount"]) * quantity;
+  // const price = (product["actual_price"] - product["discount"]) * quantity;
  
-  const discount = product["discount"] * quantity;
+  // const discount = product["discount"] * quantity;
  
   }
 
@@ -278,7 +278,7 @@ document.getElementById("place_order").addEventListener("click", function placeO
   const existingProduct = addtoCartDeliveryProduct.find(product => product.deliveryStatus == deliveryStatus);
 
   if (!existingProduct) {
-    for (let i = 0; i < cartItems.length; i++) {
+    for(let i = 0; i < cartItems.length; i++) {
       const cartItem = cartItems[i];
       const productImage = cartItem.querySelector(".cart21 img").getAttribute("src");
       const productName = cartItem.querySelector("#product_name").textContent;
@@ -289,9 +289,7 @@ document.getElementById("place_order").addEventListener("click", function placeO
   
       
       const proQuantity = cartItem.querySelector('#option').value;
-      const productTotalPrice = document.querySelector("#total-price").textContent.replace(/₹/g, '');
-      const productTotalDiscount = document.querySelector('#total-discount').textContent.replace(/₹/g, '');
-      const productFinalPrice = document.querySelector('#final-price').textContent.replace(/₹/g, '');
+
       const orderDate = new Date().toLocaleDateString();
       const deliveryDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString();
       // const deliveryStatus = "false";

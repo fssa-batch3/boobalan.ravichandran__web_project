@@ -72,7 +72,7 @@ document.getElementById("save_delivery").addEventListener("click", function addP
 
   const loc_path = window.location.origin
   // Loop through the loadProduct array and update each item
-  for (let i = 0; i < loadProduct.length; i++) {
+  for(let i = 0; i < loadProduct.length; i++) {
     loadProduct[i]["firstName"] = deliveryFirstName;
     loadProduct[i]["lastName"] = deliveryLastName;
     loadProduct[i]["phoneNumber"] = deliveryMobile;

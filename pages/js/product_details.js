@@ -218,27 +218,27 @@ const add_path = window.location.origin
 
 
     //   <div class="offers1">...</div>
-related_product = document.createElement("div");
+let related_product = document.createElement("div");
 related_product.setAttribute("class", "related_product");
 document.querySelector("div.total").append(related_product);
 
-related_product_h1 = document.createElement("h1");
+let related_product_h1 = document.createElement("h1");
 related_product_h1.innerText = "Related Products";
 related_product.append(related_product_h1);
 
 const related_img = `${add_path}/assets/images/add-to-cart.png`;
 
-related_product_img = document.createElement("img");
+let related_product_img = document.createElement("img");
 related_product_img.setAttribute("src", related_img)
 related_product.append(related_product_img);
 
  
 //   <div class="offers1">...</div>
-crop_offers1 = document.createElement("div");
+let crop_offers1 = document.createElement("div");
 crop_offers1.setAttribute("class", "offerscrop");
 document.querySelector("div.total").append(crop_offers1);
 
-crop_description = document.createElement("div");
+let crop_description = document.createElement("div");
 crop_description.setAttribute("class", "crop_description");
 document.querySelector("div.total").append(crop_description);
 
@@ -264,7 +264,7 @@ document.querySelector("div.total").append(crop_description);
     description_li1.innerText = loadProduct["description"];
     description_ul.append(description_li1);
 
-    bdescription_inn = document.createElement("h3");
+    let bdescription_inn = document.createElement("h3");
     bdescription_inn.innerText = "Descriptions";
     bdescription_inn .setAttribute("id", "descriptionin");
     description_li1.prepend(bdescription_inn);
@@ -290,7 +290,7 @@ document.querySelector("div.total").append(crop_description);
     benifits_li1.innerText = loadProduct["benifits"];
     benifits_ul.append(benifits_li1);
 
-    benifits_inn = document.createElement("h3");
+    let benifits_inn = document.createElement("h3");
     benifits_inn.innerText = "Benefits";
     benifits_inn .setAttribute("id", "benifitsin");
     benifits_li1.prepend(benifits_inn);
@@ -319,7 +319,7 @@ document.querySelector("div.total").append(crop_description);
     method_ul.append(method_li1);
     
     
-    application_inn = document.createElement("h3");
+    let application_inn = document.createElement("h3");
     application_inn.innerText = "Method of Application";
     application_inn .setAttribute("id", "applicationin");
     method_li1.prepend(application_inn);
@@ -356,7 +356,7 @@ if(loginUserDetails){
   location.reload();
 }, 500);
 
-        // showMessage("Added to your Wishlist");
+        
     } else {
         this.setAttribute("like", "false");
         let wishlistRemove = wishlisstItem.filter(data => data.product_id !== productUniqueId || (data.product_id === productUniqueId && data.userUniqueId !== logedUserDetails));
@@ -366,7 +366,7 @@ if(loginUserDetails){
   location.reload();
 }, 500);
 
-        // showMessage("Removed from your Wishlist");
+        
     }
 }
 else{

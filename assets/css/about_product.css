@@ -133,7 +133,7 @@ main{
 
 .description li ,.benifits li , .method li{
     font-size: 19px;
-    padding-top: 10px;
+  
     width:1000px;
     color:rgb(11, 11, 51);
     letter-spacing: 0.2px;

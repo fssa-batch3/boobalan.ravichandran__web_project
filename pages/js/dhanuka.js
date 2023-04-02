@@ -16,7 +16,7 @@
   const root_path = window.location.origin
 
 
-        for (i = 0; i < product_details.length; i++) {
+        for(let i = 0; i < product_details.length; i++) {
             
             const product_name = encodeURIComponent(product_details[i]["product_name"]);
             const product_id = product_details[i]["product_unique_id"];
@@ -54,7 +54,7 @@
             insecticide_a.append(div_star);
 
             // }
-            div_pricecontain = document.createElement("div");
+           let div_pricecontain = document.createElement("div");
             div_pricecontain.setAttribute("class", "pricecontain");
             insecticide_a.append(div_pricecontain);
 
@@ -75,11 +75,11 @@
             div_price.append(price_h2);
 
 
-            div_price11 = document.createElement("div");
+           let div_price11 = document.createElement("div");
             div_price11.setAttribute("class", "price11");
             div_pricecontain.append(div_price11);
 
-            price11_h2 = document.createElement("h3");
+           let price11_h2 = document.createElement("h3");
             price11_h2.innerText =  "Actual Price: ";
             div_price11.append(price11_h2);
             // old price----------------------
@@ -91,7 +91,7 @@
 
 
             
-            div_save = document.createElement("div");
+           let div_save = document.createElement("div");
             div_save.setAttribute("class", "div_save");
             insecticide_a.append(div_save);
 
