@@ -283,7 +283,7 @@ const addtoCartDeliveryProduct = JSON.parse(localStorage.getItem("addtoCartDeliv
             email: "rb@gmail.com",
             full_name: "Boobalan",
             gender: "male",
-            mobile: "9629223356",
+            mobile: "9629223357",
             password: "Amazon99@",
             state: "Tamil Nadu",
             street: "kudi atreet",
