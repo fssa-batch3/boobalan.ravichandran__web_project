@@ -1,22 +1,25 @@
 main{
-    background-color: rgb(180, 181, 181);
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     padding: 50px 100px 50px 100px;
 }
 .details1{
     display: flex;
+    justify-content: space-between;
     
 }
 .dactail{
-    background-color: rgb(229, 229, 223);
+    background-color: rgb(245, 245, 245);
     padding: 50px 80px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+   
 }
 h2{
     display: flex;
     color:rgb(87, 17, 17);
 }
 .del1{
-    margin-left: 200px;
+   margin-right: 70px;
     margin-top: 50px;
 }
 .del{
@@ -27,14 +30,14 @@ h2{
     font-weight: normal;
     margin-left: 20px;
     margin-top: 3px;
-    color:rgb(212, 14, 77);
+    color:rgb(172, 4, 57);
     font-size: 21px;
 }
 .del1 p{
     font-weight: normal;
     margin-left: 20px;
     margin-top: 0px;
-    color:rgb(212, 14, 77);
+    color:rgb(168, 8, 59);
     font-size: 21px;
 }
 .details1 h1{
@@ -47,14 +50,15 @@ h2{
     border-bottom: 5px solid rgb(30, 30, 78);
 }
 .herbicide img{
+    width:250px;
+    height:250px;
     margin-left: 100px;
-}
-.herbicide img:hover{
-    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
 }
 .herbicide p{
     margin: 150px 0px 0px 150px;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
     color: rgb(15, 16, 82);
 }
@@ -67,7 +71,8 @@ h2{
 .about p{
     font-size: 19px;
     color: rgb(95, 10, 10);
-    line-height: 2rem;
+    line-height: 2.4rem;
+    font-weight: bold;
 }
 .fa-arrow-circle-left{
     margin: 20px 0px 20px 50px ;
@@ -76,4 +81,30 @@ h2{
     margin-left: 400px;
     font-size: 40px;
     color:rgb(26, 68, 54)
+}
+h2{
+    margin-top: 20px;
+    font-size: 20px;
+    
+}
+.dactail h1{
+    font-size: 25px;
+}
+.back_home{
+    display: flex;
+    
+}
+.cancel_order button{
+    padding: 10px 55px;
+    border:none;
+    background-color: rgb(6, 6, 81);
+    color:white;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 40vw;
+}
+.cancel_order button:hover{
+    background-color: rgb(7, 7, 164);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }

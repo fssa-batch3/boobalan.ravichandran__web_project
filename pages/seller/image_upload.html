@@ -21,60 +21,41 @@
 </head>
     <body>
         
-        <header>
-            <div class="head">
-                <div class="fert_logo">
-                    <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
-                </div>
-                <div class="seller_header">
-                    <ul class="hero">
-                     <li class="hero_list"><a href="./seller_homepage.html">Home</a></li>
-                     
-                     <li class="hero_list"><a href="./image_upload.html" >Add new Listing</a></li>
-                     <li class="hero_list"><a href="./new_order.html" >New Orders</a></li>
-                     <li class="hero_list"><a href="./profile.html" >Old Orders</a></li>
-                     <li class="hero_list"><a href="../../index.html">Logout</a>
-                     <li class="hero_list"><a href="./profile.html" ><i class="fa fa-user-circle-o" style="font-size:36px"></i></a></li>
-                    
-                    </ul>
-                </div>
-            </div>
            
-        </header>
-        <main>
-           
+           <form >
             <div class="product1">
           
-            <div class="up_img">
-               <img src="../../assets/images/upload.jpg" alt="upload image" >
-               
-               <input type="file" id="uploaded"> 
-               </div>
-            
-          <div class="pro_name">
-            <label for="product_name">Product Name</label>
-            <input type="text" class="seller_select" placeholder="Enter Product name" id="product_name" />
-         
-                <div>
-                        <label for="skuid"> Seller SKUID</label>
-                        <input type="text" class="seller_select"placeholder="Enter Product SKUID" id="skuid" required="true"/> 
+                <div class="up_img">
+                   <img src="../../assets/images/upload.jpg" alt="upload image" >
+                   
+                   <input type="file" id="uploaded"> 
+                   </div>
+                
+              <div class="pro_name">
+                <label for="product_name">Product Name</label>
+                <input type="text" class="seller_select" placeholder="Enter Product name" id="product_name" />
+             
+                    <div>
+                            <label for="skuid"> Seller SKUID</label>
+                            <input type="text" class="seller_select"placeholder="Enter Product SKUID" id="skuid" required="true"/> 
+                    </div>
+                    <div class="list">
+                        <label> Listing Status</label>
+                        <select id="option" class="seller_select">
+                            <option>Select</option>
+                            <option >Active</option>
+                            <option >Inactive</option>
+                        </select>
                 </div>
-                <div class="list">
-                    <label> Listing Status</label>
-                    <select id="option" class="seller_select">
-                        <option>Select</option>
-                        <option >Active</option>
-                        <option >Inactive</option>
-                    </select>
+           
             </div>
-       
-        </div>
-         
-        </div>
-        <div class="save_edit">
-            <a href="#"><button>Cancel</button></a>
-            <a href="./product_detail.html"><button id="save_data">Save</button></a>
-        </div>
+             
+            </div>
+            <div class="save_edit">
+                <a href="#"><button>Cancel</button></a>
+                <button id="save_data" type="submit">Save</button>
+            </div>
+           </form>
         </main>
         <footer id="contact">
             <h1>Fert Agri Boomi(FAB)</h1>
@@ -104,6 +85,7 @@
             </footer>
     
     </body>
+    
     <script>
 const uploadedInput = document.querySelector("#uploaded");
 const previewImg = document.querySelector(".up_img img");
@@ -117,17 +99,53 @@ uploadedInput.addEventListener("change", function () {
 
     reader.addEventListener("load", function () {
       previewImg.setAttribute("src", reader.result);
-      localStorage.setItem("selectedImage", reader.result);
+      
     });
 
     reader.readAsDataURL(selectedFile);
   }
 });
 
-// saveButton.addEventListener("click", function () {
-//   const selectedImage = localStorage.getItem("selectedImage");
-//   // Do something with the selected image, e.g., send it to a server or display it on another page.
-// });
+saveButton.addEventListener("click", function (e){
+    const selectedFile = uploadedInput.files[0];
+    const skuidInput = document.getElementById("skuid").value;
+    const productNameInput = document.getElementById("product_name").value;
+    const listingStatusInput = document.getElementById("option").value;
+    const uid = (new Date().getTime()).toString(24);
+
+    e.preventDefault();
+    const sellerDetails = JSON.parse(localStorage.getItem("sellerDetails")) || [];
+    let exist = sellerDetails.length &&
+        JSON.parse(localStorage.getItem("sellerDetails")).some(data =>
+        data.skuidInput == skuidInput
+        );
+    if(!exist){
+        if(!selectedFile || skuidInput == "" || productNameInput == "" || listingStatusInput == ""){
+            alert("Please enter all required fields");
+            return;
+        }
+        const reader = new FileReader();
+        reader.addEventListener("load", function () {
+            const imageInput = reader.result;
+            sellerDetails.push({
+                imageInput,
+                skuidInput,
+                productNameInput,
+                listingStatusInput,
+                orderId:uid
+            });
+            localStorage.setItem("sellerDetails", JSON.stringify(sellerDetails));
+            document.querySelector('form').reset();
+            location.href="./product_detail.html?orderUniqueId=" + uid;
+        });
+        reader.readAsDataURL(selectedFile);
+    }
+    else{
+        alert('Sorry the product SKUID Exist  ..❌!! \n Try with different Product SKUID');
+        document.querySelector('form').reset();
+    }
+});
+
 
 
 

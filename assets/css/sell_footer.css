@@ -6,7 +6,7 @@
 	height:50px;
 }
 #contact{
-	background: linear-gradient(rgb(255, 224, 234) ,rgb(255, 248, 225),rgb(255, 234, 239));
+	background: linear-gradient(rgb(187, 197, 255) ,rgb(225, 234, 255),rgb(195, 189, 255));
 	padding: 10px 100px 20px 30px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
 #contact h1{

@@ -1,4 +1,30 @@
 
+const file_root = window.location.origin
+//  incase user didn't login when user logged out page move to login page
+window.addEventListener('popstate', function(event) {
+  if (!isLoggedIn()) {
+    event.preventDefault();
+    window.location.href = `${file_root}/pages/user/user_login.html`;
+  }
+});
+
+function isLoggedIn() {
+  const findLogged = JSON.parse(localStorage.getItem("user_data"));
+  if(findLogged){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+// call the isLoggedIn function when the page loads
+if (!isLoggedIn()) {
+  window.location.href = `${file_root}/pages/user/user_login.html`;
+}
+
+
+
 const productUniqueId = new URLSearchParams(window.location.search).get('orderUnique');
 
 

@@ -19,83 +19,10 @@
 <link rel="stylesheet" href="../../assets/css/seller_header.css">
 </head>
     <body>
-        <header class="navbar">
-        <div class="header">
-        </div>
-            <div class="head">
-                <div>
-                    <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
-                </div>
-                <div>
-                    <ul class="hero">
-                     <li class="hero_list"><a href="./seller_homepage.html"><i class="fa fa-home" style="font-size:28px"></i>Home</a></li>
-                     <li class="hero_list"><a href="../../index.html"><i class="fa fa-sign-out" style="font-size:21px"></i>Logout</a>
-                     <li class="hero_list"><a href="./profile.html" ><i class="fa fa-user-circle-o" style="font-size:36px"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nav">
-                <div class="dropdown">
-                    <button class="btn">Listings</button>
-                    <div class="dropdown_list">
-                        <a href="./type_agri.html">Add new Listing</a>
-                    </div>
-                </div>
-                <div class="dropdown1">
-                    <button class="btn1">My Orders</button>
-                    <div class="dropdown_list1">
-                        <a href="./new_order.html">New Orders</a>
-                        <a href="./old_order.html">Old Orders</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+       
         <main>
-           <div class="dactail">
-                <h1 id="h1">Product Details</h1>
-            <div class="herbicide">
-                <img src="../../assets/images/Major nutrients/maj11.avif" alt=">RILON INSECTICIDE">
-                <p>RILON INSECTICIDE</p>
-            </div>
-            <div class="details1">
-                <div class="del">
-                    <h2>Delivery Status:<p>Processing</p></h2>
-                    <h2>Seller SKUID:<p>KM944PKR</p></h2>
-                    <h2>Listing Status: <p>Active</p></h2>
-                    <h1>Price details</h1>
-                    <h2>MRP: <p>162.64Rs</p></h2>
-                    <h2>Selling Price:<p>110.55Rs</p></h2>
-                    <h1>Inventery details</h1>
-                    <h2>Precurement Type:<p>Stack</p></h2>
-                    <h2>Stack count:<p>3,400</p></h2>
-                    <h2>Shipping provider:<p>Seller and FAB</p></h2>
-                    <h1>Delivery Charge to Customer</h1>
-                    <h2>Local delivery:<p>45Rs</p></h2>
-                    <h2>Zonal delivery:<p>107Rs</p></h2>
-                </div >
-                <div class="del1">
-                    <h1>Packing details</h1>
-                    <h2>Packing Weight:<p>450gm</p></h2>
-                    <h2>Packing Height:<p>27cm</p></h2>
-                    <h1>Tax</h1>
-                    <h2>HSN:<p>31010110 </p></h2>
-                    <h2>Tax Code:<p>4%</p></h2>
-                    <h2>Country of Origin:<p>India</p></h2>
-                    <h1>Product Description</h1>
-                    <h2>Fertilizer Color:<p>green color</p> </h2>
-                    <h2>Name of Product:<p>Rilon Insecticide</p> </h2>
-                </div>
-            </div>
-            <div class="about">
-                <h1>About Product</h1>
-                <p>Rilon Insecticide is a highly potent insecticide for use on lepidopterian Insects, which are considered the most damaging insects after sucking pests in edible crops such as vegetables and fruits.
-                    Rilon insecticide (Emamectin Benzoate 5% SG) has a unique mechanism. When applied, it absorbs through leaves (Trans-laminar) and forms a reservoir of molecules in each leaf. When targeting insect feed on the foliage, then Rilon Insecticide (Emamectin benzoate) molecule in leaves
-                     is released and inhibits muscle contraction and death of the insect.</p>
-            </div>
-            <div>
-                <a href="./seller_homepage.html"><i class="fa fa-arrow-circle-left" style="font-size:42px"></i></a>
-            </div>
-           </div>
+           <div class="newOrderDetails">
+
            </div>
         </main>
       
@@ -125,6 +52,135 @@
             </div>
         </div>
         </footer>
+        <script src="../js/seller_header.js"></script>
+
+        <script>
+
+       const productId = new URLSearchParams(window.location.search).get("orderDetailsFind");
+       const newOrderDetails = JSON.parse(localStorage.getItem("sellerDetails"));
+
+
+
+
+       const findSellerOrder = newOrderDetails.find(details=>
+       details.orderId == productId)
+
+
+            function newOrder(product){
+
+                const newOrderStock =
+                `
+                <div class="dactail">
+                <h1 id="h1">Product Details</h1>
+            <div class="herbicide">
+                <img src="${product["imageInput"]}" alt="${product["productNameInput"]}">
+                <p>${product["productNameInput"]}</p>
+            </div>
+            <div class="details1">
+                <div class="del">
+                    <h2>Delivery Status:<p>${product["orderDeliveryStatus"]}</p></h2>
+                    <h2>Seller SKUID:<p>${product["skuidInput"]}</h2>
+                    <h2>Listing Status: <p>${product["listingStatusInput"]}</p></h2>
+                    <h1>Price details</h1>
+                    <h2>MRP: <p>${product["mrpInput"]}Rs</p></h2>
+                    <h2>Selling Price:<p>${product["sellingInput"]}Rs</p></h2>
+                    <h1>Inventery details</h1>
+                    <h2>Precurement Type:<p>${product["procurementTypeInput"]}</p></h2>
+                    <h2>Stack count:<p>${product["stockCountInput"]}</p></h2>
+                    <h2>Shipping provider:<p>${product["shippingProviderInput"]}</p></h2>
+                    <h1>Delivery Charge to Customer</h1>
+                    <h2>Local delivery:<p>${product["localDeliveryChargeInput"]}Rs</p></h2>
+                    <h2>Zonal delivery:<p>${product["zonalDeliveryChargeInput"]}Rs</p></h2>
+                </div >
+                <div class="del1">
+                    <h1>Packing details</h1>
+                    <h2>Packing Weight:<p>${product["packingWeightInput"]}</p></h2>
+                    <h2>Packing Height:<p>${product["packingHeightInput"]}</p></h2>
+                    <h1>Tax</h1>
+                    <h2>HSN:<p>${product["hsnInput"]}</p></h2>
+                    <h2>Tax Code:<p>${product["taxCodeInput"]}</p></h2>
+                    <h2>Country of Origin:<p>${product["countryOriginInput"]}</p></h2>
+                    <h1>Product Description</h1>
+                   
+                    <h2>Name of Product:<p>${product["productNameInput"]}</p> </h2>
+                </div>
+            </div>
+            <div class="about">
+                <h1>About Product</h1>
+                <p>${product["aboutProductInput"]}</p>
+            </div>
+            <div class="back_home">
+                <div>
+                <a href="./seller_homepage.html"><i class="fa fa-arrow-circle-left" style="font-size:42px"></i></a>
+            </div>
+            <div class="cancel_order">
+                <button type="button" id="order_cancel">Cancel Order</button>
+           </div>
+                </div>
+           </div>
+           `
+           return newOrderStock;
+          
+
+            }
+            const orderContainer = document.querySelector(".newOrderDetails");
+  const product = findSellerOrder;
+  const newOrderStock = newOrder(product);
+  orderContainer.innerHTML = newOrderStock;
+
+
+  const cancelOrderBtn = document.getElementById("order_cancel");
+cancelOrderBtn.addEventListener("click", function() {
+  const productId = new URLSearchParams(window.location.search).get("orderDetailsFind");
+  const newOrderDetails = JSON.parse(localStorage.getItem("sellerDetails"));
+
+  // show a confirmation alert message before canceling the order
+  const confirmed = confirm("Are you sure you want to cancel this order?");
+
+  if (confirmed) {
+    // find the index of the product in the array
+    const productIndex = newOrderDetails.findIndex(product => product.orderId === productId);
+
+    if (productIndex !== -1) {
+      // remove the product from the array
+      newOrderDetails.splice(productIndex, 1);
+
+      // update the localStorage with the modified array
+      localStorage.setItem("sellerDetails", JSON.stringify(newOrderDetails));
+
+      // redirect to the seller homepage
+      window.location.href = "./seller_homepage.html";
+    }
+  }
+});
+
+
+             
+               const deliveryStatus = findSellerOrder["orderDeliveryStatus"];
+               if(deliveryStatus == "Delivered"){
+                 
+                cancelOrderBtn.style.display="none";
+
+               }
+//                 const orderDate = new Date().toLocaleDateString();
+             
+//                const deliveryDate = findSellerOrder["deliveryDate"];
+//                if(deliveryDate == orderDate){
+//                 findSellerOrder.orderDeliveryStatus = "Delivered";
+
+// // Find the index of the order object in the array
+// const index = newOrderDetails.findIndex(details => details.orderId == productId);
+
+// // Replace the old order object with the modified one
+// newOrderDetails.splice(index, 1, findSellerOrder);
+
+// // Save the updated array back to the localStorage
+// localStorage.setItem("sellerDetails", JSON.stringify(newOrderDetails));
+//                }
+             
+
+
+        </script>
 
 </body>
 

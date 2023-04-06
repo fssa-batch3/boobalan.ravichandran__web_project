@@ -21,84 +21,84 @@
 </head>
     <body>
     
+    
             <main>
                 <form>
                     <div class="details">
-                        <h2>Personal Information</h2>
-                        <div class="pro">
+                        <h2 id="seller_pro_edit">Edit Your Personal Information</h2>
+                        <!-- <div class="pro">
                             <i id="gender" class="fa fa-user-circle-o" style="font-size:260px"></i>
-                           <div class="en_full">
-                             
-                            <label for="full_name">Enter Full Name</label>
-                            <input type="text" placeholder="Full name" id="full_name" disabled />
-                           </div>
                            
-                        </div><br>
-                       <div class="uplload">
+                        </div><br> -->
+                       <!-- <div class="uplload">
                         <button><i id="uplload" type="file" class="fa fa-upload" style="font-size:24px"></i>Edit Photo</button>
                        </div>
-        
+         -->
         
                         <div>
+           
+                               
                             <label for="email">Email address</label>
-                            <input type="email" placeholder=" Your Email address" id="email" disabled/>
-                            <label for="mobile"> Mobile Number </label>
-                               <input type="number" placeholder="Your Mobile Number" id="mobile" disabled/> 
+                            <input type="email" placeholder=" Your Email address" id="email"/>
+                            
+                            <label for="full_name">Enter Full Name</label>
+                            <input type="text" placeholder="Full name" id="full_name" />
+                              
                        </div><br>
         
         
                        <h3>Address Details</h3><br>
                        <div>
-                        
+                       
                         <label for="pincode">Pincode</label>
-                        <input type="number" placeholder="Your Pincode" id="pincode" disabled/>
+                        <input type="number" placeholder="Your Pincode" id="pincode"/>
                     </div><br>
                     <div>
                         <label for="state">State</label>
-                        <input type="text" placeholder="State name" id="state" disabled/>
+                        <input type="text" placeholder="State name" id="state" />
                             <label for="district">District</label>
-                            <input type="text" placeholder="District name" id="district" disabled/>
+                            <input type="text" placeholder="District name" id="district"/>
                     </div><br>
                     <div>
                         <label for="gstin">GST Number</label>
-               <input type="text" placeholder="GSTIN..." id="gstin" required="true" disabled/>
+               <input type="text" placeholder="GSTIN..." id="gstin" required="true"/>
 
                <label for="aadhar">Aadhar Number</label>
-               <input type="text" placeholder="Aadhar number.." id="aadhar" required="true" disabled/>
+               <input type="text" placeholder="Aadhar number.." id="aadhar" required="true"/>
                     </div><br>
                     <div>
                         <label for="business_type">Business Type</label>
-                        <input type="text" placeholder="Your Business type" id="business_type" disabled />
+                        <input type="text" placeholder="Your Business type" id="business_type" />
                         
                             <label for="business_name">Business Name</label>
-                            <input type="text" placeholder=" Business name" id="business_name"  disabled/>
+                            <input type="text" placeholder=" Business name" id="business_name" />
                         </div><br>
                         <h3>Bank Details</h3><br>
                         <div>
                             <label for="pan">PAN Number</label>
-                            <input type="text" placeholder="PAN Number" id="pan"  disabled/>
+                            <input type="text" placeholder="PAN Number" id="pan" />
 
                 <label for="account_number">Account Number</label>
-                <input type="number" placeholder="Bank Account Number" id="account_number" disabled/>
+                <input type="number" placeholder="Bank Account Number" id="account_number"/>
                         </div><br>
                         <div>
                             <label for="IFSC_Code"> IFSC Code</label>
-                            <input type="text" placeholder="IFSC Code" id="IFSC_Code" disabled/>
+                            <input type="text" placeholder="IFSC Code" id="IFSC_Code" />
 
                             <label for="branch_name"> Branch Name</label>
-                <input type="text" placeholder="Branch Name" id="branch_name" disabled/>
+                <input type="text" placeholder="Branch Name" id="branch_name" />
                         </div><br>
                         <div>
                             <label for="city">City</label>
-                            <input type="text" placeholder="City name" id="City" disabled/>
+                            <input type="text" placeholder="City name" id="City" />
 
                             <label for="state1">State</label>
-                            <input type="text" placeholder="State name" id="state1" disabled/>
+                            <input type="text" placeholder="State name" id="state1" />
                         </div><br>
 
                      <div class="button">
-                       <button type="button" id="account_delete">Delete</button>
-                      <button type="button" id="seller_profile_edit">Edit</button>
+                       <button type="button" id="saveEditDetails">Save</button>
+                        <a href="../seller/profile.html"><button type="button" id="goBackHome">cancel</button></a>
                      </div>
                     </div>
                 </form>
@@ -131,14 +131,7 @@
                 </footer>
                 <script src="../js/seller_header.js"></script>
                 <script>
-
-                    // profile edit page location
-                    document.getElementById("seller_profile_edit").addEventListener("click",
-                    function editProfile(){
-                        window.location.href ="../seller/seller_profile_edit.html";
-                    })
-
-
+                    
 
                     const seller_data = JSON.parse(localStorage.getItem("seller_data"));
                     const seller_list = JSON.parse(localStorage.getItem("seller_list"));
@@ -150,7 +143,7 @@
 
                     document.getElementById("full_name").value = loggedSeller.signupDetails.sell_full_name
                     document.getElementById("email").value = loggedSeller.signupDetails.sel_email
-                    document.getElementById("mobile").value = loggedSeller.signupDetails.sel_phone
+
                     document.getElementById("pincode").value = loggedSeller.pickUpDetails.sell_pincode
                     document.getElementById("state").value = loggedSeller.pickUpDetails.sell_state
                     document.getElementById("district").value = loggedSeller.pickUpDetails.sell_district
@@ -166,36 +159,30 @@
                     document.getElementById("account_number").value = loggedSeller.bankDetails.account_number
             
 
-                    const sel_del_account = document.getElementById("account_delete")
-                    sel_del_account.addEventListener("click",
-     function deleteAcc(e)
-        {
-            if(confirm("Are you sure to delete your account?")){
-                  e.preventDefault();
 
-            //get value from local storage
-            const seller_data = JSON.parse(localStorage.getItem("seller_data"));
-                    const seller_list = JSON.parse(localStorage.getItem("seller_list"));
+                    document.getElementById("saveEditDetails").addEventListener("click",
+                    function editDetails(){
+                        loggedSeller.signupDetails.sell_full_name = document.getElementById("full_name").value
+                        loggedSeller.pickUpDetails.Aadhar_number =    document.getElementById("aadhar").value
+                        loggedSeller.signupDetails.sel_email =  document.getElementById("email").value
+                        loggedSeller.pickUpDetails.sell_pincode = document.getElementById("pincode").value
+                       loggedSeller.pickUpDetails.sell_state = document.getElementById("state").value 
+                       loggedSeller.pickUpDetails.sell_district =   document.getElementById("district").value
+                       loggedSeller.pickUpDetails.GST_number = document.getElementById("gstin").value
+                       loggedSeller.pickUpDetails.business_type =  document.getElementById("business_type").value
+                       loggedSeller.pickUpDetails.business_name =  document.getElementById("business_name").value 
+                       loggedSeller.pickUpDetails.PAN_number =  document.getElementById("pan").value
+                       loggedSeller.bankDetails.ifsc_code =  document.getElementById("IFSC_Code").value 
+                       loggedSeller.bankDetails.branch_name =  document.getElementById("branch_name").value
+                       loggedSeller.bankDetails.city_name =  document.getElementById("City").value 
+                       loggedSeller.bankDetails.state_name = document.getElementById("state1").value
+                       loggedSeller.bankDetails.account_number =  document.getElementById("account_number").value
 
+                        localStorage.setItem("seller_list",JSON.stringify(seller_list));
+                        alert("Your profile ubdated sucessfully..✅")
+                        location.href="../seller/profile.html";
 
-         // finding the userData which unique_id correctly matches
-                    const loggedSeller = seller_list.find(details =>
-                    details.signupDetails.sel_phone == seller_data);
-
-      
-
-            const indexOfUser = seller_list.indexOf(loggedSeller);
-
-             console.log(indexOfUser);
-            // user_list.splice(position(which means index 1,2,3,4), counting);
-            seller_list.splice(indexOfUser, 1);
-            localStorage.setItem("seller_list", JSON.stringify(seller_list));
-            window.location.href="../../index.html";
-        };
-
-    }
-)
-                    
+                    } )
                 </script>
         
         </body>

@@ -10,47 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-          <link rel="stylesheet" href="../../assets/css/product_detail.css">
+
           <title>Product details</title>
           
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="../../assets/css/product_detail.css">
 <link rel="stylesheet" href="../../assets/css/sell_footer.css">
 <link rel="stylesheet" href="../../assets/css/normalize.css">
 <link rel="stylesheet" href="../../assets/css/seller_header.css">
 </head>
     <body>
-        <header class="navbar">
-        <div class="header">
-        </div>
-            <div class="head">
-                <div>
-                    <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
-                </div>
-                <div>
-                    <ul class="hero">
-                     <li class="hero_list"><a href="./seller_homepage.html"><i class="fa fa-home" style="font-size:28px"></i>Home</a></li>
-                     <li class="hero_list"><a href="../../index.html"><i class="fa fa-sign-out" style="font-size:21px"></i>Logout</a>
-                     <li class="hero_list"><a href="./profile.html" ><i class="fa fa-user-circle-o" style="font-size:36px"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nav">
-                <div class="dropdown">
-                    <button class="btn">Listings</button>
-                    <div class="dropdown_list">
-                        <a href="./type_agri.html">Add new Listing</a>
-                    </div>
-                </div>
-                <div class="dropdown1">
-                    <button class="btn1">My Orders</button>
-                    <div class="dropdown_list1">
-                        <a href="./new_order.html">New Orders</a>
-                        <a href="./old_order.html">Old Orders</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+      
         <main>
             <div class="Information">
         <form>
@@ -89,7 +59,7 @@
         <label>Shipping Provider</label>
         <select id="option2">
             <option>Select</option>
-            <option >FAB</option>
+            <option >FAB(Fert Agri Boomi)</option>
             <option >Seller and FAB</option>
         </select>
     </div>
@@ -101,7 +71,7 @@
         </div>
         <div>
             <label for="zonal_delivery"> Zonal Delivery Charge</label>
-            <input type="text" placeholder="Enter Local delivery charge" id="zonal_delivery"/> 
+            <input type="text" placeholder="Enter zonal delivery charge" id="zonal_delivery"/> 
     </div>
 </div><br>
         <div class="dle4">
@@ -123,7 +93,7 @@
              </div>
              <div>
                 <label for="tax_code">Tax Code</label>
-                <input type="text" placeholder="Enter HSN" id="tax_code" required/>
+                <input type="text" placeholder="Enter Tax code" id="tax_code" required/>
              </div>
              </div><br>
              <h3>Manufactering Details</h3>
@@ -133,14 +103,7 @@
              </div><br>
              <h3>Product Description</h3>
              <div class="dle6">
-                <div>
-                <label for="color">Fertilizer Color</label>
-                <input type="text" placeholder="Enter Fertilizer color" id="color"/>
-             </div>
-             <div>
-                <label for="product_name">Name of Product</label>
-                <input type="text" placeholder="Name of product" id="product_name" required/>
-             </div>
+               
              </div><br>
              <div class="about00">
                 <div  class="abtn">
@@ -182,11 +145,82 @@
             </div>
         </div>
         </footer>
-
+        <script src="../js/seller_header.js"></script>
         <script>
-      
-        </script>
 
+
+
+        const sellerOrderId = new URLSearchParams(window.location.search).get("orderUniqueId");
+const sellerOrederData = JSON.parse(localStorage.getItem("sellerDetails")) || [];
+const findSellerOrder = sellerOrederData.find(details => details.orderId == sellerOrderId);
+
+document.getElementById("pickup_address").addEventListener("click", function pickUpAddress(e){
+  e.preventDefault();
+
+  const mrpInput = document.getElementById("mrp").value;
+  const sellingInput = document.getElementById("selling").value;
+  const procurementTypeInput = document.getElementById("option1").value;
+  const stockCountInput = document.getElementById("stock_count").value;
+  const shippingProviderInput = document.getElementById("option2").value;
+  const localDeliveryChargeInput = document.getElementById("local_delivery").value;
+  const zonalDeliveryChargeInput = document.getElementById("zonal_delivery").value;
+  const packingWeightInput = document.getElementById("weight").value;
+  const packingHeightInput = document.getElementById("height").value;
+  const hsnInput = document.getElementById("hsn").value;
+  const taxCodeInput = document.getElementById("tax_code").value;
+  const countryOriginInput = document.getElementById("country_origin").value;
+  const aboutProductInput = document.getElementById("about00").value;
+  const orderDeliveryStatus = "Processing"
+   const orderStatus = "true"
+  
+  
+
+const orderDate = new Date().toLocaleDateString();
+      const deliveryDate = new Date(Date.now() + 10 * 24 * 60 * 60 * 1000).toLocaleDateString();
+
+      const uid = (new Date().getTime()).toString(24);
+      const currentTime = new Date();
+      const orderedTime = currentTime.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+
+
+
+  if(mrpInput == " " || procurementTypeInput == " " || shippingProviderInput == " " || packingWeightInput == " " || taxCodeInput == " " || hsnInput == " " || countryOriginInput == "" ||aboutProductInput == " ")
+  {
+    alert("Please enter all the required fields");
+    return;
+  }
+  // If order is found, push the data into the object
+  if (findSellerOrder) {
+    findSellerOrder.mrpInput = mrpInput;
+    findSellerOrder.sellingInput = sellingInput;
+    findSellerOrder.procurementTypeInput = procurementTypeInput;
+    findSellerOrder.stockCountInput = stockCountInput;
+    findSellerOrder.shippingProviderInput = shippingProviderInput;
+    findSellerOrder.localDeliveryChargeInput = localDeliveryChargeInput;
+    findSellerOrder.zonalDeliveryChargeInput = zonalDeliveryChargeInput;
+    findSellerOrder.packingWeightInput = packingWeightInput;
+    findSellerOrder.packingHeightInput = packingHeightInput;
+    findSellerOrder.hsnInput = hsnInput;
+    findSellerOrder.taxCodeInput = taxCodeInput;
+    findSellerOrder.countryOriginInput = countryOriginInput;
+    findSellerOrder.aboutProductInput = aboutProductInput;
+    findSellerOrder.orderDeliveryStatus = orderDeliveryStatus;
+    findSellerOrder.orderDate = orderDate;
+    findSellerOrder.orderedTime = orderedTime;
+    findSellerOrder.deliveryDate = deliveryDate;
+    findSellerOrder.orderStatus = orderStatus;
+  }
+  
+  // Save the updated data in local storage
+  localStorage.setItem("sellerDetails", JSON.stringify(sellerOrederData));
+  
+  // Reset the form and redirect to another page
+  document.querySelector('form').reset();
+  location.href = "./product_uploaded.html";
+});
+
+        </script>
 </body>
 
 </html>

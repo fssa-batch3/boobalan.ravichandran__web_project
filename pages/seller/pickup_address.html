@@ -78,6 +78,7 @@ if (SellerAccountFindIndex >= 0) {
     const business_name = document.getElementById("business_name").value;
     const pan_number = document.getElementById("pan").value;
     const business_type = document.getElementById("business_type").value;
+    const   Aadhar_number = "";
 
     if (pick_pincode === '' || pick_state === '' || pick_district === '' || GST_number === '' || pan_number === '' || business_name === '' || business_type === '' ) {
     alert('Please fill in all the required fields before continuing.');
@@ -91,7 +92,8 @@ if (SellerAccountFindIndex >= 0) {
       GST_number: GST_number,
       business_name: business_name,
       PAN_number: pan_number,
-      business_type: business_type
+      business_type: business_type,
+      Aadhar_number
     };
 
     localStorage.setItem("seller_list", JSON.stringify(sellerDetails));
