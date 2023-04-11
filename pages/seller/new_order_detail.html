@@ -111,7 +111,7 @@
             </div>
             <div class="back_home">
                 <div>
-                <a href="./seller_homepage.html"><i class="fa fa-arrow-circle-left" style="font-size:42px"></i></a>
+                <a href="./new_order.html"><i class="fa fa-arrow-circle-left" style="font-size:42px"></i></a>
             </div>
             <div class="cancel_order">
                 <button type="button" id="order_cancel">Cancel Order</button>
@@ -130,34 +130,24 @@
 
 
   const cancelOrderBtn = document.getElementById("order_cancel");
-cancelOrderBtn.addEventListener("click", function() {
-  const productId = new URLSearchParams(window.location.search).get("orderDetailsFind");
-  const newOrderDetails = JSON.parse(localStorage.getItem("sellerDetails"));
 
-  // show a confirmation alert message before canceling the order
+cancelOrderBtn.addEventListener("click", function neworderDel() {
   const confirmed = confirm("Are you sure you want to cancel this order?");
-
   if (confirmed) {
-    // find the index of the product in the array
-    const productIndex = newOrderDetails.findIndex(product => product.orderId === productId);
-
-    if (productIndex !== -1) {
-      // remove the product from the array
-      newOrderDetails.splice(productIndex, 1);
-
-      // update the localStorage with the modified array
-      localStorage.setItem("sellerDetails", JSON.stringify(newOrderDetails));
-
-      // redirect to the seller homepage
-      window.location.href = "./seller_homepage.html";
-    }
+    findSellerOrder.orderDeliveryStatus = "Processing";
+    console.log(findSellerOrder.orderDeliveryStatus);
+     // update the order status to "Cancelled"
+    localStorage.setItem("sellerDetails", JSON.stringify(newOrderDetails)); 
+    console.log(JSON.parse(localStorage.getItem("sellerDetails")));// store the updated details in localStorage
+    window.location.href = "./new_order.html"; // redirect to the seller homepage
   }
 });
 
 
+
              
                const deliveryStatus = findSellerOrder["orderDeliveryStatus"];
-               if(deliveryStatus == "Delivered"){
+               if(deliveryStatus == "Delivered" || deliveryStatus == "Cancelled"  ){
                  
                 cancelOrderBtn.style.display="none";
 

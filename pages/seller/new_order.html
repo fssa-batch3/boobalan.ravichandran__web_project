@@ -104,9 +104,9 @@
                th_order.innerText = "Order Status";
                tr_1.append(th_order);
             
-               const newOrderStatus = JSON.parse(localStorage.getItem("sellerDetails"))
-               const status = "true"
-            const newOrder = newOrderStatus.filter(details=> details.orderStatus == status)
+               const newOrder = JSON.parse(localStorage.getItem("sellerDetails"))
+            //    const status = "true"
+            // const newOrder = newOrderStatus.filter(details=> details.orderStatus == status)
       
                for(let i = 0; i < newOrder.length ; i++) {
                 

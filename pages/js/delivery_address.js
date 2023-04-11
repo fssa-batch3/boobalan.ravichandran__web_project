@@ -24,7 +24,6 @@ if (!isLoggedIn()) {
 }
 
 
-
 const productUniqueId = new URLSearchParams(window.location.search).get('orderUnique');
 
 

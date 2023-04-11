@@ -52,31 +52,31 @@
         <div class="password_valid">
           <label>
             <input type="checkbox" id="chkUppercase" disabled>
-            1 Uppercase letter
+            Have at 1 Uppercase letter
           </label>
         </div>
         <div class="password_valid"  >
           <label>
             <input type="checkbox" id="chkLowercase" disabled>
-            1 Lowercase letter
+            Have at 1 Lowercase letter
           </label>
         </div>
         <div class="password_valid">
           <label>
             <input type="checkbox" id="chkSpecialChar" disabled>
-            1 Special character
+            Have at 1 Special character
           </label>
         </div>
         <div class="password_valid">
           <label>
             <input type="checkbox" id="chkNumber" disabled>
-            1 Number
+            Have at 1 Number
           </label>
         </div>
         <div class="password_valid">
           <label>
             <input type="checkbox" id="chkMinLength" disabled>
-            Minimum 8 characters
+            Have at Minimum 8 characters
           </label>
         </div>
         
@@ -119,6 +119,7 @@ mobileInput.addEventListener('input', () => {
 });
 // //Please enter one number, one special character, one uppercase letter, and one lowercase letter. 8 characters minimum, 10 characters maximum
 const passwordInput = document.getElementById('txtPassword');
+console.log(passwordInput)
 const uppercaseCheckbox = document.getElementById('chkUppercase');
 const lowercaseCheckbox = document.getElementById('chkLowercase');
 const specialCharCheckbox = document.getElementById('chkSpecialChar');
