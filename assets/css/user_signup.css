@@ -125,27 +125,23 @@ a{
     appearance: none;
   
     /* Create the custom checkbox */
-    border: 1.5px solid var(--checkbox-color-unchecked);
+    border: 1px solid var(--checkbox-color-unchecked);
     border-radius: 2px;
     background-color: white;
     transition: border-color 0.2s ease-in-out;
-    padding: 2px;
-  
+   
     /* Position the checkmark inside the checkbox */
     position: relative;
   }
   
   /* Style the checkmark inside the checkbox */
   .password_valid input[type="checkbox"]::after {
-    content: "";
+    content: "\2705"; /* Unicode character code for checkmark emoji */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 2px;
-    background-color: var(--checkbox-color-checked);
+    font-size: 10px;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
   }
@@ -155,6 +151,16 @@ a{
     opacity: 1;
   }
   
+  /* Change the border color when the checkbox is checked */
+  .password_valid input[type="checkbox"]:checked {
+    border-color: var(--checkbox-color-checked);
+  }
+  
+  /* Show the checkmark when the checkbox is checked
+  .password_valid input[type="checkbox"]:checked::after {
+    opacity: 1;
+  }
+   */
 
 
 /* ----------/@media  start/-------------==============*/

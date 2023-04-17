@@ -331,6 +331,7 @@ margin-top: -10px;
       align-items: center;
      
     }
+   
 
     /* Offers, herbicides, fungicides, growth promoters 
     --------
@@ -421,10 +422,10 @@ left: 0;
 
 /* offers  */
 
-.checked {
-    color: orange;
-    margin-bottom: 10px;
-  }
+/* .checked {
+    color: rgb(0, 0, 0);
+    margin-bottom: 1000px;
+  } */
    
    
   .offers1{
@@ -640,7 +641,11 @@ padding: 15px 0px 0px 0px;
 .mobile_footer{
   display: none;
 }
+/* .navbar_links{
+  margin-left:auto;
+} */
 /*
+
 
 
 
@@ -669,7 +674,8 @@ padding: 15px 0px 0px 0px;
     display:none ;
   box-sizing: border-box;
   }
-  .navbar_links ul{ 
+  .navbar_links ul li { 
+    display: block;
    flex-direction:column;
    width:100%;
     }
@@ -680,14 +686,21 @@ padding: 15px 0px 0px 0px;
       margin-top: -6px;
       padding-right:5px;
     }
-    .navbar_links.active{
+    .hero{
+      display: flex;
+    }
+    .navbar_links.activee{
       display: flex;
     }
     .hero .hero_list1{
       margin:20px 50px;
       border-radius: 5px;
     }
-  
+    .navbar_links{
+      margin-left: 0vw;
+      display:none;
+      padding-bottom: 50px;
+    }
     .hero .hero_list1 a{
      color:white;
      width:90%;
@@ -721,6 +734,9 @@ padding: 15px 0px 0px 0px;
   width: 100%;
   background-color: rgb(0, 0, 0);
 }
+
+
+
 
 /* -----==============menu bar end-=============== */
 .hero_list a{
@@ -935,9 +951,13 @@ background-color: rgb(4, 4, 77);
 
   /*  ---------------Offers----------- */
 
+  .slideshow-container .mySlides img{
+    width:100%;
+    height: 25vh;
+  }
   .product{
    width:98.5vw;
-   height: 15vh;
+   height: 11vh;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
@@ -995,7 +1015,7 @@ width: 96%;
 
 .offers1{
   display:grid;
-    gap:2.1vw;
+    gap:3.1vw;
     grid-auto-flow:column;
     grid-auto-columns:55%;
     overflow-x: auto;
@@ -1009,29 +1029,48 @@ width: 96%;
   margin-left: auto;
   margin-right: auto;
 }
-.today{
-  padding: 10px 10px 20px 10px ;
-  margin-bottom: 25px;
-  margin-left:2vw;
-  border-radius: 3px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-.today p {
-  font-size: 10px;
-  width:130px;
+
+#interface .today{
+  width:180px;
+  min-height:220px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+margin-left:0px;
+    margin-right: 20px;
+   
 }
 
-.price{
-  margin-left: 27px;
-  font-size: 10px;
+
+.today img{
+  width:100px;
+  height:120px;
+  border-radius: 0px;
+  margin-bottom: 20px;
 }
-.price del{
-  margin-left: 5px;
- font-size: 10px;
+
+.price h4{
+font-size: 14px;
+
+}
+
+
+.price11 del{
+font-size: 13px;
+
 }
 .today h3{
   font-size: 13px;
 }
+
+.today p{
+ 
+  font-size: 13px;
+ padding: 5px 15px 20px 15px;
+ width:150px;
+
+}
+
+
 
 /* -----------------/ fab Priorities/------------- */
 
@@ -1117,7 +1156,12 @@ width: 96%;
   margin-left: 1vw;
  }
 }
-
+/* .spin_roller{
+  background-color: black;
+  padding: 5px 10px 3px 10px;
+  width:200px;
+  align-items: center;
+} */
 
 @media screen and (min-width: 400px) and (max-width: 640px){
 
@@ -1127,7 +1171,7 @@ width: 96%;
   }
   .navbar_links{
     flex-direction: column;
-    background-color:#176047;
+    background-color:#d2ffef;
     width:100vw;
     position: relative;
     display:none ;
@@ -1137,6 +1181,11 @@ width: 96%;
    flex-direction:column;
    width:100%;
     }
+    .navbar_links{
+      margin-left: 0vw;
+      display:none;
+      padding-bottom: 50px;
+    }
     .fa-heart{
       margin-top: -6px;
     }
@@ -1144,7 +1193,7 @@ width: 96%;
       margin-top: -6px;
       padding-right:5px;
     }
-    .navbar_links.active{
+    .navbar_links.activee{
       display: flex;
     }
     .hero .hero_list1{
@@ -1170,6 +1219,18 @@ width: 96%;
     background-color:var(--nav-backgroung);
     padding:5px 20px;
 }
+/* --------------header wislist, profle, cart container ------------- */
+.all_nave_links{
+  display: block;
+}
+.all_nave_links .hero_list11{
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+#profile_icon .img1{
+  margin-bottom: 500px;
+}
+
  .btn_bar{
   width:30px;
   height:21px;
@@ -1211,6 +1272,7 @@ justify-content: space-between;
  }
  .search_menu{
  display: inline;
+
  }
  
  .search_bar1{
@@ -1398,6 +1460,12 @@ background-color: rgb(4, 4, 77);
     display: none;
   }
 
+
+  /* -----------------add images----------------- */
+  .slideshow-container .mySlides img{
+    width:100%;
+    height: 25vh;
+  }
   /*  ---------------Offers----------- */
 
   .product{
@@ -1474,34 +1542,46 @@ width: 96%;
   margin-left: auto;
   margin-right: auto;
 }
-.today{
-  padding: 10px 10px 20px 10px ;
-  margin-bottom: 25px;
-  margin-left:2vw;
-  border-radius: 3px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  width: 37vw;
- 
-}
-.today p {
-  font-size: 12px;
-  width:28vw;
+#interface .today{
+  width:220px;
+  min-height:250px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+margin-left: 10px;
+    margin-right: 10px;
+   
 }
 
-.price{
-  margin-left:0vw;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  font-size: 12px;
+
+.today img{
+  width:130px;
+  height:150px;
+  border-radius: 0px;
+  margin-bottom: 20px;
 }
-.price del{
-  margin-left: 5px;
- font-size: 12px;
+
+.price h4{
+font-size: 16px;
+
+}
+
+
+.price11 del{
+font-size: 15px;
+
 }
 .today h3{
-  font-size: 14px;
+  font-size: 15px;
 }
+
+.today p{
+ 
+  font-size: 15px;
+ padding: 5px 20px 20px 20px;
+ width:180px;
+
+}
+
 
 /* -----------------/ fab Priorities/------------- */
 

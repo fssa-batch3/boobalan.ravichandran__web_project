@@ -3,7 +3,7 @@ const navbar=document.getElementsByClassName('navbar_links')[0];
 
 
 btn.addEventListener('click',()=>{
-    navbar.classList.toggle('active');
+    navbar.classList.toggle('activee');
 });
 
 

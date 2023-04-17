@@ -54,6 +54,7 @@ function deleteAcc(e)
        user_list.splice(indexOfUser, 1);
        localStorage.setItem("user_list", JSON.stringify(user_list));
        window.location.href="../../index.html";
+       localStorage.removeItem("user_data");
    };
 
 }

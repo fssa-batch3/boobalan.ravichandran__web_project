@@ -30,6 +30,21 @@ const orderDeliveryData = JSON.parse(localStorage.getItem("addtoCartDeliveryProd
 
 const loadProduct = orderDeliveryData.filter(detail => detail.deliveryStatus == ProductStatus);
 
+
+// logged user detail sget from local storage-----------------
+
+const user_list = JSON.parse(localStorage.getItem("user_list")) || [];
+const user_data = JSON.parse(localStorage.getItem("user_data")) || [];
+
+const findData = user_list.find(details => details.mobile == user_data); 
+ document.getElementById("mobile").value = findData["mobile"];
+document.getElementById("email").value =  findData["email"];
+
+// ----------------------------------------------------------------
+
+
+
+
 const homeImg = document.getElementById("home");
 const officeImg = document.getElementById("office");
 
