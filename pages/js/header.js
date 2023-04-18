@@ -175,10 +175,10 @@ const AfterLogin =
              <a href="${root}/pages/user/tata.html">TATA RALLIS</a>
              <a href="${root}/pages/user/adama.html">ADAMA</a>
              <a href="${root}/pages/user/bayer.html">BAYER</a>
-             <a href="${root}/pages/user/upl.html">ARIES AGRO</a>
-             <a href="${root}/pages/user/promoters.html">BARRIX</a>
-            <a href="${root}/pages/user/bio_fertilizer.html">INDOFIL</a>
-            <a href="${root}/pages/user/tata.html">RINUJA</a>
+             <a href="${root}/pages/user/aries_agro.html">ARIES AGRO</a>
+             <a href="${root}/pages/user/barrix.html">BARRIX</a>
+            <a href="${root}/pages/user/indofil.html">INDOFIL</a>
+            <a href="${root}/pages/user/rinuja.html">RINUJA</a>
          </div>
      </div>
      <div class="dropdown1">
@@ -199,8 +199,8 @@ const AfterLogin =
              <a href="${root}/pages/user/retardants.html">GROWTH RETARDANTS</a>
              <a href="${root}/pages/user/organic.html">ORGANIC FERTILIZERS</a>
              <a href="${root}/pages/user/bio_fertilizer.html">BIO FERTILIZERS</a>
-             <a href="${root}/pages/user/secodary_nutrients.html">ANTI STRESSING AGENTS</a>
-             <a href="${root}/pages/user/viricides.html">MICRO NUTRIENTS</a>
+             <a href="${root}/pages/user/anti_stressing_agents.html">ANTI STRESSING AGENTS</a>
+             <a href="${root}/pages/user/micro_nutrients.html">MICRO NUTRIENTS</a>
          </div>
      </div>
 </div>

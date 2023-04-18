@@ -157,7 +157,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The item is removed from the user's wishlist.
 
-### Profile Account
+### Profile Account[Completed]
 - Scenario 1: Successfully created a new profile account
     - Steps:
         1. Log in as a buyer.
@@ -166,7 +166,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The user is redirected to the Personal Information page.
 
-### Edit Profile Account
+### Edit Profile Account[Completed]
 - Scenario 1: Successfully read data in profile account
     - Steps:
         1. Navigate to the user index page.
@@ -175,7 +175,7 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
     - Expected Result:
         - The user is redirected to the Edit Personal Details Page.
 
-### Update Profile Account
+### Update Profile Account[Completed]
 - Scenario 1: Successfully read data in profile account
     - Steps:
         1. Navigate to the user Edit Personal Details Page.
@@ -184,4 +184,83 @@ This project is about Fertilizers,Fungicides,Growth Promoters buying website. Th
         3. Click "save" Button.
     - Expected Result:
         - The user is redirected to the Personal Information Page.
+
+### Delete Profile Account[Completed]
+- Scenario 1: Successfully delete data in profile account.
+   - Stepts: 
+      1. click the "profile" icon which is at the top right of the page.
+      2. Navigate to the user Profile page.
+      3. Click "Delete" Button.
+      4. "Are you sure you're deleting your account?" A alert message will be displayed. Click OK to delete the user account.
+   - Expected Result:
+      - The user is redirected to the index page.
+
+### Logout profile[Completed]
+- Scenario 1: Successfully logout profile.
+   - Stepts: 
+      1. Each page has an "Logout" button in the top right corner.
+      2. Click "logout" Button.
+   - Expected Result:
+      - The user is redirected to the index page.
+      
+ ### Delete Profile Account[Completed]
+- Scenario 1: Successfully delete data in profile account.
+   - Stepts: 
+      1. click the "profile" icon which is at the top right of the page.
+      2. Navigate to the user Profile page.
+      3. Click "Delete" Button.
+      4. "Are you sure to delete your account?" A alert message will be displayed. Click OK to delete the user account.
+   - Expected Result:
+      - The user is redirected to the index page.
+
+### Create Product[Completed]
+- Scenario 1: Successfully Create Product.
+   - Stepts: 
+      1. click the "profile" icon which is at the top right of the page.
+      2. Navigate to the user Profile page.
+      3. Click "Create new Product" Button is at the bottom right of the page.
+      4. The user is redirected to the Add products page.
+      5. Enter the required information such as Category,  Manufacturing Company Name, Product name, Image URL,  Product Actual Price, Discount on Product,  Product weight, Description, Benifits, Application.
+      6. Click "Save" Button.
+      7. The product will be created on the category page of whichever category you have selected. 
+      8. The category is available on the header such as "BRANDS", "CROP PROTECTION", "CROP NUTRITION".
+   - Expected Result:
+      - The user is redirected to the home page.
+      
+ ### Update[Completed]
+- Scenario 1: Successfully Updated the Product details.
+   - Stepts: 
+      1. click the "profile" icon which is at the top right of the page.
+      2. Navigate to the user Profile page.
+      3. Click "Create new Product" Button is at the bottom right of the page.
+      4. The user is redirected to the Add products page.
+      5. At the bottom of the Add Products page is the Update Page button. 
+      6. Click " Update Page" button.
+      7. The user is redirected to the Update Products Page.
+      8. Enter the  Product Unique ID.
+      9. The Product Unique ID have to copied from localStorage which product wants to update.
+      10. Then Click "Find Details" Button.
+      11. Product Details filled automatically all the input field. 
+      12. Enter the specific input field in the update detail for which you want to update the specific product.
+      13. Then Click "Update" button.
+      14. If want to cancel update the product details click "Cancel" button - the user is redirected to the Profile page.
+   - Expected Result:
+      - The user is redirected to the Update Product page.
+      
+ ### Delete Product[Completed]
+- Scenario 1: Successfully Deleted the Product details.
+   - Stepts: 
+      1. click the "profile" icon which is at the top right of the page.
+      2. Navigate to the user Profile page.
+      3. Click "Create new Product" Button is at the bottom right of the page.
+      4. The user is redirected to the Add products page.
+      5. At the bottom of the Add Products page is the Update Page button. 
+      6. Click " Update Page" button.
+      7. The user is redirected to the Update Products Page.
+      8. Enter the  Product Unique ID.
+      9. The Product Unique ID have to copied from localStorage which product wants to update.
+      10. Then Click "Find Details" Button.
+      11. Product Details filled automatically all the input field.
+      13. Click "Delete details" button.
+      14.Are you sure you want to delete product details? A alert message will be displayed. Click OK to Delete the product details.
 

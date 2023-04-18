@@ -538,7 +538,7 @@
 
     // -------------growth_retardants-----------
     else if(category == growth_retardants){
-        let growth_retardants_details = JSON.parse(localStorage.getItem('growth_retardants')) || [];
+        let growth_retardants_details = JSON.parse(localStorage.getItem('growth_retardants_details')) || [];
 
         let exit = growth_retardants_details.some(data =>
          data.growth_retardants_details == growth_retardants_details ||
@@ -685,14 +685,35 @@
         localStorage.setItem("micro_nutrients_details",JSON.stringify(micro_nutrients_details));
          }
     }  
+
+    const categgory = document.querySelector('#category');
+    const companyName = document.querySelector('#company_name');
+    const productName = document.querySelector('#pro_name');
+    const imageUrl = document.querySelector('#image_url');
+    const actualPrice = document.querySelector('#act_price');
+    const discount = document.querySelector('#discount');
+    const weight = document.querySelector('#weight');
+    const descriiption = document.querySelector('#description');
+    const benefits = document.querySelector('#benifits');
+    const appliication = document.querySelector('#application');
+  
+    // Check if any input field is empty
+    if (categgory.value === 'Select' || !companyName.value || !productName.value || !imageUrl.value ||
+      !actualPrice.value || !discount.value || !weight.value || !descriiption.value || !benefits.value || !appliication.value) {
+      // Show alert message
+      alert('Please fill all the input fields');
+    } else {
+      
         document.querySelector('form').reset();
-       alert("Product detail created Successfully");    
+       alert("Product detail created Successfully"); 
+       location.href = "../../index.html";
+    }   
 }  
     ) 
     document.getElementById("cancel").addEventListener("click",
 function cancelDetails(e){
     e.preventDefault();
     alert("You want to cancel product details?");
-    location.href = "./user_interface.html";
+    location.href = "../../index.html";
 }
     )

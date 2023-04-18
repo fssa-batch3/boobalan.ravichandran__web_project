@@ -167,6 +167,1062 @@ if(!adama_details){
        ]
    ));
     };
+
+    // ----------------upl- details----------------------
+const upl_details = JSON.parse(localStorage.getItem("upl_details"));
+if(!upl_details){
+
+   localStorage.setItem("upl_details", JSON.stringify(
+       [
+        {
+            actual_price:"1044",
+            application:"2 mL/litre and 400ml/acre",
+           benifits:"Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
+            category: "UPL",
+            description:"Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
+            discount: "209",
+            manufacture_company:"Adama - Fertilizers",
+            product_name:"AGIL HERBICID",
+            product_unique_id:"89e60418-9bd7-4c43-b3cc-2f839b6cef77d",
+            product_weight:"400 ml",
+            source:"../../assets/images/Adama/ada1.avif"
+        },
+        {
+            actual_price:"1286",
+            application: "Blackgram, Redgram, Pigeonpea, Chickpea, Groundnut, Soybean, Rice, Chipotle, Tomato, Cauliflower, Cabbage, Broccoli, and Kale are some examples of crops.\\n\\nHelicoverpa, Spodoptera, Fall armyworm, Cut Worm, Pod Borers, DBM, Stem Borers, Bollworms, and Leaf Roller are several insects and diseases.\\n\\n2ml per litre of water is the dosage.",
+            benifits:"Plethora acts as a chitin synthesis inhibitor and also affects the insect nervous system by inhibiting sodium ions entry into nerve cells hence, the insecticide hampers moulting & also paralyses the insect. It has phytotonic effect on the crop.",
+            category: "UPL",
+            description:"Innovative product with a dual mode of action is Plethora Insecticide. Lepidopteran pesticide Plethora has a broad spectrum and has a phytotonic effect on the crop. Inhibits chitin formation and has an impact on the nervous system of insects by preventing sodium ions from entering nerve cells. As a result, the pesticide hinders moulting and paralyses insects.",
+            discount: "130",
+            manufacture_company:"PLETHORA - Fertilizers",
+            product_name:"PLETHORA INSECTICIDE",
+            product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d1393159ba",
+            product_weight:"200 ml",
+            source:"../../assets/images/Adama/ada2.avif"
+        },
+        {
+            actual_price:"1700",
+            application: "A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.\\n\\nCustodia Fungicide Technical Content: Azoxystrobin 11% + Tebuconazole 18.3% w/w SC\\n\\nChili, onions, potatoes, tomatoes, grapes, wheat, and apples are the target crops.\\n\\nPowdery mildew and dieback, fruit rot, purple blotch, sheath blight, yellow rust, early and late blight, downy and powdery mildew, apple scab, and pre-mature leaf fall disease are the insects and pests that are targeted.dosage of 1 ml per litre of water.",
+            benifits:"Custodia is a Broad spectrum fungicide for the control of many fungal pathogens & diseases. Custodia has very good preventive & curative properties which provides flexibility & broad window of application. It has a dual mode of action, hence it works at multiple stages of fungal development.",
+            category: "UPL",
+            description:"A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.",
+            discount: "340",
+            manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+            product_name:"CUSTODIA FUNGICIDE",
+            product_unique_id:"59a6e214-1031-4260c-887a-0bac1bac42f8",
+            product_weight:"500 ml",
+            source:"../../assets/images/Adama/ada3.avif"
+        },
+        {
+            actual_price:"560",
+            application: "Technical Content: Bifenthrin 9.4% SC and Diafenthiuron 47% Target Plants: Cotton and Chilies Thrips, whiteflies, aphids, and leafhoppers are the pests that are being targeted. 250ml/acre, or 1.25–1.5ml/liter of waterannel gated, is the dosage.",
+            benifits:"Takaf is a special dual-mode of action combination product.  Takaf interferes with sodium channel gating to block mitochondrial ATP synthase, paralysing the pest while also having an impact on the central and peripheral nervous systems.",
+            category: "UPL",
+            description:"Takaf Adama interferes with sodium channel gating to paralyse the insect by inhibiting mitochondrial ATP synthase while also having an impact on the central and peripheral nervous systems.",
+            discount: "60",
+            manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+            product_name:"TAKAF INSECTICIDE",
+            product_unique_id:"dc4fd5cf-efb1-48f0-bf403-832199f55ea5",
+            product_weight:"300 ml",
+            source:"../../assets/images/Adama/ada4.avif"
+        },
+       ]
+   ));
+    };
+// -----tata-rallis----------------------------------
+const tata_rallis_details = JSON.parse(localStorage.getItem("tata_rallis_details"));
+if(!tata_rallis_details){
+
+   localStorage.setItem("tata_rallis_details", JSON.stringify(
+       [
+        {
+            actual_price:"1044",
+            application:"2 mL/litre and 400ml/acre",
+           benifits:"Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
+            category: "TATA RALLIS",
+            description:"Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
+            discount: "209",
+            manufacture_company:"Adama - Fertilizers",
+            product_name:"AGIL HERBICID",
+            product_unique_id:"89e60418-9bd7-4c43-b33cc-2f839b6cef7d",
+            product_weight:"400 ml",
+            source:"../../assets/images/Adama/ada1.avif"
+        },
+        {
+            actual_price:"1286",
+            application: "Blackgram, Redgram, Pigeonpea, Chickpea, Groundnut, Soybean, Rice, Chipotle, Tomato, Cauliflower, Cabbage, Broccoli, and Kale are some examples of crops.\\n\\nHelicoverpa, Spodoptera, Fall armyworm, Cut Worm, Pod Borers, DBM, Stem Borers, Bollworms, and Leaf Roller are several insects and diseases.\\n\\n2ml per litre of water is the dosage.",
+            benifits:"Plethora acts as a chitin synthesis inhibitor and also affects the insect nervous system by inhibiting sodium ions entry into nerve cells hence, the insecticide hampers moulting & also paralyses the insect. It has phytotonic effect on the crop.",
+            category: "TATA RALLIS",
+            description:"Innovative product with a dual mode of action is Plethora Insecticide. Lepidopteran pesticide Plethora has a broad spectrum and has a phytotonic effect on the crop. Inhibits chitin formation and has an impact on the nervous system of insects by preventing sodium ions from entering nerve cells. As a result, the pesticide hinders moulting and paralyses insects.",
+            discount: "130",
+            manufacture_company:"PLETHORA - Fertilizers",
+            product_name:"PLETHORA INSECTICIDE",
+            product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d6139315ba",
+            product_weight:"200 ml",
+            source:"../../assets/images/Adama/ada2.avif"
+        },
+        {
+            actual_price:"1700",
+            application: "A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.\\n\\nCustodia Fungicide Technical Content: Azoxystrobin 11% + Tebuconazole 18.3% w/w SC\\n\\nChili, onions, potatoes, tomatoes, grapes, wheat, and apples are the target crops.\\n\\nPowdery mildew and dieback, fruit rot, purple blotch, sheath blight, yellow rust, early and late blight, downy and powdery mildew, apple scab, and pre-mature leaf fall disease are the insects and pests that are targeted.dosage of 1 ml per litre of water.",
+            benifits:"Custodia is a Broad spectrum fungicide for the control of many fungal pathogens & diseases. Custodia has very good preventive & curative properties which provides flexibility & broad window of application. It has a dual mode of action, hence it works at multiple stages of fungal development.",
+            category: "TATA RALLIS",
+            description:"A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.",
+            discount: "340",
+            manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+            product_name:"CUSTODIA FUNGICIDE",
+            product_unique_id:"59a6e214-1031-420c-887a-0baac1bac42f8",
+            product_weight:"500 ml",
+            source:"../../assets/images/Adama/ada3.avif"
+        },
+        {
+            actual_price:"560",
+            application: "Technical Content: Bifenthrin 9.4% SC and Diafenthiuron 47% Target Plants: Cotton and Chilies Thrips, whiteflies, aphids, and leafhoppers are the pests that are being targeted. 250ml/acre, or 1.25–1.5ml/liter of waterannel gated, is the dosage.",
+            benifits:"Takaf is a special dual-mode of action combination product.  Takaf interferes with sodium channel gating to block mitochondrial ATP synthase, paralysing the pest while also having an impact on the central and peripheral nervous systems.",
+            category: "TATA RALLIS",
+            description:"Takaf Adama interferes with sodium channel gating to paralyse the insect by inhibiting mitochondrial ATP synthase while also having an impact on the central and peripheral nervous systems.",
+            discount: "60",
+            manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+            product_name:"TAKAF INSECTICIDE",
+            product_unique_id:"dc4fd5cf-efb1-48f0-bf03-832d199f55ea5",
+            product_weight:"300 ml",
+            source:"../../assets/images/Adama/ada4.avif"
+        },
+       ]
+   ));
+    };
+
+    // ------------bayer------------------------
+    const bayer_details = JSON.parse(localStorage.getItem("bayer_details"));
+if(!bayer_details){
+
+   localStorage.setItem("bayer_details", JSON.stringify(
+       [
+        {
+            actual_price:"1044",
+            application:"2 mL/litre and 400ml/acre",
+           benifits:"Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
+            category: "BAYER",
+            description:"Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
+            discount: "209",
+            manufacture_company:"Adama - Fertilizers",
+            product_name:"AGIL HERBICID",
+            product_unique_id:"89e60418-9bd7-4c43-b3ccc-2f839b6cef7d",
+            product_weight:"400 ml",
+            source:"../../assets/images/Adama/ada1.avif"
+        },
+        {
+            actual_price:"1286",
+            application: "Blackgram, Redgram, Pigeonpea, Chickpea, Groundnut, Soybean, Rice, Chipotle, Tomato, Cauliflower, Cabbage, Broccoli, and Kale are some examples of crops.\\n\\nHelicoverpa, Spodoptera, Fall armyworm, Cut Worm, Pod Borers, DBM, Stem Borers, Bollworms, and Leaf Roller are several insects and diseases.\\n\\n2ml per litre of water is the dosage.",
+            benifits:"Plethora acts as a chitin synthesis inhibitor and also affects the insect nervous system by inhibiting sodium ions entry into nerve cells hence, the insecticide hampers moulting & also paralyses the insect. It has phytotonic effect on the crop.",
+            category: "BAYER",
+            description:"Innovative product with a dual mode of action is Plethora Insecticide. Lepidopteran pesticide Plethora has a broad spectrum and has a phytotonic effect on the crop. Inhibits chitin formation and has an impact on the nervous system of insects by preventing sodium ions from entering nerve cells. As a result, the pesticide hinders moulting and paralyses insects.",
+            discount: "130",
+            manufacture_company:"PLETHORA - Fertilizers",
+            product_name:"PLETHORA INSECTICIDE",
+            product_unique_id:"2f8cbf08-05c3-4350-bbc20-3b4d139315ba",
+            product_weight:"200 ml",
+            source:"../../assets/images/Adama/ada2.avif"
+        },
+        {
+            actual_price:"1700",
+            application: "A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.\\n\\nCustodia Fungicide Technical Content: Azoxystrobin 11% + Tebuconazole 18.3% w/w SC\\n\\nChili, onions, potatoes, tomatoes, grapes, wheat, and apples are the target crops.\\n\\nPowdery mildew and dieback, fruit rot, purple blotch, sheath blight, yellow rust, early and late blight, downy and powdery mildew, apple scab, and pre-mature leaf fall disease are the insects and pests that are targeted.dosage of 1 ml per litre of water.",
+            benifits:"Custodia is a Broad spectrum fungicide for the control of many fungal pathogens & diseases. Custodia has very good preventive & curative properties which provides flexibility & broad window of application. It has a dual mode of action, hence it works at multiple stages of fungal development.",
+            category: "BAYER",
+            description:"A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.",
+            discount: "340",
+            manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+            product_name:"CUSTODIA FUNGICIDE",
+            product_unique_id:"59a6e214-1031-420c-887a-0bacc1bac42f8",
+            product_weight:"500 ml",
+            source:"../../assets/images/Adama/ada3.avif"
+        },
+        {
+            actual_price:"560",
+            application: "Technical Content: Bifenthrin 9.4% SC and Diafenthiuron 47% Target Plants: Cotton and Chilies Thrips, whiteflies, aphids, and leafhoppers are the pests that are being targeted. 250ml/acre, or 1.25–1.5ml/liter of waterannel gated, is the dosage.",
+            benifits:"Takaf is a special dual-mode of action combination product.  Takaf interferes with sodium channel gating to block mitochondrial ATP synthase, paralysing the pest while also having an impact on the central and peripheral nervous systems.",
+            category: "BAYER",
+            description:"Takaf Adama interferes with sodium channel gating to paralyse the insect by inhibiting mitochondrial ATP synthase while also having an impact on the central and peripheral nervous systems.",
+            discount: "60",
+            manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+            product_name:"TAKAF INSECTICIDE",
+            product_unique_id:"dc4fd5cf-efb1-48f0-bf03-8321a99f55ea5",
+            product_weight:"300 ml",
+            source:"../../assets/images/Adama/ada4.avif"
+        },
+       ]
+   ));
+    };
+
+
+    // ----------aries agro-------------------
+    const aries_agro_details = JSON.parse(localStorage.getItem("aries_agro_details"));
+    if(!aries_agro_details){
+    
+       localStorage.setItem("aries_agro_details", JSON.stringify(
+           [
+            {
+                actual_price:"1044",
+                application:"2 mL/litre and 400ml/acre",
+               benifits:"Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
+                category: "ARIES AGRO",
+                description:"Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
+                discount: "209",
+                manufacture_company:"Adama - Fertilizers",
+                product_name:"AGIL HERBICID",
+                product_unique_id:"89e60418-9bd7-4c43-b3cc-2f83r9b6cef7d",
+                product_weight:"400 ml",
+                source:"../../assets/images/Adama/ada1.avif"
+            },
+            {
+                actual_price:"1286",
+                application: "Blackgram, Redgram, Pigeonpea, Chickpea, Groundnut, Soybean, Rice, Chipotle, Tomato, Cauliflower, Cabbage, Broccoli, and Kale are some examples of crops.\\n\\nHelicoverpa, Spodoptera, Fall armyworm, Cut Worm, Pod Borers, DBM, Stem Borers, Bollworms, and Leaf Roller are several insects and diseases.\\n\\n2ml per litre of water is the dosage.",
+                benifits:"Plethora acts as a chitin synthesis inhibitor and also affects the insect nervous system by inhibiting sodium ions entry into nerve cells hence, the insecticide hampers moulting & also paralyses the insect. It has phytotonic effect on the crop.",
+                category: "ARIES AGRO",
+                description:"Innovative product with a dual mode of action is Plethora Insecticide. Lepidopteran pesticide Plethora has a broad spectrum and has a phytotonic effect on the crop. Inhibits chitin formation and has an impact on the nervous system of insects by preventing sodium ions from entering nerve cells. As a result, the pesticide hinders moulting and paralyses insects.",
+                discount: "130",
+                manufacture_company:"PLETHORA - Fertilizers",
+                product_name:"PLETHORA INSECTICIDE",
+                product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d13f9315ba",
+                product_weight:"200 ml",
+                source:"../../assets/images/Adama/ada2.avif"
+            },
+            {
+                actual_price:"1700",
+                application: "A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.\\n\\nCustodia Fungicide Technical Content: Azoxystrobin 11% + Tebuconazole 18.3% w/w SC\\n\\nChili, onions, potatoes, tomatoes, grapes, wheat, and apples are the target crops.\\n\\nPowdery mildew and dieback, fruit rot, purple blotch, sheath blight, yellow rust, early and late blight, downy and powdery mildew, apple scab, and pre-mature leaf fall disease are the insects and pests that are targeted.dosage of 1 ml per litre of water.",
+                benifits:"Custodia is a Broad spectrum fungicide for the control of many fungal pathogens & diseases. Custodia has very good preventive & curative properties which provides flexibility & broad window of application. It has a dual mode of action, hence it works at multiple stages of fungal development.",
+                category: "ARIES AGRO",
+                description:"A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.",
+                discount: "340",
+                manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                product_name:"CUSTODIA FUNGICIDE",
+                product_unique_id:"59a6e214-1031-420c-887a-0beac1bac42f8",
+                product_weight:"500 ml",
+                source:"../../assets/images/Adama/ada3.avif"
+            },
+            {
+                actual_price:"560",
+                application: "Technical Content: Bifenthrin 9.4% SC and Diafenthiuron 47% Target Plants: Cotton and Chilies Thrips, whiteflies, aphids, and leafhoppers are the pests that are being targeted. 250ml/acre, or 1.25–1.5ml/liter of waterannel gated, is the dosage.",
+                benifits:"Takaf is a special dual-mode of action combination product.  Takaf interferes with sodium channel gating to block mitochondrial ATP synthase, paralysing the pest while also having an impact on the central and peripheral nervous systems.",
+                category: "ARIES AGRO",
+                description:"Takaf Adama interferes with sodium channel gating to paralyse the insect by inhibiting mitochondrial ATP synthase while also having an impact on the central and peripheral nervous systems.",
+                discount: "60",
+                manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                product_name:"TAKAF INSECTICIDE",
+                product_unique_id:"dc4fd5cf-efb1-48f0-bf03-8321979f55ea5",
+                product_weight:"300 ml",
+                source:"../../assets/images/Adama/ada4.avif"
+            },
+           ]
+       ));
+        };
+
+
+        // --------------Barrix---------------------
+        const barrix_details = JSON.parse(localStorage.getItem("barrix_details"));
+        if(!barrix_details){
+        
+           localStorage.setItem("barrix_details", JSON.stringify(
+               [
+                {
+                    actual_price:"1044",
+                    application:"2 mL/litre and 400ml/acre",
+                   benifits:"Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
+                    category: "BARRIX",
+                    description:"Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
+                    discount: "209",
+                    manufacture_company:"Adama - Fertilizers",
+                    product_name:"AGIL HERBICID",
+                    product_unique_id:"89e60418-9bd7-4c43-b3cc-2fe839b6cef7d",
+                    product_weight:"400 ml",
+                    source:"../../assets/images/Adama/ada1.avif"
+                },
+                {
+                    actual_price:"1286",
+                    application: "Blackgram, Redgram, Pigeonpea, Chickpea, Groundnut, Soybean, Rice, Chipotle, Tomato, Cauliflower, Cabbage, Broccoli, and Kale are some examples of crops.\\n\\nHelicoverpa, Spodoptera, Fall armyworm, Cut Worm, Pod Borers, DBM, Stem Borers, Bollworms, and Leaf Roller are several insects and diseases.\\n\\n2ml per litre of water is the dosage.",
+                    benifits:"Plethora acts as a chitin synthesis inhibitor and also affects the insect nervous system by inhibiting sodium ions entry into nerve cells hence, the insecticide hampers moulting & also paralyses the insect. It has phytotonic effect on the crop.",
+                    category: "BARRIX",
+                    description:"Innovative product with a dual mode of action is Plethora Insecticide. Lepidopteran pesticide Plethora has a broad spectrum and has a phytotonic effect on the crop. Inhibits chitin formation and has an impact on the nervous system of insects by preventing sodium ions from entering nerve cells. As a result, the pesticide hinders moulting and paralyses insects.",
+                    discount: "130",
+                    manufacture_company:"PLETHORA - Fertilizers",
+                    product_name:"PLETHORA INSECTICIDE",
+                    product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d2139315ba",
+                    product_weight:"200 ml",
+                    source:"../../assets/images/Adama/ada2.avif"
+                },
+                {
+                    actual_price:"1700",
+                    application: "A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.\\n\\nCustodia Fungicide Technical Content: Azoxystrobin 11% + Tebuconazole 18.3% w/w SC\\n\\nChili, onions, potatoes, tomatoes, grapes, wheat, and apples are the target crops.\\n\\nPowdery mildew and dieback, fruit rot, purple blotch, sheath blight, yellow rust, early and late blight, downy and powdery mildew, apple scab, and pre-mature leaf fall disease are the insects and pests that are targeted.dosage of 1 ml per litre of water.",
+                    benifits:"Custodia is a Broad spectrum fungicide for the control of many fungal pathogens & diseases. Custodia has very good preventive & curative properties which provides flexibility & broad window of application. It has a dual mode of action, hence it works at multiple stages of fungal development.",
+                    category: "BARRIX",
+                    description:"A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.",
+                    discount: "340",
+                    manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                    product_name:"CUSTODIA FUNGICIDE",
+                    product_unique_id:"59a6e214-1031-420c-887a-0bac1bhac42f8",
+                    product_weight:"500 ml",
+                    source:"../../assets/images/Adama/ada3.avif"
+                },
+                {
+                    actual_price:"560",
+                    application: "Technical Content: Bifenthrin 9.4% SC and Diafenthiuron 47% Target Plants: Cotton and Chilies Thrips, whiteflies, aphids, and leafhoppers are the pests that are being targeted. 250ml/acre, or 1.25–1.5ml/liter of waterannel gated, is the dosage.",
+                    benifits:"Takaf is a special dual-mode of action combination product.  Takaf interferes with sodium channel gating to block mitochondrial ATP synthase, paralysing the pest while also having an impact on the central and peripheral nervous systems.",
+                    category: "BARRIX",
+                    description:"Takaf Adama interferes with sodium channel gating to paralyse the insect by inhibiting mitochondrial ATP synthase while also having an impact on the central and peripheral nervous systems.",
+                    discount: "60",
+                    manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                    product_name:"TAKAF INSECTICIDE",
+                    product_unique_id:"dc4fd5cf-efb1-48f0-bf03-832199wf55ea5",
+                    product_weight:"300 ml",
+                    source:"../../assets/images/Adama/ada4.avif"
+                },
+               ]
+           ));
+            };
+
+// --------------------indofil detAILS----------------------
+const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
+        if(!indofil_details){
+        
+           localStorage.setItem("indofil_details", JSON.stringify(
+               [
+                {
+                    actual_price:"1044",
+                    application:"2 mL/litre and 400ml/acre",
+                   benifits:"Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
+                    category: "INDOFIL",
+                    description:"Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
+                    discount: "209",
+                    manufacture_company:"Adama - Fertilizers",
+                    product_name:"AGIL HERBICID",
+                    product_unique_id:"89e60418-9bd7-4c43-b3cc-2f8j39b6cef7d",
+                    product_weight:"400 ml",
+                    source:"../../assets/images/Adama/ada1.avif"
+                },
+                {
+                    actual_price:"1286",
+                    application: "Blackgram, Redgram, Pigeonpea, Chickpea, Groundnut, Soybean, Rice, Chipotle, Tomato, Cauliflower, Cabbage, Broccoli, and Kale are some examples of crops.\\n\\nHelicoverpa, Spodoptera, Fall armyworm, Cut Worm, Pod Borers, DBM, Stem Borers, Bollworms, and Leaf Roller are several insects and diseases.\\n\\n2ml per litre of water is the dosage.",
+                    benifits:"Plethora acts as a chitin synthesis inhibitor and also affects the insect nervous system by inhibiting sodium ions entry into nerve cells hence, the insecticide hampers moulting & also paralyses the insect. It has phytotonic effect on the crop.",
+                    category: "INDOFIL",
+                    description:"Innovative product with a dual mode of action is Plethora Insecticide. Lepidopteran pesticide Plethora has a broad spectrum and has a phytotonic effect on the crop. Inhibits chitin formation and has an impact on the nervous system of insects by preventing sodium ions from entering nerve cells. As a result, the pesticide hinders moulting and paralyses insects.",
+                    discount: "130",
+                    manufacture_company:"PLETHORA - Fertilizers",
+                    product_name:"PLETHORA INSECTICIDE",
+                    product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4dr139315ba",
+                    product_weight:"200 ml",
+                    source:"../../assets/images/Adama/ada2.avif"
+                },
+                {
+                    actual_price:"1700",
+                    application: "A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.\\n\\nCustodia Fungicide Technical Content: Azoxystrobin 11% + Tebuconazole 18.3% w/w SC\\n\\nChili, onions, potatoes, tomatoes, grapes, wheat, and apples are the target crops.\\n\\nPowdery mildew and dieback, fruit rot, purple blotch, sheath blight, yellow rust, early and late blight, downy and powdery mildew, apple scab, and pre-mature leaf fall disease are the insects and pests that are targeted.dosage of 1 ml per litre of water.",
+                    benifits:"Custodia is a Broad spectrum fungicide for the control of many fungal pathogens & diseases. Custodia has very good preventive & curative properties which provides flexibility & broad window of application. It has a dual mode of action, hence it works at multiple stages of fungal development.",
+                    category: "INDOFIL",
+                    description:"A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.",
+                    discount: "340",
+                    manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                    product_name:"CUSTODIA FUNGICIDE",
+                    product_unique_id:"59a6e214-1031-420c-887a-0bac1dbac42f8",
+                    product_weight:"500 ml",
+                    source:"../../assets/images/Adama/ada3.avif"
+                },
+                {
+                    actual_price:"560",
+                    application: "Technical Content: Bifenthrin 9.4% SC and Diafenthiuron 47% Target Plants: Cotton and Chilies Thrips, whiteflies, aphids, and leafhoppers are the pests that are being targeted. 250ml/acre, or 1.25–1.5ml/liter of waterannel gated, is the dosage.",
+                    benifits:"Takaf is a special dual-mode of action combination product.  Takaf interferes with sodium channel gating to block mitochondrial ATP synthase, paralysing the pest while also having an impact on the central and peripheral nervous systems.",
+                    category: "INDOFIL",
+                    description:"Takaf Adama interferes with sodium channel gating to paralyse the insect by inhibiting mitochondrial ATP synthase while also having an impact on the central and peripheral nervous systems.",
+                    discount: "60",
+                    manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                    product_name:"TAKAF INSECTICIDE",
+                    product_unique_id:"dc4fd5cf-efb1-48f0-bf03-8321w99f55ea5",
+                    product_weight:"300 ml",
+                    source:"../../assets/images/Adama/ada4.avif"
+                },
+               ]
+           ));
+            };
+
+            // ----------------Rinuja----------------------------------
+            const rinuja_details = JSON.parse(localStorage.getItem("rinuja_details"));
+        if(!rinuja_details){
+        
+           localStorage.setItem("rinuja_details", JSON.stringify(
+               [
+                {
+                    actual_price:"1044",
+                    application:"2 mL/litre and 400ml/acre",
+                   benifits:"Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
+                    category: "RINUJA",
+                    description:"Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
+                    discount: "209",
+                    manufacture_company:"Adama - Fertilizers",
+                    product_name:"AGIL HERBICID",
+                    product_unique_id:"89e60418-9bd7-4c43-b3cc-2f83e9b6cef7d",
+                    product_weight:"400 ml",
+                    source:"../../assets/images/Adama/ada1.avif"
+                },
+                {
+                    actual_price:"1286",
+                    application: "Blackgram, Redgram, Pigeonpea, Chickpea, Groundnut, Soybean, Rice, Chipotle, Tomato, Cauliflower, Cabbage, Broccoli, and Kale are some examples of crops.\\n\\nHelicoverpa, Spodoptera, Fall armyworm, Cut Worm, Pod Borers, DBM, Stem Borers, Bollworms, and Leaf Roller are several insects and diseases.\\n\\n2ml per litre of water is the dosage.",
+                    benifits:"Plethora acts as a chitin synthesis inhibitor and also affects the insect nervous system by inhibiting sodium ions entry into nerve cells hence, the insecticide hampers moulting & also paralyses the insect. It has phytotonic effect on the crop.",
+                    category: "RINUJA",
+                    description:"Innovative product with a dual mode of action is Plethora Insecticide. Lepidopteran pesticide Plethora has a broad spectrum and has a phytotonic effect on the crop. Inhibits chitin formation and has an impact on the nervous system of insects by preventing sodium ions from entering nerve cells. As a result, the pesticide hinders moulting and paralyses insects.",
+                    discount: "130",
+                    manufacture_company:"PLETHORA - Fertilizers",
+                    product_name:"PLETHORA INSECTICIDE",
+                    product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d3139315ba",
+                    product_weight:"200 ml",
+                    source:"../../assets/images/Adama/ada2.avif"
+                },
+                {
+                    actual_price:"1700",
+                    application: "A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.\\n\\nCustodia Fungicide Technical Content: Azoxystrobin 11% + Tebuconazole 18.3% w/w SC\\n\\nChili, onions, potatoes, tomatoes, grapes, wheat, and apples are the target crops.\\n\\nPowdery mildew and dieback, fruit rot, purple blotch, sheath blight, yellow rust, early and late blight, downy and powdery mildew, apple scab, and pre-mature leaf fall disease are the insects and pests that are targeted.dosage of 1 ml per litre of water.",
+                    benifits:"Custodia is a Broad spectrum fungicide for the control of many fungal pathogens & diseases. Custodia has very good preventive & curative properties which provides flexibility & broad window of application. It has a dual mode of action, hence it works at multiple stages of fungal development.",
+                    category: "RINUJA",
+                    description:"A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.",
+                    discount: "340",
+                    manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                    product_name:"CUSTODIA FUNGICIDE",
+                    product_unique_id:"59a6e214-1031-420c-887a-0bac1bac462f8",
+                    product_weight:"500 ml",
+                    source:"../../assets/images/Adama/ada3.avif"
+                },
+                {
+                    actual_price:"560",
+                    application: "Technical Content: Bifenthrin 9.4% SC and Diafenthiuron 47% Target Plants: Cotton and Chilies Thrips, whiteflies, aphids, and leafhoppers are the pests that are being targeted. 250ml/acre, or 1.25–1.5ml/liter of waterannel gated, is the dosage.",
+                    benifits:"Takaf is a special dual-mode of action combination product.  Takaf interferes with sodium channel gating to block mitochondrial ATP synthase, paralysing the pest while also having an impact on the central and peripheral nervous systems.",
+                    category: "RINUJA",
+                    description:"Takaf Adama interferes with sodium channel gating to paralyse the insect by inhibiting mitochondrial ATP synthase while also having an impact on the central and peripheral nervous systems.",
+                    discount: "60",
+                    manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                    product_name:"TAKAF INSECTICIDE",
+                    product_unique_id:"dc4fd5cf-efb1-48f0-bf03-8732199f55ea5",
+                    product_weight:"300 ml",
+                    source:"../../assets/images/Adama/ada4.avif"
+                },
+               ]
+           ));
+            };
+
+    // ------------------Bio Insecticides--------------------
+    const bio_insecticides_details = JSON.parse(localStorage.getItem("bio_insecticides_details"));
+    if(!bio_insecticides_details){
+    
+       localStorage.setItem("bio_insecticides_details", JSON.stringify(
+           [
+            {
+                actual_price:"1044",
+                application:"2 mL/litre and 400ml/acre",
+               benifits:"Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
+                category: "BIO INSECTICIDES",
+                description:"Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
+                discount: "209",
+                manufacture_company:"Adama - Fertilizers",
+                product_name:"AGIL HERBICID",
+                product_unique_id:"89e60418-9bd7-4c43-b3cc-2f839b36cef7d",
+                product_weight:"400 ml",
+                source:"../../assets/images/Adama/ada1.avif"
+            },
+            {
+                actual_price:"1286",
+                application: "Blackgram, Redgram, Pigeonpea, Chickpea, Groundnut, Soybean, Rice, Chipotle, Tomato, Cauliflower, Cabbage, Broccoli, and Kale are some examples of crops.\\n\\nHelicoverpa, Spodoptera, Fall armyworm, Cut Worm, Pod Borers, DBM, Stem Borers, Bollworms, and Leaf Roller are several insects and diseases.\\n\\n2ml per litre of water is the dosage.",
+                benifits:"Plethora acts as a chitin synthesis inhibitor and also affects the insect nervous system by inhibiting sodium ions entry into nerve cells hence, the insecticide hampers moulting & also paralyses the insect. It has phytotonic effect on the crop.",
+                category: "BIO INSECTICIDES",
+                description:"Innovative product with a dual mode of action is Plethora Insecticide. Lepidopteran pesticide Plethora has a broad spectrum and has a phytotonic effect on the crop. Inhibits chitin formation and has an impact on the nervous system of insects by preventing sodium ions from entering nerve cells. As a result, the pesticide hinders moulting and paralyses insects.",
+                discount: "130",
+                manufacture_company:"PLETHORA - Fertilizers",
+                product_name:"PLETHORA INSECTICIDE",
+                product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d1393158ba",
+                product_weight:"200 ml",
+                source:"../../assets/images/Adama/ada2.avif"
+            },
+            {
+                actual_price:"1700",
+                application: "A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.\\n\\nCustodia Fungicide Technical Content: Azoxystrobin 11% + Tebuconazole 18.3% w/w SC\\n\\nChili, onions, potatoes, tomatoes, grapes, wheat, and apples are the target crops.\\n\\nPowdery mildew and dieback, fruit rot, purple blotch, sheath blight, yellow rust, early and late blight, downy and powdery mildew, apple scab, and pre-mature leaf fall disease are the insects and pests that are targeted.dosage of 1 ml per litre of water.",
+                benifits:"Custodia is a Broad spectrum fungicide for the control of many fungal pathogens & diseases. Custodia has very good preventive & curative properties which provides flexibility & broad window of application. It has a dual mode of action, hence it works at multiple stages of fungal development.",
+                category: "BIO INSECTICIDES",
+                description:"A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.",
+                discount: "340",
+                manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                product_name:"CUSTODIA FUNGICIDE",
+                product_unique_id:"59a6e214-1031-420c-887a-0bac1bac422f8",
+                product_weight:"500 ml",
+                source:"../../assets/images/Adama/ada3.avif"
+            },
+            {
+                actual_price:"560",
+                application: "Technical Content: Bifenthrin 9.4% SC and Diafenthiuron 47% Target Plants: Cotton and Chilies Thrips, whiteflies, aphids, and leafhoppers are the pests that are being targeted. 250ml/acre, or 1.25–1.5ml/liter of waterannel gated, is the dosage.",
+                benifits:"Takaf is a special dual-mode of action combination product.  Takaf interferes with sodium channel gating to block mitochondrial ATP synthase, paralysing the pest while also having an impact on the central and peripheral nervous systems.",
+                category: "BIO INSECTICIDES",
+                description:"Takaf Adama interferes with sodium channel gating to paralyse the insect by inhibiting mitochondrial ATP synthase while also having an impact on the central and peripheral nervous systems.",
+                discount: "60",
+                manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+                product_name:"TAKAF INSECTICIDE",
+                product_unique_id:"dc4fd5gcf-efb1-48f0-bf03-832199f55ea5",
+                product_weight:"300 ml",
+                source:"../../assets/images/Adama/ada4.avif"
+            },
+           ]
+       ));
+        };
+
+// ------------------Bio fungicides-----------------
+const bio_fungicides_details = JSON.parse(localStorage.getItem("bio_fungicides_details"));
+if(!bio_fungicides_details){
+
+   localStorage.setItem("bio_fungicides_details", JSON.stringify(
+       [
+        {
+            actual_price:"1044",
+            application:"2 mL/litre and 400ml/acre",
+           benifits:"Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
+            category: "BIO FUNGICIDES",
+            description:"Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
+            discount: "209",
+            manufacture_company:"Adama - Fertilizers",
+            product_name:"AGIL HERBICID",
+            product_unique_id:"89e60418-9hbd7-4c43-b3cc-2f839b6cef7d",
+            product_weight:"400 ml",
+            source:"../../assets/images/Adama/ada1.avif"
+        },
+        {
+            actual_price:"1286",
+            application: "Blackgram, Redgram, Pigeonpea, Chickpea, Groundnut, Soybean, Rice, Chipotle, Tomato, Cauliflower, Cabbage, Broccoli, and Kale are some examples of crops.\\n\\nHelicoverpa, Spodoptera, Fall armyworm, Cut Worm, Pod Borers, DBM, Stem Borers, Bollworms, and Leaf Roller are several insects and diseases.\\n\\n2ml per litre of water is the dosage.",
+            benifits:"Plethora acts as a chitin synthesis inhibitor and also affects the insect nervous system by inhibiting sodium ions entry into nerve cells hence, the insecticide hampers moulting & also paralyses the insect. It has phytotonic effect on the crop.",
+            category: "BIO FUNGICIDES",
+            description:"Innovative product with a dual mode of action is Plethora Insecticide. Lepidopteran pesticide Plethora has a broad spectrum and has a phytotonic effect on the crop. Inhibits chitin formation and has an impact on the nervous system of insects by preventing sodium ions from entering nerve cells. As a result, the pesticide hinders moulting and paralyses insects.",
+            discount: "130",
+            manufacture_company:"PLETHORA - Fertilizers",
+            product_name:"PLETHORA INSECTICIDE",
+            product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d139g315ba",
+            product_weight:"200 ml",
+            source:"../../assets/images/Adama/ada2.avif"
+        },
+        {
+            actual_price:"1700",
+            application: "A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.\\n\\nCustodia Fungicide Technical Content: Azoxystrobin 11% + Tebuconazole 18.3% w/w SC\\n\\nChili, onions, potatoes, tomatoes, grapes, wheat, and apples are the target crops.\\n\\nPowdery mildew and dieback, fruit rot, purple blotch, sheath blight, yellow rust, early and late blight, downy and powdery mildew, apple scab, and pre-mature leaf fall disease are the insects and pests that are targeted.dosage of 1 ml per litre of water.",
+            benifits:"Custodia is a Broad spectrum fungicide for the control of many fungal pathogens & diseases. Custodia has very good preventive & curative properties which provides flexibility & broad window of application. It has a dual mode of action, hence it works at multiple stages of fungal development.",
+            category: "BIO FUNGICIDES",
+            description:"A wide range of fungal infections and illnesses can be controlled using Custodia Fungicide. Custodia Fungicide has excellent curative and preventative qualities, allowing for flexibility and a wide treatment window. Due to its dual mode of action, it is effective at several phases of fungus development. Custodia Fungicide has a good effect on the physiological function of the crop when used since it increases yield and quality of the produce, which brings in a higher price.",
+            discount: "340",
+            manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+            product_name:"CUSTODIA FUNGICIDE",
+            product_unique_id:"59a6e214-1031-420c-887a-04bac1bac42f8",
+            product_weight:"500 ml",
+            source:"../../assets/images/Adama/ada3.avif"
+        },
+        {
+            actual_price:"560",
+            application: "Technical Content: Bifenthrin 9.4% SC and Diafenthiuron 47% Target Plants: Cotton and Chilies Thrips, whiteflies, aphids, and leafhoppers are the pests that are being targeted. 250ml/acre, or 1.25–1.5ml/liter of waterannel gated, is the dosage.",
+            benifits:"Takaf is a special dual-mode of action combination product.  Takaf interferes with sodium channel gating to block mitochondrial ATP synthase, paralysing the pest while also having an impact on the central and peripheral nervous systems.",
+            category: "BIO FUNGICIDES",
+            description:"Takaf Adama interferes with sodium channel gating to paralyse the insect by inhibiting mitochondrial ATP synthase while also having an impact on the central and peripheral nervous systems.",
+            discount: "60",
+            manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
+            product_name:"TAKAF INSECTICIDE",
+            product_unique_id:"dc4fd5cf-efb1-48f0-bf03-832199fr55ea5",
+            product_weight:"300 ml",
+            source:"../../assets/images/Adama/ada4.avif"
+        },
+       ]
+   ));
+    };
+
+
+// ---------bio nematicides----------------------
+const bio_nematicides_details = JSON.parse(localStorage.getItem("bio_nematicides_details"));
+ if(!bio_nematicides_details){
+
+    localStorage.setItem("bio_nematicides_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "BIO NEMATICIDES",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a90d-49ee-b22a-6fa415e564790",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "BIO NEMATICIDES",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-4000-hb9e1-b18187612785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"BIO NEMATICIDES" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b445-b4c7fd7d3220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
+
+//  ---------------Bio Vircides--------------------
+const bio_vircides_details = JSON.parse(localStorage.getItem("bio_vircides_details"));
+ if(!bio_vircides_details){
+
+    localStorage.setItem("bio_vircides_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "BIO VIRCIDES",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a904d-49ee-b22a-6a415e564790",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "BIO VIRCIDES",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-400g0-b9e1-b18187612785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"BIO VIRCIDES" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fhd7d3220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
+
+//  -------------------- Major nurients---------------
+const major_nurients_details = JSON.parse(localStorage.getItem("major_nurients_details"));
+ if(!major_nurients_details){
+
+    localStorage.setItem("major_nurients_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "MAJOR NUTRIENTS",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a90d-49ee-b22a-6a4y15e564790",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "MAJOR NUTRIENTS",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-4000-b9e1-b18e187612785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"MAJOR NUTRIENTS" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fd79d3220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
+
+//  -------------Secondary nutrients------------
+const secondary_nutrients_details = JSON.parse(localStorage.getItem("secondary_nutrients_details"));
+ if(!secondary_nutrients_details){
+
+    localStorage.setItem("secondary_nutrients_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "SECONDARY NUTRIENTS",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a90d-49ee-b22a-6a3415e564790",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "SECONDARY NUTRIENTS",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-4000-b9e1-b181879612785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"SECONDARY NUTRIENTS" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fdk7d3220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
+
+//  ------------------Growth Promoters----------------
+const growth_promoters_details = JSON.parse(localStorage.getItem("growth_promoters_details"));
+ if(!growth_promoters_details){
+
+    localStorage.setItem("growth_promoters_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "GROWTH PROMOTERS",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a90d-49ee-b22a-6a415e5r64790",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "GROWTH PROMOTERS",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-4000-b9e1-b1818761j2785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"GROWTH PROMOTERS" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fd7dk3220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
+//  ------------Growth retardancs------------------
+const growth_retardants_details = JSON.parse(localStorage.getItem("growth_retardants_details"));
+ if(!growth_retardants_details){
+
+    localStorage.setItem("growth_retardants_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "GROWTH RETARDANTS",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a90d-49ee-b22a-6a415e56e4790",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "GROWTH RETARDANTS",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-4000-b9e1-b181876123785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"GROWTH RETARDANTS" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fd75d3220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
+//  -----------Organic Fertilizers-------------------------
+const organic_fertilizer_details = JSON.parse(localStorage.getItem("organic_fertilizer_details"));
+ if(!organic_fertilizer_details){
+
+    localStorage.setItem("organic_fertilizer_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "ORGANIC FERTILIZERS",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a90d-49ee-b22a-6a41g5e564790",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "ORGANIC FERTILIZERS",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-4000-b9e1-b618187612785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"ORGANIC FERTILIZERS" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b44-b74c7fd7d3220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
+//  ------------------------------Bio Fertilizers-----------------
+const bio_fertilizers_details = JSON.parse(localStorage.getItem("bio_fertilizers_details"));
+ if(!bio_fertilizers_details){
+
+    localStorage.setItem("bio_fertilizers_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "BIO FERTILIZERS",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a90d-49ee-b22a-6a415e5647990",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "BIO FERTILIZERS",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-4000-b9e1-b181877612785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"BIO FERTILIZERS" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fhd7d3220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
+//  -----------------Anti Stressing Agents-----------------
+const anti_stressing_agents_details = JSON.parse(localStorage.getItem("anti_stressing_agents_details"));
+ if(!anti_stressing_agents_details){
+
+    localStorage.setItem("anti_stressing_agents_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "ANTI STRESSING AGENTS",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a90d-49ee-b22a-6a415e56d4790",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "ANTI STRESSING AGENTS",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-4000-b9e1-b181787612785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"ANTI STRESSING AGENTS" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fd7d3h220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
+
+//  --------------------Micro Nutrients------------------
+const micro_nutrients_details = JSON.parse(localStorage.getItem("micro_nutrients_details"));
+ if(!micro_nutrients_details){
+
+    localStorage.setItem("micro_nutrients_details", JSON.stringify(
+        [
+            {
+                actual_price:"1300",
+                application: " 1.0 to 2.0 ml per litre of water for foliar\n500 to 700 ml of soil or drip per acre, applied twice over a period of 20 to 30 days.\nAlso produces positive outcomes for nursery, seed, and root treatments during transplantation.",
+               benifits:"Plants contain silicon, which boosts their overall defences.\nincreased ability of plants to withstand abiotic conditions such high winds, dryness, excessive salinity, etc.\nMoreover, silicon supports plant defences against biotic stressors like bacterial, fungal, and insect attacks.\nSilicon lessens the toxicity of excess metals in the P, Mn, Al, and alkalis and aids plant uptake of additional micronutrients from the alkaline/calcareous soils.",
+                category: "MICRO NUTRIENTS",
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc." ,
+                discount: "180",
+                manufacture_company:"Dow chemical",
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"bb730660-a90d-49ee-b22a-6a4154e564790",
+                product_weight:"500 ml",
+                source:"../../assets/images/dow agro/dow1.jpg"
+            },
+            {
+                actual_price:"800",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA." ,
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category: "MICRO NUTRIENTS",
+                description:"The main symptom of iron deficiency is the yellowing of young leaves because of low quantities of chlorophyll.\nLeaves that are severely deficient in Fe turn entirely yellow or virtually white before dying and turning brown.\nThe majority of iron deficits arise in calcareous (high pH) soils. Furthermore, especially on soils with low levels of accessible Fe, the cool and wet weather exacerbates Fe deficits.\nLand that is poorly aerated or heavily compacted hinders plants' ability to absorb Fe.\nHigh quantities of phosphorus, manganese, and zinc that are readily available in the soil have a negative impact on fee absorption.",
+                discount: "180",
+                manufacture_company:"Dow chemical ",
+                product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
+                product_unique_id:"24d58d81-6f91-4000-b9e1-b181876172785",
+                product_weight:"500 gms",
+                source:"../../assets/images/dow agro/dow2.jpg"
+           },
+            {
+                actual_price:"1200",
+                application: "1 kg/ha to 2.5 kg/ha of drip\nbefore flowering and fruiting, two to three treatments during the growing stage\nCrops include fruits (such as grapes, pomegranates, citrus, and bananas) as well as vegetables (such as chillies, tomatoes, onions, and brinjal) (cotton, rice, sugarcane, soybean, and others)\nFor soil pH levels up to 7, use Fe EDTA, while for soil pH levels above 7, use Fe EDDHA.",
+                benifits:"Food production and the growth of crops both require iron.\nIt contributes to the synthesis of chlorophyll.\nMany enzymes involved in the transfer of energy, nitrogen reduction and fixation, and the synthesis of lignin are also composed of iron.",
+                category:"MICRO NUTRIENTS" ,
+                description:"Dow has for the first time made 100% silicon available to plants in the form of \"\"ortho-silicic acid\"\" with the introduction of NUTRIBUILDTM Silicon OSA 3%.\nThe silicon micronutrient boosts photosynthesis, which improves crop health overall. It also helps manage numerous types of stress, including pest attacks, water shortages, lodging, salinity, metal toxicity, etc.",
+                discount: "300",
+                manufacture_company:"Dow chemical" ,
+                product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
+                product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7jfd7d3220",
+                product_weight:"500 gm",
+                source:"../../assets/images/dow agro/dow3.avif"
+            },
+
+        ]));
+ };
+
     // -------------- add to cart items --------------
     const addToCartItem = JSON.parse(localStorage.getItem("addToCartItem"));
     if(!addToCartItem){
@@ -174,16 +1230,16 @@ if(!adama_details){
        localStorage.setItem("addToCartItem", JSON.stringify(
         [
             {
-                cart_id: "bb730660-a90d-49ee-b22a-6a415e564790",
+                cart_id: "3438e3df-f46d-48bf-8b44-b4c7jfd7d3220",
                 userUniqueId: "9629223357"
             },
             {
-                cart_id: "b79c04fef-0b90-4750-a944-f9d3401e7308",
+                cart_id: "24d58d81-6f91-4000-b9e1-b181876172785",
                 userUniqueId: "9629223357"
             },
             
             {
-                cart_id: "23217f2c-c41f-41c5-b25b-c28b28352fd6",
+                cart_id: "bb730660-a90d-49ee-b22a-6a4154e564790",
                 userUniqueId: "9629223357"
             }
             
@@ -197,15 +1253,15 @@ if(!adama_details){
        localStorage.setItem("wishlisstItem", JSON.stringify(
         [
             {
-                product_id: "edd30055-e3ab-4515-817f-aa0624d7fc3e",
+                product_id: "3438e3df-f46d-48bf-8b44-b4c7jfd7d3220",
                 userUniqueId: "9629223357"
             },
             {
-                product_id: "79c04fef-0b90-4750-a944-f9d3401e7308",
+                product_id: "bb730660-a90d-49ee-b22a-6a4154e564790",
                 userUniqueId: "9629223357"
             },
             {
-                product_id: "23217f2c-c41f-41c5-b25b-c28b28352fd6",
+                product_id: "24d58d81-6f91-4000-b9e1-b181876172785",
                 userUniqueId: "9629223357"
             }
         ]));

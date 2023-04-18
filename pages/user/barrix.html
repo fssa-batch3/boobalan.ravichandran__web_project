@@ -8,26 +8,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
-   
-    
+
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/insecticides.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <title>insecticide Page</title>
+    <title> Barrix page</title>
 </head>
 
 <body>
-   
+    
     <main>
         <div class="insecticide">
-            <h1>Plant Pesticides/Chemicals To Control Pests and Insects - Fert Agri Boomi</h1>
+            <h1 class="viri">Best Quality Barrix Fertilizers - Fert Agri Boomi</h1>
             <div class="offers1">
-                <!-- 
-                    //////////
-                 -->
+                <!-- ///////////
+                ///////// -->
                 
                  </div>
         </div>
@@ -104,6 +102,7 @@
       <p> Copyright © 2021 - 2023 FAB - Designed By </p><span>Boobalan-R</span>
   </div>
   <div class="mobile_social">
+    <a href="../../pages/user/adama1.html"></a>
     <p>Contact Us</p>
     <div>
     <a href="https://twitter.com/agrigoi?lang=en"><img src="../../assets/images/twiter.png" alt="twitter"></a>
@@ -112,170 +111,10 @@
   </div>
   </div>
   </div>
+  <script src="../js/barrix.js"></script>
   <script src="../js/header.js"></script>
-<script src="../js/bio_insecticides.js"></script>
 
-<!-- 
-<script>
-    const n = 9;
-    let div_today;
-    let insecticide_a;
-    let insecticide_img;
-    let pro_name;
-    let div_star;
-    let star_span;
-    let div_price;
-    let price_h2;
-    let price_del;
-    let save_h3;
-
-    const product_name = [
-        {
-            "category": "Insecticides",
-            "pro_link": "./adama1.html",
-           
-            "price": {
-                "text":"You Save",
-                "currency": "₹",
-                "actual_price": 1044,
-                "discount": 209,
-                "final_price":835,
-            },
-            "image": {
-                "source": "../../assets/images/Insecticide/ins1.jpg",
-                "name": "BENEVIA INSECTICIDE"
-            },
-        },
-        {
-            "pro_link": "./adama1.html",
-            "price": {
-                "text":"You Save",
-                "currency": "₹",
-                "actual_price": 1020,
-                "discount": 234,
-                "final_price":886,
-            },
-            "image": {
-                "source": "../../assets/images/Insecticide/ins2.jpg",
-                "name": "CORAGAN INSECTICIDE"
-            },
-        },
-        {
-            "pro_link": "./adama1.html",
-            "price": {
-                "text":"You Save",
-                "currency": "₹",
-                "actual_price":2050,
-                "discount":550,
-                "final_price":1500
-            },
-            "image": {
-                "source": "../../assets/images/Insecticide/ins3.avif",
-                "name": "ALIKA INSECTICIDE "
-            },
-        },
-         {
-            "pro_link":"./adama1.html",
-            "price":{
-                "text":"You Save",
-                "currency":"₹",
-                "actual_price":2314,
-                "discount": 1204,
-                "final_price": 1110,
-            },
-            "image": {
-                "source": "../../assets/images/Insecticide/ins4.jpg",
-                "name": " ACRE FIGHTER FIPRONIL INSECTICIDE"
-         },
-        },
-        {
-            "pro_link":"./adama1.html",
-            "price":{
-                "text":"You Save",
-                "currency":"₹",
-                "actual_price":551,
-                "discount": 296,
-                "final_price": 255,
-            },
-            "image": {
-                "source": "../../assets/images/Insecticide/ins5.avif",
-                "name": "EM 1 INSECTICIDE"
-         },
-        },
-        {
-            "pro_link":"./adama1.html",
-            "price":{
-                "text":"You Save",
-                "currency":"₹",
-                "actual_price":750,
-                "discount": 200,
-                "final_price":550,
-            },
-            "image": {
-                "source": "../../assets/images/Insecticide/ins6.avif",
-                "name": "PROFEX SUPER INSECTICID"
-         },
-        },
-        {
-            "pro_link":"./adama1.html",
-            "price":{
-                "text":"You Save",
-                "currency":"₹",
-                "actual_price":1760,
-                "discount": 510,
-                "final_price":1250 ,
-            },
-            "image": {
-                "source": "../../assets/images/Insecticide/ins7.jpg",
-                "name": "GREEN MAGIC BROCCOL"
-         },
-        },
-        {
-            "pro_link":"./adama1.html",
-            "price":{
-                "text":"You Save",
-                "currency":"₹",
-                "actual_price":885,
-                "discount": 386,
-                "final_price":499 ,
-            },
-            "image": {
-                "source": "../../assets/images/Insecticide/ins8.avif",
-                "name": "AREVA INSECTICIDE"
-         },
-        },
-        {
-            "pro_link":"./adama1.html",
-            "price":{
-                "text":"You Save",
-                "currency":"₹",
-                "actual_price":850,
-                "discount": 210,
-                "final_price": 640,
-            },
-            "image": {
-                "source": "../../assets/images/Insecticide/ins9.jpg",
-                "name": "VANPROZ V-BIND"
-         },
-        }
-    ]
-
-
-    for (i = 0; i < n; i++) {
-        // <div class="insecticide"> </div>
-        div_today = document.createElement("div");
-        div_today.setAttribute("class", "today");
-        document.querySelector("div.offers1").append(div_today);
-        console.log(div_today);
-
-        // product page link----------------------->
-      
-
-
+  
     </body>
     </html>
     
-
-</body>
-
-</html>

@@ -46,8 +46,7 @@ document.getElementById("email").value =  findData["email"];
 
 document.getElementById("first_name").value = loadProduct["firstName"];
 document.getElementById("last_name").value = loadProduct["lastName"];
-document.getElementById("mobile").value = loadProduct["phoneNumber"];
-document.getElementById("email").value = loadProduct["email"];
+
 document.getElementById("address").value = loadProduct["address"];
 document.getElementById("zip").value = loadProduct["zipCode"];
 

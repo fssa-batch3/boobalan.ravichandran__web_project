@@ -89,7 +89,7 @@ if (details) {
     localStorage.setItem(company, JSON.stringify(details));
 
     // Alert user that product details have been deleted
-    alert("Product details deleted successfully..✅");
+    alert("Are you sure you want to delete product details?");
 
     // Reset form
     document.querySelector('form').reset();
@@ -102,4 +102,8 @@ if (details) {
     }
   });
   
+  document.getElementById("cancel").addEventListener("click", function cancelUpdate(){
+
+    window.location.href="../user/user_profile.html"
+  });
 

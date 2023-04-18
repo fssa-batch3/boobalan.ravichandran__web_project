@@ -11,7 +11,7 @@
         let price_del;
         let save_h3;
         
-  let product_details = JSON.parse(localStorage.getItem("dow_agro_science_details"))
+  let product_details = JSON.parse(localStorage.getItem("dow_agro_science_details")) || [];
 
   const root_path = window.location.origin
 
