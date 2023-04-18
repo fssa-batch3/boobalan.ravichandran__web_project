@@ -85,3 +85,16 @@
 
             /* resize: none; */
     }
+    .go_home{
+        margin-top: 50px;
+    }
+    .go_home a{
+        margin-top: 100px;
+        text-decoration: none;
+        font-size: 18px;
+        color:black;
+        font-weight: bold;
+     }
+     .go_home a:hover{
+        color: red;
+     }
