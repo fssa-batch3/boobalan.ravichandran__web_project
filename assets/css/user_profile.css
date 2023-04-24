@@ -1,3 +1,4 @@
+
 main{
   
    display: flex;
@@ -38,13 +39,14 @@ label{
     
 }
 input{
-    cursor: pointer;
+   
     background-color: white;
+    caret-color: transparent;
 }
 #full_name1{
     margin-left:.2rem;
   
-     width:270px;
+     min-width:270px;
      height:35px;
      padding: 5px 10px 5px 10px;
      font-size: 25px;
@@ -59,9 +61,10 @@ input{
  }
 
 #full_name{
-   margin-left: 7.7rem;
-    width:270px;
-    height:35px;
+    cursor: none;
+   margin-left: 10.7rem;
+   min-width:270px;
+       height:35px;
     padding: 5px 10px 5px 5px;
     font-size: 19px;
     margin-bottom: 40px;
@@ -77,7 +80,7 @@ input{
 }
 #gender{
     margin-left: 9.5rem;
-    width:270px;
+    min-width:270px;
     height:35px;
     padding: 5px 10px 5px 5px;
     font-size: 19px;
@@ -91,7 +94,7 @@ input{
 }
 #email{
     margin-left: 5.2rem;
-    width:270px;
+    min-width:270px;
     height:35px;
     padding: 5px 10px 5px 5px;
     font-size: 19px;
@@ -105,7 +108,7 @@ input{
 }
 #mobile{
     margin-left: 4rem;
-    width:270px;
+    min-width:270px;
     height:35px;
     padding: 5px 10px 5px 5px;
     font-size: 19px;
@@ -120,7 +123,7 @@ input{
 }
 #street{
     margin-left: 6rem;
-    width:270px;
+    min-width:270px;
     height:35px;
     padding: 5px 10px 5px 5px;
     font-size: 19px;
@@ -135,7 +138,7 @@ input{
 }
 #city{
     margin-left:7.4rem;
-    width:270px;
+    min-width:270px;
     height:35px;
     padding: 5px 10px 5px 5px;
     font-size: 19px;
@@ -149,7 +152,7 @@ input{
 }
 #district{
     margin-left: 5.1rem;
-    width:270px;
+    min-width:270px;
     height:35px;
     padding: 5px 10px 5px 5px;
     font-size: 19px;
@@ -162,7 +165,7 @@ input{
     color: rgb(255, 255, 255);text-align: center;
 }#state{
     margin-left: 6.6rem;
-    width:270px;
+    min-width:270px;
     height:35px;
     padding: 5px 10px 5px 5px;
     font-size: 19px;
@@ -231,7 +234,7 @@ input{
 #dobb{
     padding: .4rem .5rem;
     border-radius: 5px;
-    margin-left: 2rem;
+    margin-left: 0rem;
     border: none;
     font-size: 20px;
     font-weight: bold;

@@ -546,12 +546,33 @@ function description(){
 
 const pageProduct = loadProduct["category"]
 
-const findRelated = [
+const findRelatedDetails = [
     ...dhanukaDetails.filter(detail => detail.category === pageProduct),
     ...dowAgroScienceDetails.filter(detail => detail.category === pageProduct),
     ...adamaDetails.filter(detail => detail.category === pageProduct),
+    ...uplDetails.filter(detail => detail.category === pageProduct),
+    ...tata_rallis_details.filter(detail => detail.category === pageProduct),
+    ...bayer_details.filter(detail => detail.category === pageProduct),
+    ...aries_agro_details.filter(detail => detail.category === pageProduct),
+    ...barrix_details.filter(detail => detail.category === pageProduct),
+    ...indofil_details.filter(detail => detail.category === pageProduct),
+    ...rinuja_details.filter(detail => detail.category === pageProduct),
+    ...bio_insecticides_details.filter(detail => detail.category === pageProduct),
+    ...bio_fungicides_details.filter(detail => detail.category === pageProduct),
+    ...bio_nematicides_details.filter(detail => detail.category === pageProduct),
+    ...bio_vircides_details.filter(detail => detail.category === pageProduct),
+    ...major_nurients_details.filter(detail => detail.category === pageProduct),
+    ...secondary_nutrients_details.filter(detail => detail.category === pageProduct),
+    ...growth_promoters_details.filter(detail => detail.category === pageProduct),
+    ...growth_retardants_details.filter(detail => detail.category === pageProduct),
+    ...organic_fertilizer_details.filter(detail => detail.category === pageProduct),
+    ...bio_fertilizers_details.filter(detail => detail.category === pageProduct),
+    ...anti_stressing_agents_details.filter(detail => detail.category === pageProduct),
+    ...micro_nutrients_details.filter(detail => detail.category === pageProduct),
+
   ].filter(Boolean); // remove any falsy values (e.g. empty arrays)
   
+  const findRelated = findRelatedDetails.filter(details => details.product_name != loadProduct.product_name)
 
   const product_path = window.location.origin
 

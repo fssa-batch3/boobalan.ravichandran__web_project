@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lora', serif;
+  
+  }
+  body{
+    caret-color: transparent;
   }
 :root{
   --nav-backgroung:#176047;
@@ -51,9 +55,10 @@
    width:27vw;
      height: 40px;
      position: relative;
-     margin: 0vh 6vw
+     margin: 4vh 6vw 0vh 6vw;
+     caret-color:black;
     }
-    .search_bar .input0{
+    .search-input .search_bar .input0{
       width: 100%;
       height: 100%;
       top:0;
@@ -83,13 +88,21 @@
     }
     .search_bar .input0:focus{
       border: 1.5px solid rgb(4, 93, 50);
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    
+      /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
     }
     .search_bar .sear_btn:hover{
 background-color: rgb(4, 4, 77);
     }
 /* search bar end */
 /* head class start */
+
+
+
+/* wrapperer -=------------------ */
+/* .wrapperer{
+  
+} */
 .hero{
 display: flex;
 top:0;
@@ -188,8 +201,10 @@ margin-top: -10px;
   margin-right: 2vw;
 }
 .navbar_links{
-  margin-left: 6vw;
+  margin-left: 43.5vw;
   display: flex;
+  margin-top: -35px;
+  margin-bottom: 20px;
 }
   #profile_icon{
   margin-left: 200px;
@@ -641,11 +656,67 @@ padding: 15px 0px 0px 0px;
 .mobile_footer{
   display: none;
 }
-/* .navbar_links{
-  margin-left:auto;
-} */
-/*
 
+
+/* search bar --------- */
+.search-input .autocom-box{
+ padding: 0px;
+ max-height: 280px;
+ width:380px;
+ margin-left: 100px;
+ overflow-y: auto;
+ background-color: white;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+ border-radius: 0px 0px 5px 5px;
+ opacity: 0;
+ pointer-events: none;
+ /* margin-top: -100px; */
+ z-index: 1;
+ position: absolute;
+
+ 
+}
+.search-input .autocom-box::-webkit-scrollbar {
+  display: none;
+}
+.search-input.actives .autocom-box{
+  padding: 10px 0px;
+  opacity: 1;
+  pointer-events: auto;
+ 
+}
+
+.autocom-box li{
+list-style: none;
+padding: 12px 15px;
+width: 100%;
+cursor: default;
+border-radius: 3px;
+display: none;
+border-bottom:  1px solid rgb(234, 234, 234);
+}
+
+.autocom-box li a{
+  text-decoration: none;
+  color:black
+}
+.search-input.actives .autocom-box li{
+  display: block;
+}
+
+.autocom-box li a:hover{
+  color:rgb(0, 0, 255);
+}
+ .autocom-box li:hover {
+  background-color: rgb(241, 241, 241);
+  
+  /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+}
+#userLogin{
+  margin-bottom: 20px;
+ 
+}
+/*
 
 
 

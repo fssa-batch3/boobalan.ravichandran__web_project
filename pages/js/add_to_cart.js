@@ -132,16 +132,16 @@ const micro_nutrients_details = JSON.parse(localStorage.getItem("micro_nutrients
 
 
 
-const allProducts = dhanukaDetails.concat(uplDetails, dowAgroScienceDetails,tata_rallis_details, adama_details,
+const allProductsDetails = dhanukaDetails.concat(uplDetails, dowAgroScienceDetails,tata_rallis_details, adama_details,
                     bayer_details,aries_agro_details, barrix_details, indofil_details, rinuja_details, bio_insecticides_details, bio_fungicides_details, bio_nematicides_details,
                     bio_vircides_details, major_nurients_details, secondary_nutrients_details, growth_promoters_details, growth_retardants_details, 
                     organic_fertilizer_details, bio_fertilizers_details, anti_stressing_agents_details,micro_nutrients_details);
-
+                    console.log(allProductsDetails)
 const findLogedUseraddtoCart = cartIds.filter(details => details.userUniqueId == logedUser)
 
 console.log(findLogedUseraddtoCart)
 
-const loadProduct = allProducts.filter(product => findLogedUseraddtoCart.some(uuid => product.product_unique_id ===  uuid.cart_id ));
+const loadProduct = allProductsDetails.filter(p => findLogedUseraddtoCart.some(uuid =>p.product_unique_id == uuid.cart_id));
 console.log(loadProduct)
 let totalPrice = 0;
 let totalDiscount = 0;

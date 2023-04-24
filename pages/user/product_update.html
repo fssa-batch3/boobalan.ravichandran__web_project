@@ -74,11 +74,11 @@
       <label for="pro_name" class="form-label">Product Name</label>
     </div>
     <div class="form-group">
-      <input type="number" class="form-control" id="act_price" required/>
+      <input type="number" class="form-control" id="act_price" min="100" max="9999" maxlength="4"  required/>
       <label for="act_price" class="form-label">Product Actual Price</label>
     </div>
     <div class="form-group">
-      <input type="number" class="form-control" id="discount" />
+      <input type="number" class="form-control" id="discount" min="0" max="9899" maxlength="4"/>
       <label for="discount" class="form-label">Discount on product</label>
     </div>
     <div class="form-group">
@@ -108,5 +108,41 @@
 <script src="../js/product_update_and_delete.js">
 
 </script>
+<script>
+  const act_price = document.getElementById("act_price");
+  const discount = document.getElementById("discount");
+
+  function validatePrice() {
+      if (act_price.value === "") {
+          return true;
+      }
+      if (act_price.value < 100 || act_price.value > 9999) {
+          alert("Actual price must be between 100 and 9999");
+          return false;
+      }
+      return true;
+  }
+
+  function validateDiscount() {
+    if (discount.value === "") {
+        return true;
+    }
+    if (discount.value < 0 || discount.value > act_price.value - 100) {
+    alert("Discount must be between 0 and 100 rupees less than the actual price");
+    return false;
+}
+
+    return true;
+}
+
+
+  function validateForm() {
+      return validatePrice() && validateDiscount();
+  }
+
+  act_price.addEventListener("change", validatePrice);
+  discount.addEventListener("change", validateDiscount);
+</script>
+
 </body>
 </html>

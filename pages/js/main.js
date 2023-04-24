@@ -147,7 +147,7 @@ if(!adama_details){
             discount: "340",
             manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
             product_name:"CUSTODIA FUNGICIDE",
-            product_unique_id:"59a6e214-1031-420c-887a-0bac1bac42f8",
+            product_unique_id:"59a6e214-1031-420c-887a-0bac1baf42f8",
             product_weight:"500 ml",
             source:"../../assets/images/Adama/ada3.avif"
         },
@@ -185,7 +185,7 @@ if(!upl_details){
             product_name:"AGIL HERBICID",
             product_unique_id:"89e60418-9bd7-4c43-b3cc-2f839b6cef77d",
             product_weight:"400 ml",
-            source:"../../assets/images/Adama/ada1.avif"
+            source:"../../assets/images/upl/up9.avif"
         },
         {
             actual_price:"1286",
@@ -198,7 +198,7 @@ if(!upl_details){
             product_name:"PLETHORA INSECTICIDE",
             product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d1393159ba",
             product_weight:"200 ml",
-            source:"../../assets/images/Adama/ada2.avif"
+            source:"../../assets/images/upl/upl1.jpg"
         },
         {
             actual_price:"1700",
@@ -209,9 +209,9 @@ if(!upl_details){
             discount: "340",
             manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
             product_name:"CUSTODIA FUNGICIDE",
-            product_unique_id:"59a6e214-1031-4260c-887a-0bac1bac42f8",
+            product_unique_id:"59a6e214-1031-4260c-887a-0gac1bac42f8",
             product_weight:"500 ml",
-            source:"../../assets/images/Adama/ada3.avif"
+            source:"../../assets/images/upl/upl2.jpg"
         },
         {
             actual_price:"560",
@@ -224,7 +224,7 @@ if(!upl_details){
             product_name:"TAKAF INSECTICIDE",
             product_unique_id:"dc4fd5cf-efb1-48f0-bf403-832199f55ea5",
             product_weight:"300 ml",
-            source:"../../assets/images/Adama/ada4.avif"
+            source:"../../assets/images/upl/upl3.avif"
         },
        ]
    ));
@@ -246,7 +246,7 @@ if(!tata_rallis_details){
             product_name:"AGIL HERBICID",
             product_unique_id:"89e60418-9bd7-4c43-b33cc-2f839b6cef7d",
             product_weight:"400 ml",
-            source:"../../assets/images/Adama/ada1.avif"
+            source:"../../assets/images/Tata/tata1.jpg"
         },
         {
             actual_price:"1286",
@@ -259,7 +259,7 @@ if(!tata_rallis_details){
             product_name:"PLETHORA INSECTICIDE",
             product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d6139315ba",
             product_weight:"200 ml",
-            source:"../../assets/images/Adama/ada2.avif"
+            source:"../../assets/images/Tata/tata2.jpg"
         },
         {
             actual_price:"1700",
@@ -270,9 +270,9 @@ if(!tata_rallis_details){
             discount: "340",
             manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
             product_name:"CUSTODIA FUNGICIDE",
-            product_unique_id:"59a6e214-1031-420c-887a-0baac1bac42f8",
+            product_unique_id:"59a6e214-1031-42hc-887a-0baac1bac42f8",
             product_weight:"500 ml",
-            source:"../../assets/images/Adama/ada3.avif"
+            source:"../../assets/images/Tata/tata3.avif"
         },
         {
             actual_price:"560",
@@ -285,7 +285,7 @@ if(!tata_rallis_details){
             product_name:"TAKAF INSECTICIDE",
             product_unique_id:"dc4fd5cf-efb1-48f0-bf03-832d199f55ea5",
             product_weight:"300 ml",
-            source:"../../assets/images/Adama/ada4.avif"
+            source:"../../assets/images/Tata/tata5.avif"
         },
        ]
    ));
@@ -308,7 +308,7 @@ if(!bayer_details){
             product_name:"AGIL HERBICID",
             product_unique_id:"89e60418-9bd7-4c43-b3ccc-2f839b6cef7d",
             product_weight:"400 ml",
-            source:"../../assets/images/Adama/ada1.avif"
+            source:"../../assets/imagesbayer/bay1.avif"
         },
         {
             actual_price:"1286",
@@ -321,7 +321,7 @@ if(!bayer_details){
             product_name:"PLETHORA INSECTICIDE",
             product_unique_id:"2f8cbf08-05c3-4350-bbc20-3b4d139315ba",
             product_weight:"200 ml",
-            source:"../../assets/images/Adama/ada2.avif"
+            source:"../../assets/images/bayer/bay2.avif"
         },
         {
             actual_price:"1700",
@@ -332,9 +332,9 @@ if(!bayer_details){
             discount: "340",
             manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
             product_name:"CUSTODIA FUNGICIDE",
-            product_unique_id:"59a6e214-1031-420c-887a-0bacc1bac42f8",
+            product_unique_id:"59a0e214-1031-420c-887a-0bacc1bac42f8",
             product_weight:"500 ml",
-            source:"../../assets/images/Adama/ada3.avif"
+            source:"../../assets/images/bayer/bsy3.avif"
         },
         {
             actual_price:"560",
@@ -347,7 +347,7 @@ if(!bayer_details){
             product_name:"TAKAF INSECTICIDE",
             product_unique_id:"dc4fd5cf-efb1-48f0-bf03-8321a99f55ea5",
             product_weight:"300 ml",
-            source:"../../assets/images/Adama/ada4.avif"
+            source:"../../assets/images/bayer/bsy5.avif"
         },
        ]
    ));
@@ -371,7 +371,7 @@ if(!bayer_details){
                 product_name:"AGIL HERBICID",
                 product_unique_id:"89e60418-9bd7-4c43-b3cc-2f83r9b6cef7d",
                 product_weight:"400 ml",
-                source:"../../assets/images/Adama/ada1.avif"
+                source:"../../assets/images/geolife/geo1.jpg"
             },
             {
                 actual_price:"1286",
@@ -384,7 +384,7 @@ if(!bayer_details){
                 product_name:"PLETHORA INSECTICIDE",
                 product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d13f9315ba",
                 product_weight:"200 ml",
-                source:"../../assets/images/Adama/ada2.avif"
+                source:"../../assets/images/geolife/geo2.jpg"
             },
             {
                 actual_price:"1700",
@@ -395,9 +395,9 @@ if(!bayer_details){
                 discount: "340",
                 manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
                 product_name:"CUSTODIA FUNGICIDE",
-                product_unique_id:"59a6e214-1031-420c-887a-0beac1bac42f8",
+                product_unique_id:"59a6e214-1031-420c-887a-0b0ac1bac42f8",
                 product_weight:"500 ml",
-                source:"../../assets/images/Adama/ada3.avif"
+                source:"../../assets/images/geolife/geo3.jpg"
             },
             {
                 actual_price:"560",
@@ -410,7 +410,7 @@ if(!bayer_details){
                 product_name:"TAKAF INSECTICIDE",
                 product_unique_id:"dc4fd5cf-efb1-48f0-bf03-8321979f55ea5",
                 product_weight:"300 ml",
-                source:"../../assets/images/Adama/ada4.avif"
+                source:"../../assets/images/geolife/geo4.jpg"
             },
            ]
        ));
@@ -434,7 +434,7 @@ if(!bayer_details){
                     product_name:"AGIL HERBICID",
                     product_unique_id:"89e60418-9bd7-4c43-b3cc-2fe839b6cef7d",
                     product_weight:"400 ml",
-                    source:"../../assets/images/Adama/ada1.avif"
+                    source:"../../assets/images/barrix/barrix1.jpg"
                 },
                 {
                     actual_price:"1286",
@@ -447,7 +447,7 @@ if(!bayer_details){
                     product_name:"PLETHORA INSECTICIDE",
                     product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d2139315ba",
                     product_weight:"200 ml",
-                    source:"../../assets/images/Adama/ada2.avif"
+                    source:"../../assets/images/barrix/barrix2.jpg"
                 },
                 {
                     actual_price:"1700",
@@ -458,9 +458,9 @@ if(!bayer_details){
                     discount: "340",
                     manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
                     product_name:"CUSTODIA FUNGICIDE",
-                    product_unique_id:"59a6e214-1031-420c-887a-0bac1bhac42f8",
+                    product_unique_id:"59a6e204-1031-420c-887a-0bac1bhac42f8",
                     product_weight:"500 ml",
-                    source:"../../assets/images/Adama/ada3.avif"
+                    source:"../../assets/images/barrix/barrix3.jpg"
                 },
                 {
                     actual_price:"560",
@@ -473,7 +473,7 @@ if(!bayer_details){
                     product_name:"TAKAF INSECTICIDE",
                     product_unique_id:"dc4fd5cf-efb1-48f0-bf03-832199wf55ea5",
                     product_weight:"300 ml",
-                    source:"../../assets/images/Adama/ada4.avif"
+                    source:"../../assets/images/barrix/barrix4.jpg"
                 },
                ]
            ));
@@ -496,7 +496,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                     product_name:"AGIL HERBICID",
                     product_unique_id:"89e60418-9bd7-4c43-b3cc-2f8j39b6cef7d",
                     product_weight:"400 ml",
-                    source:"../../assets/images/Adama/ada1.avif"
+                    source:"../../assets/images/indofil/indo1.jpg"
                 },
                 {
                     actual_price:"1286",
@@ -509,7 +509,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                     product_name:"PLETHORA INSECTICIDE",
                     product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4dr139315ba",
                     product_weight:"200 ml",
-                    source:"../../assets/images/Adama/ada2.avif"
+                    source:"../../assets/images/indofil/indo.2jpg"
                 },
                 {
                     actual_price:"1700",
@@ -520,9 +520,9 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                     discount: "340",
                     manufacture_company:"ADAMA Agricultural Solutions UK Ltd",
                     product_name:"CUSTODIA FUNGICIDE",
-                    product_unique_id:"59a6e214-1031-420c-887a-0bac1dbac42f8",
+                    product_unique_id:"59a6e214-1031-420c-887a-0bac1dba942f8",
                     product_weight:"500 ml",
-                    source:"../../assets/images/Adama/ada3.avif"
+                    source:"../../assets/images/indofil/indo3.jpg"
                 },
                 {
                     actual_price:"560",
@@ -535,7 +535,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                     product_name:"TAKAF INSECTICIDE",
                     product_unique_id:"dc4fd5cf-efb1-48f0-bf03-8321w99f55ea5",
                     product_weight:"300 ml",
-                    source:"../../assets/images/Adama/ada4.avif"
+                    source:"../../assets/images/indofil/indo4.jpg"
                 },
                ]
            ));
@@ -558,7 +558,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                     product_name:"AGIL HERBICID",
                     product_unique_id:"89e60418-9bd7-4c43-b3cc-2f83e9b6cef7d",
                     product_weight:"400 ml",
-                    source:"../../assets/images/Adama/ada1.avif"
+                    source:"../../assets/images/rinuja/rinu1.jpg"
                 },
                 {
                     actual_price:"1286",
@@ -571,7 +571,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                     product_name:"PLETHORA INSECTICIDE",
                     product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d3139315ba",
                     product_weight:"200 ml",
-                    source:"../../assets/images/Adama/ada2.avif"
+                    source:"../../assets/images/rinuja/rinu2.jpg"
                 },
                 {
                     actual_price:"1700",
@@ -584,7 +584,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                     product_name:"CUSTODIA FUNGICIDE",
                     product_unique_id:"59a6e214-1031-420c-887a-0bac1bac462f8",
                     product_weight:"500 ml",
-                    source:"../../assets/images/Adama/ada3.avif"
+                    source:"../../assets/images/rinuja/rinu3.jpg"
                 },
                 {
                     actual_price:"560",
@@ -597,7 +597,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                     product_name:"TAKAF INSECTICIDE",
                     product_unique_id:"dc4fd5cf-efb1-48f0-bf03-8732199f55ea5",
                     product_weight:"300 ml",
-                    source:"../../assets/images/Adama/ada4.avif"
+                    source:"../../assets/images/rinuja/rinu4.jpg"
                 },
                ]
            ));
@@ -620,7 +620,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                 product_name:"AGIL HERBICID",
                 product_unique_id:"89e60418-9bd7-4c43-b3cc-2f839b36cef7d",
                 product_weight:"400 ml",
-                source:"../../assets/images/Adama/ada1.avif"
+                source:"../../assets/images/Insecticide/ins1.jpg"
             },
             {
                 actual_price:"1286",
@@ -633,7 +633,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                 product_name:"PLETHORA INSECTICIDE",
                 product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d1393158ba",
                 product_weight:"200 ml",
-                source:"../../assets/images/Adama/ada2.avif"
+                source:"../../assets/images/Insecticide/ins2.jpg"
             },
             {
                 actual_price:"1700",
@@ -646,7 +646,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                 product_name:"CUSTODIA FUNGICIDE",
                 product_unique_id:"59a6e214-1031-420c-887a-0bac1bac422f8",
                 product_weight:"500 ml",
-                source:"../../assets/images/Adama/ada3.avif"
+                source:"../../assets/images/Insecticide/ins3.avif"
             },
             {
                 actual_price:"560",
@@ -659,7 +659,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                 product_name:"TAKAF INSECTICIDE",
                 product_unique_id:"dc4fd5gcf-efb1-48f0-bf03-832199f55ea5",
                 product_weight:"300 ml",
-                source:"../../assets/images/Adama/ada4.avif"
+                source:"../../assets/images/Insecticide/ins4.jpg"
             },
            ]
        ));
@@ -682,7 +682,7 @@ if(!bio_fungicides_details){
             product_name:"AGIL HERBICID",
             product_unique_id:"89e60418-9hbd7-4c43-b3cc-2f839b6cef7d",
             product_weight:"400 ml",
-            source:"../../assets/images/Adama/ada1.avif"
+            source:"../../assets/images/fungicides/fun1.jpg"
         },
         {
             actual_price:"1286",
@@ -695,7 +695,7 @@ if(!bio_fungicides_details){
             product_name:"PLETHORA INSECTICIDE",
             product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4d139g315ba",
             product_weight:"200 ml",
-            source:"../../assets/images/Adama/ada2.avif"
+            source:"../../assets/images/fungicides/fun2.avif"
         },
         {
             actual_price:"1700",
@@ -708,7 +708,7 @@ if(!bio_fungicides_details){
             product_name:"CUSTODIA FUNGICIDE",
             product_unique_id:"59a6e214-1031-420c-887a-04bac1bac42f8",
             product_weight:"500 ml",
-            source:"../../assets/images/Adama/ada3.avif"
+            source:"../../assets/images/fungicides/fun3.avif"
         },
         {
             actual_price:"560",
@@ -721,7 +721,7 @@ if(!bio_fungicides_details){
             product_name:"TAKAF INSECTICIDE",
             product_unique_id:"dc4fd5cf-efb1-48f0-bf03-832199fr55ea5",
             product_weight:"300 ml",
-            source:"../../assets/images/Adama/ada4.avif"
+            source:"../../assets/images/fungicides/fun4.avif"
         },
        ]
    ));
@@ -745,7 +745,7 @@ const bio_nematicides_details = JSON.parse(localStorage.getItem("bio_nematicides
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a90d-49ee-b22a-6fa415e564790",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/Nematicides/nem1.jpg"
             },
             {
                 actual_price:"800",
@@ -758,7 +758,7 @@ const bio_nematicides_details = JSON.parse(localStorage.getItem("bio_nematicides
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-4000-hb9e1-b18187612785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/Nematicides/nem2.jpg"
            },
             {
                 actual_price:"1200",
@@ -769,9 +769,9 @@ const bio_nematicides_details = JSON.parse(localStorage.getItem("bio_nematicides
                 discount: "300",
                 manufacture_company:"Dow chemical" ,
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
-                product_unique_id:"3438e3df-f46d-48bf-8b445-b4c7fd7d3220",
+                product_unique_id:"3435e3df-f46d-48bf-8b445-b4c7fd7d3220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/Nematicides/nem3.avif"
             },
 
         ]));
@@ -795,7 +795,7 @@ const bio_vircides_details = JSON.parse(localStorage.getItem("bio_vircides_detai
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a904d-49ee-b22a-6a415e564790",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/Viricides/vir1.jpg"
             },
             {
                 actual_price:"800",
@@ -808,7 +808,7 @@ const bio_vircides_details = JSON.parse(localStorage.getItem("bio_vircides_detai
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-400g0-b9e1-b18187612785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/Viricides/vir2.jpg"
            },
             {
                 actual_price:"1200",
@@ -821,7 +821,7 @@ const bio_vircides_details = JSON.parse(localStorage.getItem("bio_vircides_detai
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fhd7d3220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/Viricides/vir3.avif"
             },
 
         ]));
@@ -845,7 +845,7 @@ const major_nurients_details = JSON.parse(localStorage.getItem("major_nurients_d
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a90d-49ee-b22a-6a4y15e564790",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/Major nutrients/maj1.webp"
             },
             {
                 actual_price:"800",
@@ -858,7 +858,7 @@ const major_nurients_details = JSON.parse(localStorage.getItem("major_nurients_d
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-4000-b9e1-b18e187612785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/Major nutrients/maj2.jpg"
            },
             {
                 actual_price:"1200",
@@ -871,7 +871,7 @@ const major_nurients_details = JSON.parse(localStorage.getItem("major_nurients_d
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fd79d3220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/Major nutrients/maj3.avif"
             },
 
         ]));
@@ -895,7 +895,7 @@ const secondary_nutrients_details = JSON.parse(localStorage.getItem("secondary_n
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a90d-49ee-b22a-6a3415e564790",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/secondary nurients/sec1.jpg"
             },
             {
                 actual_price:"800",
@@ -908,7 +908,7 @@ const secondary_nutrients_details = JSON.parse(localStorage.getItem("secondary_n
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-4000-b9e1-b181879612785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/secondary nurients/sec2.avif"
            },
             {
                 actual_price:"1200",
@@ -921,7 +921,7 @@ const secondary_nutrients_details = JSON.parse(localStorage.getItem("secondary_n
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fdk7d3220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/secondary nurients/sec3.avif"
             },
 
         ]));
@@ -945,7 +945,7 @@ const growth_promoters_details = JSON.parse(localStorage.getItem("growth_promote
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a90d-49ee-b22a-6a415e5r64790",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/promoters/pro1.avif"
             },
             {
                 actual_price:"800",
@@ -958,7 +958,7 @@ const growth_promoters_details = JSON.parse(localStorage.getItem("growth_promote
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-4000-b9e1-b1818761j2785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/promoters/pro2.avif"
            },
             {
                 actual_price:"1200",
@@ -971,7 +971,7 @@ const growth_promoters_details = JSON.parse(localStorage.getItem("growth_promote
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fd7dk3220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/promoters/pro3.avif"
             },
 
         ]));
@@ -994,7 +994,7 @@ const growth_retardants_details = JSON.parse(localStorage.getItem("growth_retard
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a90d-49ee-b22a-6a415e56e4790",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/Retardants/ret1.jpg"
             },
             {
                 actual_price:"800",
@@ -1007,7 +1007,7 @@ const growth_retardants_details = JSON.parse(localStorage.getItem("growth_retard
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-4000-b9e1-b181876123785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/Retardants/ret2.jpg"
            },
             {
                 actual_price:"1200",
@@ -1020,7 +1020,7 @@ const growth_retardants_details = JSON.parse(localStorage.getItem("growth_retard
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fd75d3220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/Retardants/ret4.jpg"
             },
 
         ]));
@@ -1043,7 +1043,7 @@ const organic_fertilizer_details = JSON.parse(localStorage.getItem("organic_fert
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a90d-49ee-b22a-6a41g5e564790",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/organic/org1.avif"
             },
             {
                 actual_price:"800",
@@ -1056,7 +1056,7 @@ const organic_fertilizer_details = JSON.parse(localStorage.getItem("organic_fert
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-4000-b9e1-b618187612785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/organic/org2.avif"
            },
             {
                 actual_price:"1200",
@@ -1069,7 +1069,7 @@ const organic_fertilizer_details = JSON.parse(localStorage.getItem("organic_fert
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"3438e3df-f46d-48bf-8b44-b74c7fd7d3220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/organic/org3.avif"
             },
 
         ]));
@@ -1092,7 +1092,7 @@ const bio_fertilizers_details = JSON.parse(localStorage.getItem("bio_fertilizers
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a90d-49ee-b22a-6a415e5647990",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/Bio Fertilizers/bio1.jpg"
             },
             {
                 actual_price:"800",
@@ -1105,7 +1105,7 @@ const bio_fertilizers_details = JSON.parse(localStorage.getItem("bio_fertilizers
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-4000-b9e1-b181877612785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/Bio Fertilizers/bio2.avif"
            },
             {
                 actual_price:"1200",
@@ -1118,7 +1118,7 @@ const bio_fertilizers_details = JSON.parse(localStorage.getItem("bio_fertilizers
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fhd7d3220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/Bio Fertilizers/bio3.jpg"
             },
 
         ]));
@@ -1141,7 +1141,7 @@ const anti_stressing_agents_details = JSON.parse(localStorage.getItem("anti_stre
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a90d-49ee-b22a-6a415e56d4790",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/anti_stressing/ast1.jpg"
             },
             {
                 actual_price:"800",
@@ -1154,7 +1154,7 @@ const anti_stressing_agents_details = JSON.parse(localStorage.getItem("anti_stre
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-4000-b9e1-b181787612785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/anti_stressing/ast2.jpg"
            },
             {
                 actual_price:"1200",
@@ -1167,7 +1167,7 @@ const anti_stressing_agents_details = JSON.parse(localStorage.getItem("anti_stre
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7fd7d3h220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/anti_stressing/ast3.jpg"
             },
 
         ]));
@@ -1191,7 +1191,7 @@ const micro_nutrients_details = JSON.parse(localStorage.getItem("micro_nutrients
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"bb730660-a90d-49ee-b22a-6a4154e564790",
                 product_weight:"500 ml",
-                source:"../../assets/images/dow agro/dow1.jpg"
+                source:"../../assets/images/micro_nutrients/mic1.jpg"
             },
             {
                 actual_price:"800",
@@ -1204,7 +1204,7 @@ const micro_nutrients_details = JSON.parse(localStorage.getItem("micro_nutrients
                 product_name:"DOW NUTRIBUILD Fe EDTA 12%E" ,
                 product_unique_id:"24d58d81-6f91-4000-b9e1-b181876172785",
                 product_weight:"500 gms",
-                source:"../../assets/images/dow agro/dow2.jpg"
+                source:"../../assets/images/micro_nutrients/mic2.jpg"
            },
             {
                 actual_price:"1200",
@@ -1217,7 +1217,7 @@ const micro_nutrients_details = JSON.parse(localStorage.getItem("micro_nutrients
                 product_name:"DOW NUTRIBUILD - SILICON OSA 3%",
                 product_unique_id:"3438e3df-f46d-48bf-8b44-b4c7jfd7d3220",
                 product_weight:"500 gm",
-                source:"../../assets/images/dow agro/dow3.avif"
+                source:"../../assets/images/micro_nutrients/mic3.jpg"
             },
 
         ]));

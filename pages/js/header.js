@@ -1,9 +1,6 @@
 const root = window.location.origin
 
-//  <div class="search_bar">
-//     <button class="sear_btn" type="submit"><i class="fa fa-search"></i></button>
-//     <input  class="input0" type="text" placeholder="Search....">
-// </div>
+
 const cartItems = JSON.parse(localStorage.getItem("addToCartItem")) || [];
 const loinFindUser = JSON.parse(localStorage.getItem("user_data"));
 
@@ -47,11 +44,17 @@ const beforeLogin =
    <img src="${root}/assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
 </div>
    </a>
-   <div class="search_bar">
-   <button class="sear_btn" type="submit"><i class="fa fa-search"></i></button>
-   <input  class="input0" type="text" placeholder="Search....">
-  </div>
-  
+ 
+<div class="wrapperer">
+<div class="search-input">
+<div class="search_bar">
+<button class="sear_btn" type="submit"><i class="fa fa-search"></i></button>
+<input  class="input0" type="text" placeholder="Search....">
+</div>
+<div class="autocom-box">
+
+</div>
+</div>
 
 <!-- hero class start -->
     <div class="navbar_links">
@@ -80,7 +83,7 @@ const beforeLogin =
         <a href="${root}/pages/user/dhanuka.html">TATA RALLIS</a>
         <a href="${root}/pages/user/dow_agro.html">ADAMA</a>
         <a href="${root}/pages/user/major_nutrients.html">BAYER</a>
-        <a href="${root}/pages/user/fungicides.html">ARIES AGRO</a>
+        <a href="${root}/pages/user/fungicides.html">GEOLIFE</a>
         <a href="${root}/pages/user/organic.html">BARRIX</a>
        <a href="${root}/pages/user/retardants.html">INDOFIL</a>
        <a href="${root}/pages/user/secodary_nutrients.html">RINUJA</a>
@@ -143,9 +146,15 @@ const AfterLogin =
  </div>
  </a>
 
- <div class="search_bar">
- <button class="sear_btn" type="submit"><i class="fa fa-search"></i></button>
- <input  class="input0" type="text" placeholder="Search....">
+<div class="wrapperer">
+<div class="search-input">
+<div class="search_bar">
+<button class="sear_btn" type="submit"><i class="fa fa-search"></i></button>
+<input  class="input0" type="text" placeholder="Search....">
+</div>
+<div class="autocom-box">
+
+</div>
 </div>
 
      <!-- search bar end -->
@@ -175,7 +184,7 @@ const AfterLogin =
              <a href="${root}/pages/user/tata.html">TATA RALLIS</a>
              <a href="${root}/pages/user/adama.html">ADAMA</a>
              <a href="${root}/pages/user/bayer.html">BAYER</a>
-             <a href="${root}/pages/user/aries_agro.html">ARIES AGRO</a>
+             <a href="${root}/pages/user/aries_agro.html">GEOLIFE</a>
              <a href="${root}/pages/user/barrix.html">BARRIX</a>
             <a href="${root}/pages/user/indofil.html">INDOFIL</a>
             <a href="${root}/pages/user/rinuja.html">RINUJA</a>
@@ -241,4 +250,3 @@ if(wishlistValueCount == 0){
 //   afterLoginElement?.remove();
   localStorage.removeItem("user_data");
 }
-

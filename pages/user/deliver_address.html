@@ -27,12 +27,14 @@
         <div class="delivery">
             <h1>Delivery details</h1>
             <div class="contact11">
-                <h3>DELIVERY CONTACT INFORMATION</h3>
+                <h3>Delivery Contact Information</h3>
                 <div class="first_last">
                    <div>
                     <label for="full_name">First Name</label>
                     <input class="disty" type="text" placeholder="FIRST NAME" id="first_name" />
+                    <div class="error"></div>
                    </div>
+
                    <div >
                     <label id="full" for="full_name">Last Name</label>
                     <input class="disty" type="text" placeholder="LAST NAME" id="last_name" />
@@ -50,15 +52,15 @@
                 </div>
             </div>
             <div class="del_address">
-                <h3>DELIVERY ADDRESS</h3>
+                <h3>Deliver Address</h3>
                 <div class="del_address1">
-                    <div class="img">
-                        <img src="../../assets/images/home.gif" alt="home " id="home" >
+                    <div class="img" id="home">
+                        <img src="../../assets/images/home.gif" alt="home "  >
                         <p>Home</p>
                     </div>
-                   <div class="img">
-                    <img src="../../assets/images/office.gif" alt=" office gif" id="office" >
-                    <p>Office</p>
+                   <div class="img" id="office">
+                    <img src="../../assets/images/office.gif" alt=" office gif"  >
+                    <p>Other</p>
                    </div>
                 </div>
                 <div class="city_zip">
@@ -83,8 +85,8 @@
                 </div> -->
             </div>
              <div class="button">
-                <a href="#"><button>Cancel</button></a>
-               <a href="./thank_order.html"> <button type="submit" id="save_delivery">Save & Deliver Here</button></a>
+                <button id="returnHome" type="button">Cancel</button>
+                <button type="submit" id="save_delivery">Save & Deliver Here</button>
              </div>
             </div>
             
@@ -93,7 +95,9 @@
     <footer>
         <div class="footer1">
             <div class="img101">
-                <img src="../../assets/images/Fert agri.png" alt="logo">
+                <a href="../../index.html">
+                    <img src="../../assets/images/Fert agri.png" alt="logo">
+                </a>
             </div>
             <div class="about111">
                     <div  class="quick" >

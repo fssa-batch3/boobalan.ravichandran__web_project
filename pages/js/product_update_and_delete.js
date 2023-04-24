@@ -1,14 +1,12 @@
-// Get form elements
 const form = document.querySelector('.form');
 const findDetails = document.getElementById('find_details');
-// const errorPoint = document.getElementById('errormessage');
 const proUniqueIdInput = document.getElementById('pro_unique_id');
 const productNameInput = document.getElementById('pro_name');
 const actualPriceInput = document.getElementById('act_price');
 const discountInput = document.getElementById('discount');
 const productWeightInput = document.getElementById('weight');
 const productImageInput = document.getElementById("image_url");
-const errorMessage = document.createElement('h3');
+
 
 // Add event listener to findDetails button
 findDetails.addEventListener('click', (event) => {
@@ -21,6 +19,7 @@ findDetails.addEventListener('click', (event) => {
   const companies = ['dhanuka_details', 'dow_agro_science_details', 'upl_details' ,'tata_rallis_details' , 'adama_details' , 'bayer_details' , 'aries_agro_details' , 'barrix_details' , 'indofil_details' , 'rinuja_details' ,
                       'bio_insecticides_details' , 'bio_fungicides_details' , 'bio_nematicides_details' , 'bio_vircides_details' , 'major_nurients_details' , 'secondary_nutrients_details' , 'growth_promoters_details' , 'growth_retardants' ,
                       'organic_fertilizer_details' , 'bio_fertilizers_details' , 'anti_stressing_agents_details' , 'micro_nutrients_details'];
+  let productFound = false;
   for (const company of companies) {
     const details = JSON.parse(localStorage.getItem(company));
     if (!details) continue; // Skip iteration if details is null or undefined
@@ -59,11 +58,20 @@ findDetails.addEventListener('click', (event) => {
         document.querySelector('form').reset();
         document.getElementById("update_product").setAttribute("disabled", true);
       });
+
+      productFound = true;
       break; // Exit loop if product found in any company
     }
   }
+  if (uniqueId == ""){
+    alert("Please enter a unique id")
+  }
+  if (!productFound) {
+    // Display error message if product not found
+    alert('Product is not found!');
+  }
+  
 });
-
 
 // Add event listener to delete_product button
 document.getElementById("delete_details").addEventListener("click", (event) => {

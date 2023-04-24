@@ -28,10 +28,10 @@
                 <h2>Edit Personal Details</h2>
                 <div>
                     <label for="full_name">Full Name</label>
-                    <input type="text"  id="full_name" required/>
+                    <input type="text"  id="full_name" maxlength="30" required />
           
                     <label for="gender">Gender</label>
-                    <input type="text"  id="gender" />
+                    <input type="text"  id="gender" maxlength="10"/>
                    
                 </div>
 <div class=" date_of">
@@ -43,15 +43,15 @@
               
                <div>
                 <label for="street"> Street Name </label>
-                <input type="text"  id="street"/> 
+                <input type="text"  id="street" maxlength="25"/> 
                 <label for="city"> City Name</label>
-                <input type="text"  id="city"/> 
+                <input type="text"  id="city" maxlength="25"  /> 
                </div>
                <div>
                 <label for="district"> District Name</label>
-                <input type="text"  id="district"/> 
+                <input type="text"  id="district" maxlength="25"/> 
                 <label for="state"> State Name </label>
-                <input type="text"  id="state"/> 
+                <input type="text"  id="state" maxlength="20"/> 
                </div>
              <div class="button">
                 <button type="submit " id="save_data">Save</button>
@@ -70,7 +70,15 @@
   </div>
   </footer><a href="./user_profile.html">
   <script>
- 
+ // Calculate the maximum date value for 15 years completed persons
+const today = new Date();
+const maxDate = new Date(today.getFullYear() - 15, today.getMonth(), today.getDate()).toISOString().split('T')[0];
+
+// Set the maximum date value for the date of birth input field
+document.getElementById('dobb').setAttribute('max', maxDate);
+
+
+
  //get value from local storage
  let user_data = JSON.parse(localStorage.getItem("user_data"));
  let user_list= JSON.parse(localStorage.getItem("user_list"));
@@ -93,13 +101,18 @@
 document.getElementById("save_data").addEventListener("click",
     function update(e){
         e.preventDefault();
-        let up_name = document.getElementById("full_name").value
-        let gender =  document.getElementById("gender").value
-        let date_of_birth =  document.getElementById("dobb").value
-        let street =  document.getElementById("street").value
-        let city =  document.getElementById("city").value
-        let district =  document.getElementById("district").value
-        let state =  document.getElementById("state").value
+
+        
+        let up_name = document.getElementById("full_name").value.trim();
+        let gender =  document.getElementById("gender").value.trim();
+        let date_of_birth =  document.getElementById("dobb").value.trim();
+        let street =  document.getElementById("street").value.trim();
+        let city =  document.getElementById("city").value.trim();
+        let district =  document.getElementById("district").value.trim();
+        let state =  document.getElementById("state").value.trim();
+
+
+        
 
          person_data["full_name"] = up_name;
          person_data["gender"] = gender;
@@ -108,16 +121,23 @@ document.getElementById("save_data").addEventListener("click",
          person_data["city"] = city;
          person_data["district"] = district;
          person_data["state"] = state;
-
-        localStorage.setItem("user_list", JSON.stringify(user_list))
+         if (up_name === "" || /^\s*$/.test(up_name)) {
+            alert("Please enter your name!");
+        }
+        else{
+            localStorage.setItem("user_list", JSON.stringify(user_list))
          alert("Your profile ubdated sucessfully..✅");
 
         location.href="../user/user_profile.html"
+        }
+
+     
 
 
     }
 )
   
+// if thwy enetr any empty spaces in input field error messsage have to shown
 
 
   </script>

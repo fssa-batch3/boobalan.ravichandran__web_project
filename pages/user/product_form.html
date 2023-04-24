@@ -17,7 +17,10 @@
         
 <h1>Add Products</h1>
 <div class="form-group">
-    
+
+
+
+    <a href="../../assets/images/micro_nutrients/mic1.jpg"></a>
   
 </div>
 <div class="form-group">
@@ -52,12 +55,12 @@
 </div>
 <div class="form-group">
      
-    <input type="text" class="form-control" id="company_name"  /> 
+    <input type="text" class="form-control" id="company_name"  maxlength="40" /> 
     <label for="company_name"  class="form-label"> Manufacturing Company Name </label>
 </div>
 <div class="form-group">
      
-        <input type="text" class="form-control" id="pro_name"  /> 
+        <input type="text" class="form-control" id="pro_name" maxlength="40" /> 
         <label for="pro_name"  class="form-label"> Product Name </label>
 </div>
 
@@ -68,16 +71,18 @@
 
 <div class="form-group" >
     
-    <input type="number" class="form-control" id="act_price" />
+    <input type="number" class="form-control" id="act_price" min="100" max="9999"maxlength="4"/>
     <label for="act_price"  class="form-label">Product Actual Price</label>
+    <span class="error-message" id="act_price_error" style="display:none;"></span>
 </div>
 
 <div class="form-group">
-    <input type="number" class="form-control" id="discount"  />
+    <input type="number" class="form-control" id="discount"min="0" max="9899"maxlength="4" />
     <label for="discount"  class="form-label">Discount on product</label>
+    <span class="error-message" id="discount_error" style="display:none;"></span>
 </div>
 <div class="form-group">
-    <input type="text" class="form-control" id="weight"  />
+    <input type="text" class="form-control" id="weight"  maxlength="5"/>
     <label for="weight"  class="form-label">Product weight</label>
 </div>
 
@@ -94,7 +99,7 @@
     <label for="application"  class="form-label">Application</label>
 </div>
 <div class="form-group">
-    <a href="product_update.html">Update Page</a>
+    <a href="product_update.html">Update Page -></a>
 </div>
 <div class="button_form">
     
@@ -112,6 +117,45 @@
 <script src="../js/product_form.js">
     
 </script>
+
+
+<script>
+    const act_price = document.getElementById("act_price");
+    const discount = document.getElementById("discount");
+  
+    function validatePrice() {
+        if (act_price.value === "") {
+            return true;
+        }
+        if (act_price.value < 100 || act_price.value > 9999) {
+            alert("Actual price must be between 100 and 9999");
+            return false;
+        }
+        return true;
+    }
+  
+    function validateDiscount() {
+      if (discount.value === "") {
+          return true;
+      }
+      if (discount.value < 0 || discount.value > act_price.value - 100) {
+      alert("Discount must be between 0 and 100 rupees less than the actual price");
+      return false;
+  }
+  
+      return true;
+  }
+  
+  
+    function validateForm() {
+        return validatePrice() && validateDiscount();
+    }
+  
+    act_price.addEventListener("change", validatePrice);
+    discount.addEventListener("change", validateDiscount);
+  </script>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 </body>

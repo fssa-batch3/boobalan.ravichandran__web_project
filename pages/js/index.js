@@ -16,7 +16,7 @@
             div_today.setAttribute("class", "today");
             div_today.setAttribute("data-id",product_details[i]["product_unique_id"])
             document.querySelector("div.offers1").append(div_today);
-            console.log(div_today);
+       
            
             const product_name = encodeURIComponent(product_details[i]["product_name"]);
             const product_id = product_details[i]["product_unique_id"];

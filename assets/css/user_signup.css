@@ -68,20 +68,47 @@
     font-weight: 500;
 }
 .form-control:focus{
-    border: 3px solid #f41111;
+    
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition: 2s;
+ 
+}
+.form-control:valid{
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background: none;
+   
 }
 .form-control:not(:focus):valid+label{
     top:-9px;
     z-index: 5;
 }
-.form-control:valid{
-    border:2.5px solid rgb(7, 182, 7);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    background: none;
-    transition: .5s;
-}
+
+.form-group.invalid .form-control {
+    border: 2px solid red;
+  }
+  
+  .form-group.valid .form-control {
+    border: 2px solid  green;
+  }
+  
+  .form-group1.invalid1 .form-control, .form-group2.invalid2 .form-control , .form-group3.invalid3 .form-control{
+    border: 2px solid red;
+  }
+  
+  .form-group1.valid1 .form-control, .form-group2.valid2 .form-control ,  .form-group3.valid3 .form-control{
+    border: 2px solid  green;
+  }
+  .form-group3 input:valid {
+    border: 2px solid green;
+  }
+  
+  .form-group3 input:focus:invalid {
+    border: 2px solid red;
+    transition: 3s;
+  }
+  
+  
+  
 
 .btn1 button{
     background-color: green;

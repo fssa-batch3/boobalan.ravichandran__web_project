@@ -27,15 +27,18 @@
                 <label for="mobile"  class="form-label"> Mobile Number </label>
         </div>
         <div class="error"></div>
-        <div class="form-group">
-                <input type="email" class="form-control" id="email" required  name="submit"  value="" >
+        <div class="form-group form-group1">
+                <input type="email" class="form-control" id="email" required  name="submit"   >
                 <label for="email" class="form-label">Email address</label>
         </div>
-        <div class="form-group" >
+        <div class="error1"></div>
+        <div class="form-group form-group2" >
             
-            <input type="text"class="form-control" id="full_name" required="true"  pattern="[a-zA-Z]+"/>
-            <label for="full_name"  class="form-label">Enter Your Full Name</label>
+            <input type="text"class="form-control" id="full_name" required="true"  pattern="^[a-zA-Z]+(\s[a-zA-Z]+)*$"/>
+            <label for="full_name"  class="form-label">Enter Your Name</label>
         </div>
+        <div class="error2"></div>
+        <span id="nameValid"></span>
 <!--         
         <div class="form-group">
            
@@ -44,8 +47,8 @@
             <label for="txtPassword"  class="form-label">Set Password</label>
             <div id="passwordError" ></div>
         </div> -->
-        <div class="form-group">
-          <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" required="true"/>
+        <div class="form-group form-group3">
+          <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$"  required="true"/>
           <label for="txtPassword" class="form-label">Set Password</label>
           <div id="passwordError"></div>
         </div>
@@ -83,7 +86,7 @@
    
       
         <div class="paserror"></div>
-        <div class="form-group">
+        <div class="form-group form-group3">
             <input type="password" class="form-control" id="TXTpassword" 
               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$"   required="true"/>
             <label for="TXTpassword"  class="form-label">Confirm Password</label>
@@ -104,29 +107,84 @@
        
     <script>
  
-const mobileInput = document.getElementById('mobile');
+ const mobileInput = document.getElementById('mobile');
+const formGroup = document.querySelector('.form-group');
 const errorMessage = document.querySelector('.error');
 
 mobileInput.addEventListener('input', () => {
   const inputValue = mobileInput.value.trim(); // remove leading/trailing whitespace
-  const isValidInput = /^\d{10}$/.test(inputValue); // use regex to match 10 digits
-  
-  if (!isValidInput) {
+  const isValidInput = /^[6-9]\d{9}$/.test(inputValue) && !/^\d*(\d)\1{9}\d*$/.test(inputValue); // use regex to match the updated criteria
+  if (!isValidInput || inputValue === ''){
+    formGroup.classList.remove('valid');
+    formGroup.classList.add('invalid');
     if (inputValue === '') {
       errorMessage.textContent = 'Please enter a mobile number.';
     } else if (/^\d+$/.test(inputValue)) {
-      errorMessage.textContent = 'Enter 10 digits only.';
+      errorMessage.textContent = 'Enter a valid 10-digit mobile number.';
     } else {
       errorMessage.textContent = 'Please enter digits only.';
     }
     errorMessage.style.color = 'red';
   } else {
+    formGroup.classList.remove('invalid');
+    formGroup.classList.add('valid');
     errorMessage.textContent = '';
   }
 });
+
+
+// email validation---------------------
+const emailInput = document.getElementById('email');
+const formGroup1 = document.querySelector('.form-group1');
+const errorMessage1 = document.querySelector('.error1');
+
+emailInput.addEventListener('input', () => {
+  const inputValue1 = emailInput.value.trim(); // remove leading/trailing whitespace
+  const isValidInput1 = /^([a-zA-Z0-9]+[a-zA-Z0-9_+\-\. ]*[a-zA-Z0-9]+)@(gmail|yahoo|hotmail|outlook)\.(com|net|org|edu)$/.test(inputValue1); // use regex to match email address format  
+  if (!isValidInput1 || inputValue1 === '') {
+    formGroup1.classList.remove('valid1');
+    formGroup1.classList.add('invalid1');
+    if (inputValue1 === '') {
+      errorMessage1.textContent = 'Please enter an email address.';
+    } else {
+      errorMessage1.textContent = 'Please enter a valid email address.';
+    }
+    errorMessage1.style.color = 'red';
+  } else {
+    formGroup1.classList.remove('invalid1');
+    formGroup1.classList.add('valid1');
+    errorMessage1.textContent = '';
+  }
+});
+
+// name validation-----------
+const nameInput = document.getElementById('full_name');
+const formGroup2 = document.querySelector('.form-group2');
+const errorMessage2 = document.querySelector('.error2');
+
+nameInput.addEventListener('input', () => {
+  const inputValue2 = nameInput.value.trim(); // remove leading/trailing whitespace
+  const isValidInput2 = /^[a-zA-Z][a-zA-Z0-9-_\.]{5,31}$/.test(inputValue2); // use regex to match name format without spaces before or after
+
+  if (!isValidInput2 || inputValue2 === '') {
+    formGroup2.classList.remove('valid2');
+    formGroup2.classList.add('invalid2');
+    if (inputValue2 === '') {
+      errorMessage2.textContent = 'Please enter your name.';
+    } else {
+      errorMessage2.textContent = 'Please enter a valid name without spaces before or after.';
+    }
+    errorMessage2.style.color = 'red';
+  } else {
+    formGroup2.classList.remove('invalid2');
+    formGroup2.classList.add('valid2');
+    errorMessage2.textContent = '';
+  }
+});
+
 // //Please enter one number, one special character, one uppercase letter, and one lowercase letter. 8 characters minimum, 10 characters maximum
 const passwordInput = document.getElementById('txtPassword');
-console.log(passwordInput)
+
 const uppercaseCheckbox = document.getElementById('chkUppercase');
 const lowercaseCheckbox = document.getElementById('chkLowercase');
 const specialCharCheckbox = document.getElementById('chkSpecialChar');

@@ -5,7 +5,7 @@ const footerHtml = `
 <footer>
 <div class="footer1">
     <div class="img101">
-        <img src="${footroot}/assets/images/Fert agri.png" alt="logo">
+        <a href="${root}/index.html"> <img src="${footroot}/assets/images/Fert agri.png" alt="logo"> </a>
     </div>
     <div class="about111">
         <div class="quick">

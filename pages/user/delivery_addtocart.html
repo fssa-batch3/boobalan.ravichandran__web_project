@@ -23,77 +23,81 @@
 <body>
 
     <main>
-       <form>
-        <div class="delivery">
-            <h1>Delivery details</h1>
-            <div class="contact11">
-                <h3>DELIVERY CONTACT INFORMATION</h3>
-                <div class="first_last">
-                   <div>
-                    <label for="full_name">First Name</label>
-                    <input class="disty" type="text" placeholder="FIRST NAME" id="first_name" />
-                   </div>
-                   <div >
-                    <label id="full" for="full_name">Last Name</label>
-                    <input class="disty" type="text" placeholder="LAST NAME" id="last_name" />
-                   </div>
-                </div>
-                <div class="first_last">
-                    <div>
-                        <label for="mobile">Delivery Mobile</label>
-                    <input class="disty" type="text" placeholder="MOBILE NUMBER" id="mobile" readonly/> 
-                       </div>
+        <form>
+            <div class="delivery">
+                <h1>Delivery details</h1>
+                <div class="contact11">
+                    <h3>Delivery Contact Information</h3>
+                    <div class="first_last">
                        <div>
-                        <label id="full1" for="mobile">Delivery Email</label>
-                    <input class="disty" type="mail" placeholder="EMAIL ADDRESS" id="email" readonly/> 
+                        <label for="full_name">First Name</label>
+                        <input class="disty" type="text" placeholder="FIRST NAME" id="first_name" />
+                        <div class="error"></div>
                        </div>
-                </div>
-            </div>
-            <div class="del_address">
-                <h3>DELIVERY ADDRESS</h3>
-                <div class="del_address1">
-                    <div class="img">
-                        <img src="../../assets/images/home.gif" alt="home " id="home" >
-                        <p>Home</p>
+    
+                       <div >
+                        <label id="full" for="full_name">Last Name</label>
+                        <input class="disty" type="text" placeholder="LAST NAME" id="last_name" />
+                       </div>
                     </div>
-                   <div class="img">
-                    <img src="../../assets/images/office.gif" alt=" office gif" id="office" >
-                    <p>Office</p>
-                   </div>
-                </div>
-                <div class="city_zip">
-                   <div class="deliver_address">
-                    <label >Address</label>
-                    <textarea id="address"></textarea>
-                   </div>
-                    <div class="city_zip1">
-                        <label >Zip Code</label>
-                        <input type="text" id="zip">
-                        
-                    <div id="zip-error" style="color: red;"></div>
+                    <div class="first_last">
+                        <div>
+                            <label for="mobile">Delivery Mobile </label>
+                        <input class="disty" type="text" placeholder="MOBILE NUMBER" id="mobile" readonly/> 
+                           </div>
+                           <div>
+                            <label id="full1" for="mobile">Delivery Email</label>
+                        <input class="disty" type="mail" placeholder="EMAIL ADDRESS" id="email" readonly/> 
+                           </div>
                     </div>
                 </div>
-                <!-- <div class="pay_met">
-                    <h3>PAYMENT METHOD</h3>
-                    <div class="payment">
-                        <img src="../../assets/images/gpay.gif" alt="gpay">
-                        <img src="../../assets/images/phonepe.gif" alt="phonepe">
-                        <img src="../../assets/images/paytm.gif" alt="paytm">
+                <div class="del_address">
+                    <h3>Delivery Address</h3>
+                    <div class="del_address1">
+                        <div class="img" id="home">
+                            <img src="../../assets/images/home.gif" alt="home "  >
+                            <p>Home</p>
+                        </div>
+                       <div class="img" id="office">
+                        <img src="../../assets/images/office.gif" alt=" office gif"  >
+                        <p>Other</p>
+                       </div>
                     </div>
-                </div> -->
-            </div>
-             <div class="button">
-                <a href="#"><button>Cancel</button></a>
-               <a href="./thank_order.html"> <button type="submit" id="save_delivery">Save & Deliver Here</button></a>
-             </div>
-            </div>
-            
-       </form>
+                    <div class="city_zip">
+                       <div class="deliver_address">
+                        <label >Address</label>
+                        <textarea id="address"></textarea>
+                       </div>
+                        <div class="city_zip1">
+                            <label >Zip Code</label>
+                            <input type="text" id="zip">
+                            
+                        <div id="zip-error" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <!-- <div class="pay_met">
+                        <h3>PAYMENT METHOD</h3>
+                        <div class="payment">
+                            <img src="../../assets/images/gpay.gif" alt="gpay">
+                            <img src="../../assets/images/phonepe.gif" alt="phonepe">
+                            <img src="../../assets/images/paytm.gif" alt="paytm">
+                        </div>
+                    </div> -->
+                </div>
+                 <div class="button">
+                    <button>Cancel</button>
+                    <button type="submit" id="save_delivery">Save & Deliver Here</button>
+                 </div>
+                </div>
+                
+           </form>
     </main>
     <footer>
         <div class="footer1">
             <div class="img101">
-                <img src="../../assets/images/Fert agri.png" alt="logo">
+                <a href="../../index.html">
+                    <img src="../../assets/images/Fert agri.png" alt="logo">
+                </a>
             </div>
             <div class="about111">
                     <div  class="quick" >

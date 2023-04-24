@@ -77,64 +77,70 @@ officeImg.addEventListener("click", function() {
 });
 
 
-
 document.getElementById("save_delivery").addEventListener("click", function addProductDate(e) {
-    e.preventDefault();
-    const deliveryFirstName = document.getElementById("first_name").value;
-    const deliveryLastName = document.getElementById("last_name").value;
-    const deliveryMobile = document.getElementById("mobile").value;
-    const deliveryEmail = document.getElementById("email").value;
-    const deliveryAddress = document.getElementById("address").value;
-    const deliveryZipcode = document.getElementById("zip").value;
-    const deliveryStatus = "true"  ;
-    const orderStatus = "Processing";
-
+  e.preventDefault();
+  const deliveryFirstName = document.getElementById("first_name").value;
+  const deliveryLastName = document.getElementById("last_name").value;
+  const deliveryMobile = document.getElementById("mobile").value;
+  const deliveryEmail = document.getElementById("email").value;
+  const deliveryAddress = document.getElementById("address").value;
+  const deliveryZipcode = document.getElementById("zip").value;
+  const deliveryStatus = "true";
+  const orderStatus = "Processing";
 
   // check if required fields are empty
-  if ( deliveryFirstName === "" || deliveryLastName === "" || deliveryMobile === "" || deliveryEmail === "" || deliveryAddress === "" || deliveryZipcode === "") {
+  if (deliveryFirstName === "" || deliveryLastName === "" || deliveryMobile === "" || deliveryEmail === "" || deliveryAddress === "" || deliveryZipcode === "") {
     alert("Please fill in all the required fields.");
-    return false;
-  }
-
-  // validate email format using regular expression
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(deliveryEmail)) {
-    alert("Please enter a valid email address.");
-    return false;
-  }
-
-    const zipRegex = /^6\d{5}$/;
-    if (!zipRegex.test(deliveryZipcode)) {
-      const zipError = document.getElementById("zip-error");
-      zipError.textContent = "Invalid zip code format (should start with 6 and have a length of 6)";
-      return;
+    // add error class to the empty fields
+    if (deliveryFirstName === "") {
+      document.getElementById("first_name").classList.add("error-field");
     }
-
-    loadProduct["firstName"] = deliveryFirstName;
-    loadProduct["lastName"] = deliveryLastName;
-    loadProduct["phoneNumber"] = deliveryMobile;
-    loadProduct["email"] = deliveryEmail;
-    loadProduct["deliveryPlace"] = deliveryPlace;
-    loadProduct["address"] = deliveryAddress;
-    loadProduct["zipCode"] = deliveryZipcode;
-    loadProduct["deliveryStatus"] = deliveryStatus;
-    loadProduct["orderStatus"] = orderStatus; 
-
-
-   
-    localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
-
-    alert("Your order has been successfully accepted..✅");
-
-    const local_path = window.location.origin
-  const pro_url = `${local_path}/pages/user/thank_order.html`
-
-//     const newWindow = window.open(pro_url, "_blank");
-// newWindow.location.href = pro_url;
-window.location.href = pro_url
-document.querySelector('form').reset();
+    if (deliveryLastName === "") {
+      document.getElementById("last_name").classList.add("error-field");
+    }
   
+    if (deliveryAddress === "") {
+      document.getElementById("address").classList.add("error-field");
+    }
+    if (deliveryZipcode === "") {
+      document.getElementById("zip").classList.add("error-field");
+    }
+    return false;
+  } else {
+    // remove error class from all fields
+    document.querySelectorAll(".error-field").forEach((field) => {
+      field.classList.remove("error-field");
+    });
+  }
+
+
+  const zipRegex = /^6\d{5}$/;
+  if (!zipRegex.test(deliveryZipcode)) {
+    const zipError = document.getElementById("zip-error");
+    zipError.textContent = "Invalid zip code format (should start with 6 and have a length of 6)";
+    return;
+  }
+
+  loadProduct["firstName"] = deliveryFirstName;
+  loadProduct["lastName"] = deliveryLastName;
+  loadProduct["phoneNumber"] = deliveryMobile;
+  loadProduct["email"] = deliveryEmail;
+  loadProduct["deliveryPlace"] = deliveryPlace;
+  loadProduct["address"] = deliveryAddress;
+  loadProduct["zipCode"] = deliveryZipcode;
+  loadProduct["deliveryStatus"] = deliveryStatus;
+  loadProduct["orderStatus"] = orderStatus;
+
+  localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
+
+  alert("Your order has been successfully accepted..✅");
+
+  const local_path = window.location.origin;
+  const pro_url = `${local_path}/pages/user/thank_order.html`;
+  window.location.href = pro_url;
+  document.querySelector("form").reset();
 });
+
 
 
 // ---------------
@@ -147,4 +153,8 @@ window.addEventListener("beforeunload", function() {
   }
 });
 
-
+// -------cancel button-----------------
+document.getElementById("returnHome").addEventListener("click",
+function cancelorder(){
+  window.location.href = "../../index.html"
+})

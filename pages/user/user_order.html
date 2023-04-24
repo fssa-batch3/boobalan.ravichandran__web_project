@@ -11,7 +11,7 @@
    
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
-    <link rel="stylesheet" href="../../assets/css/header.css">
+    
     <link rel="stylesheet" href="../../assets/css/user_order.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -143,7 +143,9 @@
     <footer>
         <div class="footer1">
             <div class="img101">
-                <img src="../../assets/images/Fert agri.png" alt="logo">
+                <a href="../../index.html">
+                    <img src="../../assets/images/Fert agri.png" alt="logo">
+                  </a>
             </div>
             <div class="about111">
                     <div  class="quick" >
@@ -316,7 +318,7 @@ for(let i=0;i<getOrderDetails.length; i++){
       localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(getOrderDetails));
     } 
 
-    if (formattedDate >= deliverydate) {
+    if (deliverydate > formattedDate) {
       const ord_status = "Delivered";
       getOrderDetails[i]["orderStatus"] = ord_status;
       localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(getOrderDetails));
@@ -346,6 +348,7 @@ function startShooping(){
 })
 </script>
 <script src="../js/header.js"></script>
+<script src="../js/search.js"></script>
     </body>
     </html>
     

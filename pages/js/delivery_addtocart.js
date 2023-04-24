@@ -82,29 +82,31 @@ document.getElementById("save_delivery").addEventListener("click", function addP
   const deliveryZipcode = document.getElementById("zip").value;
   const deliveryStatus = "true"  ;
   const orderStatus = "Processing";
-
-
-
-  // check if required fields are empty
-  if ( deliveryFirstName === "" || deliveryLastName === "" || deliveryMobile === "" || deliveryEmail === "" || deliveryAddress === "" || deliveryZipcode === "") {
-    alert("Please fill in all the required fields.");
-    return false;
-  }
-
-  // validate email format using regular expression
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(deliveryEmail)) {
-    alert("Please enter a valid email address.");
-    return false;
-  }
-
   
-  const zipRegex = /^6\d{5}$/;
-  if (!zipRegex.test(deliveryZipcode)) {
-    const zipError = document.getElementById("zip-error");
-    zipError.textContent = "Invalid zip code format (should start with 6 and have a length of 6)";
-    return;
-  }
+  
+    // check if required fields are empty
+    if (deliveryFirstName === "" || deliveryLastName === "" || deliveryMobile === "" || deliveryEmail === "" || deliveryAddress === "" || deliveryZipcode === "") {
+      alert("Please fill in all the required fields.");
+      // add error class to the empty fields
+      if (deliveryFirstName === "") {
+        document.getElementById("first_name").classList.add("error-field");
+      }
+      if (deliveryLastName === "") {
+        document.getElementById("last_name").classList.add("error-field");
+      }
+    
+      if (deliveryAddress === "") {
+        document.getElementById("address").classList.add("error-field");
+      }
+      if (deliveryZipcode === "") {
+        document.getElementById("zip").classList.add("error-field");
+      }
+      return false;
+    } else {
+      // remove error class from all fields
+      document.querySelectorAll(".error-field").forEach((field) => {
+        field.classList.remove("error-field");
+      });
 
   // Update the delivery status to false
 
@@ -145,7 +147,7 @@ const pro_url = `${loc_path}/pages/user/thank_order.html`
 window.location.href = pro_url;
 
 
-});
+}})
 
 window.addEventListener("beforeunload", function() {
   const orderDeliveryData = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct"));
@@ -159,3 +161,9 @@ window.addEventListener("beforeunload", function() {
   localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
 });
 
+
+// -------cancel button-----------------
+document.getElementById("returnHome").addEventListener("click",
+function(){
+  window.location.href = "../../index.html"
+})

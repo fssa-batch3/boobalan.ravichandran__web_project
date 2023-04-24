@@ -27,8 +27,8 @@ const logedUser = JSON.parse(localStorage.getItem("user_data"));
 
 // -------wishlist product get here -------
 const wishListProduct = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
-const dhanukaDetails = JSON.parse(localStorage.getItem('dhanuka_details'));
-const adamaDetails = JSON.parse(localStorage.getItem('adama_details'));
+const dhanukaDetails = JSON.parse(localStorage.getItem('dhanuka_details')) || [];
+const adamaDetails = JSON.parse(localStorage.getItem('adama_details')) || [];
 const uplDetails = JSON.parse(localStorage.getItem('upl_details')) || [];
 const dowAgroScienceDetails = JSON.parse(localStorage.getItem("barrix_details")) || [];
 const tata_rallis_details = JSON.parse(localStorage.getItem("tata_rallis_details")) || [];
@@ -54,12 +54,12 @@ const micro_nutrients_details = JSON.parse(localStorage.getItem("micro_nutrients
 
   
   const findLogedUserWishlist = wishListProduct.filter(details => details.userUniqueId === logedUser);
-  const allProducts = dhanukaDetails.concat(uplDetails, dowAgroScienceDetails,tata_rallis_details, adamaDetails,
+  const allProductsss = dhanukaDetails.concat(uplDetails, dowAgroScienceDetails,tata_rallis_details, adamaDetails,
     bayer_details,aries_agro_details, barrix_details, indofil_details, rinuja_details, bio_insecticides_details, bio_fungicides_details, bio_nematicides_details,
     bio_vircides_details, major_nurients_details, secondary_nutrients_details, growth_promoters_details, growth_retardants_details, 
     organic_fertilizer_details, bio_fertilizers_details, anti_stressing_agents_details,micro_nutrients_details);
   
-  const wishProducts = findLogedUserWishlist.map(uuid => allProducts.find(product => product.product_unique_id === uuid.product_id));
+  const wishProducts = findLogedUserWishlist.map(uuid => allProductsss.find(product => product.product_unique_id === uuid.product_id));
 
   
 for(let i = 0; i < wishProducts.length; i++) {
