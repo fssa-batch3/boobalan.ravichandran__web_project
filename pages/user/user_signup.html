@@ -140,7 +140,7 @@ const errorMessage1 = document.querySelector('.error1');
 
 emailInput.addEventListener('input', () => {
   const inputValue1 = emailInput.value.trim(); // remove leading/trailing whitespace
-  const isValidInput1 = /^([a-zA-Z0-9]+[a-zA-Z0-9_+\-\. ]*[a-zA-Z0-9]+)@(gmail|yahoo|hotmail|outlook)\.(com|net|org|edu)$/.test(inputValue1); // use regex to match email address format  
+  const isValidInput1 = /^([a-z]+[a-z0-9_+\-\. ]*[a-zA-Z0-9]+)@(gmail|yahoo|hotmail|outlook)\.(com|net|org|edu|in)$/.test(inputValue1); // use regex to match email address format  
   if (!isValidInput1 || inputValue1 === '') {
     formGroup1.classList.remove('valid1');
     formGroup1.classList.add('invalid1');

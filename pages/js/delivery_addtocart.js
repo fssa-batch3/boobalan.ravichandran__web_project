@@ -39,6 +39,7 @@ const user_data = JSON.parse(localStorage.getItem("user_data")) || [];
 const findData = user_list.find(details => details.mobile == user_data); 
  document.getElementById("mobile").value = findData["mobile"];
 document.getElementById("email").value =  findData["email"];
+document.getElementById("state").value = "Tamil Nadu";
 
 // ----------------------------------------------------------------
 
@@ -80,6 +81,9 @@ document.getElementById("save_delivery").addEventListener("click", function addP
   const deliveryEmail = document.getElementById("email").value;
   const deliveryAddress = document.getElementById("address").value;
   const deliveryZipcode = document.getElementById("zip").value;
+  const deliveryDistrict  = document.getElementById("district").value;
+  const deliveryState = document.getElementById("state").value;
+  
   const deliveryStatus = "true"  ;
   const orderStatus = "Processing";
   
@@ -101,6 +105,13 @@ document.getElementById("save_delivery").addEventListener("click", function addP
       if (deliveryZipcode === "") {
         document.getElementById("zip").classList.add("error-field");
       }
+      if (deliveryDistrict === "Select"){
+        document.getElementById("district").classList.add("error-field");
+      }
+      if (deliveryState === ""){
+        document.getElementById("state").classList.add("error-field");
+      }
+     
       return false;
     } else {
       // remove error class from all fields
@@ -122,6 +133,8 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     loadProduct[i]["zipCode"] = deliveryZipcode;
     loadProduct[i]["deliveryStatus"] = deliveryStatus;
    loadProduct[i]["orderStatus"]= orderStatus;
+   loadProduct[i]["district"]= deliveryDistrict;
+   loadProduct[i]["state"]= deliveryState;
   }
 
   // Update the orderDeliveryData array with the updated loadProduct array

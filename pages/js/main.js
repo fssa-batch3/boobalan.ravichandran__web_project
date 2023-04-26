@@ -37,7 +37,7 @@ if(!dhanukaDetails){
             description: " Systemic fungicide and bactericide, Kasu-B also kills bacteria. It quickly and efficiently translocates into the plants and suppresses the infections as a result of its antibacterial systemic activity.\nBoth the prevention and treatment of diseases are possible with Kasu-B.\nMost fungicides and insecticides are compatible with Kasu-B, with the exception of extremely alkaline compounds.\nKasu-B poses no threat to crops, people, animals, parasitoids, or predators.",
             discount: "60",
             manufacture_company: "Dhanuka Agritech Ltd",
-            product_name: "DHANUKA M45 FUNGICIDE",
+            product_name: "DHANUKA KASU-B FUNGICIDE",
             product_unique_id: "a17aebfa-de85-4c43-b1e0-f60b4ba11d68",
             product_weight: "250 ml",
             source: "../../assets/images/dhanuka/dhan3.avif"
@@ -308,7 +308,7 @@ if(!bayer_details){
             product_name:"AGIL HERBICID",
             product_unique_id:"89e60418-9bd7-4c43-b3ccc-2f839b6cef7d",
             product_weight:"400 ml",
-            source:"../../assets/imagesbayer/bay1.avif"
+            source:"../../assets/images/bayer/bay1.avif"
         },
         {
             actual_price:"1286",
@@ -509,7 +509,7 @@ const indofil_details = JSON.parse(localStorage.getItem("indofil_details"));
                     product_name:"PLETHORA INSECTICIDE",
                     product_unique_id:"2f8cbf08-05c3-4350-bb20-3b4dr139315ba",
                     product_weight:"200 ml",
-                    source:"../../assets/images/indofil/indo.2jpg"
+                    source:"../../assets/images/indofil/indo2.jpg"
                 },
                 {
                     actual_price:"1700",

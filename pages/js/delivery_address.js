@@ -40,6 +40,7 @@ const user_data = JSON.parse(localStorage.getItem("user_data")) || [];
 const findData = user_list.find(details => details.mobile == user_data); 
  document.getElementById("mobile").value = findData["mobile"];
 document.getElementById("email").value =  findData["email"];
+document.getElementById("state").value = findData["state"];
 
 // ----------------------------------------------------------------
 
@@ -85,6 +86,8 @@ document.getElementById("save_delivery").addEventListener("click", function addP
   const deliveryEmail = document.getElementById("email").value;
   const deliveryAddress = document.getElementById("address").value;
   const deliveryZipcode = document.getElementById("zip").value;
+  const deliveryDistrict  = document.getElementById("district").value;
+  const deliveryState = document.getElementById("state").value;
   const deliveryStatus = "true";
   const orderStatus = "Processing";
 
@@ -105,7 +108,18 @@ document.getElementById("save_delivery").addEventListener("click", function addP
     if (deliveryZipcode === "") {
       document.getElementById("zip").classList.add("error-field");
     }
+    if (deliveryDistrict === "Select"){
+      document.getElementById("district").classList.add("error-field");
+    }
+    if (deliveryState === ""){
+      document.getElementById("state").classList.add("error-field");
+    }
+   
+   
     return false;
+        
+    // Check if the value is "Select"
+    
   } else {
     // remove error class from all fields
     document.querySelectorAll(".error-field").forEach((field) => {
@@ -128,6 +142,8 @@ document.getElementById("save_delivery").addEventListener("click", function addP
   loadProduct["deliveryPlace"] = deliveryPlace;
   loadProduct["address"] = deliveryAddress;
   loadProduct["zipCode"] = deliveryZipcode;
+  loadProduct["district"] = deliveryDistrict;
+  loadProduct["state"] = deliveryState;
   loadProduct["deliveryStatus"] = deliveryStatus;
   loadProduct["orderStatus"] = orderStatus;
 

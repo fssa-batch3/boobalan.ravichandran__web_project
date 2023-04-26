@@ -106,12 +106,12 @@ const logedUser = JSON.parse(localStorage.getItem("user_data"));
 const cartIds = JSON.parse(localStorage.getItem("addToCartItem")) || [];
 const dhanukaDetails = JSON.parse(localStorage.getItem('dhanuka_details')) || [];
 const uplDetails = JSON.parse(localStorage.getItem('upl_details')) || [];
-const dowAgroScienceDetails = JSON.parse(localStorage.getItem("barrix_details")) || [];
+const dowAgroScienceDetails = JSON.parse(localStorage.getItem("dow_agro_science_details")) || [];
 const tata_rallis_details = JSON.parse(localStorage.getItem("tata_rallis_details")) || [];
 const adama_details = JSON.parse(localStorage.getItem("adama_details")) || [];
 const bayer_details = JSON.parse(localStorage.getItem("bayer_details")) || [];
 const aries_agro_details = JSON.parse(localStorage.getItem("aries_agro_details")) || [];
-const barrix_details = JSON.parse(localStorage.getItem("bio_fungicides_details")) || [];
+const barrix_details = JSON.parse(localStorage.getItem("barrix_details")) || [];
 const indofil_details = JSON.parse(localStorage.getItem("indofil_details")) || [];
 const rinuja_details = JSON.parse(localStorage.getItem("rinuja_details")) || [];
 const bio_insecticides_details = JSON.parse(localStorage.getItem("bio_insecticides_details")) || [];
@@ -136,13 +136,13 @@ const allProductsDetails = dhanukaDetails.concat(uplDetails, dowAgroScienceDetai
                     bayer_details,aries_agro_details, barrix_details, indofil_details, rinuja_details, bio_insecticides_details, bio_fungicides_details, bio_nematicides_details,
                     bio_vircides_details, major_nurients_details, secondary_nutrients_details, growth_promoters_details, growth_retardants_details, 
                     organic_fertilizer_details, bio_fertilizers_details, anti_stressing_agents_details,micro_nutrients_details);
-                    console.log(allProductsDetails)
+                    // console.log(allProductsDetails)
 const findLogedUseraddtoCart = cartIds.filter(details => details.userUniqueId == logedUser)
 
-console.log(findLogedUseraddtoCart)
+// console.log(findLogedUseraddtoCart)
 
 const loadProduct = allProductsDetails.filter(p => findLogedUseraddtoCart.some(uuid =>p.product_unique_id == uuid.cart_id));
-console.log(loadProduct)
+// console.log(loadProduct)
 let totalPrice = 0;
 let totalDiscount = 0;
 
@@ -174,16 +174,14 @@ function removeProductFromCart(cartId) {
 
     // Find the index of the product to remove
     const index = cart.findIndex(item => item.cartId === cartId);
-
+    console.log(index)
     // Remove the product from the cart
     cart.splice(index, 1);
 
     // Update the cart in local storage
     localStorage.setItem("addToCartItem", JSON.stringify(cart));
 
-    // Show an alert message to confirm that the product has been removed
    
-
     // Refresh the page to update the cart display
     location.reload();
   }
@@ -292,7 +290,7 @@ select.addEventListener("change", () => {
 let cartremove = document.getElementById("cartRemove");
 if(loadProduct.length == 0 ){
   cartEmpty.style.display = "block";
-  cartremove.style.display="none";
+  cartremove.style.display="none";  
 }
 else{
   cartEmpty.style.display = "none";
@@ -311,7 +309,7 @@ div_btnn.append(div_btnn_a);
 
 let div_btnn_button = document.createElement("button");
 div_btnn_button.setAttribute("id","place_order");
-div_btnn_button.setAttribute("type","submit");
+div_btnn_button.setAttribute("type","button");
 div_btnn_button.innerText ="Place order";
 div_btnn_a.append(div_btnn_button);
 
@@ -325,7 +323,7 @@ document.getElementById("place_order").addEventListener("click", function placeO
   const cartItems = document.querySelectorAll(".cart_details");
   
   const existingProduct = addtoCartDeliveryProduct.find(product => product.deliveryStatus == deliveryStatus);
-
+  console.log(existingProduct);
   if (!existingProduct) {
     for(let i = 0; i < cartItems.length; i++) {
       const cartItem = cartItems[i];
@@ -354,6 +352,8 @@ document.getElementById("place_order").addEventListener("click", function placeO
       const deliveryPlace = "";
       const paymentMethod = "";
       const orderStatus = "";
+      const district = "";
+       const state = "Tamil Nadu";
 
       // Generate a unique ID for the order
       const uid = (new Date().getTime()).toString(24);
@@ -379,22 +379,25 @@ document.getElementById("place_order").addEventListener("click", function placeO
         phoneNumber,
         address,
         zipCode,
+        district,
+        state,
         deliveryPlace,
         paymentMethod,
         orderStatus,
+
         userUniqueId : logedUser,
       };
 
       addtoCartDeliveryProduct.push(addProduct);
     }
 
-    
-              const product_url = `${path_pro}/pages/user/delivery_addtocart.html?delivery-status=`+ deliveryStatus;
+
 
 
 
     localStorage.setItem('addtoCartDeliveryProduct', JSON.stringify(addtoCartDeliveryProduct));
-    alert("order details stored successfully");
+
+   const product_url = `${path_pro}/pages/user/delivery_addtocart.html?delivery-status=`+ deliveryStatus;
     location.href = product_url;
   }
 });

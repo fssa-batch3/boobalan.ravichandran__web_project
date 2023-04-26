@@ -9,12 +9,12 @@
   }
   main{
     background-color: rgb(241, 243, 246);
-    padding: 60px 0px 200px 150px;
+    padding: 40px 0px 200px 150px;
     user-select: none;
   }
 .cart1{
     background-color: rgb(255, 255, 255);
-    width:720px;
+    min-width:720px;
     padding-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -101,13 +101,15 @@ a{
     background-color: transparent;
     border: 2px solid  rgb(239, 239, 239);
     font-weight: bold;
+    border-radius: 5px;
 
 }
 .btnn button:hover{
-    background-color: rgb(245, 243, 243);
+    border: 2px solid rgb(250, 250, 250);
+    background-color: rgb(249, 248, 248);
     color: rgb(0, 0, 0);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;}
 .bttn button:hover{
     background-color:  rgb(244, 115, 30);
     color: white;

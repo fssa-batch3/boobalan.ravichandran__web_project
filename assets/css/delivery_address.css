@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
   }
-input{
+input, textarea{
     font-size: 16px;
+    caret-color: black;
 }
 .delivery{
     background-color: rgb(246, 245, 245);
@@ -130,7 +131,7 @@ label{
 /* ---------------dleivery address---------- */
 #address{
     width:300px;
-    height:150px;
+    height:70px;
     font-size: 18px;
     padding: 10px;
     resize: none;
@@ -143,6 +144,23 @@ label{
   .error-field {
     border: 2px solid red;
   }
+  .dis_state{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 0 70px;
+  }
+  #district , #state{
+    width:250px;
+    height:40px;
+    padding: 5px 10px;
+    margin-bottom: 50px;
+    font-size: 17px;
+    margin-top: 10px;
+  }
+  #district::-webkit-scrollbar{
+    display: none;
+  }
+
   
   
   

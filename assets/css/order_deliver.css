@@ -3,7 +3,7 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     display: flex;
     padding: 10px;
-    margin: 40px 50px  ;
+    margin: 20px 50px  ;
     
 }
 main{
@@ -70,24 +70,17 @@ main{
 }
 .address1{
     width:200px;
-    margin-top: 20px;
-}
-.address1 textarea{
-  width:400px;
-  min-height: 120px;
-  margin-top: 1.2rem;
-  font-size: 18px;
-  background-color: transparent;
-  border: none;
-resize: none; 
-}
-.address1 textarea:focus{
-    outline: none;
+    margin-top: 50px;
+    min-height:100px;
 }
 .address1 h1{
     font-size: 19px;
     margin-top: 5px;
     width:1rem;
+}
+.address1 p{
+    margin-top: 10px;
+    font-size: 18px;
 }
 .order_show img{
     width:550px;

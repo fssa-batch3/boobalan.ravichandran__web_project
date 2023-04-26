@@ -147,9 +147,24 @@ const formattedDate = `${day}/${month}/${year}`;
    div_fert117.append(fert117_h3);
 
    
-   let fert117_p = document.createElement("textarea");
-   fert117_p.innerText= getProductDetails["address"];
-   div_fert117.append(fert117_p);
+   let fert117_p1 = document.createElement("p");
+   fert117_p1.innerText= getProductDetails["address"];
+   div_fert117.append(fert117_p1);
+
+      
+   let fert117_p2 = document.createElement("p");
+   fert117_p2.innerText= getProductDetails["district"];
+   div_fert117.append(fert117_p2);
+
+   let fert117_p3 = document.createElement("p");
+   fert117_p3.innerText= getProductDetails["zipCode"];
+   div_fert117.append(fert117_p3);
+
+   let fert117_p4 = document.createElement("p");
+   fert117_p4.innerText= getProductDetails["state"];
+   div_fert117.append(fert117_p4);
+
+
 
 
    // <div class="cancel_order"><button type="submit">Cancel order</button></div>

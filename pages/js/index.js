@@ -46,7 +46,7 @@
 
               // price--------------------
               div_price = document.createElement("div");
-            div_price.setAttribute("class", "price");
+            div_price.setAttribute("class", "price101");
             div_pricecontain.append(div_price);
 
            let price_h2 = document.createElement("h3");

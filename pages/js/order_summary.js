@@ -220,6 +220,8 @@ const zipCode = "";
 const deliveryPlace = "";
 const paymentMethod = "";
 const orderStatus = "";
+const district = "";
+const state = "Tamil Nadu";
 
 // Get current time and format it as a string
 const currentTime = new Date();
