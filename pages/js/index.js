@@ -1,124 +1,117 @@
+//  <div class="today">
+//    <a href="./pages/user/off1.html"> <img src="./assets/images/fert7.jpg" alt="Sumitomo Lano Pyriproxyfen 10% SC Insecticides">
+//     <p>Sumitomo Lano Pyriproxyfen 10% SC Insecticides</p>
+//
+//    <div class="pprice">
+//     <h2>₹ 1040</h2><del>₹ 2040</del></div>
+//     <h3>You Save:₹ 1,000</h3></a>
 
-    //  <div class="today">
-    //    <a href="./pages/user/off1.html"> <img src="./assets/images/fert7.jpg" alt="Sumitomo Lano Pyriproxyfen 10% SC Insecticides">
-    //     <p>Sumitomo Lano Pyriproxyfen 10% SC Insecticides</p>
-    //  
-    //    <div class="pprice">
-    //     <h2>₹ 1040</h2><del>₹ 2040</del></div>
-    //     <h3>You Save:₹ 1,000</h3></a>
-       
-    // </div>
-    let product_details = JSON.parse(localStorage.getItem("dhanuka_details"));
-  const product_path = window.location.origin
+// </div>
+const product_details = JSON.parse(localStorage.getItem("dhanuka_details"));
+const product_path = window.location.origin;
 
-    for(let i = 0; i < product_details.length; i++) {
-      let  div_today = document.createElement("div");
-            div_today.setAttribute("class", "today");
-            div_today.setAttribute("data-id",product_details[i]["product_unique_id"])
-            document.querySelector("div.offers1").append(div_today);
-       
-           
-            const product_name = encodeURIComponent(product_details[i]["product_name"]);
-            const product_id = product_details[i]["product_unique_id"];
-              const product_url = `${product_path}/pages/user/product_details.html?product=${product_name}&product_id=${product_id}`;
+for (let i = 0; i < product_details.length; i++) {
+  const div_today = document.createElement("div");
+  div_today.setAttribute("class", "today");
+  div_today.setAttribute("data-id", product_details[i].product_unique_id);
+  document.querySelector("div.offers1").append(div_today);
 
-           let  insecticide_a = document.createElement("a");
-           
-            insecticide_a.setAttribute("href", product_url);
-            div_today.append(insecticide_a);
+  const product_name = encodeURIComponent(product_details[i].product_name);
+  const product_id = product_details[i].product_unique_id;
+  const product_url = `${product_path}/pages/user/product_details.html?product=${product_name}&product_id=${product_id}`;
 
-            
-            //  product image------------------
-           let insecticide_img = document.createElement("img");
-            insecticide_img.setAttribute("src",product_details[i]["source"]);
-            insecticide_img.setAttribute("alt", "");
-            insecticide_a.append(insecticide_img);
+  const insecticide_a = document.createElement("a");
 
-            
-            //  product name----------------------.
-           let pro_name = document.createElement("p");
-            pro_name.innerText = product_details[i]["product_name"];
-            insecticide_a.append(pro_name);
+  insecticide_a.setAttribute("href", product_url);
+  div_today.append(insecticide_a);
 
-           let div_pricecontain = document.createElement("div");
-            div_pricecontain.setAttribute("class", "pricecontain");
-            insecticide_a.append(div_pricecontain);
+  //  product image------------------
+  const insecticide_img = document.createElement("img");
+  insecticide_img.setAttribute("src", product_details[i].source);
+  insecticide_img.setAttribute("alt", "");
+  insecticide_a.append(insecticide_img);
 
-              // price--------------------
-              div_price = document.createElement("div");
-            div_price.setAttribute("class", "price101");
-            div_pricecontain.append(div_price);
+  //  product name----------------------.
+  const pro_name = document.createElement("p");
+  pro_name.innerText = product_details[i].product_name;
+  insecticide_a.append(pro_name);
 
-           let price_h2 = document.createElement("h3");
-            price_h2.innerText =  "Special Price: ";
-            div_price.append(price_h2);
-            // current price--------------------
-            const old_price1 = product_details[i]["actual_price"];
-            const discount1 = product_details[i]["discount"];
-            const price = old_price1 - discount1;
-            price_h2 = document.createElement("h4");
-            price_h2.innerText =  "₹" + price;
-            div_price.append(price_h2);
+  const div_pricecontain = document.createElement("div");
+  div_pricecontain.setAttribute("class", "pricecontain");
+  insecticide_a.append(div_pricecontain);
 
-           let div_price11 = document.createElement("div");
-            div_price11.setAttribute("class", "price11");
-            div_pricecontain.append(div_price11);
+  // price--------------------
+  const div_price = document.createElement("div");
+  div_price.setAttribute("class", "price101");
+  div_pricecontain.append(div_price);
 
-           let price11_h2 = document.createElement("h3");
-            price11_h2.innerText =  "Actual Price: ";
-            div_price11.append(price11_h2);
-            // old price----------------------
-            
-            const old_price = product_details[i]["actual_price"];
-          let  price_del = document.createElement("del");
-            price_del.innerText = "₹" + old_price;
-            div_price11.append(price_del);
+  let price_h2 = document.createElement("h3");
+  price_h2.innerText = "Special Price: ";
+  div_price.append(price_h2);
+  // current price--------------------
+  const old_price1 = product_details[i].actual_price;
+  const discount1 = product_details[i].discount;
+  const price = old_price1 - discount1;
+  price_h2 = document.createElement("h4");
+  price_h2.innerText = `₹${price}`;
+  div_price.append(price_h2);
 
+  const div_price11 = document.createElement("div");
+  div_price11.setAttribute("class", "price11");
+  div_pricecontain.append(div_price11);
 
-            
-           let div_save = document.createElement("div");
-            div_save.setAttribute("class", "div_save");
-            insecticide_a.append(div_save);
+  const price11_h2 = document.createElement("h3");
+  price11_h2.innerText = "Actual Price: ";
+  div_price11.append(price11_h2);
+  // old price----------------------
 
-            // save price details------------------
-           let save_h3 = document.createElement("h3");
-            const discount = product_details[i]["discount"];
-            save_h3.innerText = "You Save" + " - " + "₹" + discount ;
-            div_save.append(save_h3);
+  const old_price = product_details[i].actual_price;
+  const price_del = document.createElement("del");
+  price_del.innerText = `₹${old_price}`;
+  div_price11.append(price_del);
 
-            document.querySelector("div.offers1").append(div_today);
+  const div_save = document.createElement("div");
+  div_save.setAttribute("class", "div_save");
+  insecticide_a.append(div_save);
 
-    }
+  // save price details------------------
+  const save_h3 = document.createElement("h3");
+  const { discount } = product_details[i];
+  save_h3.innerText = `You Save - ₹${discount}`;
+  div_save.append(save_h3);
 
-    // advertisement images js code
-
-    let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+  document.querySelector("div.offers1").append(div_today);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
+// advertisement images js code
+let slideIndex = 1;
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
 
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
 
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}

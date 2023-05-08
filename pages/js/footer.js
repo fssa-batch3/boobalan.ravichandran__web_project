@@ -1,11 +1,10 @@
-const footroot = window.location.origin
-
+const footroot = window.location.origin;
 
 const footerHtml = `
 <footer>
 <div class="footer1">
     <div class="img101">
-        <a href="${root}/index.html"> <img src="${footroot}/assets/images/Fert agri.png" alt="logo"> </a>
+        <a href="${footroot}/index.html"> <img src="${footroot}/assets/images/Fert agri.png" alt="logo"> </a>
     </div>
     <div class="about111">
         <div class="quick">
@@ -91,6 +90,6 @@ const footerHtml = `
                 src="../../assets/images/facebook.png" alt="facebook"></a>
     </div>
 </div>
-</div>`
+</div>`;
 
-document.footer.insertAdjacentHTML("afterbegin",footerHtml);
+document.footer.insertAdjacentHTML("afterbegin", footerHtml);

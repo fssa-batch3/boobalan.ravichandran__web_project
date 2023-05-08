@@ -15,6 +15,7 @@ main{
     width:250px;
     height: 250px;
     margin-top: 130px;
+    display: block;
 }
 .fert13,.fert15 ,.fert16 ,.fert5 ,.fert116{
     display: flex;
@@ -70,7 +71,7 @@ main{
 }
 .address1{
     width:200px;
-    margin-top: 50px;
+    margin-top: 10px;
     min-height:100px;
 }
 .address1 h1{
@@ -105,6 +106,29 @@ main{
     background-color: rgb(7, 111, 7);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+
+.feedback{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    color:rgb(0, 70, 183)
+}
+.feedback img{
+    width:50px;
+    height: 50px;
+    margin-top: -10px;
+  
+}
+.feedback a{
+    text-decoration: none;
+}
+#feedbackH3{
+    font-size: 18px;
+    margin-top: -35px;
+    margin-left: 50px;
+  
+}
+/* ----------feeback and reviews------ */
 
 
 /* -----------------/@media mobile screen/----------------------- */

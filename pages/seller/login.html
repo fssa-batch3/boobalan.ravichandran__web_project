@@ -2,73 +2,76 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-          <link rel="stylesheet" href="../../assets/css/sell_login.css">
-          <title>seller Login </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../../assets/css/sell_login.css">
+        <title>seller Login </title>
         
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
       
-<link rel="stylesheet" href="../../assets/css/normalize.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
     <main>
         <div class="box">
-        <form action="#" class="form">
+            <form action="#" class="form">
                 <img src="../../assets/images/Fert agri.png" alt="logo">
-                    <h1>Seller Login</h1>
-                    <div class="form-group">
-                       <input type="text" id="mobile" class="form-control" required /> 
-                       <label for="mobile" class="form-label"> Email or Phone </label>
-               </div>
-               <div class="form-group">
-                   <input type="password"  id="txtPassword" class="form-control"  required />
-                   <label for="txtPassword" class="form-label">Enter Your Password</label>
-               </div>
-               <div class="form-group">
-          <label class="showLabel">
-            <input type="checkbox" id="show">
-            Show Password
-          </label>
-               </div>
-              <div>
-                <div class="btn">
-                    <a href="../seller/forgot_pass.html">Forgot Password?</a>
-                   <button type="submit" id="seller_login">Login</button>
+                <h1>Seller Login</h1>
+                <div class="form-group">
+                    <input type="text" id="mobile" class="form-control" required> 
+                    <label for="mobile" class="form-label"> Email or Phone </label>
                 </div>
-                <h4 class="singup"> New to FAB?<a href="../seller/seller_singup.html">Create an account</a></h4>
-            </div>
-        </form>
+                <div class="form-group">
+                    <input type="password" id="txtPassword" class="form-control" required>
+                    <label for="txtPassword" class="form-label">Enter Your Password</label>
+                </div>
+                <div class="form-group">
+                    <label class="showLabel">
+                        <input type="checkbox" id="show">
+                        Show Password
+                    </label>
+                </div>
+                <div>
+                    <div class="btn">
+                        <a href="../seller/forgot_pass.html">Forgot Password?</a>
+                        <button type="submit" id="seller_login">Login</button>
+                    </div>
+                    <h4 class="singup">
+                        New to FAB?<a href="../seller/seller_singup.html">Create an account</a>
+                    </h4>
+                </div>
+            </form>
         </div>
     </main>
     <script src="../js/seller_login.js"></script>
 
     <script>
-        document.getElementById("seller_login").addEventListener("click",
-        function sellerLogin(e)
-        {
-        let mobile = document.getElementById('mobile').value,
-          password = document.getElementById('txtPassword').value;
-        let seller_list = JSON.parse(localStorage.getItem('seller_list')) || [];
-        let exist = seller_list.length &&
-        JSON.parse(localStorage.getItem('seller_list')).some(data =>
-            data.signupDetails.sel_phone.toLowerCase() == mobile &&
-            data.signupDetails.sel_password == password);
-        if(!exist){
-            alert("Incorrect login credentials..❌");
-        }
-        else{
-            alert("Your login in successful ..✅");
-            document.querySelector('form').reset();
-            location.href = "./seller_homepage.html";
-            localStorage.setItem("seller_data", JSON.stringify(mobile));
-        }
-        e.preventDefault();
-    });
-
+        document
+  .getElementById("seller_login")
+  .addEventListener("click", (e) => {
+            const mobile = document.getElementById("mobile").value;
+    const password = document.getElementById("txtPassword").value;
+            const seller_list = JSON.parse(localStorage.getItem("seller_list")) || [];
+            const exist =
+      seller_list.length &&
+      JSON.parse(localStorage.getItem("seller_list")).some(
+                (data) =>
+                  data.signupDetails.sel_phone.toLowerCase() === mobile &&
+                  data.signupDetails.sel_password === password
+      );
+            if (!exist) {
+              alert("Incorrect login credentials..❌");
+            } else {
+              alert("Your login in successful ..✅");
+              document.querySelector("form").reset();
+              window.location.href = "./seller_homepage.html";
+              localStorage.setItem("seller_data", JSON.stringify(mobile));
+            }
+            e.preventDefault();
+  });
     </script>
     </body>
-    </html>
+</html>

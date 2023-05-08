@@ -1,354 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" /><link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
   
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/footer.css">
+        <link rel="stylesheet" href="../../assets/css/style.css">
+        <link rel="stylesheet" href="../../assets/css/footer.css">
     
-    <link rel="stylesheet" href="../../assets/css/user_order.css">
+        <link rel="stylesheet" href="../../assets/css/user_order.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <title>My order Page</title>
-</head>
+        <title>My order Page</title>
+    </head>
 
-<body>
+    <body>
 
-    <main>
-        <div class="empty_order" id="empty_orderr">
-             <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8412d0104101523.Y3JvcCwxMDI0LDgwMCwwLDcw.jpg" alt="empty order"> 
-            <button id="start_shopping" type="button">Start Shopping</button>
-        </div>
-      <div class="orderAlign">
-        <table class="order_table" style="width:100%" id="order_tablee">
-            <caption >Orders Details</caption>
-            <tr>
-                <th>Order</th>
-                <th>Delivery date</th> 
-                <th>Status</th>
-                <th>Total price</th>
-                <th>Details</th>
-              </tr>
-              <!-- <tr class="td">
-                <td><img src="../../assets/images/Adama/ada1.avif" alt="last order"></td>
-                <td>15/08/2022</td>
-                <td>Completed</td>
-                <td>Rs:2300</td>
-                <td  class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-              </tr>
-              <tr class="td">
-                <td><img src="../../assets/images/bayer/bay1.avif" alt="order"></td>
-                <td>23/04/2022</td>
-                <td>Completed</td>
-                <td>Rs:1650</td>
-                    <td class="eye"><a href="./order_deliver1.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-              </tr>
-              <tr class="td">
-                <td><img src="../../assets/images/Bio Fertilizers/bio1.jpg" alt="order1"></td>
-                <td>15/02/2022</td>
-                <td>Cancelled</td>
-                <td>Rs:890</td>
-                <td class="eye"><a href="./order_deliver2.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-               </tr>
-               <tr class="td">
-                <td><img src="../../assets/images/dhanuka/dhan1.jpg" alt="order2"></td>
-                <td>18/11/2021</td>
-                <td>Completed</td>
-                <td class="eye">Rs:1890</td>
-                    <td  class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-              </tr>
-              <tr class="td">
-                <td><img src="../../assets/images/dow agro/dow1.jpg" alt="order3"></td>
-                <td>11/08/2021</td>
-                <td>Completed</td>
-                <td>Rs:2170</td>
-                    <td class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-              </tr>
-              <tr>
-                <td><img src="../../assets/images/fungicides/fun1.jpg" alt="order4"></td>
-                <td>08/03/2021</td>
-                <td>Cancelled</td>
-                <td>Rs:560</td>
-                    <td class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-              </tr> -->
-               </table>
-      </div>
-    </main>
-    <div class="mobile_order_page">
-        <h2>Order details</h2>
-        <div class="mobile_order_details">
-            <div class="mobile_order_content">
-                <div class="order_image">
-                    <img src="../../assets/images/Adama/ada1.avif" alt="last order">
-                </div>
-                <div class="order_delivery_date">
-                   <p>15/08/2022</p>
-                   <p>Completed</p>
-                   <p>Rs:2300</p>
-                </div>
-                <div class="order_delivery_details">
-                  <a href="./order_deliver.html"><i class="fa fa-angle-double-right" style="font-size:24px"></i></a>
-                </div>
+        <main>
+            <div class="empty_order" id="empty_orderr">
+                <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8412d0104101523.Y3JvcCwxMDI0LDgwMCwwLDcw.jpg" alt="empty order"> 
+                <button id="start_shopping" type="button">Start Shopping</button>
             </div>
-            <div class="mobile_order_content">
-                <div class="order_image">
-                    <img src="../../assets/images/bayer/bay1.avif" alt="order">
-                </div>
-                <div class="order_delivery_date">
-                    <p>23/04/2022</p>
-                    <p>Completed</p>
-                    <p>Rs:1650</p>
-                </div>
-                <div class="order_delivery_details">
-                    <a href="./order_deliver1.html"><i class="fa fa-angle-double-right" style="font-size:24px"></i></a>
-                </div>
+            <div class="orderAlign">
+                <table class="order_table" style="width:100%" id="order_tablee">
+                    <caption >Orders Details</caption>
+                    <tr>
+                        <th>Order</th>
+                        <th>Delivery date</th> 
+                        <th>Status</th>
+                        <th>Total price</th>
+                        <th>Details</th>
+                    </tr>
+                    <!-- <tr class="td">
+                        <td><img src="../../assets/images/Adama/ada1.avif" alt="last order"></td>
+                        <td>15/08/2022</td>
+                        <td>Completed</td>
+                        <td>Rs:2300</td>
+                        <td  class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
+                        </tr>
+                        <tr class="td">
+                        <td><img src="../../assets/images/bayer/bay1.avif" alt="order"></td>
+                        <td>23/04/2022</td>
+                        <td>Completed</td>
+                        <td>Rs:1650</td>
+                        <td class="eye"><a href="./order_deliver1.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
+                        </tr>
+                        <tr class="td">
+                        <td><img src="../../assets/images/Bio Fertilizers/bio1.jpg" alt="order1"></td>
+                        <td>15/02/2022</td>
+                        <td>Cancelled</td>
+                        <td>Rs:890</td>
+                        <td class="eye"><a href="./order_deliver2.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
+                        </tr>
+                        <tr class="td">
+                        <td><img src="../../assets/images/dhanuka/dhan1.jpg" alt="order2"></td>
+                        <td>18/11/2021</td>
+                        <td>Completed</td>
+                        <td class="eye">Rs:1890</td>
+                        <td  class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
+                        </tr>
+                        <tr class="td">
+                        <td><img src="../../assets/images/dow agro/dow1.jpg" alt="order3"></td>
+                        <td>11/08/2021</td>
+                        <td>Completed</td>
+                        <td>Rs:2170</td>
+                        <td class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
+                        </tr>
+                        <tr>
+                        <td><img src="../../assets/images/fungicides/fun1.jpg" alt="order4"></td>
+                        <td>08/03/2021</td>
+                        <td>Cancelled</td>
+                        <td>Rs:560</td>
+                        <td class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
+                        </tr> -->
+                </table>
             </div>
-           <div class="mobile_order_content">
-            <div class="order_image">
-                <img src="../../assets/images/Bio Fertilizers/bio1.jpg" alt="order1">
-            </div>
-            <div class="order_delivery_date">
-                <p>18/11/2021</p>
-                <p>Cancelled</p>
-                <p>Rs:890</p>
-            </div>
-         
-                <div class="order_delivery_details">
-                    <a href="./order_deliver2.html"><i class="fa fa-angle-double-right" style="font-size:24px"></i></a>
-                </div>
-        
-           </div>
-           <div class="mobile_order_content">
-           <div class="order_image">
-            <img src="../../assets/images/dhanuka/dhan1.jpg" alt="order2">
-           </div>
-           <div class="order_delivery_date"> 
-            <p>18/11/2021</p>
-            <p>Completed</p>
-            <p>Rs:1890</p>
-           </div>
-           <div class="order_delivery_details">
-            <a href="./order_deliver1.html"><i class="fa fa-angle-double-right" style="font-size:24px"></i></a>
-           </div>
-           </div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer1">
-            <div class="img101">
-                <a href="../../index.html">
-                    <img src="../../assets/images/Fert agri.png" alt="logo">
-                  </a>
-            </div>
-            <div class="about111">
-                    <div  class="quick" >
-                        <h2>QUICK LINKS</h2>
-                    <p> <a href="./about_us.html">ABOUT US</a></p>
-                    <p> <a href="./wishlist.html">WISHLIST</a></p>
-                    <p> <a href="./offers.html">OFFERS</a></p>
-                    <p> <a href="./user_interface.html">HOME</a></p>
+        </main>
+        <div class="mobile_order_page">
+            <h2>Order details</h2>
+            <div class="mobile_order_details">
+                <div class="mobile_order_content">
+                    <div class="order_image">
+                        <img src="../../assets/images/Adama/ada1.avif" alt="last order">
                     </div>
-                <div  class="quick" >
-                        <h2>BRANDS</h2>
-                        <p><a href="./dhanuka.html">DHANUKA</a></p>
-                    <p>  <a href="./dow_agro.html">DOW AGRO SCIENCE</a></p>
-                        <p><a href="./upl.html">UPL</a></p>
-                    <p>  <a href="./tata.html"> TATA RALLIS</a></p>
-                        <p><a href="./adama.html">ADAMA</a></p>
-                        <p><a href="./bayer.html">BAYER</a></p>
+                    <div class="order_delivery_date">
+                        <p>15/08/2022</p>
+                        <p>Completed</p>
+                        <p>Rs:2300</p>
+                    </div>
+                    <div class="order_delivery_details">
+                        <a href="./order_deliver.html">
+                            <i class="fa fa-angle-double-right" style="font-size:24px"></i>
+                        </a>
+                    </div>
                 </div>
-                <div  class="quick" >
-                        <h2>CROP PROTECTION</h2>
-                    <p><a href="./insecticides.html">BIO INSECTICIDES</a></p>
-                    <p><a href="./fungicides.html">BIO FUNGICIDES</a></p>
-                    <p><a href="./nematicides.html">BIO NEMATICIDES</a></p>
-                    <p><a href="./viricides.html"> BIO VIRCIDES</a></p>
-            </div>
-            <div  class="quick" >
-                <h2>CONTACT US</h2>
-                <div class="rboomi">
-                    <h3>EMAIL</h3>
-               <p> rboomibalan459@gmail.com</p>
+                <div class="mobile_order_content">
+                    <div class="order_image">
+                        <img src="../../assets/images/bayer/bay1.avif" alt="order">
+                    </div>
+                    <div class="order_delivery_date">
+                        <p>23/04/2022</p>
+                        <p>Completed</p>
+                        <p>Rs:1650</p>
+                    </div>
+                    <div class="order_delivery_details">
+                        <a href="./order_deliver1.html">
+                            <i class="fa fa-angle-double-right" style="font-size:24px"></i>
+                        </a>
+                    </div>
                 </div>
-               <div class="rboomi">
-                <h3>PHONE</h3>
-                <p>+919629223356</p>
-               </div>
-               <div class="rboomi">
-                <h3>ADDRESS</h3>
-                <p> 1/115, Thirumurugan street, Mandumandram Nagar, Tiruchippalli-620021</p>
-               </div>
-            </div>
-        </div>
-        <div class="bottom">
-            <div class="cont">
-                <p>FOLLOW US</p>
-            </div>
-        <div class="social">
-            <a href="https://www.instagram.com/rp0803/?igshid=YmMyMTA2M2Y%3D" > <img src="../../assets/images/instagram.png" alt="instagram"></a>
-            <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g" ><img src="../../assets/images/youtube.webp" alt="youtube"></a>
-            <a href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app"><img src="../../assets/images/mail.jpg" alt="email"></a>
-              <a href="https://twitter.com/agrigoi?lang=en"><img src="../../assets/images/twiter.png" alt="twitter"></a>
-            <a href="https://www.facebook.com/people/Agriculture/100068310005265/" ><img src="../../assets/images/facebook.png" alt="facebook"></a>
-            <a href="#"><img src="../../assets/images/whatsapp.webp" alt="whatsapp"></a>
-    
-                </div>
-            </div>
-        </div>
-    </footer>
-<div class="mobile_footer">
-    <div class="mobile_aboutus">
-    <a href="./user_interface.html">Home</a>
-    <a href="about_us.html"><p>About Us</p></a>
-          <p>(+91)9629223356</p>
+                <div class="mobile_order_content">
+                    <div class="order_image">
+                        <img src="../../assets/images/Bio Fertilizers/bio1.jpg" alt="order1">
+                    </div>
+                    <div class="order_delivery_date">
+                        <p>18/11/2021</p>
+                        <p>Cancelled</p>
+                        <p>Rs:890</p>
+                    </div>
+         
+                    <div class="order_delivery_details">
+                        <a href="./order_deliver2.html">
+                            <i class="fa fa-angle-double-right" style="font-size:24px"></i>
+                        </a>
+                    </div>
         
-    </div>
-     <div class="copyright">
-      <p> Copyright © 2021 - 2023 FAB - Designed By </p><span>Boobalan-R</span>
-  </div>
-  <div class="mobile_social">
-    <p>Contact Us</p>
-    <div>
-    <a href="https://twitter.com/agrigoi?lang=en"><img src="../../assets/images/twiter.png" alt="twitter"></a>
-    <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g" ><img src="../../assets/images/youtube.webp" alt="youtube"></a>
-    <a href="https://www.facebook.com/people/Agriculture/100068310005265/" ><img src="../../assets/images/facebook.png" alt="facebook"></a>
-  </div>
-  </div>
-  </div>
-<!-- <script src="../js/menubar.js"></script> -->
-
-<script>
-    //  <!-- <tr class="td">
-    //             <td><img src="../../assets/images/Adama/ada1.avif" alt="last order"></td>
-    //             <td>15/08/2022</td>
-    //             <td>Completed</td>
-    //             <td>Rs:2300</td>
-    //             <td  class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-
-    //           </tr>
-    const logedUserDetails = JSON.parse(localStorage.getItem("user_data"));
-    const orderDetails = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) || [];
-
-    const pro_path = window.location.origin
-
-
-
-const deliverStatus ="true";
-const getOrderDetails = orderDetails.filter(details=>details.deliveryStatus == deliverStatus && details.userUniqueId == logedUserDetails);
-for(let i=0;i<getOrderDetails.length; i++){
-  let tr = document.createElement("tr");
-  tr.setAttribute("class","td");
-  document.querySelector(".order_table").append(tr);
-
-  let td_1 = document.createElement("td");
-  tr.append(td_1);
-  let td_1_img  = document.createElement("img");
-  td_1_img.setAttribute("src", getOrderDetails[i]["productImage"]);
-  td_1_img.setAttribute("alt", "");
-  td_1.append(td_1_img);
-
-  let td_2 = document.createElement("td");
-  td_2.innerText= getOrderDetails[i]["deliveryDate"];
-  tr.append(td_2);
-  let  td_3 = document.createElement("td");
-  td_3.innerText = getOrderDetails[i]["orderStatus"]
-  tr.append(td_3);
-  let  td_4 = document.createElement("td");
-  td_4.innerText= "₹"+getOrderDetails[i]["productCurrentPrice"];
-  tr.append(td_4);
-
-  let  td_5 = document.createElement("td");
-  td_5.setAttribute("class","eye");
-  tr.append(td_5);
-
-
-            const product_id = getOrderDetails[i]["orderUniqueId"];
-              const product_url = `${pro_path}/pages/user/order_deliver.html?orderDetails=`+ product_id;
-            // <div class="insecticide"> </div>
-  let td_5_a = document.createElement("a");
-  td_5_a.setAttribute("href", product_url);
-  td_5_a.innerText ="View"
-  td_5.append(td_5_a);
-
-  td_5_a_i = document.createElement("i");
-  td_5_a_i.setAttribute("class","fa fa-eye");
-  td_5_a_i.setAttribute("style","font-size:20px");
-  td_5_a.append(td_5_a_i);
-
-  function formatDate(date) {
-    var d = new Date(date),
-    month = '' + (d.getMonth() + 1),
-    day = '' + d.getDate(),
-    year = d.getFullYear();
-
-    if (month.length < 2) month = '0' + month;
-    if (day.length < 2) day = '0' + day;
-
-    return [day, month, year].join('/');
-  }
-
-  if (getOrderDetails[i]["orderStatus"] !== "Cancelled") {
-    const currentDate = new Date();
-    const day = String(currentDate.getDate()).padStart(2, '0');
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-    const year = currentDate.getFullYear();
-    const formattedDate = `${day}/${month}/${year}`;
-
-    // console.log("formattedDate:", formattedDate);
-
-    const deliverydate = getOrderDetails[i]["deliveryDate"];
-    const [inputDay, inputMonth, inputYear] = deliverydate.split("/");
-    const inputDateObj = new Date(`${inputMonth}/${inputDay}/${inputYear}`);
-    inputDateObj.setDate(inputDateObj.getDate() - 3);
-    const threeDaysBeforeDate = `${String(inputDateObj.getDate()).padStart(2, '0')}/${String(inputDateObj.getMonth() + 1).padStart(2, '0')}/${inputDateObj.getFullYear()}`;
-
-    // console.log("deliverydate:", deliverydate);
-    // console.log("threeDaysBeforeDate:", threeDaysBeforeDate);
-       
-    if (formattedDate === threeDaysBeforeDate) {
-      const status = "Shipped";
-      getOrderDetails[i]["orderStatus"] = status;
-      localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(getOrderDetails));
-    } 
-
-    if (deliverydate > formattedDate) {
-      const ord_status = "Delivered";
-      getOrderDetails[i]["orderStatus"] = ord_status;
-      localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(getOrderDetails));
-    }
-  }
-
-}
-
-const orderMessage = document.getElementById("empty_orderr");
-const orderTable = document.getElementById("order_tablee");
-
-if(getOrderDetails.length == 0){
-    orderMessage.style.display = "block";
-    orderTable.style.display = "none";
-}
-else{
-    orderMessage.style.display = "none";
-    orderTable.style.display = "block";
-}
-
-
-
-
-document.getElementById("start_shopping").addEventListener("click",
-function startShooping(){
-    location.href=`${pro_path}/index.html`
-})
-</script>
-<script src="../js/header.js"></script>
-<script src="../js/search.js"></script>
-    </body>
-    </html>
+                </div>
+                <div class="mobile_order_content">
+                    <div class="order_image">
+                        <img src="../../assets/images/dhanuka/dhan1.jpg" alt="order2">
+                    </div>
+                    <div class="order_delivery_date"> 
+                        <p>18/11/2021</p>
+                        <p>Completed</p>
+                        <p>Rs:1890</p>
+                    </div>
+                    <div class="order_delivery_details">
+                        <a href="./order_deliver1.html">
+                            <i class="fa fa-angle-double-right" style="font-size:24px"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer1">
+                <div class="img101">
+                    <a href="../../index.html">
+                        <img src="../../assets/images/Fert agri.png" alt="logo">
+                    </a>
+                </div>
+                <div class="about111">
+                    <div class="quick">
+                        <h2>QUICK LINKS</h2>
+                        <p>
+                            <a href="./about_us.html">ABOUT US</a>
+                        </p>
+                        <p>
+                            <a href="./wishlist.html">WISHLIST</a>
+                        </p>
+                        <p>
+                            <a href="./offers.html">OFFERS</a>
+                        </p>
+                        <p>
+                            <a href="./user_interface.html">HOME</a>
+                        </p>
+                    </div>
+                    <div class="quick">
+                        <h2>BRANDS</h2>
+                        <p>
+                            <a href="./dhanuka.html">DHANUKA</a>
+                        </p>
+                        <p>
+                            <a href="./dow_agro.html">DOW AGRO SCIENCE</a>
+                        </p>
+                        <p>
+                            <a href="./upl.html">UPL</a>
+                        </p>
+                        <p>
+                            <a href="./tata.html"> TATA RALLIS</a>
+                        </p>
+                        <p>
+                            <a href="./adama.html">ADAMA</a>
+                        </p>
+                        <p>
+                            <a href="./bayer.html">BAYER</a>
+                        </p>
+                    </div>
+                    <div class="quick">
+                        <h2>CROP PROTECTION</h2>
+                        <p>
+                            <a href="./insecticides.html">BIO INSECTICIDES</a>
+                        </p>
+                        <p>
+                            <a href="./fungicides.html">BIO FUNGICIDES</a>
+                        </p>
+                        <p>
+                            <a href="./nematicides.html">BIO NEMATICIDES</a>
+                        </p>
+                        <p>
+                            <a href="./viricides.html"> BIO VIRCIDES</a>
+                        </p>
+                    </div>
+                    <div class="quick">
+                        <h2>CONTACT US</h2>
+                        <div class="rboomi">
+                            <h3>EMAIL</h3>
+                            <p> rboomibalan459@gmail.com</p>
+                        </div>
+                        <div class="rboomi">
+                            <h3>PHONE</h3>
+                            <p>+919629223356</p>
+                        </div>
+                        <div class="rboomi">
+                            <h3>ADDRESS</h3>
+                            <p> 1/115, Thirumurugan street, Mandumandram Nagar, Tiruchippalli-620021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="cont">
+                        <p>FOLLOW US</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.instagram.com/rp0803/?igshid=YmMyMTA2M2Y%3D">
+                            <img src="../../assets/images/instagram.png" alt="instagram">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g">
+                            <img src="../../assets/images/youtube.webp" alt="youtube">
+                        </a>
+                        <a href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app">
+                            <img src="../../assets/images/mail.jpg" alt="email">
+                        </a>
+                        <a href="https://twitter.com/agrigoi?lang=en">
+                            <img src="../../assets/images/twiter.png" alt="twitter">
+                        </a>
+                        <a href="https://www.facebook.com/people/Agriculture/100068310005265/">
+                            <img src="../../assets/images/facebook.png" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="../../assets/images/whatsapp.webp" alt="whatsapp">
+                        </a>
     
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="mobile_footer">
+            <div class="mobile_aboutus">
+                <a href="./user_interface.html">Home</a>
+                <a href="about_us.html">
+                    <p>About Us</p>
+                </a>
+                <p>(+91)9629223356</p>
+        
+            </div>
+            <div class="copyright">
+                <p> Copyright © 2021 - 2023 FAB - Designed By </p>
+                <span>Boobalan-R</span>
+            </div>
+            <div class="mobile_social">
+                <p>Contact Us</p>
+                <div>
+                    <a href="https://twitter.com/agrigoi?lang=en">
+                        <img src="../../assets/images/twiter.png" alt="twitter">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g">
+                        <img src="../../assets/images/youtube.webp" alt="youtube">
+                    </a>
+                    <a href="https://www.facebook.com/people/Agriculture/100068310005265/">
+                        <img src="../../assets/images/facebook.png" alt="facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+       
+        <!-- <script src="../js/menubar.js"></script> -->
+<script src="../js/all_product_details.js"></script>
+        <script src="../js/user_orders.js">
+        
+</script>
+        <script src="../js/header.js"></script>
+        <script src="../js/search.js"></script>
+    </body>
+</html>

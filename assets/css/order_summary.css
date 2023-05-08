@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lora', serif;
+
     }
   main{
     display: flex;
@@ -10,6 +11,7 @@
     align-items: center;
     margin: auto;
     background-color: black;
+    caret-color: transparent;
   }
  
 .order_summary{
@@ -78,7 +80,7 @@ form img{
     color:rgb(0, 0, 0);
     border: none;
     outline: none;
-    margin-left: 20px;
+  
     padding: 5px ;
     font-size: 20px;
     font-weight: bold;

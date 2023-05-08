@@ -367,12 +367,14 @@ margin-top: -10px;
      } 
 .offers img{
     border-radius: 50%;
-   box-shadow: 0px 5px 12px 0px gray;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .offers img:hover{
-    transform: scale(1.05);
-    transition-delay: .2s;
-    border-radius: 50%;
+  position:relative;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transform: scale(1.04);
 }
 .offers a{
     text-decoration: none;
@@ -571,8 +573,8 @@ padding: 15px 0px 0px 0px;
     margin: 90px 0px 100px 165px;
     padding-bottom: 50px;
     padding-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
 
 
 /* Fert agri boomi priorities */

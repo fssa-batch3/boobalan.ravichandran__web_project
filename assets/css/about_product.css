@@ -1,3 +1,4 @@
+
 #rem1{
     padding: 16px 190px;
     font-size: 18px;
@@ -9,12 +10,16 @@
     margin-bottom: 27px;
    font-weight: bold;
    cursor: pointer;
+   border: 2px solid rgb(248, 175, 4) ;
+
 }
 #rem2{
     padding: 16px 209px;
     font-size: 18px;
     border-radius: 3px;
     border: none;
+    border: 2px solid  rgb(4, 4, 72);
+
     background-color: rgb(4, 4, 72);
     color:rgb(255, 234, 0);
     cursor: pointer;
@@ -23,14 +28,20 @@ a{
     text-decoration: none;
 }
 #rem1:hover {
-    background-color:rgb(248, 195, 4);
-    color: rgb(7, 6, 67);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: rgb(244, 238, 238);
+    color: rgb(4, 4, 80);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: 2px solid rgb(225, 160, 9);
+    
 }
+
+  
 #rem2:hover {
-    background-color: rgb(4, 4, 156);
-        color: rgb(225, 200, 9);
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+       background-color: rgb(244, 238, 238);
+        color: rgb(4, 4, 80);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        border: 2px solid rgb(225, 160, 9);
+        
     }
 
 .rem{
@@ -53,7 +64,7 @@ a{
 }
 main{
     background-color: rgb(255, 255, 255);
-    padding: 50px 100px;
+    padding: 0px 100px 50px 100px;
 }
 .fert1 img{
     margin-left: 5px;
@@ -63,6 +74,7 @@ main{
    border-radius: 10px;
    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
    padding: 2rem;
+  
 }
 .fert2{
     margin-top: 20px;
@@ -70,7 +82,7 @@ main{
 .fert2 h2{
     margin-top:50px ;
     margin-left: 100px;
-    width:530px;
+    width:580px;
     font-size: 30px;
     color: green;
 }
@@ -112,10 +124,13 @@ main{
     padding: 25px 50px 0px 50px;
     border-radius: 10px;
 } */
+
+/* benfits, appliaction, method button */
 .crop_description h1 ,.crop_description h2{
-    color:rgb(255, 255, 255);
+   
     letter-spacing: 0.5px;
-    background-color: rgb(10, 62, 0);
+    background-color: rgb(4, 4, 72);
+    color:rgb(255, 234, 0);
     padding: 18px 50px;
     font-weight: 200;
     width: 380px;text-align: center;
@@ -127,7 +142,7 @@ main{
 
 }
 .crop_description h1:hover ,.crop_description h2:hover{
-    background-color: rgb(22, 122, 2);
+    background-color: rgb(7, 66, 139);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -201,19 +216,36 @@ main{
     margin-top: -20px;
   }
 
-.LikeAlert{
+  .LikeAlert {
     color: white;
     text-align: center;
     background-color: rgb(206, 11, 92);
     font-size: 19px;
-font-weight: bold;
+    font-weight: bold;
     position: relative;
     bottom: 15px;
     border-radius: 5px;
     padding: 15px 20px 10px 20px;
-    width:32%;
-}
-
+    width: 32%;
+    animation-name: bubble;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+  }
+  
+  @keyframes bubble {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
 .like img ,.dislike img{
     width:30px;
     height:30px;
@@ -240,6 +272,142 @@ span{
     display: none;
     animation:likepop 0.9s both
 } */
+
+/* customers reviews page */
+.reviews{
+    display:flex;
+    margin-top: 50px;
+    border-top: 3px solid black;
+    padding-top: 50px;
+
+}
+.reviewsName img{
+  width: 370px;
+  height:300px;
+  border-radius:25%;
+}
+.reviewsName{
+ 
+  padding: 50px;
+  text-align: center;
+  user-select: none;
+  background-color: #f9f9f9;
+}
+.reviewsName h2{
+    margin-top: 20px;
+    background-color: rgb(255, 136, 0);
+    color:white;
+    padding: 13px 10px;
+    border-radius: 50px;
+    font-size: 19px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.reviewsDetails {
+    padding: 0px 50px 50px 50px;
+    margin-left: 50px;
+    
+}
+.reviewsDetails h2{
+    margin-left: 150px;
+    font-size: 28px;
+}
+
+/* customer name and reviews container */
+
+.reviewStarReviewContainer{
+    display: flex;
+    user-select: none;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    padding: 7px 10px 7px 20px;
+}
+.reviewStarContainer{
+    display: flex;
+    background-color: green;
+    color:white;
+    padding: 5px 12px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.reviewStarContainer img{
+background-color: green;
+width:20px;
+height:20px;
+margin-left: 5px;
+
+}
+.reviewStarReviewContainer p{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 4.5px;
+    margin-left: 10px;
+}
+.customerStar1{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;    padding: 5px;
+    border-radius: 5px;
+    width:40vw;
+    margin-top: 5px;
+
+}
+
+/* all customers reviews */
+.allCustomeReviews {
+    padding: 40px 10px 30px 10px;
+    overflow-y: scroll;
+    max-height: 1500px;
+}
+.allCustomeReviews::-webkit-scrollbar{
+    display: none;
+}
+.customersReviewsDiv p{
+    padding: 20px 15px;
+    font-size: 17px;
+    line-height: 26px;
+}
+/* average ratings-- */
+.averageRating{
+    background-color: green;
+    display: flex;
+    padding: 15px 40px;
+    border-radius: 50px;
+    width:170px;
+    margin-top: 50px;
+    margin-left: 100px;
+    color:white;
+    margin-bottom: 50px;
+    animation: color 5s ease-in-out infinite;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+}
+@keyframes color {
+    0%   { background: #0fa7a7; }
+    20%  { background: #048420; }
+    40%  { background: #4fa300; }
+    60%  { background: #ff9500; }
+    80%  { background: #015c02; }
+    100% { background: #38c8c3; }
+    
+  }
+  
+.averageRating h1{
+    font-size:34px;
+ 
+}
+.averageRating img{
+width:40px;
+height:40px;
+margin-left: 14px;
+
+}
+/* no reviewsbackgroung image */
+#NoreviewsLogo{
+    width:600px;
+    height:350px;
+    margin-top: 10%;
+    margin-left: 24%;
+}
+
+
 
 /* ---------========== @media (mobile screen edit) ===========---------------*/
 
@@ -647,8 +815,8 @@ a{
     padding:20px 50px 20px 20px;
     overscroll-behavior-inline: contain;
     margin-top: 20px;
-  border-top: 7px solid rgb(2, 122, 34);
-  border-bottom: 7px solid  rgb(2, 122, 34);
+  /* border-top: 3px solid rgb(2, 122, 34); */
+  /* border-bottom: 3px solid  rgb(2, 122, 34); */
     
   }
   .offerscrop::-webkit-scrollbar{
@@ -692,4 +860,5 @@ a{
     margin-bottom: 20px;
     border-bottom: 5px solid rgb(203, 5, 41) ;
     padding-bottom: 20px;
+    color: green;
  }

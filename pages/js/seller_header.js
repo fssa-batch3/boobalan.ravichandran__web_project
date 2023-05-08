@@ -18,40 +18,37 @@ const header = `
     </div>
 </div>
 
-</header>`
+</header>`;
 document.body.insertAdjacentHTML("afterbegin", header);
 
-
-window.addEventListener('popstate', function(event) {
-    if (!isLoggedIn()) {
-      event.preventDefault();
-      window.location.href = "../seller/login.html";
-    }
-  });
-  
-  function isLoggedIn() {
-    const findLogged = JSON.parse(localStorage.getItem("seller_data"));
-    if(findLogged){
-      return true;
-    }
-    else{
-      return false;
-    }
+function isLoggedIn() {
+  const findLogged = JSON.parse(localStorage.getItem("seller_data"));
+  if (findLogged) {
+    return true;
   }
-  
-  // call the isLoggedIn function when the page loads
+
+  return false;
+}
+
+window.addEventListener("popstate", (event) => {
   if (!isLoggedIn()) {
+    event.preventDefault();
     window.location.href = "../seller/login.html";
   }
-  
-  
-  const logoutSeller = document.getElementById("logout_seller");
-  logoutSeller.addEventListener("click", function(event) {
-    event.preventDefault(); // prevent the default behavior of the link
-    const confirmed = confirm("Are you sure you want to log out?"); // show the confirmation message
-    if (confirmed) { // if "Logout Yes" is clicked
-      localStorage.removeItem("seller_data"); // remove the seller_data from local storage
-      window.location.href = "../../index.html"; // redirect the user to the home page
-    }
-  });
+});
 
+// call the isLoggedIn function when the page loads
+if (!isLoggedIn()) {
+  window.location.href = "../seller/login.html";
+}
+
+const logoutSeller = document.getElementById("logout_seller");
+logoutSeller.addEventListener("click", (event) => {
+  event.preventDefault(); // prevent the default behavior of the link
+  const confirmed = confirm("Are you sure you want to log out?"); // show the confirmation message
+  if (confirmed) {
+    // if "Logout Yes" is clicked
+    localStorage.removeItem("seller_data"); // remove the seller_data from local storage
+    window.location.href = "../../index.html"; // redirect the user to the home page
+  }
+});

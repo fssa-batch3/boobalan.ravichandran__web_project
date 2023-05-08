@@ -1,110 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
           
-          <title>seller sign up pickup details</title>
+        <title>seller sign up pickup details</title>
         
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-<link rel="stylesheet" href="../../assets/css/normalize.css">
-<link rel="stylesheet" href="../../assets/css/pickup_address.css">
-</head>
-<body>
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
+        <link rel="stylesheet" href="../../assets/css/pickup_address.css">
+    </head>
+    <body>
         <div class="box">
             <form class="form">
-                    <img src="../../assets/images/Fert agri.png" alt="logo">
-            <h1>Pickup Address Details</h1>
-            <div class="form-group">
-                <input type="number" class="form-control" id="pincode" required/>
-                <label for="pincode" class="form-label">Pincode</label>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="state" required/>
-                <label for="state" class="form-label">State</label>
+                <img src="../../assets/images/Fert agri.png" alt="logo">
+                <h1>Pickup Address Details</h1>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="pincode" required>
+                    <label for="pincode" class="form-label">Pincode</label>
                 </div>
                 <div class="form-group">
-                    <input type="text"class="form-control" id="district"required/>
+                    <input type="text" class="form-control" id="state" required>
+                    <label for="state" class="form-label">State</label>
+                </div>
+                <div class="form-group">
+                    <input type="text"class="form-control" id="district"required>
                     <label for="district" class="form-label">District</label>
                     
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="gstin" required="true"/>
-               <label for="gstin" class="form-label"> GST Number</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="gstin" required="true">
+                    <label for="gstin" class="form-label"> GST Number</label>
               
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="business_name" required/>
-                <label for="business_name" class="form-label">Business Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="business_name" required>
+                    <label for="business_name" class="form-label">Business Name</label>
                
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="pan" required="true"/>
-                <label for="pan" class="form-label"> PAN Number</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="pan" required="true">
+                    <label for="pan" class="form-label"> PAN Number</label>
             
-             </div>
-            <div class="form-group">
-                <input type="text" class="form-control" id="business_type" required/>
-                <label for="business_type" class="form-label">Business Type</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="business_type" required>
+                    <label for="business_type" class="form-label">Business Type</label>
               
-            </div>
-            <div class="btn1">
-              <button type="submit" id="pickup_address">Continue</button>
-            </div>
-        </form>
+                </div>
+                <div class="btn1">
+                    <button type="submit" id="pickup_address">Continue</button>
+                </div>
+            </form>
         </div>
-        <script src="../js/seller_header.js"></script>
-<script>
-
-    
-const sellerPhoneNumber = new URLSearchParams(window.location.search).get('seller_phone_number');
+        
+        <script>const sellerPhoneNumber = new URLSearchParams(window.location.search).get(
+      "seller_phone_number"
+);
 const sellerDetails = JSON.parse(localStorage.getItem("seller_list"));
 
-const SellerAccountFindIndex = sellerDetails.findIndex(detail =>
-  detail.signupDetails.sel_phone === sellerPhoneNumber
+const SellerAccountFindIndex = sellerDetails.findIndex(
+      (detail) => detail.signupDetails.sel_phone === sellerPhoneNumber
 );
 
-
 if (SellerAccountFindIndex >= 0) {
-  document.getElementById("pickup_address").addEventListener("click", function pickUpDetails(e) {
-    e.preventDefault();
-    const pick_pincode = document.getElementById("pincode").value;
-    const pick_state = document.getElementById("state").value;
-    const pick_district = document.getElementById("district").value;
-    const GST_number = document.getElementById("gstin").value;
-    const business_name = document.getElementById("business_name").value;
-    const pan_number = document.getElementById("pan").value;
-    const business_type = document.getElementById("business_type").value;
-    const   Aadhar_number = "";
+      document
+          .getElementById("pickup_address")
+        .addEventListener("click", (e) => {
+            e.preventDefault();
+            const pick_pincode = document.getElementById("pincode").value;
+            const pick_state = document.getElementById("state").value;
+            const pick_district = document.getElementById("district").value;
+            const GST_number = document.getElementById("gstin").value;
+            const business_name = document.getElementById("business_name").value;
+            const pan_number = document.getElementById("pan").value;
+            const business_type = document.getElementById("business_type").value;
+            const Aadhar_number = "";
 
-    if (pick_pincode === '' || pick_state === '' || pick_district === '' || GST_number === '' || pan_number === '' || business_name === '' || business_type === '' ) {
-    alert('Please fill in all the required fields before continuing.');
-    return;
-  }
+            if (
+              pick_pincode === "" ||
+              pick_state === "" ||
+              pick_district === "" ||
+              GST_number === "" ||
+              pan_number === "" ||
+              business_name === "" ||
+              business_type === ""
+            ) {
+              alert("Please fill in all the required fields before continuing.");
+              return;
+            }
 
-    sellerDetails[SellerAccountFindIndex].pickUpDetails = {
-      sell_pincode: pick_pincode,
-      sell_state: pick_state,
-      sell_district: pick_district,
-      GST_number: GST_number,
-      business_name: business_name,
-      PAN_number: pan_number,
-      business_type: business_type,
-      Aadhar_number
-    };
+            sellerDetails[SellerAccountFindIndex].pickUpDetails = {
+              sell_pincode: pick_pincode,
+              sell_state: pick_state,
+              sell_district: pick_district,
+              GST_number,
+              business_name,
+              PAN_number: pan_number,
+              business_type,
+              Aadhar_number,
+            };
 
-    localStorage.setItem("seller_list", JSON.stringify(sellerDetails));
-    alert("Your pickup address details have been successfully accepted. ✅");
-    location.href = "./bank_details.html?seller_number=" + sellerPhoneNumber;
-       document.querySelector('form').reset();
-  });
+            localStorage.setItem("seller_list", JSON.stringify(sellerDetails));
+            alert("Your pickup address details have been successfully accepted. ✅");
+            window.location.href = `./bank_details.html?seller_number=${sellerPhoneNumber}`;
+            document.querySelector("form").reset();
+        });
 }
-
-
 </script>
-</body>
+    </body>
 </html>

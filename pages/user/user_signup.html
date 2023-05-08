@@ -1,224 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" /><link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-          <link rel="stylesheet" href="../../assets/css/user_signup.css">
-          <title>User signup </title>
+        <link rel="stylesheet" href="../../assets/css/user_signup.css">
+        <title>User signup </title>
          
-<link rel="stylesheet" href="../../assets/css/normalize.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-</head>
-<body>
-    <div class="box">
-        <form class="form" role="form" onsubmit="signUp(event)">
+    </head>
+    <body>
+        <div class="box">
+            <form class="form" role="form">
                 <img src="../../assets/images/Fert agri.png" alt="logo">
-        <h1>Create Your Account</h1>
-        <div class="form-group">
+                <h1>Create Your Account</h1>
+                <div class="form-group">
              
-                <input type="text" class="form-control" id="mobile" required="true" pattern="[0-9].{9}" title="Enter 10 number only"  maxlength="10" /> 
-                <label for="mobile"  class="form-label"> Mobile Number </label>
-        </div>
-        <div class="error"></div>
-        <div class="form-group form-group1">
-                <input type="email" class="form-control" id="email" required  name="submit"   >
-                <label for="email" class="form-label">Email address</label>
-        </div>
-        <div class="error1"></div>
-        <div class="form-group form-group2" >
+                    <input type="text" class="form-control" id="mobile" required="true" pattern="[0-9].{9}" title="Enter 10 number only" maxlength="10"> 
+                    <label for="mobile" class="form-label"> Mobile Number </label>
+                </div>
+                <div class="error"></div>
+                <div class="form-group form-group1">
+                    <input type="email" class="form-control" id="email" required name="submit">
+                    <label for="email" class="form-label">Email address</label>
+                </div>
+                <div class="error1"></div>
+                <div class="form-group form-group2">
             
-            <input type="text"class="form-control" id="full_name" required="true"  pattern="^[a-zA-Z]+(\s[a-zA-Z]+)*$"/>
-            <label for="full_name"  class="form-label">Enter Your Name</label>
-        </div>
-        <div class="error2"></div>
-        <span id="nameValid"></span>
-<!--         
-        <div class="form-group">
+                    <input type="text"class="form-control" id="full_name" required="true" pattern="^[a-zA-Z]+(\s[a-zA-Z]+)*$">
+                    <label for="full_name" class="form-label">Enter Your Name</label>
+                </div>
+                <div class="error2"></div>
+                <span id="nameValid"></span>
+                <!--         
+                    <div class="form-group">
            
-            <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$"  
-              required="true"/>
-            <label for="txtPassword"  class="form-label">Set Password</label>
-            <div id="passwordError" ></div>
-        </div> -->
-        <div class="form-group form-group3">
-          <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$"  required="true"/>
-          <label for="txtPassword" class="form-label">Set Password</label>
-          <div id="passwordError"></div>
-        </div>
-        <div class="password_valid">
-          <label>
-            <input type="checkbox" id="chkUppercase" disabled>
-            Have at 1 Uppercase letter
-          </label>
-        </div>
-        <div class="password_valid"  >
-          <label>
-            <input type="checkbox" id="chkLowercase" disabled>
-            Have at 1 Lowercase letter
-          </label>
-        </div>
-        <div class="password_valid">
-          <label>
-            <input type="checkbox" id="chkSpecialChar" disabled>
-            Have at 1 Special character
-          </label>
-        </div>
-        <div class="password_valid">
-          <label>
-            <input type="checkbox" id="chkNumber" disabled>
-            Have at 1 Number
-          </label>
-        </div>
-        <div class="password_valid">
-          <label>
-            <input type="checkbox" id="chkMinLength" disabled>
-            Have at Minimum 8 characters
-          </label>
-        </div>
-        
-   
+                    <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$"  
+                    required="true"/>
+                    <label for="txtPassword"  class="form-label">Set Password</label>
+                    <div id="passwordError" ></div>
+                    </div> -->
+                <div class="form-group form-group3">
+                    <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" required="true">
+                    <label for="txtPassword" class="form-label">Set Password</label>
+                    <div id="passwordError"></div>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkUppercase" disabled>
+                        Have at 1 Uppercase letter
+                    </label>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkLowercase" disabled>
+                        Have at 1 Lowercase letter
+                    </label>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkSpecialChar" disabled>
+                        Have at 1 Special character
+                    </label>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkNumber" disabled>
+                        Have at 1 Number
+                    </label>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkMinLength" disabled>
+                        Have at Minimum 8 characters
+                    </label>
+                </div>
       
-        <div class="paserror"></div>
-        <div class="form-group form-group3">
-            <input type="password" class="form-control" id="TXTpassword" 
-              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$"   required="true"/>
-            <label for="TXTpassword"  class="form-label">Confirm Password</label>
+                <div class="paserror"></div>
+                <div class="form-group form-group3">
+                    <input type="password" class="form-control" id="TXTpassword" 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" required="true">
+                    <label for="TXTpassword" class="form-label">Confirm Password</label>
+                </div>
+                <div class="form-group">
+                    <label class="showLabel">
+                        <input type="checkbox" id="show">
+                        Show Password
+                    </label>
+                </div>
+                <div class="btn1">
+                    <button type="submit" id="userSignUp">Register</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <label class="showLabel">
-              <input type="checkbox" id="show" >
-              Show Password
-            </label>
-                 </div>
-        <div class="btn1">
-          <button type="submit" >Register</button>
-        </div>
-        </form>
-    </div>
-    <script src="../js/signup_login.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+        <script src="../js/signup_login.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
        
-    <script>
- 
- const mobileInput = document.getElementById('mobile');
-const formGroup = document.querySelector('.form-group');
-const errorMessage = document.querySelector('.error');
+        <script>
+const mobileInput = document.getElementById("mobile");
+const formGroup = document.querySelector(".form-group");
+const errorMessage = document.querySelector(".error");
 
-mobileInput.addEventListener('input', () => {
-  const inputValue = mobileInput.value.trim(); // remove leading/trailing whitespace
-  const isValidInput = /^[6-9]\d{9}$/.test(inputValue) && !/^\d*(\d)\1{9}\d*$/.test(inputValue); // use regex to match the updated criteria
-  if (!isValidInput || inputValue === ''){
-    formGroup.classList.remove('valid');
-    formGroup.classList.add('invalid');
-    if (inputValue === '') {
-      errorMessage.textContent = 'Please enter a mobile number.';
-    } else if (/^\d+$/.test(inputValue)) {
-      errorMessage.textContent = 'Enter a valid 10-digit mobile number.';
+mobileInput.addEventListener("input", () => {
+    const inputValue = mobileInput.value.trim(); // remove leading/trailing whitespace
+    const isValidInput = /^[6-9]{1}[0-9]{9}$/.test(inputValue);
+   //   /^[6-9]\d{9}$/.test(inputValue) && !/^\d*(\d)\1{9}\d*$/.test(inputValue); // use regex to match the updated criteria
+    if (!isValidInput || inputValue === "") {
+      formGroup.classList.remove("valid");
+      formGroup.classList.add("invalid");
+      if (inputValue === "") {
+        errorMessage.textContent = "Please enter a mobile number.";
+      } else if (/^\d+$/.test(inputValue)) {
+        errorMessage.textContent = "Enter a valid 10-digit mobile number.";
+      } else {
+        errorMessage.textContent = "Please enter digits only.";
+      }
+      errorMessage.style.color = "red";
     } else {
-      errorMessage.textContent = 'Please enter digits only.';
+      formGroup.classList.remove("invalid");
+      formGroup.classList.add("valid");
+      errorMessage.textContent = "";
     }
-    errorMessage.style.color = 'red';
-  } else {
-    formGroup.classList.remove('invalid');
-    formGroup.classList.add('valid');
-    errorMessage.textContent = '';
-  }
 });
 
-
 // email validation---------------------
-const emailInput = document.getElementById('email');
-const formGroup1 = document.querySelector('.form-group1');
-const errorMessage1 = document.querySelector('.error1');
+const emailInput = document.getElementById("email");
+const formGroup1 = document.querySelector(".form-group1");
+const errorMessage1 = document.querySelector(".error1");
 
-emailInput.addEventListener('input', () => {
-  const inputValue1 = emailInput.value.trim(); // remove leading/trailing whitespace
-  const isValidInput1 = /^([a-z]+[a-z0-9_+\-\. ]*[a-zA-Z0-9]+)@(gmail|yahoo|hotmail|outlook)\.(com|net|org|edu|in)$/.test(inputValue1); // use regex to match email address format  
-  if (!isValidInput1 || inputValue1 === '') {
-    formGroup1.classList.remove('valid1');
-    formGroup1.classList.add('invalid1');
-    if (inputValue1 === '') {
-      errorMessage1.textContent = 'Please enter an email address.';
+emailInput.addEventListener("input", () => {
+    const inputValue1 = emailInput.value.trim(); // remove leading/trailing whitespace
+    const isValidInput1 =
+      /^([a-z]+[a-z0-9_+\- ]*[a-zA-Z0-9]+)@(gmail|yahoo|hotmail|outlook)\.(com|net|org|edu|in)$/.test(
+        inputValue1
+      ); // use regex to match email address format
+    if (!isValidInput1 || inputValue1 === "") {
+      formGroup1.classList.remove("valid1");
+      formGroup1.classList.add("invalid1");
+      if (inputValue1 === "") {
+        errorMessage1.textContent = "Please enter an email address.";
+      } else {
+        errorMessage1.textContent = "Please enter a valid email address.";
+      }
+      errorMessage1.style.color = "red";
     } else {
-      errorMessage1.textContent = 'Please enter a valid email address.';
+      formGroup1.classList.remove("invalid1");
+      formGroup1.classList.add("valid1");
+      errorMessage1.textContent = "";
     }
-    errorMessage1.style.color = 'red';
-  } else {
-    formGroup1.classList.remove('invalid1');
-    formGroup1.classList.add('valid1');
-    errorMessage1.textContent = '';
-  }
 });
 
 // name validation-----------
-const nameInput = document.getElementById('full_name');
-const formGroup2 = document.querySelector('.form-group2');
-const errorMessage2 = document.querySelector('.error2');
+const nameInput = document.getElementById("full_name");
+const formGroup2 = document.querySelector(".form-group2");
+const errorMessage2 = document.querySelector(".error2");
 
-nameInput.addEventListener('input', () => {
-  const inputValue2 = nameInput.value.trim(); // remove leading/trailing whitespace
-  const isValidInput2 = /^[a-zA-Z][a-zA-Z0-9-_\.]{5,31}$/.test(inputValue2); // use regex to match name format without spaces before or after
+nameInput.addEventListener("input", () => {
+    const inputValue2 = nameInput.value.trim(); // remove leading/trailing whitespace
+    const isValidInput2 = /^[a-zA-Z][a-zA-Z0-9]{5,31}$/.test(inputValue2); // use regex to match name format without spaces before or after
 
-  if (!isValidInput2 || inputValue2 === '') {
-    formGroup2.classList.remove('valid2');
-    formGroup2.classList.add('invalid2');
-    if (inputValue2 === '') {
-      errorMessage2.textContent = 'Please enter your name.';
+    if (!isValidInput2 || inputValue2 === "") {
+      formGroup2.classList.remove("valid2");
+      formGroup2.classList.add("invalid2");
+      if (inputValue2 === "") {
+        errorMessage2.textContent = "Please enter your name.";
+      }
+      errorMessage2.style.color = "red";
     } else {
-      errorMessage2.textContent = 'Please enter a valid name without spaces before or after.';
+      formGroup2.classList.remove("invalid2");
+      formGroup2.classList.add("valid2");
+      errorMessage2.textContent = "";
     }
-    errorMessage2.style.color = 'red';
-  } else {
-    formGroup2.classList.remove('invalid2');
-    formGroup2.classList.add('valid2');
-    errorMessage2.textContent = '';
-  }
 });
 
 // //Please enter one number, one special character, one uppercase letter, and one lowercase letter. 8 characters minimum, 10 characters maximum
-const passwordInput = document.getElementById('txtPassword');
+const passwordInput = document.getElementById("txtPassword");
 
-const uppercaseCheckbox = document.getElementById('chkUppercase');
-const lowercaseCheckbox = document.getElementById('chkLowercase');
-const specialCharCheckbox = document.getElementById('chkSpecialChar');
-const numberCheckbox = document.getElementById('chkNumber');
-const minLengthCheckbox = document.getElementById('chkMinLength');
+const uppercaseCheckbox = document.getElementById("chkUppercase");
+const lowercaseCheckbox = document.getElementById("chkLowercase");
+const specialCharCheckbox = document.getElementById("chkSpecialChar");
+const numberCheckbox = document.getElementById("chkNumber");
+const minLengthCheckbox = document.getElementById("chkMinLength");
 
-passwordInput.addEventListener('input', () => {
-  const passwordValue = passwordInput.value;
+passwordInput.addEventListener("input", () => {
+    const passwordValue = passwordInput.value;
 
-  // Check for uppercase letter
-  const hasUppercase = /[A-Z]/.test(passwordValue);
-  uppercaseCheckbox.checked = hasUppercase;
+    // Check for uppercase letter
+    const hasUppercase = /[A-Z]/.test(passwordValue);
+    uppercaseCheckbox.checked = hasUppercase;
 
-  // Check for lowercase letter
-  const hasLowercase = /[a-z]/.test(passwordValue);
-  lowercaseCheckbox.checked = hasLowercase;
+    // Check for lowercase letter
+    const hasLowercase = /[a-z]/.test(passwordValue);
+    lowercaseCheckbox.checked = hasLowercase;
 
-  // Check for special character
-  const hasSpecialChar = /[!@#$%^&*_=+-]/.test(passwordValue);
-  specialCharCheckbox.checked = hasSpecialChar;
+    // Check for special character
+    const hasSpecialChar = /[!@#$%^&*_=+-]/.test(passwordValue);
+    specialCharCheckbox.checked = hasSpecialChar;
 
-  // Check for number
-  const hasNumber = /\d/.test(passwordValue);
-  numberCheckbox.checked = hasNumber;
+    // Check for number
+    const hasNumber = /\d/.test(passwordValue);
+    numberCheckbox.checked = hasNumber;
 
-  // Check for minimum length
-  const hasMinLength = passwordValue.length >= 8;
-  minLengthCheckbox.checked = hasMinLength;
+    // Check for minimum length
+    const hasMinLength = passwordValue.length >= 8;
+    minLengthCheckbox.checked = hasMinLength;
 });
-
-
-
-
     </script>
-  <script src="../js/seller_login.js"></script>
-</body>
+        <script src="../js/seller_login.js"></script>
+    </body>
 </html>

@@ -45,6 +45,7 @@ a{
 }
 .cart22 h1{
     font-size: 22px;
+    margin-left: 20px;
 }
 .star{
     margin-top: 20px;
@@ -72,7 +73,7 @@ a{
 /* ===========-------------section -----------=============== */
 .cart_details{
     border-bottom: 2px solid gray;
-    padding-top: 20px;
+    padding:20px 30px 20px 0px;
 }
 /* -----------/ order qty/-------------- */
 .fert5{
@@ -206,7 +207,8 @@ margin-top: 16px;
 #discount{
     color:green ;
     font-size: 21px;
-    margin-left: -10px;
+    /* margin-left: 40px; */
+    width:300px;
 }
 
 /* -------============/ @media start for mobile screen/-=============---------- */

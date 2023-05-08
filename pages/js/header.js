@@ -1,20 +1,21 @@
-const root = window.location.origin
-
+const root = window.location.origin;
 
 const cartItems = JSON.parse(localStorage.getItem("addToCartItem")) || [];
 const loinFindUser = JSON.parse(localStorage.getItem("user_data"));
 
-const cartCount = cartItems.filter(details => details.userUniqueId == loinFindUser);
- const cartValueCount = cartCount.length;
+const cartCount = cartItems.filter(
+  (details) => details.userUniqueId === loinFindUser
+);
+const cartValueCount = cartCount.length;
 
- 
- const wishlist = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
-const wishlistCount = wishlist.filter(data => data.userUniqueId == loinFindUser);
+// wishlist count finding
+const wishlist = JSON.parse(localStorage.getItem("wishlisstItem")) || [];
+const wishlistCount = wishlist.filter(
+  (data) => data.userUniqueId === loinFindUser
+);
 const wishlistValueCount = wishlistCount.length;
 
-
-const beforeLogin = 
-` <div class="all_header">
+const beforeLogin = ` <div class="all_header">
 <div class="header">
     <ul>
      <li class="hero_list"><a href="${root}/pages/seller/login.html">Sell on Fert Agri Boomi</a></li>
@@ -112,10 +113,9 @@ const beforeLogin =
     </div>
 </div>
 </div>
-</div>`
+</div>`;
 
-const AfterLogin =
-`  <div class="user_header">
+const AfterLogin = `  <div class="user_header">
 <div class="header">
     <ul class="seller">
      <li></li>
@@ -213,30 +213,31 @@ const AfterLogin =
          </div>
      </div>
 </div>
-</div>`
+</div>`;
 
- 
 const loginUser = JSON.parse(localStorage.getItem("user_data"));
 
 if (loginUser) {
   document.body.insertAdjacentHTML("afterbegin", AfterLogin);
   const userLoginElement = document.getElementById("userLogin");
-  userLoginElement?.addEventListener("click", () => document.body.innerHTML = beforeLogin);
-//   const beforeLoginElement = document.querySelector(".all_header");
-//   beforeLoginElement?.remove();
+  userLoginElement?.addEventListener("click", () => {
+    document.body.innerHTML = beforeLogin;
+  });
 
-// cart----------
-const cart = document.getElementById("span_count");
-const wish = document.getElementById("wish_span_count");
-if(cartValueCount == 0){
-   
+  //   const beforeLoginElement = document.querySelector(".all_header");
+  //   beforeLoginElement?.remove();
+
+  // cart----------
+  const cart = document.getElementById("span_count");
+  const wish = document.getElementById("wish_span_count");
+  if (cartValueCount === 0) {
     cart.style.display = "none";
-}
+  }
 
-if(wishlistValueCount == 0){
+  if (wishlistValueCount === 0) {
     wish.style.display = "none";
-}
- 
+  }
+
   const userLogoutElement = document.getElementById("user_logout");
   userLogoutElement?.addEventListener("click", () => {
     localStorage.removeItem("user_data");
@@ -245,8 +246,10 @@ if(wishlistValueCount == 0){
 } else {
   document.body.insertAdjacentHTML("afterbegin", beforeLogin);
   const userLoginElement = document.getElementById("user_logout");
-  userLoginElement?.removeEventListener("click", () => document.body.innerHTML = AfterLogin);
-//   const afterLoginElement = document.querySelector(".user_header");
-//   afterLoginElement?.remove();
+  userLoginElement?.removeEventListener("click", () => {
+    document.body.innerHTML = AfterLogin;
+  });
+  //   const afterLoginElement = document.querySelector(".user_header");
+  //   afterLoginElement?.remove();
   localStorage.removeItem("user_data");
 }

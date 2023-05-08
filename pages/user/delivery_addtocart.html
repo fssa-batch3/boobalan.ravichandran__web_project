@@ -1,267 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" /><link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
-   
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../../assets/css/footer.css">
-    <link rel="stylesheet" href="../../assets/css/header.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/delivery_address.css">
+        <link rel="stylesheet" href="../../assets/css/footer.css">
+        <link rel="stylesheet" href="../../assets/css/header.css">
+        <link rel="stylesheet" href="../../assets/css/style.css">
+        <link rel="stylesheet" href="../../assets/css/delivery_address.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <title>Delivery address</title>
-</head>
+        <title>Delivery address</title>
+    </head>
 
-<body>
+    <body>
 
-    <main>
-        <form>
-            <div class="delivery">
-                <h1>Delivery details</h1>
-                <div class="contact11">
-                    <h3>Delivery Contact Information</h3>
-                    <div class="first_last">
-                       <div>
-                        <label for="full_name">First Name</label>
-                        <input class="disty" type="text" placeholder="FIRST NAME" id="first_name" />
-                        <div class="error"></div>
-                       </div>
+        <main>
+            <form>
+                <div class="delivery">
+                    <h1>Delivery details</h1>
+                    <div class="contact11">
+                        <h3>Delivery Contact Information</h3>
+                        <div class="first_last">
+                            <div>
+                                <label for="full_name">First Name</label>
+                                <input class="disty" type="text" placeholder="FIRST NAME" id="first_name">
+                                <div class="error"></div>
+                            </div>
     
-                       <div >
-                        <label id="full" for="full_name">Last Name</label>
-                        <input class="disty" type="text" placeholder="LAST NAME" id="last_name" />
-                       </div>
-                    </div>
-                    <div class="first_last">
-                        <div>
-                            <label for="mobile">Delivery Mobile </label>
-                        <input class="disty" type="text" placeholder="MOBILE NUMBER" id="mobile" readonly/> 
-                           </div>
-                           <div>
-                            <label id="full1" for="mobile">Delivery Email</label>
-                        <input class="disty" type="mail" placeholder="EMAIL ADDRESS" id="email" readonly/> 
-                           </div>
-                    </div>
-                </div>
-                <div class="del_address">
-                    <h3>Delivery Address</h3>
-                    <div class="del_address1">
-                        <div class="img" id="home">
-                            <img src="../../assets/images/home.gif" alt="home "  >
-                            <p>Home</p>
+                            <div >
+                                <label id="full" for="full_name">Last Name</label>
+                                <input class="disty" type="text" placeholder="LAST NAME" id="last_name">
+                            </div>
                         </div>
-                       <div class="img" id="office">
-                        <img src="../../assets/images/office.gif" alt=" office gif"  >
-                        <p>Other</p>
-                       </div>
+                        <div class="first_last">
+                            <div>
+                                <label for="mobile">Delivery Mobile </label>
+                                <input class="disty" type="text" placeholder="MOBILE NUMBER" id="mobile" readonly> 
+                            </div>
+                            <div>
+                                <label id="full1" for="mobile">Delivery Email</label>
+                                <input class="disty" type="mail" placeholder="EMAIL ADDRESS" id="email" readonly> 
+                            </div>
+                        </div>
                     </div>
-                    <div class="city_zip">
-                       <div class="deliver_address">
-                        <label >Address</label>
-                        <textarea id="address"></textarea>
-                       </div>
-                        <div class="city_zip1">
-                            <label >Zip Code</label>
-                            <input type="text" id="zip">
+                    <div class="del_address">
+                        <h3>Delivery Address</h3>
+                        <div class="del_address1">
+                            <div class="img" id="home">
+                                <img src="../../assets/images/home.gif" alt="home ">
+                                <p>Home</p>
+                            </div>
+                            <div class="img" id="office">
+                                <img src="../../assets/images/office.gif" alt=" office gif">
+                                <p>Other</p>
+                            </div>
+                        </div>
+                        <div class="city_zip">
+                            <div class="deliver_address">
+                                <label >Address</label>
+                                <textarea id="address"></textarea>
+                            </div>
+                            <div class="city_zip1">
+                                <label >Zip Code</label>
+                                <input type="text" id="zip">
                             
-                        <div id="zip-error" style="color: red;"></div>
+                                <div id="zip-error" style="color: red;"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="dis_state">
-                        <div>
-                            <label>District</label>
-                            <select  id="district">
-                                <option value="Select">Select</option>
-                                <option value="Ariyalur">Ariyalur</option>
-                                <option value="Chengalpattu">Chengalpattu</option>
-                                <option value="Chennai">Chennai</option>
-                                <option value="Coimbatore">Coimbatore</option>
-                                <option value="Cuddalore">Cuddalore</option>
-                                <option value="Dharmapuri">Dharmapuri</option>
-                                <option value="Dindigul">Dindigul</option>
-                                <option value="Erode">Erode</option>
-                                <option value="Kallakurichi">Kallakurichi</option>
-                                <option value="Kanchipuram">Kanchipuram</option>
-                                <option value="Kanniyakumari">Kanniyakumari</option>
-                                <option value="Karur">Karur</option>
-                                <option value="Krishnagiri">Krishnagiri</option>
-                                <option value="Madurai">Madurai</option>
-                                <option value="Mayiladuthurai">Mayiladuthurai</option>
-                                <option value="Nagapattinam">Nagapattinam</option>
-                                <option value="Namakkal">Namakkal</option>
-                                <option value="Nilgiris">Nilgiris</option>
-                                <option value="Perambalur">Perambalur</option>
-                                <option value="Pudukkottai">Pudukkottai</option>
-                                <option value="Ramanathapuram">Ramanathapuram</option>
-                                <option value="Ranipet">Ranipet</option>
-                                <option value="Sivagangai">Sivagangai</option>
-                                <option value="Tenkasi">Tenkasi</option>
-                                <option value="Thanjavur">Thanjavur</option>
-                                <option value="Theni">Theni</option>
-                                <option value="Thoothukudi">Thoothukudi</option>
-                                <option value="Tiruchirappalli">Tiruchirappalli</option>
-                                <option value="Tirunelveli">Tirunelveli</option>
-                                <option value="Tirupathur">Tirupathur</option>
-                                <option value="Tiruppur">Tiruppur</option>
-                                <option value="Tiruvallur">Tiruvallur</option>
-                                <option value="Tiruvannamalai">Tiruvannamalai</option>
-                                <option value="Tiruvarur">Tiruvarur</option>
-                                <option value="Vellore">Vellore</option>
-                                <option value="Viluppuram">Viluppuram</option>
-                                <option value="Virudhunagar">Virudhunagar</option>
-                              </select>
+                        <div class="dis_state">
+                            <div>
+                                <label>District</label>
+                                <select id="district">
+                                    <option value="Select">Select</option>
+                                    <option value="Ariyalur">Ariyalur</option>
+                                    <option value="Chengalpattu">Chengalpattu</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Coimbatore">Coimbatore</option>
+                                    <option value="Cuddalore">Cuddalore</option>
+                                    <option value="Dharmapuri">Dharmapuri</option>
+                                    <option value="Dindigul">Dindigul</option>
+                                    <option value="Erode">Erode</option>
+                                    <option value="Kallakurichi">Kallakurichi</option>
+                                    <option value="Kanchipuram">Kanchipuram</option>
+                                    <option value="Kanniyakumari">Kanniyakumari</option>
+                                    <option value="Karur">Karur</option>
+                                    <option value="Krishnagiri">Krishnagiri</option>
+                                    <option value="Madurai">Madurai</option>
+                                    <option value="Mayiladuthurai">Mayiladuthurai</option>
+                                    <option value="Nagapattinam">Nagapattinam</option>
+                                    <option value="Namakkal">Namakkal</option>
+                                    <option value="Nilgiris">Nilgiris</option>
+                                    <option value="Perambalur">Perambalur</option>
+                                    <option value="Pudukkottai">Pudukkottai</option>
+                                    <option value="Ramanathapuram">Ramanathapuram</option>
+                                    <option value="Ranipet">Ranipet</option>
+                                    <option value="Sivagangai">Sivagangai</option>
+                                    <option value="Tenkasi">Tenkasi</option>
+                                    <option value="Thanjavur">Thanjavur</option>
+                                    <option value="Theni">Theni</option>
+                                    <option value="Thoothukudi">Thoothukudi</option>
+                                    <option value="Tiruchirappalli">Tiruchirappalli</option>
+                                    <option value="Tirunelveli">Tirunelveli</option>
+                                    <option value="Tirupathur">Tirupathur</option>
+                                    <option value="Tiruppur">Tiruppur</option>
+                                    <option value="Tiruvallur">Tiruvallur</option>
+                                    <option value="Tiruvannamalai">Tiruvannamalai</option>
+                                    <option value="Tiruvarur">Tiruvarur</option>
+                                    <option value="Vellore">Vellore</option>
+                                    <option value="Viluppuram">Viluppuram</option>
+                                    <option value="Virudhunagar">Virudhunagar</option>
+                                </select>
                               
+                            </div>
+                            <div>
+                                <label>State</label>
+                                <input type="text" id="state" readonly>
+                            </div>
                         </div>
-                        <div>
-                            <label>State</label>
-                            <input type="text" id="state" readonly>
-                        </div>
-                    </div>
-                    <!-- <div class="pay_met">
-                        <h3>PAYMENT METHOD</h3>
-                        <div class="payment">
+                        <!-- <div class="pay_met">
+                            <h3>PAYMENT METHOD</h3>
+                            <div class="payment">
                             <img src="../../assets/images/gpay.gif" alt="gpay">
                             <img src="../../assets/images/phonepe.gif" alt="phonepe">
                             <img src="../../assets/images/paytm.gif" alt="paytm">
-                        </div>
-                    </div> -->
-                </div>
-                 <div class="button">
-                    <button id="returnHome">Cancel</button>
-                    <button type="submit" id="save_delivery">Save & Deliver Here</button>
-                 </div>
+                            </div>
+                            </div> -->
+                    </div>
+                    <div class="button">
+                        <button id="returnHome">Cancel</button>
+                        <button type="submit" id="save_delivery">Save & Deliver Here</button>
+                    </div>
                 </div>
                 
-           </form>
-    </main>
-    <footer>
-        <div class="footer1">
-            <div class="img101">
-                <a href="../../index.html">
-                    <img src="../../assets/images/Fert agri.png" alt="logo">
-                </a>
-            </div>
-            <div class="about111">
-                    <div  class="quick" >
+            </form>
+        </main>
+        <footer>
+            <div class="footer1">
+                <div class="img101">
+                    <a href="../../index.html">
+                        <img src="../../assets/images/Fert agri.png" alt="logo">
+                    </a>
+                </div>
+                <div class="about111">
+                    <div class="quick">
                         <h2>QUICK LINKS</h2>
-                    <p> <a href="./about_us.html">ABOUT US</a></p>
-                    <p> <a href="./wishlist.html">WISHLIST</a></p>
-                    <p> <a href="./offers.html">OFFERS</a></p>
-                    <p> <a href="./user_interface.html">HOME</a></p>
+                        <p>
+                            <a href="./about_us.html">ABOUT US</a>
+                        </p>
+                        <p>
+                            <a href="./wishlist.html">WISHLIST</a>
+                        </p>
+                        <p>
+                            <a href="./offers.html">OFFERS</a>
+                        </p>
+                        <p>
+                            <a href="./user_interface.html">HOME</a>
+                        </p>
                     </div>
-                <div  class="quick" >
+                    <div class="quick">
                         <h2>BRANDS</h2>
-                        <p><a href="./dhanuka.html">DHANUKA</a></p>
-                    <p>  <a href="./dow_agro.html">DOW AGRO SCIENCE</a></p>
-                        <p><a href="./upl.html">UPL</a></p>
-                    <p>  <a href="./tata.html"> TATA RALLIS</a></p>
-                        <p><a href="./adama.html">ADAMA</a></p>
-                        <p><a href="./bayer.html">BAYER</a></p>
-                </div>
-                <div  class="quick" >
+                        <p>
+                            <a href="./dhanuka.html">DHANUKA</a>
+                        </p>
+                        <p>
+                            <a href="./dow_agro.html">DOW AGRO SCIENCE</a>
+                        </p>
+                        <p>
+                            <a href="./upl.html">UPL</a>
+                        </p>
+                        <p>
+                            <a href="./tata.html"> TATA RALLIS</a>
+                        </p>
+                        <p>
+                            <a href="./adama.html">ADAMA</a>
+                        </p>
+                        <p>
+                            <a href="./bayer.html">BAYER</a>
+                        </p>
+                    </div>
+                    <div class="quick">
                         <h2>CROP PROTECTION</h2>
-                    <p><a href="./insecticides.html">BIO INSECTICIDES</a></p>
-                    <p><a href="./fungicides.html">BIO FUNGICIDES</a></p>
-                    <p><a href="./nematicides.html">BIO NEMATICIDES</a></p>
-                    <p><a href="./viricides.html"> BIO VIRCIDES</a></p>
-            </div>
-            <div  class="quick" >
-                <h2>CONTACT US</h2>
-                <div class="rboomi">
-                    <h3>EMAIL</h3>
-               <p> rboomibalan459@gmail.com</p>
+                        <p>
+                            <a href="./insecticides.html">BIO INSECTICIDES</a>
+                        </p>
+                        <p>
+                            <a href="./fungicides.html">BIO FUNGICIDES</a>
+                        </p>
+                        <p>
+                            <a href="./nematicides.html">BIO NEMATICIDES</a>
+                        </p>
+                        <p>
+                            <a href="./viricides.html"> BIO VIRCIDES</a>
+                        </p>
+                    </div>
+                    <div class="quick">
+                        <h2>CONTACT US</h2>
+                        <div class="rboomi">
+                            <h3>EMAIL</h3>
+                            <p> rboomibalan459@gmail.com</p>
+                        </div>
+                        <div class="rboomi">
+                            <h3>PHONE</h3>
+                            <p>+919629223356</p>
+                        </div>
+                        <div class="rboomi">
+                            <h3>ADDRESS</h3>
+                            <p> 1/115, Thirumurugan street, Mandumandram Nagar, Tiruchippalli-620021</p>
+                        </div>
+                    </div>
                 </div>
-               <div class="rboomi">
-                <h3>PHONE</h3>
-                <p>+919629223356</p>
-               </div>
-               <div class="rboomi">
-                <h3>ADDRESS</h3>
-                <p> 1/115, Thirumurugan street, Mandumandram Nagar, Tiruchippalli-620021</p>
-               </div>
-            </div>
-        </div>
-        <div class="bottom">
-            <div class="cont">
-                <p>FOLLOW US</p>
-            </div>
-        <div class="social">
-            <a href="https://www.instagram.com/rp0803/?igshid=YmMyMTA2M2Y%3D" > <img src="../../assets/images/instagram.png" alt="instagram"></a>
-            <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g" ><img src="../../assets/images/youtube.webp" alt="youtube"></a>
-            <a href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app"><img src="../../assets/images/mail.jpg" alt="email"></a>
-              <a href="https://twitter.com/agrigoi?lang=en"><img src="../../assets/images/twiter.png" alt="twitter"></a>
-            <a href="https://www.facebook.com/people/Agriculture/100068310005265/" ><img src="../../assets/images/facebook.png" alt="facebook"></a>
-            <a href="#"><img src="../../assets/images/whatsapp.webp" alt="whatsapp"></a>
+                <div class="bottom">
+                    <div class="cont">
+                        <p>FOLLOW US</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.instagram.com/rp0803/?igshid=YmMyMTA2M2Y%3D">
+                            <img src="../../assets/images/instagram.png" alt="instagram">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g">
+                            <img src="../../assets/images/youtube.webp" alt="youtube">
+                        </a>
+                        <a href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app">
+                            <img src="../../assets/images/mail.jpg" alt="email">
+                        </a>
+                        <a href="https://twitter.com/agrigoi?lang=en">
+                            <img src="../../assets/images/twiter.png" alt="twitter">
+                        </a>
+                        <a href="https://www.facebook.com/people/Agriculture/100068310005265/">
+                            <img src="../../assets/images/facebook.png" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img src="../../assets/images/whatsapp.webp" alt="whatsapp">
+                        </a>
     
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="mobile_footer">
+            <div class="mobile_aboutus">
+                <a href="./user_interface.html">Home</a>
+                <a href="about_us.html">
+                    <p>About Us</p>
+                </a>
+                <p>(+91)9629223356</p>
+        
+            </div>
+            <div class="copyright">
+                <p> Copyright © 2021 - 2023 FAB - Designed By </p>
+                <span>Boobalan-R</span>
+            </div>
+            <div class="mobile_social">
+                <p>Contact Us</p>
+                <div>
+                    <a href="https://twitter.com/agrigoi?lang=en">
+                        <img src="../../assets/images/twiter.png" alt="twitter">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g">
+                        <img src="../../assets/images/youtube.webp" alt="youtube">
+                    </a>
+                    <a href="https://www.facebook.com/people/Agriculture/100068310005265/">
+                        <img src="../../assets/images/facebook.png" alt="facebook">
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
-<div class="mobile_footer">
-    <div class="mobile_aboutus">
-    <a href="./user_interface.html">Home</a>
-    <a href="about_us.html"><p>About Us</p></a>
-          <p>(+91)9629223356</p>
-        
-    </div>
-     <div class="copyright">
-      <p> Copyright © 2021 - 2023 FAB - Designed By </p><span>Boobalan-R</span>
-  </div>
-  <div class="mobile_social">
-    <p>Contact Us</p>
-    <div>
-    <a href="https://twitter.com/agrigoi?lang=en"><img src="../../assets/images/twiter.png" alt="twitter"></a>
-    <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g" ><img src="../../assets/images/youtube.webp" alt="youtube"></a>
-    <a href="https://www.facebook.com/people/Agriculture/100068310005265/" ><img src="../../assets/images/facebook.png" alt="facebook"></a>
-  </div>
-  </div>
-  </div>
-<!-- <script src="../js/menubar.js"></script> -->
+        <!-- <script src="../js/menubar.js"></script> -->
 
-<script src="../js/header.js"></script>
-<script>
-
-const logedUser = JSON.parse(localStorage.getItem("user_data"));
-
-const cartIds = JSON.parse(localStorage.getItem("addToCartItem")) || [];
-
-    const findLogedUseraddtoCart = cartIds.filter(details => details.userUniqueId == logedUser)
-    const productUniqueIdFind = new URLSearchParams(window.location.search).get('delivery-status');
-   
-     const file_roots = window.location.origin
-if(productUniqueIdFind == "false"  && findLogedUseraddtoCart.length == 0){
-    window.addEventListener('popstate', function(event) {
-  if (isLoggedIn()){
-    event.preventDefault();
-    window.location.href = `${file_roots}/index.html`;
-  }
-});
-
-function isLoggedIn() {
-  const findLogged = JSON.parse(localStorage.getItem("user_data"));
-  if(findLogged){
-    return true;
-  }
-  else{
-    return false;
-  }
-}
-
-// call the isLoggedIn function when the page loads
-if (isLoggedIn()) {
-  window.location.href = `${file_roots}/index.html`;
-}
-
-}
-</script>
-<script src="../js/delivery_addtocart.js"></script>
-</body>
+        <script src="../js/header.js"></script>
+    
+        <script src="../js/delivery_addtocart.js"></script>
+    </body>
 </html>
