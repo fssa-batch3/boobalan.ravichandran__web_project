@@ -146,19 +146,6 @@ discountInput.value = loadProduct.discount;
 productWeights.value = loadProduct.product_weight;
 productPriceInput.value = loadProduct.actual_price - loadProduct.discount;
 
-// Update values when quantity is changed
-// quantityDropdown.addEventListener('change', () => {
-//   const quantity = Number(quantityDropdown.value);
-//   const actualPrice = loadProduct.actual_price;
-//   const discount = loadProduct.discount;
-
-//   const totalPrice = quantity * actualPrice;
-//   const totalDiscount = quantity * discount;
-
-//   actualPriceInput.value = totalPrice;
-//   discountInput.value = totalDiscount;
-//   productPriceInput.value = totalPrice - totalDiscount;
-// });
 
 // ------------------ loader---------------
 const loader = document.getElementById("loader");
@@ -192,32 +179,22 @@ orderForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // Get the input values
-  // const productName = document.querySelector("#pro_name").textContent;
-  // const productImage = document
-  //   .querySelector(".product_image img")
-  //   .getAttribute("src");
   const productPrice = document.querySelector("#product_pri").value;
   const quantity = document.querySelector("#option").value;
   const discount = document.querySelector("#discount").value;
   const actualPrice = document.querySelector("#actual_price").value;
-  const productWeight = document.querySelector("#weight").value;
+  // const productWeight = document.querySelector("#weight").value;
   const orderDate = new Date().toLocaleDateString();
   const deliveryDate = new Date(
     Date.now() + 7 * 24 * 60 * 60 * 1000
   ).toLocaleDateString();
   const deliveryStatus = "false";
-  // Get the user information
-  const firstName = "";
-  const lastName = "";
-  const email = "";
-  const phoneNumber = "";
 
   // Get the delivery information
-  const address = "";
-  const zipCode = "";
-  const deliveryPlace = "";
-  const paymentMethod = "";
-  const state = "Tamil Nadu";
+  const addressUniqueID = "";
+  
+  // const paymentMethod = "";
+  // const state = "Tamil Nadu";
 
   // Get current time and format it as a string
   const currentTime = new Date();
@@ -241,22 +218,17 @@ orderForm.addEventListener("submit", (event) => {
     proQuantity: quantity,
     ProductDiscount: discount,
     productActualPrice: actualPrice,
-    productWeight,
+    
     orderDate,
     deliveryDate,
-    firstName,
-    lastName,
-    email,
-    phoneNumber,
-    address,
-    zipCode,
-    deliveryPlace,
-    paymentMethod,
+
+    addressUniqueID,
+  
     orderUniqueId: uid,
-    timeString,
+    orderedTime:timeString,
     deliveryStatus,
     userUniqueId: logedUser,
-    state,
+   
   };
 
   // Store the new object in localStorage
@@ -268,7 +240,7 @@ orderForm.addEventListener("submit", (event) => {
 
   const path_roo = window.location.origin;
 
-  window.location.href = `${path_roo}/pages/user/deliver_address.html?delivery_address=${encodeURIComponent(
+  window.location.href = `${path_roo}/pages/user/address_delivery.html?delivery_address=${encodeURIComponent(
     loadProduct.product_unique_id
   )}&orderUnique=${uid}`;
 });

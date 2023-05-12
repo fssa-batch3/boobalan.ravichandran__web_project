@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+    <title>Edit delivery address</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/edit-address.css">
+</head>
+<body>
+    <main>
+        <form >
+            <div class="address-title">
+                <h2>Add Your Delivery Address</h2>
+            </div>
+            <div class="add-address-details">
+                <label for="title">Address Tiltle</label>
+                <select id="title">
+                  <option value="Home">Home</option>
+                  <option value="Work">Work</option>
+                  <option value="Home">Others</option>
+                </select>
+            </div>
+            <div class="add-address-details">
+                <label for="street">Door No and Street</label>
+                <input type="text" name="" id="street" placeholder="Eg: 1/117, Kumaran Street..."maxlength="40">
+            </div>
+            <div class="add-address-details">
+                <label for="local">Address(location)</label>
+                <input type="text" name="" id="local" maxlength="30">
+            </div>
+            <div class="add-address-details">
+                <label for="city">District/City</label>
+                <select id="city">
+                  <option value="Select">Select</option>
+                  <option value="Ariyalur">Ariyalur</option>
+                  <option value="Chengalpattu">Chengalpattu</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Coimbatore">Coimbatore</option>
+                  <option value="Cuddalore">Cuddalore</option>
+                  <option value="Dharmapuri">Dharmapuri</option>
+                  <option value="Dindigul">Dindigul</option>
+                  <option value="Erode">Erode</option>
+                  <option value="Kallakurichi">Kallakurichi</option>
+                  <option value="Kanchipuram">Kanchipuram</option>
+                  <option value="Kanniyakumari">Kanniyakumari</option>
+                  <option value="Karur">Karur</option>
+                  <option value="Krishnagiri">Krishnagiri</option>
+                  <option value="Madurai">Madurai</option>
+                  <option value="Mayiladuthurai">Mayiladuthurai</option>
+                  <option value="Nagapattinam">Nagapattinam</option>
+                  <option value="Namakkal">Namakkal</option>
+                  <option value="Nilgiris">Nilgiris</option>
+                  <option value="Perambalur">Perambalur</option>
+                  <option value="Pudukkottai">Pudukkottai</option>
+                  <option value="Ramanathapuram">Ramanathapuram</option>
+                  <option value="Ranipet">Ranipet</option>
+                  <option value="Sivagangai">Sivagangai</option>
+                  <option value="Tenkasi">Tenkasi</option>
+                  <option value="Thanjavur">Thanjavur</option>
+                  <option value="Theni">Theni</option>
+                  <option value="Thoothukudi">Thoothukudi</option>
+                  <option value="Tiruchirappalli">Tiruchirappalli</option>
+                  <option value="Tirunelveli">Tirunelveli</option>
+                  <option value="Tirupathur">Tirupathur</option>
+                  <option value="Tiruppur">Tiruppur</option>
+                  <option value="Tiruvallur">Tiruvallur</option>
+                  <option value="Tiruvannamalai">Tiruvannamalai</option>
+                  <option value="Tiruvarur">Tiruvarur</option>
+                  <option value="Vellore">Vellore</option>
+                  <option value="Viluppuram">Viluppuram</option>
+                  <option value="Virudhunagar">Virudhunagar</option>
+              </select>
+        
+            </div>
+            <div class="add-address-details">
+                <label for="pincode">Pincode</label>
+                <input type="text" name="" id="pincode"  >
+            </div>
+            <div class="add-address-details">
+                <label for="state">State</label>
+                <input type="text" name="" id="state" readonly >
+            </div>
+            <div class="add-address-details">
+                <label for="mobile">Mobile Number</label>
+                <input type="text" name="" id="mobile" >
+            </div>
+            <div class="error"></div>
+            
+            <div class="save-cancel-container">
+                <button type="submit" id="save-address"> Save</button>
+                <button type="button" id="exit-this-page"> Cancel</button>
+            </div>
+        </form>
+    </main>
+    <script>
+
+      // check the picode is an start with 6 and length is an 6 or not
+
+const pincodeInput = document.getElementById('pincode');
+
+pincodeInput.addEventListener('blur', function() {
+  const pincode = pincodeInput.value.trim();
+  if (pincode !== '') {
+    const pincodeRegex = /^6\d{5}$/; // regex pattern to match a pincode starting with 6 and having a total of 6 digits
+    if (!pincodeRegex.test(pincode)) {
+      alert('Invalid pincode! Please enter a valid pincode starting with 6 and having a total of 6 digits.');
+    }
+  }
+});
+
+
+const getAddressid = new URLSearchParams(window.location.search).get("addressId")
+
+
+if(getAddressid){
+  const userAddress = JSON.parse(localStorage.getItem("addresses")) || [];
+  const userData = JSON.parse(localStorage.getItem("user_data")) || [];
+
+  const userAddressFind = userAddress.find((data)=> data.addressId === getAddressid);
+  console.log(userAddressFind);
+  document.getElementById("title").value = userAddressFind.title
+  document.getElementById("street").value = userAddressFind.street
+  document.getElementById("local").value = userAddressFind.location
+  document.getElementById("city").value = userAddressFind.city
+  document.getElementById("pincode").value = userAddressFind.pincode
+  document.getElementById("mobile").value = userAddressFind.mobile
+  document.getElementById("state").value = userAddressFind.state
+
+
+  // the save button function
+  document.querySelector('#save-address').addEventListener("click", function(e){
+
+      // Prevent the default form submission
+  e.preventDefault();
+
+    const title = document.getElementById("title").value;
+    const street = document.getElementById("street").value;
+    const location = document.getElementById("local").value;
+    const city = document.getElementById("city").value;
+    const pincode = document.getElementById("pincode").value;
+    const state = document.getElementById("state").value;
+    const mobile = document.getElementById("mobile").value;
+    
+    if (title && street && location && city && pincode && state && mobile) {
+      // Check if the address already exists in the addresses array
+      const isDuplicate = userAddress.some(address => {
+        return address.title === title && 
+          address.street === street &&
+          address.location === location &&
+          address.city === city &&
+          address.pincode === pincode &&
+          address.state === state &&
+          address.mobile === mobile;
+      });
+      
+      if (isDuplicate && userAddressFind.title !== title) {
+        // Show an error message if the address already exists
+        alert('This address already exists!');
+      } else {
+        // Update the address details
+        userAddressFind.title = title;
+        userAddressFind.street = street;
+        userAddressFind.location = location;
+        userAddressFind.city = city;
+        userAddressFind.pincode = pincode;
+        userAddressFind.state = state;
+        userAddressFind.mobile = mobile;
+        
+        // Store the updated addresses array in localStorage
+        localStorage.setItem('addresses', JSON.stringify(userAddress));
+        
+        // Show a success message
+        alert('Address updated successfully!');
+        
+        // Redirect to the user profile page
+    
+        window.location.href = './user_profile.html'; 
+
+      }
+    } else {
+      // Show an error message if any field is left empty
+      alert('Please fill all fields before saving!');
+    }
+  });
+}
+
+else{
+// check the mobile number
+const mobileInput = document.getElementById("mobile");
+const errorMessage = document.querySelector(".error");
+ mobileInput.addEventListener("input", () => {
+    const inputValue = mobileInput.value.trim(); // remove leading/trailing whitespace
+    const isValidInput = /^[6-9]{1}[0-9]{9}$/.test(inputValue);
+   //   /^[6-9]\d{9}$/.test(inputValue) && !/^\d*(\d)\1{9}\d*$/.test(inputValue); // use regex to match the updated criteria
+    if (!isValidInput || inputValue === "") {
+      if (inputValue === "") {
+        errorMessage.textContent = "Please enter a mobile number.";
+      } else if (/^\d+$/.test(inputValue)) {
+        errorMessage.textContent = "Enter a valid 10-digit mobile number.";
+      } else {
+        errorMessage.textContent = "Please enter digits only.";
+      }
+      errorMessage.style.color = "red";
+    } else {
+      errorMessage.textContent = "";
+    }
+});
+
+// Get the form and save button elements
+document.getElementById("state").value = "Tamil Nadu"
+const form = document.querySelector('form');
+const saveBtn = document.querySelector('#save-address');
+
+// Define an empty array to store addresses
+let addresses = JSON.parse(localStorage.getItem('addresses')) || [];
+
+// get logged user id
+let userUnique = JSON.parse(localStorage.getItem('user_data')) || [];
+
+function generateUniqueId() {
+  let id = "";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (let i = 0; i < 10; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    id += characters[randomIndex];
+  }
+
+  return id;
+}
+
+
+
+
+
+// Add event listener to the save button
+saveBtn.addEventListener('click', function(e) {
+  // Prevent the default form submission
+  e.preventDefault();
+
+    const addressId = id = userUnique + generateUniqueId();
+
+  // Get the form input values
+ 
+  const title = form.title.value;
+  const street = form.street.value;
+  const location = form.local.value;
+  const city = form.city.value;
+  const pincode = form.pincode.value;
+  const state = form.state.value;
+  const mobile = form.mobile.value;
+//   const userUniqueId = 
+  // Check if all fields are filled
+  if (title && street && location && city && pincode && state && mobile) {
+    // Check if the address already exists in the addresses array
+    const isDuplicate = addresses.some(address => {
+      return address.title === title && 
+             address.street === street &&
+             address.location === location &&
+             address.city === city &&
+             address.pincode === pincode &&
+             address.state === state &&
+             address.mobile === mobile;
+    });
+    
+    if (isDuplicate) {
+      // Show an error message if the address already exists
+      alert('This address already exists!');
+    } else {
+      // Create a new address object
+      const newAddress = {
+        title,
+        street,
+        location,
+        city,
+        pincode,
+        state,
+        mobile,
+        userUnique,
+        addressId
+      };
+      
+      // Add the new address object to the addresses array
+      addresses.push(newAddress);
+      
+      // Store the updated addresses array in localStorage
+      localStorage.setItem('addresses', JSON.stringify(addresses));
+      
+            // Show a success message
+       alert('Address added successfully!');
+      window.location.href="./user_profile.html";
+
+      // Reset the form
+      form.reset();
+      
+
+    }
+  } else {
+    // Show an error message if any field is left empty
+    alert('Please fill all fields before saving!');
+  }
+});
+}
+// -------cancel button-----------------
+document.getElementById("exit-this-page").addEventListener("click", () => {
+  window.location.href="./user_profile.html";
+});
+
+
+
+    </script>
+</body>
+</html>

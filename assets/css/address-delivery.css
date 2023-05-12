@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+}
+main{
+    padding: 5vh 10vw;
+}
+.fert-logo{
+    background-color: #eaeaea;
+    padding: 10px 50px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
+}
+.fert-logo a img{
+    width:12vw;
+    height:7vh;
+}
+/* delivery address h3 tag */
+.address-title-head{
+    margin-top: 10vh;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+   padding: 15px 50px;
+   width:67vw;
+   background-color: #176047;
+   color:white;
+  
+}
+
+form{
+    background-color: white;
+    padding:30px  50px 30px 50px ;
+    border-radius: 5px;
+    width:36.5vw;
+    height: 95vh;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+/* address container */
+.address-container{
+    width:67vw;
+    padding: 30px 50px;
+    margin-top: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.address-container-label, .user-details-container{
+    display: flex;
+}
+.select-this-address{
+   padding-top: 20px;
+}
+.select-this-address input{
+    width:20px;
+  
+}
+.address-detail-container{
+    margin-left: 3vw;
+}
+.user-name-address{
+    font-weight: bold;
+    font-size: 18px;
+}
+.address-mobile{
+    margin-left: 2vw;
+    font-weight: bold;
+    font-size: 18px;
+    color:#176047;
+}
+/* add new address */
+.add-new-address-div{
+    margin-top: 5vh;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+   padding: 15px 50px;
+   width:67vw;
+   background-color: #176047;
+   color:white;
+   display: flex;
+   font-weight: bold;
+   padding-top: 25px;
+   cursor: pointer;
+}
+.add-new-address-div:hover{
+    background-color: #089360;
+}
+.add-new-address-div p{
+   font-size: 29px;
+   display: inline-block;
+   margin-top: -9px;
+   margin-right: 1vw;
+   
+}
+
+
+.user-details-container .user-title{
+background-color: rgb(220, 220, 220) !important;
+padding: 5px 10px;
+font-size: 15px;
+border-radius: 5px;
+margin-left: 2vw;
+margin-top: -3px;
+color:rgb(142, 142, 142)
+}
+.user-details-container{
+margin-bottom: 1vh;
+}
+.user-order-address{
+    font-size: 17px;
+}
+.user-order-address span{
+    font-weight: bold;
+}
+/* deliver here button */
+#deliver-here{
+    background-color:#176047;
+    padding: 12px 55px;
+    font-size: 16px;
+    border-radius: 2px;
+    color:white;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    border:2px solid #176047;
+}
+#deliver-here:hover{
+    background-color:#ffffff;
+    color:#176047;
+    border:2px solid #176047;
+    font-weight: bold;
+}
+/* delivery button  displauy none */
+.address-container-label .deliver-address-here{
+ display: none;
+
+}
+/* delivery button  displauy none */
+.address-container-label  .data-find-address{
+    display: inline;
+   
+}
+
+/* edit profile poppup */
+.add-new-address-class-container{
+    position: fixed;
+    background-color: #000000a4;
+    width: 100vw;
+    height: 100%;
+    top: 0px;
+    visibility:hidden;
+     z-index: 5;
+     left:0;
+     
+}
+input[type="radio"] {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+  }
+    
+.add-new-address-class{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+     position: absolute;
+    top: 2%;
+    left: 32%;
+    caret-color: black;
+    padding: 50px;
+    
+}
+.add-new-address-class-container.show-new-address{
+
+    visibility: visible;
+}
+    
+
+.address-title{
+    padding-bottom: 10px;
+    text-align: center;
+}
+.add-address-details label{
+    display: block;
+    margin-bottom: 05px;
+    margin-top:15px;
+    font-weight: bold;
+}
+.add-address-details input,.add-address-details select{
+   padding: 8px 10px; 
+   width:30vw;
+   font-size: 16px;
+   border:1.5px solid rgb(178, 178, 178);
+}
+.save-cancel-container button{
+padding: 13px 0px;
+width: 96%;
+display: block;
+margin-top: 20px;
+font-size: 16px;
+background-color:rgb(1, 65, 1);
+border: none;
+color:white !important;
+border-radius: 2px;
+cursor: pointer !important;
+}
+.save-cancel-container button:hover{
+    background-color:rgb(2, 121, 2);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.add-address-details input:focus,.add-address-details select:focus{
+    outline: none;
+}

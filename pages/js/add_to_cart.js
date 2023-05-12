@@ -201,21 +201,13 @@ function addToCartItem(product) {
     <div class="cart_details">
       <div class="cart2">
         <div class="cart21">
-          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(
-    product.product_name
-  )}&product_id=${product.product_unique_id}"><img src="${
-    product.source
-  }" alt="DHANUKA M45 FUNGICIDE"></a>
+          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(product.product_name)}&product_id=${product.product_unique_id}"><img src="${product.source}" alt="DHANUKA M45 FUNGICIDE"></a>
         </div>
         <div class="cart22">
-          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(
-    product.product_name
-  )}&product_id=${product.product_unique_id}">
+          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(product.product_name)}&product_id=${product.product_unique_id}">
             <h1 id="product_name">${product.product_name}</h1>
             <div class="price">
-              <h2 id="product_pri">₹${
-                product.actual_price - product.discount
-              }</h2>
+              <h2 id="product_pri">₹${product.actual_price - product.discount}</h2>
               <del id="actual_price">₹${product.actual_price}</del>
             </div>
             <h3 id="discount">You Save: ${product.discount}</h3>
@@ -232,13 +224,15 @@ function addToCartItem(product) {
             <option>4</option>
             <option>5</option>
             <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
           </select>
         </div>
         
         <div class="remove-button">
-          <a><button onclick="removeProductFromCart('${
-            product.product_unique_id
-          }')">Remove</button></a>
+          <a><button onclick="removeProductFromCart('${product.product_unique_id}')">Remove</button></a>
         </div>
       </div>
     </div>
@@ -285,10 +279,7 @@ for (let i = 0; i < loadProduct.length; i++) {
   const product = loadProduct[i];
   const productInCart = addToCartItem(product);
   cartContainer.append(productInCart);
-  // const quantity = productInCart.querySelector("#option").value;
-  // const price = (product["actual_price"] - product["discount"]) * quantity;
-
-  // const discount = product["discount"] * quantity;
+  
 }
 
 // remove from addtocart function // Function to remove a product from the cart
@@ -342,7 +333,7 @@ div_btnn_button.setAttribute("type", "button");
 div_btnn_button.innerText = "Place order";
 div_btnn_a.append(div_btnn_button);
 
-// ---- store all products details in local storage
+
 // ---- store all products details in local storage
 document.getElementById("place_order").addEventListener("click", () => {
   const addtoCartDeliveryProduct =
@@ -379,22 +370,12 @@ document.getElementById("place_order").addEventListener("click", () => {
       const deliveryDate = new Date(
         Date.now() + 7 * 24 * 60 * 60 * 1000
       ).toLocaleDateString();
-      // const deliveryStatus = "false";
-      // Get the user information
-      const firstName = "";
-      const lastName = "";
-      const email = "";
-      const phoneNumber = "";
-
+ 
       // Get the delivery information
-      const address = "";
-      const zipCode = "";
-      const deliveryPlace = "";
-      const paymentMethod = "";
+      const addressUniqueID = "";
+      // const paymentMethod = "";
       const orderStatus = "";
-      const district = "";
-      const state = "Tamil Nadu";
-
+     
       const currentTime = new Date();
       const timeString = currentTime.toLocaleTimeString([], {
         hour12: false,
@@ -411,22 +392,12 @@ document.getElementById("place_order").addEventListener("click", () => {
         proQuantity,
 
         deliveryStatus,
-        orderUniqueId: orderId, // Use the same unique ID for all products
+        orderUniqueId: orderId, 
         orderDate,
         deliveryDate,
-        timeString,
-        firstName,
-        lastName,
-        email,
-        phoneNumber,
-        address,
-        zipCode,
-        district,
-        state,
-        deliveryPlace,
-        paymentMethod,
+        orderedTime:timeString,
+        addressUniqueID,
         orderStatus,
-
         userUniqueId: logedUser,
       };
 
@@ -438,7 +409,7 @@ document.getElementById("place_order").addEventListener("click", () => {
       JSON.stringify(addtoCartDeliveryProduct)
     );
 
-    const product_url = `${path_pro}/pages/user/delivery_addtocart.html?delivery-status=${deliveryStatus}`;
+    const product_url = `${path_pro}/pages/user/address_delivery_addtocart.html?delivery-status=${deliveryStatus}`;
     window.location.href = product_url;
   }
 });

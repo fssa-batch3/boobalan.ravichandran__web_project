@@ -71,13 +71,7 @@ for (let i = 0; i < getOrderDetails.length; i++) {
       const [inputDay, inputMonth, inputYear] = deliverydate.split("/");
       const inputDateObj = new Date(`${inputMonth}/${inputDay}/${inputYear}`);
       inputDateObj.setDate(inputDateObj.getDate() - 3);
-      const threeDaysBeforeDate = `${String(inputDateObj.getDate()).padStart(
-        2,
-        "0"
-      )}/${String(inputDateObj.getMonth() + 1).padStart(
-        2,
-        "0"
-      )}/${inputDateObj.getFullYear()}`;
+      const threeDaysBeforeDate = `${String(inputDateObj.getDate()).padStart(2,"0")}/${String(inputDateObj.getMonth() + 1).padStart(2,"0")}/${inputDateObj.getFullYear()}`;
 
       // console.log("deliverydate:", deliverydate);
       // console.log("threeDaysBeforeDate:", threeDaysBeforeDate);
@@ -92,7 +86,7 @@ for (let i = 0; i < getOrderDetails.length; i++) {
       }
 
       if (deliverydate === formattedDate) {
-        const ord_status = "Processing";
+        const ord_status = "Delivered";
         getOrderDetails[i].orderStatus = ord_status;
         localStorage.setItem(
           "addtoCartDeliveryProduct",
