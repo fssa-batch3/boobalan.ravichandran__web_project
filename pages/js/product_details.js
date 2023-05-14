@@ -620,7 +620,7 @@ const avgCusRating = document.createElement("h1");
 // const thisPageproductName = loadProduct.product_name;
 
 // get this product reviews from localstorage
-const customerReviewsget = JSON.parse(localStorage.getItem("reviews"));
+const customerReviewsget = JSON.parse(localStorage.getItem("reviews")) || [];
 
 // get what are the given to this product
 const thisProductReviews = customerReviewsget.filter(

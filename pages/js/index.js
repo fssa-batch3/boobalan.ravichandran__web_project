@@ -83,16 +83,18 @@ for (let i = 0; i < product_details.length; i++) {
   document.querySelector("div.offers1").append(div_today);
 }
 
-// advertisement images js code
 let slideIndex = 1;
-function showSlides(n) {
+let timeoutID;
+let isTransitioning = false;
+function showSlides(n = 1) {
   let i;
   const slides = document.getElementsByClassName("mySlides");
   const dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
+  slideIndex += n;
+  if (slideIndex > slides.length) {
     slideIndex = 1;
   }
-  if (n < 1) {
+  if (slideIndex < 1) {
     slideIndex = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
@@ -103,15 +105,32 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+  isTransitioning = false;
+  timeoutID = setTimeout(showSlides, 2500); // Change slide every 2.5 seconds
 }
 
-showSlides(slideIndex);
-// Next/previous controls
+showSlides();
+
 function plusSlides(n) {
-  showSlides((slideIndex += n));
+  if (!isTransitioning) {
+    isTransitioning = true;
+    clearTimeout(timeoutID); // Cancel any scheduled transitions
+    showSlides(n);
+  }
 }
 
-// Thumbnail image controls
+function minusSlides(n) {
+  if (!isTransitioning) {
+    isTransitioning = true;
+    clearTimeout(timeoutID); // Cancel any scheduled transitions
+    showSlides(n);
+  }
+}
+
 function currentSlide(n) {
-  showSlides((slideIndex = n));
+  if (!isTransitioning) {
+    isTransitioning = true;
+    clearTimeout(timeoutID); // Cancel any scheduled transitions
+    showSlides(n - slideIndex);
+  }
 }

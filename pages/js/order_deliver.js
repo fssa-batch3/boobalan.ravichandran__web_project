@@ -26,12 +26,8 @@ if (!isLoggedIn()) {
 //         <img src="../../assets/images/Adama/ada1.avif" alt="order Status">
 //     </div>
 
-const productUniqueId = new URLSearchParams(window.location.search).get(
-  "orderDetails"
-);
-const productUnique = new URLSearchParams(window.location.search).get(
-  "productUniqueId"
-);
+const productUniqueId = new URLSearchParams(window.location.search).get("orderDetails");
+const productUnique = new URLSearchParams(window.location.search).get("productUniqueId");
 const orderedProducts = JSON.parse(
   localStorage.getItem("addtoCartDeliveryProduct")
 );
@@ -42,12 +38,23 @@ const getProductDetails = orderedProducts.find(
     details.orderUniqueId === productUniqueId &&
     details.productUniqueId === productUnique
 );
-// console.log(getProductDetails)
+console.log(getProductDetails)
 
 // product image and name get from local storage
 const getOrderedproductUid = allProductsDetails.find(
   (data) => data.product_unique_id === getProductDetails.productUniqueId
 );
+// console.log(getOrderedproductUid);
+
+//ordered product address get from localstorage
+const addressOfOrde = JSON.parse(localStorage.getItem("addresses")) || [];
+// console.log(addressOfOrde);
+
+// find the orderProduct address from address array
+const getOrderedProductAddress = addressOfOrde.find((address) => address.addressId === getProductDetails.addressUniqueID);
+//console.log(getOrderedProductAddress);
+
+
 
 const path_root = window.location.origin;
 
@@ -177,19 +184,19 @@ fert117_h3.innerText = "Delivery address: ";
 div_fert117.append(fert117_h3);
 
 const fert117_p1 = document.createElement("p");
-fert117_p1.innerText = getProductDetails.address;
+fert117_p1.innerText = getOrderedProductAddress.street +",";
 div_fert117.append(fert117_p1);
 
 const fert117_p2 = document.createElement("p");
-fert117_p2.innerText = getProductDetails.district;
+fert117_p2.innerText = getOrderedProductAddress.city +",";
 div_fert117.append(fert117_p2);
 
 const fert117_p3 = document.createElement("p");
-fert117_p3.innerText = getProductDetails.zipCode;
+fert117_p3.innerText = "Pincode - "+ getOrderedProductAddress.pincode +",";
 div_fert117.append(fert117_p3);
 
 const fert117_p4 = document.createElement("p");
-fert117_p4.innerText = getProductDetails.state;
+fert117_p4.innerText = getOrderedProductAddress.state +".";
 div_fert117.append(fert117_p4);
 
 // <div class="cancel_order"><button type="submit">Cancel order</button></div>

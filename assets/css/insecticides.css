@@ -90,7 +90,7 @@
 }
 .today p{
    
-    font-size: 20px;
+    font-size: 19px;
    padding: 5px 20px 20px 20px;
    width:280px;
     font-weight: bold;   
@@ -98,6 +98,8 @@
     text-align: center; 
     justify-content: center;
     min-height: 80px;
+    color:rgb(115, 1, 45);
+    
   }
  
 

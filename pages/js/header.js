@@ -80,7 +80,7 @@ const beforeLogin = ` <div class="all_header">
     <div class="dropdown-content">
         <a href="${root}/pages/user/dhanuka.html">DHANUKA</a>
         <a href="${root}/pages/user/dow_agro.html">DOW AGRO SCIENCE</a>
-        <a href="${root}/pages/user/insecticides.html">UPL</a>
+        
         <a href="${root}/pages/user/dhanuka.html">TATA RALLIS</a>
         <a href="${root}/pages/user/dow_agro.html">ADAMA</a>
         <a href="${root}/pages/user/major_nutrients.html">BAYER</a>
@@ -180,7 +180,7 @@ const AfterLogin = `  <div class="user_header">
          <div class="dropdown-content">
              <a href="${root}/pages/user/dhanuka.html">DHANUKA</a>
              <a href="${root}/pages/user/dow_agro.html">DOW AGRO SCIENCE</a>
-             <a href="${root}/pages/user/upl.html">UPL</a>
+         
              <a href="${root}/pages/user/tata.html">TATA RALLIS</a>
              <a href="${root}/pages/user/adama.html">ADAMA</a>
              <a href="${root}/pages/user/bayer.html">BAYER</a>
