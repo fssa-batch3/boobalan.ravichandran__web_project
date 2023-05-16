@@ -9,7 +9,8 @@ main{
 }
 .address-container{
     background-color:#ffffff;
-    height:93vh;
+    height:97vh;
+    border-radius: 10px;
     width: 25vw;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -134,7 +135,7 @@ color:rgb(88, 88, 88);
 font-size: 27px;
 }
 .information-container1{
-    padding: 50px 70px 50px 70px;
+    padding: 35px 70px 35px 70px;
 }
 .sub-information-details{
     display: flex;
@@ -220,10 +221,11 @@ visibility:hidden;
 .fulledit{
 background-color: #ffffff;
    width:30vw;
-   height: 37vw;
+   height: 39vw;
 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
  position: absolute;
-   top: 20%;
+   top: 18%;
+   border-radius:5px;
    left: 35%;
 
 }
@@ -236,10 +238,16 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
     visibility: visible;
 }
 .exit-icon img{
-    margin-left: 28vw;
-    width:17px;
-    height:17px;
-    margin-top: 13px;
+    margin-left: 26.5vw;
+    width:35px;
+    height:35px;
+    margin-top: 1.8vh;
+    padding: 10px;
+}
+.exit-icon img:hover{
+    background-color: rgb(191, 191, 191);
+    border-radius: 20px;
+
 }
 
 .edit-title{
@@ -248,7 +256,8 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
     margin-bottom: 20px;
 }
 .edit-details-container{
-    padding: 50px 50px 50px 80px;
+    padding: 30px 50px 50px 80px;
+
 }
 .edit-details-container label{
     display: block;
