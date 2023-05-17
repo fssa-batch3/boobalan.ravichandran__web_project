@@ -133,6 +133,8 @@
 
        
         <script>
+
+          
 const file_root = window.location.origin;
 const logedUser = JSON.parse(localStorage.getItem("user_data"));
 
@@ -190,7 +192,6 @@ const matchedAddress = addresses.filter(data => data.userUnique === userUnique);
 // console.log(matchedAddress)
 
 for(let i=0; i<matchedAddress.length; i++) {
-
 // Create the HTML elements dynamically using JavaScript
 const addressContainer = document.createElement('div');
 addressContainer.classList.add('address-container');
