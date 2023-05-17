@@ -19,75 +19,76 @@
         <title>User Profile Page</title>
     </head>
     <body>
-
-        <main>
-            
-            <form >
-                <div class="form1">
-
-                    <div class="details1">
-
-                        <div class="wrapper">
-                            <input type="file" class="my_file">
-                        </div>
-                        <h2>
-                            Name:<p id="user_name">
-                                <input type="text" id="full_name1" readonly>
-                            </p></h2>
-                        <label for="dobb">
-                            Date of Birth : <input type="date" id="dobb" disabled>
-                        </label>
-            
+     <main>
+        <div  class="user-profile-details">
+            <div class="address-container">
+               
+                    <div class="address-title">
+                        <h2>Manage Addresses</h2>
                     </div>
-                    <div class="details2">
-                        <h2>Personal Information</h2>
-                        <div>
-                            <label for="full_name"> Name</label>
-                            <input type="text" id="full_name" disabled>
-                        </div>
-                        <div>
-                            <label for="gender">Gender</label>
-                            <input type="text" id="gender" disabled>
-                        </div>
-
-                        <div>
-                            <label for="email">Email address</label>
-                            <input type="email" id="email" disabled>
-                        </div>
-                        <div>
-                            <label for="mobile"> Mobile Number </label>
-                            <input type="number" id="mobile" disabled> 
-                        </div>
-              
-                        <div>
-                            <label for="street"> Street Name </label>
-                            <input type="text" id="street" disabled> 
-                        </div>
-                        <div>
-                            <label for="city"> City Name</label>
-                            <input type="text" id="city" disabled> 
-                        </div>
-                        <div>
-                            <label for="district"> District Name</label>
-                            <input type="text" id="district" disabled> 
-                        </div>
-                        <div>
-                            <label for="state"> State Name </label>
-                            <input type="text" id="state" disabled> 
-                        </div>
-                        <div class="button">
-          
-                            <button type="button" id="edit">Edit</button></a>
-                            <button type="submit" id="del_account">Delete</button>
-                        </div>
-                        <!-- <div>
-                            <button type="submit" onclick="logOut()">Logout</button>
-                            </div> -->
-                    </div>
+                   <div class="user-addresses">
+                    <!-- dynamic html here -->
+                   </div>
+               <div class="add-address-container">
+                <div class="add-new-address">
+                    <h3>
+                        <p>+</p>ADD A NEW ADDRESS
+                    </h3>
                 </div>
-            </form>
+               </div>
 
-        </main>
+            </div>
+            <div class="personal-information-container">
+                <div class="personal-title">
+                    <h1>Personal Information</h1>
+                </div>
+               <div class="information-container1">
+                <div class="sub-information-details">
+                    <h2 >
+                        Name
+                    </h2>
+                    <p id="full_name1">
+                      
+                    </p>
+                </div>
+                <div class="sub-information-details">
+                  <h2>
+                    Your Gender
+                  </h2>
+                  <p id="gender"></p>
+                </div>
+                <div class="sub-information-details">
+                   <h2>Email Address</h2>
+                   <p id="email"></p>
+                </div>
+                <div class="sub-information-details">
+                    <h2>Date of Birth</h2>
+                    <p id="dobb"></p>
+                 </div>
+                <div class="sub-information-details">
+                    <h2>
+                        Phone Number
+                    </h2>
+                    <p id="mobile"></p>
+                </div>
+                
+             
+               </div>
+               <div class="edit-delete">
+                <div class="edit-profile">
+                    <h3 >EDIT </h3>
+                   </div>
+                   <div class="del_account">
+                    <h3 >DELETE </h3>
+                   </div>
+                </div>
+                
+               </div>
+              
+            </div>
+       
+     </main>
+
 
         <div class="create_pro">
             <a href="../user/product_form.html">
@@ -96,6 +97,46 @@
                 </button>
             </a>
         </div>
+
+        <!-- edit profile poppup -->
+
+ 
+
+        <div class="edit-profile-details">
+            <div class="fulledit">
+            <div class="exit-icon">
+                <img src="../../assets/images/cross-exit-symbol.jpg" alt="exit" class="close-profile-details">
+            </div>
+          <div class="edit-details-container">
+            <div class="edit-title">
+                <h2>Edit Personal Details</h2>
+            </div>
+            <div class="user-personal-details">
+                <label for="edit-full-_name">Name</label>
+                <input type="text" id="edit-full_name" maxlength="30" required>
+            </div>
+            <div class="user-personal-details">
+                <label for="date-of-birth"> Date of Birth  </label>
+                <input type="date" placeholder="date of birth" id="date-of-birth">
+            </div>
+            <div class="user-personal-details">
+                <label for="edit-gender">Gender</label>
+                <select  id="edit-gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+
+                </select>
+            </div>
+            
+          </div>
+          <div class="user-details-save">
+            <button id="save_data">Save</button>
+          </div>
+        </div>
+    </div>
+
+
+
         <footer>
             <div class="footer1">
                 <div class="img101">
@@ -233,12 +274,127 @@
         <script src="../js/search.js"></script>
         <script src="../js/user_profile.js"></script>
 
-        <!-- <script>
-            const uuid = require('uuid')
-            const unique_id = uuid.v4();
  
-            </script>  -->
+            <script>
+            
+            // Define an empty array to store addresses
+let addresses = JSON.parse(localStorage.getItem('addresses')) || [];
+
+// get logged user id
+let userUnique = JSON.parse(localStorage.getItem('user_data')) || [];
+
+const matchedAddress = addresses.filter(data => data.userUnique === userUnique);
+console.log(matchedAddress)
+
+
+// have to create logged users gaved addresses
+for(let i=0; i<matchedAddress.length; i++) {
+    
+// create a new address div
+const addressDiv = document.createElement("div");
+addressDiv.classList.add("single-address");
+
+// add home container
+const homeContainer = document.createElement("div");
+homeContainer.classList.add("home-container");
+const homeHeading = document.createElement("h3");
+homeHeading.textContent = matchedAddress[i]["title"];
+homeContainer.appendChild(homeHeading);
+addressDiv.appendChild(homeContainer);
+
+// add address details
+const addressDetails1 = document.createElement("div");
+addressDetails1.classList.add("address-details");
+const addressLine1 = document.createElement("p");
+addressLine1.textContent = matchedAddress[i]["street"];
+addressDetails1.appendChild(addressLine1);
+addressDiv.appendChild(addressDetails1);
+
+const addressDetails2 = document.createElement("div");
+addressDetails2.classList.add("address-details");
+const addressLine2 = document.createElement("p");
+addressLine2.textContent = matchedAddress[i]["location"];
+addressDetails2.appendChild(addressLine2);
+addressDiv.appendChild(addressDetails2);
+
+const addressDetails3 = document.createElement("div");
+addressDetails3.classList.add("address-details");
+const addressLine3 = document.createElement("p");
+addressLine3.textContent = `${matchedAddress[i]["city"]} - ${matchedAddress[i]["pincode"]}`;
+addressDetails3.appendChild(addressLine3);
+addressDiv.appendChild(addressDetails3);
+
+const addressDetails4 = document.createElement("div");
+addressDetails4.classList.add("address-details");
+const addressLine4 = document.createElement("p");
+addressLine4.textContent = matchedAddress[i]["state"];
+addressDetails4.appendChild(addressLine4);
+addressDiv.appendChild(addressDetails4);
+
+const addressDetails5 = document.createElement("div");
+addressDetails5.classList.add("address-details", "details-mobile");
+const addressLine5 = document.createElement("p");
+addressLine5.textContent = `Mobile Number - ${matchedAddress[i]["mobile"]}`;
+addressDetails5.appendChild(addressLine5);
+addressDiv.appendChild(addressDetails5);
+
+// add edit/remove buttons
+const editA = document.createElement("a");
+editA.setAttribute("href",`./edit-address.html?addressId=${matchedAddress[i]["addressId"]}`);
+
+const editRemoveDiv = document.createElement("div");
+editRemoveDiv.classList.add("edit-remove");
+const editButton = document.createElement("p");
+editButton.id = "address-edit";
+editButton.textContent = "EDIT";
+const removeButton = document.createElement("button");
+removeButton.id = "address-remove";
+removeButton.textContent = "REMOVE";
+removeButton.setAttribute('data_set', matchedAddress[i].addressId);
+
+
+// Loop through the remove buttons and attach click event listener to each
+removeButton.addEventListener('click', function() {
+     // Show a confirmation dialog box
+  const confirmed = confirm(
+    "Are you sure you want to remove this address from your addresses list?"
+  );
+if(confirmed){
+      // Get the current addressId from this cart
+  const addressId = this.getAttribute('data_set');
+
+   // Find the index of the address to remove
+  const addressIndex = addresses.findIndex((item) => item.addressId === addressId);
+  
+      // Remove the address from the addresses list
+  addresses.splice(addressIndex, 1);
+
+  
+    // Update the addresses in local storage
+    localStorage.setItem("addresses", JSON.stringify(addresses));
+     // Refresh the page to update the address display
+     window.location.reload();
+}
+});
+
+
+editRemoveDiv.appendChild(editA);
+editA.appendChild(editButton);
+editRemoveDiv.appendChild(removeButton);
+addressDiv.appendChild(editRemoveDiv);
+
+// add address div to container
+document.querySelector("div.user-addresses").append(addressDiv);
+}
+
+document.querySelector(".add-new-address").addEventListener("click",()=>{
+    window.location.href="./edit-address.html"
+ });
+
+
+
+
+            </script>
 
     </body>
 </html>
-<a href=""></a>

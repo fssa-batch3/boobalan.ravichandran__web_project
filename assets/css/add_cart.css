@@ -46,6 +46,8 @@ a{
 .cart22 h1{
     font-size: 22px;
     margin-left: 20px;
+    width:30vw;
+    text-align: left;
 }
 .star{
     margin-top: 20px;

@@ -78,38 +78,19 @@ const beforeLogin = ` <div class="all_header">
 <div class="dropdown">
     <button class="dropbtn">BRANDS</button>
     <div class="dropdown-content">
-        <a href="${root}/pages/user/dhanuka.html">DHANUKA</a>
-        <a href="${root}/pages/user/dow_agro.html">DOW AGRO SCIENCE</a>
-        <a href="${root}/pages/user/insecticides.html">UPL</a>
-        <a href="${root}/pages/user/dhanuka.html">TATA RALLIS</a>
-        <a href="${root}/pages/user/dow_agro.html">ADAMA</a>
-        <a href="${root}/pages/user/major_nutrients.html">BAYER</a>
-        <a href="${root}/pages/user/fungicides.html">GEOLIFE</a>
-        <a href="${root}/pages/user/organic.html">BARRIX</a>
-       <a href="${root}/pages/user/retardants.html">INDOFIL</a>
-       <a href="${root}/pages/user/secodary_nutrients.html">RINUJA</a>
+       
     </div>
 </div>
 <div class="dropdown1">
     <button class="dropbtn1">CROP PROTECTION</button>
     <div class="dropdown1-content">
-        <a href="${root}/pages/user/insecticides.html">BIO INSECTICIDES</a>
-        <a href="${root}/pages/user/fungicides.html">BIO FUNGICIDES</a>
-        <a href="${root}/pages/user/dow_agro.html">BIO NEMATICIDES</a>
-        <a href="${root}/pages/user/viricides.html"> BIO VIRCIDES</a>
+       
     </div>
 </div>
 <div  class="dropdown2">
      <button class="dropbtn2" > CROP NUTRITION</button>
     <div class="dropdown2-content">
-        <a href="${root}/pages/user/major_nutrients.html">MAJOR NUTRIENTS</a>
-        <a href="${root}/pages/user/secodary_nutrients.html">SECONDARY NUTRIENTS</a>
-        <a href="${root}/pages/user/dhanuka.html">GROWTH PROMOTERS</a>
-        <a href="${root}/user/fungicides.html">GROWTH RETARDANTS</a>
-        <a href="${root}/pages/user/secodary_nutrients.html">ORGANIC FERTILIZERS</a>
-        <a href="${root}/pages/major_nutrients.html">BIO FERTILIZERS</a>
-        <a href="${root}/pages/user/insecticides.html">ANTI STRESSING AGENTS</a>
-        <a href="${root}/pages/user/major_nutrients.html">MICRO NUTRIENTS</a>
+      
     </div>
 </div>
 </div>
@@ -178,38 +159,19 @@ const AfterLogin = `  <div class="user_header">
      <div class="dropdown">
          <button class="dropbtn">BRANDS</button>
          <div class="dropdown-content">
-             <a href="${root}/pages/user/dhanuka.html">DHANUKA</a>
-             <a href="${root}/pages/user/dow_agro.html">DOW AGRO SCIENCE</a>
-             <a href="${root}/pages/user/upl.html">UPL</a>
-             <a href="${root}/pages/user/tata.html">TATA RALLIS</a>
-             <a href="${root}/pages/user/adama.html">ADAMA</a>
-             <a href="${root}/pages/user/bayer.html">BAYER</a>
-             <a href="${root}/pages/user/aries_agro.html">GEOLIFE</a>
-             <a href="${root}/pages/user/barrix.html">BARRIX</a>
-            <a href="${root}/pages/user/indofil.html">INDOFIL</a>
-            <a href="${root}/pages/user/rinuja.html">RINUJA</a>
+            
          </div>
      </div>
      <div class="dropdown1">
          <button class="dropbtn1">CROP PROTECTION</button>
          <div class="dropdown1-content">
-             <a href="${root}/pages/user/insecticides.html">BIO INSECTICIDES</a>
-             <a href="${root}/pages/user/fungicides.html">BIO FUNGICIDES</a>
-             <a href="${root}/pages/user/nematicides.html">BIO NEMATICIDES</a>
-             <a href="${root}/pages/user/viricides.html"> BIO VIRCIDES</a>
+           
          </div>
      </div>
      <div  class="dropdown2">
           <button class="dropbtn2" > CROP NUTRITION</button>
          <div class="dropdown2-content">
-             <a href="${root}/pages/user/major_nutrients.html">MAJOR NUTRIENTS</a>
-             <a href="${root}/pages/user/secodary_nutrients.html">SECONDARY NUTRIENTS</a>
-             <a href="${root}/pages/user/promoters.html">GROWTH PROMOTERS</a>
-             <a href="${root}/pages/user/retardants.html">GROWTH RETARDANTS</a>
-             <a href="${root}/pages/user/organic.html">ORGANIC FERTILIZERS</a>
-             <a href="${root}/pages/user/bio_fertilizer.html">BIO FERTILIZERS</a>
-             <a href="${root}/pages/user/anti_stressing_agents.html">ANTI STRESSING AGENTS</a>
-             <a href="${root}/pages/user/micro_nutrients.html">MICRO NUTRIENTS</a>
+          
          </div>
      </div>
 </div>
@@ -252,4 +214,36 @@ if (loginUser) {
   //   const afterLoginElement = document.querySelector(".user_header");
   //   afterLoginElement?.remove();
   localStorage.removeItem("user_data");
+}
+
+
+// category have to show in dropdown
+const categoryTypeUser = JSON.parse(localStorage.getItem("category"));
+// console.log(categoryTypeUser)
+
+const findBrands = categoryTypeUser.filter( a => a.category_type === "BRANDS");
+// console.log(findBrands)
+for(let i=0; i<findBrands.length; i++) {
+    const dropdownContent = document.createElement("a");
+dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findBrands[i].category_id}`);
+dropdownContent.innerHTML = findBrands[i].category_name
+document.querySelector(".dropdown-content").append(dropdownContent)
+}
+
+const findCropProduction = categoryTypeUser.filter( a => a.category_type === "CROP PRODUCTION");
+// console.log(findBrands)
+for(let i=0; i<findCropProduction.length; i++) {
+    const dropdownContent = document.createElement("a");
+dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findCropProduction[i].category_id}`);
+dropdownContent.innerHTML = findCropProduction[i].category_name
+document.querySelector(".dropdown1-content").append(dropdownContent)
+}
+
+const findCropNutrition = categoryTypeUser.filter( a => a.category_type === "CROP NUTRITION");
+// console.log(findBrands)
+for(let i=0; i<findCropNutrition.length; i++) {
+    const dropdownContent = document.createElement("a");
+dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findCropNutrition[i].category_id}`);
+dropdownContent.innerHTML = findCropNutrition[i].category_name
+document.querySelector(".dropdown2-content").append(dropdownContent)
 }

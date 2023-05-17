@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+    
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-top: 1.2vw;
+    }
+form{
+    background-color: white;
+    padding:30px  50px 50px 50px ;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.address-title{
+    padding-bottom: 20px;
+    text-align: center;
+}
+.add-address-details label{
+    display: block;
+    margin-bottom: 05px;
+    margin-top:20px;
+    font-weight: bold;
+}
+.add-address-details input,.add-address-details select{
+   padding: 8px 10px; 
+   width:30vw;
+   font-size: 16px;
+   border:1.5px solid rgb(178, 178, 178);
+}
+.save-cancel-container button{
+padding: 9px 80px;
+width: 100%;
+display: block;
+margin-top: 20px;
+font-size: 16px;
+background-color:rgb(1, 65, 1);
+border: none;
+color:white !important;
+border-radius: 5px;
+}
+.save-cancel-container button:hover{
+    background-color:rgb(2, 121, 2);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.add-address-details input:focus{
+    outline: none;
+}

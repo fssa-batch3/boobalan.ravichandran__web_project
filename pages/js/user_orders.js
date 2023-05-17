@@ -2,6 +2,9 @@ const logedUserDetails = JSON.parse(localStorage.getItem("user_data"));
 const orderDetails =
   JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) || [];
 
+const allProductDatas = JSON.parse(localStorage.getItem("products")) || [];
+  
+
 const pro_path = window.location.origin;
 
 const deliverStatus = "true";
@@ -13,7 +16,7 @@ const getOrderDetails = orderDetails.filter(
 
 for (let i = 0; i < getOrderDetails.length; i++) {
   const orderDetail = getOrderDetails[i];
-  const matchingProducts = allProductsDetails.filter(
+  const matchingProducts = allProductDatas.filter(
     (product) => product.product_unique_id === orderDetail.productUniqueId
   );
   matchingProducts.forEach((product) => {
@@ -71,13 +74,7 @@ for (let i = 0; i < getOrderDetails.length; i++) {
       const [inputDay, inputMonth, inputYear] = deliverydate.split("/");
       const inputDateObj = new Date(`${inputMonth}/${inputDay}/${inputYear}`);
       inputDateObj.setDate(inputDateObj.getDate() - 3);
-      const threeDaysBeforeDate = `${String(inputDateObj.getDate()).padStart(
-        2,
-        "0"
-      )}/${String(inputDateObj.getMonth() + 1).padStart(
-        2,
-        "0"
-      )}/${inputDateObj.getFullYear()}`;
+      const threeDaysBeforeDate = `${String(inputDateObj.getDate()).padStart(2,"0")}/${String(inputDateObj.getMonth() + 1).padStart(2,"0")}/${inputDateObj.getFullYear()}`;
 
       // console.log("deliverydate:", deliverydate);
       // console.log("threeDaysBeforeDate:", threeDaysBeforeDate);
@@ -92,7 +89,7 @@ for (let i = 0; i < getOrderDetails.length; i++) {
       }
 
       if (deliverydate === formattedDate) {
-        const ord_status = "Processing";
+        const ord_status = "Delivered";
         getOrderDetails[i].orderStatus = ord_status;
         localStorage.setItem(
           "addtoCartDeliveryProduct",

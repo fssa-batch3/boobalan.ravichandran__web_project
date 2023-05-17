@@ -101,69 +101,8 @@ div_cart114.append(div_cart114_h2);
 
 const logedUser = JSON.parse(localStorage.getItem("user_data"));
 const cartIds = JSON.parse(localStorage.getItem("addToCartItem")) || [];
-const dhanukaDetails =
-  JSON.parse(localStorage.getItem("dhanuka_details")) || [];
-const uplDetails = JSON.parse(localStorage.getItem("upl_details")) || [];
-const dowAgroScienceDetails =
-  JSON.parse(localStorage.getItem("dow_agro_science_details")) || [];
-const tata_rallis_details =
-  JSON.parse(localStorage.getItem("tata_rallis_details")) || [];
-const adama_details = JSON.parse(localStorage.getItem("adama_details")) || [];
-const bayer_details = JSON.parse(localStorage.getItem("bayer_details")) || [];
-const aries_agro_details =
-  JSON.parse(localStorage.getItem("aries_agro_details")) || [];
-const barrix_details = JSON.parse(localStorage.getItem("barrix_details")) || [];
-const indofil_details =
-  JSON.parse(localStorage.getItem("indofil_details")) || [];
-const rinuja_details = JSON.parse(localStorage.getItem("rinuja_details")) || [];
-const bio_insecticides_details =
-  JSON.parse(localStorage.getItem("bio_insecticides_details")) || [];
-const bio_fungicides_details =
-  JSON.parse(localStorage.getItem("bio_fungicides_details")) || [];
-const bio_nematicides_details =
-  JSON.parse(localStorage.getItem("bio_nematicides_details")) || [];
-const bio_vircides_details =
-  JSON.parse(localStorage.getItem("bio_vircides_details")) || [];
-const major_nurients_details =
-  JSON.parse(localStorage.getItem("major_nurients_details")) || [];
-const secondary_nutrients_details =
-  JSON.parse(localStorage.getItem("secondary_nutrients_details")) || [];
-const growth_promoters_details =
-  JSON.parse(localStorage.getItem("growth_promoters_details")) || [];
-const growth_retardants_details =
-  JSON.parse(localStorage.getItem("growth_retardants_details")) || [];
-const organic_fertilizer_details =
-  JSON.parse(localStorage.getItem("organic_fertilizer_details")) || [];
-const bio_fertilizers_details =
-  JSON.parse(localStorage.getItem("bio_fertilizers_details")) || [];
-const anti_stressing_agents_details =
-  JSON.parse(localStorage.getItem("anti_stressing_agents_details")) || [];
-const micro_nutrients_details =
-  JSON.parse(localStorage.getItem("micro_nutrients_details")) || [];
-
-const allProductsDetails = dhanukaDetails.concat(
-  uplDetails,
-  dowAgroScienceDetails,
-  tata_rallis_details,
-  adama_details,
-  bayer_details,
-  aries_agro_details,
-  barrix_details,
-  indofil_details,
-  rinuja_details,
-  bio_insecticides_details,
-  bio_fungicides_details,
-  bio_nematicides_details,
-  bio_vircides_details,
-  major_nurients_details,
-  secondary_nutrients_details,
-  growth_promoters_details,
-  growth_retardants_details,
-  organic_fertilizer_details,
-  bio_fertilizers_details,
-  anti_stressing_agents_details,
-  micro_nutrients_details
-);
+const allProductsDetails = JSON.parse(localStorage.getItem("products")) || [];
+  
 // console.log(allProductsDetails)
 const findLogedUseraddtoCart = cartIds.filter(
   (details) => details.userUniqueId === logedUser
@@ -201,21 +140,13 @@ function addToCartItem(product) {
     <div class="cart_details">
       <div class="cart2">
         <div class="cart21">
-          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(
-    product.product_name
-  )}&product_id=${product.product_unique_id}"><img src="${
-    product.source
-  }" alt="DHANUKA M45 FUNGICIDE"></a>
+          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(product.product_name)}&product_id=${product.product_unique_id}"><img src="${product.source}" alt="DHANUKA M45 FUNGICIDE"></a>
         </div>
         <div class="cart22">
-          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(
-    product.product_name
-  )}&product_id=${product.product_unique_id}">
+          <a href="${path_pro}/pages/user/product_details.html?product=${encodeURIComponent(product.product_name)}&product_id=${product.product_unique_id}">
             <h1 id="product_name">${product.product_name}</h1>
             <div class="price">
-              <h2 id="product_pri">₹${
-                product.actual_price - product.discount
-              }</h2>
+              <h2 id="product_pri">₹${product.actual_price - product.discount}</h2>
               <del id="actual_price">₹${product.actual_price}</del>
             </div>
             <h3 id="discount">You Save: ${product.discount}</h3>
@@ -232,13 +163,15 @@ function addToCartItem(product) {
             <option>4</option>
             <option>5</option>
             <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
           </select>
         </div>
         
         <div class="remove-button">
-          <a><button onclick="removeProductFromCart('${
-            product.product_unique_id
-          }')">Remove</button></a>
+          <a><button onclick="removeProductFromCart('${product.product_unique_id}')">Remove</button></a>
         </div>
       </div>
     </div>
@@ -285,10 +218,7 @@ for (let i = 0; i < loadProduct.length; i++) {
   const product = loadProduct[i];
   const productInCart = addToCartItem(product);
   cartContainer.append(productInCart);
-  // const quantity = productInCart.querySelector("#option").value;
-  // const price = (product["actual_price"] - product["discount"]) * quantity;
-
-  // const discount = product["discount"] * quantity;
+  
 }
 
 // remove from addtocart function // Function to remove a product from the cart
@@ -342,7 +272,7 @@ div_btnn_button.setAttribute("type", "button");
 div_btnn_button.innerText = "Place order";
 div_btnn_a.append(div_btnn_button);
 
-// ---- store all products details in local storage
+
 // ---- store all products details in local storage
 document.getElementById("place_order").addEventListener("click", () => {
   const addtoCartDeliveryProduct =
@@ -379,22 +309,12 @@ document.getElementById("place_order").addEventListener("click", () => {
       const deliveryDate = new Date(
         Date.now() + 7 * 24 * 60 * 60 * 1000
       ).toLocaleDateString();
-      // const deliveryStatus = "false";
-      // Get the user information
-      const firstName = "";
-      const lastName = "";
-      const email = "";
-      const phoneNumber = "";
-
+ 
       // Get the delivery information
-      const address = "";
-      const zipCode = "";
-      const deliveryPlace = "";
-      const paymentMethod = "";
+      const addressUniqueID = "";
+      // const paymentMethod = "";
       const orderStatus = "";
-      const district = "";
-      const state = "Tamil Nadu";
-
+     
       const currentTime = new Date();
       const timeString = currentTime.toLocaleTimeString([], {
         hour12: false,
@@ -411,22 +331,12 @@ document.getElementById("place_order").addEventListener("click", () => {
         proQuantity,
 
         deliveryStatus,
-        orderUniqueId: orderId, // Use the same unique ID for all products
+        orderUniqueId: orderId, 
         orderDate,
         deliveryDate,
-        timeString,
-        firstName,
-        lastName,
-        email,
-        phoneNumber,
-        address,
-        zipCode,
-        district,
-        state,
-        deliveryPlace,
-        paymentMethod,
+        orderedTime:timeString,
+        addressUniqueID,
         orderStatus,
-
         userUniqueId: logedUser,
       };
 
@@ -438,7 +348,7 @@ document.getElementById("place_order").addEventListener("click", () => {
       JSON.stringify(addtoCartDeliveryProduct)
     );
 
-    const product_url = `${path_pro}/pages/user/delivery_addtocart.html?delivery-status=${deliveryStatus}`;
+    const product_url = `${path_pro}/pages/user/address_delivery_addtocart.html?delivery-status=${deliveryStatus}`;
     window.location.href = product_url;
   }
 });

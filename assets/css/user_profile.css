@@ -1,4 +1,180 @@
+main{
+    background-color: hsl(216, 100%, 99%);
+    padding-top: 2vh;
+    padding-left: 11vw;
+    padding-bottom: 10vh;
+}
+.user-profile-details{
+    display:flex;
+}
+.address-container{
+    background-color:#ffffff;
+    height:97vh;
+    border-radius: 10px;
+    width: 25vw;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
 
+.address-title{
+    text-align: center;
+    padding: 20px 0px;
+    background-color:#176047;
+    color:white !important;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.user-addresses{
+    margin-top: 20px;
+    padding: 10px 20px 30px 20px;
+    overflow-y: scroll;
+    min-height: 30vh;
+    max-height: 74vh;
+}
+.user-addresses::-webkit-scrollbar{
+    display: none;
+   }
+.single-address{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+border-radius: 3px;
+padding: 10px 20px 5px 20px;
+margin-top: 10px;
+}
+.home-container{
+  
+    padding: 5px 0px;
+    margin-bottom: 10px;
+
+}
+.address-details{
+    margin-bottom: 2px;
+    font-size: 15px;
+}
+.address-details p{
+    margin-bottom: 7px;
+}
+.edit-remove{
+    display: flex;
+    border-top: 1.5px solid rgb(179, 179, 179);
+}
+.edit-remove a{
+    text-decoration: none;
+    color:black
+}
+.details-mobile{
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+#address-edit {
+    cursor: pointer;
+    padding: 8px 55px;
+    border-right: 1px solid rgb(194, 194, 194);
+}
+#address-remove  {
+    padding: 8px 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+}
+#address-remove:hover, #address-edit:hover{
+   
+    color:#176047;
+    font-weight: bold;
+}
+.add-new-address{
+  
+    width:18vw;
+    padding: 12px 20px 7px 40px;
+    border-radius: 5px;
+    color:rgb(255, 255, 255);
+    border: 1.5px solid rgb(173, 173, 173);
+    cursor: pointer;
+    margin-left: 3vw;
+    margin-top: 20px;
+    background-color: #176047;
+}
+.add-new-address h3{
+display: flex;
+font-weight: normal;
+font-size: 15px !important;
+
+}
+.add-new-address h3 p{
+    font-size: 25px;
+   margin-top:-6px;
+   margin-right: 10px;
+   
+}
+.add-new-address h3:hover{
+    font-weight: bold;
+    
+}
+.add-new-address:hover{
+    background-color: #ffffff;
+    color: #176047;
+    border: 1.5px solid #176047;
+font-weight: bold;
+}
+/* right side profile  */
+.personal-information-container{
+    background-color: #ffffff;
+    margin-left: 10px;
+    width: 50vw;
+    
+border: 2px solid rgb(213, 213, 213);
+    height:68vh;
+}
+.personal-title{
+padding: 30px 0;
+border-bottom: 2px solid gray;
+text-align: center;
+color:rgb(88, 88, 88);
+}
+.personal-title h1{
+font-size: 27px;
+}
+.information-container1{
+    padding: 35px 70px 35px 70px;
+}
+.sub-information-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0px;
+}
+.sub-information-details p{
+font-size: 18px !important;
+}
+.sub-information-details h2{
+    color:rgb(88, 88, 88);
+    font-size: 20px;
+}
+.edit-profile ,.del_account{
+    /* margin-left: 30vw; */
+   
+    background-color: #176047;
+    padding: 10px 50px 10px 50px;
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.edit-profile:hover, .del_account:hover{
+    background-color: #189469;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.edit-delete{
+    display: flex;
+    justify-content: space-around;
+    background-color:#176047;
+    padding: 10px 0px;
+    height:11vh;
+    align-items: center;
+}
+
+
+
+/* 
 main{
   
    display: flex;
@@ -8,290 +184,12 @@ main{
    
    color: rgb(255, 255, 255);
    background-color: rgba(251, 255, 247, 0.995);
-}
-:root{
-    --my-profile-fontfamily:fontAwesome;
-}
-.details2{
-    /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
-  
-    padding: 30px 40px 30px 80px;
-  justify-content: center; 
-
-  align-items: center;
-  width:700px;
-    
-
-}
-.details2 h2{
-    font-size: 35px;
- display: flex;
-    margin-bottom: 40px;
-    justify-content: center;
-    align-items: center;
-    color: rgb(241, 61, 91);
-    
-}
-
-label{
-    font-size: 22px;
-    font-weight: 600;
-    
-}
-input{
-   
-    background-color: white;
-    caret-color: transparent;
-}
-#full_name1{
-    margin-left:.2rem;
-  
-     min-width:270px;
-     height:35px;
-     padding: 5px 10px 5px 10px;
-     font-size: 25px;
-     margin-bottom: 40px;
-     background-color: transparent;
-     outline: none;
-     border: none;
-     color: rgb(255, 255, 255);
-     margin-right: 50px;
-   
-     
- }
-
-#full_name{
-    cursor: none;
-   margin-left: 10.7rem;
-   min-width:270px;
-       height:35px;
-    padding: 5px 10px 5px 5px;
-    font-size: 19px;
-    margin-bottom: 40px;
-    margin-right: 30px;
-    border-radius: 50px;
-    background-color:rgb(45, 45, 45);
-    outline: none;
-    border: none;
-    /* border-bottom: 2px solid black; */
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-     text-align: center;
-}
-#gender{
-    margin-left: 9.5rem;
-    min-width:270px;
-    height:35px;
-    padding: 5px 10px 5px 5px;
-    font-size: 19px;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    background-color:rgb(45, 45, 45);
-    outline: none;
-    border: none;
-    /* border-bottom: 2px solid black; */
-    color: rgb(255, 255, 255);text-align: center;
-}
-#email{
-    margin-left: 5.2rem;
-    min-width:270px;
-    height:35px;
-    padding: 5px 10px 5px 5px;
-    font-size: 19px;
-    margin-bottom:40px;
-    border-radius: 50px;
-    background-color:rgb(45, 45, 45);
-    outline: none;
-    border: none;
-    /* border-bottom: 2px solid black; */
-    color: rgb(255, 255, 255);text-align: center;
-}
-#mobile{
-    margin-left: 4rem;
-    min-width:270px;
-    height:35px;
-    padding: 5px 10px 5px 5px;
-    font-size: 19px;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    background-color:rgb(45, 45, 45);
-    outline: none;
-    border: none;
-    /* border-bottom: 2px solid black; */
-    color: rgb(255, 255, 255);text-align: center;
-    
-}
-#street{
-    margin-left: 6rem;
-    min-width:270px;
-    height:35px;
-    padding: 5px 10px 5px 5px;
-    font-size: 19px;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    background-color:rgb(45, 45, 45);
-    outline: none;
-    border: none;
-    /* border-bottom: 2px solid black; */
-    color: rgb(255, 255, 255);
-    margin-right: 70px;text-align: center;
-}
-#city{
-    margin-left:7.4rem;
-    min-width:270px;
-    height:35px;
-    padding: 5px 10px 5px 5px;
-    font-size: 19px;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    background-color:rgb(45, 45, 45);
-    outline: none;
-    border: none;
-    /* border-bottom: 2px solid black; */
-    color: rgb(255, 255, 255);text-align: center;
-}
-#district{
-    margin-left: 5.1rem;
-    min-width:270px;
-    height:35px;
-    padding: 5px 10px 5px 5px;
-    font-size: 19px;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    background-color:rgb(45, 45, 45);
-    outline: none;
-    border: none;
-    /* border-bottom: 2px solid black; */
-    color: rgb(255, 255, 255);text-align: center;
-}#state{
-    margin-left: 6.6rem;
-    min-width:270px;
-    height:35px;
-    padding: 5px 10px 5px 5px;
-    font-size: 19px;
-    margin-bottom: 40px;
-    border-radius: 50px;
-    background-color:rgb(45, 45, 45);
-    outline: none;
-    border: none;
-    /* border-bottom: 2px solid black; */
-    color: rgb(255, 255, 255);text-align: center;
-}
+} */
 
 
 
-
-.button{
-   justify-content: space-around;
-    margin-top: 30px;
-    display: flex;
-}
-.button button{
-    padding: 10px 50px 10px 50px;
-
-    font-size: 18px;
-    background-color: rgb(3, 4, 40);
-    border-radius: 50px;
-    color: white;
-    font-weight: bold;
-    border:1.5px solid rgb(255, 234, 0);
-    margin-right: 100px;
-    margin-left: 50px;
-}
-.button button:hover ,.btnn button:hover{
-    background: linear-gradient(to top, #3830d0 0%, #330867 100%);
-    color:white;
-    border: 1.5px solid  #3830d0;
-    transform: scale(1.02);
-    box-shadow: rgba(255, 255, 255, 0.731) 0px 5px 15px;
-}
-.form1{
-    display: flex;
-    background-image: url(https://images.unsplash.com/photo-1599056481506-c4975215aff4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRhcmslMjBncmVlbnxlbnwwfHwwfHw%3D&w=1000&q=80);
-    
-}
-.details1{
-   border-right: 2px solid rgba(255, 255, 255, 0.562);
-    padding: 50px 0px 0px 120px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.details1 h2{
-    display: flex;
-    margin-top: 2rem;
-    margin-left: .5rem;
-    margin-bottom: 15px;
-}
-.details1 p{
-    color:rgb(62, 62, 62);
-    margin-left: .5rem;
-}
-.details1 label{
-    font-weight: bold;
-    display: flex;
-    font-size: 22px;
-}
-#dobb{
-    padding: .4rem .5rem;
-    border-radius: 5px;
-    margin-left: 0rem;
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: transparent;
-    color: white;
-    margin-top: -5px;
-}
-/* -------====================/profile image/-----------============= */
-.wrapper{
-    width: 15rem;
-    height: 15rem;
-    position: relative;
-    border:5px solid gray;
-border-radius: 50%;
-background:url(../images/profile.png);
-background-size: 100% 100%;
-overflow: hidden;
-margin-left: 40px;
-margin-top: 100px;
-}
-.my_file{
-    position: absolute;
-    bottom: 0;
- outline: none;
- color: transparent;
- width:100%;
-    box-sizing: border-box;
-    padding: 25px 90px;
-    cursor: pointer;
-    transition: .5s;
-    background: rgba(0,0,0,.5);
-    opacity: 0;
-}
-.my_file::-webkit-file-upload-button{
-    visibility: hidden;
-}
-.my_file::before{
-    content: '\f030';
-    font-size: 50px;
-    font-family:var( --my-profile-fontfamily);
-    color:rgb(255, 255, 255);
-    display: inline-block;
-    user-select: none;
-}
-.my_file::after{
-    content: 'update';
-    font-weight: bold;
-    color: white;
-    display: block;
-    font-size: 14px;
-    top:70px;
-    position: absolute;
-    padding-left:3px;
-    padding-top: 5px;
-}
-.my_file:hover{
-    opacity: 1;
+.create_pro {
+    background-color: hsl(216, 100%, 99%);
 }
 /* order create------------ */
 .create_pro button{
@@ -309,6 +207,98 @@ margin-bottom: 60px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+/* edit profile poppup */
+.edit-profile-details{
+position: fixed;
+background-color: #000000a4;
+width: 100vw;
+height: 100%;
+top: 0px;
+visibility:hidden;
+ z-index: 5;
+}
+
+.fulledit{
+background-color: #ffffff;
+   width:30vw;
+   height: 39vw;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+ position: absolute;
+   top: 18%;
+   border-radius:5px;
+   left: 35%;
+
+}
+
+
+
+
+/* popPup message shown */
+.edit-profile-details.open-message{
+    visibility: visible;
+}
+.exit-icon img{
+    margin-left: 26.5vw;
+    width:35px;
+    height:35px;
+    margin-top: 1.8vh;
+    padding: 10px;
+}
+.exit-icon img:hover{
+    background-color: rgb(191, 191, 191);
+    border-radius: 20px;
+
+}
+
+.edit-title{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.edit-details-container{
+    padding: 30px 50px 50px 80px;
+
+}
+.edit-details-container label{
+    display: block;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.user-personal-details input, .user-personal-details select{
+    width:90%;
+    caret-color: black;
+    padding: 8px 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border:1.5px solid rgb(184, 184, 184);
+}
+.user-personal-details input:focus, .user-personal-details select:focus{
+    outline: none;
+}
+#edit-gender option{
+    padding: 10px 0px;
+}
+
+
+/* save button in edit profile page */
+.user-details-save{
+  
+    text-align: center;
+}
+.user-details-save button{
+ width: 75%;
+ padding: 14px 0;
+ font-size: 17px;
+ border-radius: 3px;
+ background-color: #176047;
+ border: none;
+ color:white !important;
+
+}
+.user-details-save button:hover{
+    background-color: #0a9161;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
 /* -------==============/ @media start/=-============---------------- */
 @media screen and (max-width:400px){
     .form1{
