@@ -78,6 +78,17 @@
 .active, .dot:hover {
   background-color: #717171;
 }
+.offers1{
+  display:grid;
+  gap:3.5vw;
+  grid-auto-flow:column;
+  grid-auto-columns:22%;
+  overflow-x: auto;
+  padding:20px 50px 20px 20px;
+  overscroll-behavior-inline: contain;
+  width: 92vw;
+  margin-left: 50px;
+}
 
 /* Fading animation */
 .fade {

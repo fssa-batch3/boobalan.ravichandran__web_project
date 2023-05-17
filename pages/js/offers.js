@@ -9,9 +9,17 @@ let price_h2;
 let price_del;
 let save_h3;
 
-const product_details =
-  JSON.parse(localStorage.getItem("dhanuka_details")) || [];
 
+
+
+const categoryId = new URLSearchParams(window.location.search).get("category_id");
+
+
+const productDetails = JSON.parse(localStorage.getItem("products")) || [];
+// console.log(productDetails);
+
+  const product_details = productDetails.filter(data => data.category_id === categoryId);
+console.log(product_details)
 const root_path = window.location.origin;
 
 for (let i = 0; i < product_details.length; i++) {
@@ -23,7 +31,7 @@ for (let i = 0; i < product_details.length; i++) {
   div_today.setAttribute("class", "today");
   div_today.setAttribute("data-id", product_details[i].product_unique_id);
   document.querySelector("div.offers1").append(div_today);
-  console.log(div_today);
+  // console.log(div_today);
 
   // product page link----------------------->
   // <a>---------------------</a>

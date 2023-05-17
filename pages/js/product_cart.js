@@ -9,8 +9,17 @@ let price_h2;
 let price_del;
 let save_h3;
 
-const product_details =
-  JSON.parse(localStorage.getItem("bio_insecticides_details")) || [];
+
+
+const categoryId = new URLSearchParams(window.location.search).get("category_id");
+
+
+const productDetails = JSON.parse(localStorage.getItem("products")) || [];
+// console.log(productDetails);
+
+const product_details = productDetails.filter((data) => data.category_id === categoryId)
+
+
 
 const root_path = window.location.origin;
 

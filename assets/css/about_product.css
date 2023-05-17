@@ -277,7 +277,7 @@ span{
 .reviews{
     display:flex;
     margin-top: 50px;
-    border-top: 3px solid black;
+    /* border-top: 3px solid black; */
     padding-top: 50px;
 
 }
@@ -816,7 +816,7 @@ a{
     overscroll-behavior-inline: contain;
     margin-top: 20px;
   /* border-top: 3px solid rgb(2, 122, 34); */
-  /* border-bottom: 3px solid  rgb(2, 122, 34); */
+  border-bottom: 3px solid  rgb(2, 122, 34);
     
   }
   .offerscrop::-webkit-scrollbar{

@@ -663,8 +663,9 @@ padding: 15px 0px 0px 0px;
 /* search bar --------- */
 .search-input .autocom-box{
  padding: 0px;
- max-height: 280px;
- width:380px;
+ 
+ max-height: 380px;
+ width:390px;
  margin-left: 100px;
  overflow-y: auto;
  background-color: white;

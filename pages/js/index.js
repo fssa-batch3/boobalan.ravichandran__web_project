@@ -7,7 +7,7 @@
 //     <h3>You Save:₹ 1,000</h3></a>
 
 // </div>
-const product_details = JSON.parse(localStorage.getItem("dhanuka_details"));
+const product_details = JSON.parse(localStorage.getItem("products"));
 const product_path = window.location.origin;
 
 for (let i = 0; i < product_details.length; i++) {
@@ -83,7 +83,7 @@ for (let i = 0; i < product_details.length; i++) {
   document.querySelector("div.offers1").append(div_today);
 }
 
-let slideIndex = 1;
+let slideIndex = 0;
 let timeoutID;
 let isTransitioning = false;
 function showSlides(n = 1) {
@@ -134,3 +134,50 @@ function currentSlide(n) {
     showSlides(n - slideIndex);
   }
 }
+
+// append the offers, insecticides.....
+let getBayer = JSON.parse(localStorage.getItem("category"))|| [];
+
+const findBayer = getBayer.find(e => e.category_name === "BAYER");
+const findInsecticides = getBayer.find(e => e.category_name === "BIO INSECTICIDES");
+const findFungicides = getBayer.find(e => e.category_name === "BIO FUNGICIDES");
+const findPromoters = getBayer.find(e => e.category_name === "GROWTH PROMOTERS");
+const findNematicides = getBayer.find(e => e.category_name === "BIO NEMATICIDES");
+
+
+const ways = window.location.origin
+const styleTypes =
+`<div class="offers">
+ <a href="${ways}/pages/user/offers.html?category_id=${findBayer.category_id}">
+   <img src="./assets/images/fert1.jpg" alt="offers" class="offers11">
+   <h2 class="off">Offers</h2>
+ </a>
+</div>
+<div class="offers">
+ <a href="${ways}/pages/user/products_cart.html?category_id=${findFungicides.category_id}">
+   <img src="./assets/images/fert2.jpg" alt="Pesticides products" class="offers11">
+   <h2 class="off1">Insecticides</h2>
+ </a>
+</div>
+<div class="offers">
+ <a href="${ways}/pages/user/products_cart.html?category_id=${findFungicides.category_id}">
+   <img src="./assets/images/fert3.jpg" alt="Fungicides" class="offers11">
+   <h2 class="off2">Fungicides</h2>
+ </a>
+</div>
+<div class="offers">
+ <a href="${ways}/pages/user/products_cart.html?category_id=${findPromoters.category_id}">
+   <img src="./assets/images/fert4.jpg" alt="Growth Promoters" class="offers11">
+   <h2 class="off3">Growth Promoters</h2>
+ </a>
+</div>
+<div class="offers">
+ <a href="${ways}/pages/user/products_cart.html?category_id=${findNematicides.category_id}">
+   <img src="./assets/images/fert5.png" alt="Herbicides" class="offers11">
+   <h2 class="off4">Nematicides</h2>
+ </a>
+</div>`;
+
+document.querySelector("div.product").insertAdjacentHTML("beforeend", styleTypes);
+
+         

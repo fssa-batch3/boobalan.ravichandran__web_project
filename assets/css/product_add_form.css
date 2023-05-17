@@ -68,15 +68,17 @@
         background: rgba(58, 58, 255, 0.888);
         box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
-    .form-group a{
+    .form-group a ,#add-category{
         text-decoration: none;
         font-size: 18px;
         color:rgb(9, 9, 75);
         font-weight: bold;
+        cursor: pointer;
     }
-    .form-group a:hover{
+    .form-group a:hover ,#add-category:hover{
         color: rgb(255, 0, 123);
     }
+   
    
     .form-group textarea{
         font-size: 19px;
@@ -99,3 +101,59 @@
      .go_home a:hover{
         color: red;
      }
+
+     .category-container{
+        position: fixed;
+        background-color: #000000a4;
+        width: 100vw;
+        height: 100%;
+        top: 0px;
+        visibility:hidden;
+         z-index: 5;
+    }
+    .edit-details-container{
+        background-color: #ffffff;
+   width:30vw;
+   height: 33vw;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+ position: absolute;
+   top: 18%;
+   border-radius:5px;
+   left: 35%;
+    }
+
+.category-button button{
+    display: block;
+    width:90%;
+    padding: 10px ;
+    margin-top: 30px;
+  background-color: #176047;
+  border: 2px solid #176047;
+  color:white;
+    
+}
+.category-button button:hover{
+    background-color: white;
+    color:#176047;
+}
+.user-personal-details{
+    margin-bottom: 20px;
+
+}
+.edit-details-container{
+    padding: 70px 80px 70px 100px;
+}
+.edit-title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.user-personal-details input,.user-personal-details select{
+    width:90%;
+    padding: 10px;
+    border:2px solid rgb(174, 174, 174);
+    font-size: 17px;
+    margin-top: 10px;
+}
+.showcategory{
+    visibility: visible;
+}

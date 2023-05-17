@@ -38,10 +38,11 @@ const getProductDetails = orderedProducts.find(
     details.orderUniqueId === productUniqueId &&
     details.productUniqueId === productUnique
 );
-console.log(getProductDetails)
+// console.log(getProductDetails)
 
+const allProductsData = JSON.parse(localStorage.getItem("products"));
 // product image and name get from local storage
-const getOrderedproductUid = allProductsDetails.find(
+const getOrderedproductUid = allProductsData.find(
   (data) => data.product_unique_id === getProductDetails.productUniqueId
 );
 // console.log(getOrderedproductUid);

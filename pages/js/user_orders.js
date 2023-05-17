@@ -2,6 +2,9 @@ const logedUserDetails = JSON.parse(localStorage.getItem("user_data"));
 const orderDetails =
   JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) || [];
 
+const allProductDatas = JSON.parse(localStorage.getItem("products")) || [];
+  
+
 const pro_path = window.location.origin;
 
 const deliverStatus = "true";
@@ -13,7 +16,7 @@ const getOrderDetails = orderDetails.filter(
 
 for (let i = 0; i < getOrderDetails.length; i++) {
   const orderDetail = getOrderDetails[i];
-  const matchingProducts = allProductsDetails.filter(
+  const matchingProducts = allProductDatas.filter(
     (product) => product.product_unique_id === orderDetail.productUniqueId
   );
   matchingProducts.forEach((product) => {
