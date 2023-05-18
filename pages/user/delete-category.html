@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Category</title>
+
+    <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/interfaceindex.css">
+    <link rel="stylesheet" href="../../assets/css/insecticides.css">
+
+
+    <style>
+        main{
+            padding: 0 100px 50px 100px;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-top: 100px;
+        }
+        
+        th{
+          padding: 30px 8px;
+          text-align: left;
+          border-bottom: 1px solid #979797;
+          text-align: center;
+      
+        }
+        td {
+          padding: 15px 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+          text-align: center;
+        }
+        th {
+          background-color: #2874f0;
+          color:white
+        }
+        tr{
+            border-left:  1px solid #ddd;
+            border-right:  1px solid #ddd;
+            width: 100%;
+        }
+        tr:hover {
+            background-color: #eff6ff;
+           
+            color:#3484fc;
+        }
+        td button{
+            cursor: pointer;
+            padding: 5px 18px ;
+            background-color: #176047;
+            border: 1.5px solid #176047;
+            color: white;
+            border-radius: 3px;
+        }
+        td button:hover{
+            background-color: #fafffd;
+           
+            color: #176047;
+        }
+      </style>
+</head>
+<body>
+    <main>
+        <table>
+            <thead>
+              <tr>
+                <th>Category ID</th>
+                <th>Category Name</th>
+                <th>Category Type</th>
+                <th >Status</th>
+                <th >Status Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <!-- <tr>
+                <td>2</td>
+                <td>Category B</td>
+                <td>Type 2</td>
+                <td><button>Remove</button></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Category C</td>
+                <td>Type 1</td>
+                <td><button>Remove</button></td>
+              </tr> -->
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+    </main>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/search.js"></script>
+    <script>
+
+        const categoryContainer = JSON.parse(localStorage.getItem("category"));
+        //console.log(categoryContainer);
+for(let i=0; i<categoryContainer.length; i++){
+    
+        // Create the table row
+const row = document.createElement('tr');
+
+// Create the first table cell for Category ID
+const idCell = document.createElement('td');
+idCell.textContent = categoryContainer[i]["category_id"] ; // Replace with your category ID
+row.appendChild(idCell);
+
+// Create the second table cell for Category Name
+const nameCell = document.createElement('td');
+nameCell.textContent = categoryContainer[i]["category_name"] ; // Replace with your category name
+row.appendChild(nameCell);
+
+// Create the third table cell for Category Type
+const typeCell = document.createElement('td');
+typeCell.textContent = categoryContainer[i]["category_type"] ; // Replace with your category type
+row.appendChild(typeCell);
+
+// Create the fourth table cell for Category Type
+const statusCell = document.createElement('td');
+statusCell.textContent = categoryContainer[i]["category_status"] ; // Replace with your category type
+row.appendChild(statusCell);
+
+// Create the fifth table cell for Remove button
+const removeCell = document.createElement('td');
+const removeButton = document.createElement('button');
+removeButton.className = "removeCategory";
+removeButton.value = categoryContainer[i]["category_id"];
+removeButton.textContent = 'Update Status';
+removeCell.appendChild(removeButton);
+row.appendChild(removeCell);
+
+// Add the row to the table body
+const tableBody = document.querySelector('tbody'); 
+tableBody.appendChild(row);
+
+ // Add event listener to each remove button
+ removeButton.addEventListener("click", (event) => {
+  const categoryId = event.target.value;
+  const cartIdIndex = categoryContainer.findIndex(
+    (data) => data.category_id === categoryId
+  );
+
+  if (cartIdIndex !== -1) {
+    if (categoryContainer[cartIdIndex].category_status === "false") {
+      categoryContainer[cartIdIndex].category_status = "true";
+      alert("Category status updated to true");
+    } else {
+      categoryContainer[cartIdIndex].category_status = "false";
+      alert("Category status updated to false");
+    }
+
+    window.location.href = "./delete-category.html";
+    localStorage.setItem("category", JSON.stringify(categoryContainer));
+  }
+});
+
+
+}
+
+
+
+    </script>
+</body>
+</html>

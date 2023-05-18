@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
         <!-- <link rel="stylesheet" href="../../assets/css/user_profile.css"> -->
         <link rel="stylesheet" href="../../assets/css/product_add_form.css">
+        
 
         <title>product ADD form</title>
     </head>
@@ -25,7 +26,7 @@
   
                 </div>
                 <div class="form-group">
-    
+
                     <select class="form-control form-control-type" id="category">
                         <option >Select</option>
                         <!-- <option id="dhanuka">DHANUKA</option>
@@ -142,7 +143,10 @@
                 </button >
                 <button id="category_cancel">Cancel</button>
             </div>
-            
+
+            <div class="delete-category">
+              <a href="./delete-category.html">Delete Category -></a>
+            </div>            
           </div>
        </div>
 
@@ -230,25 +234,32 @@ document.getElementById("add-category").addEventListener("click",
   category = category.toUpperCase(); // Convert category name to uppercase
 
   const addCategory = JSON.parse(localStorage.getItem("category")) || [];
-  const exist =
-    addCategory.length &&
-    JSON.parse(localStorage.getItem("category")).some(
-      (data) => data.category_name.toLowerCase() === category.toLowerCase()
-    );
-  if (!exist) {
+  const existingCategoryIndex = addCategory.findIndex(
+    (data) =>
+      data.category_name.toLowerCase() === category.toLowerCase() &&
+      data.category_status === "false"
+  );
+
+  if (existingCategoryIndex !== -1) {
+    // If the category with the same name and status "false" exists
+    addCategory[existingCategoryIndex].category_status = "true"; // Update the status to "true"
+    alert("Category status updated successfully");
+    window.location.href = "./product_form.html";
+    localStorage.setItem("category", JSON.stringify(addCategory));
+  } else {
     const category_detail = {
-        category_type:categoryType,
-        category_name: category,
+      category_type: categoryType,
+      category_name: category,
       category_id: generateShortId(),
+      category_status: "true",
     };
     addCategory.push(category_detail);
     alert("Category added successfully");
     window.location.href = "./product_form.html";
     localStorage.setItem("category", JSON.stringify(addCategory));
-  } else {
-    alert("Category already exists");
   }
 });
+
 
 
 
@@ -261,10 +272,7 @@ for(let i=0; i<categorArray.length; i++) {
     const optionType = document.createElement("option");
     optionType.setAttribute("value",categorArray[i].category_id)
     optionType.innerHTML = categorArray[i].category_name;
-    
     document.querySelector(".form-control-type").append(optionType)
-
-
 }
 
 

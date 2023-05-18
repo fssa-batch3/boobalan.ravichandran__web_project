@@ -114,7 +114,7 @@
     .edit-details-container{
         background-color: #ffffff;
    width:30vw;
-   height: 33vw;
+   height: 37vw;
 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
  position: absolute;
    top: 18%;
@@ -156,4 +156,17 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
 }
 .showcategory{
     visibility: visible;
+}
+
+.delete-category{
+    margin-top: 30px;
+   
+}
+.delete-category a{
+    text-decoration: none;
+    color: #176047;
+    font-weight: bold;
+}
+.delete-category a:hover{
+    color: #bd064c
 }
