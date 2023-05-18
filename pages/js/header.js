@@ -218,32 +218,41 @@ if (loginUser) {
 
 
 // category have to show in dropdown
-const categoryTypeUser = JSON.parse(localStorage.getItem("category"));
+const categoryTypeUser = JSON.parse(localStorage.getItem("category")) || [];
 // console.log(categoryTypeUser)
 
 const findBrands = categoryTypeUser.filter( a => a.category_type === "BRANDS");
 // console.log(findBrands)
 for(let i=0; i<findBrands.length; i++) {
+   if(findBrands[i].category_status === "true"){
     const dropdownContent = document.createElement("a");
-dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findBrands[i].category_id}`);
-dropdownContent.innerHTML = findBrands[i].category_name
-document.querySelector(".dropdown-content").append(dropdownContent)
+    dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findBrands[i].category_id}`);
+    dropdownContent.innerHTML = findBrands[i].category_name
+    document.querySelector(".dropdown-content").append(dropdownContent)
+   }
 }
 
 const findCropProduction = categoryTypeUser.filter( a => a.category_type === "CROP PRODUCTION");
 // console.log(findBrands)
 for(let i=0; i<findCropProduction.length; i++) {
-    const dropdownContent = document.createElement("a");
-dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findCropProduction[i].category_id}`);
-dropdownContent.innerHTML = findCropProduction[i].category_name
-document.querySelector(".dropdown1-content").append(dropdownContent)
+
+    if(findCropProduction[i].category_status === "true"){
+        const dropdownContent = document.createElement("a");
+        dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findCropProduction[i].category_id}`);
+        dropdownContent.innerHTML = findCropProduction[i].category_name
+        document.querySelector(".dropdown1-content").append(dropdownContent)
+    }
+  
 }
 
 const findCropNutrition = categoryTypeUser.filter( a => a.category_type === "CROP NUTRITION");
 // console.log(findBrands)
 for(let i=0; i<findCropNutrition.length; i++) {
-    const dropdownContent = document.createElement("a");
-dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findCropNutrition[i].category_id}`);
-dropdownContent.innerHTML = findCropNutrition[i].category_name
-document.querySelector(".dropdown2-content").append(dropdownContent)
+    if(findCropNutrition[i].category_status === "true"){
+        const dropdownContent = document.createElement("a");
+        dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findCropNutrition[i].category_id}`);
+        dropdownContent.innerHTML = findCropNutrition[i].category_name
+        document.querySelector(".dropdown2-content").append(dropdownContent)
+    }
+   
 }
