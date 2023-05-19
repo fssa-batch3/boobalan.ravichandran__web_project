@@ -224,7 +224,7 @@ const categoryTypeUser = JSON.parse(localStorage.getItem("category")) || [];
 const findBrands = categoryTypeUser.filter( a => a.category_type === "BRANDS");
 // console.log(findBrands)
 for(let i=0; i<findBrands.length; i++) {
-   if(findBrands[i].category_status === "true"){
+   if(findBrands[i].category_status === true){
     const dropdownContent = document.createElement("a");
     dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findBrands[i].category_id}`);
     dropdownContent.innerHTML = findBrands[i].category_name
@@ -236,7 +236,7 @@ const findCropProduction = categoryTypeUser.filter( a => a.category_type === "CR
 // console.log(findBrands)
 for(let i=0; i<findCropProduction.length; i++) {
 
-    if(findCropProduction[i].category_status === "true"){
+    if(findCropProduction[i].category_status === true){
         const dropdownContent = document.createElement("a");
         dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findCropProduction[i].category_id}`);
         dropdownContent.innerHTML = findCropProduction[i].category_name
@@ -248,7 +248,7 @@ for(let i=0; i<findCropProduction.length; i++) {
 const findCropNutrition = categoryTypeUser.filter( a => a.category_type === "CROP NUTRITION");
 // console.log(findBrands)
 for(let i=0; i<findCropNutrition.length; i++) {
-    if(findCropNutrition[i].category_status === "true"){
+    if(findCropNutrition[i].category_status === true){
         const dropdownContent = document.createElement("a");
         dropdownContent.setAttribute("href", `${root}/pages/user/products_cart.html?category_id=${findCropNutrition[i].category_id}`);
         dropdownContent.innerHTML = findCropNutrition[i].category_name

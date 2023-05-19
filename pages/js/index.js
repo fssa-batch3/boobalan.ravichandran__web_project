@@ -106,7 +106,7 @@ function showSlides(n = 1) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
   isTransitioning = false;
-  timeoutID = setTimeout(showSlides, 2500); // Change slide every 2.5 seconds
+  timeoutID = setTimeout(showSlides, 3500); // Change slide every 2.5 seconds
 }
 
 showSlides();

@@ -1370,11 +1370,11 @@ if (!addToCartItem) {
     JSON.stringify([
       {
         cart_id: "3438e3df-f46d-48bf-8b44-b4c7jfd7d3220",
-        userUniqueId: "9629223357",
+        userUniqueId: "9629223356",
       },
       {
         cart_id: "24d58d81-6f91-4000-b9e1-b181876172785",
-        userUniqueId: "9629223357",
+        userUniqueId: "9629223356",
       },
 
       {
@@ -1393,11 +1393,11 @@ if (!wishlisstItem) {
     JSON.stringify([
       {
         product_id: "3438e3df-f46d-48bf-8b44-b4c7jfd7d3220",
-        userUniqueId: "9629223357",
+        userUniqueId: "9629223356",
       },
       {
         product_id: "bb730660-a90d-49ee-b22a-6a4154e564790",
-        userUniqueId: "9629223357",
+        userUniqueId: "9629223356",
       },
       {
         product_id: "24d58d81-6f91-4000-b9e1-b181876172785",
@@ -1525,7 +1525,7 @@ if (!user_list) {
         email: "rb@gmail.com",
         full_name: "Boobalan",
         gender: "male",
-        mobile: "9629223357",
+        mobile: "9629223356",
         password: "Amazon99@",
         state: "Tamil Nadu",
         street: "kudi atreet",
