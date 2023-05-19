@@ -153,11 +153,11 @@ tableBody.appendChild(row);
   );
 
   if (cartIdIndex !== -1) {
-    if (categoryContainer[cartIdIndex].category_status === "false") {
-      categoryContainer[cartIdIndex].category_status = "true";
+    if (categoryContainer[cartIdIndex].category_status === false) {
+      categoryContainer[cartIdIndex].category_status = true;
       alert("Category status updated to true");
     } else {
-      categoryContainer[cartIdIndex].category_status = "false";
+      categoryContainer[cartIdIndex].category_status = false;
       alert("Category status updated to false");
     }
 

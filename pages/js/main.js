@@ -8,128 +8,128 @@ if(!categoryTypes){
         category_id: "SU4rzrVQK1",
         category_name: "DHANUKA",
         category_type: "BRANDS",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQK2",
         category_name: "DOW AGRO SCIENCE",
         category_type: "BRANDS",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQK4",
         category_name: "TATA RALLIS",
         category_type: "BRANDS",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQK5",
         category_name: "ADAMA",
         category_type: "BRANDS",
-        category_status : "true",
-        category_status : "true"
+        category_status : true,
+       
       },
       {
         category_id: "SU4rzrVQK6",
         category_name: "BAYER",
         category_type: "BRANDS",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQK7",
         category_name: "ARIES AGRO",
         category_type: "BRANDS",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQK8",
         category_name: "BARRIX",
         category_type: "BRANDS",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQK9",
         category_name: "INDOFIL",
         category_type: "BRANDS",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ10",
         category_name: "RINUJA",
         category_type: "BRANDS",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ11",
         category_name: "BIO INSECTICIDES",
         category_type: "CROP PRODUCTION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ12",
         category_name: "BIO FUNGICIDES",
         category_type: "CROP PRODUCTION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ13",
         category_name: "BIO NEMATICIDES",
         category_type: "CROP PRODUCTION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ14",
         category_name: "BIO VIRCIDES",
         category_type: "CROP PRODUCTION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ15",
         category_name: "MAJOR NUTRIENTS",
         category_type: "CROP NUTRITION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ17",
         category_name: "SECONDARY NUTRIENTS",
         category_type: "CROP NUTRITION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ18",
         category_name: "GROWTH PROMOTERS",
         category_type: "CROP NUTRITION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ19",
         category_name: "GROWTH RETARDANTS",
         category_type: "CROP NUTRITION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ20",
         category_name: "ORGANIC FERTILIZERS",
         category_type: "CROP NUTRITION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ21",
         category_name: "BIO FERTILIZERS",
         category_type: "CROP NUTRITION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ22",
         category_name: "ANTI STRESSING AGENTS",
         category_type: "CROP NUTRITION",
-        category_status : "true"
+        category_status : true
       },
       {
         category_id: "SU4rzrVQ23",
         category_name: "MICRO NUTRIENTS",
         category_type: "CROP NUTRITION",
-        category_status : "true"
+        category_status : true
       }
       
     ]));
@@ -1370,11 +1370,11 @@ if (!addToCartItem) {
     JSON.stringify([
       {
         cart_id: "3438e3df-f46d-48bf-8b44-b4c7jfd7d3220",
-        userUniqueId: "9629223357",
+        userUniqueId: "9629223356",
       },
       {
         cart_id: "24d58d81-6f91-4000-b9e1-b181876172785",
-        userUniqueId: "9629223357",
+        userUniqueId: "9629223356",
       },
 
       {
@@ -1393,11 +1393,11 @@ if (!wishlisstItem) {
     JSON.stringify([
       {
         product_id: "3438e3df-f46d-48bf-8b44-b4c7jfd7d3220",
-        userUniqueId: "9629223357",
+        userUniqueId: "9629223356",
       },
       {
         product_id: "bb730660-a90d-49ee-b22a-6a4154e564790",
-        userUniqueId: "9629223357",
+        userUniqueId: "9629223356",
       },
       {
         product_id: "24d58d81-6f91-4000-b9e1-b181876172785",
@@ -1483,7 +1483,7 @@ if (!addtoCartDeliveryProduct) {
         deliveryDate: "20/05/2023",
         deliveryStatus:"true",
         orderDate: "13/05/2023",
-        orderStatus: "Processing",
+        orderStatus: "Delivered",
         orderUniqueId: "f73mfgaj3",
         orderedTime: "20:08:23",
         proQuantity:"1",
@@ -1498,7 +1498,7 @@ if (!addtoCartDeliveryProduct) {
         deliveryDate:"19/05/2023",
         deliveryStatus:"true",
         orderDate: "12/05/2023",
-        orderStatus: "Processing",
+        orderStatus: "Delivered",
         orderUniqueId: "f73ba8n5k",
         orderedTime:"19:19:12",
         proQuantity: "1",
@@ -1525,7 +1525,7 @@ if (!user_list) {
         email: "rb@gmail.com",
         full_name: "Boobalan",
         gender: "male",
-        mobile: "9629223357",
+        mobile: "9629223356",
         password: "Amazon99@",
         state: "Tamil Nadu",
         street: "kudi atreet",

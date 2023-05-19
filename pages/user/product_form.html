@@ -237,12 +237,12 @@ document.getElementById("add-category").addEventListener("click",
   const existingCategoryIndex = addCategory.findIndex(
     (data) =>
       data.category_name.toLowerCase() === category.toLowerCase() &&
-      data.category_status === "false"
+      data.category_status === false
   );
 
   if (existingCategoryIndex !== -1) {
     // If the category with the same name and status "false" exists
-    addCategory[existingCategoryIndex].category_status = "true"; // Update the status to "true"
+    addCategory[existingCategoryIndex].category_status = true; // Update the status to "true"
     alert("Category status updated successfully");
     window.location.href = "./product_form.html";
     localStorage.setItem("category", JSON.stringify(addCategory));
@@ -251,7 +251,7 @@ document.getElementById("add-category").addEventListener("click",
       category_type: categoryType,
       category_name: category,
       category_id: generateShortId(),
-      category_status: "true",
+      category_status: true,
     };
     addCategory.push(category_detail);
     alert("Category added successfully");
