@@ -80,13 +80,19 @@
         
             </div>
             <div class="add-address-details">
-                <label for="pincode">Pincode</label>
-                <input type="text" name="" id="pincode"  >
-            </div>
-            <div class="add-address-details">
-                <label for="state">State</label>
-                <input type="text" name="" id="state" readonly >
-            </div>
+              <label for="name">Name</label>
+              <input type="text" name="" id="name" >
+          </div>
+          <div class="pincode-state-container">
+            <div class="add-address-details pincode-details zipcode">
+              <label for="pincode">Pincode</label>
+              <input type="text" name="" id="pincode"  >
+          </div>
+          <div class="add-address-details pincode-details">
+              <label for="state">State</label>
+              <input type="text" name="" id="state" readonly >
+          </div>
+          </div>
             <div class="add-address-details">
                 <label for="mobile">Mobile Number</label>
                 <input type="text" name="" id="mobile" >
@@ -129,6 +135,7 @@ if(getAddressid){
   document.getElementById("street").value = userAddressFind.street
   document.getElementById("local").value = userAddressFind.location
   document.getElementById("city").value = userAddressFind.city
+  document.getElementById("name").value = userAddressFind.name
   document.getElementById("pincode").value = userAddressFind.pincode
   document.getElementById("mobile").value = userAddressFind.mobile
   document.getElementById("state").value = userAddressFind.state
@@ -144,6 +151,7 @@ if(getAddressid){
     const street = document.getElementById("street").value;
     const location = document.getElementById("local").value;
     const city = document.getElementById("city").value;
+    const name = document.getElementById("name").value;
     const pincode = document.getElementById("pincode").value;
     const state = document.getElementById("state").value;
     const mobile = document.getElementById("mobile").value;
@@ -170,6 +178,7 @@ if(getAddressid){
         userAddressFind.location = location;
         userAddressFind.city = city;
         userAddressFind.pincode = pincode;
+        userAddressFind.name = name;
         userAddressFind.state = state;
         userAddressFind.mobile = mobile;
         
@@ -253,6 +262,7 @@ saveBtn.addEventListener('click', function(e) {
   const street = form.street.value;
   const location = form.local.value;
   const city = form.city.value;
+  const name = form.name.value;
   const pincode = form.pincode.value;
   const state = form.state.value;
   const mobile = form.mobile.value;
@@ -282,6 +292,7 @@ saveBtn.addEventListener('click', function(e) {
         city,
         pincode,
         state,
+        name,
         mobile,
         userUnique,
         addressId

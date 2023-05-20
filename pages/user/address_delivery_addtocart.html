@@ -106,13 +106,19 @@
                 
                     </div>
                     <div class="add-address-details">
-                        <label for="pincode">Pincode</label>
-                        <input type="text" name="" value="620034" id="pincode"  >
-                    </div>
-                    <div class="add-address-details">
-                        <label for="state">State</label>
-                        <input type="text" name="" id="state" readonly >
-                    </div>
+                      <label for="name">Name</label>
+                      <input type="text" name="" value="Shahid" id="name" >
+                  </div>
+                  <div class="pincode-state-container">
+                    <div class="add-address-details pincode-details zipcode">
+                      <label for="pincode">Pincode</label>
+                      <input type="text" name="" value="620036" id="pincode"  >
+                  </div>
+                  <div class="add-address-details pincode-details">
+                      <label for="state">State</label>
+                      <input type="text" name="" id="state" readonly >
+                  </div>
+                  </div>
                     <div class="add-address-details">
                         <label for="mobile">Mobile Number</label>
                         <input type="text" name="" id="mobile" value="9737237999">
@@ -221,7 +227,7 @@ userDetailsContainer.classList.add('user-details-container');
 
 const userNameAddress = document.createElement('span');
 userNameAddress.classList.add('user-name-address');
-userNameAddress.textContent = getuserName.full_name;
+userNameAddress.textContent = matchedAddress[i].name;
 
 const userTitle = document.createElement('span');
 userTitle.classList.add('user-title');
@@ -438,6 +444,7 @@ form.addEventListener('submit', function(event) {
   // Get the form input values
   const title = form.title.value;
   const street = form.street.value;
+  const name = form.name.value;
   const location = form.local.value;
   const city = form.city.value;
   const pincode = form.pincode.value;
@@ -472,6 +479,7 @@ form.addEventListener('submit', function(event) {
         city,
         pincode,
         state,
+        name,
         mobile,
         userUnique,
         addressId

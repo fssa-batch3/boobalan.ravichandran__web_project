@@ -11,12 +11,21 @@ const feedbackText = document.getElementById("feedback-text");
 const feedbackArray = JSON.parse(localStorage.getItem("reviews")) || [];
 
 // find user name
-const deliveryOrders =
-  JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) || [];
+const deliveryOrders =JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) || [];
 const feeduserName = deliveryOrders.find(
   (data) => data.orderUniqueId === orderId
 );
-const customerName = feeduserName.firstName;
+
+
+// find the name of order person
+const getAddresses =JSON.parse(localStorage.getItem("addresses")) || [];
+// console.log(getAddresses)
+const findcustomerName = getAddresses.find(data => data.addressId === feeduserName.addressUniqueID);
+// console.log(findcustomerName);
+
+//  find the whos's order this product
+const customerName = findcustomerName.name;
+
 
 const findFeedbackArray = feedbackArray.find(
   (details) =>
