@@ -33,6 +33,15 @@ form{
    font-size: 16px;
    border:1.5px solid rgb(178, 178, 178);
 }
+.pincode-details input{
+    padding: 8px 10px; 
+    width:14vw;
+    font-size: 16px;
+    border:1.5px solid rgb(178, 178, 178);
+}
+.zipcode{
+    margin-right: 1.7vw;
+}
 .save-cancel-container button{
 padding: 9px 80px;
 width: 100%;
@@ -50,4 +59,7 @@ border-radius: 5px;
 }
 .add-address-details input:focus{
     outline: none;
+}
+.pincode-state-container{
+    display: flex;
 }

@@ -196,7 +196,7 @@ if (!products) {
           "  This broad-spectrum fungicide has both curative and preventative effects. This chemical exhibits translocation action and is highly systemic. With the exception of particularly alkaline products, most fungicides and insecticides are compatible with it. Use 400 ml of Markar Insecticide to 2 litres of water for an effective termite control method for crops. Spread this mixture across a one acre area after combining it with 20 to 25 kg of sand. Following its application, use mild irrigation (sugar cane crop).",
         benifits:
           "Markar is a world-renowned, new generation, the broad-spectrum insecticide of Pyrethroid ester group.Markar is an effective termiticide as well as insecticide controlling a wide range of insects like sucking and chewing insects in crops.Markar has contact and stomach action, controls different types of larvae, whitefly, mites and jassids very effectively.Markar has phyto-tonic effect which improves the vigour and keeps the crop healthy, thereby quality produce.",
-        ccategory_id: "SU4rzrVQK1",
+        category_id: "SU4rzrVQK1",
         description:
           "Marker (Bifenthrin 10% EC) is a world-renowned, new generation, the broad-spectrum insecticide of Pyrethroid group. Markar through its contact and stomach action controls different types of larvae, whitefly, mites and jassids very effectively. Marker has strong bonding tendency in the soil thus it persists and exhibits longer duration extraordinary control of termite.",
         discount: "160",
@@ -260,7 +260,7 @@ if (!products) {
         application: "2 mL/litre and 400ml/acre",
         benifits:
           "Agil is used for selective weed control in many broadleaf crops such as sugar beet, oilseed rape, soybeans, sunflower, other field crops, vegetables, fruit trees, vineyards and forestry and best result is achieved when sprayed at the 2-4 leaf stage.\\nAgil Herbicide is a systemic herbicide, which is quickly absorbed by the leaves and translocated from the foliage to the growing points of the leaves and roots of the sprayed weeds.\\nRainfall 1 hour after application will not affect the product activity. Optimal activity is achieved when applied early and weeds are actively growing.\\nAgil Herbicide is safe for beneficial insects and mammals and is environmentally friendly.",
-       ccategory_id: "SU4rzrVQK5",
+       category_id: "SU4rzrVQK5",
         description:
           "Agil Herbicide is a herbicide of the aryloxy phenoxy propionates family. It is used for the post-emergence control of a wide range of annual and perennial grasses.",
         discount: "209",
@@ -1418,9 +1418,11 @@ if(!address){
       location: "Annavalaivu",
       mobile: "8829223356",
       pincode: "620086",
+      name: "Naveen",
       state: "Tamil Nadu",
       street: "66,  Aravinth Street",
       title: "Work",
+    
       userUnique: "9629223357"
     },
     {
@@ -1429,6 +1431,7 @@ if(!address){
       location: "Kattur",
       mobile: "9626623358",
       pincode: "620033",
+      name: "Arun",
       state: "Tamil Nadu",
       street: "77/315, SKRT Street",
       title: "Work",
@@ -1439,6 +1442,7 @@ if(!address){
       city: "Chengalpattu",
       location: "Thiruvanmayur",
       mobile: "9629223357",
+      name: "Boomika",
       pincode: "620016",
       state: "Tamil Nadu",
       street: "1/117, Kumarn Street",
@@ -1452,6 +1456,7 @@ if(!address){
       mobile: "9629223366",
       pincode: "620018",
       state: "Tamil Nadu",
+      name: "Mahalakshmi",
       street: "1/117, K.K Street",
       title: "Home",
       userUnique: "9629223357"
@@ -1462,6 +1467,7 @@ if(!address){
       location: "BHEL",
       mobile: "9629223888",
       pincode: "600015",
+      name: "Rajesh",
       state: "Tamil Nadu",
       street: "66, TKS Street",
       title: "Work",
@@ -1557,6 +1563,42 @@ if (!customersReviews) {
         rating: "5",
         customerName: "Vignesh VV",
       },
+
+      {
+        OrderedProductUniqueId: "edd30055-e3ab-4515-817f-aa0624d7fc3e",
+        feedback:
+          "Works like magic. I am using this from last 3 months and growth of my plant is mind blowing",
+        orderId: "f6i425jb9",
+        rating: "5",
+        customerName: "Vignesh SR",
+      },
+
+      {
+        OrderedProductUniqueId: "edd30055-e3ab-4515-817f-aa0624d7fc3e",
+        feedback:
+          "Seriously awesome after 2months usage such a good nutritious food for water plant my plant goes to nearly death it will save my Lovable plant awesome you are a beginner to grow plants it's definitely for your ❤️❤️❤️❤️❤️",
+        orderId: "f6j425jb9",
+        rating: "4",
+        customerName: "Elayaram",
+      },
+
+      {
+        OrderedProductUniqueId: "edd30055-e3ab-4515-817f-aa0624d7fc3e",
+        feedback:
+          "Really nice as of now ,need to wait 4 atleast 2 week to see the result ,it smell like Algee while spraying,same smell when we see at the bank of river having smelling algee",
+        orderId: "f6l425jb9",
+        rating: "5",
+        customerName: "Bhavatharani",
+      },
+
+      {
+        OrderedProductUniqueId: "edd30055-e3ab-4515-817f-aa0624d7fc3e",
+        feedback: "Very useful product ... Fast Delivery.. highly recommend",
+        orderId: "f6m425jb9",
+        rating: "4",
+        customerName: "Deepika Doctor",
+      },
+
 
       {
         OrderedProductUniqueId: "bb730660-a90d-49ee-b22a-6a415e564790",

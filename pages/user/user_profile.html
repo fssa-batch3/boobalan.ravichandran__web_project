@@ -299,7 +299,11 @@ const homeContainer = document.createElement("div");
 homeContainer.classList.add("home-container");
 const homeHeading = document.createElement("h3");
 homeHeading.textContent = matchedAddress[i]["title"];
+const addressName = document.createElement("h4");
+addressName.textContent = matchedAddress[i]["name"];
+
 homeContainer.appendChild(homeHeading);
+homeContainer.appendChild(addressName);
 addressDiv.appendChild(homeContainer);
 
 // add address details

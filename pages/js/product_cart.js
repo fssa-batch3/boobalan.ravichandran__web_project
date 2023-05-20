@@ -20,7 +20,7 @@ const productDetails = JSON.parse(localStorage.getItem("products")) || [];
 const product_details = productDetails.filter((data) => data.category_id === categoryId)
 
 
-
+console.log(product_details)
 const root_path = window.location.origin;
 
 for (let i = 0; i < product_details.length; i++) {

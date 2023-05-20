@@ -92,6 +92,7 @@ form{
 }
 
 
+
 .user-details-container .user-title{
 background-color: rgb(220, 220, 220) !important;
 padding: 5px 10px;
@@ -205,4 +206,16 @@ cursor: pointer !important;
 }
 .add-address-details input:focus,.add-address-details select:focus{
     outline: none;
+}
+.pincode-details input{
+    padding: 8px 10px; 
+    width:14vw;
+    font-size: 16px;
+    border:1.5px solid rgb(178, 178, 178);
+}
+.zipcode{
+    margin-right: 1.7vw;
+}
+.pincode-state-container{
+    display: flex;
 }

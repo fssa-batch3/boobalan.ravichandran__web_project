@@ -40,9 +40,20 @@ margin-top: 10px;
 }
 .home-container{
   
-    padding: 5px 0px;
+    padding: 10px 0px 5px 0;
     margin-bottom: 10px;
-
+ display: flex;
+}
+.home-container h3{
+    margin-top: 3px;
+}
+.home-container h4{
+    margin-left: 2vw;
+    background-color: rgb(206, 206, 206);
+    padding: 5px 13px;
+    font-size: 14px;
+    color:rgb(90, 90, 90);
+    border-radius: 3px;
 }
 .address-details{
     margin-bottom: 2px;
