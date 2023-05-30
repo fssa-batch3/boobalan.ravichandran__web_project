@@ -61,6 +61,8 @@ for (let i = 0; i < getOrderDetails.length; i++) {
     td_5_a_i.setAttribute("style", "font-size:20px");
     td_5_a.append(td_5_a_i);
 
+
+    
     if (getOrderDetails[i].orderStatus !== "Cancelled") {
       const currentDate = new Date();
       const day = String(currentDate.getDate()).padStart(2, "0");

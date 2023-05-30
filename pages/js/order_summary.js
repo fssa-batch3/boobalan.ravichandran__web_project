@@ -157,6 +157,7 @@ orderForm.addEventListener("submit", (event) => {
     proQuantity: quantity,
     ProductDiscount: discount,
     productActualPrice: actualPrice,
+    totalPrice: productPrice,
     
     orderDate,
     deliveryDate,

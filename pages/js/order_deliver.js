@@ -107,7 +107,7 @@ div_fert14.setAttribute("class", "fert14");
 div_fert101.appendChild(div_fert14);
 
 const fert14_p = document.createElement("p");
-fert14_p.innerText = `Price:${getProductDetails.productCurrentPrice}`;
+fert14_p.innerText = `Price: ₹${getProductDetails.productCurrentPrice}`;
 div_fert14.append(fert14_p);
 
 //  <div class="fert5">
@@ -212,27 +212,27 @@ back_button.setAttribute("type", "button");
 back_button.innerText = "back";
 div_cancel_order.append(back_button);
 
-const cancel_button = document.createElement("button");
-cancel_button.setAttribute("id", "cancel");
-cancel_button.setAttribute("type", "submit");
-cancel_button.innerText = "Cancel order";
-div_cancel_order.append(cancel_button);
+// const cancel_button = document.createElement("button");
+// cancel_button.setAttribute("id", "cancel");
+// cancel_button.setAttribute("type", "submit");
+// cancel_button.innerText = "Cancel order";
+// div_cancel_order.append(cancel_button);
 
-document.querySelector("#cancel").addEventListener("click", () => {
-  // eslint-disable-next-line no-restricted-globals
-  const confirmed = confirm("Are you sure you want to cancel this order?");
-  if (confirmed) {
-    const orderSts = "Cancelled";
-    getProductDetails.orderStatus = orderSts;
-    localStorage.setItem(
-      "addtoCartDeliveryProduct",
-      JSON.stringify(orderedProducts)
-    );
-    const path_pros = `${path_root}/pages/user/user_order.html`;
-    // eslint-disable-next-line no-restricted-globals
-    location.href = path_pros;
-  }
-});
+// document.querySelector("#cancel").addEventListener("click", () => {
+//   // eslint-disable-next-line no-restricted-globals
+//   const confirmed = confirm("Are you sure you want to cancel this order?");
+//   if (confirmed) {
+//     const orderSts = "Cancelled";
+//     getProductDetails.orderStatus = orderSts;
+//     localStorage.setItem(
+//       "addtoCartDeliveryProduct",
+//       JSON.stringify(orderedProducts)
+//     );
+//     const path_pros = `${path_root}/pages/user/user_order.html`;
+//     // eslint-disable-next-line no-restricted-globals
+//     location.href = path_pros;
+//   }
+// });
 
 document.getElementById("back").addEventListener("click", () => {
   const path_pros = `${path_root}/pages/user/user_order.html`;
@@ -241,12 +241,12 @@ document.getElementById("back").addEventListener("click", () => {
 });
 
 // if product is deliverd or cancelled the cancell buutonn have to disable
-if (
-  getProductDetails.orderStatus === "Delivered" ||
-  getProductDetails.orderStatus === "Cancelled"
-) {
-  cancel_button.style.display = "none";
-}
+// if (
+//   getProductDetails.orderStatus === "Delivered" ||
+//   getProductDetails.orderStatus === "Cancelled"
+// ) {
+//   cancel_button.style.display = "none";
+// }
 
 const feedbackDiv = document.querySelector(".feedback");
 const feedbackArray = JSON.parse(localStorage.getItem("reviews")) || [];

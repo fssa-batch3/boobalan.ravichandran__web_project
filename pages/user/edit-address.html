@@ -106,123 +106,7 @@
         </form>
     </main>
     <script>
-
-      // check the picode is an start with 6 and length is an 6 or not
-
-const pincodeInput = document.getElementById('pincode');
-
-pincodeInput.addEventListener('blur', function() {
-  const pincode = pincodeInput.value.trim();
-  if (pincode !== '') {
-    const pincodeRegex = /^6\d{5}$/; // regex pattern to match a pincode starting with 6 and having a total of 6 digits
-    if (!pincodeRegex.test(pincode)) {
-      alert('Invalid pincode! Please enter a valid pincode starting with 6 and having a total of 6 digits.');
-    }
-  }
-});
-
-
-const getAddressid = new URLSearchParams(window.location.search).get("addressId")
-
-
-if(getAddressid){
-  const userAddress = JSON.parse(localStorage.getItem("addresses")) || [];
-  const userData = JSON.parse(localStorage.getItem("user_data")) || [];
-
-  const userAddressFind = userAddress.find((data)=> data.addressId === getAddressid);
-  console.log(userAddressFind);
-  document.getElementById("title").value = userAddressFind.title
-  document.getElementById("street").value = userAddressFind.street
-  document.getElementById("local").value = userAddressFind.location
-  document.getElementById("city").value = userAddressFind.city
-  document.getElementById("name").value = userAddressFind.name
-  document.getElementById("pincode").value = userAddressFind.pincode
-  document.getElementById("mobile").value = userAddressFind.mobile
-  document.getElementById("state").value = userAddressFind.state
-
-
-  // the save button function
-  document.querySelector('#save-address').addEventListener("click", function(e){
-
-      // Prevent the default form submission
-  e.preventDefault();
-
-    const title = document.getElementById("title").value;
-    const street = document.getElementById("street").value;
-    const location = document.getElementById("local").value;
-    const city = document.getElementById("city").value;
-    const name = document.getElementById("name").value;
-    const pincode = document.getElementById("pincode").value;
-    const state = document.getElementById("state").value;
-    const mobile = document.getElementById("mobile").value;
-    
-    if (title && street && location && city && pincode && state && mobile) {
-      // Check if the address already exists in the addresses array
-      const isDuplicate = userAddress.some(address => {
-        return address.title === title && 
-          address.street === street &&
-          address.location === location &&
-          address.city === city &&
-          address.pincode === pincode &&
-          address.state === state &&
-          address.mobile === mobile;
-      });
-      
-      if (isDuplicate && userAddressFind.title !== title) {
-        // Show an error message if the address already exists
-        alert('This address already exists!');
-      } else {
-        // Update the address details
-        userAddressFind.title = title;
-        userAddressFind.street = street;
-        userAddressFind.location = location;
-        userAddressFind.city = city;
-        userAddressFind.pincode = pincode;
-        userAddressFind.name = name;
-        userAddressFind.state = state;
-        userAddressFind.mobile = mobile;
-        
-        // Store the updated addresses array in localStorage
-        localStorage.setItem('addresses', JSON.stringify(userAddress));
-        
-        // Show a success message
-        alert('Address updated successfully!');
-        
-        // Redirect to the user profile page
-    
-        window.location.href = './user_profile.html'; 
-
-      }
-    } else {
-      // Show an error message if any field is left empty
-      alert('Please fill all fields before saving!');
-    }
-  });
-}
-
-else{
-// check the mobile number
-const mobileInput = document.getElementById("mobile");
-const errorMessage = document.querySelector(".error");
- mobileInput.addEventListener("input", () => {
-    const inputValue = mobileInput.value.trim(); // remove leading/trailing whitespace
-    const isValidInput = /^[6-9]{1}[0-9]{9}$/.test(inputValue);
-   //   /^[6-9]\d{9}$/.test(inputValue) && !/^\d*(\d)\1{9}\d*$/.test(inputValue); // use regex to match the updated criteria
-    if (!isValidInput || inputValue === "") {
-      if (inputValue === "") {
-        errorMessage.textContent = "Please enter a mobile number.";
-      } else if (/^\d+$/.test(inputValue)) {
-        errorMessage.textContent = "Enter a valid 10-digit mobile number.";
-      } else {
-        errorMessage.textContent = "Please enter digits only.";
-      }
-      errorMessage.style.color = "red";
-    } else {
-      errorMessage.textContent = "";
-    }
-});
-
-// Get the form and save button elements
+      // Get the form and save button elements
 document.getElementById("state").value = "Tamil Nadu"
 const form = document.querySelector('form');
 const saveBtn = document.querySelector('#save-address');
@@ -247,6 +131,136 @@ function generateUniqueId() {
 
 
 
+      // check the picode is an start with 6 and length is an 6 or not
+
+const pincodeInput = document.getElementById('pincode');
+
+pincodeInput.addEventListener('blur', function() {
+  const pincode = pincodeInput.value.trim();
+  if (pincode !== '') {
+    const pincodeRegex = /^6\d{5}$/; // regex pattern to match a pincode starting with 6 and having a total of 6 digits
+    if (!pincodeRegex.test(pincode)) {
+      alert('Invalid pincode! Please enter a valid pincode starting with 6 and having a total of 6 digits.');
+    }
+  }
+});
+
+
+const getAddressid = new URLSearchParams(window.location.search).get("addressId")
+
+
+if(getAddressid){
+  const addressId = id = userUnique + generateUniqueId();
+
+  const userAddress = JSON.parse(localStorage.getItem("addresses")) || [];
+const userData = JSON.parse(localStorage.getItem("user_data")) || [];
+
+const userAddressFind = userAddress.find((data) => data.addressId === getAddressid);
+console.log(userAddressFind);
+document.getElementById("title").value = userAddressFind.title;
+document.getElementById("street").value = userAddressFind.street;
+document.getElementById("local").value = userAddressFind.location;
+document.getElementById("city").value = userAddressFind.city;
+document.getElementById("name").value = userAddressFind.name;
+document.getElementById("pincode").value = userAddressFind.pincode;
+document.getElementById("mobile").value = userAddressFind.mobile;
+document.getElementById("state").value = userAddressFind.state;
+
+// Save button function
+document.querySelector("#save-address").addEventListener("click", function (e) {
+  // Prevent the default form submission
+  e.preventDefault();
+
+  const title = document.getElementById("title").value;
+  const street = document.getElementById("street").value;
+  const location = document.getElementById("local").value;
+  const city = document.getElementById("city").value;
+  const name = document.getElementById("name").value;
+  const pincode = document.getElementById("pincode").value;
+  const state = document.getElementById("state").value;
+  const mobile = document.getElementById("mobile").value;
+
+  if (title && street && location && city && pincode && state && mobile) {
+    // Check if the address already exists in the addresses array
+    const isDuplicate = userAddress.some((address) => {
+      return (
+        address.title === title &&
+        address.street === street &&
+        address.location === location &&
+        address.city === city &&
+        address.pincode === pincode &&
+        address.state === state &&
+        address.mobile === mobile
+      );
+    });
+
+    if (isDuplicate && userAddressFind.title !== title) {
+      // Show an error message if the address already exists
+      alert("This address already exists!");
+    } else {
+      // Create a new object for the edited details with a new address ID
+      const updatedDetails = {
+        addressId: addressId, // Generate a new unique ID for the updated details
+        title: title,
+        street: street,
+        location: location,
+        city: city,
+        pincode: pincode,
+        name: name,
+        state: state,
+        mobile: mobile,
+        status: userAddressFind.status,
+        userUnique:userUnique // Retain the original address status
+      };
+
+      // Update the address status for the current address
+      userAddressFind.status = false;
+
+      // Add the updated details object to the addresses array
+      userAddress.push(updatedDetails);
+
+      // Store the updated addresses array in localStorage
+      localStorage.setItem("addresses", JSON.stringify(userAddress));
+
+      // Show a success message
+      alert("Address updated successfully!");
+
+      // Redirect to the user profile page
+      window.location.href = "./user_profile.html";
+    }
+  } else {
+    // Show an error message if any field is left empty
+    alert("Please fill all fields before saving!");
+  }
+});
+
+
+}
+
+else{
+// check the mobile number
+const mobileInput = document.getElementById("mobile");
+const errorMessage = document.querySelector(".error");
+ mobileInput.addEventListener("input", () => {
+    const inputValue = mobileInput.value.trim(); // remove leading/trailing whitespace
+    const isValidInput = /^[6-9]{1}[0-9]{9}$/.test(inputValue);
+   //   /^[6-9]\d{9}$/.test(inputValue) && !/^\d*(\d)\1{9}\d*$/.test(inputValue); // use regex to match the updated criteria
+    if (!isValidInput || inputValue === "") {
+      if (inputValue === "") {
+        errorMessage.textContent = "Please enter a mobile number.";
+      } else if (/^\d+$/.test(inputValue)) {
+        errorMessage.textContent = "Enter a valid 10-digit mobile number.";
+      } else {
+        errorMessage.textContent = "Please enter digits only.";
+      }
+      errorMessage.style.color = "red";
+    } else {
+      errorMessage.textContent = "";
+    }
+});
+
+
+
 
 
 // Add event listener to the save button
@@ -266,6 +280,7 @@ saveBtn.addEventListener('click', function(e) {
   const pincode = form.pincode.value;
   const state = form.state.value;
   const mobile = form.mobile.value;
+  const status = true;
 //   const userUniqueId = 
   // Check if all fields are filled
   if (title && street && location && city && pincode && state && mobile) {
@@ -277,7 +292,8 @@ saveBtn.addEventListener('click', function(e) {
              address.city === city &&
              address.pincode === pincode &&
              address.state === state &&
-             address.mobile === mobile;
+             address.mobile === mobile &&
+             address.status === status
     });
     
     if (isDuplicate) {
@@ -295,7 +311,9 @@ saveBtn.addEventListener('click', function(e) {
         name,
         mobile,
         userUnique,
-        addressId
+        addressId,
+        status
+      
       };
       
       // Add the new address object to the addresses array

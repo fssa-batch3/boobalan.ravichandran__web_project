@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <title>Crop Information Form</title>
+  <style>
+    /* CSS styles for the form */
+    body{
+   
+      justify-content: center;
+      align-items: center;
+      margin-top: 15vh;
+     
+    }
+    .crop-information{
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      padding: 50px 100px;
+      width:40vw;
+      border-radius: 10px;
+      margin-left: 30vw;
+    }
+    
+    .crop-information h2{
+      margin-bottom: 50px;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 30px;
+      border: 1.5px solid #ccc;
+      border-radius: 4px;
+
+    }
+
+    input[type="submit"] {
+      background-color: #08470a;
+      color: white;
+      padding: 10px 40px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0b8411;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+
+    table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-top: 50px;
+        }
+        
+        th{
+          padding: 30px 8px;
+          text-align: left;
+          border-bottom: 1px solid #979797;
+          text-align: center;
+      
+        }
+        td {
+          padding: 15px 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+          text-align: center;
+        }
+        th {
+          background-color: #2874f0;
+          color:white
+        }
+        tr{
+            border-left:  1px solid #ddd;
+            border-right:  1px solid #ddd;
+            width: 100%;
+        }
+        tr:hover {
+            background-color: #eff6ff;
+           
+            color:#3484fc;
+        }
+        td button{
+            cursor: pointer;
+            padding: 5px 18px ;
+            background-color: #176047;
+            border: 1.5px solid #176047;
+            color: white;
+            border-radius: 3px;
+        }
+        td button:hover{
+            background-color: #fafffd;
+           
+            color: #176047;
+        }
+        .table-container{
+          padding: 2vh 10vw 10vh 10vw;
+        }
+  </style>
+</head>
+<body>
+  <div class="crop-information">
+    <h2>Crop Information</h2>
+    <form id="crop-form">
+      <label for="crop-image">Crop Image:</label>
+      <input type="text" id="crop-image" name="crop-image" placeholder="Enter the crop image URL" required>
+  
+      <label for="crop-name">Crop Name:</label>
+      <input type="text" id="crop-name" name="crop-name" placeholder="Enter the crop name" required>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <!-- table start -->
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Crop ID</th>
+        <th>Crop Name</th>
+        <th>Crop Image</th>
+        <th >Crop Status</th>
+        <th >Status Change</th>
+      </tr>
+    </thead>
+    <tbody>
+ 
+
+
+    </tbody>
+  </table>
+</div>
+
+<script>
+
+  
+function generateUniqueId() {
+  let id = "";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (let i = 0; i < 17; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    id += characters[randomIndex];
+  }
+
+  return id;
+}
+
+
+
+  document.getElementById('crop-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    let cropImageInput = document.getElementById('crop-image');
+    let cropNameInput = document.getElementById('crop-name');
+    let cropImage = cropImageInput.value;
+    let cropName = cropNameInput.value;
+
+    if (!cropImage || !cropName) {
+      alert('Please fill in both crop image and crop name fields.');
+      return;
+    }
+
+    let crops = JSON.parse(localStorage.getItem('crops')) || [];
+  // Retrieve existing data or initialize as empty array
+
+    let existingCrop = crops.length &&
+    JSON.parse(localStorage.getItem('crops')).some((data) => data.cropName === cropName && data.cropImage === cropImage);
+    
+    if (existingCrop) {
+      alert('This crop information already exists.');
+      return;
+    }else{
+
+    let cropDetails = {
+       cropName,
+       cropImage,
+       cropId:generateUniqueId(),
+       cropStatus: true
+    };
+
+
+    crops.push(cropDetails); // Add new data to the array
+  }
+    localStorage.setItem('crops', JSON.stringify(crops));
+    alert('Crop information stored successfully.');
+
+    cropImageInput.value = '';
+    cropNameInput.value = '';
+    window.location.reload();
+  });
+  
+
+
+  // crops table
+  const categoryContainer = JSON.parse(localStorage.getItem("crops")) || [];
+        //console.log(categoryContainer);
+for(let i=0; i<categoryContainer.length; i++){
+    
+        // Create the table row
+const row = document.createElement('tr');
+
+// Create the first table cell for Category ID
+const idCell = document.createElement('td');
+idCell.textContent = categoryContainer[i]["cropId"] ; // Replace with your category ID
+row.appendChild(idCell);
+
+// Create the second table cell for Category Name
+const nameCell = document.createElement('td');
+nameCell.textContent = categoryContainer[i]["cropName"] ; // Replace with your category name
+row.appendChild(nameCell);
+
+// Create the third table cell for Category Type
+const typeCell = document.createElement('td');
+typeCell.textContent = categoryContainer[i]["cropImage"] ; // Replace with your category type
+row.appendChild(typeCell);
+
+// Create the fourth table cell for Category Type
+const statusCell = document.createElement('td');
+statusCell.textContent = categoryContainer[i]["cropStatus"] ; // Replace with your category type
+row.appendChild(statusCell);
+
+// Create the fifth table cell for Remove button
+const removeCell = document.createElement('td');
+const removeButton = document.createElement('button');
+removeButton.className = "removeCategory";
+removeButton.value = categoryContainer[i]["cropId"];
+removeButton.textContent = 'Update Status';
+removeCell.appendChild(removeButton);
+row.appendChild(removeCell);
+
+// Add the row to the table body
+const tableBody = document.querySelector('tbody'); 
+tableBody.appendChild(row);
+
+ // Add event listener to each remove button
+ removeButton.addEventListener("click", (event) => {
+  const cropId = event.target.value;
+  const cartIdIndex = categoryContainer.findIndex(
+    (data) => data.cropId === cropId
+  );
+
+  if (cartIdIndex !== -1) {
+    if (categoryContainer[cartIdIndex].cropStatus === false) {
+      categoryContainer[cartIdIndex].cropStatus = true;
+      alert("Crop status updated to true");
+    } else {
+      categoryContainer[cartIdIndex].cropStatus = false;
+      alert("Crop status updated to false");
+    }
+
+  
+    localStorage.setItem("crops", JSON.stringify(categoryContainer));
+    window.location.reload();
+  }
+});
+
+
+}
+</script>
+  </script>
+  
+</body>
+</html>

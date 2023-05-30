@@ -117,10 +117,14 @@ const loadProduct = allProductsDetails.filter((p) =>
 let totalPrice = 0;
 let totalDiscount = 0;
 
-// Calculate initial total price and discount
+// Retrieve stored quantities from localStorage
+const storedQuantities = JSON.parse(localStorage.getItem("addToCartItem")) || [];
+
+// Calculate initial total price and discount based on stored quantities
 for (let i = 0; i < loadProduct.length; i++) {
   const product = loadProduct[i];
-  const quantity = 1; // default quantity is 1
+  const storedQuantity = storedQuantities.find((item) => item.cart_id === product.product_unique_id);
+  const quantity = storedQuantity ? storedQuantity.product_qty : 1;
   const price = product.actual_price * quantity;
   const discount = product.discount * quantity;
   totalPrice += price;
@@ -131,11 +135,11 @@ for (let i = 0; i < loadProduct.length; i++) {
 div_cart111_p.innerText = `₹${totalPrice}`;
 div_cart112_p.innerText = `₹${totalDiscount}`;
 div_cart115_p.innerText = `₹${totalPrice - totalDiscount}`;
-div_cart114_h2.innerText = `You will save ₹${totalDiscount} on this order `;
+div_cart114_h2.innerText = `You will save ₹${totalDiscount} on this order`;
 
 const path_pro = window.location.origin;
 
-function addToCartItem(product) {
+function addToCartItem(product,qty) {
   const productInCart = `
     <div class="cart_details">
       <div class="cart2">
@@ -156,7 +160,8 @@ function addToCartItem(product) {
       <div class="btnn">
         <div class="fert5">
           <h3>Order Qty</h3>
-          <select id="option">
+          <select class="selectQuantity" id="option" data-product_id=${product.product_unique_id}>
+            <option selected hidden>${qty.product_qty}</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -177,10 +182,14 @@ function addToCartItem(product) {
     </div>
   `;
 
+  
   const productEl = document.createElement("div");
   productEl.innerHTML = productInCart;
 
-  const select = productEl.querySelector("#option");
+  const select = productEl.querySelector(".selectQuantity");
+
+  select.value = qty.product_qty; // Set the initial selected quantity
+
   select.addEventListener("change", () => {
     const oldQuantity = product.quantity || 1; // use 1 as default if quantity is not defined
     const newQuantity = select.value;
@@ -202,11 +211,23 @@ function addToCartItem(product) {
     div_cart111_p.innerText = `₹${totalPrice}`;
     div_cart112_p.innerText = `₹${totalDiscount}`;
     div_cart115_p.innerText = `₹${totalPrice - totalDiscount}`;
-    div_cart114_h2.innerText = `You will save ₹${totalDiscount} on this order `;
+    div_cart114_h2.innerText = `You will save ₹${totalDiscount} on this order`;
 
     // update product quantity in the cart
     const newProductQuantity = newQuantity;
     product.quantity = newProductQuantity;
+
+    // Update the stored quantity in localStorage
+    const storedQuantity = storedQuantities.find((item) => item.cart_id === product.product_unique_id);
+    if (storedQuantity) {
+      storedQuantity.product_qty = parseInt(newQuantity);
+    } else {
+      storedQuantities.push({
+        cart_id: product.product_unique_id,
+        product_qty: parseInt(newQuantity),
+      });
+    }
+    localStorage.setItem("addToCartItem", JSON.stringify(storedQuantities));
   });
 
   return productEl;
@@ -214,13 +235,13 @@ function addToCartItem(product) {
 
 const cartContainer = document.querySelector(".cart1");
 
+
 for (let i = 0; i < loadProduct.length; i++) {
   const product = loadProduct[i];
-  const productInCart = addToCartItem(product);
+  const qty = findLogedUseraddtoCart[i];
+  const productInCart = addToCartItem(product, qty);
   cartContainer.append(productInCart);
-  
 }
-
 // remove from addtocart function // Function to remove a product from the cart
 function removeProductFromCart(cartId) {
   // Show a confirmation dialog box
@@ -273,6 +294,49 @@ div_btnn_button.innerText = "Place order";
 div_btnn_a.append(div_btnn_button);
 
 
+
+
+// if we select the quantity we have to push that in addtocart tem quantity
+// Event listener for quantity change
+const inputQuantity = document.querySelectorAll(".selectQuantity");
+inputQuantity.forEach((qty) =>
+  qty.addEventListener("change", function (e) {
+    e.preventDefault();
+    const id = this.dataset.product_id;
+    const foundQuantity = storedQuantities.find((e) => e.cart_id === id);
+    foundQuantity.product_qty = parseInt(e.target.value);
+    localStorage.setItem("addToCartItem", JSON.stringify(storedQuantities));
+    updateTotalPriceAndDiscount();
+  })
+);
+
+// Function to update the total price and discount
+function updateTotalPriceAndDiscount() {
+  totalPrice = 0;
+  totalDiscount = 0;
+
+  for (let i = 0; i < loadProduct.length; i++) {
+    const product = loadProduct[i];
+    const storedQuantity = storedQuantities.find((item) => item.cart_id === product.product_unique_id);
+    const quantity = storedQuantity ? storedQuantity.product_qty : 1;
+    const price = product.actual_price * quantity;
+    const discount = product.discount * quantity;
+    totalPrice += price;
+    totalDiscount += discount;
+  }
+
+  div_cart111_p.innerText = `₹${totalPrice}`;
+  div_cart112_p.innerText = `₹${totalDiscount}`;
+  div_cart115_p.innerText = `₹${totalPrice - totalDiscount}`;
+  div_cart114_h2.innerText = `You will save ₹${totalDiscount} on this order`;
+}
+
+// Call the function to initially update the total price and discount
+//updateTotalPriceAndDiscount();
+
+
+
+
 // ---- store all products details in local storage
 document.getElementById("place_order").addEventListener("click", () => {
   const addtoCartDeliveryProduct =
@@ -284,6 +348,9 @@ document.getElementById("place_order").addEventListener("click", () => {
   const existingProduct = addtoCartDeliveryProduct.find(
     (product) => product.deliveryStatus === deliveryStatus
   );
+
+
+
   // console.log(existingProduct);
   if (!existingProduct) {
     const orderId = new Date().getTime().toString(24); // Generate a unique order ID
@@ -294,12 +361,12 @@ document.getElementById("place_order").addEventListener("click", () => {
       //   .getAttribute("src");
       // const productName = cartItem.querySelector("#product_name").textContent;
       const productUniqueId = loadProduct[i].product_unique_id;
-      const productCurrentPrice = cartItem
-        .querySelector("#product_pri")
+      const productCurrentPrice = cartItem.querySelector("#product_pri")
         .textContent.replace(/₹/g, "");
-      const productActualPrice = cartItem
-        .querySelector("#actual_price")
-        .textContent.replace(/₹/g, "");
+      const productActualPrice = cartItem.querySelector("#actual_price").textContent.replace(/₹/g, "");
+      const totalPrice = document.getElementById("final-price").textContent.replace(/₹/g, "");
+
+
       const discountText = cartItem.querySelector("#discount").textContent;
       const ProductDiscount = discountText.match(/\d+/)[0];
 
@@ -329,7 +396,7 @@ document.getElementById("place_order").addEventListener("click", () => {
         productActualPrice,
         ProductDiscount,
         proQuantity,
-
+        totalPrice,
         deliveryStatus,
         orderUniqueId: orderId, 
         orderDate,

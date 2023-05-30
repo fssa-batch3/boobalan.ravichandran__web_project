@@ -3,12 +3,32 @@
 const productId = new URLSearchParams(window.location.search).get("product_id");
 // const productDetails = JSON.parse(localStorage.getItem('adama_details'));
 const productDetails = JSON.parse(localStorage.getItem("products")) || [];
+const getCropProducts = JSON.parse(localStorage.getItem("cropProducts")) || [];
+const getCrops = JSON.parse(localStorage.getItem("crops")) || [];
 
-const loadProduct = productDetails.find(data => data.product_unique_id === productId)
+const loadProduct = productDetails.find((data) => data.product_unique_id === productId)
+
+
+const findCrop = getCropProducts.filter((crop) => crop.product_id === productId);
+// console.log(findCrop);
+
+// to get matched crop objects,
+const findProductCrops = getCrops.filter((crop) => 
+  findCrop.some((data) => data.crop_id === crop.cropId)
+);
+console.log(findProductCrops);
+
+const getCropsNames = [];
+for(let i = 0; i < findProductCrops.length; i++){
+  const cropName = findProductCrops[i].cropName;
+  getCropsNames.push(cropName);
+}
+console.log(getCropsNames)
+
 
 // --------------------------live server location get --------------------
 const add_path = window.location.origin;
-console.log(loadProduct)
+//console.log(loadProduct)
 // <div class="fertilizer">...</div>
 const div_fetilizer = document.createElement("div");
 div_fetilizer.setAttribute("class", "fertilizer");
@@ -110,6 +130,30 @@ const div_fert5_h3_1 = document.createElement("h3");
 div_fert5_h3_1.innerText = `Weight: ${loadProduct.product_weight}`;
 div_fert5_1.append(div_fert5_h3_1);
 
+
+
+//  <div class="fert5">..</div>
+const div_crops = document.createElement("div");
+div_crops.setAttribute("class", "crops");
+div_fert2.append(div_crops);
+// <h3>...</h3>
+const crops_details = document.createElement("h3");
+
+crops_details.innerText = "Suitable crops:";
+div_crops.append(crops_details);
+
+const crops_details_h4 = document.createElement("h4");
+
+for (let i = 0; i < getCropsNames.length; i++) {
+  const cropName = getCropsNames[i] + ".";
+  const cropNameElement = document.createElement("li");
+  cropNameElement.innerText = cropName;
+  crops_details_h4.appendChild(cropNameElement);
+}
+
+div_crops.append(crops_details_h4);
+
+
 //  <div class="rem">...</div>
 const div_rem = document.createElement("div");
 div_rem.setAttribute("class", "rem");
@@ -131,6 +175,17 @@ rem_i.setAttribute("id", "cart");
 rem_i.setAttribute("class", "fa fa-shopping-cart");
 rem_i.setAttribute("style", "font-size:25px");
 rem_button.prepend(rem_i);
+
+
+
+const addvertisementDiv = document.createElement("div");
+addvertisementDiv.setAttribute("class", "addvertisement");
+div_fert2.append(addvertisementDiv)
+
+const add_img = document.createElement("img");
+add_img.setAttribute("src", "../../assets/images/details.jpg");
+addvertisementDiv.appendChild(add_img);
+
 
 // <div>...</div>
 const div_div = document.createElement("div");
@@ -171,25 +226,49 @@ description_h1.setAttribute("id", "descriptiondes");
 description_h1.setAttribute("type", "submit");
 crop_description.append(description_h1);
 
-// <ul>...</ul>
-const description_ul = document.createElement("ul");
-description_ul.setAttribute("id", "descriptionul");
-div_description.append(description_ul);
+const divDesc = document.createElement("div");
+divDesc.setAttribute("id", "descriptionul");
+divDesc.setAttribute("class", "descriptionDetails");
+div_description.append(divDesc);
 
-// <li>...</li>
-const description_li1 = document.createElement("li");
-description_li1.innerText = loadProduct.description;
-description_ul.append(description_li1);
+const description_ul = document.createElement("ul");
+divDesc.append(description_ul);
+
+const productDescription = loadProduct.description;
+const applicationPoints = productDescription.split(". ");
+
+applicationPoints.forEach((point) => {
+  const description_li = document.createElement("li");
+  description_li.innerText = point.trim() + ".";
+  description_ul.appendChild(description_li);
+});
+
+// Append the applicationList to the appropriate container element on the product detail page
+
+
+
+
 
 const bdescription_inn = document.createElement("h3");
 bdescription_inn.innerText = "Descriptions";
 bdescription_inn.setAttribute("id", "descriptionin");
-description_li1.prepend(bdescription_inn);
+
+divDesc.prepend(bdescription_inn);
 
 //   <div class="benifits">...</div>
 const div_benifits = document.createElement("div");
 div_benifits.setAttribute("class", "benifits");
 document.querySelector("div.total").append(div_benifits);
+
+
+const divbeni = document.createElement("div");
+divbeni.setAttribute("id", "benifitsul");
+divbeni.setAttribute("class", "benifitsDetails");
+div_benifits.append(divbeni);
+
+
+
+
 
 // <h2>...</h2>
 const benifits_h2 = document.createElement("h2");
@@ -199,18 +278,30 @@ crop_description.append(benifits_h2);
 
 // <ul>...</ul>
 const benifits_ul = document.createElement("ul");
-benifits_ul.setAttribute("id", "benifitsul");
-div_benifits.append(benifits_ul);
+divbeni.append(benifits_ul);
 
 // <li>...</li>
-const benifits_li1 = document.createElement("li");
-benifits_li1.innerText = loadProduct.benifits;
-benifits_ul.append(benifits_li1);
+const productBenifits = loadProduct.benifits;
+const benifitsPoints = productBenifits.split(". ");
+// console.log(benifitsPoints)
+
+// split the each points
+benifitsPoints.forEach((point) => {
+  const benifits_li1 = document.createElement("li");
+  benifits_li1.innerText = point.trim() + ".";
+  benifits_ul.appendChild(benifits_li1);
+});
+
+
+
+
+
 
 const benifits_inn = document.createElement("h3");
 benifits_inn.innerText = "Benefits";
 benifits_inn.setAttribute("id", "benifitsin");
-benifits_li1.prepend(benifits_inn);
+divbeni.prepend(benifits_inn);
+
 
 //   <div class="method">...</div>
 const div_method = document.createElement("div");
@@ -223,20 +314,36 @@ method_h2.innerText = "Method of Application";
 method_h2.setAttribute("id", "applicationapp");
 crop_description.append(method_h2);
 
+
+
+// apllication details
+const divAppli= document.createElement("div");
+divAppli.setAttribute("id", "applicationul");
+divAppli.setAttribute("class", "applicationDetails");
+div_method.append(divAppli);
+
 // <ul>...</ul>
 const method_ul = document.createElement("ul");
-method_ul.setAttribute("id", "applicationul");
-div_method.append(method_ul);
+
+divAppli.append(method_ul);
+
 
 // <li>...</li>
-const method_li1 = document.createElement("li");
-method_li1.innerText = loadProduct.application;
-method_ul.append(method_li1);
+const productApplication = loadProduct.application;
+const methodPoints = productApplication.split(". ");
+// console.log(benifitsPoints)
+
+// split the each points
+methodPoints.forEach((point) => {
+  const method_li1 = document.createElement("li");
+  method_li1.innerText = point.trim()+".";
+  method_ul.appendChild(method_li1);
+});
 
 const application_inn = document.createElement("h3");
 application_inn.innerText = "Method of Application";
 application_inn.setAttribute("id", "applicationin");
-method_li1.prepend(application_inn);
+divAppli.prepend(application_inn);
 
 //   <div class="offers1">...</div>
 const related_product = document.createElement("div");
@@ -393,6 +500,7 @@ function addToCart() {
       addToCartItem.push({
         cart_id: addProductId,
         userUniqueId: loginUserDetails,
+        product_qty: "1",
       });
       localStorage.setItem("addToCartItem", JSON.stringify(addToCartItem));
 
@@ -421,34 +529,46 @@ document.getElementById("rem2").addEventListener("click", () => {
 const descriptionCrop = document.getElementById("descriptiondes");
 const benifitsCrop = document.getElementById("benifitsbeni");
 const applicationCrop = document.getElementById("applicationapp");
-const descriptionCropUl = document.getElementById("descriptionul");
-const benifitsCropUl = document.getElementById("benifitsul");
-const applicationCropUl = document.getElementById("applicationul");
+const descriptionCropUl = document.querySelector(".description");
+const benifitsCropUl = document.querySelector(".benifits");
+const applicationCropUl = document.querySelector(".method");
 applicationCropUl.style.display = "none";
 benifitsCropUl.style.display = "none";
 descriptionCropUl.style.display = "none";
 
-descriptionCrop.addEventListener("click", () => {
+descriptionCrop.addEventListener("click", function(){
   descriptionCropUl.style.display = "inline";
   benifitsCropUl.style.display = "none";
   applicationCropUl.style.display = "none";
+  descriptionCrop.classList.add("descrip");
+  benifitsCrop.classList.remove("benifi");
+  applicationCrop.classList.remove("applica");
+
+
 });
 benifitsCrop.addEventListener("click", () => {
   benifitsCropUl.style.display = "inline";
   descriptionCropUl.style.display = "none";
   applicationCropUl.style.display = "none";
+  benifitsCrop.classList.add("benifi");
+  applicationCrop.classList.remove("applica");
+  descriptionCrop.classList.remove("descrip");
+
 });
 applicationCrop.addEventListener("click", () => {
   applicationCropUl.style.display = "inline";
   descriptionCropUl.style.display = "none";
   benifitsCropUl.style.display = "none";
+  applicationCrop.classList.add("applica");
+  descriptionCrop.classList.remove("descrip");
+  benifitsCrop.classList.remove("benifi");
 });
 
 const pageProduct = loadProduct.category_id;
-console.log(pageProduct);
+// console.log(pageProduct);
 
 const findRelatedProducts = productDetails.filter(product => product.category_id === pageProduct);
-console.log(findRelatedProducts)
+// .log(findRelatedProducts)
 
 
 const findRelated = findRelatedProducts.filter(name => name.product_unique_id  !== loadProduct.product_unique_id)
