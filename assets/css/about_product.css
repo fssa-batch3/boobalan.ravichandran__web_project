@@ -64,13 +64,13 @@ a{
 }
 main{
     background-color: rgb(255, 255, 255);
-    padding: 0px 100px 50px 100px;
+    padding: 0px 50px 50px 50px;
 }
 .fert1 img{
     margin-left: 5px;
     margin-top: 50px;
-    width:400px;
-    height:400px;
+    width:500px;
+    height:550px;
    border-radius: 10px;
    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
    padding: 2rem;
@@ -83,7 +83,7 @@ main{
     margin-top:50px ;
     margin-left: 100px;
     width:580px;
-
+   font-size: 27px;
     color: green;
 }
 .fert55{
@@ -92,6 +92,11 @@ main{
 }
  .fert4 ,.fert5 {
     display: flex;
+    margin-left:100px ;
+    margin-top: 15px;
+}
+.crops {
+ 
     margin-left:100px ;
     margin-top: 15px;
 }
@@ -118,6 +123,19 @@ main{
 .fert5 h3{
     font-size: 24px;
 }
+.crops{
+    margin-top: 30px;
+}
+.crops h3{
+    font-size: 24px;
+  
+}
+.crops h4{
+    font-size: 20px;
+    margin-top: 4px;
+    margin-left: 5vw;
+    color:rgb(233, 63, 2);
+}
 /* .description ,.benifits ,.method{
     margin: 10px 0px 0px 0px;
     
@@ -130,36 +148,48 @@ main{
    
     letter-spacing: 0.5px;
     background-color: rgb(4, 4, 72);
-    color:rgb(255, 234, 0);
+    color:rgb(255, 247, 157);
     padding: 18px 50px;
     font-weight: 200;
-    width: 380px;text-align: center;
-    margin-top: 150px;
+    width: 380px;
+    text-align: center;
+    /* margin-top: 150px; */
     font-size: 19px;
     margin-right: 30px;
-    border-radius: 5px;
+ border-radius: 50px;
     cursor: pointer;
 
 }
-.crop_description h1:hover ,.crop_description h2:hover{
+/* giove background color
+ */
+ .crop_description .benifi,.crop_description .descrip,.crop_description .applica{
+    background-color:  rgb(246, 246, 255);
+    color:rgb(2, 2, 108);
+    font-weight: bold;
+    border:2.5px solid rgb(2, 2, 87);
+ } 
+/* .crop_description h1:hover ,.crop_description h2:hover{
     background-color: rgb(7, 66, 139);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
+} */
 
 .description li ,.benifits li , .method li{
     font-size: 19px;
   
-    width:1000px;
     color:rgb(11, 11, 51);
     letter-spacing: 0.2px;
     line-height: 2.0rem;
-    list-style: none;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    padding: 50px 50px 80px 50px;
-    margin-top: 50px;
-    margin-left: 100px;
- 
 
+    padding: 10px 50px 10px 50px;
+ 
+    margin-left: 100px;
+}
+.benifitsDetails,.descriptionDetails,.applicationDetails{
+    background-color: #ffffffec;
+    margin-top: 5vh;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 #option{
@@ -212,25 +242,28 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 80px;
-    margin-top: -20px;
+    margin-left: 9vw;
+    margin-top: 2vh;
+  
   }
 
   .LikeAlert {
     color: white;
     text-align: center;
-    background-color: rgb(206, 11, 92);
+    background-color: #b70e46;
     font-size: 19px;
     font-weight: bold;
-    position: relative;
+    position: absolute;
     bottom: 15px;
-    border-radius: 5px;
+    border-radius: 25px 2px;
     padding: 15px 20px 10px 20px;
-    width: 32%;
+    min-width: 10vw;
     animation-name: bubble;
     animation-duration: .5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+  
+
     
   }
   
@@ -257,21 +290,14 @@ span{
 
 .crop_description{
     display: flex;
- 
+ background-color: rgb(0, 0, 77);
+ margin-top: 10vh;
+width:77vw;
+padding-left: 30px;
+margin-left: 5vw;
+border-radius: 50px;
 }
-/* .fa-heart.added-to-wishlist {
-    color: red;
-} */
 
-
-/* .dislike{
-    display: none;
-    animation:likepop 0.9s both
-}
-.like{
-    display: none;
-    animation:likepop 0.9s both
-} */
 
 /* customers reviews page */
 .reviews{
@@ -409,7 +435,15 @@ margin-left: 14px;
     margin-left: 24%;
 }
 
+/* advertisement images
+ */
 
+ .addvertisement{
+    margin-top: 6vh;
+ }
+ .addvertisement img{
+    width:50vw;
+ }
 
 /* ---------========== @media (mobile screen edit) ===========---------------*/
 
@@ -863,4 +897,5 @@ a{
     border-bottom: 5px solid rgb(203, 5, 41) ;
     padding-bottom: 20px;
     color: green;
+    font-size: 23px;
  }

@@ -94,6 +94,41 @@
         <div class="offers1" id="interface">
     
         </div>
+
+
+       <div class="all-crop-images-container">
+        <h1>All Crops</h1>
+        <div class="crop-images-container">
+            
+            </div>
+       </div>
+
+       <div class="viewmore">
+        <a href="./pages/user/crops-fertilizers.html"><h3> View more</h3></a>
+       </div>
+       <div class="technologies-container">
+        <div class="technologies_title">
+            <h2>New Technologies in Agriculture</h2>
+        </div>
+        <div class="new-technologies"> 
+            <div class="new-technology-container">
+                <img src="./assets/images/new_tech1.gif" alt="new technology">
+            </div>
+            <div class="new-technology-container">
+                <img src="./assets/images/new_tech2.gif" alt="new technology">
+            </div>
+            <!-- <div class="new-technology-container">
+                <img src="./assets/images/new_tech3.gif" alt="new technology">
+            </div>  -->
+            <div class="new-technology-container">
+                <img src="./assets/images/new_tech4.gif" alt="new technology">
+            </div>
+        </div>
+        <div class="view-more-details">
+          <a href="./pages/user/new_technologies.html">  <h3>View details -></h3></a>
+        </div>
+       </div>
+        
         <div class="fab">
             <h1>FAB's PRIORITIES</h1>
             <div class="human">
@@ -253,7 +288,51 @@
         <script src="./pages/js/index.js"></script>
         <script src="./pages/js/menubar.js"></script>
         <script src="./pages/js/search.js"></script>
-       
+       <script>
+        
+  
+  const cropContainers = JSON.parse(localStorage.getItem("crops")) || [];
+
+// Get the container element
+const container = document.querySelector('.crop-images-container');
+const cropContainer = cropContainers.filter((data) => data.cropStatus === true);
+const searchpath = window.location.origin;
+
+for(let i=0; i< 4; i++) {
+// Create the main div element
+
+const div = document.createElement('div');
+div.className = 'crop-image';
+
+// Create the anchor element
+const anchor = document.createElement('a');
+anchor.href = `${searchpath}/pages/user/crop-details.html?cropDetails=${cropContainer[i].cropId}`;
+
+// Create the image element
+const image = document.createElement('img');
+image.src = cropContainer[i].cropImage;
+image.alt = cropContainer[i].cropName;
+
+// Create the heading element
+const heading = document.createElement('h3');
+heading.textContent = cropContainer[i].cropName;
+
+// Append the image and heading elements to the anchor element
+anchor.appendChild(image);
+anchor.appendChild(heading);
+
+// Append the anchor element to the main div element
+div.appendChild(anchor);
+
+// Append the main div element to the container element
+container.appendChild(div);
+
+}
+       </script>
+
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGhGk3DTCkjF1EUxpMm5ypFoQ-ecrS2gY&callback=initAutocomplete&libraries=places&v=weekly"
+defer></script>
 
     </body>
 </html>

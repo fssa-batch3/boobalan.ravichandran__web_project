@@ -27,61 +27,12 @@
                 <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8412d0104101523.Y3JvcCwxMDI0LDgwMCwwLDcw.jpg" alt="empty order"> 
                 <button id="start_shopping" type="button">Start Shopping</button>
             </div>
-            <div class="orderAlign">
-                <table class="order_table" style="width:100%" id="order_tablee">
-                    <caption >Orders Details</caption>
-                    <tr>
-                        <th>Order</th>
-                        <th>Delivery date</th> 
-                        <th>Status</th>
-                        <th>Total price</th>
-                        <th>Details</th>
-                    </tr>
-                    <!-- <tr class="td">
-                        <td><img src="../../assets/images/Adama/ada1.avif" alt="last order"></td>
-                        <td>15/08/2022</td>
-                        <td>Completed</td>
-                        <td>Rs:2300</td>
-                        <td  class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-                        </tr>
-                        <tr class="td">
-                        <td><img src="../../assets/images/bayer/bay1.avif" alt="order"></td>
-                        <td>23/04/2022</td>
-                        <td>Completed</td>
-                        <td>Rs:1650</td>
-                        <td class="eye"><a href="./order_deliver1.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-                        </tr>
-                        <tr class="td">
-                        <td><img src="../../assets/images/Bio Fertilizers/bio1.jpg" alt="order1"></td>
-                        <td>15/02/2022</td>
-                        <td>Cancelled</td>
-                        <td>Rs:890</td>
-                        <td class="eye"><a href="./order_deliver2.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-                        </tr>
-                        <tr class="td">
-                        <td><img src="../../assets/images/dhanuka/dhan1.jpg" alt="order2"></td>
-                        <td>18/11/2021</td>
-                        <td>Completed</td>
-                        <td class="eye">Rs:1890</td>
-                        <td  class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-                        </tr>
-                        <tr class="td">
-                        <td><img src="../../assets/images/dow agro/dow1.jpg" alt="order3"></td>
-                        <td>11/08/2021</td>
-                        <td>Completed</td>
-                        <td>Rs:2170</td>
-                        <td class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-                        </tr>
-                        <tr>
-                        <td><img src="../../assets/images/fungicides/fun1.jpg" alt="order4"></td>
-                        <td>08/03/2021</td>
-                        <td>Cancelled</td>
-                        <td>Rs:560</td>
-                        <td class="eye"><a href="./order_deliver.html">View<i class="fa fa-eye" style="font-size:28px"></i></a></td>
-                        </tr> -->
-                </table>
+            <div class="all-order-details-container" id="order_tablee">
+          
             </div>
         </main>
+
+      
         <div class="mobile_order_page">
             <h2>Order details</h2>
             <div class="mobile_order_details">
@@ -283,10 +234,269 @@
        
         <!-- <script src="../js/menubar.js"></script> -->
 
-        <script src="../js/user_orders.js">
+        <!-- <script src="../js/user_orders.js"> -->
         
 </script>
         <script src="../js/header.js"></script>
         <script src="../js/search.js"></script>
+        <script>
+      
+  
+
+      
+        const logedUserDetails = JSON.parse(localStorage.getItem("user_data"));
+
+const pro_path = window.location.origin;
+const allProductDatas = JSON.parse(localStorage.getItem("products")) || [];
+const findOrderIds = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) ?? [];
+
+const getloggedUser = JSON.parse(localStorage.getItem("user_data"));
+
+
+const findOrderId = findOrderIds.filter((data) => data.userUniqueId === getloggedUser);
+
+
+// find before user oredred or not 
+const orderMessage = document.getElementById("empty_orderr");
+const orderTable = document.getElementById("order_tablee");
+
+if (findOrderId.length === 0) {
+  orderMessage.style.display = "block";
+  orderTable.style.display = "none";
+} else {
+  orderMessage.style.display = "none";
+  orderTable.style.display = "block";
+}
+
+document.getElementById("start_shopping").addEventListener("click", () => {
+  window.location.href = `${pro_path}/index.html`;
+});
+
+// get addresses from local storage
+const getAddresses = JSON.parse(localStorage.getItem("addresses")) || [];
+// Get address
+const getAddress = findOrderId.map((data) =>
+  getAddresses.find((e) => e.addressId === data.addressUniqueID)
+);
+
+// const getAddressName = getAddress.map((data) =>
+//   findOrderId.find((e) => e.addressUniqueID === data.addressId)
+// );
+
+// console.log(getAddressName);
+
+
+
+const addressId = [];
+for (let i = 0; i < getAddress.length; i++) {
+  const addressUniqueId = getAddress[i].name;
+  const matchedOrder = findOrderId[i].orderedTime
+  const orderDates = findOrderId[i].orderDate
+  const totalOrderPrice = findOrderId[i].totalPrice
+  console.log(orderDates)
+
+  if (!addressId.some((address) => address.id === addressUniqueId && address.time === matchedOrder && address.date === orderDates)) {
+    addressId.push({ id: addressUniqueId, time: matchedOrder, date: orderDates ,totalPrice: totalOrderPrice});
+  }
+}
+
+console.log(addressId);
+
+
+
+const ordersId = [];
+for (let i = 0; i < findOrderId.length; i++) {
+  const orderUniqueId = findOrderId[i].orderUniqueId;
+  if (!ordersId.includes(orderUniqueId)) {
+    ordersId.push(orderUniqueId);
+  }
+}
+
+const allOrderDetailsContainer = document.querySelector(".all-order-details-container");
+
+for (let i = 0; i < ordersId.length; i++) {
+  const orderDetailsContainer = document.createElement("div");
+  orderDetailsContainer.classList.add("order-details-container");
+
+  const orderTitle = document.createElement("div");
+  orderTitle.classList.add("order-title");
+
+  const orderId = document.createElement("div");
+  orderId.classList.add("order-id");
+  orderId.innerHTML = `Order Id: <h4>${ordersId[i]}</h4>`;
+
+  const personName = document.createElement("div");
+  personName.classList.add("person-name");
+  personName.innerHTML = `Person Name: <h4>${addressId[i].id}</h4>`;
+
+  orderTitle.appendChild(orderId);
+  orderTitle.appendChild(personName);
+
+  const totalOrdersContainer = document.createElement("div");
+  totalOrdersContainer.classList.add(`total-orders-container-${i}`);
+
+  const totalPriceContainer = document.createElement("div");
+  totalPriceContainer.classList.add("total-price-container");
+
+  const cancelOrderButtonContainer = document.createElement("div");
+  cancelOrderButtonContainer.classList.add("cancel-order-button-container");
+
+
+
+  const cancelOrder = document.createElement("div");
+  cancelOrder.classList.add("cancel-order");
+  cancelOrder.innerText = "Cancel Order";
+
+
+
+  if (findOrderId[i].orderStatus === "Cancelled" || findOrderId[i].orderStatus === "Delivered" ||  findOrderId[i].orderStatus === "Shipping") {
+  cancelOrder.style.display = "none";
+}
+//   before deliver cancel button have to show
+  cancelOrder.addEventListener("click", () => {
+  const orderId = ordersId[i];
+  const orderIndex = findOrderId.findIndex((data) => data.orderUniqueId === orderId);
+  if (orderIndex !== -1) {
+    if (confirm("Confirm order cancellation?")){
+    findOrderId[orderIndex].orderStatus = "Cancelled";
+    localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(findOrderId));
+   window.location.reload();
+    }
+  }
+});
+
+if (findOrderId[i].orderStatus !== "Cancelled") {
+      const currentDate = new Date();
+      const day = String(currentDate.getDate()).padStart(2, "0");
+      const month = String(currentDate.getMonth() + 1).padStart(2, "0");
+      const year = currentDate.getFullYear();
+      const formattedDate = `${day}/${month}/${year}`;
+
+      // console.log("formattedDate:", formattedDate);
+
+      const deliverydate = findOrderId[i].deliveryDate;
+      const [inputDay, inputMonth, inputYear] = deliverydate.split("/");
+      const inputDateObj = new Date(`${inputMonth}/${inputDay}/${inputYear}`);
+      inputDateObj.setDate(inputDateObj.getDate() - 3);
+      const threeDaysBeforeDate = `${String(inputDateObj.getDate()).padStart(2,"0")}/${String(inputDateObj.getMonth() + 1).padStart(2,"0")}/${inputDateObj.getFullYear()}`;
+
+      console.log(threeDaysBeforeDate)
+      // console.log("deliverydate:", deliverydate);
+      // console.log("threeDaysBeforeDate:", threeDaysBeforeDate);
+
+      if (threeDaysBeforeDate === formattedDate) {
+        const status = "Shipping";
+        findOrderId[i].orderStatus = status;
+        localStorage.setItem(
+          "addtoCartDeliveryProduct",
+          JSON.stringify(findOrderId)
+        );
+      }
+
+      if (deliverydate === formattedDate) {
+        const ord_status = "Delivered";
+        findOrderId[i].orderStatus = ord_status;
+        localStorage.setItem(
+          "addtoCartDeliveryProduct",
+          JSON.stringify(findOrderId)
+        );
+      }
+    }
+
+
+  cancelOrderButtonContainer.appendChild(cancelOrder);
+
+  const totalPrice = document.createElement("div");
+  totalPrice.classList.add("total-price");
+  totalPrice.innerHTML = `Total Price:<h4> ₹${addressId[i].totalPrice} </h4>`;
+
+  totalPriceContainer.appendChild(cancelOrderButtonContainer);
+  totalPriceContainer.appendChild(totalPrice);
+
+  orderDetailsContainer.appendChild(orderTitle);
+  orderDetailsContainer.appendChild(totalOrdersContainer);
+  orderDetailsContainer.appendChild(totalPriceContainer);
+
+  allOrderDetailsContainer.appendChild(orderDetailsContainer);
+
+  const findProductDetails = findOrderId.filter((data) => data.orderUniqueId === ordersId[i]);
+
+  const currentTotalOrdersContainer = document.querySelector(`.total-orders-container-${i}`);
+
+  for (let j = 0; j < findProductDetails.length; j++) {
+    const findUserAddressId = findProductDetails[j].addressUniqueID;
+    const findcustomerName = getAddresses.find((data) => data.addressId === findUserAddressId);
+
+    const matchedId = findProductDetails[j];
+    const matchingProducts = allProductDatas.filter((product) => product.product_unique_id === matchedId.productUniqueId);
+// ...
+
+matchingProducts.forEach((product) => {
+  const orderContainerFirst = document.createElement("div");
+  orderContainerFirst.classList.add("order-container-first");
+
+  const orderedProductImg = document.createElement("div");
+  orderedProductImg.classList.add("ordered-product-img");
+
+  const productImg = document.createElement("img");
+  productImg.src = product.source;
+  orderedProductImg.appendChild(productImg);
+
+  const orderDateStatus = document.createElement("div");
+  orderDateStatus.classList.add("order-date-status");
+
+  const orderedDate = document.createElement("div");
+  orderedDate.classList.add("ordered-date");
+  const orderedDateHeading = document.createElement("h3");
+  orderedDateHeading.innerText = "Ordered date:";
+  const orderedDateDetails = document.createElement("h4");
+  orderedDateDetails.classList.add("date-details");
+  orderedDateDetails.innerText = findProductDetails[j].orderDate;
+  orderedDate.appendChild(orderedDateHeading);
+  orderedDate.appendChild(orderedDateDetails);
+
+  const deliveryDate = document.createElement("div");
+  deliveryDate.classList.add("delivery-date");
+  const deliveryDateHeading = document.createElement("h3");
+  deliveryDateHeading.innerText = "Delivery date:";
+  const deliveryDateDetails = document.createElement("h4");
+  deliveryDateDetails.classList.add("date-details");
+  deliveryDateDetails.innerText = findProductDetails[j].deliveryDate;
+  deliveryDate.appendChild(deliveryDateHeading);
+  deliveryDate.appendChild(deliveryDateDetails);
+
+  const orderStatus = document.createElement("div");
+  orderStatus.classList.add("order-status");
+  const orderStatusHeading = document.createElement("h3");
+  orderStatusHeading.innerText = "Order Status:";
+  const orderStatusDetails = document.createElement("h4");
+  orderStatusDetails.classList.add("date-status");
+  orderStatusDetails.innerText = findProductDetails[j].orderStatus;
+  orderStatus.appendChild(orderStatusHeading);
+  orderStatus.appendChild(orderStatusDetails);
+
+  orderDateStatus.appendChild(orderedDate);
+  orderDateStatus.appendChild(deliveryDate);
+  orderDateStatus.appendChild(orderStatus);
+
+  const orderNextPage = document.createElement("div");
+  orderNextPage.classList.add("order-next-page");
+
+  const orderDetailsLink = document.createElement("a");
+  orderDetailsLink.href = `${pro_path}/pages/user/order_deliver.html?orderDetails=${findProductDetails[j].orderUniqueId}&productUniqueId=${product.product_unique_id}`;
+  orderDetailsLink.innerHTML = `View Details<i class="fa fa-eye"></i>`;
+
+  orderNextPage.appendChild(orderDetailsLink);
+
+  orderContainerFirst.appendChild(orderedProductImg);
+  orderContainerFirst.appendChild(orderDateStatus);
+  orderContainerFirst.appendChild(orderNextPage);
+
+  currentTotalOrdersContainer.appendChild(orderContainerFirst);
+});
+
+  }
+};
+        </script>
     </body>
 </html>

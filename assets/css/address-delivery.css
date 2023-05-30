@@ -60,6 +60,7 @@ form{
 .user-name-address{
     font-weight: bold;
     font-size: 18px;
+    min-width: 10vw;
 }
 .address-mobile{
     margin-left: 2vw;
@@ -100,10 +101,11 @@ font-size: 15px;
 border-radius: 5px;
 margin-left: 2vw;
 margin-top: -3px;
-color:rgb(122, 122, 122)
+color:rgb(122, 122, 122);
+min-width: 4vw;
 }
 .user-details-container{
-margin-bottom: 1vh;
+margin-bottom: 3vh;
 }
 .user-order-address{
     font-size: 17px;

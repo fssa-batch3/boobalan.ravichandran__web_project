@@ -9,8 +9,9 @@ main{
 }
 .address-container{
     background-color:#ffffff;
-    height:97vh;
+    min-height:27vh;
     border-radius: 10px;
+    padding-bottom: 30px;
     width: 25vw;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -201,6 +202,7 @@ main{
 
 .create_pro {
     background-color: hsl(216, 100%, 99%);
+    display: none;
 }
 /* order create------------ */
 .create_pro button{

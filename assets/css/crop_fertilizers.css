@@ -1,0 +1,15 @@
+.all-crop-images-containers{
+    width:98.5vw;
+    
+    margin-bottom: 15vh;
+    padding: 50px 80px;
+}
+.crop-images-containers{
+    display: flex;
+    flex-wrap: wrap;
+ flex-direction: row;
+justify-content: space-between;
+}
+.crop-image{
+    margin-top:10vh;
+}
