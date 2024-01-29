@@ -1,698 +1,730 @@
+document.getElementById("save_pro").addEventListener("click", (e) => {
+  e.preventDefault();
 
-    document.getElementById("save_pro").addEventListener("click",
-    function createProduct(e){
-        e.preventDefault();
-        
-        let category = document.getElementById("category").value
-        let comp_name = document.getElementById("company_name").value
-        let product_name = document.getElementById("pro_name").value
-        let image_url = document.getElementById("image_url").value
-        let actual_price = document.getElementById("act_price").value
-        let discount_price = document.getElementById("discount").value
-        let pro_weight = document.getElementById("weight").value
-        let description = document.getElementById("description").value
-        let benifits = document.getElementById("benifits").value
-        let application = document.getElementById("application").value
-        let dhanuka = document.getElementById("dhanuka").value
-        let  dow_agro_science = document.getElementById("dow_agro_science").value
-        let  upl  = document.getElementById("upl").value
-        let  tata_rallis = document.getElementById("tata_rallis").value
-        let  adama = document.getElementById("adama").value
-        let  bayer = document.getElementById("bayer").value
-        let  aries_agro = document.getElementById("aries_agro").value
-        let  barrix = document.getElementById("barrix").value
-        let  indofil = document.getElementById("indofil").value
-        let  rinuja = document.getElementById("rinuja").value
-        let  bio_insecticides = document.getElementById("bio_insecticides").value
-        let  bio_fungicides = document.getElementById("bio_fungicides").value
-        let  bio_nematicides = document.getElementById("bio_nematicides").value
-        let  bio_vircides = document.getElementById("bio_vircides").value
-        let  major_nurients = document.getElementById("major_nurients").value
-        let  secondary_nutrients = document.getElementById("secondary_nutrients").value
-        let growth_promoters  = document.getElementById("growth_promoters").value
-        let growth_retardants  = document.getElementById("growth_retardants").value
-        let  organic_fertilizer = document.getElementById("organic_fertilizer").value
-        let  bio_fertilizers = document.getElementById("bio_fertilizers").value
-        let  anti_stressing_agents = document.getElementById("anti_stressing_agents").value
-        let micro_nutrients  = document.getElementById("micro_nutrients").value
-        unique_id = uuidv4();
- 
-// dhanka details----------------
-        if(category == dhanuka){
-            let dhanuka_details = JSON.parse(localStorage.getItem('dhanuka_details')) || [];
+  const category = document.getElementById("category").value;
+  const companyName = document.getElementById("company_name").value;
+  const product_name = document.getElementById("pro_name").value;
+  const imageURL = document.getElementById("image_url").value;
+  const actual_price = document.getElementById("act_price").value;
+  const discountPrice = document.getElementById("discount").value;
+  const proWeight = document.getElementById("weight").value;
+  const description = document.getElementById("description").value;
+  const benifits = document.getElementById("benifits").value;
+  const application = document.getElementById("application").value;
+  const dhanuka = document.getElementById("dhanuka").value;
+  const dowAgroScience = document.getElementById("dow_agro_science").value;
+  const upl = document.getElementById("upl").value;
+  const tataRallis = document.getElementById("tata_rallis").value;
+  const adama = document.getElementById("adama").value;
+  const bayer = document.getElementById("bayer").value;
+  const ariesAgro = document.getElementById("aries_agro").value;
+  const barrix = document.getElementById("barrix").value;
+  const indofil = document.getElementById("indofil").value;
+  const rinuja = document.getElementById("rinuja").value;
+  const bioInsecticides = document.getElementById("bio_insecticides").value;
+  const bioFungicides = document.getElementById("bio_fungicides").value;
+  const bioNematicides = document.getElementById("bio_nematicides").value;
+  const bioVircides = document.getElementById("bio_vircides").value;
+  const majorNurients = document.getElementById("major_nurients").value;
+  const secondaryNutrients = document.getElementById(
+    "secondary_nutrients"
+  ).value;
+  const growthPromoters = document.getElementById("growth_promoters").value;
+  const growthRetardants = document.getElementById("growth_retardants").value;
+  const organicFertilizer = document.getElementById("organic_fertilizer").value;
+  const bioFertilizers = document.getElementById("bio_fertilizers").value;
+  const antiStressingAgents = document.getElementById(
+    "anti_stressing_agents"
+  ).value;
+  const microNutrients = document.getElementById("micro_nutrients").value;
+  // eslint-disable-next-line no-undef
+  const uniqueId = uuidv4();
 
-        let exit = dhanuka_details.some(data =>
-         data.dhanuka_details == dhanuka_details||
-         data.image_url == image_url
-         );
+  // dhanka details----------------
+  if (category === dhanuka) {
+    const dhanukaDetails =
+      JSON.parse(localStorage.getItem("dhanuka_details")) || [];
 
-         if(!exit){
+    const exit = dhanukaDetails.some(
+      (data) =>
+        data.dhanukaDetails === dhanukaDetails || data.imageURL === imageURL
+    );
 
-            dhanuka_details.push({
-          
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("dhanuka_details",JSON.stringify(dhanuka_details));
-        // localStorage.setItem("dhanuka_unique_id",JSON.stringify(unique_id));
+    if (!exit) {
+      dhanukaDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem("dhanuka_details", JSON.stringify(dhanukaDetails));
+      // localStorage.setItem("dhanuka_uniqueId",JSON.stringify(uniqueId));
     }
-}
-// ----dow_agro_science----------------
-    else if(category == dow_agro_science){
-        let dow_agro_science_details = JSON.parse(localStorage.getItem('dow_agro_science_details')) || [];
+  }
+  // ----dow_agro_science----------------
+  else if (category === dowAgroScience) {
+    const dowAgroScienceDetails =
+      JSON.parse(localStorage.getItem("dow_agro_science_details")) || [];
 
-        let exit = dow_agro_science_details.some(data =>
-         data.dow_agro_science_details== dow_agro_science_details ||
-         data.image_url == image_url
-         );
+    const exit = dowAgroScienceDetails.some(
+      (data) =>
+        data.dowAgroScienceDetails === dowAgroScienceDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-            dow_agro_science_details.push({
-           
-            "category": category,
-            "manufacture_company":comp_name,
-            "actual_price":actual_price,
-            "discount":discount_price,
-            "source":image_url,
-            "product_weight":pro_weight,
-            "product_name":product_name,
-            "product_unique_id":unique_id,
-              "description":description,
-            "benifits":benifits,
-            "application":application
-        
-        });
-        localStorage.setItem("dow_agro_science_details",JSON.stringify(dow_agro_science_details));
-        // localStorage.setItem("dow_agro_science_unique_id",JSON.stringify(unique_id));
-         }
+    if (!exit) {
+      dowAgroScienceDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "dow_agro_science_details",
+        JSON.stringify(dowAgroScienceDetails)
+      );
+      // localStorage.setItem("dow_agro_science_uniqueId",JSON.stringify(uniqueId));
     }
-    // UPL ---------------------
-    else if(category == upl){
-        let upl_details = JSON.parse(localStorage.getItem('upl_details')) || [];
+  }
+  // UPL ---------------------
+  else if (category === upl) {
+    const uplDetails = JSON.parse(localStorage.getItem("upl_details")) || [];
 
-        let exit = upl_details.some(data => 
-         data.upl_details== upl_details ||
-         data.image_url == image_url
-         );
+    const exit = uplDetails.some(
+      (data) => data.uplDetails === uplDetails || data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            upl_details.push({
-           
-            "category": category,
-            "manufacture_company":comp_name,
-            "actual_price":actual_price,
-            "discount":discount_price,
-            "source":image_url,
-            "product_weight":pro_weight,
-            "product_name":product_name,
-            "product_unique_id":unique_id,
-            "description":description,
-          "benifits":benifits,
-          "application":application
-        
-        });
-        localStorage.setItem("upl_details",JSON.stringify(upl_details));
-         }
+    if (!exit) {
+      uplDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem("upl_details", JSON.stringify(uplDetails));
     }
-    // -------tata_rallis------------
-    else if(category == tata_rallis){
-        let tata_rallis_details = JSON.parse(localStorage.getItem('tata_rallis_details')) || [];
+  }
+  // -------tata_rallis------------
+  else if (category === tataRallis) {
+    const tataRallisDetails =
+      JSON.parse(localStorage.getItem("tata_rallis_details")) || [];
 
-        let exit = tata_rallis_details.some(data =>
-         data.tata_rallis_details == tata_rallis_details ||
-         data.image_url == image_url
-         );
+    const exit = tataRallisDetails.some(
+      (data) =>
+        data.tataRallisDetails === tataRallisDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            tata_rallis_details.push({
-          
-            "category": category,
-            "manufacture_company":comp_name,
-            "actual_price":actual_price,
-            "discount":discount_price,
-            "source":image_url,
-            "product_weight":pro_weight,
-            "product_name":product_name,
-            "product_unique_id":unique_id,
-            "description":description,
-          "benifits":benifits,
-          "application":application
-        
-        });
-        localStorage.setItem("tata_rallis_details",JSON.stringify(tata_rallis_details));
-         }
+    if (!exit) {
+      tataRallisDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "tata_rallis_details",
+        JSON.stringify(tataRallisDetails)
+      );
     }
-    // adama-----------------
-    else if(category == adama){
-        let adama_details = JSON.parse(localStorage.getItem('adama_details')) || [];
+  }
+  // adama-----------------
+  else if (category === adama) {
+    const adamaDetails =
+      JSON.parse(localStorage.getItem("adama_details")) || [];
 
-        let exit = adama_details.some(data =>
-         data.adama_details== adama_details ||
-         data.image_url == image_url
-         );
+    const exit = adamaDetails.some(
+      (data) => data.adamaDetails === adamaDetails || data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            adama_details.push({
-           
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("adama_details",JSON.stringify(adama_details));
-         }
+    if (!exit) {
+      adamaDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem("adama_details", JSON.stringify(adamaDetails));
     }
-    // --------bayer---------------------
-    else if(category == bayer){
-        let bayer_details = JSON.parse(localStorage.getItem('bayer_details')) || [];
+  }
+  // --------bayer---------------------
+  else if (category === bayer) {
+    const bayerDetails =
+      JSON.parse(localStorage.getItem("bayer_details")) || [];
 
-        let exit = bayer_details.some(data =>
-         data.bayer_details== bayer_details ||
-         data.image_url == image_url
-         );
+    const exit = bayerDetails.some(
+      (data) => data.bayerDetails === bayerDetails || data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            bayer_details.push({
-          
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("bayer_details",JSON.stringify(bayer_details));
-         }
+    if (!exit) {
+      bayerDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem("bayer_details", JSON.stringify(bayerDetails));
     }
-    // ----------------aries_agro--------------
-    else if(category == aries_agro){
-        let aries_agro_details = JSON.parse(localStorage.getItem('aries_agro_details')) || [];
+  }
+  // ----------------aries_agro--------------
+  else if (category === ariesAgro) {
+    const ariesAgroDetails =
+      JSON.parse(localStorage.getItem("aries_agro_details")) || [];
 
-        let exit = aries_agro_details.some(data =>
-         data.aries_agro_details == aries_agro_details ||
-         data.image_url == image_url
-         );
+    const exit = ariesAgroDetails.some(
+      (data) =>
+        data.ariesAgroDetails === ariesAgroDetails || data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            aries_agro_details.push({
-          
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("aries_agro_details",JSON.stringify(aries_agro_details));
-         }
+    if (!exit) {
+      ariesAgroDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "aries_agro_details",
+        JSON.stringify(ariesAgroDetails)
+      );
     }
-    // ----barrix-------------------
-    else if(category == barrix){
-        let barrix_details = JSON.parse(localStorage.getItem('barrix_details')) || [];
+  }
+  // ----barrix-------------------
+  else if (category === barrix) {
+    const barrixDetails =
+      JSON.parse(localStorage.getItem("barrix_details")) || [];
 
-        let exit = barrix_details.some(data =>
-         data.barrix_details == barrix_details||
-         data.image_url == image_url
-         );
+    const exit = barrixDetails.some(
+      (data) =>
+        data.barrixDetails === barrixDetails || data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            barrix_details.push({
-         
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("barrix_details",JSON.stringify(barrix_details));
-         }
+    if (!exit) {
+      barrixDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem("barrix_details", JSON.stringify(barrixDetails));
     }
-    //----------indofil-----------------
-    else if(category == indofil){
-        let indofil_details = JSON.parse(localStorage.getItem('indofil_details')) || [];
+  }
+  // ----------indofil-----------------
+  else if (category === indofil) {
+    const indofilDetails =
+      JSON.parse(localStorage.getItem("indofil_details")) || [];
 
-        let exit = indofil_details.some(data =>
-         data.indofil_details == indofil_details ||
-         data.image_url == image_url
-         );
+    const exit = indofilDetails.some(
+      (data) =>
+        data.indofilDetails === indofilDetails || data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            indofil_details.push({
-          
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("indofil_details",JSON.stringify(indofil_details));
-         }
+    if (!exit) {
+      indofilDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem("indofil_details", JSON.stringify(indofilDetails));
     }
-    //--------rinuja----------------------
-    else if(category == rinuja){
-        let rinuja_details = JSON.parse(localStorage.getItem('rinuja_details')) || [];
+  }
+  // --------rinuja----------------------
+  else if (category === rinuja) {
+    const rinujaDetails =
+      JSON.parse(localStorage.getItem("rinuja_details")) || [];
 
-        let exit = rinuja_details.some(data =>
-         data.rinuja_details == rinuja_details ||
-         data.image_url == image_url
-         );
+    const exit = rinujaDetails.some(
+      (data) =>
+        data.rinujaDetails === rinujaDetails || data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            rinuja_details.push({
-           
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("rinuja_details",JSON.stringify(rinuja_details));
-         }
+    if (!exit) {
+      rinujaDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem("rinuja_details", JSON.stringify(rinujaDetails));
     }
-    //------------bio_insecticides-------------
-    else if(category == bio_insecticides){
-        let bio_insecticides_details = JSON.parse(localStorage.getItem('bio_insecticides_details')) || [];
+  }
+  // ------------bio_insecticides-------------
+  else if (category === bioInsecticides) {
+    const bioInsecticidesDetails =
+      JSON.parse(localStorage.getItem("bio_insecticides_details")) || [];
 
-        let exit = bio_insecticides_details.some(data =>
-         data.bio_insecticides_details == bio_insecticides_details ||
-         data.image_url == image_url
-         );
+    const exit = bioInsecticidesDetails.some(
+      (data) =>
+        data.bioInsecticidesDetails === bioInsecticidesDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            bio_insecticides_details.push({
-          
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem('bio_insecticides_details',JSON.stringify(bio_insecticides_details));
-         }
+    if (!exit) {
+      bioInsecticidesDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "bio_insecticides_details",
+        JSON.stringify(bioInsecticidesDetails)
+      );
     }
-    // -----------------bio_fungicides------------
-    else if(category == bio_fungicides){
-        let bio_fungicides_details = JSON.parse(localStorage.getItem('bio_fungicides_details')) || [];
+  }
+  // -----------------bio_fungicides------------
+  else if (category === bioFungicides) {
+    const bioFungicidesDetails =
+      JSON.parse(localStorage.getItem("bio_fungicides_details")) || [];
 
-        let exit = bio_fungicides_details.some(data =>
-         data.bio_fungicides_details == bio_fungicides_details ||
-         data.image_url == image_url
-         );
+    const exit = bioFungicidesDetails.some(
+      (data) =>
+        data.bioFungicidesDetails === bioFungicidesDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            bio_fungicides_details.push({
-         
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("bio_fungicides_details",JSON.stringify(bio_fungicides_details));
-         }
+    if (!exit) {
+      bioFungicidesDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "bio_fungicides_details",
+        JSON.stringify(bioFungicidesDetails)
+      );
     }
-    // -------bio_nematicides-----------
-    else if(category == bio_nematicides){
-        let bio_nematicides_details = JSON.parse(localStorage.getItem('bio_nematicides_details')) || [];
+  }
+  // -------bio_nematicides-----------
+  else if (category === bioNematicides) {
+    const bioNematicidesDetails =
+      JSON.parse(localStorage.getItem("bio_nematicides_details")) || [];
 
-        let exit = bio_nematicides_details.some(data =>
-         data.bio_nematicides_details == bio_nematicides_details ||
-         data.image_url == image_url
-         );
+    const exit = bioNematicidesDetails.some(
+      (data) =>
+        data.bioNematicidesDetails === bioNematicidesDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            bio_nematicides_details.push({
-      
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("bio_nematicides_details",JSON.stringify(bio_nematicides_details));
-         }
+    if (!exit) {
+      bioNematicidesDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "bio_nematicides_details",
+        JSON.stringify(bioNematicidesDetails)
+      );
     }
-    // ---------------- bio_vircides--------------------
-    else if(category ==  bio_vircides){
-        let  bio_vircides_details = JSON.parse(localStorage.getItem('bio_vircides_details')) || [];
+  }
+  // ---------------- bio_vircides--------------------
+  else if (category === bioVircides) {
+    const bioVircidesDetails =
+      JSON.parse(localStorage.getItem("bio_vircides_details")) || [];
 
-        let exit = bio_vircides_details.some(data =>
-         data.bio_vircides_details == bio_vircides_details ||
-         data.image_url == image_url
-         );
+    const exit = bioVircidesDetails.some(
+      (data) =>
+        data.bioVircidesDetails === bioVircidesDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            bio_vircides_details.push({
-         
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("bio_vircides_details",JSON.stringify(bio_vircides_details));
-         }
+    if (!exit) {
+      bioVircidesDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "bio_vircides_details",
+        JSON.stringify(bioVircidesDetails)
+      );
     }
+  }
 
-    // -----------major_nutrients------------
+  // -----------major_nutrients------------
+  else if (category === majorNurients) {
+    const majorNurientDetails =
+      JSON.parse(localStorage.getItem("major_nurients_details")) || [];
 
-    else if(category ==  major_nurients){
-        let  major_nurients_details = JSON.parse(localStorage.getItem('major_nurients_details')) || [];
+    const exit = majorNurientDetails.some(
+      (data) =>
+        data.majorNurientDetails === majorNurientDetails ||
+        data.imageURL === imageURL
+    );
 
-        let exit = major_nurients_details.some(data =>
-         data.major_nurients_details == major_nurients_details ||
-         data.image_url == image_url
-         );
-
-         if(!exit){
-
-            major_nurients_details.push({
-          
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("major_nurients_details",JSON.stringify(major_nurients_details));
-         }
+    if (!exit) {
+      majorNurientDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "major_nurients_details",
+        JSON.stringify(majorNurientDetails)
+      );
     }
+  }
 
-    // ----------------secondary_nutrients-------------------
-    else if(category == secondary_nutrients){
-        let secondary_nutrients_details = JSON.parse(localStorage.getItem('secondary_nutrients_details')) || [];
+  // ----------------secondary_nutrients-------------------
+  else if (category === secondaryNutrients) {
+    const secondaryNutrientsDetails =
+      JSON.parse(localStorage.getItem("secondary_nutrients_details")) || [];
 
-        let exit = secondary_nutrients_details.some(data =>
-         data.secondary_nutrients_details == secondary_nutrients_details ||
-         data.image_url == image_url
-         );
+    const exit = secondaryNutrientsDetails.some(
+      (data) =>
+        data.secondaryNutrientsDetails === secondaryNutrientsDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            secondary_nutrients_details.push({
-         
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("secondary_nutrients_details",JSON.stringify(secondary_nutrients_details));
-         }
+    if (!exit) {
+      secondaryNutrientsDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "secondary_nutrients_details",
+        JSON.stringify(secondaryNutrientsDetails)
+      );
     }
+  }
 
-    // ------------ growth_promoters ------------
-    else if(category ==  growth_promoters){
-        let  growth_promoters_details = JSON.parse(localStorage.getItem('growth_promoters_details')) || [];
+  // ------------ growth_promoters ------------
+  else if (category === growthPromoters) {
+    const growthPromotersDetails =
+      JSON.parse(localStorage.getItem("growth_promoters_details")) || [];
 
-        let exit = growth_promoters_details.some(data =>
-         data.growth_promoters_details == growth_promoters_details ||
-         data.image_url == image_url
-         );
+    const exit = growthPromotersDetails.some(
+      (data) =>
+        data.growthPromotersDetails === growthPromotersDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            growth_promoters_details.push({
-           
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("growth_promoters_details",JSON.stringify(growth_promoters_details));
-         }
+    if (!exit) {
+      growthPromotersDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "growth_promoters_details",
+        JSON.stringify(growthPromotersDetails)
+      );
     }
+  }
 
-    // -------------growth_retardants-----------
-    else if(category == growth_retardants){
-        let growth_retardants_details = JSON.parse(localStorage.getItem('growth_retardants')) || [];
+  // -------------growth_retardants-----------
+  else if (category === growthRetardants) {
+    const growthRetardantsDetails =
+      JSON.parse(localStorage.getItem("growth_retardants_details")) || [];
 
-        let exit = growth_retardants_details.some(data =>
-         data.growth_retardants_details == growth_retardants_details ||
-         data.image_url == image_url
-         );
+    const exit = growthRetardantsDetails.some(
+      (data) =>
+        data.growthRetardantsDetails === growthRetardantsDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            growth_retardants_details.push({
-        
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("growth_retardants_details",JSON.stringify(growth_retardants_details));
-         }
+    if (!exit) {
+      growthRetardantsDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "growth_retardants_details",
+        JSON.stringify(growthRetardantsDetails)
+      );
     }
+  }
 
-    // -----------------organic_fertilizer------------
-    else if(category == organic_fertilizer){
-        let organic_fertilizer_details = JSON.parse(localStorage.getItem('organic_fertilizer_details')) || [];
+  // -----------------organic_fertilizer------------
+  else if (category === organicFertilizer) {
+    const organicFertilizerDetails =
+      JSON.parse(localStorage.getItem("organic_fertilizer_details")) || [];
 
-        let exit = organic_fertilizer_details.some(data =>
-         data.organic_fertilizer_details == organic_fertilizer_details ||
-         data.image_url == image_url
-         );
+    const exit = organicFertilizerDetails.some(
+      (data) =>
+        data.organicFertilizerDetails === organicFertilizerDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            organic_fertilizer_details.push({
-      
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("organic_fertilizer_details",JSON.stringify(organic_fertilizer_details));
-         }
+    if (!exit) {
+      organicFertilizerDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "organic_fertilizer_details",
+        JSON.stringify(organicFertilizerDetails)
+      );
     }
+  }
 
-    // --------------bio_fertilizers--------------
-    else if(category == bio_fertilizers){
-        let bio_fertilizers_details = JSON.parse(localStorage.getItem('bio_fertilizers_details')) || [];
+  // --------------bio_fertilizers--------------
+  else if (category === bioFertilizers) {
+    const bioFertilizersDetails =
+      JSON.parse(localStorage.getItem("bio_fertilizers_details")) || [];
 
-        let exit = bio_fertilizers_details.some(data =>
-         data.bio_fertilizers_details == bio_fertilizers_details ||
-         data.image_url == image_url
-         );
+    const exit = bioFertilizersDetails.some(
+      (data) =>
+        data.bioFertilizersDetails === bioFertilizersDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            bio_fertilizers_details.push({
-          
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("bio_fertilizers_details",JSON.stringify(bio_fertilizers_details));
-         }
+    if (!exit) {
+      bioFertilizersDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "bio_fertilizers_details",
+        JSON.stringify(bioFertilizersDetails)
+      );
     }
+  }
 
-    // ----------------anti_stressing_agents---------------
-    else if(category == anti_stressing_agents){
-        let anti_stressing_agents_details = JSON.parse(localStorage.getItem('anti_stressing_agents_details')) || [];
+  // ----------------anti_stressing_agents---------------
+  else if (category === antiStressingAgents) {
+    const antiStressingAgentsDetails =
+      JSON.parse(localStorage.getItem("anti_stressing_agents_details")) || [];
 
-        let exit = anti_stressing_agents_details.some(data =>
-         data.anti_stressing_agents_details == anti_stressing_agents_details ||
-         data.image_url == image_url
-         );
+    const exit = antiStressingAgentsDetails.some(
+      (data) =>
+        data.antiStressingAgentsDetails === antiStressingAgentsDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
-
-            anti_stressing_agents_details.push({
-          
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("anti_stressing_agents_details",JSON.stringify(anti_stressing_agents_details));
-         }
+    if (!exit) {
+      antiStressingAgentsDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        produc_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "anti_stressing_agents_details",
+        JSON.stringify(antiStressingAgentsDetails)
+      );
     }
+  }
 
-    //----------- micro_nutrients------------
-    else if(category ==  micro_nutrients){
-        let  micro_nutrients_details = JSON.parse(localStorage.getItem('micro_nutrients_details')) || [];
+  // ----------- micro_nutrients------------
+  else if (category === microNutrients) {
+    const microNutrientsDetails =
+      JSON.parse(localStorage.getItem("micro_nutrients_details")) || [];
 
-        let exit = micro_nutrients_details.some(data =>
-         data.micro_nutrients_details == micro_nutrients_details ||
-         data.image_url == image_url
-         );
+    const exit = microNutrientsDetails.some(
+      (data) =>
+        data.microNutrientsDetails === microNutrientsDetails ||
+        data.imageURL === imageURL
+    );
 
-         if(!exit){
+    if (!exit) {
+      microNutrientsDetails.push({
+        category,
+        manufacture_company: companyName,
+        actual_price,
+        discount: discountPrice,
+        source: imageURL,
+        product_weight: proWeight,
+        product_name,
+        product_unique_id: uniqueId,
+        description,
+        benifits,
+        application,
+      });
+      localStorage.setItem(
+        "micro_nutrients_details",
+        JSON.stringify(microNutrientsDetails)
+      );
+    }
+  }
 
-            micro_nutrients_details.push({
-           
-            "category": category,
-            "manufacture_company":comp_name,
-                "actual_price":actual_price,
-                "discount":discount_price,
-                "source":image_url,
-                "product_weight":pro_weight,
-                "product_name":product_name,
-                "product_unique_id":unique_id,
-                "description":description,
-                "benifits":benifits,
-                "application":application
-        
-        });
-        localStorage.setItem("micro_nutrients_details",JSON.stringify(micro_nutrients_details));
-         }
-    }  
-        document.querySelector('form').reset();
-       alert("Product detail created Successfully");    
-}  
-    ) 
-    document.getElementById("cancel").addEventListener("click",
-function cancelDetails(e){
-    e.preventDefault();
-    alert("You want to cancel product details?");
-    location.href = "./user_interface.html";
-}
-    )
+  // Check if any input field is empty
+  if (
+    category === "Select" ||
+    !companyName ||
+    !product_name ||
+    !imageURL ||
+    !actual_price ||
+    !discountPrice ||
+    !proWeight ||
+    !description ||
+    !benifits ||
+    !application
+  ) {
+    // Show alert message
+    alert("Please fill all the input fields");
+  } else {
+    document.querySelector("form").reset();
+    alert("Product detail created Successfully");
+    // eslint-disable-next-line no-restricted-globals
+    location.href = "../../index.html";
+  }
+});
+document.getElementById("cancel").addEventListener("click", (e) => {
+  e.preventDefault();
+  alert("You want to cancel product details?");
+  // eslint-disable-next-line no-restricted-globals
+  location.href = "../../index.html";
+});

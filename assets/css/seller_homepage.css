@@ -6,7 +6,7 @@
     width:330px;
     height: 400px;
     margin-left: 20px;
-    box-shadow: 0px 6px 15px 0px black;
+  
 }
 .fert{
     display: flex;
@@ -17,17 +17,19 @@
     width:500px;
     height: 500px;
    margin-left: 150px;
-   box-shadow: 0px 6px 15px 0px black;
+ 
 }
 .fert img:hover ,.img img:hover {
-   transform: scale(1.02);
-}
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;}
 .nutri img{
     width: 700px;
     height:500px;
     margin: 50px 0px 100px 27px;
-    box-shadow: 0px 6px 15px 0px black;
+  
 }
 .nutri img:hover{
-    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+ }
+ #contact{
+    margin-top: 200px;
  }

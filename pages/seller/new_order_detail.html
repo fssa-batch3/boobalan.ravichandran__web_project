@@ -1,131 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-          <link rel="stylesheet" href="../../assets/css/new_order_detail.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../../assets/css/new_order_detail.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-          <title>New Orders details</title>
+        <title>New Orders details</title>
           
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="../../assets/css/sell_footer.css">
-<link rel="stylesheet" href="../../assets/css/normalize.css">
-<link rel="stylesheet" href="../../assets/css/seller_header.css">
-</head>
+        <link rel="stylesheet" href="../../assets/css/sell_footer.css">
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
+        <link rel="stylesheet" href="../../assets/css/seller_header.css">
+    </head>
     <body>
-        <header class="navbar">
-        <div class="header">
-        </div>
-            <div class="head">
-                <div>
-                    <img src="../../assets/images/Fert agri.png" alt="logo for fert agri boomi" class="header__logo" />
-                </div>
-                <div>
-                    <ul class="hero">
-                     <li class="hero_list"><a href="./seller_homepage.html"><i class="fa fa-home" style="font-size:28px"></i>Home</a></li>
-                     <li class="hero_list"><a href="../../index.html"><i class="fa fa-sign-out" style="font-size:21px"></i>Logout</a>
-                     <li class="hero_list"><a href="./profile.html" ><i class="fa fa-user-circle-o" style="font-size:36px"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="nav">
-                <div class="dropdown">
-                    <button class="btn">Listings</button>
-                    <div class="dropdown_list">
-                        <a href="./type_agri.html">Add new Listing</a>
-                    </div>
-                </div>
-                <div class="dropdown1">
-                    <button class="btn1">My Orders</button>
-                    <div class="dropdown_list1">
-                        <a href="./new_order.html">New Orders</a>
-                        <a href="./old_order.html">Old Orders</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+       
         <main>
-           <div class="dactail">
+            <div class="newOrderDetails">
+
+            </div>
+        </main>
+      
+        <footer id="contact">
+            <h1>Fert Agri Boomi(FAB)</h1>
+            <div class="footer">
+                <div class="icon">   
+                    <img src="../../assets/images/Fert agri.png" alt="logo">
+                </div>
+                <div class="abt">
+                    <a href="../user/about_us.html">
+                        <h2>About Us</h2> 
+                    </a>
+                    <a href="./seller_homepage.html">
+                        <h2>Home</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="cont">
+                    <p>Contact us</p>
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/rp0803/?igshid=YmMyMTA2M2Y%3D">
+                        <img src="../../assets/images/instagram.png" alt="instagram">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g">
+                        <img src="../../assets/images/youtube.webp" alt="youtube">
+                    </a>
+                    <a href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app">
+                        <img src="../../assets/images/mail.jpg" alt="email">
+                    </a>
+                    <a href="https://twitter.com/agrigoi?lang=en">
+                        <img src="../../assets/images/twiter.png" alt="twitter">
+                    </a>
+                    <a href="https://www.facebook.com/people/Agriculture/100068310005265/">
+                        <img src="../../assets/images/facebook.png" alt="facebook">
+                    </a>
+                    <a href="#">
+                        <img src="../../assets/images/whatsapp.webp" alt="whatsapp">
+                    </a>
+    
+                </div>
+            </div>
+        </footer>
+        <script src="../js/seller_header.js"></script>
+
+        <script>const productId = new URLSearchParams(window.location.search).get(
+    "orderDetailsFind"
+);
+const newOrderDetails = JSON.parse(localStorage.getItem("sellerDetails"));
+
+const findSellerOrder = newOrderDetails.find(
+    (details) => details.orderId === productId
+);
+
+function newOrder(product) {
+    const newOrderStock = `
+                <div class="dactail">
                 <h1 id="h1">Product Details</h1>
             <div class="herbicide">
-                <img src="../../assets/images/Major nutrients/maj11.avif" alt=">RILON INSECTICIDE">
-                <p>RILON INSECTICIDE</p>
+                <img src="${product.imageInput}" alt="${product.productNameInput}">
+                <p>${product.productNameInput}</p>
             </div>
             <div class="details1">
                 <div class="del">
-                    <h2>Delivery Status:<p>Processing</p></h2>
-                    <h2>Seller SKUID:<p>KM944PKR</p></h2>
-                    <h2>Listing Status: <p>Active</p></h2>
+                    <h2>Delivery Status:<p>${product.orderDeliveryStatus}</p></h2>
+                    <h2>Seller SKUID:<p>${product.skuidInput}</h2>
+                    <h2>Listing Status: <p>${product.listingStatusInput}</p></h2>
                     <h1>Price details</h1>
-                    <h2>MRP: <p>162.64Rs</p></h2>
-                    <h2>Selling Price:<p>110.55Rs</p></h2>
+                    <h2>MRP: <p>${product.mrpInput}Rs</p></h2>
+                    <h2>Selling Price:<p>${product.sellingInput}Rs</p></h2>
                     <h1>Inventery details</h1>
-                    <h2>Precurement Type:<p>Stack</p></h2>
-                    <h2>Stack count:<p>3,400</p></h2>
-                    <h2>Shipping provider:<p>Seller and FAB</p></h2>
+                    <h2>Precurement Type:<p>${product.procurementTypeInput}</p></h2>
+                    <h2>Stack count:<p>${product.stockCountInput}</p></h2>
+                    <h2>Shipping provider:<p>${product.shippingProviderInput}</p></h2>
                     <h1>Delivery Charge to Customer</h1>
-                    <h2>Local delivery:<p>45Rs</p></h2>
-                    <h2>Zonal delivery:<p>107Rs</p></h2>
+                    <h2>Local delivery:<p>${product.localDeliveryChargeInput}Rs</p></h2>
+                    <h2>Zonal delivery:<p>${product.zonalDeliveryChargeInput}Rs</p></h2>
                 </div >
                 <div class="del1">
                     <h1>Packing details</h1>
-                    <h2>Packing Weight:<p>450gm</p></h2>
-                    <h2>Packing Height:<p>27cm</p></h2>
+                    <h2>Packing Weight:<p>${product.packingWeightInput}</p></h2>
+                    <h2>Packing Height:<p>${product.packingHeightInput}</p></h2>
                     <h1>Tax</h1>
-                    <h2>HSN:<p>31010110 </p></h2>
-                    <h2>Tax Code:<p>4%</p></h2>
-                    <h2>Country of Origin:<p>India</p></h2>
+                    <h2>HSN:<p>${product.hsnInput}</p></h2>
+                    <h2>Tax Code:<p>${product.taxCodeInput}</p></h2>
+                    <h2>Country of Origin:<p>${product.countryOriginInput}</p></h2>
                     <h1>Product Description</h1>
-                    <h2>Fertilizer Color:<p>green color</p> </h2>
-                    <h2>Name of Product:<p>Rilon Insecticide</p> </h2>
+                   
+                    <h2>Name of Product:<p>${product.productNameInput}</p> </h2>
                 </div>
             </div>
             <div class="about">
                 <h1>About Product</h1>
-                <p>Rilon Insecticide is a highly potent insecticide for use on lepidopterian Insects, which are considered the most damaging insects after sucking pests in edible crops such as vegetables and fruits.
-                    Rilon insecticide (Emamectin Benzoate 5% SG) has a unique mechanism. When applied, it absorbs through leaves (Trans-laminar) and forms a reservoir of molecules in each leaf. When targeting insect feed on the foliage, then Rilon Insecticide (Emamectin benzoate) molecule in leaves
-                     is released and inhibits muscle contraction and death of the insect.</p>
+                <p>${product.aboutProductInput}</p>
             </div>
-            <div>
-                <a href="./seller_homepage.html"><i class="fa fa-arrow-circle-left" style="font-size:42px"></i></a>
+            <div class="back_home">
+                <div>
+                <a href="./new_order.html"><i class="fa fa-arrow-circle-left" style="font-size:42px"></i></a>
             </div>
+            <div class="cancel_order">
+                <button type="button" id="order_cancel">Cancel Order</button>
            </div>
+                </div>
            </div>
-        </main>
-      
-    <footer id="contact">
-        <h1>Fert Agri Boomi(FAB)</h1>
-       <div class="footer">
-     <div class="icon">   
-        <img src="../../assets/images/Fert agri.png" alt="logo">
-    </div>
-       <div class="abt">
-        <a href="../user/about_us.html"><h2>About Us</h2> </a>
-        <a href="./seller_homepage.html"><h2>Home</h2></a>
-       </div>
-       </div>
-       <div class="bottom">
-            <div class="cont">
-                <p>Contact us</p>
-            </div>
-            <div class="social">
-                <a href="https://www.instagram.com/rp0803/?igshid=YmMyMTA2M2Y%3D" > <img src="../../assets/images/instagram.png" alt="instagram"></a>
-                <a href="https://www.youtube.com/channel/UCufA2FcZ-8DSsbCog424g_g" ><img src="../../assets/images/youtube.webp" alt="youtube"></a>
-                <a href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app"><img src="../../assets/images/mail.jpg" alt="email"></a>
-                  <a href="https://twitter.com/agrigoi?lang=en"><img src="../../assets/images/twiter.png" alt="twitter"></a>
-                <a href="https://www.facebook.com/people/Agriculture/100068310005265/" ><img src="../../assets/images/facebook.png" alt="facebook"></a>
-                <a href="#"><img src="../../assets/images/whatsapp.webp" alt="whatsapp"></a>
-    
-            </div>
-        </div>
-        </footer>
+           `;
+    return newOrderStock;
+}
+const orderContainer = document.querySelector(".newOrderDetails");
+const product = findSellerOrder;
+const newOrderStock = newOrder(product);
+orderContainer.innerHTML = newOrderStock;
 
-</body>
+const cancelOrderBtn = document.getElementById("order_cancel");
+
+cancelOrderBtn.addEventListener("click", () => {
+    const confirmed = confirm("Are you sure you want to cancel this order?");
+    if (confirmed) {
+        findSellerOrder.orderDeliveryStatus = "Processing";
+        console.log(findSellerOrder.orderDeliveryStatus);
+        // update the order status to "Cancelled"
+        localStorage.setItem("sellerDetails", JSON.stringify(newOrderDetails));
+        console.log(JSON.parse(localStorage.getItem("sellerDetails"))); // store the updated details in localStorage
+        window.location.href = "./new_order.html"; // redirect to the seller homepage
+    }
+});
+
+const deliveryStatus = findSellerOrder.orderDeliveryStatus;
+if (deliveryStatus === "Delivered" || deliveryStatus === "Cancelled") {
+    cancelOrderBtn.style.display = "none";
+}
+//                 const orderDate = new Date().toLocaleDateString();
+
+//                const deliveryDate = findSellerOrder["deliveryDate"];
+//                if(deliveryDate == orderDate){
+//                 findSellerOrder.orderDeliveryStatus = "Delivered";
+
+// // Find the index of the order object in the array
+// const index = newOrderDetails.findIndex(details => details.orderId == productId);
+
+// // Replace the old order object with the modified one
+// newOrderDetails.splice(index, 1, findSellerOrder);
+
+// // Save the updated array back to the localStorage
+// localStorage.setItem("sellerDetails", JSON.stringify(newOrderDetails));
+//                }
+        </script>
+
+    </body>
 
 </html>

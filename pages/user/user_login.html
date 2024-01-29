@@ -1,95 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" /><link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-          <link rel="stylesheet" href="../../assets/css/user_login.css">
-          <title>User Login </title>
+        <link rel="stylesheet" href="../../assets/css/user_login.css">
+        <title>User Login </title>
       
-<link rel="stylesheet" href="../../assets/css/normalize.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<main>
-    <div class="box">
-    <form action="#" class="form"  role="form" onsubmit="signIn(event);">
-            <img src="../../assets/images/Fert agri.png" alt="logo">
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <main>
+        <div class="box">
+            <form action="#" class="form" role="form">
+                <img src="../../assets/images/Fert agri.png" alt="logo">
                 <h1>User Login</h1>
                 <div class="form-group">
-                   <input type="text" id="mobile" class="form-control" required maxlength="10" /> 
-                   <label for="mobile" class="form-label"> Phone Number</label>
-           </div>
-           <div class="form-group">
-               <input type="password"  id="txtPassword" class="form-control"  required 
-               
-               maxlength="10"/>
-               <label for="txtPassword" class="form-label">Enter Your Password</label>
-           </div>
-           <div class="form-group">
-      <label class="showLabel">
-        <input type="checkbox" id="show">
-        Show Password
-      </label>
-           </div>
-          <div>
-            <div class="btn">
-                <a href="forgot_password.html">Forgot Password?</a>
-
+                    <input type="text" id="mobile" class="form-control" pattern="[0-9].{9}" title="Enter 10 number only" maxlength="10" required> 
+                    <label for="mobile" class="form-label"> Phone Number</label>
+                </div>
+                <div class="error"></div>
+                <div class="form-group form-group3">
+                    <input type="password" id="txtPassword" class="form-control" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$">
+                    <label for="txtPassword" class="form-label">Enter Your Password</label>
+                </div>
+                <div class="form-group">
+                    <label class="showLabel">
+                        <input type="checkbox" id="show">
+                        Show Password
+                    </label>
+                </div>
+                <div>
+                    <div class="btn">
+                        <a href="forgot_password.html">Forgot Password?</a>
                 
-                <button type="submit" >Login</button>
-            </div>
-            <h4 class="singup"> New to FAB?<a href="../user/user_signup.html">Create an account</a></h4>
+                        <button type="submit" id="userLoginDel">Login</button>
+                    </div>
+                    <h4 class="singup">
+                        New to FAB?<a href="../user/user_signup.html">Create an account</a>
+                    </h4>
+                </div>
+            </form>
         </div>
-    </form>
-    </div>
-</main>
-<script src="../js/signup_login.js">
-    // function login(){
-        
-
-    // const phone = document.getElementById("mobile").value;
-    // const password = document.getElementById("txtPassword").value;
-
-    // // console.log(email);
-    // // console.log(password);
-
-    // // localStorage.setItem("email_phone", email)
-    // // localStorage.setItem("password", password)
-
-
-    // //get data from local storage
-    // const getphone = localStorage.getItem("users", phone);
-    // const getpass = localStorage.getItem("users", password);
-    // alert("Login Succesfull ✅");
-    //       window.location.href="./user_interface.html";
-
-    // if ( phone == getphone)
-    // {
-    //     if ( password == getpass)
-    //     {
-    //       alert("Login Succesfull ✅");
-    //       window.location.href="./user_interface.html";
-    //     }
-    //     else
-    //     {
-    //         alert("Wrong Password ❌");
-    //     }
-    // }
-    // else
-    // {
-    //     alert("Invalid Mobile number 👿👿😈")
-    // }
-    
-    // }
-
-    
+    </main>
+    <script src="../js/user_login.js">
 
 </script>
-<script src="../js/seller_login.js"></script>
+    <script src="../js/seller_login.js"></script>
+    <script>
+     const mobileInput = document.getElementById("mobile");
+const formGroup = document.querySelector(".form-group");
+const errorMessage = document.querySelector(".error");
+
+mobileInput.addEventListener("input", () => {
+  const inputValue = mobileInput.value.trim(); // remove leading/trailing whitespace
+  const isValidInput =
+    /^[6-9]\d{9}$/.test(inputValue) && !/^\d*(\d)\1{9}\d*$/.test(inputValue); // use regex to match the updated criteria
+  if (!isValidInput || inputValue === "") {
+    formGroup.classList.remove("valid");
+    formGroup.classList.add("invalid");
+    if (inputValue === "") {
+           errorMessage.textContent = "Please enter a mobile number.";
+    } else if (/^\d+$/.test(inputValue)) {
+           errorMessage.textContent = "Enter a valid 10-digit mobile number.";
+    } else {
+           errorMessage.textContent = "Please enter digits only.";
+    }
+    errorMessage.style.color = "red";
+  } else {
+    formGroup.classList.remove("invalid");
+    formGroup.classList.add("valid");
+    errorMessage.textContent = "";
+  }
+});
+
+// if user logged the website user will go to the indecx page, encase user came web back the website
+const file_root = window.location.origin;
+
+function isLoggedIn() {
+  const findLogged = JSON.parse(localStorage.getItem("user_data"));
+  if (findLogged) {
+    return true;
+  }
+
+  return false;
+}
+//  incase user did login when user logged out page move to login page
+window.addEventListener("popstate", (event) => {
+  if (isLoggedIn()) {
+    event.preventDefault();
+    window.location.href = `${file_root}/index.html`;
+  }
+});
+
+// call the isLoggedIn function when the page loads
+if (isLoggedIn()) {
+  window.location.href = `${file_root}/index.html`;
+}
+</script>
 </body>
 </html>

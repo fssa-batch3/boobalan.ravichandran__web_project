@@ -1,116 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="../../assets/css/product_add_form.css">
-    <title>product ADD form</title>
-</head>
-<body>
-    <main>
-    <form class="form" role="form" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="../../assets/css/user_profile.css"> -->
+        <link rel="stylesheet" href="../../assets/css/product_add_form.css">
+
+        <title>product ADD form</title>
+    </head>
+    <body>
+        <main>
+            <form class="form" role="form">
         
-<h1>Add Products</h1>
-<div class="form-group">
-    
+                <h1>Add Products</h1>
+                <div class="form-group">
+
+                    <a href="../../assets/images/micro_nutrients/mic1.jpg"></a>
   
-</div>
-<div class="form-group">
+                </div>
+                <div class="form-group">
     
-    <select class="form-control" id="category">
-        <option >Select</option>
-           <option id="dhanuka" >DHANUKA</option>
-           <option id="dow_agro_science">DOW AGRO SCIENCE</option>
-           <option id="upl">UPL</option>
-           <option id="tata_rallis">TATA RALLIS</option>
-           <option id="adama">ADAMA</option>
-           <option id="bayer">BAYER</option>
-           <option id="aries_agro">ARIES AGRO</option>
-           <option id="barrix">BARRIX</option>
-           <option id="indofil">INDOFIL</option>
-           <option id="rinuja">RINUJA</option>
-           <option id="bio_insecticides">BIO INSECTICIDES</option>
-           <option id="bio_fungicides">BIO FUNGICIDES</option>
-           <option id="bio_nematicides">BIO NEMATICIDES</option>
-           <option id="bio_vircides">BIO VIRCIDES</option>
-           <option id="major_nurients">MAJOR NUTRIENTS</option>
-           <option id="secondary_nutrients">SECONDARY NUTRIENTS</option>
-           <option id="growth_promoters">GROWTH PROMOTERS</option>
-           <option id="growth_retardants">GROWTH RETARDANTS</option>
-           <option id="organic_fertilizer">ORGANIC FERTILIZERS</option>
-           <option id="bio_fertilizers">BIO FERTILIZERS</option>
-           <option id="anti_stressing_agents">ANTI STRESSING AGENTS</option>
-           <option id="micro_nutrients">MICRO NUTRIENTS</option>
-          
-   </select>
-   <label for="category"  class="form-label"> category </label>
-</div>
-<div class="form-group">
+                    <select class="form-control form-control-type" id="category">
+                        <option >Select</option>
+                        <!-- <option id="dhanuka">DHANUKA</option>
+                        <option id="dow_agro_science">DOW AGRO SCIENCE</option>
+                        <option id="upl">UPL</option>
+                        <option id="tata_rallis">TATA RALLIS</option>
+                        <option id="adama">ADAMA</option>
+                        <option id="bayer">BAYER</option>
+                        <option id="aries_agro">ARIES AGRO</option>
+                        <option id="barrix">BARRIX</option>
+                        <option id="indofil">INDOFIL</option>
+                        <option id="rinuja">RINUJA</option>
+                        <option id="bio_insecticides">BIO INSECTICIDES</option>
+                        <option id="bio_fungicides">BIO FUNGICIDES</option>
+                        <option id="bio_nematicides">BIO NEMATICIDES</option>
+                        <option id="bio_vircides">BIO VIRCIDES</option>
+                        <option id="major_nurients">MAJOR NUTRIENTS</option>
+                        <option id="secondary_nutrients">SECONDARY NUTRIENTS</option>
+                        <option id="growth_promoters">GROWTH PROMOTERS</option>
+                        <option id="growth_retardants">GROWTH RETARDANTS</option>
+                        <option id="organic_fertilizer">ORGANIC FERTILIZERS</option>
+                        <option id="bio_fertilizers">BIO FERTILIZERS</option>
+                        <option id="anti_stressing_agents">ANTI STRESSING AGENTS</option>
+                        <option id="micro_nutrients">MICRO NUTRIENTS</option>
+           -->
+                    </select>
+                    <label for="category" class="form-label"> category </label>
+                </div>
+                <div class="form-group">
      
-    <input type="text" class="form-control" id="company_name"  /> 
-    <label for="company_name"  class="form-label"> Company Name </label>
-</div>
-<div class="form-group">
+                    <input type="text" class="form-control" id="company_name" maxlength="40"> 
+                    <label for="company_name" class="form-label"> Manufacturing Company Name </label>
+                </div>
+                <div class="form-group">
      
-        <input type="text" class="form-control" id="pro_name"  /> 
-        <label for="pro_name"  class="form-label"> Product Name </label>
-</div>
+                    <input type="text" class="form-control" id="pro_name" maxlength="40"> 
+                    <label for="pro_name" class="form-label"> Product Name </label>
+                </div>
 
-<div class="form-group">
-        <input type="text" class="form-control" id="image_url"   >
-        <label for="image_url" class="form-label">Image URL</label>
-</div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="image_url">
+                    <label for="image_url" class="form-label">Image URL</label>
+                </div>
 
-<div class="form-group" >
+                <div class="form-group">
     
-    <input type="number" class="form-control" id="act_price" />
-    <label for="act_price"  class="form-label">Product Actual Price</label>
-</div>
+                    <input type="number" class="form-control" id="act_price" min="100" max="9999"maxlength="4">
+                    <label for="act_price" class="form-label">Product Actual Price</label>
+                    <span class="error-message" id="act_price_error" style="display:none;"></span>
+                </div>
 
-<div class="form-group">
-    <input type="number" class="form-control" id="discount"  />
-    <label for="discount"  class="form-label">Discount on product</label>
-</div>
-<div class="form-group">
-    <input type="text" class="form-control" id="weight"  />
-    <label for="weight"  class="form-label">Product weight</label>
-</div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="discount"min="0" max="9899"maxlength="4">
+                    <label for="discount" class="form-label">Discount on product</label>
+                    <span class="error-message" id="discount_error" style="display:none;"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="weight" maxlength="5">
+                    <label for="weight" class="form-label">Product weight</label>
+                </div>
 
-<div class="form-group">
-    <textarea id="description" cols="48" rows="5"></textarea>
-    <label for="description"  class="form-label">Description</label>
-</div>
-<div class="form-group">
-    <textarea id="benifits" cols="48" rows="5"></textarea>
-    <label for="benifits"  class="form-label">Benefits</label>
-</div>
-<div class="form-group">
-    <textarea id="application" cols="48" rows="5"></textarea>
-    <label for="application"  class="form-label">Application</label>
-</div>
-<div class="form-group">
-    <a href="product_update.html">Update Page</a>
-</div>
-<div class="button_form">
+                <div class="form-group">
+                    <textarea id="description" cols="48" rows="5"></textarea>
+                    <label for="description" class="form-label">Description</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="benifits" cols="48" rows="5"></textarea>
+                    <label for="benifits" class="form-label">Benefits</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="application" cols="48" rows="5"></textarea>
+                    <label for="application" class="form-label">Application</label>
+                </div>
+                <div class="form-group">
+                    <a href="product_update.html">Update Page -></a>
+                </div>
+                <div class="form-group2" >
+                    <a id="add-category" > +Add New Category</a>
+                </div>
+                <div class="button_form">
     
-<div class="btn1">
-    <button type="submit" id="save_pro" >save</button>
-  </div>
-  <div class="btn1">
-      <button type="submit" id="cancel" >cancel</button>
-    </div>
-</div>
-</form>
-</main>
+                    <div class="btn1">
+                        <button type="submit" id="save_pro">save</button>
+                    </div>
+                    <div class="btn1">
+                        <button type="submit" id="cancel">cancel</button>
+                    </div>
+                </div>
+            </form>
+        </main>
 
-<script src="../js/product_form.js">
+       <div class="category-container">
+        <div class="edit-details-container">
+            <div class="edit-title">
+                <h2>Add category</h2>
+            </div>
+            <div class="user-personal-details">
+                <label for="category_type">Category Type</label>
+               <select  id="category_type">
+                <option value="BRANDS">BRANDS</option>
+                <option value="CROP PRODUCTION">CROP PRODUCTION</option>
+                <option value="CROP NUTRITION">CROP NUTRITION</option>
+               </select>
+            </div>
+           
+            <div class="user-personal-details">
+                <label for="category_name">Category Name</label>
+                <input type="text" id="category_name" maxlength="40" required>
+            </div>
+           
+            <div class="category-button">
+                <button  type="submit" id="category_save">
+                    Save
+                </button >
+                <button id="category_cancel">Cancel</button>
+            </div>
+            
+          </div>
+       </div>
+
+        <!-- <script src="../js/product_form.js"> -->
     
 </script>
-<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-</body>
+
+        <script>
+    const act_price = document.getElementById("act_price");
+    const discount = document.getElementById("discount");
+
+    function validatePrice() {
+      if (act_price.value === "") {
+        return true;
+      }
+      if (act_price.value < 100 || act_price.value > 9999) {
+        alert("Actual price must be between 100 and 9999");
+        return false;
+      }
+      return true;
+    }
+
+    function validateDiscount() {
+      if (discount.value === "") {
+        return true;
+      }
+      if (discount.value < 0 || discount.value > act_price.value - 100) {
+        alert(
+          "Discount must be between 0 and 100 rupees less than the actual price"
+        );
+        return false;
+  }
+
+      return true;
+}
+
+    // function validateForm() {
+    //   return validatePrice() && validateDiscount();
+    // }
+
+    act_price.addEventListener("change", validatePrice);
+    discount.addEventListener("change", validateDiscount);
+
+
+let categoryShow = document.querySelector(".category-container")
+
+document.getElementById("add-category").addEventListener("click",
+    ()=>{
+        categoryShow.classList.add("showcategory")
+    })
+    // calcel the create category
+    document.getElementById("category_cancel").addEventListener("click",
+    ()=>{
+        categoryShow.classList.remove("showcategory")
+    })
+
+
+
+
+    // generate 10 digit id
+    function generateShortId() {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let shortId = '';
+  for (let i = 0; i < 10; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    shortId += characters.charAt(randomIndex);
+  }
+  return shortId;
+}
+
+
+    // add category
+    document.getElementById("category_save").addEventListener("click", function addCategory(e) {
+  e.preventDefault();
+
+  const categoryInput = document.getElementById("category_name");
+  const categoryTypeInput = document.getElementById("category_type");
+  let category = categoryInput.value.trim();
+  let categoryType = categoryTypeInput.value.trim();
+  if (category === "" || categoryType === "") {
+    alert("Category name is required");
+    return;
+  }
+
+  category = category.toUpperCase(); // Convert category name to uppercase
+
+  const addCategory = JSON.parse(localStorage.getItem("category")) || [];
+  const exist =
+    addCategory.length &&
+    JSON.parse(localStorage.getItem("category")).some(
+      (data) => data.category_name.toLowerCase() === category.toLowerCase()
+    );
+  if (!exist) {
+    const category_detail = {
+        category_type:categoryType,
+        category_name: category,
+      category_id: generateShortId(),
+    };
+    addCategory.push(category_detail);
+    alert("Category added successfully");
+    window.location.href = "./product_form.html";
+    localStorage.setItem("category", JSON.stringify(addCategory));
+  } else {
+    alert("Category already exists");
+  }
+});
+
+
+
+
+// add category in the select option
+let categorArray = JSON.parse(localStorage.getItem("category")) || [];
+console.log(categorArray)
+ 
+for(let i=0; i<categorArray.length; i++) {
+    const optionType = document.createElement("option");
+    optionType.setAttribute("value",categorArray[i].category_id)
+    optionType.innerHTML = categorArray[i].category_name;
+    
+    document.querySelector(".form-control-type").append(optionType)
+
+
+}
+
+
+
+// add products 
+document.getElementById("save_pro").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const selectedCategoryId = document.getElementById("category").value;
+  const companyName = document.getElementById("company_name").value;
+  const product_name = document.getElementById("pro_name").value;
+  const imageURL = document.getElementById("image_url").value;
+  const actual_price = document.getElementById("act_price").value;
+  const discountPrice = document.getElementById("discount").value;
+  const proWeight = document.getElementById("weight").value;
+  const description = document.getElementById("description").value;
+  const benifits = document.getElementById("benifits").value;
+  const application = document.getElementById("application").value;
+
+  const productsDetails = JSON.parse(localStorage.getItem("products")) || [];
+  const categorArray = JSON.parse(localStorage.getItem("category")) || [];
+
+  const exit = productsDetails.some(
+    (data) =>
+      data.source === imageURL && data.product_name === product_name
+  );
+
+  if (!exit) {
+    productsDetails.push({
+      category_id: selectedCategoryId,
+      manufacture_company: companyName,
+      actual_price,
+      discount: discountPrice,
+      source: imageURL,
+      product_weight: proWeight,
+      product_name,
+      product_unique_id: uuidv4(),
+      description,
+      benifits,
+      application,
+    });
+
+    localStorage.setItem("products", JSON.stringify(productsDetails));
+  }
+
+  // Check if any input field is empty
+  if (
+    selectedCategoryId === "Select" ||
+    !companyName ||
+    !product_name ||
+    !imageURL ||
+    !actual_price ||
+    !discountPrice ||
+    !proWeight ||
+    !description ||
+    !benifits ||
+    !application
+  ) {
+    // Show alert message
+    alert("Please fill all the input fields");
+  } else {
+    document.querySelector("form").reset();
+    alert("Product detail created successfully");
+  }
+});
+
+  </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    </body>
 </html>

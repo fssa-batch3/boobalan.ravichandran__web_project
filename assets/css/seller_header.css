@@ -1,135 +1,44 @@
-
-.header{
-    background-color: black;
-    height:40px;
- }
- header{
-  background-color: rgb(247, 252, 243);
- }
- .head{
-     display: flex;
- }
- .header__logo{
-     width: 170px;
-     height: 58px;
-     padding: 5px 5px 5px 40px;
- }
- .hero{
-     display: flex;
-     margin-left:630px;
-     list-style: none;
- }
- .hero_list a{
-     text-decoration: none;
-     font-size: 18px;
-   margin-left: 100px;
-     color: rgb(13, 88, 18);
-     font-weight: bold;
-     margin-top: -20px;
- }
- .hero_list a:hover{
-     color:rgb(255, 0, 76);
-     font-size: 19px;
- }
- .fa-home{
-     padding-left: 50px;
-    margin-top: 5px;
- }
- .fa-sign-out{
-    padding-left:10px;
-     margin-top:12px;
- }
- 
- *{
+*{
+  margin: 0;
+  padding: 0;
   font-family: 'Lora', serif;
    }
+   header{
+    background-color: rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 50px ;
+    position: sticky;
+    top:0;
+    z-index: 2;
+   }
+.head{
+  display: flex;
+  padding: 10px 50px;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+.hero{
+  display: flex;
+  list-style: none;
+  width:70vw;
+  justify-content: space-around;
+  padding-top: 18px;
+}
+.fert_logo img{
+  width: 250px;
+  height:90px;
+}
+.hero .hero_list a{
+  text-decoration: none;
+  font-size: 18px;
+  color:white;
+  font-weight: bold;
+}
+ .hero .hero_list a:hover{
+  color:rgb(255, 247, 1);
  
-   .nav{
-     display: flex;
-     background-color: black;
-     padding-left: 860px;
-   }
-   .dropdown_list a {
-     color: rgb(0, 0, 0);
-     padding: 13px 16px;
-     text-decoration: none;
-     display: block;
-   }
-   .dropdown_list1 a{
-     color: black;
-     padding: 12px 18px;
-     text-decoration: none;
-     display: block;
-   }
-   
- .dropdown:hover .dropdown_list{
-     display: block;
  }
- .btn{
-     cursor: pointer;
-     background-color: black;
-     color: yellow;
-     padding:12px 20px;
-     font-size: 19px;
-   border: none;
-   font-weight: bold;
+ .fa-user-circle-o{
+  margin-top: -5px;
  }
- .dropdown{
-     position: relative;
-     display: inline-block;
- }
-   .dropdown_list{
-     display: none;
-     position: absolute;
-     background-color:  rgb(255, 255, 177) ;
-     width:190px;
-     box-shadow: 0px 5px 11px 0px rgb(20, 20, 20);
-     font-size: 19px;
-     font-weight: bold;
-   }
-   .dropdown:hover .btn {
-     color: rgb(0, 0, 0);
-     background-color: yellow;
-   }
- 
- 
- .dropdown1:hover .dropdown_list1{
-     display: block;
- }
- .btn1{
-     cursor: pointer;
-     background-color: black;
-     color: yellow;
-     padding:12px 20px;
-     font-size: 19px;
-   border: none;
-   margin-left: 160px;
-   font-weight: bold;
- }
- .dropdown1{
-     position: relative;
-     display: inline-block;
- }
-   .dropdown_list1{
-     display: none;
-     position: absolute;
-     background-color:  rgb(255, 255, 177) ;
-     width:150px;
-     box-shadow: 0px 5px 11px 0px rgb(20, 20, 20);
-     margin-left: 160px;
-     font-size: 19px;
-     font-weight: bold;
-   }
-   .dropdown_list1 a:hover ,.dropdown_list a:hover{
-     color:rgb(121, 6, 6);
-     font-size: 20px;
-   }
-   .dropdown1:hover .btn1 {
-     color: rgb(0, 0, 0);
-    
-     background-color: yellow;
-   }
- 
- 
- 
- 

@@ -1,74 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
           
-          <title>seller sign up Bank details</title>
+        <title>seller sign up Bank details</title>
         
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-<link rel="stylesheet" href="../../assets/css/normalize.css">
-<link rel="stylesheet" href="../../assets/css/back_details.css">
-</head>
-<body>
-    <div class="box">
-        <form action="#" class="form">
-            <img src="../../assets/images/Fert agri.png" alt="logo">
-            <h1>Bank Details</h1>
-    <div class="form-group">
-        <input type="text" class="form-control" id="account_holder_name" required/>
-        <label for="account_holder_name" class="form-label">Account Holder Name</label>
-    </div>
-    <div class="form-group">
-        <input type="number" class="form-control" id="account_number"required/>
-        <label for="account_number" class="form-label">Account Number</label>
-     </div>
-     <div class="form-group">
-        <input type="text" class="form-control" id="IFSC_code" required/>
-        <label for="IFSC_code" class="form-label" >IFSC Code</label>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" id="branch_name" required/>
-        <label for="branch_name" class="form-label" > Branch Name</label>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" id="city" required/>
-        <label for="city" class="form-label" >City</label>
-    </div>
-    <div class="form-group">
-        <input type="text" class="form-control" id="state1" required/>
-        <label for="state1" class="form-label" >State</label>
-    </div>
-    <div class="btn1">
-<button  type="button" onclick="bank()">Continue</button>
-</div>
-</form>
-</div>
-<script>
-    function bank(){
-        const holder=document.getElementById("account_holder_name").value
-        const account=document.getElementById("account_number").value
-        const ifsc=document.getElementById("IFSC_code").value
-        const branch=document.getElementById("branch_name").value
-        const city=document.getElementById("city").value
-        const state=document.getElementById("state1").value
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
+        <link rel="stylesheet" href="../../assets/css/back_details.css">
+    </head>
+    <body>
+        <div class="box">
+            <form action="#" class="form">
+                <img src="../../assets/images/Fert agri.png" alt="logo">
+                <h1>Bank Details</h1>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="account_holder_name" required>
+                    <label for="account_holder_name" class="form-label">Account Holder Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="account_number"required>
+                    <label for="account_number" class="form-label">Account Number</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="IFSC_code" required>
+                    <label for="IFSC_code" class="form-label">IFSC Code</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="branch_name" required>
+                    <label for="branch_name" class="form-label"> Branch Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="city" required>
+                    <label for="city" class="form-label">City</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="state1" required>
+                    <label for="state1" class="form-label">State</label>
+                </div>
+                <div class="btn1">
+                    <button type="submit" id="bankDetails">Continue</button>
+                </div>
+            </form>
+        </div>
+        <script>
+    const sellerPhoneNumber = new URLSearchParams(window.location.search).get(
+  "seller_number"
+);
+const sellerDetails = JSON.parse(localStorage.getItem("seller_list"));
 
-        console.log(holder)
-        console.log(account)
-        console.log(ifsc)
-        console.log(branch)
-        console.log(city)
-        console.log(state)
+const SellerAccountFindIndex = sellerDetails.findIndex(
+  (detail) => detail.signupDetails.sel_phone === sellerPhoneNumber
+);
 
+if (SellerAccountFindIndex >= 0) {
+  document
+        .getElementById("bankDetails")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          const holder = document.getElementById("account_holder_name").value;
+          const account = document.getElementById("account_number").value;
+          const ifsc = document.getElementById("IFSC_code").value;
+          const branch = document.getElementById("branch_name").value;
+          const city = document.getElementById("city").value;
+          const state = document.getElementById("state1").value;
 
+          if (
+            holder === "" ||
+            account === "" ||
+            ifsc === "" ||
+            branch === "" ||
+            city === "" ||
+            state === ""
+          ) {
+            alert("Please fill in all the required fields before continuing.");
+            return;
+          }
 
- window.location.href="./login.html"
+          sellerDetails[SellerAccountFindIndex].bankDetails = {
+            account_holder_name: holder,
+            account_number: account,
+            ifsc_code: ifsc,
+            branch_name: branch,
+            city_name: city,
+            state_name: state,
+          };
 
-    }
+          localStorage.setItem("seller_list", JSON.stringify(sellerDetails));
+          alert("Your bank details have been successfully accepted. ✅");
+          window.location.href = "./login.html";
+          document.querySelector("form").reset();
+        });
+}
 </script>
- </body>
- </html>
+    </body>
+</html>

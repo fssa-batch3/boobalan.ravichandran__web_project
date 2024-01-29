@@ -1,6 +1,6 @@
 .insecticide{
     padding-top: 20px;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-bottom: 100px;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding:20px 50px 20px 20px;
+    padding:20px 20px 20px 20px;
     justify-content: space-around;
 }
 .checked {
@@ -26,18 +26,30 @@
     margin: 3px;
   }
   .today{
-    width:300px;
-    min-height:550px;
+    width:320px;
+    min-height:450px;
     background-color: rgb(255, 255, 255);
-    margin-left: 30px;
+   
+    
     padding: 30px 0px 30px 0px;
     margin-bottom: 40px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 5px;
+    border: 1px solid rgb(183, 183, 183);
+
     display: flex;
     justify-content: center;
     text-align: center;
   }
+  .today:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    position:relative;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+    
+    transform: scale(1.02);
+  }
+ 
   .today a{
     text-decoration: none;
     color: black;
@@ -48,35 +60,48 @@
     border-radius: 0px;
     margin-bottom: 20px;
   }
-.price{
+.price ,.price11{
+  display: flex;
     text-align: center; 
-    justify-content: center;
-    padding: 5px 0;
+    justify-content: space-between;
+    padding: 10px 0px;
+     
 }
-.price h2{
-  display: inline-block;
-  padding: 5px;
+.price h4{
+  font-size: 21px;
+  color:rgb(10, 95, 10)
+}
+.pricecontain{
+  border-bottom: 2px solid green;
+  /* border-top: 2px solid green; */
+}
+
+.price11 del{
+  font-size: 19px;
+  color:rgb(96, 8, 56);
+  font-weight: bold;
 }
 .today h3{
     font-size: 21px;
 }
+.div_save{
+  padding: 15px 0px 0px 0px;
+  
+}
 .today p{
    
-    font-size: 20px;
+    font-size: 19px;
    padding: 5px 20px 20px 20px;
    width:280px;
     font-weight: bold;   
     display: flex;
     text-align: center; 
     justify-content: center;
+    min-height: 80px;
+    color:rgb(115, 1, 45);
+    
   }
-  .offers1 img:hover {
-    transform: scale(1.05);
-    transition-delay: .1s;
-    border-radius:10px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-
+ 
 
 /* ---------==============Media quary start=================------------- 
 -------------

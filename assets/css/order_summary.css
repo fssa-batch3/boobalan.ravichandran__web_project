@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lora', serif;
+
     }
   main{
     display: flex;
@@ -10,6 +11,8 @@
     align-items: center;
     margin: auto;
     background-color: black;
+    caret-color: transparent;
+    height:100vh;
   }
  
 .order_summary{
@@ -25,7 +28,7 @@
 }
 #delivery-date {
     font-weight: bold;
-    color:rgb(2, 54, 22);
+    color:#07760b;
     margin-left: 10px;
 }
 form img{
@@ -42,13 +45,17 @@ form img{
 }
 .pro_nam1{
   display: flex;
+  width: 35vw;
+  
 }
+
 .order_title{
     display: flex;
     justify-content: space-around;
 }
 #pro_name{
   margin: 20px 0px 15px 15px;
+  color:green;
 }
 .order_title img{
     width:140px;
@@ -60,6 +67,7 @@ form img{
 .order_title h2{
     margin-top: 18px;
     font-size: 32px;
+   
     color:rgb(7, 79, 7)
 }
 .order_input{
@@ -78,7 +86,7 @@ form img{
     color:rgb(0, 0, 0);
     border: none;
     outline: none;
-    margin-left: 20px;
+  
     padding: 5px ;
     font-size: 20px;
     font-weight: bold;
@@ -184,16 +192,14 @@ button {
 
   .product_details{
     display: flex;
-    margin-top: 50px;
+
   }
 
   /* order date----------------- */
   #order-date{
     color:rgb(0, 42, 255)
   }
-  #delivery-date{
-    color:#07760b
-  }
+  
   /* ------------loading symbol  -------- */
  
   /* .loader {

@@ -1,59 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
           
-          <title>seller sign up</title>
+        <title>seller sign up</title>
         
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-<link rel="stylesheet" href="../../assets/css/normalize.css">
-<link rel="stylesheet" href="../../assets/css/seller_signup.css">
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
+        <link rel="stylesheet" href="../../assets/css/seller_signup.css">
 
-</head>
+    </head>
     <body>
         <div class="box">
             <form action="#" class="form">
-                    <img src="../../assets/images/Fert agri.png" alt="logo">
-            <h1>Create Your Seller Account</h1>
-            <div class="form-group">
+                <img src="../../assets/images/Fert agri.png" alt="logo">
+                <h1>Create Your Seller Account</h1>
+                <div class="form-group">
                  
-                    <input type="number" class="form-control" id="mobile" required="true"/> 
-                    <label for="mobile"  class="form-label"> Mobile Number </label>
-            </div>
-            <div class="form-group">
+                    <input type="number" class="form-control" id="mobile" required="true" pattern="[0-9].{9}" title="Enter 10 number only" maxlength="10"> 
+                    <label for="mobile" class="form-label"> Mobile Number </label>
+                </div>
+                <div class="form-group">
                
-                    <input type="email" class="form-control" id="email" required/>
+                    <input type="email" class="form-control" id="email" required>
                     <label for="email" class="form-label">Email address</label>
-            </div>
-            <div class="form-group" >
+                </div>
+                <div class="form-group">
                 
-                <input type="text"class="form-control" id="full_name" required/>
-                <label for="full_name"  class="form-label">Enter Your Full Name</label>
-            </div>
-            <div class="form-group">
+                    <input type="text"class="form-control" id="full_name" required pattern="[a-zA-Z]+">
+                    <label for="full_name" class="form-label">Enter Your Full Name</label>
+                </div>
+                <div class="form-group">
                
-                <input type="password" class="form-control" id="txtPassword" required="true" />
-                <label for="txtPassword"  class="form-label">Set Password</label>
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" id="TXTpassword" required="true" />
-                <label for="TXTpassword"  class="form-label">Confirm Password</label>
-            </div>
-            <div class="form-group">
-                <label class="showLabel">
-                  <input type="checkbox" id="show">
-                  Show Password
-                </label>
-                     </div>
-            <div class="btn1">
-                <a href="./pickup_address.html"><button type="button">Continue</button></a>
-            </div>
+                    <input type="password" class="form-control" id="txtPassword" required="true" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="6" 
+                        title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters">
+                    <label for="txtPassword" class="form-label">Set Password</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="TXTpassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="6" 
+                        title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters" required="true">
+                    <label for="TXTpassword" class="form-label">Confirm Password</label>
+                </div>
+                <div class="form-group">
+                    <label class="showLabel">
+                        <input type="checkbox" id="show">
+                        Show Password
+                    </label>
+                </div>
+                <div class="btn1">
+
+                    <button type="submit" id="seller_account">Continue</button>
+                </div>
             </form>
         </div>
+        <script>
+         document
+  .getElementById("seller_account")
+  .addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const sel_phone = document.getElementById("mobile").value;
+    const sel_email = document.getElementById("email").value;
+    const sell_full_name = document.getElementById("full_name").value;
+    const sel_password = document.getElementById("txtPassword").value;
+    const sel_confirmpassword = document.getElementById("TXTpassword").value;
+
+    if (
+      sel_phone === "" ||
+      sel_email === "" ||
+      sell_full_name === "" ||
+      sel_password === "" ||
+      sel_confirmpassword === ""
+    ) {
+      alert("Please fill in all the required fields before continuing.");
+      return;
+    }
+
+    const seller_list = JSON.parse(localStorage.getItem("seller_list")) || [];
+    const exist =
+      seller_list.length &&
+      seller_list.some((data) => (
+          data.signupDetails.sel_phone.toLowerCase() === sel_phone.toLowerCase()
+        ));
+
+    if (!exist) {
+      if (sel_password === sel_confirmpassword) {
+        seller_list.push({
+                   signupDetails: {
+                     sel_phone,
+                     sel_email,
+                     sell_full_name,
+                     sel_password,
+                     sel_confirmpassword,
+                   },
+        });
+
+        localStorage.setItem("seller_list", JSON.stringify(seller_list));
+        document.querySelector("form").reset();
+        document.getElementById("mobile").focus();
+        alert("Account created Successfully ✅");
+        window.location.href = `./pickup_address.html?seller_phone_number=${sel_phone}`;
+      } else {
+        alert("Invalid Confirm password ..❌");
+      }
+    } else {
+      alert(
+        "Sorry, the user already exists ..❌!!\nPlease try with a different phone number or email."
+      );
+      document.querySelector("form").reset();
+    }
+  });
+        </script>
     </body>
 </html>

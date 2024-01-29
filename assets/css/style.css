@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lora', serif;
+  
+  }
+  body{
+    caret-color: transparent;
   }
 :root{
   --nav-backgroung:#176047;
@@ -12,8 +16,9 @@
   .header{
       background-color:var(--nav-backgroung);
       padding: 15px 100px;
+
   }
-  .hero_list ,.hero_list1{
+  .hero_list ,.hero_list1,.hero_list11{
       list-style: none;
   }
   .hero_list a{
@@ -32,14 +37,14 @@
     border:1px solid white;
   }
   .header__logo{
-      width:14vw;
+      width:13.5vw;
       height: 8vh;
       padding: 8px 5px 5px 40px;
   }
 
   .head{
       display: flex;
-      justify-content: space-around;
+   
       align-items: center;
       width:1450px;
   }
@@ -47,12 +52,13 @@
   /* search bar start  */
 
     .search_bar{
-   width:30vw;
+   width:27vw;
      height: 40px;
      position: relative;
-     margin: auto;
+     margin: 4vh 6vw 0vh 6vw;
+     caret-color:black;
     }
-    .search_bar .input0{
+    .search-input .search_bar .input0{
       width: 100%;
       height: 100%;
       top:0;
@@ -82,13 +88,21 @@
     }
     .search_bar .input0:focus{
       border: 1.5px solid rgb(4, 93, 50);
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    
+      /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
     }
     .search_bar .sear_btn:hover{
 background-color: rgb(4, 4, 77);
     }
 /* search bar end */
 /* head class start */
+
+
+
+/* wrapperer -=------------------ */
+/* .wrapperer{
+  
+} */
 .hero{
 display: flex;
 top:0;
@@ -102,14 +116,98 @@ justify-content: space-around;
 
 .hero .hero_list1 a{
   text-decoration: none;
-  color:rgb(4, 4, 67);
+  color:rgb(255, 255, 255);
   font-weight: bold;
+  background-color: orangered;
+  padding: 10px 60px;
+  border-radius: 5px;
+  
 }
+.hero .hero_list11 a{
+  text-decoration: none;
+  color:rgb(11, 2, 51);
+  font-weight: bold;
+  display: flex;
+  margin-left: 40px;
+ 
+}
+
+.hero .hero_list11 img{
+  width:35px;
+  height: 35px;
+ 
+}
+.hero .all_nave_links .hero_list11 a p{
+margin-top: 10px;
+margin-left:3px;
+}
+
+
 .fa-heart{
   padding: 5px;
 }
 .hero .hero_list1 a:hover{
+  color:rgb(255, 255, 255);
+  background-color: rgb(4, 4, 77);
+  transition: .5s;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.hero .hero_list11 a:hover{
   color:rgb(227, 67, 9);
+}
+.seller{
+  color:transparent
+}
+
+#span_count{
+  background-color:rgb(255, 136, 0);
+  padding: 4px 16px 20px 10px;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: relative;
+  color:white;
+ 
+  font-size: 13px;
+  width:16px;
+  height: 25px;
+margin-left: -18px;
+margin-top: -10px;
+
+}
+#wish_span_count{
+  background-color:rgb(4, 18, 102);
+  padding: 4px 16px 20px 10px;
+  border-radius: 50px;
+  position: relative;
+  border: 2px solid white;
+  color:white;
+  font-size: 13px;
+  width:16px;
+  height: 25px;
+margin-left: -18px;
+margin-top: -10px;
+
+}
+/* #wish_name,#cart_name{
+  margin-left: -5px;
+} */
+#order_del{
+  width:38px;
+  height: 42px;
+  margin-top: -2px;
+}
+.all_nave_links{
+  display: flex;
+  margin-right: 2vw;
+}
+.navbar_links{
+  margin-left: 43.5vw;
+  display: flex;
+  margin-top: -35px;
+  margin-bottom: 20px;
+}
+  #profile_icon{
+  margin-left: 200px;
 }
 /* head class end */
 
@@ -248,6 +346,7 @@ justify-content: space-around;
       align-items: center;
      
     }
+   
 
     /* Offers, herbicides, fungicides, growth promoters 
     --------
@@ -268,12 +367,14 @@ justify-content: space-around;
      } 
 .offers img{
     border-radius: 50%;
-   box-shadow: 0px 5px 12px 0px gray;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .offers img:hover{
-    transform: scale(1.05);
-    transition-delay: .2s;
-    border-radius: 50%;
+  position:relative;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transform: scale(1.04);
 }
 .offers a{
     text-decoration: none;
@@ -294,6 +395,7 @@ left: 0;
   width:90%;
   height:90%;
 }
+
 .offers h2:hover{
     color: green;
 }
@@ -337,29 +439,31 @@ left: 0;
 
 /* offers  */
 
-.checked {
-    color: orange;
-    margin-bottom: 10px;
-  }
+/* .checked {
+    color: rgb(0, 0, 0);
+    margin-bottom: 1000px;
+  } */
    
    
   .offers1{
     display:grid;
     gap:2.1vw;
     grid-auto-flow:column;
-    grid-auto-columns:18%;
+    grid-auto-columns:22%;
     overflow-x: auto;
-    padding: 20px 20px;
+    padding:20px 50px 20px 20px;
     overscroll-behavior-inline: contain;
   }
   .offers1::-webkit-scrollbar{
-    width: 0;
+    width: 100px;
   }
   .offers1 img{
     width:220px;
     height:240px;
     border-radius: 10px;
   }
+ 
+  /* }
   .today{
     background-color: rgb(255, 255, 255);
     padding: 10px 10px 20px 18px ;
@@ -385,15 +489,83 @@ left: 0;
     margin-left: -2px;
     margin-top: 3px;
 }
-.price{
+.pprice{
     display:flex;
     margin-left: 60px;
 }
-.price del{
+.pprice del{
     margin-left: 15px;
     margin-top: 6px;
     margin-bottom: 12px;
+} */
+
+#interface .today{
+  width:320px;
+  min-height:450px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 20px 20px 18px ;
+    border-radius: 5px;
+  border: 1px solid rgb(183, 183, 183);
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
+#interface .today:hover{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transform: 3s;
+}
+.today a{
+  text-decoration: none;
+  color: black;
+}
+.today img{
+  width:250px;
+  height:280px;
+  border-radius: 0px;
+  margin-bottom: 20px;
+}
+.price101 ,.price11{
+display: flex;
+  text-align: center; 
+  justify-content: space-between;
+  padding: 10px 0px;
+   
+}
+.price101 h4{
+font-size: 21px;
+color:rgb(10, 95, 10)
+}
+.pricecontain{
+border-bottom: 2px solid green;
+/* border-top: 2px solid green; */
+}
+
+.price11 del{
+font-size: 19px;
+color:rgb(96, 8, 56);
+font-weight: bold;
+}
+.today h3{
+  font-size: 21px;
+}
+.div_save{
+padding: 15px 0px 0px 0px;
+
+}
+.today p{
+ 
+  font-size: 20px;
+ padding: 5px 20px 20px 20px;
+ width:280px;
+  font-weight: bold;   
+  display: flex;
+  text-align: center; 
+  justify-content: center;
+}
+
+
+
 .fab{
     border:2px solid rgb(249, 249, 249);
     background-color: white ;
@@ -401,8 +573,8 @@ left: 0;
     margin: 90px 0px 100px 165px;
     padding-bottom: 50px;
     padding-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
 
 
 /* Fert agri boomi priorities */
@@ -420,7 +592,7 @@ left: 0;
     height:200px;
     box-shadow: 0px 4px 8px 0px rgb(117, 117, 117);
 }
-.details img:hover ,.offers1 img:hover{
+.details img:hover {
     transform: scale(1.02);
     transition-delay: .1s;
     border-radius: 10px;
@@ -486,6 +658,79 @@ left: 0;
 .mobile_footer{
   display: none;
 }
+
+
+/* search bar --------- */
+.search-input .autocom-box{
+ padding: 0px;
+ 
+ max-height: 380px;
+ width:390px;
+ margin-left: 100px;
+ overflow-y: auto;
+ background-color: white;
+ box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+ border-radius: 0px 0px 5px 5px;
+ opacity: 0;
+ pointer-events: none;
+ /* margin-top: -100px; */
+ z-index: 1;
+ position: absolute;
+
+ 
+}
+.search-input .autocom-box::-webkit-scrollbar {
+  width: 12px;
+}
+
+.search-input .autocom-box{
+  scrollbar-color: rgb(15, 137, 88) rgb(245, 245, 255);
+}
+.search-input .autocom-box::-webkit-scrollbar-track{
+  background-color: rgb(243, 243, 255);
+}
+.search-input .autocom-box::-webkit-scrollbar-thumb{
+  background-color: rgb(18, 142, 92);
+  border-radius: 6px;
+  border: 3px solid rgb(246, 246, 255);
+}
+.search-input.actives .autocom-box{
+  padding: 10px 0px;
+  opacity: 1;
+  pointer-events: auto;
+ 
+}
+
+.autocom-box li{
+list-style: none;
+padding: 12px 15px;
+width: 100%;
+cursor: default;
+border-radius: 3px;
+display: none;
+border-bottom:  1px solid rgb(234, 234, 234);
+}
+
+.autocom-box li a{
+  text-decoration: none;
+  color:black
+}
+.search-input.actives .autocom-box li{
+  display: block;
+}
+
+.autocom-box li a:hover{
+  color:rgb(181, 7, 48);
+}
+ .autocom-box li:hover {
+  background-color: rgb(241, 241, 241);
+  
+  /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+}
+#userLogin{
+  margin-bottom: 20px;
+ 
+}
 /*
 
 
@@ -515,7 +760,8 @@ left: 0;
     display:none ;
   box-sizing: border-box;
   }
-  .navbar_links ul{ 
+  .navbar_links ul li { 
+    display: block;
    flex-direction:column;
    width:100%;
     }
@@ -526,14 +772,21 @@ left: 0;
       margin-top: -6px;
       padding-right:5px;
     }
-    .navbar_links.active{
+    .hero{
+      display: flex;
+    }
+    .navbar_links.activee{
       display: flex;
     }
     .hero .hero_list1{
       margin:20px 50px;
       border-radius: 5px;
     }
-  
+    .navbar_links{
+      margin-left: 0vw;
+      display:none;
+      padding-bottom: 50px;
+    }
     .hero .hero_list1 a{
      color:white;
      width:90%;
@@ -567,6 +820,9 @@ left: 0;
   width: 100%;
   background-color: rgb(0, 0, 0);
 }
+
+
+
 
 /* -----==============menu bar end-=============== */
 .hero_list a{
@@ -781,9 +1037,13 @@ background-color: rgb(4, 4, 77);
 
   /*  ---------------Offers----------- */
 
+  .slideshow-container .mySlides img{
+    width:100%;
+    height: 25vh;
+  }
   .product{
    width:98.5vw;
-   height: 15vh;
+   height: 11vh;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
@@ -841,7 +1101,7 @@ width: 96%;
 
 .offers1{
   display:grid;
-    gap:2.1vw;
+    gap:3.1vw;
     grid-auto-flow:column;
     grid-auto-columns:55%;
     overflow-x: auto;
@@ -855,29 +1115,48 @@ width: 96%;
   margin-left: auto;
   margin-right: auto;
 }
-.today{
-  padding: 10px 10px 20px 10px ;
-  margin-bottom: 25px;
-  margin-left:2vw;
-  border-radius: 3px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-.today p {
-  font-size: 10px;
-  width:130px;
+
+#interface .today{
+  width:180px;
+  min-height:220px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+margin-left:0px;
+    margin-right: 20px;
+   
 }
 
-.price{
-  margin-left: 27px;
-  font-size: 10px;
+
+.today img{
+  width:100px;
+  height:120px;
+  border-radius: 0px;
+  margin-bottom: 20px;
 }
-.price del{
-  margin-left: 5px;
- font-size: 10px;
+
+.price h4{
+font-size: 14px;
+
+}
+
+
+.price11 del{
+font-size: 13px;
+
 }
 .today h3{
   font-size: 13px;
 }
+
+.today p{
+ 
+  font-size: 13px;
+ padding: 5px 15px 20px 15px;
+ width:150px;
+
+}
+
+
 
 /* -----------------/ fab Priorities/------------- */
 
@@ -963,7 +1242,12 @@ width: 96%;
   margin-left: 1vw;
  }
 }
-
+/* .spin_roller{
+  background-color: black;
+  padding: 5px 10px 3px 10px;
+  width:200px;
+  align-items: center;
+} */
 
 @media screen and (min-width: 400px) and (max-width: 640px){
 
@@ -973,7 +1257,7 @@ width: 96%;
   }
   .navbar_links{
     flex-direction: column;
-    background-color:#176047;
+    background-color:#d2ffef;
     width:100vw;
     position: relative;
     display:none ;
@@ -983,6 +1267,11 @@ width: 96%;
    flex-direction:column;
    width:100%;
     }
+    .navbar_links{
+      margin-left: 0vw;
+      display:none;
+      padding-bottom: 50px;
+    }
     .fa-heart{
       margin-top: -6px;
     }
@@ -990,7 +1279,7 @@ width: 96%;
       margin-top: -6px;
       padding-right:5px;
     }
-    .navbar_links.active{
+    .navbar_links.activee{
       display: flex;
     }
     .hero .hero_list1{
@@ -1016,6 +1305,18 @@ width: 96%;
     background-color:var(--nav-backgroung);
     padding:5px 20px;
 }
+/* --------------header wislist, profle, cart container ------------- */
+.all_nave_links{
+  display: block;
+}
+.all_nave_links .hero_list11{
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+#profile_icon .img1{
+  margin-bottom: 500px;
+}
+
  .btn_bar{
   width:30px;
   height:21px;
@@ -1057,6 +1358,7 @@ justify-content: space-between;
  }
  .search_menu{
  display: inline;
+
  }
  
  .search_bar1{
@@ -1244,6 +1546,12 @@ background-color: rgb(4, 4, 77);
     display: none;
   }
 
+
+  /* -----------------add images----------------- */
+  .slideshow-container .mySlides img{
+    width:100%;
+    height: 25vh;
+  }
   /*  ---------------Offers----------- */
 
   .product{
@@ -1320,34 +1628,46 @@ width: 96%;
   margin-left: auto;
   margin-right: auto;
 }
-.today{
-  padding: 10px 10px 20px 10px ;
-  margin-bottom: 25px;
-  margin-left:2vw;
-  border-radius: 3px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  width: 37vw;
- 
-}
-.today p {
-  font-size: 12px;
-  width:28vw;
+#interface .today{
+  width:220px;
+  min-height:250px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+margin-left: 10px;
+    margin-right: 10px;
+   
 }
 
-.price{
-  margin-left:0vw;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  font-size: 12px;
+
+.today img{
+  width:130px;
+  height:150px;
+  border-radius: 0px;
+  margin-bottom: 20px;
 }
-.price del{
-  margin-left: 5px;
- font-size: 12px;
+
+.price h4{
+font-size: 16px;
+
+}
+
+
+.price11 del{
+font-size: 15px;
+
 }
 .today h3{
-  font-size: 14px;
+  font-size: 15px;
 }
+
+.today p{
+ 
+  font-size: 15px;
+ padding: 5px 20px 20px 20px;
+ width:180px;
+
+}
+
 
 /* -----------------/ fab Priorities/------------- */
 

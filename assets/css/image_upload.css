@@ -1,12 +1,12 @@
 main{
     background-color: rgb(255, 255, 255);
     background-size: cover;
+  
+    justify-content: center;
+    align-items: center;
+    height:100vh;
 }
-.pro_name{
-    background: white;
-    padding: 50px 0px 30px 250px;
-    margin-bottom: 20px;
-}
+
 .pro_name label{
     font-size: 19px;
     font-weight: bold;
@@ -15,19 +15,23 @@ main{
 #product_name{
     width:300px;
     padding: 8px 10px;
+    font-size: 18px;
 }
 .up_img{
+    display: flex;
     border:3px dashed black;
     width:405px;
     height: 380px;
     margin-left: 250px;
-    box-shadow: 0px 5px 12px 0px gray;
-    margin-top: 50px;
+   
+    margin-top: 100px;
 }
 .up_img img{
     width:405px;
     height:380px;
+    display:inline-block;
 }
+
 .uploaded{
     margin-left: 370px;
     margin-top: 30px;
@@ -35,6 +39,9 @@ main{
 }
 #uploaded{
  opacity: 0;
+padding: 200px  0px 100px 100px ;
+margin-left: -400px;
+    
 }
 .uploaded button{
     width:180px;
@@ -55,33 +62,45 @@ main{
 .product1{
     display: flex;
 }
-.back_view img ,.front_view img{
-    width: 150px ;
-    height: 150px;
-}
-.back_view ,.front_view {
-    height:180px;
-    border: 2px dashed black;
-    margin: 150px 60px 100px 70px;
-}
-.back_view p ,.front_view p{
-margin-top: -10px;
-margin-left: 35px;
-font-weight: bold;
-}
 .save_edit{
    margin-left: 220px;
 }
 .save_edit button{
     margin-left: 60px;
-    padding: 10px 50px;
+    padding: 10px 60px;
     margin-bottom: 100px;
     background-color: rgb(8, 8, 54);
     color:white;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 100px;
+    border: none;
 }
 .save_edit button:hover{
-    background: linear-gradient(black, rgb(255, 0, 76));
-    border:2px solid red
+    background-color: rgb(5, 5, 135);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.pro_name{
+    padding: 50px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-left: 50px;
+    margin-top:100px;
+}
+#option{
+    width:300px;
+    padding: 8px 10px;
+    font-size: 18px;
+    margin-left: 5px;
+}
+#skuid{
+    width:300px;
+    padding: 8px 10px;
+    font-size: 18px;
+    margin-left: 12px;
+}
+.seller_select{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

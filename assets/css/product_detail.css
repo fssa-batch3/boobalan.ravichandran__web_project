@@ -1,4 +1,7 @@
-
+main{
+    background-color: rgb(249, 249, 255);
+    padding: 50px 0px 100px 110px;
+}
 label {
     font-size: 19px;
 }
@@ -161,6 +164,7 @@ label {
     border: 2px solid black;
     padding-top:5px ;
     display: inline;
+    resize: none;
 }
 .about00 {
     display: flex;
@@ -169,20 +173,20 @@ label {
     margin-top: 30px;
 }
 .details{
-    border: 3px solid rgb(214, 246, 255);
+    border: 1px solid rgb(0, 0, 0);
     width:1180px;
-  margin: 50px 0px 100px 110px;
+ 
     padding-left: 50px;
-    background: linear-gradient(-90deg,rgb(228, 245, 245),rgb(232, 237, 215)) ;
-    border-radius: 10px;
+   background-color: rgb(244, 242, 242);
+    border-radius: 5px;
     padding-bottom: 50px;
-    box-shadow: 0px 10px 22px 0px black;
-    padding-right: 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        padding-right: 30px;
 }
 .btn111 button{
     height: 50px;
     width: 150px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
     background:linear-gradient(rgb(4, 4, 74),rgb(6, 27, 57));
@@ -190,15 +194,17 @@ label {
     margin-top: 50px;
     letter-spacing: 1px;
     color: white;
+   
 }
 .btn111 button:hover{
-    background:linear-gradient(black,rgb(255, 0, 93));
+    background:linear-gradient(rgb(5, 5, 167)rgb(6, 57, 128));
     color: white;
-    border:3px solid rgb(0, 0, 0);
+    border:1px solid rgb(0, 0, 0);
     font-size: 22px;
     font-weight: normal;
     border-radius: 10px;
     transform: scale(1,1);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
 }
 .details h2{

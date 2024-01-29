@@ -56,7 +56,7 @@
     top:11px;
     left: 15px;
     font-size: 16px;
-    color:hwb(0 57% 42%);
+    color:hwb(0 19% 81%);
     background-color:white;
      padding: 0 6px;
      transition: .2s;
@@ -68,20 +68,47 @@
     font-weight: 500;
 }
 .form-control:focus{
-    border: 3px solid #f41111;
+    
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    transition: 2s;
+ 
+}
+.form-control:valid{
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background: none;
+   
 }
 .form-control:not(:focus):valid+label{
     top:-9px;
     z-index: 5;
 }
-.form-control:valid{
-    border:2.5px solid rgb(7, 182, 7);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    background: none;
-    transition: .5s;
-}
+
+.form-group.invalid .form-control {
+    border: 2px solid red;
+  }
+  
+  .form-group.valid .form-control {
+    border: 2px solid  green;
+  }
+  
+  .form-group1.invalid1 .form-control, .form-group2.invalid2 .form-control , .form-group3.invalid3 .form-control{
+    border: 2px solid red;
+  }
+  
+  .form-group1.valid1 .form-control, .form-group2.valid2 .form-control ,  .form-group3.valid3 .form-control{
+    border: 2px solid  green;
+  }
+  .form-group3 input:valid {
+    border: 2px solid green;
+  }
+  
+  .form-group3 input:focus:invalid {
+    border: 2px solid red;
+    transition: 3s;
+  }
+  
+  
+  
 
 .btn1 button{
     background-color: green;
@@ -104,6 +131,64 @@ a{
 .showLabel{
     font-size: 15px;
 }
+
+.password_valid{
+    margin-bottom: 5px;
+}
+.password_valid input[type="checkbox"] {
+    /* Change the color of the checkbox when it is checked */
+    --checkbox-color-checked: green;
+  
+    /* Change the color of the checkbox when it is not checked */
+    --checkbox-color-unchecked: gray;
+  
+    /* Set the size of the checkbox */
+    width: 15px;
+    height: 15px;
+  
+    /* Remove the default browser styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    /* Create the custom checkbox */
+    border: 1px solid var(--checkbox-color-unchecked);
+    border-radius: 2px;
+    background-color: white;
+    transition: border-color 0.2s ease-in-out;
+   
+    /* Position the checkmark inside the checkbox */
+    position: relative;
+  }
+  
+  /* Style the checkmark inside the checkbox */
+  .password_valid input[type="checkbox"]::after {
+    content: "\2705"; /* Unicode character code for checkmark emoji */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  /* Show the checkmark when the checkbox is checked */
+  .password_valid input[type="checkbox"]:checked::after {
+    opacity: 1;
+  }
+  
+  /* Change the border color when the checkbox is checked */
+  .password_valid input[type="checkbox"]:checked {
+    border-color: var(--checkbox-color-checked);
+  }
+  
+  /* Show the checkmark when the checkbox is checked
+  .password_valid input[type="checkbox"]:checked::after {
+    opacity: 1;
+  }
+   */
+
 
 /* ----------/@media  start/-------------==============*/
 

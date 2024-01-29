@@ -1,27 +1,35 @@
 .fert10{
     background-color: white;
-    box-shadow: 0px 6px 14px 0px rgb(80, 79, 79);
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
     display: flex;
-    padding: 60px 60px 60px 80px;
+    padding: 10px;
+  margin-left: 50PX;
+    
 }
 main{
-    padding: 80px 170px 100px 170px;
+
+    display: flex;
+    
 }
 .fert12 img{
-    width:320px;
-    height: 320px;
-    margin-top: 80px;
+    width:250px;
+    height: 250px;
+    margin-top: 130px;
+    display: block;
 }
 .fert13,.fert15 ,.fert16 ,.fert5 ,.fert116{
     display: flex;
     margin-top: 20px;
+    
 }
+
+
 .fert01 h2{
-    font-size: 30px;
-    color:rgb(7, 83, 7)
+    font-size: 25px;
+    color:rgb(1, 88, 1)
 }
 .fert13 h3{
-    font-size: 25px;
+    font-size: 22px;
 }
 .fert13 p{
     font-size: 20px;
@@ -31,34 +39,97 @@ main{
 .fert14 p{
     font-size: 22px;
     margin-top: 20px;
+    font-weight: bold;
 }
 .fert5 h3 ,.fert16 h3 ,.address1 h3 ,.fert116 h3{
-    font-size: 24px;
+    font-size: 22px;
 }
 .fert5 p {
-    font-size: 23px;
+    font-size: 21px;
     margin-top: 2px;
     margin-left: 6px;
 }
-.fert16 p ,.fert116 p{
+.fert116 p{
     font-size: 23px;
     margin-top: 2px;
     margin-left: 5px;
-    color: green;
+    color:  rgb(51, 103, 3);
+    font-weight: bold;
+}
+.fert16 p{
+    font-size: 23px;
+    margin-top: 2px;
+    margin-left: 5px;
+    color: rgb(51, 103, 3);
+    font-weight: bold;
+    width:200px;
+    flex-wrap: wrap;
 }
 .fert01{
-   margin-left: 50px;
-   padding: 50px 70px;
+   margin-left: 10px;
+   padding: 50px 70px 10px 70px;
 }
-.address1 h3{
-  width:13rem;
-  margin-top: 1.2rem;
+.address1{
+    width:200px;
+    margin-top: 10px;
+    min-height:100px;
 }
-.address1 p{
+.address1 h1{
     font-size: 19px;
     margin-top: 5px;
-    width:20rem;
+    width:1rem;
 }
+.address1 p{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.order_show img{
+    width:550px;
+    height:500px;
+    margin-top: 80px;
+}
+.cancel_order{
+    margin-top: 20px;
+}
+.cancel_order button{
+    padding: 10px 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+  background-color: rgb(2, 74, 2);
+  border: none;
+  color:white;
+  font-size: 16px;
+  border-radius: 5px;
+
+}
+.cancel_order button:hover{
+    background-color: rgb(7, 111, 7);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.feedback{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    color:rgb(0, 70, 183)
+}
+.feedback img{
+    width:50px;
+    height: 50px;
+    margin-top: -10px;
+  
+}
+.feedback a{
+    text-decoration: none;
+}
+#feedbackH3{
+    font-size: 18px;
+    margin-top: -35px;
+    margin-left: 50px;
+  
+}
+/* ----------feeback and reviews------ */
+
 
 /* -----------------/@media mobile screen/----------------------- */
 @media screen and (max-width:400px){
@@ -76,7 +147,7 @@ main{
         height: 200px;
         display: block;
         margin-left: auto;
-        margin-right: auto;;
+        margin-right: auto;
         margin-top: 20px;
     }
     .fert01{

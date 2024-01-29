@@ -54,7 +54,7 @@
     top:12px;
     left: 13px;
     font-size: 16px;
-    color:hwb(0 59% 40%);
+    color:hwb(0 25% 75%);
     background-color: rgb(255, 255, 255);
      padding: 0 6px;
      transition: .2s;
@@ -66,15 +66,33 @@
     font-weight: 500;
 }
 .form-control:focus{
-    border: 1.5px solid #1866c9;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  
 }
 .form-control:not(:focus):valid+label{
     top:-9px;
     z-index: 5;
 }
-.form-control:valid{
-    border:1.5px solid green;
+
+.form-group.invalid .form-control {
+    border: 2px solid red;
+  }
+  
+  .form-group.valid .form-control {
+    border: 2px solid  green;
+  }
+/* password ------------- */
+.form-group3 input:valid {
+  border: 2px solid green;
 }
+
+.form-group3 input:focus:invalid {
+  border: 2px solid red;
+  transition: 3s;
+}
+
+  
 .btn{
     display: flex;
     top: 0;

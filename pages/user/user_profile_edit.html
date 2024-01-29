@@ -1,129 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" /><link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-   
-    <link rel="stylesheet" href="../../assets/css/footer.css">
-    <link rel="stylesheet" href="../../assets/css/header.css">
-    <link rel="stylesheet" href="../../assets/css/profile_edit.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <link rel="stylesheet" href="../../assets/css/footer.css">
+        <link rel="stylesheet" href="../../assets/css/header.css">
+        <link rel="stylesheet" href="../../assets/css/profile_edit.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
-    <title>User Profile Page</title>
-</head>
-<body>
-   
-    <main>
-        <form  >
-
-            <div class="details">
-                <h2>Edit Personal Details</h2>
-                <div>
-                    <label for="full_name">Full Name</label>
-                    <input type="text"  id="full_name" required/>
-          
-                    <label for="gender">Gender</label>
-                    <input type="text"  id="gender" />
-                   
-                </div>
-<div class=" date_of">
-    <label for="dobb"> Date of Birth  </label>
-    <input type="date" placeholder="date of birth" id="dobb" >
-</div>
-
-
-              
-               <div>
-                <label for="street"> Street Name </label>
-                <input type="text"  id="street"/> 
-                <label for="city"> City Name</label>
-                <input type="text"  id="city"/> 
-               </div>
-               <div>
-                <label for="district"> District Name</label>
-                <input type="text"  id="district"/> 
-                <label for="state"> State Name </label>
-                <input type="text"  id="state"/> 
-               </div>
-             <div class="button">
-                <button type="submit " id="save_data">Save</button>
-                <a href="./user_profile.html"><button type="button">Cancel</button></a>
-             </div>
-            </div>
-            </div>
-        </form>
-    </main>
-    <footer>
-        <div class="footer1">
-            <div class="img101">
-                <img src="../../assets/images/Fert agri.png" alt="logo">
-            </div>
-            
-  </div>
-  </footer><a href="./user_profile.html">
-  <script>
- 
- //get value from local storage
- let user_data = JSON.parse(localStorage.getItem("user_data"));
- let user_list= JSON.parse(localStorage.getItem("user_list"));
-
-        function profile_data(e){
-            return e.mobile == user_data;
-        }
-        const person_data = user_list.find(profile_data);
-
-        // document.getElementById("id name").value = person_data["variable name"];
-       
-        document.getElementById("full_name").value = person_data["full_name"];
-        document.getElementById("gender").value = person_data["gender"];
-        document.getElementById("dobb").value = person_data["date_birth"];
-        document.getElementById("street").value = person_data["street"];
-        document.getElementById("city").value= person_data["city"];
-        document.getElementById("district").value= person_data["district"];
-        document.getElementById("state").value = person_data["state"];
+        <title>User Profile Page</title>
+    </head>
+    <body>
+   <!-- 
+        <main>
         
-document.getElementById("save_data").addEventListener("click",
-    function update(e){
-        e.preventDefault();
-        let up_name = document.getElementById("full_name").value
-        let gender =  document.getElementById("gender").value
-        let date_of_birth =  document.getElementById("dobb").value
-        let street =  document.getElementById("street").value
-        let city =  document.getElementById("city").value
-        let district =  document.getElementById("district").value
-        let state =  document.getElementById("state").value
 
-         person_data["full_name"] = up_name;
-         person_data["gender"] = gender;
-         person_data["street"] = street;
-         person_data["date_birth"] = date_of_birth;
-         person_data["city"] = city;
-         person_data["district"] = district;
-         person_data["state"] = state;
+            <form >
+                <div class="form1">
 
-        localStorage.setItem("user_list", JSON.stringify(user_list))
-         alert("Your profile ubdated sucessfully..✅");
+                    <div class="details1">
 
-        location.href="../user/user_profile.html"
+                        <div class="wrapper">
+                            <input type="file" class="my_file">
+                        </div>
+                        <h2>
+                            Name:<p id="user_name">
+                                <input type="text" id="full_name1" readonly>
+                            </p></h2>
+                        <label for="dobb">
+                            Date of Birth : <input type="date" id="dobb" disabled>
+                        </label>
+            
+                    </div>
+                    <div class="details2">
+                        <h2>Personal Information</h2>
+                        <div>
+                            <label for="full_name"> Name</label>
+                            <input type="text" id="full_name" disabled>
+                        </div>
+                        <div>
+                            <label for="gender">Gender</label>
+                            <input type="text" id="gender" disabled>
+                        </div>
 
+                        <div>
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" disabled>
+                        </div>
+                        <div>
+                            <label for="mobile"> Mobile Number </label>
+                            <input type="number" id="mobile" disabled> 
+                        </div>
+              
+                        <div>
+                            <label for="street"> Street Name </label>
+                            <input type="text" id="street" disabled> 
+                        </div>
+                        <div>
+                            <label for="city"> City Name</label>
+                            <input type="text" id="city" disabled> 
+                        </div>
+                        <div>
+                            <label for="district"> District Name</label>
+                            <input type="text" id="district" disabled> 
+                        </div>
+                        <div>
+                            <label for="state"> State Name </label>
+                            <input type="text" id="state" disabled> 
+                        </div>
+                        <div class="button">
+          
+                            <button type="button" id="edit">Edit</button></a>
+                            <button type="submit" id="del_account">Delete</button>
+                        </div>
+                      
+                    </div>
+                </div>
+            </form>
 
-    }
-)
-  
+        </main> -->
+        <main>
+            <form  >
 
-
-  </script>
-
-
-
+                <div class="details">
+                    <h2>Edit Personal Details</h2>
+                    <div>
+                        <label for="full_name">Full Name</label>
+                        <input type="text" id="full_name" maxlength="30" required>
+          
+                        <label for="gender">Gender</label>
+                        <input type="text" id="gender" maxlength="10">
+                   
+                    </div>
+                    <div class=" date_of">
+                        <label for="dobb"> Date of Birth  </label>
+                        <input type="date" placeholder="date of birth" id="dobb">
+                    </div>
+              
+                    <div>
+                        <label for="street"> Street Name </label>
+                        <input type="text" id="street" maxlength="25"> 
+                        <label for="city"> City Name</label>
+                        <input type="text" id="city" maxlength="25"> 
+                    </div>
+                    <div>
+                        <label for="district"> District Name</label>
+                        <input type="text" id="district" maxlength="25"> 
+                        <label for="state"> State Name </label>
+                        <input type="text" id="state" maxlength="20"> 
+                    </div>
+                    <div class="button">
+                        <button type="submit " id="save_data">Save</button>
+                        <a href="./user_profile.html">
+                            <button type="button">Cancel</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </main>
+        <footer>
+            <div class="footer1">
+                <div class="img101">
+                    <img src="../../assets/images/Fert agri.png" alt="logo">
+                </div>
+            
+            </div>
+        </footer>
+        <script src="../js/user_profile_edit.js"></script>
     </body>
-    </html>
-    
+</html>

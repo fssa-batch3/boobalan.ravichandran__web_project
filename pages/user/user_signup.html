@@ -1,191 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" /><link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
    
-          <link rel="stylesheet" href="../../assets/css/user_signup.css">
-          <title>User signup </title>
+        <link rel="stylesheet" href="../../assets/css/user_signup.css">
+        <title>User signup </title>
          
-<link rel="stylesheet" href="../../assets/css/normalize.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-</head>
-<body>
-    <div class="box">
-        <form class="form" role="form" onsubmit="signUp(event)">
+    </head>
+    <body>
+        <div class="box">
+            <form class="form" role="form">
                 <img src="../../assets/images/Fert agri.png" alt="logo">
-        <h1>Create Your Account</h1>
-        <div class="form-group">
+                <h1>Create Your Account</h1>
+                <div class="form-group">
              
-                <input type="number" class="form-control" id="mobile" required="true" pattern="[0-9].{9}" title="Enter 10 number only"  maxlength="10" /> 
-                <label for="mobile"  class="form-label"> Mobile Number </label>
-        </div>
-        <div class="error"></div>
-        <div class="form-group">
-                <input type="email" class="form-control" id="email" required  name="submit"  value="" >
-                <label for="email" class="form-label">Email address</label>
-        </div>
-        <div class="form-group" >
+                    <input type="text" class="form-control" id="mobile" required="true" pattern="[0-9].{9}" title="Enter 10 number only" maxlength="10"> 
+                    <label for="mobile" class="form-label"> Mobile Number </label>
+                </div>
+                <div class="error"></div>
+                <div class="form-group form-group1">
+                    <input type="email" class="form-control" id="email" required name="submit">
+                    <label for="email" class="form-label">Email address</label>
+                </div>
+                <div class="error1"></div>
+                <div class="form-group form-group2">
             
-            <input type="text"class="form-control" id="full_name" required="true"  pattern="[a-zA-Z]+"/>
-            <label for="full_name"  class="form-label">Enter Your Full Name</label>
-        </div>
-        
-        <div class="form-group">
+                    <input type="text"class="form-control" id="full_name" required="true" pattern="^[a-zA-Z]+(\s[a-zA-Z]+)*$">
+                    <label for="full_name" class="form-label">Enter Your Name</label>
+                </div>
+                <div class="error2"></div>
+                <span id="nameValid"></span>
+                <!--         
+                    <div class="form-group">
            
-            <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="6" 
-            title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters"    required="true"/>
-            <label for="txtPassword"  class="form-label">Set Password</label>
+                    <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$"  
+                    required="true"/>
+                    <label for="txtPassword"  class="form-label">Set Password</label>
+                    <div id="passwordError" ></div>
+                    </div> -->
+                <div class="form-group form-group3">
+                    <input type="password" class="form-control" id="txtPassword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" required="true">
+                    <label for="txtPassword" class="form-label">Set Password</label>
+                    <div id="passwordError"></div>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkUppercase" disabled>
+                        Have at 1 Uppercase letter
+                    </label>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkLowercase" disabled>
+                        Have at 1 Lowercase letter
+                    </label>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkSpecialChar" disabled>
+                        Have at 1 Special character
+                    </label>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkNumber" disabled>
+                        Have at 1 Number
+                    </label>
+                </div>
+                <div class="password_valid">
+                    <label>
+                        <input type="checkbox" id="chkMinLength" disabled>
+                        Have at Minimum 8 characters
+                    </label>
+                </div>
+      
+                <div class="paserror"></div>
+                <div class="form-group form-group3">
+                    <input type="password" class="form-control" id="TXTpassword" 
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" required="true">
+                    <label for="TXTpassword" class="form-label">Confirm Password</label>
+                </div>
+                <div class="form-group">
+                    <label class="showLabel">
+                        <input type="checkbox" id="show">
+                        Show Password
+                    </label>
+                </div>
+                <div class="btn1">
+                    <button type="submit" id="userSignUp">Register</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-            <input type="password" class="form-control" id="TXTpassword" 
-              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&amp;*_=+-]).{8,24}$" maxlength="10" minlength="6" 
-             title="Please give one uppercase, one lowercase, one special character and one number miniumum is 8 character maximum is 10 characters"  required="true"/>
-            <label for="TXTpassword"  class="form-label">Confirm Password</label>
-        </div>
-        <div class="form-group">
-            <label class="showLabel">
-              <input type="checkbox" id="show" value="checkbox">
-              Show Password
-            </label>
-                 </div>
-        <div class="btn1">
-          <button type="submit" >Register</button>
-        </div>
-        </form>
-    </div>
-    <script src="../js/signup_login.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-        <!-- <script>
-             let email = document.getElementById("email").value
-             function ValidateEmail(inputText)
-            {
-            let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if(inputText.value.match(mailformat))
-            {
-            alert("Valid email address!");
-            document.form1.text1.focus();
-            return true;
-            }
-            else if( email == ""){
-                alert("Valid email address!");
-            }
-            else
-            {
-            alert("You have entered an invalid email address!");
-            document.form1.text1.focus();
-            return false;
-            }
-            }
-        </script> -->
-<!-- 
-//        function signup(){
-//         const email = document.getElementById("email").value
-//         const mobile = document.getElementById("mobile").value
-//         const full_name = document.getElementById("full_name").value
-//         const password = document.getElementById("txtPassword").value
-//         const confirmpassword = document.getElementById("TXTpassword").value
-//         const show = document.getElementById("show").value
+        <script src="../js/signup_login.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+       
+        <script>
+const mobileInput = document.getElementById("mobile");
+const formGroup = document.querySelector(".form-group");
+const errorMessage = document.querySelector(".error");
 
-//         localStorage.setItem("eamil", email)
-//         localStorage.setItem("mobile", mobile)
-//         localStorage.setItem("fullname", full_name)
-//         localStorage.setItem("loginpassword",password)
-//         localStorage.setItem("confirmpassword", confirmpassword)
+mobileInput.addEventListener("input", () => {
+    const inputValue = mobileInput.value.trim(); // remove leading/trailing whitespace
+    const isValidInput = /^[6-9]{1}[0-9]{9}$/.test(inputValue);
+   //   /^[6-9]\d{9}$/.test(inputValue) && !/^\d*(\d)\1{9}\d*$/.test(inputValue); // use regex to match the updated criteria
+    if (!isValidInput || inputValue === "") {
+      formGroup.classList.remove("valid");
+      formGroup.classList.add("invalid");
+      if (inputValue === "") {
+        errorMessage.textContent = "Please enter a mobile number.";
+      } else if (/^\d+$/.test(inputValue)) {
+        errorMessage.textContent = "Enter a valid 10-digit mobile number.";
+      } else {
+        errorMessage.textContent = "Please enter digits only.";
+      }
+      errorMessage.style.color = "red";
+    } else {
+      formGroup.classList.remove("invalid");
+      formGroup.classList.add("valid");
+      errorMessage.textContent = "";
+    }
+});
 
-//}
+// email validation---------------------
+const emailInput = document.getElementById("email");
+const formGroup1 = document.querySelector(".form-group1");
+const errorMessage1 = document.querySelector(".error1");
 
- // Retrieving the data from local storage
-//  const jsonData = localStorage.getItem("users");
-  
-//   // Parsing the JSON string back into an array, or creating an empty array if there's no data
-//   let users = jsonData ? JSON.parse(jsonData) : [];
+emailInput.addEventListener("input", () => {
+    const inputValue1 = emailInput.value.trim(); // remove leading/trailing whitespace
+    const isValidInput1 =
+      /^([a-z]+[a-z0-9_+\- ]*[a-zA-Z0-9]+)@(gmail|yahoo|hotmail|outlook)\.(com|net|org|edu|in)$/.test(
+        inputValue1
+      ); // use regex to match email address format
+    if (!isValidInput1 || inputValue1 === "") {
+      formGroup1.classList.remove("valid1");
+      formGroup1.classList.add("invalid1");
+      if (inputValue1 === "") {
+        errorMessage1.textContent = "Please enter an email address.";
+      } else {
+        errorMessage1.textContent = "Please enter a valid email address.";
+      }
+      errorMessage1.style.color = "red";
+    } else {
+      formGroup1.classList.remove("invalid1");
+      formGroup1.classList.add("valid1");
+      errorMessage1.textContent = "";
+    }
+});
 
-//   // Function to handle the sign-up process
-//   function signup() {
-//     // Retrieve the values from the form inputs
- 
-//     const email = document.getElementById("email").value
-//         const mobile = document.getElementById("mobile").value
-//         const full_name = document.getElementById("full_name").value
-//         const password = document.getElementById("txtPassword").value
-//         const confirmpassword = document.getElementById("TXTpassword").value
-//         const show = document.getElementById("show").value
+// name validation-----------
+const nameInput = document.getElementById("full_name");
+const formGroup2 = document.querySelector(".form-group2");
+const errorMessage2 = document.querySelector(".error2");
 
-//     // Add the new user data to the `users` array
-//     users.push({ mobile, full_name, password, confirmpassword });
+nameInput.addEventListener("input", () => {
+    const inputValue2 = nameInput.value.trim(); // remove leading/trailing whitespace
+    const isValidInput2 = /^[a-zA-Z][a-zA-Z0-9]{5,31}$/.test(inputValue2); // use regex to match name format without spaces before or after
 
-//     // Convert the `users` array into a JSON string and save it to local storage
-//     localStorage.setItem("users", JSON.stringify(users));
+    if (!isValidInput2 || inputValue2 === "") {
+      formGroup2.classList.remove("valid2");
+      formGroup2.classList.add("invalid2");
+      if (inputValue2 === "") {
+        errorMessage2.textContent = "Please enter your name.";
+      }
+      errorMessage2.style.color = "red";
+    } else {
+      formGroup2.classList.remove("invalid2");
+      formGroup2.classList.add("valid2");
+      errorMessage2.textContent = "";
+    }
+});
 
-//             if( password == confirmpassword)
-//         {
-//             alert("Register Succesfull ✅");
-//              window.location.href="./user_login.html";
-//         }
-//         else{
-//             alert("Invalid Confirm password  ❌");
-//         }
+// //Please enter one number, one special character, one uppercase letter, and one lowercase letter. 8 characters minimum, 10 characters maximum
+const passwordInput = document.getElementById("txtPassword");
 
-//   }
-//-==============================//////////////////============================
-//   const signup = e => {
-//      let email = document.getElementById("email").value
-//         let mobile = document.getElementById("mobile").value
-//         let full_name = document.getElementById("full_name").value
-//         let password = document.getElementById("txtPassword").value
-//         let confirmpassword = document.getElementById("TXTpassword").value
+const uppercaseCheckbox = document.getElementById("chkUppercase");
+const lowercaseCheckbox = document.getElementById("chkLowercase");
+const specialCharCheckbox = document.getElementById("chkSpecialChar");
+const numberCheckbox = document.getElementById("chkNumber");
+const minLengthCheckbox = document.getElementById("chkMinLength");
 
-//         //   // Parsing the JSON string back into an array, or creating an empty array if there's no data
-//     let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
-//     let exist = user_list.length &&
-//         JSON.parse(localStorage.getItem('user_list')).some(data =>
-//             data.mobile.toLowerCase() == mobile.toLowerCase() ||
-//             data.email.toLowerCase() == email.toLowerCase()
-//         );
+passwordInput.addEventListener("input", () => {
+    const passwordValue = passwordInput.value;
 
+    // Check for uppercase letter
+    const hasUppercase = /[A-Z]/.test(passwordValue);
+    uppercaseCheckbox.checked = hasUppercase;
 
-//     if(!exist){
-//         user_list.push({ email, mobile, full_name, password,
-//                      confirmpassword });
-//         localStorage.setItem('user_list', JSON.stringify(user_list));
-//         console.log(localStorage.getItem('user_list'));
-//         document.querySelector('form').reset();
-//         document.getElementById('mobile').focus();
-//         document.getElementById('email').focus();
-//         alert('Account created Successfully');
-//        location.href="./user_login.html";
-//     }
-//     else{
-//         alert('Sorry the User already Exist!! \n Try with different Phone number or email');
-//         document.querySelector('form').reset();
-//     }
-//     e.preventDefault();
-// }
-// const signIn = e =>{
-//     let user_phonenumber = document.getElementById('user_phonenumber').value,
-//         user_password = document.getElementById('user_password').value;
-//     let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
-//     let exist = user_list.length &&
-//     JSON.parse(localStorage.getItem('user_list')).some(data =>
-//         data.user_phonenumber.toLowerCase() == user_phonenumber &&
-//         data.user_password.toLowerCase() == user_password);
-//     if(!exist){
-//         alert("Incorrect login credentials");
-//     }
-//     else{
-//         alert("Your login in successful");
-//         location.href = "/index.html";
-//     }
-//     e.preventDefault();
-// } -->
+    // Check for lowercase letter
+    const hasLowercase = /[a-z]/.test(passwordValue);
+    lowercaseCheckbox.checked = hasLowercase;
 
+    // Check for special character
+    const hasSpecialChar = /[!@#$%^&*_=+-]/.test(passwordValue);
+    specialCharCheckbox.checked = hasSpecialChar;
 
-</body>
+    // Check for number
+    const hasNumber = /\d/.test(passwordValue);
+    numberCheckbox.checked = hasNumber;
+
+    // Check for minimum length
+    const hasMinLength = passwordValue.length >= 8;
+    minLengthCheckbox.checked = hasMinLength;
+});
+    </script>
+        <script src="../js/seller_login.js"></script>
+    </body>
 </html>

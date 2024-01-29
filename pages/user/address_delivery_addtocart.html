@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="../../assets/css/address-delivery.css">
+        <link rel="stylesheet" href="../../assets/css/header.css">
+        <link rel="stylesheet" href="../../assets/css/style.css">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <title>Delivery address</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="fert-logo">
+              <a href="../../index.html"><img src="../../assets/images/Fert agri.png" alt="logo"></a>
+            </div>
+        </header>
+        <main>
+
+            <div class="address-title-head">
+                <h3>DELIVERY ADDRESS</h3>
+            </div>
+          <div class="all-address-container">
+
+          </div>
+            <div class="add-new-address-div">
+                <p>+</p> ADD A NEW ADDRESS
+            </div>
+         <div>
+           
+            <div class="add-new-address-class-container">
+        
+                    <form class="add-new-address-class" id="save-address">
+                    <div class="address-title">
+                        <h2>Add Your Delivery Address</h2>
+                    </div>
+                    <div class="add-address-details">
+                        <label for="title">Address Tiltle</label>
+                        <select id="title">
+                          <option value="Home">Home</option>
+                          <option value="Work">Work</option>
+                          <option value="Home">Others</option>
+                        </select>
+                    </div>
+                    <div class="add-address-details">
+                        <label for="street">Door No and Street</label>
+                        <input type="text" name="" id="street" placeholder="Eg: 1/117, Kumaran Street..."maxlength="40">
+                    </div>
+                    <div class="add-address-details">
+                        <label for="local">Address(location)</label>
+                        <input type="text" name="" id="local" maxlength="30">
+                    </div>
+                    <div class="add-address-details">
+                        <label for="city">District/City</label>
+                        <select id="city">
+                          <option value="Select">Select</option>
+                          <option value="Ariyalur">Ariyalur</option>
+                          <option value="Chengalpattu">Chengalpattu</option>
+                          <option value="Chennai">Chennai</option>
+                          <option value="Coimbatore">Coimbatore</option>
+                          <option value="Cuddalore">Cuddalore</option>
+                          <option value="Dharmapuri">Dharmapuri</option>
+                          <option value="Dindigul">Dindigul</option>
+                          <option value="Erode">Erode</option>
+                          <option value="Kallakurichi">Kallakurichi</option>
+                          <option value="Kanchipuram">Kanchipuram</option>
+                          <option value="Kanniyakumari">Kanniyakumari</option>
+                          <option value="Karur">Karur</option>
+                          <option value="Krishnagiri">Krishnagiri</option>
+                          <option value="Madurai">Madurai</option>
+                          <option value="Mayiladuthurai">Mayiladuthurai</option>
+                          <option value="Nagapattinam">Nagapattinam</option>
+                          <option value="Namakkal">Namakkal</option>
+                          <option value="Nilgiris">Nilgiris</option>
+                          <option value="Perambalur">Perambalur</option>
+                          <option value="Pudukkottai">Pudukkottai</option>
+                          <option value="Ramanathapuram">Ramanathapuram</option>
+                          <option value="Ranipet">Ranipet</option>
+                          <option value="Sivagangai">Sivagangai</option>
+                          <option value="Tenkasi">Tenkasi</option>
+                          <option value="Thanjavur">Thanjavur</option>
+                          <option value="Theni">Theni</option>
+                          <option value="Thoothukudi">Thoothukudi</option>
+                          <option value="Tiruchirappalli">Tiruchirappalli</option>
+                          <option value="Tirunelveli">Tirunelveli</option>
+                          <option value="Tirupathur">Tirupathur</option>
+                          <option value="Tiruppur">Tiruppur</option>
+                          <option value="Tiruvallur">Tiruvallur</option>
+                          <option value="Tiruvannamalai">Tiruvannamalai</option>
+                          <option value="Tiruvarur">Tiruvarur</option>
+                          <option value="Vellore">Vellore</option>
+                          <option value="Viluppuram">Viluppuram</option>
+                          <option value="Virudhunagar">Virudhunagar</option>
+                      </select>
+                
+                    </div>
+                    <div class="add-address-details">
+                        <label for="pincode">Pincode</label>
+                        <input type="text" name="" id="pincode"  >
+                    </div>
+                    <div class="add-address-details">
+                        <label for="state">State</label>
+                        <input type="text" name="" id="state" readonly >
+                    </div>
+                    <div class="add-address-details">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" name="" id="mobile" >
+                    </div>
+                    <div class="error"></div>
+                    
+                    <div class="save-cancel-container">
+                        <button type="submit" id="save-address"> SAVE & DELIVER HERE</button>
+                        <button type="button" id="exit-this-page"> CANCEL</button>
+                    </div>
+                </form>
+               
+            </div>
+         
+            
+         </div>
+        </main>
+
+       
+        <script>
+
+          
+const file_root = window.location.origin;
+const logedUser = JSON.parse(localStorage.getItem("user_data"));
+
+const ProductStatus = new URLSearchParams(window.location.search).get("delivery-status");
+
+const orderDeliveryData = JSON.parse(localStorage.getItem("addtoCartDeliveryProduct")) || [];
+const cartIds = JSON.parse(localStorage.getItem("addToCartItem")) || [];
+
+const findLogedUseraddtoCart = cartIds.filter(
+  (details) => details.userUniqueId === logedUser
+);
+
+
+//  // incase user web back after delivered message showned this code check that orderid status is true or false
+function isLoggedIn() {
+  const findLogged = JSON.parse(localStorage.getItem("user_data"));
+  if (findLogged) {
+    return true;
+  }
+  return false;
+}
+
+const file_roots = window.location.origin;
+if (ProductStatus === "false" && findLogedUseraddtoCart.length === 0) {
+  window.addEventListener("popstate", (event) => {
+    if (isLoggedIn()) {
+      event.preventDefault();
+      window.location.href = `${file_roots}/index.html`;
+    }
+  });
+
+  // call the isLoggedIn function when the page loads
+  if (isLoggedIn()) {
+    window.location.href = `${file_roots}/index.html`;
+  }
+}
+
+
+// logged user detail sget from local storage-----------------
+
+const user_list = JSON.parse(localStorage.getItem("user_list")) || [];
+const user_data = JSON.parse(localStorage.getItem("user_data")) || [];
+
+const findData = user_list.find((details) => details.mobile === user_data);
+            // Define an empty array to store addresses
+            let addresses = JSON.parse(localStorage.getItem('addresses')) || [];
+
+// get logged user id
+let userUnique = JSON.parse(localStorage.getItem('user_data')) || [];
+let userList = JSON.parse(localStorage.getItem('user_list')) || [];
+
+const getuserName = userList.find(user => user.mobile === userUnique);
+// console.log(getuserName);
+const matchedAddress = addresses.filter(data => data.userUnique === userUnique);
+// console.log(matchedAddress)
+
+for(let i=0; i<matchedAddress.length; i++) {
+// Create the HTML elements dynamically using JavaScript
+const addressContainer = document.createElement('div');
+addressContainer.classList.add('address-container');
+
+const addressContainerLabel = document.createElement('label');
+addressContainerLabel.classList.add('address-container-label');
+
+const selectThisAddress = document.createElement('div');
+selectThisAddress.classList.add('select-this-address');
+
+const input = document.createElement('input');
+input.setAttribute('type', 'radio');
+input.setAttribute('class', 'radio-button');
+input.setAttribute('name', 'address');
+input.setAttribute('id', matchedAddress[i].addressId);
+input.setAttribute('readonly', true);
+
+selectThisAddress.appendChild(input);
+
+const addressDetailstotalContainer = document.createElement('div');
+
+const addressDetailsContainer = document.createElement('div');
+addressDetailsContainer.classList.add('address-detail-container');
+
+const userDetailsContainer = document.createElement('p');
+userDetailsContainer.classList.add('user-details-container');
+
+const userNameAddress = document.createElement('span');
+userNameAddress.classList.add('user-name-address');
+userNameAddress.textContent = getuserName.full_name;
+
+const userTitle = document.createElement('span');
+userTitle.classList.add('user-title');
+userTitle.textContent = matchedAddress[i].title;
+
+const addressMobile = document.createElement('span');
+addressMobile.classList.add('address-mobile');
+addressMobile.textContent = matchedAddress[i].mobile;
+
+userDetailsContainer.appendChild(userNameAddress);
+userDetailsContainer.appendChild(userTitle);
+userDetailsContainer.appendChild(addressMobile);
+
+const userOrderAddress = document.createElement('span');
+userOrderAddress.classList.add('user-order-address');
+userOrderAddress.textContent = `${matchedAddress[i].street}, ${matchedAddress[i].city}, ${matchedAddress[i].state} - `;
+
+const userOrderAddressPincode = document.createElement('span');
+userOrderAddressPincode.textContent = matchedAddress[i].pincode;
+
+userOrderAddress.appendChild(userOrderAddressPincode);
+
+addressDetailsContainer.appendChild(userDetailsContainer);
+addressDetailsContainer.appendChild(userOrderAddress);
+
+
+const deliverHere = document.createElement('div');
+deliverHere.classList.add('deliver-address-here');
+
+ 
+
+const loadProduct = orderDeliveryData.filter(
+  (detail) => detail.deliveryStatus === ProductStatus
+);
+
+
+const deliverHereButton = document.createElement('button');
+deliverHereButton.setAttribute('id', 'deliver-here');
+deliverHereButton.setAttribute('class', 'deliver_button');
+deliverHereButton.textContent = 'DELIVER HERE';
+deliverHereButton.setAttribute('data-set', matchedAddress[i].addressId);
+
+deliverHereButton.addEventListener('click', function() {
+  const getAddressUniqueId = this.getAttribute('data-set');
+  for (let i = 0; i < loadProduct.length; i++) {
+  const deliveryStatus = "true";
+  const orderStatus = "Processing";
+  loadProduct[i].deliveryStatus = deliveryStatus;
+  loadProduct[i].orderStatus = orderStatus;
+  loadProduct[i].addressUniqueID = getAddressUniqueId;
+  }
+  // Store the updated orderDeliveryData array in localStorage
+  localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
+  
+  alert("Your order has been successfully accepted..✅");
+
+      
+  // removing the data associated with the "addToCartItem" key
+
+  const logedUser = JSON.parse(localStorage.getItem("user_data"));
+  let addToCartItem = JSON.parse(localStorage.getItem("addToCartItem")) || [];
+
+  // Filter out the items that match the logedUser details
+  addToCartItem = addToCartItem.filter(
+    (item) => item.userUniqueId !== logedUser
+  );
+
+  
+  // Update the addToCartItem array in local storage with the new array
+  localStorage.setItem("addToCartItem", JSON.stringify(addToCartItem));
+
+  const local_path = window.location.origin;
+  const pro_url = `${local_path}/pages/user/thank_order.html`;
+  window.location.href = pro_url;
+
+});
+
+
+
+
+addressContainerLabel.appendChild(selectThisAddress);
+addressContainerLabel.appendChild(addressDetailstotalContainer);
+addressDetailstotalContainer.appendChild(addressDetailsContainer);
+addressDetailstotalContainer.appendChild(deliverHere);
+deliverHere.appendChild(deliverHereButton);
+
+addressContainer.appendChild(addressContainerLabel);
+
+// Append the dynamically created address container to the parent element
+document.querySelector("div.all-address-container").appendChild(addressContainer);
+
+}
+
+// endeded the for loop 
+
+     // check the picode is an start with 6 and length is an 6 or not
+
+     const pincodeInput = document.getElementById('pincode');
+
+pincodeInput.addEventListener('blur', function() {
+  const pincode = pincodeInput.value.trim();
+  if (pincode !== '') {
+    const pincodeRegex = /^6\d{5}$/; // regex pattern to match a pincode starting with 6 and having a total of 6 digits
+    if (!pincodeRegex.test(pincode)) {
+      alert('Invalid pincode! Please enter a valid pincode starting with 6 and having a total of 6 digits.');
+    }
+  }
+});
+
+
+// Add event listener to each radio button
+const radioButtons = document.querySelectorAll('.radio-button');
+let selectedRadioButton = null; // Variable to store previously selected radio button
+radioButtons.forEach(radioButton => {
+  radioButton.addEventListener('click', () => {
+    // Find the deliverHere div with matching id
+    const deliverHere = document.querySelector(`[data-set='${radioButton.getAttribute('id')}']`);
+    if (deliverHere) {
+      // Remove class from previously selected deliverHere div
+      if (selectedRadioButton) {
+        const previousDeliverHere = document.querySelector(`[data-set='${selectedRadioButton.getAttribute('id')}']`);
+        previousDeliverHere.parentElement.classList.remove('data-find-address');
+      }
+      // Add class to currently selected deliverHere div
+      deliverHere.parentElement.classList.add('data-find-address');
+      selectedRadioButton = radioButton; // Update previously selected radio button
+    }
+  });
+});
+
+
+
+
+
+
+// check the mobile number
+const mobileInput = document.getElementById("mobile");
+const errorMessage = document.querySelector(".error");
+ mobileInput.addEventListener("input", () => {
+    const inputValue = mobileInput.value.trim(); // remove leading/trailing whitespace
+    const isValidInput = /^[6-9]{1}[0-9]{9}$/.test(inputValue);
+   //   /^[6-9]\d{9}$/.test(inputValue) && !/^\d*(\d)\1{9}\d*$/.test(inputValue); // use regex to match the updated criteria
+    if (!isValidInput || inputValue === "") {
+      if (inputValue === "") {
+        errorMessage.textContent = "Please enter a mobile number.";
+      } else if (/^\d+$/.test(inputValue)) {
+        errorMessage.textContent = "Enter a valid 10-digit mobile number.";
+      } else {
+        errorMessage.textContent = "Please enter digits only.";
+      }
+      errorMessage.style.color = "red";
+    } else {
+      errorMessage.textContent = "";
+    }
+});
+
+// Get the form and save button elements
+document.getElementById("state").value = "Tamil Nadu"
+const form = document.querySelector('form');
+const saveBtn = document.querySelector('#save-address');
+
+
+function generateUniqueId() {
+  let id = "";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (let i = 0; i < 10; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    id += characters[randomIndex];
+  }
+
+  return id;
+}
+
+
+
+
+
+// get the class. which div class have to display none
+const newAddress = document.querySelector(".add-new-address-class-container")
+// add new class
+document.querySelector(".add-new-address-div").addEventListener("click",() =>{
+    newAddress.classList.add("show-new-address");
+});
+
+document.getElementById("exit-this-page").addEventListener("click",()=>{
+    newAddress.classList.remove("show-new-address");
+})
+
+
+
+
+
+
+// if user click the save & deliver here button 
+
+const loadProduct = orderDeliveryData.filter(
+  (detail) => detail.deliveryStatus === ProductStatus
+);
+
+let addressId;
+
+const saveButton = document.getElementById('save-address');
+
+
+let isFormSaved = false;
+
+
+// Listen for the form submission event
+form.addEventListener('submit', function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+
+  // Get the form input values
+  const title = form.title.value;
+  const street = form.street.value;
+  const location = form.local.value;
+  const city = form.city.value;
+  const pincode = form.pincode.value;
+  const state = form.state.value;
+  const mobile = form.mobile.value;
+
+  // Check if all fields are filled
+  if (title && street && location && city && pincode && state && mobile) {
+    // Check if the address already exists in the addresses array
+    const isDuplicate = addresses.some(address => {
+      return address.title === title && 
+             address.street === street &&
+             address.location === location &&
+             address.city === city &&
+             address.pincode === pincode &&
+             address.state === state &&
+             address.mobile === mobile;
+    });
+
+    if (isDuplicate) {
+        // Show an error message if the address already exists
+      alert('This address already exists!');
+    } else {
+      // Generate a unique addressId
+      addressId = userUnique + generateUniqueId()
+
+      // Create a new address object with the generated addressId
+      const newAddress = {
+        title,
+        street,
+        location,
+        city,
+        pincode,
+        state,
+        mobile,
+        userUnique,
+        addressId
+      };
+
+      // Add the new address object to the addresses array
+      addresses.push(newAddress);
+
+      // Store the updated addresses array in localStorage
+      localStorage.setItem('addresses', JSON.stringify(addresses));
+
+      // Set the flag to true to indicate that the form has been saved
+      isFormSaved = true;
+ 
+  // Check if the form has been saved
+  if (isFormSaved) {
+    // Update the loadProduct object with the addressId
+    const deliveryStatus = "true";
+    const orderStatus = "Processing";
+    for (let i = 0; i < loadProduct.length; i++) {
+    loadProduct[i].deliveryStatus = deliveryStatus;
+    loadProduct[i].orderStatus = orderStatus;
+    loadProduct[i].addressUniqueID = addressId;
+    }
+    alert("Your order has been successfully accepted..✅");
+
+    // Store the updated orderDeliveryData array in localStorage
+    localStorage.setItem("addtoCartDeliveryProduct", JSON.stringify(orderDeliveryData));
+
+
+    
+  // removing the data associated with the "addToCartItem" key
+
+  const logedUser = JSON.parse(localStorage.getItem("user_data"));
+  let addToCartItem = JSON.parse(localStorage.getItem("addToCartItem")) || [];
+
+  // Filter out the items that match the logedUser details
+  addToCartItem = addToCartItem.filter(
+    (item) => item.userUniqueId !== logedUser
+  );
+
+
+  // Update the addToCartItem array in local storage with the new array
+  localStorage.setItem("addToCartItem", JSON.stringify(addToCartItem));
+
+  // Redirect the user to the thank you page
+  const local_path = window.location.origin;
+    const pro_url = `${local_path}/pages/user/thank_order.html`;
+    window.location.href = pro_url;
+ 
+    }
+
+  
+    }
+  } else {
+    // Show an error message if all fields are not filled
+    alert('Please fill all the fields!');
+  }
+});
+
+// Listen for the save button click event
+window.addEventListener("beforeunload", () => {
+  for (let i = orderDeliveryData.length - 1; i >= 0; i--) {
+    if (orderDeliveryData[i].deliveryStatus === "false") {
+      orderDeliveryData.splice(i, 1);
+    }
+  }
+
+  localStorage.setItem(
+    "addtoCartDeliveryProduct",
+    JSON.stringify(orderDeliveryData)
+  );
+});
+
+
+
+
+
+        </script>
+    </body>
+    </html>

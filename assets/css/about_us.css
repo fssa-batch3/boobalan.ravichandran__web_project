@@ -1,4 +1,8 @@
-
+*{
+    font-family: 'Neuton', serif;
+    letter-spacing: .3px;
+    word-spacing: 3px;
+}
 .about{
     padding: 30px 10px 50px 10px;
 }
@@ -18,7 +22,7 @@ main{
 }
 .about_us p{
     width: 730px;
-    font-size: 19px;
+    font-size: 21px;
     margin-left: 190px;
     text-indent: 10px;
     margin-bottom: 25px;
@@ -28,7 +32,7 @@ main{
     display: flex;
     padding: 30px 50px;
     background-color: rgb(249, 241, 230);
-    box-shadow: 0px 6px 16px 0px rgb(64, 64, 64);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     margin-bottom: 50px;
     border-radius: 10px;
 }
@@ -48,12 +52,12 @@ margin-left: 20px;
 .about_content1 h2{
     margin-left: 30px;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 27px;
     color: rgb(202, 11, 65);
 }
 .about_content1 p{
     width:640px;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 40px;
     text-indent: 20px;
     color:rgb(13, 13, 66);
@@ -63,8 +67,7 @@ margin-left: 20px;
     display: flex;
     padding: 30px 50px;
     background-color: rgb(241, 238, 235);
-    box-shadow: 0px 6px 16px 0px rgb(61, 61, 61);
-    margin-bottom: 50px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;    margin-bottom: 50px;
     border-radius: 10px;
 }
 .about_img1 img{
@@ -82,12 +85,12 @@ margin-left: 80px;
 .about_content2 h2{
     margin-left: 250px;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 27px;
     margin-top: 20px;color: rgb(202, 11, 65);
 }
 .about_content2 p{
     width:510px;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 80px;
     text-indent: 20px;
     color:rgb(13, 13, 66);
@@ -98,8 +101,8 @@ margin-left: 80px;
     display: flex;
     padding: 30px 50px;
     background-color: rgb(249, 241, 230);
-    box-shadow: 0px 6px 16px 0px rgb(68, 68, 68);
-    margin-bottom: 50px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        margin-bottom: 50px;
     border-radius: 10px;
 }
 .about_img2 img{
@@ -117,7 +120,7 @@ margin-left: 20px;
 }
 .about_content3 p{
     width:630px;
-    font-size: 18px;
+    font-size:20px;
     margin-left: 50px;
     text-indent: 20px;
     margin-top: 4.5%; color:rgb(13, 13, 66);
@@ -127,8 +130,8 @@ margin-left: 20px;
     display: flex;
     padding: 30px 50px;
     background-color:  rgb(241, 238, 235);
-    box-shadow: 0px 6px 16px 0px rgb(56, 56, 56);
-    margin-bottom: 50px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        margin-bottom: 50px;
     border-radius: 10px;
 }
 .about_img3 img{
@@ -147,12 +150,12 @@ margin-left: 100px;
 .about_content4 h2{
     margin-left: 250px;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 27px;
     margin-top: 20px;color: rgb(202, 11, 65);
 }
 .about_content4 p{
     width:630px;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 50px;
     text-indent: 20px;
     margin-top: 4.5%; color:rgb(13, 13, 66);
@@ -163,8 +166,8 @@ margin-left: 100px;
     display: flex;
     padding: 30px 50px;
     background-color: rgb(249, 241, 230);
-    box-shadow: 0px 6px 15px 0px rgb(47, 47, 47);
-    margin-bottom: 50px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        margin-bottom: 50px;
     border-radius: 10px;
 }
 .about_img4 img{
@@ -183,12 +186,12 @@ margin-left: 20px;
 .about_content5 h2{
     margin-left: 250px;
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 27px;
     margin-top: 20px;color: rgb(202, 11, 65);
 }
 .about_content5 p{
     width:630px;
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 50px;
     text-indent: 20px;
     margin-top: 4.5%; color:rgb(13, 13, 66);

@@ -1,362 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
-    <link rel="stylesheet" href="../../assets/css/order_summary.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="../../assets/images/icon.png">
+        <link rel="stylesheet" href="../../assets/css/order_summary.css">
     
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
-   <title>Order Summary</title>
-</head>
-<body>
-    <main>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <title>Order Summary</title>
+    </head>
+    <body>
+        <main>
         
-        <div class="order_summary">
+            <div class="order_summary">
            
-            <form >
-               <div class="order_title">
-                <h2>Order Summary</h2>
-                <img src="https://www.sfu.ca/content/sfu/wwest/resources/White-Papers/white-papers---stem-careers/jcr:content/main_content/textimage_49483266/image.img.640.medium.png/1646934025752.png" alt="order_summary">
-               </div>
-              <div class="product_details">
-                <div class="product_image">
-                  <!-- <img src="../../assets/images/Bio Fertilizers/bio1.jpg" alt="product_imag"> -->
-                 </div>
-
-                 <!-- loading symbol -->
-                 <div id="loader" class="loader" style="display:none;">
-                  <div class="loader">
-                    <div class="loader-inner">
-                      <div class="loader-line-wrap">
-                        <div class="loader-line"></div>
-                      </div>
-                      <div class="loader-line-wrap">
-                        <div class="loader-line"></div>
-                      </div>
-                      <div class="loader-line-wrap">
-                        <div class="loader-line"></div>
-                      </div>
-                      <div class="loader-line-wrap">
-                        <div class="loader-line"></div>
-                      </div>
-                      <div class="loader-line-wrap">
-                        <div class="loader-line"></div>
-                      </div>
-                      <div class="loader-line-wrap">
-                        <div class="loader-line"></div>
-                      </div>
-                      <div class="loader-line-wrap">
-                        <div class="loader-line"></div>
-                      </div>
-                      <div class="loader-line-wrap">
-                        <div class="loader-line"></div>
-                      </div>
+                <form >
+                    <div class="order_title">
+                        <h2>Order Summary</h2>
+                        <img src="https://www.sfu.ca/content/sfu/wwest/resources/White-Papers/white-papers---stem-careers/jcr:content/main_content/textimage_49483266/image.img.640.medium.png/1646934025752.png" alt="order_summary">
                     </div>
-                  </div>
-                </div>
+                    <div class="product_details">
+                        <div class="product_image">
+                            <!-- <img src="../../assets/images/Bio Fertilizers/bio1.jpg" alt="product_imag"> -->
+                        </div>
 
+                        <!-- loading symbol -->
+                        <div id="loader" class="loader" style="display:none;">
+                            <div class="loader">
+                                <div class="loader-inner">
+                                    <div class="loader-line-wrap">
+                                        <div class="loader-line"></div>
+                                    </div>
+                                    <div class="loader-line-wrap">
+                                        <div class="loader-line"></div>
+                                    </div>
+                                    <div class="loader-line-wrap">
+                                        <div class="loader-line"></div>
+                                    </div>
+                                    <div class="loader-line-wrap">
+                                        <div class="loader-line"></div>
+                                    </div>
+                                    <div class="loader-line-wrap">
+                                        <div class="loader-line"></div>
+                                    </div>
+                                    <div class="loader-line-wrap">
+                                        <div class="loader-line"></div>
+                                    </div>
+                                    <div class="loader-line-wrap">
+                                        <div class="loader-line"></div>
+                                    </div>
+                                    <div class="loader-line-wrap">
+                                        <div class="loader-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                 <div  class="product_description">
-                 <div class="form_group">
-                  <div class="pro_nam1">
-                    <label class="product_label">Product Name : </label>
+                        <div class="product_description">
+                            <div class="form_group">
+                                <div class="pro_nam1">
+                                    <label class="product_label">Product Name : </label>
                  
-                  <h2 class="order_inputh2" id="pro_name"></h2>
-                  </div>
-                 </div>
-                 <div class="form_group">
-                  <div id="fertilizer">
-                    <h2>Order Qty</h2>
-                         <select id="option">
-                                <option>1</option>
-                                <option >2</option>
-                                <option >3</option>
-                                <option >4</option>
-                                <option >5</option>
-                                <option >6</option>
-                        </select>
-                </div>
-                 </div>
-                 <div class="form_group">
-                  <label   class="product_label">Price : </label>
-                  <input type="number" id="product_pri" class="order_input1" disabled>
-                 <input type="number"class="order_input1" id="actual_price"disabled>
-                 </div>
-                 <div class="form_group">
-                  <label for="weight"  class="product_label">Product Weight : </label>
-                  <input id="weight" type="text"class="order_input" disabled>
-                 </div>
-                 <div class="form_group">
-                  <label for="discount"  class="product_label">You Save : </label>
-                  <input type="text" id="discount"class="order_input" disabled>
-                 </div>
-                 <div class="form_group1">
-                  <p>
-                      Order date: <span id="order-date"></span>
-                    </p>
-                  </div>
-                 <div class="form_group">
-                  <p>
-                      Delivery date: <span id="delivery-date"></span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-                  <div class="summary_btn">
-
+                                    <h2 class="order_inputh2" id="pro_name"></h2>
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <div id="fertilizer">
+                                    <h2>Order Qty</h2>
+                                    <select id="option">
+                                        <option>1</option>
+                                        <option >2</option>
+                                        <option >3</option>
+                                        <option >4</option>
+                                        <option >5</option>
+                                        <option >6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <label class="product_label">Price : </label>
+                                <label for="" class="product_label"> ₹ </label>
+                                <input type="number" id="product_pri" class="order_input1" disabled>
+                                <label for="" class="product_label"> ₹ </label>
+                                <input type="number"class="order_input1" id="actual_price"disabled>
+                            </div>
+                            <div class="form_group">
+                                <label for="weight" class="product_label">Product Weight :</label>
+                                <input id="weight" type="text"class="order_input" disabled>
+                            </div>
+                            <div class="form_group">
+                                <label for="discount" class="product_label">You Save :  ₹</label>
+                                <input type="text" id="discount"class="order_input" disabled>
+                            </div>
+                            <div class="form_group1">
+                                <p>
+                                    Order date: <span id="order-date"></span>
+                                </p>
+                            </div>
+                            <div class="form_group">
+                                <p>
+                                    Delivery date: <span id="delivery-date"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary_btn">
                     
-                    <button id="cancel_product" type="submit">Cancel</button>
-                    <button class="button" style="vertical-align:middle"><span>Continue </span></button>
-                  </div>
+                        <button id="cancel_product" type="submit">Cancel</button>
+                        <button class="button" style="vertical-align:middle">
+                            <span>Continue </span>
+                        </button>
+                    </div>
                
-            </form>
-        </div>
-        
+                </form>
+            </div>
 
-    </main>
+        </main>
 
-
-
-    <script>
-        $date = new Date();
-
-// Set the number of days to be added
-$numberOfDays = 0;
-
-// Add this to the current date
-$date.setDate($date.getDate() + $numberOfDays);
-
-// Optional: Pretty print the date
-function formatDate(date) {
-  var d = new Date(date),
-    month = '' + (d.getMonth() + 1),
-    day = '' + d.getDate(),
-    year = d.getFullYear();
-
-  if (month.length < 2) month = '0' + month;
-  if (day.length < 2) day = '0' + day;
-
-  return [ day, month, year].join('-');
-}
-$date = formatDate($date);
-
-// Display the delivery date
-document.getElementById("order-date").innerHTML = $date;
-
-// ------------------------ deleivery date-------------
-
-
-$date = new Date();
-
-// Set the number of days to be added
-$numberOfDays = 10;
-
-// Add this to the current date
-$date.setDate($date.getDate() + $numberOfDays);
-
-// Optional: Pretty print the date
-function formatDate(date) {
-  var d = new Date(date),
-    month = '' + (d.getMonth() + 1),
-    day = '' + d.getDate(),
-    year = d.getFullYear();
-
-  if (month.length < 2) month = '0' + month;
-  if (day.length < 2) day = '0' + day;
-
-  return [day, month, year ].join('-');
-}
-$date = formatDate($date);
-// Display the delivery date
-document.getElementById("delivery-date").innerHTML = $date;
-
-
-
-document.getElementById("cancel_product").addEventListener("click",
-function cancelProduct(e){
-  e.preventDefault();
-  alert("Are you canceling your order for this product?");
-  location.href="../user/user_interface.html";
-
-}
-)
-
-
-
-
-// // -------which order placed there that data get from URL params------
-
-
-
-const productUniqueId = new URLSearchParams(window.location.search).get('order');
-const dhanukaDetails = JSON.parse(localStorage.getItem('dhanuka_details'));
-const dowAgroScienceDetails = JSON.parse(localStorage.getItem("dow_agro_science_details"));
-
-const loadProduct = dhanukaDetails.find(detail => detail.product_unique_id === productUniqueId) || dowAgroScienceDetails.find(detail => detail.product_unique_id === productUniqueId)
-
-// console.log(loadProduct)
-
-const productName = loadProduct.product_name;
-document.querySelector("#pro_name").textContent = productName;
-
-
-let productImage;
-     productImage = document.createElement("img");
-     productImage.setAttribute("src",loadProduct["source"])
-    document.querySelector("div.product_image").append(productImage);
-
-
-
-    const quantityDropdown = document.getElementById('option');
-const actualPriceInput = document.getElementById('actual_price');
-const discountInput = document.getElementById('discount');
-const productPriceInput = document.getElementById('product_pri');
-const productWeight = document.getElementById("weight");
-
-
-// Set initial values based on the loaded product
-actualPriceInput.value = loadProduct.actual_price;
-discountInput.value = loadProduct.discount;
-productWeight.value = loadProduct.product_weight;
-productPriceInput.value = loadProduct.actual_price - loadProduct.discount;
-
-// Update values when quantity is changed
-// quantityDropdown.addEventListener('change', () => {
-//   const quantity = Number(quantityDropdown.value);
-//   const actualPrice = loadProduct.actual_price;
-//   const discount = loadProduct.discount;
-
-//   const totalPrice = quantity * actualPrice;
-//   const totalDiscount = quantity * discount;
-
-//   actualPriceInput.value = totalPrice;
-//   discountInput.value = totalDiscount;
-//   productPriceInput.value = totalPrice - totalDiscount;
-// });
-
-// ------------------ loader---------------
-const loader = document.getElementById('loader');
-
-quantityDropdown.addEventListener('change', () => {
-  const quantity = Number(quantityDropdown.value);
-  const actualPrice = loadProduct.actual_price;
-  const discount = loadProduct.discount;
-
-  loader.style.display = 'block'; // show the loader
-
-  setTimeout(() => { // simulate a delay
-    const totalPrice = quantity * actualPrice;
-    const totalDiscount = quantity * discount;
-
-    actualPriceInput.value = totalPrice;
-    discountInput.value = totalDiscount;
-    productPriceInput.value = totalPrice - totalDiscount;
-
-    loader.style.display = 'none'; // hide the loader
-  }, 2000); // change 3000 to the desired delay in milliseconds
-});
-
-
-    </script>
-
-    <script>
-      
-
-// Get the form element and listen for the submit event
-const orderForm = document.querySelector('form');
-orderForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  // Get the input values
-  const productName = document.querySelector('#pro_name').textContent;
-  const productImage = document.querySelector('.product_image img').getAttribute('src');
-  const productPrice = document.querySelector('#product_pri').value;
-  const quantity = document.querySelector('#option').value;
-  const discount = document.querySelector('#discount').value;
-  const actualPrice = document.querySelector('#actual_price').value;
-  const productWeight = document.querySelector('#weight').value;
-  const orderDate = new Date().toLocaleDateString();
-  const deliveryDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toLocaleDateString();
-  const deliveruStatus = "true";
-  // Get the user information
-  const firstName = "";
-  const lastName = "";
-  const email = "";
-  const phoneNumber = "";
-
-  // Get the delivery information
-  const address = "";
-  const zipCode = "";
-  const deliveryPlace = "";
-  const paymentMethod = "";
-  
-
-  // Get current time and format it as a string
-  const currentTime = new Date();
-  const timeString = currentTime.toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
-
-  // Generate a unique ID for the order
-  const uid = (new Date().getTime()).toString(24);
-
-  // Check if the data already exists in localStorage and if the last order was placed less than 15 minutes ago
-//   const orderData = JSON.parse(localStorage.getItem('orderData')) || [];
-//   const lastOrderTime = orderData.length > 0 ? new Date(orderData[orderData.length - 1].timestamp) : null;
-//   // const timeDifference = lastOrderTime ? (currentTime - lastOrderTime) / (1000 * 60 *5) : Infinity;
-//   const timeDifference = lastOrderTime ? (currentTime - lastOrderTime) / (1000 * 60 * 5) : Infinity;
-
-//   if (timeDifference < 1) {
-//     alert('You have already placed an order within the last 5 minutes. Please wait a while before placing another order.');
-//     return;
-//   }
- const orderData = JSON.parse(localStorage.getItem('addtoCartDeliveryProduct')) || [];
-const lastOrderTime = orderData.length > 0 ? new Date(orderData[orderData.length - 1].timestamp) : null;
-const timeDifference = lastOrderTime ? (currentTime - lastOrderTime) / (1000 * 60) : Infinity;
-
-if (timeDifference < 2) {
-  alert('You have already placed an order within the last 2 minutes. Please wait a while before placing another order.');
-  return;
-}
-
-  // Create a new object with the input values
-  const newOrder = {
-    productName,
-    productImage,
-    productPrice,
-    quantity,
-    discount,
-    actualPrice,
-    productWeight,
-    orderDate,
-    deliveryDate,
-    firstName,
-    lastName,
-    email,
-    phoneNumber,
-    address,
-    zipCode,
-    deliveryPlace,
-    paymentMethod,
-    timestamp: currentTime.getTime(),
-    orderUniqueId: uid,
-    timeString,
-    deliveruStatus
-  };
-  
-  // Store the new object in localStorage
-  orderData.push(newOrder);
-  localStorage.setItem('addtoCartDeliveryProduct', JSON.stringify(orderData));
- 
-  location.href = `http://127.0.0.1:5500/pages/user/deliver_address.html?delivery_address=${encodeURIComponent(loadProduct["product_unique_id"])}&orderUnique=${uid}`;
-});
-
-
-
-
-    </script>
-</body>
+        <script src="../js/order_summary.js"></script>
+    </body>
 </html>
